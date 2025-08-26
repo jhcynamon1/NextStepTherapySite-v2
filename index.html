@@ -3,448 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Same-Day Stress Management & Anxiety Therapy in Ontario | Next Step Therapy</title>
-    
-    <!-- Blue Ocean SEO Meta Tags -->
-    <meta name="description" content="Same-day stress management and anxiety therapy in Ontario. Stop constant worry with evidence-based online counselling. CRPO registered. Book free consultation today.">
-    <meta name="keywords" content="stress management ontario, anxiety therapy, same day therapy, online counselling, worry help, work stress, CRPO therapist">
-    
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Same-Day Stress Management & Anxiety Therapy in Ontario">
-    <meta property="og:description" content="Can't stop worrying? Get same-day help with stress, anxiety, and constant worry. Evidence-based online therapy in Ontario.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Same-Day Anxiety & Stress Management Therapy">
-    <meta name="twitter:description" content="Same-day online therapy for stress, anxiety, and worry. CRPO registered psychotherapist in Ontario.">
-    
-    <!-- Modern CSS Framework -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>Can't Stop Worrying? Same-Day Anxiety Therapy in Ontario | Next Step Therapy</title>
+    <meta name="description" content="Same-day stress management and anxiety therapy in Ontario. Registered Psychotherapist (CRPO #10979). Evidence-based online counselling. Book free consultation.">
+    <meta name="keywords" content="anxiety therapy ontario, stress management ontario, online therapy ontario, registered psychotherapist">
+    <meta name="author" content="Jesse Cynamon, CRPO #10979">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        :root {
+            --color-primary: #68ccd1;
+            --color-secondary: #bc945a;
+            --color-text: #333b5a;
+            --color-light: #f3f9f9;
+            --color-white: #ffffff;
+            --color-gray: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: #eee;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--color-primary);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            border-bottom-color: var(--color-secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #5bb8bd 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        .hero .highlight {
+            color: var(--color-secondary);
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--color-secondary);
+            color: white;
+            padding: 18px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(188, 148, 90, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #a8824e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(188, 148, 90, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 32px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold text-gray-900">Next Step Therapy</h1>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="about.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
-                        <a href="services.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
-                        <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Book Now</a>
-                    </div>
-                </div>
-            </div>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">Next Step Therapy</div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/personal-growth-confidence-building.html">Personal Growth</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section - Blue Ocean Positioning -->
-    <section class="hero-gradient pt-16 pb-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                    Can't Stop Worrying?<br>
-                    <span class="text-yellow-300">Get Help Today</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                    Same-day stress management and anxiety therapy in Ontario. Stop constant worry with evidence-based online counselling that actually works.
-                </p>
-                
-                <!-- Blue Ocean CTA - Same Day Availability -->
-                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-2xl mx-auto">
-                    <p class="text-white font-semibold mb-4">🚀 Available Today:</p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" 
-                           class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all">
-                            Book Free Consultation
-                        </a>
-                        <a href="tel:+1-555-0123" 
-                           class="bg-white bg-opacity-20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-30 transition-all border border-white border-opacity-30">
-                            Call Now: (555) 123-4567
-                        </a>
-                    </div>
-                </div>
-                
-                <p class="text-blue-200 text-sm">
-                    ✅ CRPO Registered Psychotherapist #10979 | ✅ Evening & Weekend Hours | ✅ Insurance Accepted
-                </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Can't Stop Worrying?<br>
+                <span class="highlight">Get Help Today</span>
+            </h1>
+            <p>
+                Same-day anxiety therapy and stress management support in Ontario. 
+                Evidence-based online counselling with a Registered Psychotherapist.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn-primary">
+                    Book Free Consultation
+                </a>
+                <a href="tel:+15558675309" class="btn-secondary">
+                    Call Now: (555) 867-5309
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Natural Language Problem Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Why Do I Feel Anxious All The Time?
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    If you're constantly worried, stressed about work, or can't stop anxious thoughts, you're not alone. 
-                    These are the most common reasons people seek therapy in Ontario.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover bg-gray-50 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    <!-- Trust Indicators -->
+    <section style="background: white; padding: 60px 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Constant Worry</h3>
-                    <p class="text-gray-600">Racing thoughts, can't shut your mind off, worrying about everything that could go wrong</p>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--color-text);">CRPO Registered</h3>
+                    <p style="color: var(--color-gray);">Licensed Psychotherapist #10979</p>
                 </div>
-                
-                <div class="card-hover bg-gray-50 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Work Stress</h3>
-                    <p class="text-gray-600">Overwhelmed at work, burnout symptoms, dreading Monday mornings, imposter syndrome</p>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--color-text);">Same-Day Support</h3>
+                    <p style="color: var(--color-gray);">Quick response for urgent needs</p>
                 </div>
-                
-                <div class="card-hover bg-gray-50 p-6 rounded-xl">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Social Anxiety</h3>
-                    <p class="text-gray-600">Avoiding social situations, fear of judgment, panic attacks in groups or presentations</p>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--color-text);">Evidence-Based</h3>
+                    <p style="color: var(--color-gray);">Research-backed therapy methods</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section - Blue Ocean -->
-    <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Same-Day Support That Actually Works
-                </h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Unlike other therapy services that make you wait weeks, we offer immediate support when you need it most. 
-                    Evidence-based therapy that gets to the root cause, not just managing symptoms.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Main Content -->
+    <section style="padding: 80px 0; background: #f9f9f9;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                 <div>
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Available Today</h3>
-                                <p class="text-gray-600">Same-day appointments available. No waiting lists, no "we'll call you back in 3 weeks."</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Evening & Weekend Hours</h3>
-                                <p class="text-gray-600">Therapy that fits your life. Sessions available evenings and weekends.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Evidence-Based Results</h3>
-                                <p class="text-gray-600">CBT, ACT, and mindfulness approaches that create lasting change, not just temporary relief.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">100% Online in Ontario</h3>
-                                <p class="text-gray-600">Secure video therapy from anywhere in Ontario. No commute, no waiting rooms.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 style="font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 700; color: var(--color-text); margin-bottom: 24px; line-height: 1.3;">
+                        You Don't Have to Struggle Alone
+                    </h2>
+                    <p style="font-size: 18px; color: var(--color-gray); margin-bottom: 24px; line-height: 1.7;">
+                        Constant worrying, racing thoughts, and overwhelming anxiety don't have to control your life. 
+                        As a Registered Psychotherapist in Ontario, I provide same-day support for individuals 
+                        struggling with stress and anxiety.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: 32px;">
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 16px; color: var(--color-gray);">
+                            <svg style="width: 20px; height: 20px; color: var(--color-primary); margin-right: 12px; margin-top: 2px; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Online therapy sessions from the comfort of your home
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 16px; color: var(--color-gray);">
+                            <svg style="width: 20px; height: 20px; color: var(--color-primary); margin-right: 12px; margin-top: 2px; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Evidence-based approaches (CBT, mindfulness, somatic techniques)
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 16px; color: var(--color-gray);">
+                            <svg style="width: 20px; height: 20px; color: var(--color-primary); margin-right: 12px; margin-top: 2px; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Personalized treatment plans for your unique needs
+                        </li>
+                        <li style="display: flex; align-items: flex-start; margin-bottom: 16px; color: var(--color-gray);">
+                            <svg style="width: 20px; height: 20px; color: var(--color-primary); margin-right: 12px; margin-top: 2px; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Flexible scheduling including evenings and weekends
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-xl">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Start Today</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold">1</span>
-                            <span class="text-gray-700">Book your free 15-minute consultation</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold">2</span>
-                            <span class="text-gray-700">Same-day or next-day appointment available</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold">3</span>
-                            <span class="text-gray-700">Start feeling better immediately</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank"
-                           class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all block text-center">
-                            Book Free Consultation Now
-                        </a>
-                        <p class="text-sm text-gray-500 text-center mt-2">Available today • No commitment required</p>
-                    </div>
+                <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); border: 1px solid #e0e0e0;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; color: var(--color-text); margin-bottom: 16px;">Ready to Take the Next Step?</h3>
+                    <p style="color: var(--color-gray); margin-bottom: 24px; line-height: 1.6;">
+                        Book your free 15-minute consultation to discuss how I can help you manage anxiety and stress.
+                    </p>
+                    <a href="#contact" class="btn-primary" style="display: block; text-align: center; width: 100%;">
+                        Schedule Free Consultation
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Overview -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">How We Help You Stop Worrying</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Specialized therapy for the most common anxiety and stress challenges people face in Ontario</p>
+    <section style="background: white; padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 700; color: var(--color-text); margin-bottom: 16px;">How I Can Help You</h2>
+                <p style="font-size: 20px; color: var(--color-gray); max-width: 600px; margin: 0 auto;">
+                    Specialized support for anxiety, stress management, and personal growth
+                </p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-hover text-center p-8 rounded-xl border border-gray-200">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                <div style="text-align: center; padding: 32px; border: 1px solid #e0e0e0; border-radius: 12px; transition: all 0.3s ease; background: white;" 
+                     onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'; this.style.transform='translateY(-4px)'" 
+                     onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Work Stress & Burnout</h3>
-                    <p class="text-gray-600 mb-6">Overwhelmed at work? We help you manage workplace anxiety, set boundaries, and prevent burnout before it happens.</p>
-                    <a href="services.html" class="text-blue-600 font-medium hover:text-blue-700">Learn More →</a>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-text);">Anxiety & Stress Management</h3>
+                    <p style="color: var(--color-gray); line-height: 1.6;">
+                        Learn practical techniques to manage overwhelming thoughts and feelings. 
+                        Develop coping strategies that work for your lifestyle.
+                    </p>
                 </div>
-                
-                <div class="card-hover text-center p-8 rounded-xl border border-gray-200">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                <div style="text-align: center; padding: 32px; border: 1px solid #e0e0e0; border-radius: 12px; transition: all 0.3s ease; background: white;" 
+                     onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'; this.style.transform='translateY(-4px)'" 
+                     onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">General Anxiety & Worry</h3>
-                    <p class="text-gray-600 mb-6">Can't stop worrying? Racing thoughts keeping you up? We use proven techniques to help you find peace of mind.</p>
-                    <a href="services.html" class="text-green-600 font-medium hover:text-green-700">Learn More →</a>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-text);">Personal Growth & Confidence</h3>
+                    <p style="color: var(--color-gray); line-height: 1.6;">
+                        Build self-awareness, improve relationships, and develop the confidence 
+                        to pursue your goals and live authentically.
+                    </p>
                 </div>
-                
-                <div class="card-hover text-center p-8 rounded-xl border border-gray-200">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                <div style="text-align: center; padding: 32px; border: 1px solid #e0e0e0; border-radius: 12px; transition: all 0.3s ease; background: white;" 
+                     onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'; this.style.transform='translateY(-4px)'" 
+                     onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+                    <div style="width: 64px; height: 64px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 12px rgba(104, 204, 209, 0.2);">
+                        <svg style="width: 32px; height: 32px; color: white;" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Confidence & Self-Worth</h3>
-                    <p class="text-gray-600 mb-6">Build genuine confidence and overcome imposter syndrome. Learn to value yourself and trust your abilities.</p>
-                    <a href="personal-growth-confidence-building.html" class="text-purple-600 font-medium hover:text-purple-700">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust & Credentials -->
-    <section class="py-16 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Choose Next Step Therapy</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Professional, registered, and specialized in helping Ontarians manage stress and anxiety</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">CRPO Registered</h3>
-                    <p class="text-gray-300 text-sm">Registered Psychotherapist #10979 with the College of Registered Psychotherapists of Ontario</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Same-Day Available</h3>
-                    <p class="text-gray-300 text-sm">No waiting weeks for help. Same-day and next-day appointments when you need support most</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">Evidence-Based</h3>
-                    <p class="text-gray-300 text-sm">CBT, ACT, and mindfulness approaches proven to reduce anxiety and create lasting change</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2">100% Online</h3>
-                    <p class="text-gray-300 text-sm">Secure video therapy from anywhere in Ontario. Flexible scheduling that works with your life</p>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-text);">Mindfulness & Coping Skills</h3>
+                    <p style="color: var(--color-gray); line-height: 1.6;">
+                        Discover mindfulness practices and evidence-based techniques to 
+                        manage difficult emotions and stay grounded in challenging moments.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section - Natural Language -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Common Questions</h2>
-                <p class="text-xl text-gray-600">Real answers to the questions people ask about anxiety therapy</p>
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--color-primary); padding: 80px 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 700; color: white; margin-bottom: 16px;">Get Started Today</h2>
+                <p style="font-size: 20px; color: white; opacity: 0.9;">
+                    Take the first step toward better mental health with a free consultation
+                </p>
             </div>
-            
-            <div class="space-y-8">
-                <div class="border border-gray-200 rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Why do I feel anxious all the time?</h3>
-                    <p class="text-gray-600">Constant anxiety often comes from your brain trying to protect you from perceived threats. Work stress, life changes, and overwhelming responsibilities can keep your nervous system in "high alert" mode. The good news? This is very treatable with the right therapeutic approach.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                <div style="color: white;">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; margin-bottom: 32px;">Contact Information</h3>
+                    <div style="margin-bottom: 32px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <svg style="width: 24px; height: 24px; margin-right: 16px;" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            <span style="font-size: 18px;">(555) 867-5309</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <svg style="width: 24px; height: 24px; margin-right: 16px;" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            <span style="font-size: 18px;">hello@nextsteptherapy.ca</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <svg style="width: 24px; height: 24px; margin-right: 16px;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span style="font-size: 18px;">Ontario, Canada (Online Sessions)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <svg style="width: 24px; height: 24px; margin-right: 16px;" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span style="font-size: 18px;">CRPO #10979</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Can I really get help today?</h3>
-                    <p class="text-gray-600">Yes! Unlike many therapy services with long waiting lists, we offer same-day consultations and can often schedule your first full session within 24-48 hours. When you're struggling, waiting weeks for help isn't an option.</p>
-                </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">How does online therapy work?</h3>
-                    <p class="text-gray-600">We use secure, encrypted video calls that you can join from anywhere in Ontario. Many clients find online therapy more comfortable and convenient than in-person sessions. It's just as effective for anxiety and stress management.</p>
-                </div>
-                
-                <div class="border border-gray-200 rounded-lg p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Will my insurance cover this?</h3>
-                    <p class="text-gray-600">Most extended health plans in Ontario cover registered psychotherapy. We provide receipts that you can submit to your insurance provider for reimbursement. We can also help you check your coverage before your first session.</p>
+                <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);">
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: 600; color: var(--color-text); margin-bottom: 24px;">Book Your Free Consultation</h3>
+                    <form style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; color: var(--color-text); font-weight: 600; margin-bottom: 8px;">Name *</label>
+                            <input type="text" required style="width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; transition: border-color 0.3s ease;" 
+                                   onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='#e0e0e0'">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--color-text); font-weight: 600; margin-bottom: 8px;">Email *</label>
+                            <input type="email" required style="width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; transition: border-color 0.3s ease;" 
+                                   onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='#e0e0e0'">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--color-text); font-weight: 600; margin-bottom: 8px;">Phone</label>
+                            <input type="tel" style="width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; transition: border-color 0.3s ease;" 
+                                   onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='#e0e0e0'">
+                        </div>
+                        <div>
+                            <label style="display: block; color: var(--color-text); font-weight: 600; margin-bottom: 8px;">How can I help you?</label>
+                            <textarea rows="4" style="width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; resize: vertical; transition: border-color 0.3s ease;" 
+                                      onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 8px;">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-indigo-700">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                Stop Waiting. Start Feeling Better Today.
-            </h2>
-            <p class="text-xl text-blue-100 mb-8">
-                Same-day appointments available. Free 15-minute consultation. No commitment required.
-            </p>
-            
-            <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank"
-                   class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-all inline-block">
-                    Book Free Consultation
-                </a>
-                <a href="tel:+1-555-0123"
-                   class="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-30 transition-all inline-block border border-white border-opacity-30">
-                    Call: (555) 123-4567
-                </a>
-            </div>
-            
-            <p class="text-blue-200 mt-6 text-sm">
-                CRPO Registered Psychotherapist | Secure & Confidential | Available Across Ontario
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <h3 class="text-xl font-bold mb-4">Next Step Therapy</h3>
-                    <p class="text-gray-300 mb-4">Same-day stress management and anxiety therapy in Ontario. CRPO registered psychotherapist offering evidence-based online counselling.</p>
-                    <p class="text-sm text-gray-400">Registered Psychotherapist #10979 | College of Registered Psychotherapists of Ontario</p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Jesse</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white">Services</a></li>
-                        <li><a href="personal-growth-confidence-building.html" class="text-gray-300 hover:text-white">Personal Growth</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Resources</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>📞 (555) 123-4567</li>
-                        <li>📧 hello@nextsteptherapy.ca</li>
-                        <li>🌐 Serving all of Ontario</li>
-                        <li>🕒 Evening & Weekend Hours</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Next Step Therapy. All rights reserved. | Privacy Policy | Terms of Service</p>
-            </div>
+    <footer style="background: var(--color-text); color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <p style="margin-bottom: 16px; font-size: 16px;">&copy; 2024 Next Step Therapy. All rights reserved.</p>
+            <p style="font-size: 14px; opacity: 0.8;">
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada
+            </p>
         </div>
     </footer>
 
-    <!-- Schema Markup for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Next Step Therapy",
-      "description": "Same-day stress management and anxiety therapy in Ontario",
-      "url": "https://nextsteptherapy.ca",
-      "telephone": "+1-555-123-4567",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Ontario",
-        "addressCountry": "CA"
-      },
-      "openingHours": ["Mo-Su 09:00-21:00"],
-      "sameAs": [],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "47"
-      }
-    }
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add responsive styles for mobile
+        const style = document.createElement('style');
+        style.textContent = `
+            @media (max-width: 768px) {
+                .container { padding: 0 15px; }
+                section[style*="grid-template-columns: 1fr 1fr"] > div {
+                    grid-template-columns: 1fr !important;
+                    gap: 40px !important;
+                }
+                .hero h1 { font-size: 28px !important; }
+                .hero p { font-size: 16px !important; }
+                section h2 { font-size: 28px !important; }
+                section h3 { font-size: 20px !important; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
-
 </body>
 </html>
