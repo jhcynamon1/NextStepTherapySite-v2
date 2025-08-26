@@ -1,0 +1,29 @@
+# 301 Redirects for Website Neutralization
+# Add these to your server configuration or .htaccess file
+
+# Primary redirect
+/executive-professional-performance-enhancement.html /personal-growth-confidence-building.html 301
+
+# Additional neutralization redirects for future implementation
+/work-anxiety-and-stress.html /anxiety-stress-therapy.html 301
+/performance-anxiety-therapy-services.html /anxiety-therapy-services.html 301
+
+# Instructions for implementation:
+# For Apache servers - add to .htaccess:
+# Redirect 301 /executive-professional-performance-enhancement.html /personal-growth-confidence-building.html
+
+# For Nginx servers - add to server config:
+# location /executive-professional-performance-enhancement.html {
+#   return 301 /personal-growth-confidence-building.html;
+# }
+
+# For Next.js - add to next.config.js:
+# async redirects() {
+#   return [
+#     {
+#       source: '/executive-professional-performance-enhancement.html',
+#       destination: '/personal-growth-confidence-building.html',
+#       permanent: true,
+#     },
+#   ]
+# }
