@@ -1,0 +1,2204 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="pointer crjs skrollr skrollr-desktop"><head>
+    <style id="customRules"></style><meta charset="utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async="" src="./js/asset81.js&amp;cx=c&amp;gtm=4e58m1"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CEKNVJ3G9E&amp;cx=c&amp;gtm=4e58m1"></script><script async="" src="//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js"></script><script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.nextsteptherapy.ca/',
+        AccountUUID: 'ae1ecd4ee98a4ff9bbfa7f224022291d',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '460814e6',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Wed May 28 19:09:35 UTC 2025',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'about',
+        InitialPageUuid: '9dae1b52fd9945609bfd93c7de841bcf',
+        InitialPageId: '1175218862',
+        InitialEncodedPageAlias: 'YWJvdXQ=',
+        InitialHeaderUuid: 'df16b1943ab041409a0ad3a6f2a6bd53',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '500000',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en-gb',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.nextsteptherapy.ca/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false,
+        defaultLang: 'en',
+        hamburgerMigration: null,
+        isFlexSite : false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+
+<link rel="canonical" href="https://www.nextsteptherapy.ca/about">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/460814e6/site_favicon_16_1743460974496.ico">
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/">
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script id="d-js-dmapi">
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(188, 148, 90, 1);
+  --color_2: rgba(255, 255, 255, 1);
+  --color_3: rgba(51, 59, 90, 1);
+  --color_4: rgba(167, 172, 207, 1);
+  --color_5: rgba(224, 208, 182, 1);
+  --color_6: rgba(0,0,0,1);
+  --color_7: rgba(137, 137, 137, 1);
+  --color_8: rgba(251, 245, 236, 1);
+}
+</style>
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+  
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";@font-face{font-family:FontAwesome;font-display:block;src:url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?v=6);src:url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?#iefix&v=6) format("embedded-opentype"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.woff?v=6) format("woff"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.ttf?v=6) format("truetype"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.svg#fontawesomeregular?v=6) format("svg");font-weight:400;font-style:normal}@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url(./assets/asset109.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Poppins;font-style:normal;font-weight:700;font-display:swap;src:url(./assets/asset110.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url(./assets/asset111.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--color_1:rgba(188, 148, 90, 1);--color_2:rgba(255, 255, 255, 1);--color_3:rgba(51, 59, 90, 1);--color_4:rgba(167, 172, 207, 1);--color_5:rgba(224, 208, 182, 1);--color_6:rgba(0,0,0,1);--color_7:rgba(137, 137, 137, 1);--color_8:rgba(251, 245, 236, 1)}.dmInner{min-height:100vh!important;position:relative}.dmPopup,.dmPopupMask{position:fixed;left:0}.display_None{display:none}.dmDisplay_None{display:none!important}.clearfix:after{clear:both;visibility:hidden;line-height:0;height:0}.clearfix:after,.clearfix:before{content:' ';display:table}.clearfix{display:inline-block}#dm .dmWidget .icon{font-size:26px}body.dmRoot #dm .dmOuter .dmInner .dmWidget .icon.hasFontIcon{height:26px;margin-top:-13px;line-height:normal;text-align:center;background-image:none}#dm .dmBody div.u_1828115791,.dmRoot .hasFontIcon{background-image:none!important}#dm .dmn .dmHideFromNav{display:none!important}.dmPopupMask{margin:0;display:none;width:10px;z-index:1000000999;top:0}#dmRoot .dmPopup,.dmPopup,.dmPopupClose:before,[data-display-type=block]{display:block}.dmPopup{text-align:left;top:10px;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}#dm .dmRespRow .dmRespColsWrapper{display:flex}#dm .hasBackgroundOverlay:not(.dmPopupPage):not(.layout-drawer){position:relative!important}#dm .hasBackgroundOverlay:not(.hasExtraLayerOverlay):before{display:block!important;position:absolute!important;top:0!important;left:0!important;width:100%!important;height:100%!important;content:' '!important;border-radius:inherit}#dm .dmInner .dmWidget.align-center,.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#dmRoot{text-decoration-skip-ink:none}#dm .sticky-widgets-container-global [data-element-type]{position:fixed!important}body{-webkit-overflow-scrolling:touch}@media (min-width:1025px){:root{--btn-text-font-size:16px}}@media (min-width:768px) and (max-width:1024px){.button_2,:root{--btn-text-font-size:16px}}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}h1{font-size:2em;margin:.67em 0}strong{font-weight:700}hr{box-sizing:content-box;height:0}*,.innerPageTitle,:after,:before{box-sizing:border-box}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}button{font-family:inherit;font-size:100%;margin:0;line-height:normal;text-transform:none;-webkit-appearance:button}button::-moz-focus-inner{border:0;padding:0}.dmRespRow.dmRespRowNoPadding{padding:0}.dmRespRow{padding-top:15px;padding-bottom:15px}.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespRow:after{clear:both}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}.dmHeader,.dmRespRow .dmRespCol>*{max-width:100%}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmDesktopBody .dmRespRow .large-3{position:relative;width:25%}.dmDesktopBody .dmRespRow .large-6{position:relative;width:50%}.dmDesktopBody .dmRespRow .large-9{position:relative;width:75%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}[class*=' dm-common-icons-']{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}.icon-star:before{content:'\f005'}.icon-phone-sign:before{content:'\f098'}.icon-laptop:before{content:'\f109'}#dm .dmRespRow .dmRespCol>.dmWidget{overflow:initial}@media (min-width:768px){#dm .dmRespRow .dmRespCol>.dmWidget{width:280px;max-width:100%}#dm .sticky-widgets-container-global .dmWidget{width:230px;max-width:100%}}@media (max-width:767px){#dm .dmInner .dmWidget{width:100%}}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget:not(.flexButton):not(.displayNone)[data-display-type=block]{display:block}#dm .dmInner .dmWidget.flexButton:not(.displayNone){display:flex}#dm .dmInner .dmWidget.flexButton{display:flex;align-items:center;justify-content:center;padding:10px 7px}#dm .dmInner .dmWidget.flexButton .text{padding:0!important;flex-grow:1;max-width:-webkit-max-content;max-width:max-content}#dm .dmInner .dmWidget.flexButton:after{display:none}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;clear:both;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0;height:auto;border-style:solid;white-space:nowrap}.desktopTopNav:first-child,.desktopTopNavBtnHidden+.desktopTopNav,h1,h2,ul{margin-left:0}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}#dm .dmInner .dmWidget .iconBg{position:absolute;left:0;width:50px;top:50%;margin-top:-13px}#dm .dmWidget .text{display:inline-block;vertical-align:middle;font-size:1.125em;line-height:normal;white-space:normal;padding:10px 7px;max-width:98%}#dm .dmRespRow.dmRespRowNoPadding,.dmContent,.dmInner ul:not(.defaultList),DIV.dmBody{padding:0}.dmInner{min-width:768px!important;font-size:16px;background:#fff;color:#666}html:not(.ios-preview) #dm .hasStickyHeader .dmInner div.dmHeaderContainer{position:fixed!important;z-index:101;width:100%;min-width:768px}#innerBar,#iscrollBody,#site_content,.desktopNavWrapper ul li,.dmHeader,.dmNavigation li,.imageWidget{position:relative}#dm .sticky-widgets-container-global [data-element-type].sticky-desktop-position-bottom-right{top:initial!important;bottom:0!important;margin-bottom:40px;right:0!important;left:initial!important;margin-right:40px}.imageWidget a{font-style:italic;text-align:center}.imageWidget img[width][height]{height:auto}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] .text-align-center{text-align:center!important}.dmNewParagraph[data-version] h1,.dmNewParagraph[data-version] h2,.dmNewParagraph[data-version] p{margin-top:0;margin-bottom:0}img[width][height]{height:auto}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}A IMG{border:none}h1,h2,ul{margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}.clearfix,a,img,li,ul{vertical-align:top}.dmOuter{word-wrap:break-word}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939}.dmHeader{background:#68ccd1;color:#666;text-align:center;width:100%}DIV.dmBody{clear:both}.dmContent{margin:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}#innerBar{height:36px;width:100%;font-size:20px;margin:0}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmRespCol>[dmle_extension]:not(:first-child){margin-top:10px}.dmNavigation{margin:0;font-family:inherit;background:#666}.dmNavigation li{overflow:hidden;transform:translate3d(0,0,0)}.dmNavigation li a{text-decoration:none;display:block;color:#f7f7f7;text-align:left;white-space:normal;margin-top:0\9}.dmNavigation li.dmSub{z-index:0}.dmNavigation .navItemText{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;height:21px\9}.desktopTopNav .dmNavigation a{border-top:1px solid rgba(255,255,255,.15)}.desktopTopNav>.dmNavigation>li:first-child>a{border-top:0}.dmNavigation .navButtonLi a span.navItemText{color:#f7f7f7}.desktopTopNav.hasdmSub .dmNavigation .navItemText{font-size:15px}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}.imageWidget:not(.displayNone) img{width:100%}#dm .dmRespColsWrapper{display:block}.dmNewParagraph{text-align:left;margin:8px 0;padding:2px 0}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol,.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:first-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:last-child,.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}.dmLargeBody .dmRespRowsWrapper>.dmRespRow .dmRespCol:only-child{padding-left:0;padding-right:0}#innerBar.lineInnerBar{display:table;width:100%;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;font-size:20px;margin-top:30px;margin-bottom:30px;background-color:transparent;color:#666}.innerPageTitle{display:block;text-align:center;color:#f7f7f7;margin:3px 65px;padding:6px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-wrap:normal}#innerBar .titleLine{display:table-cell;vertical-align:middle;width:50%}.dmPageTitleRow:not(#innerBar){display:none}.titleLine hr{min-height:1px;background-color:rgba(102,102,102,.2)}.lineInnerBar .innerPageTitle{display:table-cell;vertical-align:middle;text-transform:capitalize;text-align:left;margin:0;padding:4px 15px 0;color:#666;font-family:inherit;white-space:nowrap}.dmLinksMenu.desktopNavWrapper{text-align:center}.dmLinksMenu:not([navigation-id]){float:none!important;display:block}.dmStandardDesktop{display:block}.desktopTopNav{display:inline-block;margin-left:20px;margin-right:20px;vertical-align:top}.desktopTopNav:last-child{margin-right:0}.desktopTopNav>a{font-weight:700;text-decoration:none;font-size:18px;color:#666;display:inline-block;text-align:left}.desktopNavWrapper ul li{list-style:none;vertical-align:middle}.desktopNavWrapper ul li ul li{height:auto;overflow:visible}.desktopNavWrapper>ul>li>ul{display:none;-webkit-backface-visibility:hidden;position:absolute;top:170%;z-index:9999;min-width:100%;margin:0}#dm .dmLinksMenu.desktopNavWrapper>ul>li>ul{top:auto}.desktopNavWrapper>ul>li>ul:before{content:'';width:100%;height:20px;position:absolute;top:-20px;left:0}.standardHeaderLayout .desktopNavWrapper{padding:0}#dmFirstContainer .dmRespRowsWrapper:after,#dmFirstContainer .dmRespRowsWrapper:before{content:"";display:table}.dmInner a{outline:0;vertical-align:inherit}.dmInner .desktopNavWrapper>ul>li>ul{position:absolute}#dm .dmLinksMenu.desktopNavWrapper>ul>li>ul:before{display:none}#innerBar{z-index:80}.dmLinksMenu>ul{display:block;margin:0;font-size:inherit}.dmNavigation .navItemText{padding-right:0}.dmNavigation li a{padding:15px 60px 15px 30px}.dmStandardDesktop{margin:0 auto}#dm .dmDivider{display:block;margin:10px 0}body{background-color:#eee}.dmDivider{min-height:2px;border:currentColor;color:grey;background:0 0}#dm .dmDividerWrapper{display:block}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dmStandardDesktop .dmHeader{background-color:#68ccd1;max-width:100%}.standardHeaderLayout .dmHeader{float:none;display:block;height:auto}#dm .p_hfcontainer a.u_1299126227,#dm .p_hfcontainer div.u_1116556134,#dm .p_hfcontainer div.u_1774308400{height:auto!important;float:none!important;top:0!important;left:0!important}#dm div.dmRespCol>*{line-height:1.5}.dmDesktopBody #dm ul.dmNavWrapper>li>.dmNavigation,.dmDesktopBody #dm ul.dmNavWrapper>li>a .navItemText{color:#111;font-weight:400}#dm div.dmContent h1,#dm div.dmContent h2{direction:ltr;font-family:Poppins,"Poppins Fallback";font-weight:700;font-style:normal;line-height:1.5}#dm div.dmContent h2{color:rgba(26,26,26,1)}.dmLargeBody .dm-layout-sec .dmBody .dmRespRowsWrapper,.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}#dm div.dmInner,#dm div.dmInner .dmRespCol{font-style:normal;font-size:18px}#dm .dmNewParagraph,#dm h1,#dm h2{direction:ltr;text-align:left}#dm div.dmContent h1{color:var(--color_2);text-decoration:none;font-size:42px}#dm div.dmContent .dmNewParagraph[data-version] h1{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h1 *,#dm div.dmContent h2{text-decoration:none}#dm div.dmNewParagraph p{line-height:1.5}#dm div.dmContent h2{color:var(--color_3);font-size:32px}#dm div.dmContent .dmNewParagraph[data-version] h2{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h2 *{text-decoration:none}#dm .dmRespCol div.dmNewParagraph,#dm div.dmInner,#dm div.dmInner .dmRespCol{font-family:Montserrat,"Montserrat Fallback";color:var(--color_6);font-weight:400;font-size:18px}#dm DIV.dmOuter DIV.dmInner{background-color:var(--color_2)}@media all{:root{--btn-border-l-color:rgb(249, 200, 85);--btn-border-r-color:rgb(249, 200, 85);--btn-border-b-width:0px;--btn-text-direction:ltr;--btn-border-radius:1px;--btn-border-t-width:0px;--btn-border-tl-radius:12px;--btn-border-br-radius:12px;--btn-border-bl-radius:5px;--btn-bg-color:var(--color_3);--btn-border-r-width:0px;--btn-border-tr-radius:5px;--btn-bg-image:none;--btn-border-b-color:rgb(249, 200, 85);--btn-border-l-width:0px;--border-style:solid;--btn-border-t-color:rgb(249, 200, 85);--btn-text-align:center;--btn-text-color:var(--color_2);--btn-text-decoration:none;--btn-text-font-weight:700;--btn-icon-color:var(--color_2);--btn-icon-fill:var(--color_2);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:var(--color_1);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgba(0, 0, 0, 0);--btn-hover-text-color:var(--color_2);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}.button_2{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:1px;--btn-border-radius:1px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:12px;--btn-border-br-radius:12px;--btn-border-bl-radius:5px;--btn-bg-color:var(--color_1);--btn-border-color:rgba(0, 0, 0, 0);--btn-border-tr-radius:5px;--btn-border-r-width:var(--btn-border-width);--btn-bg-image:none;--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:var(--color_2);--btn-text-decoration:none;--btn-text-font-weight:700;--btn-icon-color:var(--color_2);--btn-icon-fill:var(--color_2);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:var(--color_3);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:rgba(0, 0, 0, 0);--btn-hover-text-color:var(--color_2);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}}@media (min-width:0px) and (max-width:767px){.button_2,:root{--btn-text-font-size:16px}}#dm .dmOuter .dmInner .dmWidget[data-buttonstyle=FLAT_ROUND_ICON]{background-clip:border-box;border-radius:6px;padding:0 0 0 40px}#dm .dmOuter .dmInner .dmWidget[data-buttonstyle=FLAT_ROUND_ICON].flexButton{padding:10px 7px 10px 47px}#dm .dmOuter .dmInner .dmWidget[data-buttonstyle=FLAT_ROUND_ICON] .text{padding:10px 7px}#dm .dmOuter .dmInner .dmWidget[data-buttonstyle=FLAT_ROUND_ICON] .iconBg{display:block}#dm .dmWidget.button_2:not([data-buttonstyle]) .iconBg,#dm .dmWidget:not([data-buttonstyle]) .iconBg{display:none}@media (min-width:768px){#dm .dmRespRow .dmRespCol>.dmWidget,#dm .sticky-widgets-container-global .dmWidget,#dm .sticky-widgets-container-global .dmWidget.button_2{width:222px}#dm .dmRespRow .dmRespCol>.dmWidget[data-buttonstyle]:not([data-buttonstyle=BORDER_SHORT]){width:280px}#dm .sticky-widgets-container-global .dmWidget.button_2[data-buttonstyle]:not([data-buttonstyle=BORDER_SHORT]),#dm .sticky-widgets-container-global .dmWidget[data-buttonstyle]:not([data-buttonstyle=BORDER_SHORT]){width:230px}}#dm div.dmInner #site_content .dmWidget,#dm div.dmInner .dmHeader .dmWidget{background-color:var(--btn-bg-color);background-image:var(--btn-bg-image);border-color:var(--btn-border-color);border-bottom-color:var(--btn-border-b-color);border-left-color:var(--btn-border-l-color);border-right-color:var(--btn-border-r-color);border-top-color:var(--btn-border-t-color);border-radius:var(--btn-border-radius);border-bottom-left-radius:var(--btn-border-bl-radius);border-bottom-right-radius:var(--btn-border-br-radius);border-top-left-radius:var(--btn-border-tl-radius);border-top-right-radius:var(--btn-border-tr-radius);border-width:var(--btn-border-width);border-bottom-width:var(--btn-border-b-width);border-left-width:var(--btn-border-l-width);border-right-width:var(--btn-border-r-width);border-top-width:var(--btn-border-t-width);direction:var(--btn-text-direction);text-align:var(--btn-text-align)}#dm div.dmInner #site_content .dmWidget span.text{color:var(--btn-text-color);font-size:var(--btn-text-font-size);font-weight:var(--btn-text-font-weight);text-decoration:var(--btn-text-decoration)}#dm div.dmInner #site_content .dmWidget span.icon,#dm div.dmInner .dmHeader .dmWidget span.icon{color:var(--btn-icon-color);fill:var(--btn-icon-fill)}#dm div.dmInner #site_content .dmWidget:not([data-buttonstyle]) .iconBg{display:var(--btn-icon-wrpr-display)}#dm .dmInner div.dmHeader{background-color:rgba(255,255,255,.8)!important;border-style:solid!important;border-width:0!important}#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-color:var(--color_2)!important;border-style:solid!important;border-width:0!important;padding-top:10px!important}#dm .dmBody div.u_1011943214,#dm .dmBody div.u_1757354342,#dm .p_hfcontainer div.u_1774308400 ul.dmNavWrapper>li.navItemSelectedServer{background-color:rgba(0,0,0,0)!important}#dm .p_hfcontainer div.u_1116556134 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1774308400 li>ul.dmNavigation.dmn li{margin-top:10px!important;padding-right:0!important;padding-left:0!important}#dm .p_hfcontainer div.u_1774308400 ul.dmNavWrapper{padding-right:0!important;margin-right:0!important}#dm .p_hfcontainer .u_1116556134{width:100%!important}#dm .p_hfcontainer div.u_1414893036{background-color:var(--color_3)!important}#dm .p_hfcontainer a.u_1299126227 span.icon,a.u_1416420021 span.icon{color:#fff!important}#dm .p_hfcontainer div.u_1774308400 li>ul.dmn{background-color:var(--color_2)!important}#dm .p_hfcontainer div.u_1774308400 ul.dmNavWrapper>li>.dmNavigation,#dm .p_hfcontainer div.u_1774308400 ul.dmNavWrapper>li>a .navItemText{color:var(--color_3)!important;font-weight:700!important;font-size:16px!important}#dm .p_hfcontainer div.u_1774308400 li>ul.dmNavigation.dmn li>a .navItemText{color:var(--color_3)!important}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{padding-top:12px!important;padding-bottom:12px!important}.fHeader #hcontainer.dmHeader[freeheader=true]{padding-top:initial!important;padding-bottom:initial!important}#dm .p_hfcontainer div.u_1554027585{padding:0!important}#dm .p_hfcontainer div.u_1020870716{padding-left:10px!important}#dm .p_hfcontainer div.u_1774308400{width:100%!important;position:relative!important;max-width:calc(100% - 0px)!important;min-width:25px!important;text-align:right!important;display:block!important;padding:0!important}#dm .dmInner div.fHeader.dmHeaderContainer #hcontainer.dmHeader[freeheader=true]{margin:0!important;padding:12px 0 10px!important}#dm .p_hfcontainer div.u_1853091134{width:auto!important;padding:8px 25px 0!important;margin:0!important}#dm .p_hfcontainer div.u_1774308400 ul.dmNavWrapper{margin:15px 0 0!important;padding:15px 0 0!important}#dm .p_hfcontainer a.u_1299126227{border-radius:6px!important;-moz-border-radius:6px!important;-webkit-border-radius:6px!important;min-height:44px!important;width:194.69px!important;position:relative!important;max-width:100%!important;min-width:0!important;text-align:center!important;display:block!important;margin:0 0 0 auto!important;padding:10px 7px 10px 47px!important}#dm .dmBody div.u_1202527098,#dm .dmBody div.u_1716970111,#dm .p_hfcontainer div.u_1116556134{position:relative!important;min-height:auto!important}#dm .p_hfcontainer div.u_1116556134{width:calc(100% - 0px)!important;max-width:183.14px!important;min-width:25px!important;text-align:center!important;display:block!important;padding:0!important;margin:5px 298.13px 5px 0!important}#dm .p_hfcontainer div.u_1414893036{width:auto!important;margin:0!important;padding:0 25px!important}#dm .dmBody div.u_1202527098,a.u_1416420021{width:calc(100% - 0px)!important;text-align:center!important}a.u_1416420021{border-radius:18px 6px!important;display:block!important;float:none!important;top:0!important;left:0!important;position:relative!important;height:54px!important;max-width:278px!important;min-width:25px!important;padding:0 0 0 25px!important;margin:0 40px 40px 0!important}.stickyHeaderSpacer{height:155.05px!important}#dm .dmBody div.u_1202527098,#dm .dmBody div.u_1225625721,#dm .dmBody div.u_1716970111,#dm .dmBody div.u_1815243718,#dm .dmBody div.u_1828115791,#dm .dmBody div.u_1957958027{float:none!important;top:0!important;left:0!important;height:auto!important}#dm .dmBody .u_1828115791:before,#dm .dmBody .u_1957958027:before{opacity:.5!important;background-color:var(--color_2)!important}#dm .dmBody div.u_1828115791:before{opacity:.27!important;background-color:var(--color_2)!important}#dm .dmBody div.u_1828115791{background-color:rgba(0,0,0,0)!important}#dm .dmBody div.u_1347181044 hr{color:var(--color_1)!important;border-width:3px!important}#dm .dmBody .u_1202527098{width:100%!important}#dm .dmBody div.u_1202527098 img{border-radius:36px 0!important}#dm .dmBody div.u_1957958027:before{background-color:var(--color_3)!important;opacity:.5!important}#dm .dmBody div.u_1957958027{background-repeat:no-repeat!important;background-image:url(https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-3183197.jpeg),url(data:image/png-2880w;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TpUUqHSwo4pChOlkQFemoVShChVArtOpgcukXNGlIUlwcBdeCgx+LVQcXZ10dXAVB8APEzc1J0UVK/F9aaBHjwXE/3t173L0DhEaFaVbPBKDptplOJsRsblUMvEJAGEEMIi4zy5iTpBQ8x9c9fHy9i/Es73N/jn41bzHAJxLPMsO0iTeIZzZtg/M+cYSVZJX4nHjcpAsSP3JdafEb56LLAs+MmJn0PHGEWCx2sdLFrGRqxNPEUVXTKV/ItljlvMVZq9RY+578haG8vrLMdZojSGIRS5AgQkENZVRgI0arToqFNO0nPPzDrl8il0KuMhg5FlCFBtn1g//B726twtRkKymUAHpfHOdjFAjsAs2643wfO07zBPA/A1d6x19tAPFP0usdLXoEhLeBi+uOpuwBlzvA0JMhm7Ir+WkKhQLwfkbflAMGboG+tVZv7X2cPgAZ6ip1AxwcAmNFyl73eHewu7d/z7T7+wFwJnKmZ9+MiwAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+UCDwksLkLIPkkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAC0lEQVQI12NgAAIAAAUAAeImBZsAAAAASUVORK5CYII=)!important}#dm .d-page-1683814473 DIV.dmInner{background-repeat:no-repeat!important;background-image:none!important;background-size:cover!important;background-attachment:fixed!important}#dm .dmBody div.u_1815243718{width:100%!important;position:relative!important;max-width:calc(100% - 0px)!important;min-width:25px!important;display:block!important;padding:2px 0!important;margin:0 0 8px!important}#dm .dmBody div.u_1828115791{width:100%!important;position:relative!important;max-width:none!important;min-width:0!important;text-align:center!important;background-repeat:repeat!important;background-size:auto!important;padding:90px 45px!important;margin:0 auto!important}#dm .dmBody div.u_1225625721{width:100%!important;position:relative!important;max-width:calc(100% - 0px)!important;min-width:25px!important;display:block!important;padding:0!important;margin:0 auto 8px!important}#dm .dmBody div.u_1757354342{margin-right:0!important;padding:0!important}#dm .dmBody div.u_1202527098{max-width:100%!important;min-width:25px!important;padding:0!important;margin:0 auto!important}#dm .dmBody div.u_1011943214{padding:0!important}#dm .dmBody div.u_1957958027{background-attachment:initial!important;background-size:cover!important;width:auto!important;position:relative!important;max-width:none!important;min-width:0!important;text-align:start!important;background-position:50% 50%!important;padding:250px 0!important;margin:0!important}#dm .dmBody div.u_1347181044{width:101px!important;margin:-5px 0 10px!important;padding:0!important}#dm .dmBody div.u_1716970111{width:calc(100% - 179px)!important;max-width:602px!important;min-width:25px!important;padding:2px 0!important;margin:8px auto!important}.font-size-14,.size-14{font-size:14px!important}#\31 056481154,#\31 097283691,#\31 192711458,#\31 332759936,#\31 490732605,#\31 579962769,#\31 616878064,#\31 669858737,#\31 837856251,#\31 848159513{order:0;flex-direction:row} #dm .dmPhotoGallery.newPhotoGallery .dmPhotoGalleryHolder:not(.photo-gallery-done) {display: none;} @media (max-width:767px){ [data-hidden-on-mobile] {display:none!important}}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+      visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Lobster Two Fallback";
+  src: local('Arial');
+  ascent-override: 123.9905%;
+  descent-override: 30.9976%;
+  size-adjust: 80.6513%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Cardo Fallback";
+  src: local('Arial');
+  ascent-override: 103.8482%;
+  descent-override: 38.1494%;
+  size-adjust: 95.354%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Creepster Fallback";
+  src: local('Arial');
+  ascent-override: 104.0992%;
+  descent-override: 23.8338%;
+  size-adjust: 91.3717%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Arial Fallback";
+  src: local('Arial');
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Creepster Fallback";
+  src: local('Arial');
+  ascent-override: 104.0992%;
+  descent-override: 23.8338%;
+  size-adjust: 91.3717%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Lobster Fallback";
+  src: local('Arial');
+  ascent-override: 114.651%;
+  descent-override: 28.6627%;
+  size-adjust: 87.2212%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Arvo Fallback";
+  src: local('Arial');
+  ascent-override: 87.6577%;
+  descent-override: 22.538%;
+  line-gap-override: 2.4498%;
+  size-adjust: 109.6239%;
+}@font-face {
+  font-family: "Oswald Fallback";
+  src: local('Arial');
+  ascent-override: 145.0682%;
+  descent-override: 35.1423%;
+  size-adjust: 82.2372%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Eater Fallback";
+  src: local('Arial');
+  ascent-override: 100.9625%;
+  descent-override: 32.0168%;
+  size-adjust: 140.1549%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.nextsteptherapy.ca/feed/rss2">
+  <link type="application/atom+xml" rel="alternate" href="https://www.nextsteptherapy.ca/feed/atom">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nextsteptherapy.ca/about">
+  <title>
+    
+    Online Therapy for Business Professionals | Next Step Therapy | Ontario
+  
+  </title>
+  <meta name="description" content="Next Step Therapy helps professionals manage work anxiety. Schedule your secure online session today!">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Online Therapy for Business Professionals | Next Step Therapy | Ontario">
+  <meta name="twitter:description" content="Next Step Therapy helps professionals manage work anxiety. Schedule your secure online session today!">
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-927022-1920w.jpeg">
+  <meta property="og:description" content="Next Step Therapy helps professionals manage work anxiety. Schedule your secure online session today!">
+  <meta property="og:title" content="Online Therapy for Business Professionals | Next Step Therapy | Ontario">
+  <meta property="og:image" content="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-927022-1920w.jpeg">
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+<style type="text/css">.crjs .phoneswap { visibility: hidden; }</style><script src="./js/asset76.js"></script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="about" class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody d1SiteBody dmBodyNoIscroll" style="padding:0;margin:0;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class="dmwr">
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1582363842" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations hasStickyHeader dmPageBody d-page-1683814473 inputs-css-clean dmFreeHeader runtime-module-container" id="dm-outer-wrapper" data-page-class="1683814473" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="dmHeader p_hfcontainer u_hcontainer" freeheader="true" layout="78f5c343822e4eb3aac27f4ad5d13812===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="83%" mini-header-show-only-navigation-row="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="dmRespRow u_1414893036 mini-header-hide-row" id="1414893036"> <div class="dmRespColsWrapper" id="1332759936"> <div class="u_1635474636 dmRespCol small-12 large-6 medium-6 has-one-widget-only" id="1635474636"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1042838973"><p class="size-14 m-size-11"><strong style="font-weight: bold; color: var(--color_2); display: unset;" class="font-size-14 m-font-size-11">Online Therapy Across Ontario</strong></p></div> 
+</div> 
+ <div class="u_1117814936 dmRespCol small-12 large-6 medium-6 has-one-widget-only" id="1117814936"> <a data-display-type="block" class="u_1299126227 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="tel:+555-555-1234" data-element-type="dButtonLinkId" id="1299126227" data-buttonstyle="FLAT_ROUND_ICON" icon-name="icon-phone-sign" target="_blank"> <span class="iconBg" aria-hidden="true" id="1694125891"> <span class="icon hasFontIconstar hasFontIcon icon-phone-sign" id="1787275373"></span> 
+</span> 
+ <span class="text" id="1490351152">(416) 306-2157</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow dmDefaultListContentRow u_1853091134 mini-header-show-row" style="text-align:center" id="1853091134"> <div class="dmRespColsWrapper" id="1669858737"> <div class="u_1554027585 small-12 dmRespCol large-3 medium-3 has-one-widget-only" id="1554027585"> <div class="u_1116556134 imageWidget align-center" data-widget-type="image" id="1116556134" data-element-type="image" editablewidget="true"> <a href="/" id="1874536050"><img src="./images/asset101.png" id="1864784789" class="" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY.png" width="1500" height="582" alt="performance anxiety therapy, ontario, Manage performance anxiety" onerror="handleImageLoadError(this)"></a> 
+</div> 
+</div> 
+ <div class="u_1020870716 dmRespCol small-12 large-9 medium-9 has-one-widget-only" id="1020870716"> <span id="1685418692"></span> 
+ <div class="u_1774308400 default dmLinksMenu desktopNavWrapper" id="1774308400" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" navigation_id="" wr="true" icon="true" surround="true" adwords=""> <ul class="dmNavWrapper dmn menuContainer"> <li class="desktopTopNav navListLi navButtonLi hasdmSub"> <a href="./services.html" class="dmUDNavigationItem_01010155642" target="" data-target-page-alias=""> <span class="navItemText ">SERVICES</span> 
+</a> 
+ <ul class="dmNavigationStyle_1 dmNavigation dmn innerUl " style=""> <li class="dmSub navListLi navButtonLi"> <a href="./work-anxiety-and-stress.html" class="dmUDNavigationItem_010101572868" target="" data-target-page-alias=""> <span class="navItemText ">WORK ANXIETY AND STRESS</span> 
+</a> 
+</li> 
+ <li class="dmSub navListLi navButtonLi"> <a href="./executive-professional-performance-enhancement.html" class="dmUDNavigationItem_010101237427" target="" data-target-page-alias=""> <span class="navItemText ">EXECUTIVE &amp; PROFESSIONAL PERFORMANCE ENHANCEMENT</span> 
+</a> 
+</li> 
+ <li class="dmSub navListLi navButtonLi"> <a href="./general-anxiety-and-stress-therapy.html" class="dmUDNavigationItem_010101939409" target="" data-target-page-alias=""> <span class="navItemText ">GENERAL ANXIETY AND STRESS THERAPY</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li class="desktopTopNav navListLi navButtonLi dmNavItemSelected"> <a href="./about.html" class="dmUDNavigationItem_010101661768 currentPage" target="" data-target-page-alias=""> <span class="navItemText ">ABOUT</span> 
+</a> 
+</li> 
+ <li class="desktopTopNav navListLi navButtonLi hasdmSub"> <a href="/blog687ca76d" class="dmUDNavigationItem_010101324160" target="" data-target-page-alias=""> <span class="navItemText ">RESOURCES</span> 
+</a> 
+ <ul class="dmNavigationStyle_1 dmNavigation dmn innerUl " style=""> <li class="dmSub navListLi navButtonLi"> <a href="./blog.html" class="dmUDNavigationItem_010101496182" target="" data-target-page-alias=""> <span class="navItemText ">Blog</span> 
+</a> 
+</li> 
+ <li class="dmSub navListLi navButtonLi"> <a href="./work-stress-assessment.html" class="dmUDNavigationItem_010101797401" target="" data-target-page-alias=""> <span class="navItemText ">Work Stress Assessment</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li class="desktopTopNav navListLi navButtonLi"> <a href="/blogca721fd6" class="dmUDNavigationItem_01010191394" target="" data-target-page-alias=""> <span class="navItemText ">BLOG</span> 
+</a> 
+</li> 
+ <li class="desktopTopNav navListLi navButtonLi"> <a href="./contact.html" class="dmUDNavigationItem_010101567797" target="" data-target-page-alias=""> <span class="navItemText ">CONTACT</span> 
+</a> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar"> <div class="titleLine display_None"><hr></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">ABOUT</div> 
+</div> 
+ <div class="titleLine display_None"><hr></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" themewaschanged="true" class="dmBody u_dmStyle_template_about"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="100" class="dmAboutusRespTmpl mainBorder" id="1683814473"> <div class="innerPageTmplBox dmRespRowsWrapper dmRespRowsWrapperSize1" id="1396310947"> <div class="u_1957958027 dmRespRow hasBackgroundOverlay dmSectionNoParallax" style="text-align: center;" id="1957958027"> <div class="dmRespColsWrapper" id="1490732605"> <div class="u_1011943214 dmRespCol small-12 medium-12 large-12" id="1011943214"> <div class="dmNewParagraph u_1475192403" id="1475192403" style="transition: opacity 1s ease-in-out;" data-element-type="paragraph" data-version="5"> <h1 class="text-align-center m-size-30"><span style="display: initial; color: var(--color_2);" m-font-size-set="true" class="m-font-size-30">Work Anxiety Therapy</span></h1> 
+</div> <div class="u_1716970111 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1716970111" style="transition: opacity 1s ease-in-out;"><p class="text-align-center m-size-18"><span class="m-font-size-18" style="color: var(--color_2); display: unset;"><span style="color: var(--color_2); display: unset;" m-font-size-set="true" class="m-font-size-18">Next Step Therapy helps high-achieving professionals who feel overwhelmed despite their success transform anxiety into a catalyst for meaningful growth.</span> 
+</span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1828115791 dmRespRow mobile-columns-reversed" style="text-align: center;" id="1828115791"> <div class="dmRespColsWrapper" id="1056481154"> <div class="u_1757354342 dmRespCol small-12 large-6 medium-6" id="1757354342"> <div class="u_1225625721 dmNewParagraph" id="1225625721" style="display: block; text-align: center;" data-element-type="paragraph" data-version="5"> <h2 style="letter-spacing: var(--heading-font-letter-spacing); line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-2-size-value))/25));" class="m-size-22"><strong m-font-size-set="true" style="font-weight: var(--heading-font-font-weight); display: initial; text-decoration: inherit;" class="m-font-size-22">From Workplace Anxiety to Professional Excellence</strong><span style="display: initial;"><br></span></h2> 
+</div> <div class="u_1347181044 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1347181044"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1696878591"></div> 
+ <div class="u_1815243718 dmNewParagraph" id="1815243718" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"><p style="line-height: 1.5;"><strong style="font-weight: bold; display: initial;">Next Step Therapy</strong><span class="" style="display: initial;"> <span style="display: initial;">helps high-achieving professionals who feel overwhelmed despite their success transform anxiety into a catalyst for meaningful growth. Our approach addresses both the immediate challenges you face and their root causes, creating lasting change that enhances both your performance and wellbeing.</span></span></p></div></div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1192544902"> <div class="u_1202527098 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1202527098" editablewidget="true"><img src="./images/asset102.jpeg" alt="" id="1312670732" class="" width="1920" height="1280" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-7641869.jpeg" onerror="handleImageLoadError(this)"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1956029242 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1956029242" data-page-element-type="section" data-page-element-id="1904027510"> <div class="dmRespColsWrapper" id="1848159513"> <div class="u_1038350585 dmRespCol small-12 large-5 medium-5" id="1038350585"> <div class="u_1462229634 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1462229634" editablewidget="true"><img src="./images/asset103.png" alt="" id="1484557578" class="" width="384" height="512" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/Jesse-Cynamon.png" onerror="handleImageLoadError(this)"></div> 
+</div> 
+ <div class="u_1448011191 dmRespCol small-12 large-7 medium-7 running-animation-AIWU0AO6" id="1448011191" data-anim-desktop="fadeIn" style="visibility: hidden; opacity: 1; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="u_1499117590 dmNewParagraph" data-element-type="paragraph" id="1499117590" style="transition:none;display:block;line-height:initial;" data-version="5"> <h2 class="m-size-24"><span style="display: initial;" class="m-font-size-24" m-font-size-set="true">Meet Jesse Cynamon, MPsy, RP</span></h2> 
+</div> <div class="u_1729101206 dmNewParagraph" id="1729101206" style="transition: none; text-align: left; display: block;" data-version="5"><p><span class="" style="display: initial;"><span style="display: initial;">As a</span> 
+</span><strong style="display: initial; font-weight: bold;">Registered Psychotherapist</strong><span class="" style="display: initial;"> <span style="display: initial;">with sports operations professional, Jesse brings a unique perspective to helping high-performers navigate anxiety and stress. Having worked in high-pressure environments himself, Jesse understands the unique challenges faced by ambitious professionals. His approach combines clinical expertise with real-world experience in performance settings, offering both understanding and practical strategies for those seeking to excel while maintaining wellbeing.&nbsp;</span> 
+</span></p><p><span class="font-size-12 m-font-size-10" style="display: initial;"><br></span></p> <h5><span class="" style="display: initial;"><span style="display: initial;">Professional Background &amp; Unique Perspective</span> 
+</span></h5> 
+<p style="line-height: var(--body-font-line-height);"><span class="font-size-12 m-font-size-10" style="display: initial;"><br></span></p><p><strong style="font-weight: bold; display: initial;">Clinical Experience:</strong></p><p><strong style="font-weight: bold; display: initial;"><span class="ql-cursor">﻿</span></strong></p> <ul class="defaultList bullet"><li><span style="display: initial;">Master's in Psychology with specialization in anxiety management and personal growth</span></li><li><span style="display: initial;">Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (RP #10979)</span></li><li><span style="display: initial;">Advanced certification in Acceptance and Commitment Therapy (ACT)</span></li></ul> 
+<p style="line-height: var(--body-font-line-height);"><span class="font-size-12 m-font-size-10" style="display: initial;"><br></span></p><p><strong style="font-weight: bold; display: initial;">Real-World Experience:</strong></p><p><br></p> <ul class="defaultList bullet"><li><span style="display: initial;">Sports and operations experience in high-pressure environments</span></li><li><span style="display: initial;">Specialized crisis intervention training and expertise working with individuals under acute stress</span></li><li><span style="display: initial;">Understanding of team dynamics and performance optimization in competitive settings</span></li></ul> 
+</div></div> 
+</div> 
+</div> 
+ <div class="u_1804867526 dmRespRow fullBleedChanged fullBleedMode mobile-columns-reversed" style="text-align: center;" id="1804867526" data-page-element-type="section" data-page-element-id="1453225520"> <div class="dmRespColsWrapper" id="1192711458"> <div class="u_1182901794 dmRespCol small-12 large-7 medium-7" id="1182901794"> <div class="u_1666691528 dmNewParagraph" id="1666691528" style="transition: none; display: block;" data-element-type="paragraph" data-version="5"> <h2 style="line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-2-size-value))/25)); letter-spacing: var(--heading-font-letter-spacing);" class="m-size-24"><strong style="font-weight: var(--heading-font-font-weight); display: initial;" class="m-font-size-24" m-font-size-set="true">An Approach Designed for Professionals</strong> 
+ <span style="display: initial;"><br></span></h2> 
+</div> <div class="dmDividerWrapper clearfix u_1950084794" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1950084794"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1807972565"></div> 
+ <div class="u_1404107751 dmNewParagraph" id="1404107751" data-version="5"><p style="line-height: var(--body-font-line-height);"><span style="display: initial;">My approach is tailored to help ambitious professionals transform stress and anxiety into growth. The process includes:<br><br></span></p> <ul class="defaultList bullet"><li style="line-height: var(--body-font-line-height);"><strong style="color: var(--color_6); font-weight: 700; display: initial;">Performance Insight</strong><span style="display: initial;"><br>Identifying how anxiety specifically impacts your work performance and leadership capabilities</span></li></ul> 
+<p style="line-height: var(--body-font-line-height);"><span style="display: initial;"><br></span></p> <ul class="defaultList bullet"><li style="line-height: var(--body-font-line-height);"><strong style="font-weight: 700; display: initial;">Pattern Recognition</strong><span style="display: initial;"><br>Uncovering the underlying patterns causing burnout or work-related stress<br><br></span></li><li style="line-height: var(--body-font-line-height);"><strong style="font-weight: 700; display: initial;">Strategic Intervention</strong><span style="display: initial;"><br>Developing practical strategies that fit into your demanding schedule<br><br></span></li><li style="line-height: var(--body-font-line-height);"><strong style="font-weight: 700; display: initial;">Sustainable Integration</strong><span style="display: initial;"><br>Creating lasting change that enhances both professional success and personal wellbeing</span></li></ul> 
+</div></div> 
+ <div class="u_1270770017 dmRespCol small-12 dmSectionNoParallax large-5 medium-5" id="1270770017" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vbWQvZG1pcC9kbXMzcmVwL211bHRpL2hvbWUtZGVjb3ItZGl5LmpwZyJdfQ=="> <div data-element-type="spacer" class="u_1246908499 dmSpacer" id="1246908499"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1821032122 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1821032122" data-page-element-type="section" data-page-element-id="1021562101"> <div class="dmRespColsWrapper" id="1097283691"> <div class="u_1019592464 dmRespCol small-12 dmSectionNoParallax large-6 medium-6" id="1019592464" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vbWQvdW5zcGxhc2gvZG1zM3JlcC9tdWx0aS9waG90by0xNTAyMTIwNDkyNjA2LWZiYTEzY2M2MzcyMS5qcGciXX0="> <div data-element-type="spacer" class="u_1324500226 dmSpacer" id="1324500226"></div> 
+</div> 
+ <div class="u_1830657134 dmRespCol small-12 large-6 medium-6" id="1830657134"> <div class="dmNewParagraph u_1241951422" id="1241951422" style="transition: none; text-align: left; display: block;" data-element-type="paragraph" data-version="5"> <h2 style="letter-spacing: var(--heading-font-letter-spacing); line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-2-size-value))/25));"><strong style="display: initial; font-weight: var(--heading-font-font-weight);">Why Choose Next Step Therapy</strong><span style="display: initial;"><br></span></h2> 
+</div> <div class="dmDividerWrapper clearfix u_1227648509" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1227648509"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1461614901"></div> 
+ <div class="dmNewParagraph u_1167485605" id="1167485605" style="transition: none; text-align: left; display: block;" data-element-type="paragraph" data-version="5"><p class="size-21 m-size-16"><strong style="color: var(--color_3); font-weight: bold; display: initial;" class="font-size-21 m-font-size-16" m-font-size-set="true">Specialized Focus on Professional Anxiety</strong></p><p><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Unlike other therapists, we understand the unique pressures facing high-achieving professionals in Ontario. Our methods address both your immediate workplace challenges and their deeper psychological roots.</span></p><p><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="size-21 m-size-16"><strong style="color: var(--color_3); font-weight: bold; display: initial;" class="font-size-21 m-font-size-16" m-font-size-set="true">Beyond Coping Strategies</strong></p><p><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">While many approaches offer temporary relief, we go beyond stress management to help you transform obstacles into opportunities for growth and enhanced performance.</span></p><p><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="size-21 m-size-16"><strong style="color: var(--color_3); font-weight: bold; display: initial;" class="font-size-21 m-font-size-16" m-font-size-set="true">Someone Who Understands Your World</strong></p><p><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">With experience in both clinical settings and high-pressure professional environments, Jesse offers insights that bridge psychological expertise with real-world understanding.</span><span style="display: initial;"><br></span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1962603895 dmRespRow fullBleedChanged fullBleedMode" style="text-align: center;" id="1962603895"> <div class="dmRespColsWrapper" id="1616878064"> <div class="u_1626194146 dmRespCol small-12 large-7 medium-7" id="1626194146"> <div class="u_1059584622 dmNewParagraph" id="1059584622" style="display: block; text-align: center;" data-element-type="paragraph" data-version="5"> <h2 style="line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-2-size-value))/25)); letter-spacing: var(--heading-font-letter-spacing);" class="m-size-24"><strong style="text-decoration: inherit; display: initial; font-weight: var(--heading-font-font-weight);" m-font-size-set="true" class="m-font-size-24">Services Designed for Busy Professionals</strong><span style="display: initial;"><br></span></h2> 
+</div> <div class="dmDividerWrapper clearfix u_1518666053" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1518666053"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1963036252"></div> 
+ <div class="u_1604985053 dmNewParagraph" id="1604985053" style="transition:opacity 1s ease-in-out;line-height:initial;" data-version="5"><p class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Understanding the demands of high-performance careers, we offer:</span></p><p style="line-height: var(--body-font-line-height);"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p> <ul class="defaultList bullet"><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Secure virtual sessions accessible from anywhere in Ontario</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Evening and flexible scheduling options that work with demanding calendars</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Focused sessions that respect your time while delivering meaningful insights</span></li><li style="line-height: 1.5;" class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Measurable progress approach that values concrete outcomes<br><br></span></li></ul> 
+ <h3 class="size-24 m-size-16"><span style="display: initial; color: var(--color_3);" class="font-size-24 m-font-size-16" m-font-size-set="true">Uncompromising Professional Standards</span></h3> 
+<p style="line-height: var(--body-font-line-height);"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true"><br></span></p><p class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Committed to excellence in service delivery</span></p><p style="line-height: var(--body-font-line-height);"><br></p> <ul class="defaultList bullet"><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">CRPO registered psychotherapist (#10979)</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Evidence-based approaches tailored to professional contexts</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Ongoing specialized training</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Bank-level encryption for all virtual sessions</span></li><li class="m-size-16"><span style="display: initial;" class="m-font-size-16" m-font-size-set="true">Complete confidentiality and PHIPA-compliant care</span></li></ul> 
+</div></div> 
+ <div class="u_1395379358 dmRespCol small-12 large-5 medium-5" id="1395379358"> <div class="u_1020548196 dmSpacer" id="1020548196" data-element-type="spacer"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1392132558"> <a data-display-type="block" class="u_1416420021 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient sticky-desktop-position-bottom-right button_2 sticky-mobile-position-bottom-right" file="false" href="https://nextsteptherapy.janeapp.com/#staff_member/1" data-element-type="dButtonLinkId" id="1416420021" target="_blank" data-buttonstyle="FLAT_ROUND_ICON" icon-name="icon-laptop"> <span class="iconBg" id="1324673297"> <span class="icon hasFontIconstar hasFontIcon icon-laptop" id="1203072689"></span> 
+</span> 
+ <span class="text" id="1926100140">Book A Free Consultation</span> 
+</a> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1686005289 dmRespRow" style="text-align: center;" id="1686005289"> <div class="dmRespColsWrapper" id="1837856251"> <div class="u_1188157081 dmRespCol small-12 medium-4 large-4" id="1188157081"> <div class="u_1119773125 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1119773125" editablewidget="true"> <a href="/" id="1277103949"><img src="./images/asset104.png" alt="Manage performance anxiety, Performance anxiety therapy services, Toronto" id="1200401256" class="" width="1500" height="582" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY+2.png" onerror="handleImageLoadError(this)"></a> 
+</div> 
+ <div class="u_1209896453 dmNewParagraph" id="1209896453" style="display: block;" data-element-type="paragraph" data-version="5"><p class="text-align-center" style="line-height: var(--body-font-line-height);"><span style="display: initial; color: var(--color_2);">For immediate crisis support, please contact local emergency services or a crisis line. While we provide ongoing therapeutic support, we are not an emergency service.</span><span style="display: initial;"><br></span></p></div></div> 
+ <div class="u_1738521024 dmRespCol small-12 medium-4 large-4" id="1738521024"> <div class="u_1868858082 graphicWidget" data-widget-type="graphic" id="1868858082" data-element-type="graphic"> <svg viewBox="0 0 1792 1792" id="1898680202" class="svg u_1898680202" data-icon-name="fa-comments-o"> <path fill="inherit" d="M704 384q-153 0-286 52t-211.5 141-78.5 191q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191-211.5-141-286-52zM704 256q191 0 353.5 68.5t256.5 186.5 94 257-94 257-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t0.5-6.5 2-6l2.5-5t3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5zM1526 1425q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5t2 6 0.5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5t-195 176.5z" id="1600393282"></path> 
+</svg> 
+</div> 
+ <div class="u_1226296094 dmNewParagraph" id="1226296094" data-element-type="paragraph" data-version="5"> <h4 class="text-align-center"><span style="display: initial; color: var(--color_2);">CONTACT</span><span style="display: initial;"><span class="ql-cursor">﻿</span></span></h4> 
+</div> <a data-display-type="block" class="u_1921325768 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient button_2" file="false" href="./contact.html" data-element-type="dButtonLinkId" id="1921325768"> <span class="iconBg" id="1455011331"> <span class="icon hasFontIcon icon-star" id="1645392735"></span> 
+</span> 
+ <span class="text" id="1724882777">Make an Appointment</span> 
+</a> 
+</div> 
+ <div class="u_1449882040 dmRespCol small-12 medium-4 large-4" id="1449882040"> <div class="u_1937990302 graphicWidget" data-widget-type="graphic" id="1937990302" data-element-type="graphic"> <svg viewBox="0 0 70 70" id="1435724608" class="svg u_1435724608" data-icon-name="wp-clock"> <g id="1822677159"> <path d="M35,60c-13.8,0-25-11.2-25-25s11.2-25,25-25c13.8,0,25,11.2,25,25S48.8,60,35,60z M35,12c-12.7,0-23,10.3-23,23
+		s10.3,23,23,23c12.7,0,23-10.3,23-23S47.7,12,35,12z" id="1444238026"></path> 
+ <path d="M35,14c-11.6,0-21,9.4-21,21s9.4,21,21,21c11.6,0,21-9.4,21-21S46.6,14,35,14z M36,35c0,0.3-0.1,0.5-0.3,0.7l-8,8
+		C27.5,43.9,27.3,44,27,44c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l7.7-7.7V19c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V35z" id="1267595581"></path> 
+</g> 
+</svg> 
+</div> 
+ <div class="u_1170659155 dmNewParagraph" id="1170659155" style="transition: opacity 1s ease-in-out; display: block;" data-element-type="paragraph" data-version="5"> <h4 class="m-text-align-center text-align-center"><span style="display: initial; color: rgb(255, 255, 255);">CLINIC HOURS</span></h4> 
+</div> <div class="u_1119905577 default dmHoursOfOperation" id="1119905577" dmle_extension="open_hours" data-element-type="open_hours" time_format="12" wr="true" displaytitle="false" forcedisplay="false" icon="true" surround="true" adwords="" editablewidget="true" data-widget-type="hoursOfOperation"> <dl class="open-hours-data"> <div class="open-hours-item"> <dt day="0">Monday</dt> 
+ <dd> <time>9:00 am</time> 
+- <time>7:00 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="1">Tuesday</dt> 
+ <dd> <time>9:00 am</time> 
+- <time>7:00 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="2">Wednesday</dt> 
+ <dd> <time>9:00 am</time> 
+- <time>7:00 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="3">Thursday</dt> 
+ <dd> <time>9:00 am</time> 
+- <time>7:00 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="4">Friday</dt> 
+ <dd> <time>9:00 am</time> 
+- <time>7:00 pm</time> 
+</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="5">Saturday</dt> 
+ <dd>Closed</dd> 
+</div> 
+ <div class="open-hours-item"> <dt day="6">Sunday</dt> 
+ <dd>Closed</dd> 
+</div> 
+</dl> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1206917365" id="1206917365"> <div class="dmRespColsWrapper" id="1579962769"> <div class="dmRespCol large-12 medium-12 small-12" id="1120304792"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1801104835" style="transition: opacity 1s ease-in-out;"><p class="text-align-center"><span style="color: var(--color_2); font-weight: normal; display: initial; text-decoration: none;">&nbsp;</span><a href="https://www.greenlotussmartsite.com/" target="_blank" runtime_url="https://www.greenlotussmartsite.com/" type="url" style="color: var(--color_2); font-weight: normal; display: initial; text-decoration: none;">Smart Site Design</a><span single-space="true" class="" style="display: initial; font-weight: normal; text-decoration: none;"> <span style="display: initial; font-weight: normal; text-decoration: none;"></span> 
+</span><span style="display: initial; color: var(--color_2); font-weight: normal; text-decoration: none;">&amp;</span><span class="" style="display: initial; font-weight: normal; text-decoration: none;"><span style="display: initial; font-weight: normal; text-decoration: none;">&nbsp;</span> 
+</span><a href="https://www.greenlotus.ca/small-business/seo-services" target="_blank" runtime_url="https://www.greenlotus.ca/small-business/seo-services" type="url" style="display: initial; color: var(--color_2); font-weight: normal; text-decoration: none;">SEO Services</a><span single-space="true" class="" style="display: initial; font-weight: normal; text-decoration: none;"> <span style="display: initial; font-weight: normal; text-decoration: none;"></span> 
+</span><span style="display: initial; color: var(--color_2); font-weight: normal; text-decoration: none;">by Green Lotus Agency</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Lobster+Two:wght@400;700&amp;family=Cardo:wght@400;700&amp;family=Creepster:wght@400&amp;family=Creepster:wght@400&amp;family=Lobster:wght@400&amp;family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Montserrat:wght@100..900&amp;family=Arvo:wght@400;700&amp;family=Oswald:wght@200..700&amp;family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;family=Eater:wght@400&amp;subset=latin-ext&amp;display=swap" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" as="style" fetchpriority="low" onload="loadCSS(this)" href="./css/asset97.css" type="text/css">
+
+<!-- End of RT CSS Include -->
+
+<link rel="stylesheet" href="./css/asset98.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="about"] #dm [data-show-on-page-only="about"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="stylesheet" href="./css/asset72.css" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style id="additionalGlobalCss" type="text/css">
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody div.u_1757354342
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1011943214
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody *.u_1957958027:before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody *.u_1957958027.before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody *.u_1828115791:before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody *.u_1828115791.before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1828115791:before
+{
+	opacity:0.27 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1828115791.before
+{
+	opacity:0.27 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1828115791
+{
+	background-color:rgba(0,0,0,0) !important;
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1499117590
+{
+	line-height:initial !important;
+}
+*#dm *.dmBody div.u_1729101206
+{
+	line-height:1.5 !important;
+}
+*#dm *.dmBody div.u_1804867526
+{
+	background-color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1182901794
+{
+	background-color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody div.u_1821032122
+{
+	background-color:var(--color_8) !important;
+}
+*#dm *.dmBody div.u_1626194146
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody *.u_1962603895:before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody *.u_1962603895.before
+{
+	opacity:0.5 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1962603895:before
+{
+	opacity:0.27 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1962603895.before
+{
+	opacity:0.27 !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1962603895
+{
+	background-color:rgba(0,0,0,0) !important;
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1448011191
+{
+	background-color:rgba(255,255,255,1) !important;
+	box-shadow:rgba(0,0,0,0.25) 0px 3px 11px 0px !important;
+	-moz-box-shadow:rgba(0,0,0,0.25) 0px 3px 11px 0px !important;
+	-webkit-box-shadow:rgba(0,0,0,0.25) 0px 3px 11px 0px !important;
+	border-radius:48px 0px 48px 0px !important;
+	border-style:solid !important;
+	border-width:0px !important;
+}
+*#dm *.dmBody div.u_1270770017
+{
+	background-repeat:no-repeat !important;
+	background-image:url(./images/asset106.jpeg) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1019592464
+{
+	background-repeat:no-repeat !important;
+	background-image:url(./images/asset107.jpeg) !important;
+	background-size:cover !important;
+	border-style:solid !important;
+	border-width:0px !important;
+	border-color:rgba(255,255,255,1) !important;
+	border-radius:48px 0px 48px 0px !important;
+}
+*#dm *.dmBody div.u_1347181044 hr
+{
+	color:var(--color_1) !important;
+	border-width:3px !important;
+}
+*#dm *.dmBody div.u_1950084794 hr
+{
+	color:var(--color_1) !important;
+	border-width:3px !important;
+}
+*#dm *.dmBody div.u_1227648509 hr
+{
+	color:var(--color_1) !important;
+	border-width:3px !important;
+}
+*#dm *.dmBody div.u_1518666053 hr
+{
+	color:var(--color_1) !important;
+	border-width:3px !important;
+}
+*#dm *.dmBody *.u_1202527098
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1202527098 img[dm_changed]
+{
+	border-radius:36px 0px 36px 0px !important;
+}
+*#dm *.dmBody div.u_1202527098 img
+{
+	border-radius:36px 0px 36px 0px !important;
+}
+*#dm *.dmBody div.u_1395379358
+{
+	background-repeat:no-repeat !important;
+	background-image:url(./images/asset108.jpeg) !important;
+	background-size:cover !important;
+	border-radius:48px 0px 48px 0px !important;
+}
+*#dm *.dmBody div.u_1957958027:before
+{
+	background-color:var(--color_3) !important;
+	opacity:0.5 !important;
+}
+*#dm *.dmBody div.u_1957958027.before
+{
+	background-color:var(--color_3) !important;
+	opacity:0.5 !important;
+}
+*#dm *.dmBody div.u_1957958027>.bgExtraLayerOverlay
+{
+	background-color:var(--color_3) !important;
+	opacity:0.5 !important;
+}
+*#dm *.dmBody div.u_1957958027
+{
+	background-repeat:no-repeat !important;
+	background-image:url(./images/asset105.jpeg) !important;
+}
+*#dm *.dmBody div.u_1956029242
+{
+	background-color:var(--color_3) !important;
+}
+*#dm *.dmBody div.u_1038350585
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	border-style:solid !important;
+	border-width:0px !important;
+	border-radius:0px 0px 0px 0px !important;
+}
+*#dm *.dmBody *.u_1462229634
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1462229634 img[dm_changed]
+{
+	border-style:solid !important;
+	border-width:11px !important;
+	border-color:var(--color_2) !important;
+	border-radius:48px 0px 0px 0px !important;
+}
+*#dm *.dmBody div.u_1462229634 img
+{
+	border-style:solid !important;
+	border-width:11px !important;
+	border-color:var(--color_2) !important;
+	border-radius:48px 0px 0px 0px !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.d-page-1683814473 DIV.dmInner
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	background-attachment:fixed !important;
+}
+*#dm *.d-page-1683814473 DIV#dmSlideRightNavRight
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+	background-attachment:fixed !important;
+	background-color:var(--color_2) !important;
+}
+*#dm *.dmBody div.u_1815243718
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody h3.u_1225625721
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+}
+*#dm *.dmBody h4.u_1225625721
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:370px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1828115791
+{
+	padding-top:90px !important;
+	padding-bottom:90px !important;
+	padding-right:45px !important;
+	padding-left:45px !important;
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:none !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-repeat:repeat !important;
+	background-size:auto !important;
+}
+*#dm *.dmBody div.u_1225625721
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1757354342
+{
+	padding-right:0px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	padding-left:0px !important;
+	margin-right:0px !important;
+}
+*#dm *.dmBody div.u_1956029242
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	max-width:none !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	margin-top:0px !important;
+}
+*#dm *.dmBody div.u_1729101206
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:196.25px !important;
+	margin-left:0px !important;
+	max-width:100% !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+	min-height:auto !important;
+}
+*#dm *.dmBody div.u_1804867526
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:none !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody h3.u_1666691528
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:587px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:0px !important;
+	margin-left:-0.5px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+}
+*#dm *.dmBody div.u_1246908499
+{
+	height:55px !important;
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:424px !important;
+	position:relative !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:0px !important;
+	margin-left:137px !important;
+	max-width:calc(100% - 137px) !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1404107751
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:20px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1666691528
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1182901794
+{
+	padding-top:100px !important;
+	padding-left:60px !important;
+	padding-bottom:100px !important;
+	padding-right:60px !important;
+}
+*#dm *.dmBody div.u_1270770017
+{
+	background-position:50% 50% !important;
+	padding-left:0px !important;
+	padding-right:20px !important;
+}
+*#dm *.dmBody div.u_1167485605
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	min-height:auto !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:483.2px !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1830657134
+{
+	padding-right:20px !important;
+	padding-left:40px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	margin-left:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+}
+*#dm *.dmBody div.u_1604985053
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:calc(100% - 0px) !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody h3.u_1059584622
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+}
+*#dm *.dmBody h4.u_1059584622
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:370px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:left !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1059584622
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	max-width:calc(100% - 0px) !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1950084794
+{
+	width:101px !important;
+}
+*#dm *.dmBody div.u_1227648509
+{
+	width:101px !important;
+}
+*#dm *.dmBody div.u_1241951422
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	min-height:auto !important;
+	max-width:483.2px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1518666053
+{
+	width:101px !important;
+	margin-left:0px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-top:0px !important;
+	margin-bottom:10px !important;
+	margin-right:0px !important;
+	padding-right:0px !important;
+}
+*#dm *.dmBody div.u_1019592464
+{
+	background-position:50% 50% !important;
+	padding-right:50px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	padding-top:60px !important;
+	padding-left:50px !important;
+	padding-bottom:60px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	background-repeat:no-repeat !important;
+	background-size:cover !important;
+	background-attachment:initial !important;
+}
+*#dm *.dmBody div.u_1202527098
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	min-height:auto !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1011943214
+{
+	padding-left:0px !important;
+	padding-right:0px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+}
+*#dm *.dmBody div.u_1957958027
+{
+	padding-top:250px !important;
+	padding-bottom:250px !important;
+	padding-left:0px !important;
+	padding-right:0px !important;
+	background-attachment:initial !important;
+	background-size:cover !important;
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:none !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	min-width:0 !important;
+	text-align:start !important;
+	background-position:50% 50% !important;
+}
+*#dm *.dmBody div.u_1347181044
+{
+	width:101px !important;
+	margin-left:0px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-top:-5px !important;
+	margin-bottom:10px !important;
+	margin-right:0px !important;
+	padding-right:0px !important;
+}
+*#dm *.dmBody div.u_1448011191
+{
+	padding-top:25px !important;
+	padding-left:40px !important;
+	padding-right:40px !important;
+	padding-bottom:30px !important;
+	margin-right:80px !important;
+	margin-left:-45px !important;
+	margin-top:100px !important;
+	margin-bottom:100px !important;
+}
+*#dm *.dmBody div.u_1038350585
+{
+	margin-left:0px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	margin-right:0px !important;
+	background-position:50% 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:auto !important;
+	background-attachment:initial !important;
+}
+*#dm *.dmBody div.u_1462229634
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:429px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	min-height:auto !important;
+	margin-right:-90px !important;
+	max-width:429.391px !important;
+	margin-top:190px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:center !important;
+	important:true !important;
+	margin-left:0px !important;
+}
+*#dm *.dmBody div.u_1962603895
+{
+	padding-top:90px !important;
+	padding-bottom:90px !important;
+	padding-right:120px !important;
+	padding-left:120px !important;
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:none !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-repeat:repeat !important;
+	background-size:auto !important;
+	margin-left:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+}
+*#dm *.dmBody div.u_1626194146
+{
+	padding-right:0px !important;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	padding-left:0px !important;
+	margin-right:0px !important;
+}
+*#dm *.dmBody div.u_1395379358
+{
+	padding-left:0px !important;
+	margin-left:30px !important;
+	background-position:50% 50% !important;
+}
+*#dm *.dmBody div.u_1716970111
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:calc(100% - 179px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	min-height:auto !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:602px !important;
+	margin-top:8px !important;
+	margin-bottom:8px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1821032122
+{
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:95px !important;
+	padding-left:60px !important;
+	padding-bottom:95px !important;
+	margin-right:0px !important;
+	margin-left:0px !important;
+	max-width:none !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:60px !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-12, .size-12, .size-12 > font { font-size: 12px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<!-- ========= JS Section ========= -->
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH_UK"
+    window.isSitePreview = false;
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_5731";
+    var build = "2025-08-21T10_48_42";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2025-08-21T10_48_42";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id="d-js-jquery" src="./js/asset77.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id="d-js-params">
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/5731';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/5731';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =true;
+    rtCommonProps["streamline.monolith.personalization.skipRuleConditionsForPreview.enabled"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["fnb.animations.tracking.enabled"] =true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.accountPage.emptyBaseUrl.enabled"] = true;
+    rtFlags["ecom.ecwid.pages.links.disable.listeners"] = true;
+    rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+    rtFlags["runtime.cwv.report.cls.enabled"] =true;
+    rtFlags["editor.link.on.container"] =true;
+    rtFlags["flex.runtime.popup.with.show"] =true;
+    rtFlags["contact.form.useActiveForm"] =true;
+    rtFlags["runtime.ssr.productStore.internal.observer"] =true;
+    rtFlags["runtime.ssr.productCustomizations"] =true;
+    rtFlags["flex.megaMenu.a11y"] =true;
+</script>
+<script src="./js/asset99.js" id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="./js/asset100.js"></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+    if (!window.location.search) {
+        return;
+    }
+	const cleanParams = window.location.search.substring(1); // Strip ?
+	const queryParams = cleanParams.split('&');
+
+	const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+	const domain = 'domain=' + window.location.hostname;
+	const path = "path=/";
+
+	queryParams.forEach((param) => {
+		const [key, value = ''] = param.split('=');
+		if (key.startsWith('utm_')) {
+			const cookieName = "_dm_rt_" + key.substring(4);
+			const cookie = cookieName + "=" + value;
+			const joined = [cookie, expires, domain, path].join(";");
+			document.cookie = joined;
+		}
+	});
+}());
+</script>
+<script type="text/javascript">
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+</script>
+<script async="" src="./js/asset80.js" id="d-js-gtm" onload="window.dispatchEvent(new CustomEvent('gtmLoaded', { bubbles: true }))"></script>
+<script async="" src="./js/asset81.js"></script>
+<script type="text/javascript" id="d_track_ga">
+  _dm_gaq.siteAlias = '460814e6';
+  _dm_gaq.systemAggregatedGaqID = '';
+  _dm_gaq.externalGaqID = 'G-8JN3JKPML4';
+  _dm_gaq.gaAggregatedEventAttributes = {
+	  'site_alias':  _dm_gaq.siteAlias,
+	  'product': 'DM_DIRECT',
+	  'plan': 'BUSINESS_PLUS',
+	  'dfooter': 'false',
+	  'sitetype': '1',
+	  'pwaEnabled': 'true'
+  }
+
+  _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams = {}) {
+	  const eventProps = {
+		  send_to: trackingId,
+		  event_category: category,
+		  event_label: label,
+		  value,
+		  ...additionalParams,
+		  ...(trackingId === _dm_gaq.systemAggregatedGaqID
+				  ? _dm_gaq.gaAggregatedEventAttributes : {})
+	  };
+	  gtag('event', event, eventProps);
+  }
+
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+  function pushInsiteImpressions(id) {
+	  _dm_insite.forEach((rule) => {
+		  _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+	  });
+  }
+
+if(_dm_gaq.systemAggregatedGaqID){
+	// track aggregated account
+	gtag('config', '', {
+		'send_page_view': false,
+		'anonymize_ip': true,
+		'transport_type': 'beacon',
+		'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+	});
+	gtag('set', 'developer_id.dMDU5Nj', true);
+
+	_dm_gaq.pushEvent('', 'page_view');
+	pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+}
+
+if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+	gtag('config', 'G-8JN3JKPML4', {
+		'send_page_view': false,
+		'anonymize_ip': true,
+		'transport_type': 'beacon',
+		'linker': {
+			'domains': ['nextsteptherapy.ca']
+		}
+	});
+	_dm_gaq.pushEvent('G-8JN3JKPML4', 'page_view');
+	pushInsiteImpressions(_dm_gaq.externalGaqID);
+}
+</script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '460814e6'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root" data-locale="en_GB"></div>
+<!-- Alias: 460814e6 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+<!--  Begin Body End Markup -->
+<script type="text/javascript" src="//cdn.calltrk.com/companies/959742958/56557f685c78a9977b67/12/swap.js"></script> <!--  End Body End Markup -->
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+
+
+</body></html>
