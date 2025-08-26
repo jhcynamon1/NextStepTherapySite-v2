@@ -47,3 +47,4 @@ This is a complete clone of [nextsteptherapy.ca](https://nextsteptherapy.ca) cre
 ---
 
 *This repository contains the business website, SEO research, and related documentation for Next Step Therapy.*
+# Force Vercel Rebuild
