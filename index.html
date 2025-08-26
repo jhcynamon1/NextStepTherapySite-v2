@@ -62,14 +62,14 @@
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
             
-            /* Refined spacing system */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2.5rem;
-            --space-xl: 4rem;
-            --space-xxl: 6rem;
-            --space-section: 8rem;
+            /* Precise spacing system */
+            --space-xs: 0.5rem;    /* 8px */
+            --space-sm: 1rem;      /* 16px */
+            --space-md: 1.5rem;    /* 24px */
+            --space-lg: 2rem;      /* 32px */
+            --space-xl: 3rem;      /* 48px */
+            --space-xxl: 4rem;     /* 64px */
+            --space-section: 6rem; /* 96px */
             
             /* Refined radius system */
             --radius-sm: 8px;
@@ -344,14 +344,14 @@
         .hero-content {
             position: relative;
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
-            gap: var(--space-xxl);
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--space-xl);
             align-items: center;
-            min-height: 75vh;
+            min-height: 70vh;
         }
         
         .hero-text {
-            padding-right: var(--space-lg);
+            padding-right: var(--space-md);
         }
         
         .hero-text h1 {
@@ -363,8 +363,8 @@
         .hero-cta {
             display: flex;
             flex-direction: column;
-            gap: var(--space-md);
-            margin-top: var(--space-xl);
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
         }
         
         .primary-cta {
@@ -391,7 +391,7 @@
         .secondary-ctas {
             display: flex;
             gap: var(--space-sm);
-            margin-top: var(--space-sm);
+            margin-top: var(--space-xs);
         }
         
         .secondary-cta {
@@ -418,13 +418,13 @@
         }
         
         .email-cta {
-            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            background: var(--primary-soft-blue);
             color: white;
             border: none;
         }
         
         .email-cta:hover {
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
+            background: var(--primary-deep);
             color: white;
             transform: translateY(-1px);
         }
@@ -582,6 +582,46 @@
             margin-bottom: var(--space-md);
             font-size: 0.875rem;
             letter-spacing: 0.025em;
+        }
+        
+        .office-image {
+            margin-top: var(--space-md);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .office-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .process-image {
+            max-width: 600px;
+            margin: var(--space-lg) auto 0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .process-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .virtual-session-image {
+            margin: var(--space-md) 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .virtual-session-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
         }
         
         /* Refined Specializations */
@@ -916,7 +956,9 @@
         /* Premium Mobile Responsiveness */
         @media (max-width: 768px) {
             :root {
-                --space-section: 5rem;
+                --space-section: 4rem;
+                --space-xxl: 2.5rem;
+                --space-xl: 2rem;
             }
             
             .nav {
@@ -971,10 +1013,13 @@
             text-decoration: none;
             border-radius: 0 0 var(--radius-sm) var(--radius-sm);
             font-weight: 500;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
         }
         
         .skip-link:focus {
             top: 0;
+            transform: translateY(0);
         }
         
         .btn:focus,
@@ -1047,11 +1092,11 @@
                 <div class="hero-content">
                     <div class="hero-text fade-in-up">
                         <h1>Transform anxiety into authentic growth through evidence-based therapy</h1>
-                        <p class="lead-text">I'm Jesse Cynamon, a registered psychotherapist specializing in helping individuals move beyond symptom management to create meaningful, lasting change using advanced Acceptance and Commitment Therapy approaches.</p>
+                        <p class="lead-text">NextStep Therapy specializes in helping individuals move beyond symptom management to create meaningful, lasting change using advanced Acceptance and Commitment Therapy approaches with our registered psychotherapist.</p>
                         
                         <div class="hero-cta">
-                            <a href="#contact" class="primary-cta">
-                                Learn More About My Approach
+                            <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="primary-cta">
+                                Book Your Consultation
                             </a>
                             <div class="secondary-ctas">
                                 <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
@@ -1062,7 +1107,7 @@
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset120.jpg" alt="Jesse Cynamon, Registered Psychotherapist" onerror="this.innerHTML='JC'">
+                            <img src="images/asset96.jpeg" alt="Jesse Cynamon, Registered Psychotherapist" onerror="this.innerHTML='JC'">
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon</h3>
@@ -1105,8 +1150,8 @@
                         
                         <p><strong>Personalized Process:</strong> Your therapeutic journey is uniquely yours. I adapt proven methodologies to align with your specific circumstances, goals, and life complexities.</p>
                         
-                        <div style="margin-top: var(--space-md); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft);">
-                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div class="office-image">
+                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment">
                         </div>
                     </div>
                 </div>
@@ -1170,8 +1215,8 @@
                     <h2>My Therapeutic Process</h2>
                     <p class="lead-text">A thoughtful, four-phase approach designed to create lasting transformation while honoring your unique circumstances and goals.</p>
                     
-                    <div style="max-width: 600px; margin: var(--space-lg) auto 0; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-medium);">
-                        <img src="images/asset22.jpg" alt="Professional consultation and therapy discussion" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="process-image">
+                        <img src="images/asset22.jpg" alt="Professional consultation and therapy discussion">
                     </div>
                 </div>
                 
@@ -1203,17 +1248,6 @@
             </div>
         </section>
         
-        <!-- Testimonial -->
-        <section class="testimonial">
-            <div class="container">
-                <div class="testimonial-content">
-                    <blockquote class="testimonial-quote">
-                        "Jesse helped me understand that I didn't need to eliminate my anxiety completely – instead, I learned to work with it in a way that actually made me more resilient and confident in challenging situations. The transformation has been profound."
-                    </blockquote>
-                    <cite class="testimonial-author">— Alexandra M., Toronto</cite>
-                </div>
-            </div>
-        </section>
         
         <!-- Contact -->
         <section class="contact" id="contact">
@@ -1257,8 +1291,8 @@
                             </li>
                         </ul>
                         
-                        <div style="margin: var(--space-md) 0; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft);">
-                            <img src="images/asset26.jpg" alt="Virtual therapy session setup" style="width: 100%; height: 180px; object-fit: cover;">
+                        <div class="virtual-session-image">
+                            <img src="images/asset26.jpg" alt="Virtual therapy session setup">
                         </div>
                         
                         <div class="investment-highlight">
