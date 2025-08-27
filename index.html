@@ -155,6 +155,9 @@
             margin-bottom: var(--space-lg);
             max-width: 60ch;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
         
         /* Refined Container System */
@@ -286,13 +289,13 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
             box-shadow: var(--shadow-soft);
         }
         
         .btn-primary:hover {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-2px);
             box-shadow: var(--shadow-medium);
             color: white;
@@ -368,7 +371,7 @@
         }
         
         .primary-cta {
-            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
@@ -382,7 +385,7 @@
         }
         
         .primary-cta:hover {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-3px);
             box-shadow: var(--shadow-strong);
             color: white;
@@ -418,13 +421,13 @@
         }
         
         .email-cta {
-            background: linear-gradient(135deg, #10b981, #34d399);
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
             color: white;
             border: none;
         }
         
         .email-cta:hover {
-            background: linear-gradient(135deg, #059669, #10b981);
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
             color: white;
             transform: translateY(-1px);
         }
@@ -542,6 +545,8 @@
         .section-header h2 {
             margin-bottom: var(--space-md);
             color: var(--text-primary);
+            text-align: center;
+            width: 100%;
         }
         
         .section-subtitle {
@@ -551,6 +556,9 @@
             color: var(--accent-warm);
             margin-bottom: var(--space-sm);
             font-weight: 400;
+            text-align: center;
+            display: block;
+            width: 100%;
         }
         
         .approach-grid {
