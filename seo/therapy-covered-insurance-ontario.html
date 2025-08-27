@@ -1,0 +1,961 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- SEO Meta Data - Commercial Intent Keywords -->
+    <title>Therapy Covered by Insurance Ontario - Direct Billing Info | CRPO Registered</title>
+    <meta name="description" content="Is therapy covered by insurance in Ontario? Yes! Learn about coverage for Registered Psychotherapist services. Direct billing information. Most plans accepted.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Therapy Covered by Insurance Ontario | Next Step Therapy">
+    <meta property="og:description" content="Use your insurance benefits for therapy in Ontario. CRPO registered therapist services covered by most plans.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/therapy-covered-insurance-ontario">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/therapy-covered-insurance-ontario">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Next Step Therapy - Insurance Coverage",
+      "description": "Therapy services covered by insurance in Ontario",
+      "url": "https://nextsteptherapy.ca/therapy-covered-insurance-ontario",
+      "telephone": "+14163062157",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "paymentAccepted": ["Insurance", "Cash", "Credit Card"],
+      "priceRange": "$$$"
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Insurance Badges */
+        .insurance-badges {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .insurance-badge {
+            background: white;
+            border: 1px solid rgba(74, 107, 122, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        /* Insurance Table */
+        .insurance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .insurance-table th,
+        .insurance-table td {
+            padding: var(--space-sm);
+            text-align: left;
+            border-bottom: 1px solid rgba(74, 107, 122, 0.1);
+        }
+        
+        .insurance-table th {
+            background: var(--neutral-cream);
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+        }
+        
+        .insurance-table tr:hover {
+            background: rgba(74, 107, 122, 0.02);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Contact Section */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Floating CTA for Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
+            }
+            
+            .insurance-table {
+                font-size: 0.875rem;
+            }
+            
+            .insurance-table th,
+            .insurance-table td {
+                padding: var(--space-xs);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="../index.html#approach">Approach</a></li>
+                        <li><a href="../index.html#specializations">Services</a></li>
+                        <li><a href="../index.html#process">Process</a></li>
+                        <li><a href="../index.html#contact">Connect</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Therapy Covered by Insurance Ontario</h1>
+                    <p class="lead-text">Yes, therapy is covered by most insurance plans in Ontario. Registered Psychotherapist services qualify for reimbursement through extended health benefits, EAPs, and private insurance.</p>
+                    
+                    <div class="insurance-badges">
+                        <span class="insurance-badge">Manulife</span>
+                        <span class="insurance-badge">Sun Life</span>
+                        <span class="insurance-badge">Great-West Life</span>
+                        <span class="insurance-badge">Blue Cross</span>
+                        <span class="insurance-badge">Green Shield</span>
+                        <span class="insurance-badge">Most EAPs</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="#contact" class="btn btn-primary">Check Your Coverage</a>
+                        <a href="tel:+14163062157" class="btn btn-secondary">Call: (416) 306-2157</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Coverage Overview Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Your Therapy IS Covered: Here's How</h2>
+                    
+                    <p>If you have extended health benefits through your employer or private insurance in Ontario, therapy with a Registered Psychotherapist (RP) is likely covered. Don't let uncertainty about coverage prevent you from getting the mental health support you need.</p>
+                    
+                    <p>As a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979), Jesse Cynamon's services qualify for reimbursement under most insurance plans.</p>
+                    
+                    <h3>Quick Coverage Facts:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Coverage Amount:</strong> Most plans cover $500-$5000 annually for mental health services</li>
+                        <li><strong>No Referral Needed:</strong> Unlike psychiatrists, you don't need a doctor's referral</li>
+                        <li><strong>Direct Billing Info:</strong> We provide all documentation for easy reimbursement</li>
+                        <li><strong>Virtual Sessions Covered:</strong> Online therapy has same coverage as in-person</li>
+                        <li><strong>Immediate Receipts:</strong> Get insurance receipts right after each session</li>
+                        <li><strong>CRPO Registration:</strong> Our registration (#10979) ensures eligibility</li>
+                    </ul>
+                    
+                    <p>The investment in your mental health often costs nothing out-of-pocket when you use your benefits.</p>
+                    
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Use your benefits before they expire.</p>
+                        <a href="tel:+14163062157" class="primary-cta">Book Covered Session</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How to Check Coverage Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How to Check Your Therapy Coverage</h2>
+                    
+                    <p>Finding out if your therapy is covered is simpler than you might think. Here's exactly how to verify your coverage in minutes:</p>
+                    
+                    <h3>Step 1: Locate Your Benefits Information</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Through Your Employer</strong></h4>
+                        <p>Check your employee benefits booklet (often available online through HR portal). Look for "Paramedical Services" or "Mental Health Services" section. Find "Registered Psychotherapist" or "Psychotherapy" in the coverage list. Note the annual maximum and per-session limits if any.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Through Your Insurance Provider</strong></h4>
+                        <p>Log into your insurance company's website or app. Navigate to "Coverage" or "Benefits" section. Search for "Psychotherapy" or "Mental Health". Call the number on your benefits card for instant verification.</p>
+                    </div>
+                    
+                    <h3>Step 2: Key Questions to Ask</h3>
+                    <ul class="feature-list">
+                        <li>"Is Registered Psychotherapist covered under my plan?"</li>
+                        <li>"What is my annual maximum for psychotherapy?"</li>
+                        <li>"Is there a per-visit maximum?"</li>
+                        <li>"Do I need a referral?"</li>
+                        <li>"Are virtual sessions covered?"</li>
+                        <li>"What percentage is reimbursed?"</li>
+                    </ul>
+                    
+                    <h3>Step 3: Understanding Your Coverage</h3>
+                    <p>Most Ontario plans cover 80-100% of therapy costs up to the annual maximum. Coverage typically resets January 1st - don't lose unused benefits! Some plans have per-visit caps (e.g., $150/session) but our fees align with standard coverage limits.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Major Insurance Providers Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Coverage by Major Ontario Insurance Providers</h2>
+                    
+                    <p>Here's what you can expect from common insurance providers in Ontario:</p>
+                    
+                    <table class="insurance-table">
+                        <thead>
+                            <tr>
+                                <th>Insurance Provider</th>
+                                <th>Typical Coverage</th>
+                                <th>Requirements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Manulife</strong></td>
+                                <td>$500-$3000/year</td>
+                                <td>CRPO registration required</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sun Life</strong></td>
+                                <td>$750-$5000/year</td>
+                                <td>No referral needed</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Great-West Life</strong></td>
+                                <td>$500-$2500/year</td>
+                                <td>RP designation accepted</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Green Shield Canada</strong></td>
+                                <td>$300-$1500/year</td>
+                                <td>Direct billing available</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Blue Cross</strong></td>
+                                <td>$600-$2000/year</td>
+                                <td>CRPO member covered</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Industrial Alliance</strong></td>
+                                <td>$500-$1000/year</td>
+                                <td>Virtual sessions OK</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desjardins</strong></td>
+                                <td>$750-$2000/year</td>
+                                <td>No referral required</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p style="margin-top: var(--space-md);"><em>*Coverage varies by specific plan. Contact your provider for exact details.</em></p>
+                    
+                    <h3>Employee Assistance Programs (EAP)</h3>
+                    <p>Many Ontario employers offer EAP benefits separate from regular insurance. EAPs typically provide 3-8 free sessions per year. No cost to you - employer pays directly. Often includes family members. Perfect for trying therapy before using extended benefits.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Direct Billing Process Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Simple Insurance Reimbursement Process</h2>
+                    
+                    <p>We make insurance reimbursement as easy as possible. While we don't offer direct billing to insurance companies, we provide everything you need for quick reimbursement.</p>
+                    
+                    <h3>How Our Billing Works:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>1. Payment at Session</strong></h4>
+                        <p>Pay for your session by e-transfer, credit card, or debit. Session fees align with standard insurance coverage limits. Investment in your mental health with guaranteed reimbursement.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>2. Immediate Receipt</strong></h4>
+                        <p>Receive detailed receipt immediately after session. Includes all required information: practitioner name, CRPO registration #10979, service date, session length, and fee. Format accepted by all major insurers.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>3. Submit to Insurance</strong></h4>
+                        <p>Submit receipt through your insurer's app or website (usually takes 2 minutes). Or photograph receipt and email to insurance. Some plans still accept mailed claims. Most provide reimbursement within 1-2 weeks.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>4. Direct Deposit Reimbursement</strong></h4>
+                        <p>Most insurers offer direct deposit for fastest reimbursement. Money typically in your account within 5-10 business days. Track claim status through insurer's app. Keep receipts for tax purposes if not fully covered.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg);"><strong>Pro Tip:</strong> Submit claims immediately after each session rather than batching - faster reimbursement and easier tracking.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What's Not Covered Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Understanding Coverage Limitations</h2>
+                    
+                    <p>While most therapy services are covered, it's important to understand what typically isn't covered by insurance in Ontario:</p>
+                    
+                    <h3>What's Usually NOT Covered:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>OHIP (Provincial Health Insurance)</strong></h4>
+                        <p>OHIP doesn't cover Registered Psychotherapists. OHIP only covers psychiatrists (MD) and some psychologists in hospital settings. This is why extended health benefits are valuable. Most working Ontarians have coverage through employer benefits.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Couples or Family Therapy</strong></h4>
+                        <p>Some plans only cover individual therapy. Check if your plan includes "family therapy" or "couples counselling". May need to bill as individual therapy for primary client. We can advise on best approach for your plan.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Missed Appointments</strong></h4>
+                        <p>Insurance doesn't cover no-shows or late cancellations. 24-hour cancellation policy protects your benefits. Rescheduling is always preferable to losing coverage.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Annual Maximum Exceeded</strong></h4>
+                        <p>Once you've used your annual allocation, additional sessions are out-of-pocket. Benefits typically reset January 1st. Some employers offer top-up coverage or HSA (Health Spending Accounts). Therapy costs may be tax-deductible medical expenses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Maximizing Benefits Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Maximize Your Therapy Insurance Benefits</h2>
+                    
+                    <p>Smart strategies to get the most from your mental health coverage:</p>
+                    
+                    <h3>Year-End Planning:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Use It or Lose It</strong></h4>
+                        <p>Benefits don't carry over - December 31st they're gone. Start therapy in fall to use current year's benefits. Book January appointments to access new year's allocation immediately. Many clients do intensive work in Q4 to maximize coverage.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Coordinate Family Benefits</strong></h4>
+                        <p>If spouse has benefits, you might have double coverage. Can claim balance from spouse's plan after yours is maxed. Children often covered under parental benefits. Maximize total family mental health support.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Combine Coverage Sources</strong></h4>
+                        <p>Use EAP sessions first (they're separate from extended health). Switch to extended health benefits after EAP is exhausted. If you have HSA (Health Spending Account), use for amounts over coverage. Strategic sequencing maximizes total coverage.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Tax Benefits</strong></h4>
+                        <p>Therapy expenses exceeding insurance coverage may be tax-deductible. Keep all receipts for tax filing. Medical expenses can reduce taxable income. Consult your accountant about maximizing deductions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Specific Populations Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Coverage for Specific Ontario Populations</h2>
+                    
+                    <h3>Students:</h3>
+                    <p>Most Ontario universities and colleges include mental health coverage. Usually $500-1000 per academic year. Check your student union health plan. Virtual therapy perfect for busy student schedules.</p>
+                    
+                    <h3>Self-Employed:</h3>
+                    <p>Private health insurance plans available through providers like Blue Cross. Professional associations often offer group plans. Therapy expenses are tax-deductible business expenses if related to work. Consider it investment in your business's most important asset - you.</p>
+                    
+                    <h3>Retirees:</h3>
+                    <p>Many pension plans include mental health benefits. Coverage often continues from employment into retirement. Check with your pension administrator. Private plans available for those without pension coverage.</p>
+                    
+                    <h3>Ontario Works / ODSP:</h3>
+                    <p>Limited coverage through special programs. May qualify for subsidized mental health services. We can provide documentation for funding applications. Sliding scale fees available in certain circumstances.</p>
+                    
+                    <h3>First Responders:</h3>
+                    <p>Enhanced mental health benefits common. WSIB coverage for work-related trauma. Union plans often have generous therapy coverage. Specialized support for PTSD and operational stress.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Insurance Coverage FAQs</h2>
+                
+                <div class="faq-item">
+                    <h4>Do I need a doctor's referral for insurance coverage?</h4>
+                    <p>No, Registered Psychotherapists in Ontario don't require referrals. You can book directly and insurance will cover it. This is different from psychiatrists who need referrals.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What's the difference between psychologist and psychotherapist coverage?</h4>
+                    <p>Insurance typically covers both, though sometimes under different categories or maximums. Registered Psychotherapists (RP) like Jesse are fully covered. The quality of therapy is equivalent - the difference is mainly in training path.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I use my spouse's insurance if mine runs out?</h4>
+                    <p>Yes, if your spouse has coverage, you can submit the balance to their plan after yours is exhausted. This is called coordination of benefits and can significantly extend your coverage.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Are virtual therapy sessions covered the same as in-person?</h4>
+                    <p>Yes, virtual therapy has identical insurance coverage to in-person sessions. This has been confirmed by all major insurers, especially since 2020.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if my plan doesn't specifically list "Registered Psychotherapist"?</h4>
+                    <p>Look for "psychotherapy," "mental health services," or "paramedical services." Call your insurer - CRPO members are recognized across Ontario. Most plans updated their coverage terms recently.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How quickly will I be reimbursed?</h4>
+                    <p>Most insurers process claims within 5-10 business days. Electronic submission is fastest. Direct deposit speeds up payment. Paper claims may take 2-3 weeks.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I don't have insurance coverage?</h4>
+                    <p>We understand not everyone has benefits. Therapy costs may be tax-deductible medical expenses. Payment plans can be discussed. Your mental health is still important and we can explore options.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>Use Your Insurance Benefits for Therapy</h3>
+                <p>Don't leave money on the table. Your mental health coverage is part of your compensation package - use it to invest in your wellbeing.</p>
+                
+                <h4>Verify Your Coverage Today</h4>
+                <p>Call us with your insurance details and we'll help confirm your coverage. Most clients are pleasantly surprised by their benefits.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:+14163062157" class="primary-cta">Check Coverage & Book</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
+                        <a href="../index.html#contact" class="secondary-cta email-cta">Email Questions</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Insurance-Covered Virtual Therapy Throughout Ontario<br>
+                    Direct billing information provided<br>
+                    All major insurance plans accepted
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        💰 Check Coverage
+    </a>
+
+</body></html>
