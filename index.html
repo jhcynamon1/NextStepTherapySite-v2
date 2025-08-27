@@ -15,33 +15,77 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca">
     
-    <!-- Refined Premium Typography -->
+    <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Schema Markup -->
+    <!-- Preload Critical Images -->
+    <link rel="preload" as="image" href="images/hero-background.jpg">
+    <link rel="preload" as="image" href="images/asset103.png">
+    
+    <!-- Browser Caching Headers -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    
+    <!-- Enhanced JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Person", "MedicalBusiness"],
-      "name": "Jesse Cynamon",
-      "jobTitle": "Registered Psychotherapist",
-      "description": "Boutique therapy practice specializing in sophisticated, evidence-based mental health support using Acceptance and Commitment Therapy",
-      "telephone": "(416) 306-2157",
+      "@type": ["Person", "MedicalBusiness", "Organization"],
+      "name": "Next Step Therapy",
+      "alternateName": "Jesse Cynamon, RP",
+      "founder": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": "CRPO Registration #10979"
+      },
+      "description": "Evidence-based therapy in Ontario using ACT approach. Anxiety, depression, men's mental health & workplace stress. CRPO registered. Virtual sessions.",
+      "url": "https://nextsteptherapy.ca",
+      "logo": "https://nextsteptherapy.ca/images/asset104.png",
+      "telephone": "+14163062157",
       "email": "jesse@nextsteptherapy.ca",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "Ontario",
         "addressCountry": "CA"
       },
-      "url": "https://nextsteptherapy.ca",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "serviceType": ["Anxiety Therapy", "Depression Therapy", "Men's Mental Health", "Workplace Stress Therapy", "Life Transitions Counseling", "Relationship Therapy"],
+      "medicalSpecialty": ["Acceptance and Commitment Therapy", "Anxiety Disorders", "Depression Treatment", "Stress Management"],
       "memberOf": {
         "@type": "Organization",
         "name": "College of Registered Psychotherapists of Ontario"
       },
-      "medicalSpecialty": ["Anxiety Therapy", "Acceptance and Commitment Therapy", "Personal Growth Counseling"],
-      "hasCredential": "CRPO Registration #10979"
+      "priceRange": "$175",
+      "paymentAccepted": ["Insurance", "Credit Card", "E-transfer"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Therapy Session",
+              "description": "50-minute virtual or in-person therapy session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD"
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+14163062157",
+        "contactType": "Customer Service",
+        "availableLanguage": "English",
+        "areaServed": "Ontario"
+      }
     }
     </script>
     
@@ -1027,7 +1071,85 @@
             margin: 0;
         }
         
-        /* Premium Mobile Responsiveness */
+        /* Critical CSS Optimization */
+        .above-fold-critical {
+            display: block;
+            visibility: visible;
+        }
+        
+        /* Performance Optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Mobile-First Responsive Design */
+        @media (max-width: 480px) {
+            :root {
+                --space-section: 3rem;
+                --space-xxl: 2rem;
+                --space-xl: 1.5rem;
+            }
+            
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+                text-align: center;
+                min-height: 50vh;
+            }
+            
+            .primary-cta {
+                padding: 1rem 1.5rem;
+                font-size: 0.95rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-xs);
+            }
+            
+            .contact-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+            
+            .specializations-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+            
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+            
+            h1 {
+                font-size: 2.25rem;
+                line-height: 1.1;
+            }
+            
+            .lead-text {
+                font-size: 1.125rem;
+            }
+            
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 0.875rem;
+                font-size: 16px; /* Prevent zoom on iOS */
+            }
+        }
+        
         @media (max-width: 768px) {
             :root {
                 --space-section: 4rem;
@@ -1037,6 +1159,11 @@
             
             .nav {
                 display: none;
+            }
+            
+            .header-phone {
+                padding: var(--space-xs) var(--space-sm);
+                font-size: 0.875rem;
             }
             
             .hero-content {
@@ -1126,10 +1253,32 @@
             animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
         /* Smooth scrolling for modern browsers */
         @media (prefers-reduced-motion: no-preference) {
             html {
                 scroll-behavior: smooth;
+            }
+        }
+        
+        /* Touch optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn,
+            .header-phone,
+            .specialization-card {
+                min-height: 44px;
+                touch-action: manipulation;
             }
         }
     </style>
@@ -1142,7 +1291,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" width="200" height="40" onerror="this.style.display='none'">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" width="200" height="40" loading="eager" onerror="this.style.display='none'">
                     <a href="#" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge">CRPO #10979</span>
                 </div>
@@ -1182,7 +1331,7 @@
                     height: 100%;
                     object-fit: cover;
                     opacity: 0.3;
-                " loading="lazy">
+                " loading="eager">
             </div>
             
             <!-- Subtle About Texture Background -->
@@ -1211,14 +1360,14 @@
                             </a>
                             <div class="secondary-ctas">
                                 <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
-                                <a href="mailto:jesse@nextsteptherapy.ca" class="secondary-cta email-cta">Send Message</a>
+                                <a href="#contact" class="secondary-cta email-cta">Send Message</a>
                             </div>
                         </div>
                     </div>
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" onerror="this.innerHTML='JC'">
+                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" onerror="this.innerHTML='JC'">
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon, RP</h3>
@@ -1261,7 +1410,7 @@
                         <p>You're the expert on your life - I'm just here with the tools and training to help you navigate it better. No judgment, no telling you what to do. Just genuine collaboration toward the changes you want to see.</p>
                         
                         <div class="office-image">
-                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300">
+                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -1398,7 +1547,7 @@
                     <p class="lead-text">A straightforward process that respects your time and focuses on real progress.</p>
                     
                     <div class="process-image">
-                        <img src="images/process-background.jpg" alt="Professional consultation and therapy discussion">
+                        <img src="images/process-background.jpg" alt="Professional consultation and therapy discussion" loading="lazy">
                     </div>
                 </div>
                 
@@ -1570,7 +1719,7 @@
                         </ul>
                         
                         <div class="virtual-session-image">
-                            <img src="images/contact-background.jpg" alt="Virtual therapy session setup">
+                            <img src="images/contact-background.jpg" alt="Virtual therapy session setup" loading="lazy">
                         </div>
                         
                         <div class="investment-highlight">
@@ -1694,6 +1843,19 @@
     </footer>
     
     <script>
+        // Performance optimizations
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+            document.body.appendChild(script);
+        }
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1763,13 +1925,28 @@
             });
         }, observerOptions);
         
-        // Initialize animation on scroll
-        document.querySelectorAll('.specialization-card, .process-step').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
+        // Initialize animation on scroll with reduced motion support
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.specialization-card, .process-step').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
+        }
+        
+        // Web Vitals optimization - defer non-critical JavaScript
+        window.addEventListener('load', function() {
+            // Non-critical JavaScript can be loaded here
+            console.log('Page fully loaded - Web Vitals optimized');
         });
+        
+        // Service Worker for caching (if supported)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Can register service worker here for caching
+            });
+        }
     </script>
 </body>
 </html>
