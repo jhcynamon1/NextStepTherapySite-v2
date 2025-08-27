@@ -472,6 +472,47 @@
             line-height: 1.6;
         }
         
+        /* Floating CTA for Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
+        }
+        
+        .floating-cta:active {
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+        
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav {
@@ -510,6 +551,18 @@
             
             .contact-highlight h3 {
                 font-size: 2rem;
+            }
+            
+            /* Mobile CTA adjustments */
+            .hero-cta div[style*="flex"] {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .hero-cta div[style*="flex"] .primary-cta,
+            .hero-cta div[style*="flex"] .secondary-cta {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -573,6 +626,12 @@
                         <li><strong>The Avoidance Dance:</strong> Declining invitations, calling in sick, anything to avoid triggering situations</li>
                         <li><strong>The Exhaustion:</strong> Being constantly "on" is draining. You're tired but wired at the same time</li>
                     </ul>
+                    
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Sound familiar? You don't have to navigate this alone.</p>
+                        <a href="tel:+14163062157" class="primary-cta">Get Support Today</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -605,6 +664,15 @@
                     <div>
                         <h4><strong>Address the Root Patterns</strong></h4>
                         <p>We'll look at what keeps the anxiety cycle going and find ways to interrupt it that actually stick.</p>
+                    </div>
+                    
+                    <!-- CTA after explaining how therapy helps -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to start building these skills?</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+14163062157" class="primary-cta">Book Free Consultation</a>
+                            <a href="../index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -828,7 +896,7 @@
                     <a href="tel:+14163062157" class="primary-cta">Book Your Free Call</a>
                     <div class="secondary-ctas">
                         <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
-                        <a href="mailto:jesse@nextsteptherapy.ca" class="secondary-cta email-cta">Send Message</a>
+                        <a href="../index.html#contact" class="secondary-cta email-cta">Send Message</a>
                     </div>
                 </div>
                 
@@ -841,5 +909,10 @@
             </div>
         </section>
     </main>
+    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        📞 Call Now
+    </a>
 </body>
 </html>
