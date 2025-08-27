@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Data -->
+    <title>Trauma Therapy Ontario - Evidence-Based Support for Healing | Next Step</title>
+    <meta name="description" content="Professional trauma therapy in Ontario. Evidence-based support for healing from trauma using trauma-informed ACT approach. Virtual sessions, CRPO registered therapist.">
+    <meta name="keywords" content="trauma therapy ontario, PTSD therapy ontario, trauma counseling, trauma treatment ontario, complex trauma therapy">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Trauma Therapy Ontario - Evidence-Based Support for Healing">
+    <meta property="og:description" content="Professional trauma therapy throughout Ontario. Trauma-informed care using evidence-based approaches for healing and recovery. Virtual sessions available.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/trauma-therapy-ontario">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/trauma-therapy-ontario">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Trauma Therapy Ontario",
+      "description": "Professional trauma therapy and PTSD treatment services in Ontario",
+      "url": "https://nextsteptherapy.ca/trauma-therapy-ontario",
+      "provider": {
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "areaServed": "Ontario, Canada"
+      },
+      "medicalSpecialty": "Trauma Treatment",
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Trauma Therapy",
+        "description": "Evidence-based therapy for trauma and PTSD using trauma-informed approaches",
+        "serviceType": "Virtual Psychotherapy"
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nextsteptherapy.ca"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Trauma Therapy Ontario",
+        "item": "https://nextsteptherapy.ca/trauma-therapy-ontario"
+      }]
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background-primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header Styling */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.025em;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            border-bottom-color: var(--accent-warm);
+        }
+        
+        .header-phone {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9375rem;
+        }
+        
+        .header-phone:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+            color: white;
+        }
+        
+        /* Hero Section with Background Images */
+        .service-hero {
+            position: relative;
+            min-height: 500px;
+            padding: var(--space-section) 0;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('images/about-texture.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+        
+        .service-hero h2 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Styling */
+        .service-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-section) var(--space-md);
+            background: var(--background-primary);
+        }
+        
+        .service-content p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+        
+        .service-content h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: var(--space-xxl) 0 var(--space-lg);
+            color: var(--primary-soft-blue);
+            letter-spacing: -0.025em;
+        }
+        
+        .service-content ul {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-lg);
+        }
+        
+        .service-content li {
+            margin-bottom: var(--space-sm);
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        
+        .service-content li::marker {
+            color: var(--accent-warm);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
+            padding: var(--space-section) 0;
+            text-align: center;
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .cta-section h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .primary-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.125rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            margin: var(--space-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-btn:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        /* Trust Indicators */
+        .trust-indicators {
+            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            margin: var(--space-xl) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .trust-badge:hover {
+            transform: translateY(-2px);
+        }
+        
+        .trust-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .hero-cta {
+            margin-top: var(--space-xl);
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-primary-btn {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-primary-btn:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.35);
+            color: white;
+        }
+        
+        .hero-secondary-btn {
+            background: white;
+            color: var(--primary-soft-blue);
+            padding: 1.25rem 2.5rem;
+            border: 2px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hero-secondary-btn:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .service-hero {
+                min-height: 400px;
+                padding: var(--space-xl) 0;
+            }
+            
+            .service-content {
+                padding: var(--space-xl) var(--space-md);
+            }
+            
+            .trust-badges {
+                gap: var(--space-md);
+            }
+            
+            .trust-badge {
+                padding: var(--space-xs) var(--space-md);
+                font-size: 0.9rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-primary-btn,
+            .hero-secondary-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#specializations">Services</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#contact">Connect</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <!-- Background Image Container -->
+        <div class="hero-background">
+            <img src="images/hero-background.jpg" alt="" loading="lazy">
+        </div>
+        
+        <!-- Subtle About Texture Background -->
+        <div class="hero-texture"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Trauma Therapy Ontario - Evidence-Based Support for Healing</h1>
+                <h2>Trauma-Informed Care | CRPO Registered Therapist</h2>
+                <div class="hero-cta">
+                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="hero-primary-btn">Book Free 15-Min Consultation</a>
+                    <a href="tel:+14163062157" class="hero-secondary-btn">Call or Text: (416) 306-2157</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="service-content">
+        <p>Professional <strong>trauma therapy in Ontario</strong> that honors your resilience while providing evidence-based support for healing. Our trauma-informed approach recognizes that healing happens at your pace, focusing on building safety, stability, and meaningful engagement with life.</p>
+        
+        <h3>Understanding Trauma Through a Healing Lens</h3>
+        <p><strong>Trauma therapy</strong> recognizes that traumatic experiences can profoundly impact how we relate to ourselves, others, and the world. Rather than focusing solely on symptoms, our approach emphasizes your inherent capacity for healing and growth.</p>
+        
+        <p>Trauma can manifest in various ways:</p>
+        <ul>
+            <li>Intrusive memories or flashbacks</li>
+            <li>Hypervigilance and difficulty feeling safe</li>
+            <li>Emotional numbness or overwhelming emotions</li>
+            <li>Sleep disturbances and nightmares</li>
+            <li>Avoidance of trauma-related triggers</li>
+            <li>Difficulty trusting others or forming relationships</li>
+        </ul>
+        
+        <h3>Trauma-Informed ACT Approach</h3>
+        <p>Our <strong>trauma therapy</strong> utilizes Acceptance and Commitment Therapy adapted for trauma experiences. This evidence-based approach helps you develop psychological flexibility while honoring the protective function of trauma responses.</p>
+        
+        <p>Key therapeutic elements include:</p>
+        <ul>
+            <li>Building present-moment awareness and grounding skills</li>
+            <li>Developing acceptance of difficult trauma-related emotions</li>
+            <li>Creating psychological distance from traumatic memories</li>
+            <li>Reconnecting with personal values and meaning</li>
+            <li>Gradual engagement with avoided experiences</li>
+            <li>Strengthening sense of self beyond trauma identity</li>
+        </ul>
+        
+        <h3>Types of Trauma We Address</h3>
+        <p>Professional <strong>trauma counseling</strong> recognizes that trauma experiences vary widely in nature, severity, and impact. Our approach adapts to your specific healing needs while maintaining core therapeutic principles.</p>
+        
+        <p>Areas of trauma specialization:</p>
+        <ul>
+            <li>Single-incident trauma and PTSD</li>
+            <li>Complex trauma and developmental difficulties</li>
+            <li>Workplace trauma and professional incidents</li>
+            <li>Medical trauma and health-related stress</li>
+            <li>Relationship trauma and betrayal</li>
+            <li>Grief and loss-related trauma</li>
+        </ul>
+        
+        <h3>Creating Safety in Virtual Trauma Therapy</h3>
+        <p><strong>Virtual trauma therapy</strong> can offer unique advantages for trauma healing, including increased sense of control, familiarity of environment, and reduced triggers associated with traveling to appointments. We prioritize creating emotional safety within the virtual space.</p>
+        
+        <h3>Post-Traumatic Growth and Resilience</h3>
+        <p>While trauma can create lasting impacts, <strong>trauma therapy</strong> also recognizes the potential for post-traumatic growth. This includes developing deeper relationships, increased appreciation for life, spiritual growth, and discovering inner strength.</p>
+        
+        <h3>Collaborative and Client-Centered Approach</h3>
+        <p>Effective <strong>trauma treatment</strong> recognizes you as the expert on your own experience. Therapy focuses on restoring your sense of choice and control while providing professional guidance and evidence-based tools for healing.</p>
+        
+        <p>Session investment: $175 per 50-minute session. Most extended health plans cover Registered Psychotherapists - detailed receipts provided for insurance reimbursement.</p>
+        
+        <h3>Beginning Your Trauma Healing Journey</h3>
+        <p>Starting <strong>trauma therapy</strong> begins with a free 15-minute consultation where we discuss your needs and ensure you feel comfortable with the therapeutic approach. This initial conversation respects your pace and preferences for healing.</p>
+        
+        <h3>About Jesse Cynamon, RP</h3>
+        <p>As a CRPO-registered therapist (#10979) with training in trauma-informed ACT approaches, I understand that healing from trauma requires safety, patience, and respect for your unique journey. My approach honors your resilience while providing professional support for moving forward.</p>
+    </main>
+    
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <h3>Why Choose Trauma Therapy with Next Step?</h3>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-icon">✓</div>
+                    <span>CRPO Registered</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">🛡️</div>
+                    <span>Trauma-Informed</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">💻</div>
+                    <span>Virtual Sessions</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">📋</div>
+                    <span>Insurance Coverage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Begin Your Healing Journey?</h3>
+            <p>Professional trauma therapy can support your path toward healing and growth. Start with a free, gentle consultation today.</p>
+            <a href="index.html#contact" class="primary-btn">Fill Out Contact Form</a>
+            <a href="tel:+14163062157" class="primary-btn">Call or Text: (416) 306-2157</a>
+        </div>
+    </section>
+    
+    <!-- Related Services -->
+    <footer style="background: var(--neutral-cream); padding: var(--space-lg) 0;">
+        <div class="container">
+            <h3>Related Services</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: var(--space-md); list-style: none; padding: 0;">
+                <li><a href="anxiety-counseling-ontario.html">Anxiety Counseling</a></li>
+                <li><a href="depression-therapy-ontario.html">Depression Therapy</a></li>
+                <li><a href="services/life-transitions.html">Life Transitions</a></li>
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

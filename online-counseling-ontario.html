@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO Meta Data -->
+    <title>Online Counseling Ontario - Professional Virtual Therapy Sessions | Next Step</title>
+    <meta name="description" content="Professional online counseling in Ontario. Virtual therapy sessions with CRPO registered therapist. Secure, convenient, effective. Book free consultation.">
+    <meta name="keywords" content="online counseling ontario, virtual therapy ontario, online therapy, virtual counseling, teletherapy ontario">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Online Counseling Ontario - Professional Virtual Therapy Sessions">
+    <meta property="og:description" content="Experience professional online counseling throughout Ontario. Secure virtual therapy sessions with evidence-based approaches. CRPO registered therapist.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/online-counseling-ontario">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/online-counseling-ontario">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Online Counseling Ontario",
+      "description": "Professional virtual therapy and online counseling services in Ontario",
+      "url": "https://nextsteptherapy.ca/online-counseling-ontario",
+      "provider": {
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "areaServed": "Ontario, Canada"
+      },
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Online Counseling",
+        "description": "Virtual therapy sessions using evidence-based approaches",
+        "serviceType": "Virtual Psychotherapy"
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nextsteptherapy.ca"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Online Counseling Ontario",
+        "item": "https://nextsteptherapy.ca/online-counseling-ontario"
+      }]
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background-primary);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header Styling */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.025em;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            border-bottom-color: var(--accent-warm);
+        }
+        
+        .header-phone {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9375rem;
+        }
+        
+        .header-phone:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+            color: white;
+        }
+        
+        /* Hero Section with Background Images */
+        .service-hero {
+            position: relative;
+            min-height: 500px;
+            padding: var(--space-section) 0;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('images/about-texture.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+        
+        .service-hero h2 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Styling */
+        .service-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-section) var(--space-md);
+            background: var(--background-primary);
+        }
+        
+        .service-content p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+        
+        .service-content h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: var(--space-xxl) 0 var(--space-lg);
+            color: var(--primary-soft-blue);
+            letter-spacing: -0.025em;
+        }
+        
+        .service-content ul {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-lg);
+        }
+        
+        .service-content li {
+            margin-bottom: var(--space-sm);
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        
+        .service-content li::marker {
+            color: var(--accent-warm);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
+            padding: var(--space-section) 0;
+            text-align: center;
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .cta-section h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .primary-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.125rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            margin: var(--space-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-btn:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        /* Trust Indicators */
+        .trust-indicators {
+            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-xl);
+            margin: var(--space-xl) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .trust-badge:hover {
+            transform: translateY(-2px);
+        }
+        
+        .trust-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--accent-warm);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .hero-cta {
+            margin-top: var(--space-xl);
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-primary-btn {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-primary-btn:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.35);
+            color: white;
+        }
+        
+        .hero-secondary-btn {
+            background: white;
+            color: var(--primary-soft-blue);
+            padding: 1.25rem 2.5rem;
+            border: 2px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hero-secondary-btn:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .service-hero {
+                min-height: 400px;
+                padding: var(--space-xl) 0;
+            }
+            
+            .service-content {
+                padding: var(--space-xl) var(--space-md);
+            }
+            
+            .trust-badges {
+                gap: var(--space-md);
+            }
+            
+            .trust-badge {
+                padding: var(--space-xs) var(--space-md);
+                font-size: 0.9rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-primary-btn,
+            .hero-secondary-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#specializations">Services</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#contact">Connect</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <!-- Background Image Container -->
+        <div class="hero-background">
+            <img src="images/hero-background.jpg" alt="" loading="lazy">
+        </div>
+        
+        <!-- Subtle About Texture Background -->
+        <div class="hero-texture"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Online Counseling Ontario - Professional Virtual Therapy Sessions</h1>
+                <h2>Secure, Effective Virtual Therapy | CRPO Registered Therapist</h2>
+                <div class="hero-cta">
+                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="hero-primary-btn">Book Free 15-Min Consultation</a>
+                    <a href="tel:+14163062157" class="hero-secondary-btn">Call or Text: (416) 306-2157</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="service-content">
+        <p>Professional <strong>online counseling in Ontario</strong> that delivers the same therapeutic benefits as in-person sessions. Our secure <strong>virtual therapy</strong> platform connects you with evidence-based mental health support from your own space. CRPO-registered therapist providing <strong>online therapy</strong> throughout Ontario with flexible scheduling and insurance coverage.</p>
+        
+        <h3>The Advantages of Online Counseling</h3>
+        <p><strong>Online counseling</strong> has evolved into a sophisticated and effective form of mental health treatment. Research consistently demonstrates that virtual therapy sessions achieve therapeutic outcomes equivalent to traditional in-person meetings, while offering unique benefits.</p>
+        
+        <p>Benefits of <strong>virtual therapy</strong> include:</p>
+        <ul>
+            <li>Complete privacy and comfort in your chosen environment</li>
+            <li>No commute time or travel expenses</li>
+            <li>Reduced scheduling barriers and increased flexibility</li>
+            <li>Access to professional support regardless of location</li>
+            <li>Enhanced comfort for those with social anxiety</li>
+            <li>Secure, HIPAA-compliant video platform</li>
+        </ul>
+        
+        <h3>Evidence-Based Virtual Therapy Approaches</h3>
+        <p>Our <strong>online counseling</strong> utilizes the same scientifically-validated therapeutic methods used in traditional settings. Acceptance and Commitment Therapy (ACT) adapts particularly well to the virtual format, emphasizing practical skills and mindfulness techniques.</p>
+        
+        <p><strong>Virtual therapy sessions</strong> address:</p>
+        <ul>
+            <li>Anxiety and panic management</li>
+            <li>Depression and mood difficulties</li>
+            <li>Workplace stress and burnout</li>
+            <li>Life transitions and adjustment challenges</li>
+            <li>Men's mental health concerns</li>
+            <li>Relationship and communication patterns</li>
+        </ul>
+        
+        <h3>Secure and Professional Virtual Platform</h3>
+        <p>Your <strong>online therapy</strong> sessions take place on a secure, encrypted platform designed specifically for healthcare providers. This ensures complete confidentiality while providing clear audio and video quality for effective therapeutic connection.</p>
+        
+        <h3>Flexible Scheduling for Modern Life</h3>
+        <p><strong>Online counseling</strong> removes traditional barriers to mental health support. Evening and weekend appointments accommodate busy schedules, while the virtual format eliminates weather, traffic, or transportation concerns that might otherwise disrupt your therapy routine.</p>
+        
+        <h3>Professional Registration and Insurance Coverage</h3>
+        <p>As a CRPO-registered psychotherapist (#10979), all <strong>virtual therapy</strong> sessions meet the same professional standards as in-person treatment. Most extended health plans recognize and cover online counseling sessions with Registered Psychotherapists.</p>
+        
+        <p>Session investment: $175 per 50-minute session. Detailed receipts provided for insurance reimbursement with all required codes and information.</p>
+        
+        <h3>Getting Started with Virtual Therapy</h3>
+        <p>Begin your <strong>online counseling</strong> journey with a free 15-minute consultation call. We'll discuss the virtual platform, address any technical questions, and explore whether online therapy aligns with your preferences and needs.</p>
+        
+        <h3>About Jesse Cynamon, RP</h3>
+        <p>With extensive experience in virtual therapy delivery and advanced training in evidence-based approaches, I provide professional <strong>online counseling</strong> that maintains the therapeutic relationship and effectiveness you'd expect from in-person sessions.</p>
+    </main>
+    
+    <!-- Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="container">
+            <h3>Why Choose Online Counseling with Next Step?</h3>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-icon">✓</div>
+                    <span>CRPO Registered</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">🔒</div>
+                    <span>Secure Platform</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">💻</div>
+                    <span>Virtual Sessions</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">📋</div>
+                    <span>Insurance Coverage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Experience Professional Online Counseling?</h3>
+            <p>Virtual therapy brings professional mental health support to your preferred environment. Start with a free consultation today.</p>
+            <a href="index.html#contact" class="primary-btn">Fill Out Contact Form</a>
+            <a href="tel:+14163062157" class="primary-btn">Call or Text: (416) 306-2157</a>
+        </div>
+    </section>
+    
+    <!-- Related Services -->
+    <footer style="background: var(--neutral-cream); padding: var(--space-lg) 0;">
+        <div class="container">
+            <h3>Related Services</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: var(--space-md); list-style: none; padding: 0;">
+                <li><a href="therapy-near-me-ontario.html">Therapy Near Me Ontario</a></li>
+                <li><a href="services/anxiety-therapy.html">Anxiety Therapy</a></li>
+                <li><a href="mental-health-therapy-ontario.html">Mental Health Therapy</a></li>
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

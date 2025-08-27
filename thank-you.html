@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Next Step Therapy</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-section: 80px;
+            --radius-md: 8px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .thank-you-container {
+            background: white;
+            padding: var(--space-section);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            max-width: 600px;
+            margin: var(--space-lg);
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #d4edda;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-size: 2.5rem;
+            color: #155724;
+        }
+        
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .message {
+            font-size: 1.125rem;
+            margin-bottom: var(--space-xl);
+            color: var(--text-secondary);
+        }
+        
+        .next-steps {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .next-steps h3 {
+            margin-bottom: var(--space-lg);
+            color: var(--primary-soft-blue);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-method {
+            text-align: center;
+        }
+        
+        .contact-method strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .contact-method a {
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-method a:hover {
+            text-decoration: underline;
+        }
+        
+        .home-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: var(--space-lg);
+        }
+        
+        .home-button:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-1px);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .thank-you-container {
+                padding: var(--space-xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="success-icon">✓</div>
+        
+        <h1>Thank You for Reaching Out</h1>
+        
+        <p class="message">Your message has been received. I will respond within 2 hours during business hours with care and confidentiality.</p>
+        
+        <div class="next-steps">
+            <h3>What Happens Next</h3>
+            <p>I personally read every message and will reach out to discuss how we can work together. This first conversation is always confidential and pressure-free.</p>
+            
+            <div class="contact-info">
+                <div class="contact-method">
+                    <strong>Call or Text</strong>
+                    <a href="tel:+14163062157">(416) 306-2157</a>
+                </div>
+                <div class="contact-method">
+                    <strong>Response Time</strong>
+                    <span>Within 2 hours during business hours</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="index.html" class="home-button">Return to Homepage</a>
+    </div>
+    
+    <script>
+        // Auto redirect to homepage after 30 seconds
+        setTimeout(() => {
+            const countdown = document.createElement('p');
+            countdown.style.marginTop = '1rem';
+            countdown.style.fontSize = '0.9rem';
+            countdown.style.color = 'var(--text-secondary)';
+            countdown.textContent = 'Redirecting to homepage in 30 seconds...';
+            document.querySelector('.thank-you-container').appendChild(countdown);
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 30000);
+        }, 5000);
+    </script>
+</body>
+</html>
