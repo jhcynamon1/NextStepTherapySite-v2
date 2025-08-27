@@ -21,22 +21,52 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
+      "@type": "MedicalWebPage",
       "name": "Workplace Stress and Burnout Therapy",
-      "description": "Professional therapy for workplace mental health",
-      "potentialAction": {
-        "@type": "BookAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://nextsteptherapy.ca/book",
-          "actionPlatform": ["http://schema.org/DesktopWebPlatform"]
-        }
+      "description": "Professional therapy for workplace mental health and burnout",
+      "url": "https://nextsteptherapy.ca/services/workplace-stress-burnout",
+      "provider": {
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "areaServed": "Ontario, Canada"
+      },
+      "medicalSpecialty": "Workplace Mental Health",
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Workplace Stress Therapy",
+        "description": "Acceptance and Commitment Therapy for workplace stress",
+        "serviceType": "Virtual Psychotherapy"
       }
     }
     </script>
     
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nextsteptherapy.ca"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://nextsteptherapy.ca/services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Workplace Stress & Burnout",
+        "item": "https://nextsteptherapy.ca/services/workplace-stress-burnout"
+      }]
+    }
+    </script>
+    
     <style>
-        /* Base styles (same as previous pages) */
+        /* Match homepage design exactly */
         :root {
             --primary-soft-blue: #4A6B7A;
             --primary-light: #6B89A0;
@@ -53,6 +83,7 @@
             --space-md: 24px;
             --space-lg: 32px;
             --space-xl: 48px;
+            --space-xxl: 64px;
             --space-section: 80px;
             --radius-sm: 6px;
             --radius-md: 8px;
@@ -82,89 +113,317 @@
             padding: 0 var(--space-md);
         }
         
+        /* Header Styling */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.025em;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            border-bottom-color: var(--accent-warm);
+        }
+        
+        .header-phone {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9375rem;
+        }
+        
+        .header-phone:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+            color: white;
+        }
+        
+        /* Hero Section with Background Images */
         .service-hero {
+            position: relative;
+            min-height: 500px;
             padding: var(--space-section) 0;
-            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            display: flex;
+            align-items: center;
             text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-texture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url('../images/about-texture.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .service-hero h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+        }
+        
+        .service-hero h2 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Styling */
+        .service-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-section) var(--space-md);
+            background: var(--background-primary);
+        }
+        
+        .service-content p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+        
+        .service-content h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: var(--space-xxl) 0 var(--space-lg);
+            color: var(--primary-soft-blue);
+            letter-spacing: -0.025em;
+        }
+        
+        .service-content ul {
+            margin-bottom: var(--space-lg);
+            padding-left: var(--space-lg);
+        }
+        
+        .service-content li {
+            margin-bottom: var(--space-sm);
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        
+        .service-content li::marker {
+            color: var(--accent-warm);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
+            padding: var(--space-section) 0;
+            text-align: center;
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .cta-section h3 {
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
         }
         
-        .service-hero h2 {
-            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-            font-weight: 400;
+        .cta-section p {
+            font-size: 1.125rem;
             color: var(--text-secondary);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .service-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-section) var(--space-md);
-        }
-        
-        .service-content p {
-            margin-bottom: var(--space-md);
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-        
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin: var(--space-xl) 0 var(--space-md);
-            color: var(--primary-soft-blue);
-        }
-        
-        .service-content ul {
-            margin-bottom: var(--space-md);
-            padding-left: var(--space-md);
-        }
-        
-        .service-content li {
-            margin-bottom: var(--space-xs);
-        }
-        
-        .cta-section {
-            background: var(--neutral-soft);
-            padding: var(--space-section) 0;
-            text-align: center;
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .primary-btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 1rem 2rem;
-            border-radius: var(--radius-md);
+            padding: 1.125rem 2.5rem;
+            border-radius: var(--radius-lg);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             margin: var(--space-sm);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+            box-shadow: var(--shadow-soft);
         }
         
         .primary-btn:hover {
             background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
             color: white;
         }
         
+        /* Breadcrumb */
         .breadcrumb {
-            padding: var(--space-md) 0;
+            padding: var(--space-lg) 0;
             background: var(--neutral-cream);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
         }
         
         .breadcrumb a {
             color: var(--primary-soft-blue);
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         
         .breadcrumb a:hover {
+            color: var(--primary-deep);
             text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--neutral-cream);
+            padding: var(--space-xxl) 0 var(--space-lg);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        footer h3 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+            list-style: none;
+            padding: 0;
+        }
+        
+        footer a {
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--primary-deep);
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .service-hero {
+                min-height: 400px;
+                padding: var(--space-xl) 0;
+            }
+            
+            .service-content {
+                padding: var(--space-xl) var(--space-md);
+            }
+            
+            footer ul {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
         }
     </style>
 </head>
@@ -176,11 +435,47 @@
         </div>
     </nav>
     
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="../index.html#approach">Approach</a></li>
+                        <li><a href="../index.html#specializations">Services</a></li>
+                        <li><a href="../index.html#process">Process</a></li>
+                        <li><a href="../index.html#contact">Connect</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+    
     <!-- Hero Section -->
     <section class="service-hero">
+        <!-- Background Image Container -->
+        <div class="hero-background">
+            <img src="../images/hero-background.jpg" alt="" loading="lazy">
+        </div>
+        
+        <!-- Subtle About Texture Background -->
+        <div class="hero-texture"></div>
+        
         <div class="container">
-            <h1>Workplace Stress Therapy Ontario - Professional Burnout Treatment</h1>
-            <h2>Evidence-Based Support for Workplace Anxiety and Stress</h2>
+            <div class="hero-content">
+                <h1>Workplace Stress Therapy Ontario - Professional Burnout Treatment</h1>
+                <h2>Evidence-Based Support for Workplace Anxiety and Stress</h2>
+            </div>
         </div>
     </section>
     
