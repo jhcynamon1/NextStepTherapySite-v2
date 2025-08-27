@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- SEO Meta Data -->
+    <title>Virtual Therapy Ontario | Online Mental Health Sessions - Next Step Therapy</title>
+    <meta name="description" content="Professional virtual therapy sessions across Ontario. Same accessibility as in-person therapy with added convenience. Evening appointments available for busy professionals.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Virtual Therapy Ontario | Online Mental Health Sessions">
+    <meta property="og:description" content="Professional virtual therapy sessions across Ontario. Same effectiveness as in-person with convenient access from home.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/virtual/virtual-therapy-ontario">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/virtual/virtual-therapy-ontario">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Virtual Therapy Ontario",
+      "description": "Professional virtual therapy services across Ontario with evening appointments available",
+      "url": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
+        "name": "Jesse Cynamon, RP",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": "CRPO Registration #10979",
+        "areaServed": "Ontario, Canada"
+      },
+      "medicalSpecialty": ["Virtual Therapy", "Online Mental Health", "Remote Psychotherapy"],
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Virtual Therapy Sessions",
+        "description": "Professional online therapy sessions with same effectiveness as in-person",
+        "serviceType": "Virtual Psychotherapy",
+        "offers": {
+          "@type": "Offer",
+          "price": "175",
+          "priceCurrency": "CAD",
+          "availability": "InStock"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-soft-blue: #4a6b7a;
+            --primary-light: #6b8a99;
+            --accent-warm: #e8b07a;
+            --accent-gold: #d4a574;
+            --text-primary: #2c3e50;
+            --text-secondary: #5a6c7d;
+            --background-cream: #fefefe;
+            --background-soft: #f8f9fb;
+            --border-subtle: rgba(74, 107, 122, 0.12);
+            --shadow-soft: 0 4px 20px rgba(74, 107, 122, 0.08);
+            --shadow-medium: 0 8px 30px rgba(74, 107, 122, 0.12);
+            
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background-cream);
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--background-cream) 0%, var(--background-soft) 100%);
+            padding: var(--space-3xl) 0;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .content-card {
+            background: white;
+            padding: var(--space-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .content-card h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .content-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--primary-soft-blue);
+            margin: var(--space-xl) 0 var(--space-md) 0;
+            font-weight: 600;
+        }
+        
+        .content-card h4 {
+            color: var(--primary-soft-blue);
+            margin: var(--space-lg) 0 var(--space-sm) 0;
+            font-weight: 600;
+        }
+        
+        .content-card p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: var(--space-lg) 0;
+        }
+        
+        .feature-list li {
+            padding: var(--space-sm) 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: var(--space-lg);
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-soft-blue);
+            font-weight: bold;
+        }
+        
+        .feature-list strong {
+            color: var(--text-primary);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            margin-top: var(--space-lg);
+            padding: var(--space-lg);
+            background: var(--background-soft);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        
+        .hero-cta {
+            text-align: center;
+            margin: var(--space-xl) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-2xl) 0;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
+                </div>
+                <div class="credentials-badge">
+                    Jesse Cynamon, RP
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Virtual Therapy Ontario | Professional Online Mental Health</h1>
+                    <p class="lead-text">Access professional therapy from anywhere in Ontario. Same therapeutic relationship, same results - with the convenience of virtual sessions.</p>
+                    
+                    <div style="display: flex; justify-content: center; margin-top: var(--space-lg);"><a href="../index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Virtual Therapy Works Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Virtual Therapy Is Just As Effective</h2>
+                    
+                    <p>Research consistently shows that virtual therapy produces the same outcomes as in-person sessions. The therapeutic relationship - the most important factor in successful therapy - develops just as strongly through secure video sessions.</p>
+                    
+                    <h3>The Virtual Advantage</h3>
+                    <ul class="feature-list">
+                        <li><strong>Same Professional Standards:</strong> Licensed therapist, confidential sessions, evidence-based approaches</li>
+                        <li><strong>Consistent Schedule:</strong> No commute means more reliable appointment times</li>
+                        <li><strong>Comfortable Environment:</strong> Therapy from your own space can feel more natural</li>
+                        <li><strong>Accessibility:</strong> Access therapy regardless of location, mobility, or transportation</li>
+                        <li><strong>Privacy:</strong> No waiting rooms or chance encounters</li>
+                    </ul>
+                    
+                    <h4>What Makes It Work?</h4>
+                    <p>Virtual therapy succeeds because therapy is fundamentally about conversation, understanding, and developing new perspectives. These happen just as effectively through secure video as they do in an office.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Virtual Therapy Services Section -->
+        <section class="section" style="background: var(--background-soft);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Virtual Therapy Services Available</h2>
+                    
+                    <h3>Individual Therapy</h3>
+                    <ul class="feature-list">
+                        <li><strong>Anxiety & Stress Management:</strong> Evidence-based tools for overwhelming thoughts</li>
+                        <li><strong>Depression Support:</strong> Practical strategies for mood and motivation</li>
+                        <li><strong>Work & Performance Issues:</strong> Professional stress and burnout</li>
+                        <li><strong>Life Transitions:</strong> Career changes, relationship shifts, major decisions</li>
+                        <li><strong>Men's Mental Health:</strong> Direct approach designed for how men process</li>
+                    </ul>
+                    
+                    <h3>Specialized Virtual Support</h3>
+                    <ul class="feature-list">
+                        <li><strong>Same-Day Sessions:</strong> Crisis support when you need it most</li>
+                        <li><strong>Evening Appointments:</strong> Therapy that fits your work schedule</li>
+                        <li><strong>Northern Ontario Access:</strong> Professional therapy regardless of location</li>
+                        <li><strong>Thunder Bay Region:</strong> Specialized support for northwestern Ontario</li>
+                    </ul>
+                    
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Virtual sessions throughout Ontario. Evening appointments available.</p>
+                        <div style="display: flex; justify-content: center;"><a href="../index.html#contact" class="primary-cta">Get Help Today</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology & Security Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Secure & Simple Technology</h2>
+                    
+                    <h3>What You Need</h3>
+                    <ul class="feature-list">
+                        <li><strong>Device:</strong> Computer, tablet, or smartphone with camera and microphone</li>
+                        <li><strong>Internet:</strong> Stable internet connection (most home WiFi works perfectly)</li>
+                        <li><strong>Space:</strong> Private location where you can speak freely</li>
+                        <li><strong>Software:</strong> Simple click-to-join links (no downloads required)</li>
+                    </ul>
+                    
+                    <h3>Your Privacy Is Protected</h3>
+                    <ul class="feature-list">
+                        <li><strong>PIPEDA Compliant:</strong> Canadian privacy law standards</li>
+                        <li><strong>Encrypted Sessions:</strong> End-to-end security for all communications</li>
+                        <li><strong>No Recording:</strong> Sessions are never recorded or stored</li>
+                        <li><strong>Professional Standards:</strong> Same confidentiality as in-person therapy</li>
+                    </ul>
+                    
+                    <h4>Technical Support Included</h4>
+                    <p>Concerned about technology? I provide simple setup instructions and technical support to ensure your sessions run smoothly from day one.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Getting Started Section -->
+        <section class="section" style="background: var(--background-soft);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Virtual Therapy Works</h2>
+                    
+                    <h3>Simple Start Process</h3>
+                    <ul class="feature-list">
+                        <li><strong>Initial Contact:</strong> Free 15-minute consultation by phone</li>
+                        <li><strong>Session Scheduling:</strong> Book your first session at a time that works</li>
+                        <li><strong>Technology Test:</strong> Quick tech check before your first session</li>
+                        <li><strong>First Session:</strong> 50 minutes focused on your goals and needs</li>
+                    </ul>
+                    
+                    <h3>Session Structure</h3>
+                    <p>Virtual sessions follow the same structure as in-person therapy:</p>
+                    <ul class="feature-list">
+                        <li><strong>50-Minute Sessions:</strong> Full therapeutic time</li>
+                        <li><strong>Consistent Schedule:</strong> Regular appointment times</li>
+                        <li><strong>Between-Session Support:</strong> Email check-ins when needed</li>
+                        <li><strong>Progress Tracking:</strong> Regular review of goals and outcomes</li>
+                    </ul>
+                    
+                    <h4>Investment</h4>
+                    <p>$175 per 50-minute session. Many extended health plans cover virtual therapy the same as in-person sessions.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <h2 style="text-align: center; font-family: var(--font-display); margin-bottom: var(--space-lg);">Ready to Start Virtual Therapy?</h2>
+                
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: var(--space-xl);">Professional therapy accessible from anywhere in Ontario. Same effectiveness, more convenience.</p>
+                
+                <h4>Free 15-Minute Consultation</h4>
+                <p>Let's discuss your needs and ensure virtual therapy is the right fit. No pressure, just a helpful conversation.</p>
+                
+                <div class="hero-cta"><a href="../index.html#contact" class="primary-cta">Get Help Today</a></div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Virtual Sessions Throughout Ontario<br>
+                    Evening & Weekend Appointments Available<br>
+                    Secure, confidential, professional
+                </div>
+            </div>
+        </section>
+    </main>
+</body></html>
