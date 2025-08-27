@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- SEO Meta Data -->
-    <title>Men's Mental Health Therapy Ontario | Male Therapist - Next Step</title>
-    <meta name="description" content="Men's mental health therapy with a male therapist in Ontario. Direct, practical support for stress, relationships, and life transitions. Virtual sessions available.">
+    <title>Beyond "I'm Fine" | Men's Mental Health Therapy Ontario - Next Step Therapy</title>
+    <meta name="description" content="A therapy space designed for how men actually process emotions. Direct conversations, practical strategies, zero judgment. Virtual therapy across Ontario. Evening appointments available.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Men's Mental Health Therapy | Next Step Therapy">
-    <meta property="og:description" content="Direct, practical mental health support for men. No judgment, just real strategies that work.">
+    <meta property="og:description" content="Therapy designed for how men actually process emotions. Male therapist, virtual sessions, confidential space. Ontario-wide.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/services/mens-mental-health">
     
@@ -24,846 +27,271 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Men's Mental Health Therapy",
-      "description": "Specialized therapy services for men",
+      "@type": "MedicalWebPage",
+      "name": "Men's Mental Health Therapy Services",
+      "description": "Specialized therapy services for men in Ontario using evidence-based approaches",
+      "url": "https://nextsteptherapy.ca/services/mens-mental-health",
       "provider": {
         "@type": "Person",
-        "name": "Jesse Cynamon",
-        "gender": "Male",
-        "jobTitle": "Registered Psychotherapist"
+        "name": "Jesse Cynamon, RP",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": "CRPO Registration #10979",
+        "areaServed": "Ontario, Canada"
       },
-      "areaServed": "Ontario",
-      "serviceType": "Mental Health Counseling for Men"
+      "medicalSpecialty": ["Men's Mental Health", "Stress Management", "Relationship Therapy"],
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Men's Mental Health Therapy",
+        "description": "Virtual therapy designed specifically for men's mental health needs",
+        "serviceType": "Virtual Psychotherapy",
+        "offers": {
+          "@type": "Offer",
+          "price": "175",
+          "priceCurrency": "CAD",
+          "description": "50-minute virtual therapy session"
+        }
+      }
     }
     </script>
     
-    <style>
-        /* Match homepage design exactly */
-        :root {
-            --primary-soft-blue: #4A6B7A;
-            --primary-light: #6B89A0;
-            --primary-deep: #2C4A5A;
-            --accent-warm: #8FA68E;
-            --accent-gold: #B8956A;
-            --background-primary: #FEFEFE;
-            --neutral-soft: #F8F9FA;
-            --neutral-cream: #F5F6F7;
-            --text-primary: #1a1a1a;
-            --text-secondary: #4A5568;
-            --space-xs: 8px;
-            --space-sm: 16px;
-            --space-md: 24px;
-            --space-lg: 32px;
-            --space-xl: 48px;
-            --space-xxl: 64px;
-            --space-section: 80px;
-            --radius-sm: 6px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
-            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--background-primary);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-        
-        /* Header Styling */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .logo {
-            height: 40px;
-            width: auto;
-        }
-        
-        .logo-text {
-            font-family: var(--font-display);
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.025em;
-        }
-        
-        .credentials-badge {
-            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: var(--radius-lg);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-        }
-        
-        .nav {
-            display: flex;
-            list-style: none;
-            gap: var(--space-lg);
-            align-items: center;
-        }
-        
-        .nav a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 2px solid transparent;
-        }
-        
-        .nav a:hover {
-            color: var(--primary-soft-blue);
-            border-bottom-color: var(--accent-warm);
-        }
-        
-        .header-phone {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 0.9375rem;
-        }
-        
-        .header-phone:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-soft);
-            color: white;
-        }
-        
-        /* Hero Section with Background Images */
-        .service-hero {
-            position: relative;
-            min-height: 500px;
-            padding: var(--space-section) 0;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
-        .hero-background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-texture {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-image: url('../images/about-texture.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .service-hero h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-            letter-spacing: -0.025em;
-            line-height: 1.2;
-        }
-        
-        .service-hero h2 {
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Content Styling */
-        .service-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-section) var(--space-md);
-            background: var(--background-primary);
-        }
-        
-        .service-content p {
-            margin-bottom: var(--space-lg);
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-        }
-        
-        .service-content h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: var(--space-xxl) 0 var(--space-lg);
-            color: var(--primary-soft-blue);
-            letter-spacing: -0.025em;
-        }
-        
-        .service-content ul {
-            margin-bottom: var(--space-lg);
-            padding-left: var(--space-lg);
-        }
-        
-        .service-content li {
-            margin-bottom: var(--space-sm);
-            font-size: 1.0625rem;
-            line-height: 1.6;
-        }
-        
-        .service-content li::marker {
-            color: var(--accent-warm);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .cta-section h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-            color: var(--text-primary);
-        }
-        
-        .cta-section p {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .primary-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1.125rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 600;
-            margin: var(--space-sm);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1rem;
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .primary-btn:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-            color: white;
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb {
-            padding: var(--space-lg) 0;
-            background: var(--neutral-cream);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .breadcrumb a {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--neutral-cream);
-            padding: var(--space-xxl) 0 var(--space-lg);
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        footer h3 {
-            color: var(--text-primary);
-            margin-bottom: var(--space-lg);
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        
-        footer ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-lg);
-            list-style: none;
-            padding: 0;
-        }
-        
-        footer a {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
-        }
-        
-        /* Conversion Optimization Styles */
-        .floating-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
-            z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: pulse 2s infinite;
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-        
-        .floating-cta:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
-            color: white;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
-            50% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.5), 0 0 20px rgba(74, 107, 122, 0.2); }
-            100% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
-        }
-        
-        .trust-indicators {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
-        }
-        
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-xl);
-            margin: var(--space-xl) 0;
-            flex-wrap: wrap;
-        }
-        
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-lg);
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            font-weight: 600;
-            color: var(--text-primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .trust-badge:hover {
-            transform: translateY(-2px);
-        }
-        
-        .trust-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--accent-warm);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-        }
-        
-        .social-proof {
-            background: var(--background-primary);
-            padding: var(--space-xl) 0;
-            text-align: center;
-        }
-        
-        .social-proof-stats {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xxl);
-            margin: var(--space-lg) 0;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-soft-blue);
-            line-height: 1;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin-top: var(--space-xs);
-        }
-        
-        .urgency-banner {
-            background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
-            color: white;
-            padding: var(--space-sm);
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .urgency-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        .testimonial-section {
-            background: var(--neutral-cream);
-            padding: var(--space-section) 0;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .testimonial-quote {
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-soft-blue);
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: var(--space-lg);
-            font-size: 4rem;
-            color: var(--accent-warm);
-            opacity: 0.3;
-            font-family: serif;
-        }
-        
-        .enhanced-cta {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .enhanced-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .enhanced-cta:hover::before {
-            left: 100%;
-        }
-        
-        .hero-cta {
-            margin-top: var(--space-xl);
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .hero-primary-btn {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-primary-btn:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.35);
-            color: white;
-        }
-        
-        .hero-secondary-btn {
-            background: white;
-            color: var(--primary-soft-blue);
-            padding: 1.25rem 2.5rem;
-            border: 2px solid var(--primary-soft-blue);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .hero-secondary-btn:hover {
-            background: var(--primary-soft-blue);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .content-cta-inline {
-            background: var(--neutral-soft);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--accent-warm);
-            margin: var(--space-xxl) 0;
-        }
-        
-        .content-cta-inline h4 {
-            color: var(--primary-soft-blue);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .content-cta-inline p {
-            margin-bottom: var(--space-lg);
-            color: var(--text-secondary);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav {
-                display: none;
-            }
-            
-            .header-content {
-                justify-content: space-between;
-            }
-            
-            .service-hero {
-                min-height: 400px;
-                padding: var(--space-xl) 0;
-            }
-            
-            .service-content {
-                padding: var(--space-xl) var(--space-md);
-            }
-            
-            footer ul {
-                flex-direction: column;
-                gap: var(--space-md);
-            }
-            
-            .floating-cta {
-                bottom: 15px;
-                right: 15px;
-                padding: 0.875rem 1.25rem;
-                font-size: 0.9rem;
-            }
-            
-            .trust-badges {
-                gap: var(--space-md);
-            }
-            
-            .trust-badge {
-                padding: var(--space-xs) var(--space-md);
-                font-size: 0.9rem;
-            }
-            
-            .social-proof-stats {
-                gap: var(--space-lg);
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-md);
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .hero-primary-btn,
-            .hero-secondary-btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">Home</a> > <a href="../services.html">Services</a> > Men's Mental Health
-        </div>
-    </nav>
-    
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
-                </div>
-                
-                <nav>
-                    <ul class="nav">
-                        <li><a href="../index.html#approach">Approach</a></li>
-                        <li><a href="../index.html#specializations">Services</a></li>
-                        <li><a href="../index.html#process">Process</a></li>
-                        <li><a href="../index.html#contact">Connect</a></li>
-                    </ul>
-                </nav>
-                
-                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
-                    Book Consultation
-                </a>
-            </div>
-        </div>
-    </header>
-    
     <!-- Hero Section -->
-    <section class="service-hero">
-        <!-- Background Image Container -->
-        <div class="hero-background">
-            <img src="../images/hero-background.jpg" alt="" loading="lazy">
-        </div>
-        
-        <!-- Subtle About Texture Background -->
-        <div class="hero-texture"></div>
-        
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Men's Mental Health Therapy - Ontario Male Therapist</h1>
-                <h2>Direct Support for Men's Mental Health Challenges</h2>
-                <div class="hero-cta">
-                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="hero-primary-btn enhanced-cta">Book Free 15-Min Consultation</a>
-                    <a href="#contact-options" class="hero-secondary-btn">Get Direct Support</a>
+                <h1>Beyond "I'm Fine"</h1>
+                <p class="lead-text">A therapy space designed for how men actually process emotions. Direct conversations, practical strategies, zero judgment.</p>
+                
+                <div class="trust-indicators">
+                    <span class="pill">Male Therapist Who Gets It</span>
+                    <span class="pill">Virtual Privacy & Convenience</span>
+                    <span class="pill">Evening Appointments Available</span>
+                </div>
+                
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                    <a href="https://jesse-cynamon.janeapp.com/" class="btn btn-primary" target="_blank">Book Free Consultation</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    <!-- Main Content -->
-    <main class="service-content">
-        <p>A space where "I'm fine" isn't the only option. <strong>Men's mental health therapy</strong> with a <strong>male therapist</strong> who understands the unique challenges men face. Direct conversations about stress, relationships, and life transitions using practical strategies, not empty platitudes.</p>
-        
-        <h3>Why Men's Mental Health Matters</h3>
-        <p>Men face unique pressures in today's world - societal expectations to "tough it out," workplace stress, relationship challenges, and the stigma around seeking help. <strong>Men's therapy</strong> provides a safe space to address these concerns without judgment or pressure to fit into traditional therapeutic models.</p>
-        
-        <h3>Common Issues We Address</h3>
-        <p>Our <strong>men's mental health</strong> approach focuses on practical solutions for:</p>
-        <ul>
-            <li>Work stress and career pressure</li>
-            <li>Relationship difficulties and communication</li>
-            <li>Anger management and emotional regulation</li>
-            <li>Depression and isolation</li>
-            <li>Life transitions and identity questions</li>
-            <li>Anxiety and performance concerns</li>
-            <li>Substance use and coping strategies</li>
-        </ul>
-        
-        
-        <h3>A Different Kind of Therapy</h3>
-        <p>Traditional <strong>therapy for men</strong> often feels forced or awkward. Our approach recognizes that men often prefer:</p>
-        <ul>
-            <li>Direct, solution-focused conversations</li>
-            <li>Practical tools they can implement immediately</li>
-            <li>Respect for their communication style</li>
-            <li>Understanding of male socialization and expectations</li>
-            <li>Flexibility in how they engage with the therapeutic process</li>
-        </ul>
-        
-        <h3>Evidence-Based Approaches</h3>
-        <p>Our <strong>men's mental health therapy</strong> utilizes:</p>
-        <ul>
-            <li>Acceptance and Commitment Therapy (ACT) - focusing on values and action</li>
-            <li>Cognitive Behavioral techniques for practical problem-solving</li>
-            <li>Mindfulness strategies adapted for men</li>
-            <li>Strength-based approaches that build on existing capabilities</li>
-        </ul>
-        
-        <h3>Virtual Sessions Throughout Ontario</h3>
-        <p>Access <strong>men's therapy</strong> from the privacy of your own space. Evening and weekend appointments available to work around your schedule. No waiting rooms, no awkward encounters - just direct, effective support when you need it.</p>
-        
-        <h3>Investment & Insurance</h3>
-        <p>$175 per 50-minute session. Most extended health plans cover Registered Psychotherapists. We provide detailed receipts for insurance reimbursement.</p>
-        
-        <h3>About Jesse Cynamon, RP</h3>
-        <p>As a <strong>male therapist</strong> and CRPO-registered professional (#10979), I understand the unique challenges men face in seeking mental health support. My approach is direct, practical, and respects the ways men prefer to communicate and process difficult emotions.</p>
-    </main>
-    
-    <!-- Trust Indicators -->
-    <section class="trust-indicators">
+
+    <!-- The Reality Most Men Face -->
+    <section class="section">
         <div class="container">
-            <h3>Why Men Choose Next Step Therapy</h3>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <div class="trust-icon">♂️</div>
-                    <span>Male Therapist</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">✓</div>
-                    <span>CRPO Registered</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">💻</div>
-                    <span>Private Virtual Sessions</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">🕰️</div>
-                    <span>Evening & Weekend</span>
+            <h2>The Reality Most Men Face</h2>
+            <p>Society says you should have it all figured out. Handle stress without complaining. Be strong for everyone else. But what happens when you're running on empty?</p>
+            
+            <h3>Sound Familiar?</h3>
+            <ul class="check-list">
+                <li><strong>The Pressure Cooker:</strong> Work stress, family responsibilities, financial pressure - all building up with nowhere to release</li>
+                <li><strong>The Isolation:</strong> Your friends don't talk about this stuff. Your partner shouldn't have to carry your burden</li>
+                <li><strong>The Numbness:</strong> You're going through the motions but feeling disconnected from everything</li>
+                <li><strong>The Anger:</strong> Snapping at small things because the big things feel impossible to address</li>
+                <li><strong>The Physical Toll:</strong> Headaches, back pain, sleep problems - your body keeping score of stress you won't acknowledge</li>
+            </ul>
+
+            <!-- Mid-page CTA -->
+            <div class="cta-inline">
+                <p>Ready for a different approach?</p>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://jesse-cynamon.janeapp.com/" class="btn btn-primary" target="_blank">Book Free Consultation</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Call Now</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    <!-- Call to Action -->
-    <section class="cta-section">
+
+    <!-- Why Men's Therapy Is Different Here -->
+    <section class="section section-light">
         <div class="container">
-            <h3 id="contact-options">Ready to Start?</h3>
-            <p>No pressure, no judgment. Just reach out via our contact form or phone to start a conversation about what you're dealing with.</p>
-            <a href="../index.html#contact" class="primary-btn">Fill Out Contact Form</a>
-            <a href="tel:+14163062157" class="primary-btn">Call or Text: (416) 306-2157</a>
+            <h2>Why Men's Therapy Is Different Here</h2>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4>No Therapy Clichés</h4>
+                    <p>We won't sit in silence waiting for you to "open up." This is a conversation, not an interrogation. We talk like real people about real problems.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Action-Oriented Approach</h4>
+                    <p>Men often process by doing, not just talking. We'll focus on practical strategies you can implement immediately.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Your Terms, Your Pace</h4>
+                    <p>Some guys want to dive deep, others need to ease in. We work at whatever speed feels right for you.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Confidential Space</h4>
+                    <p>What we discuss stays between us. No one needs to know you're in therapy unless you choose to tell them.</p>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!-- Related Services -->
-    <footer style="background: var(--neutral-cream); padding: var(--space-lg) 0;">
+
+    <!-- Common Issues We Work Through -->
+    <section class="section">
         <div class="container">
-            <h3>Related Services</h3>
-            <ul style="display: flex; flex-wrap: wrap; gap: var(--space-md); list-style: none; padding: 0;">
-                <li><a href="anxiety-therapy.html">Anxiety & Stress Management</a></li>
-                <li><a href="workplace-stress-burnout.html">Workplace Stress & Burnout</a></li>
-                <li><a href="relationship-communication.html">Relationship & Communication</a></li>
-                <li><a href="../index.html">Back to Home</a></li>
+            <h2>Common Issues We Work Through</h2>
+            
+            <h3>Work & Performance Pressure</h3>
+            <ul class="check-list">
+                <li>Imposter syndrome and self-doubt</li>
+                <li>Burnout without admitting weakness</li>
+                <li>Career transitions and identity</li>
+                <li>Work-life balance (whatever that means)</li>
+            </ul>
+            
+            <h3>Relationships & Connection</h3>
+            <ul class="check-list">
+                <li>Communication without confrontation</li>
+                <li>Emotional availability vs. vulnerability</li>
+                <li>Dating, marriage, divorce navigation</li>
+                <li>Fatherhood pressures and expectations</li>
+            </ul>
+            
+            <h3>Stress & Mental Health</h3>
+            <ul class="check-list">
+                <li>Anxiety that looks like irritability</li>
+                <li>Depression that feels like emptiness</li>
+                <li>Anger as a secondary emotion</li>
+                <li>Substance use as coping</li>
+            </ul>
+            
+            <h3>Life Transitions</h3>
+            <ul class="check-list">
+                <li>Quarter-life or midlife questioning</li>
+                <li>Loss and grief (that you're "supposed" to handle)</li>
+                <li>Health scares and mortality</li>
+                <li>Purpose and meaning shifts</li>
             </ul>
         </div>
-    </footer>
-    
+    </section>
+
+    <!-- How We'll Work Together -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>How We'll Work Together</h2>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <h4>The First Conversation</h4>
+                    <p>Just two people talking. You tell me what's going on, I listen without judgment. We figure out if we're a good fit.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Finding Your Style</h4>
+                    <p>Some men prefer structured problem-solving. Others need to vent first. We'll find what works for you.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Practical Tools</h4>
+                    <p>Strategies for managing stress, improving relationships, and handling emotions that don't involve punching walls.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>Real Progress</h4>
+                    <p>We'll measure success by how you feel day-to-day, not by some therapy textbook standard.</p>
+                </div>
+            </div>
+
+            <!-- Post-solution CTA -->
+            <div class="cta-inline">
+                <p>Ready to find your approach?</p>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://jesse-cynamon.janeapp.com/" class="btn btn-primary" target="_blank">Book Free Consultation</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Start Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Different Kind of Strength -->
+    <section class="section">
+        <div class="container">
+            <h2>A Different Kind of Strength</h2>
+            <p>Asking for help isn't weakness - it's strategic. You maintain your car, you work out your body, why wouldn't you maintain your mental health?</p>
+            
+            <h3>Men Who Benefit From Therapy:</h3>
+            <ul class="check-list">
+                <li>High performers feeling the pressure</li>
+                <li>New fathers overwhelmed by responsibility</li>
+                <li>Men navigating divorce or separation</li>
+                <li>Anyone feeling stuck or disconnected</li>
+                <li>Guys who just need someone to talk to</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Take the First Step -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2 style="color: white; text-align: center;">Take the First Step</h2>
+            <p style="text-align: center; color: white; opacity: 0.9; margin-bottom: var(--space-lg);">No intake forms to fill out. No diagnosis labels. Just a conversation about what you need.</p>
+            
+            <div style="text-align: center; margin-bottom: var(--space-lg);">
+                <h3 style="color: white;">Free 15-Minute Call</h3>
+                <p style="color: white; opacity: 0.9;">Let's see if we're a good fit. Straightforward talk about what you're dealing with and how I can help.</p>
+            </div>
+            
+            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-lg);">
+                <a href="https://jesse-cynamon.janeapp.com/" class="btn" style="background: white; color: var(--primary-soft-blue);" target="_blank">Book Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <p>Ready to take the first step? Send me a message and I'll get back to you within 24 hours.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">What brings you here?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about what you're going through..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            
+            <div class="contact-info">
+                <h3>Direct Contact</h3>
+                <p><strong>Phone:</strong> <a href="tel:+14163062157">(416) 306-2157</a></p>
+                <p><strong>Email:</strong> <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a></p>
+                
+                <div class="therapist-info">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Registered Psychotherapist</p>
+                    <p><strong>CRPO #10979</strong> • Virtual Sessions Across Ontario</p>
+                    <p>Evening and weekend availability for working professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Floating CTA -->
+    <div class="floating-cta">
+        <a href="https://jesse-cynamon.janeapp.com/" class="btn btn-primary" target="_blank">Book Free Consultation</a>
+    </div>
 </body>
 </html>

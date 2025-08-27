@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- SEO Meta Data -->
-    <title>Life Transitions Therapy | Divorce & Change Support Ontario</title>
-    <meta name="description" content="Therapy for life transitions, divorce, grief, and major changes in Ontario. Compassionate virtual support through difficult times. CRPO registered therapist.">
+    <title>When Everything Feels Different | Life Transitions & Change Therapy Ontario - Next Step Therapy</title>
+    <meta name="description" content="Support through divorce, loss, career changes, and life's unexpected turns. Professional transition therapy in Ontario. Because major transitions weren't meant to be navigated alone.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Life Transitions & Change Therapy | Next Step Therapy">
-    <meta property="og:description" content="Professional support through life's major transitions and changes.">
+    <meta property="og:description" content="Professional support through divorce, loss, career changes, and life transitions. Virtual therapy across Ontario.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/services/life-transitions">
     
@@ -26,45 +29,28 @@
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Life Transitions and Change Therapy",
-      "description": "Professional therapy for life transitions and major changes",
+      "description": "Support through divorce, loss, career changes, and life's unexpected turns using evidence-based approaches",
       "url": "https://nextsteptherapy.ca/services/life-transitions",
       "provider": {
-        "@type": "Psychologist",
+        "@type": "Person",
         "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": "CRPO Registration #10979",
         "areaServed": "Ontario, Canada"
       },
-      "medicalSpecialty": "Life Transitions",
+      "medicalSpecialty": ["Life Transitions", "Grief Support", "Change Management"],
       "availableService": {
         "@type": "MedicalTherapy",
         "name": "Life Transitions Therapy",
-        "description": "Acceptance and Commitment Therapy for life changes",
-        "serviceType": "Virtual Psychotherapy"
+        "description": "Virtual therapy for life transitions and major changes",
+        "serviceType": "Virtual Psychotherapy",
+        "offers": {
+          "@type": "Offer",
+          "price": "175",
+          "priceCurrency": "CAD",
+          "description": "50-minute therapy session"
+        }
       }
-    }
-    </script>
-    
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://nextsteptherapy.ca"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://nextsteptherapy.ca/services"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Life Transitions",
-        "item": "https://nextsteptherapy.ca/services/life-transitions"
-      }]
     }
     </script>
     
@@ -94,7 +80,7 @@
             --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
             --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
         }
         
         * {
@@ -105,9 +91,12 @@
         
         body {
             font-family: var(--font-body);
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-primary);
             background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
@@ -116,22 +105,27 @@
             padding: 0 var(--space-md);
         }
         
-        /* Header Styling */
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(74, 107, 122, 0.08);
             position: sticky;
             top: 0;
             z-index: 100;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: var(--space-md) 0;
         }
         
         .header-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 1rem 0;
+            align-items: center;
         }
         
         .logo-section {
@@ -140,620 +134,445 @@
             gap: var(--space-sm);
         }
         
-        .logo {
-            height: 40px;
-            width: auto;
-        }
-        
         .logo-text {
             font-family: var(--font-display);
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
             text-decoration: none;
-            letter-spacing: -0.025em;
         }
         
         .credentials-badge {
-            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 0.25rem 0.75rem;
+            padding: 0.375rem 0.875rem;
             border-radius: var(--radius-lg);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+            font-size: 0.8125rem;
+            font-weight: 500;
         }
         
         .nav {
             display: flex;
-            list-style: none;
             gap: var(--space-lg);
+            list-style: none;
             align-items: center;
         }
         
         .nav a {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 2px solid transparent;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
         }
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            border-bottom-color: var(--accent-warm);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 0.9375rem;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
         }
         
         .header-phone:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-soft);
+            background: var(--primary-soft-blue);
             color: white;
         }
         
-        /* Hero Section with Background Images */
-        .service-hero {
-            position: relative;
-            min-height: 500px;
-            padding: var(--space-section) 0;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
-        .hero-background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-texture {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-image: url('../images/about-texture.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .service-hero h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-            letter-spacing: -0.025em;
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
             line-height: 1.2;
-        }
-        
-        .service-hero h2 {
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Content Styling */
-        .service-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-section) var(--space-md);
-            background: var(--background-primary);
-        }
-        
-        .service-content p {
-            margin-bottom: var(--space-lg);
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-        }
-        
-        .service-content h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: var(--space-xxl) 0 var(--space-lg);
-            color: var(--primary-soft-blue);
-            letter-spacing: -0.025em;
-        }
-        
-        .service-content ul {
-            margin-bottom: var(--space-lg);
-            padding-left: var(--space-lg);
-        }
-        
-        .service-content li {
-            margin-bottom: var(--space-sm);
-            font-size: 1.0625rem;
-            line-height: 1.6;
-        }
-        
-        .service-content li::marker {
-            color: var(--accent-warm);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .cta-section h3 {
-            font-size: 2rem;
-            font-weight: 700;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
         }
         
-        .cta-section p {
-            font-size: 1.125rem;
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
             color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 500px;
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .primary-btn {
-            display: inline-block;
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+        
+        .btn-primary {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 1.125rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 600;
-            margin: var(--space-sm);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1rem;
             box-shadow: var(--shadow-soft);
         }
         
-        .primary-btn:hover {
+        .btn-primary:hover {
             background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-2px);
             box-shadow: var(--shadow-medium);
             color: white;
         }
         
-        /* Breadcrumb */
-        .breadcrumb {
-            padding: var(--space-lg) 0;
-            background: var(--neutral-cream);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .breadcrumb a {
+        .btn-secondary {
+            background: transparent;
             color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
-        .breadcrumb a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
         }
         
-        /* Footer */
-        footer {
-            background: var(--neutral-cream);
-            padding: var(--space-xxl) 0 var(--space-lg);
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
         }
         
-        footer h3 {
-            color: var(--text-primary);
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-subtitle {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--accent-warm);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
             margin-bottom: var(--space-lg);
-            font-size: 1.25rem;
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
             font-weight: 600;
         }
         
-        footer ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-lg);
-            list-style: none;
-            padding: 0;
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
         }
         
-        footer a {
+        .faq-item h4 {
             color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Contact Section - Match Homepage Style */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        /* CTA Buttons - Match Homepage */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
+            min-width: 160px;
         }
         
-        footer a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
         }
         
-        /* Conversion Optimization Styles */
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Floating CTA for Mobile */
         .floating-cta {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            z-index: 1000;
+            display: none;
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9375rem;
             box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
-            z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: pulse 2s infinite;
-            font-size: 0.95rem;
-            white-space: nowrap;
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .floating-cta:hover {
-            transform: translateY(-3px) scale(1.05);
+            transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
             color: white;
         }
         
-        @keyframes pulse {
-            0% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
-            50% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.5), 0 0 20px rgba(74, 107, 122, 0.2); }
-            100% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
+        .floating-cta:active {
+            transform: translateY(0);
         }
         
-        .trust-indicators {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
         }
         
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-xl);
-            margin: var(--space-xl) 0;
-            flex-wrap: wrap;
-        }
-        
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-lg);
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            font-weight: 600;
-            color: var(--text-primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .trust-badge:hover {
-            transform: translateY(-2px);
-        }
-        
-        .trust-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--accent-warm);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-        }
-        
-        .social-proof {
-            background: var(--background-primary);
-            padding: var(--space-xl) 0;
-            text-align: center;
-        }
-        
-        .social-proof-stats {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xxl);
-            margin: var(--space-lg) 0;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-soft-blue);
-            line-height: 1;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin-top: var(--space-xs);
-        }
-        
-        .urgency-banner {
-            background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
-            color: white;
-            padding: var(--space-sm);
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .urgency-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        .testimonial-section {
-            background: var(--neutral-cream);
-            padding: var(--space-section) 0;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .testimonial-quote {
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-soft-blue);
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: var(--space-lg);
-            font-size: 4rem;
-            color: var(--accent-warm);
-            opacity: 0.3;
-            font-family: serif;
-        }
-        
-        .enhanced-cta {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .enhanced-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .enhanced-cta:hover::before {
-            left: 100%;
-        }
-        
-        .hero-cta {
-            margin-top: var(--space-xl);
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .hero-primary-btn {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.25);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-primary-btn:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.35);
-            color: white;
-        }
-        
-        .hero-secondary-btn {
-            background: white;
-            color: var(--primary-soft-blue);
-            padding: 1.25rem 2.5rem;
-            border: 2px solid var(--primary-soft-blue);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .hero-secondary-btn:hover {
-            background: var(--primary-soft-blue);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .content-cta-inline {
-            background: var(--neutral-soft);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--accent-warm);
-            margin: var(--space-xxl) 0;
-        }
-        
-        .content-cta-inline h4 {
-            color: var(--primary-soft-blue);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .content-cta-inline p {
-            margin-bottom: var(--space-lg);
-            color: var(--text-secondary);
-        }
-        
-        /* Responsive Design */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav {
                 display: none;
             }
             
-            .header-content {
-                justify-content: space-between;
-            }
-            
-            .service-hero {
-                min-height: 400px;
+            .hero {
                 padding: var(--space-xl) 0;
             }
             
-            .service-content {
-                padding: var(--space-xl) var(--space-md);
+            h1 {
+                font-size: 2.5rem;
             }
             
-            footer ul {
+            .content-card {
+                padding: var(--space-lg);
+            }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
                 flex-direction: column;
-                gap: var(--space-md);
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
             }
             
-            .floating-cta {
-                bottom: 15px;
-                right: 15px;
-                padding: 0.875rem 1.25rem;
-                font-size: 0.9rem;
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
             }
             
-            .trust-badges {
-                gap: var(--space-md);
-            }
-            
-            .trust-badge {
-                padding: var(--space-xs) var(--space-md);
-                font-size: 0.9rem;
-            }
-            
-            .social-proof-stats {
-                gap: var(--space-lg);
-            }
-            
-            .stat-number {
+            .contact-highlight h3 {
                 font-size: 2rem;
             }
             
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-md);
-            }
-            
-            .hero-cta {
+            /* Mobile CTA adjustments */
+            .hero-cta div[style*="flex"] {
                 flex-direction: column;
-                align-items: stretch;
+                gap: var(--space-sm);
             }
             
-            .hero-primary-btn,
-            .hero-secondary-btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .hero-cta div[style*="flex"] .primary-cta,
+            .hero-cta div[style*="flex"] .secondary-cta {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">Home</a> > <a href="../services.html">Services</a> > Life Transitions
-        </div>
-    </nav>
-    
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="../index.html" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge">CRPO #10979</span>
                 </div>
@@ -767,149 +586,256 @@
                     </ul>
                 </nav>
                 
-                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
-                    Book Consultation
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
                 </a>
             </div>
         </div>
     </header>
     
-    <!-- Hero Section -->
-    <section class="service-hero">
-        <!-- Background Image Container -->
-        <div class="hero-background">
-            <img src="../images/hero-background.jpg" alt="" loading="lazy">
-        </div>
-        
-        <!-- Subtle About Texture Background -->
-        <div class="hero-texture"></div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1>Life Transitions Counselling - Support Through Major Changes</h1>
-                <h2>Professional Therapy for Divorce, Grief, and Life Changes in Ontario</h2>
-                <div class="hero-cta">
-                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="hero-primary-btn enhanced-cta">Book Free 15-Min Consultation</a>
-                    <a href="#contact-options" class="hero-secondary-btn">Navigate Change Together</a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>When Everything Feels Different</h1>
+                    <p class="lead-text">Support through divorce, loss, career changes, and life's unexpected turns. Because major transitions weren't meant to be navigated alone.</p>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="#contact" class="btn btn-primary">Get Support Now</a>
+                        <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
-    <!-- Main Content -->
-    <main class="service-content">
-        <p>When everything feels like it's shifting and life feels unrecognizable, you don't have to navigate these changes alone. Our <strong>life transitions therapy</strong> provides compassionate support through divorce, job changes, loss, and other major life changes throughout Ontario.</p>
+        </section>
         
-        <h3>Understanding Life Transitions</h3>
-        <p><strong>Life transitions</strong> can be some of the most challenging periods we face. Whether chosen or unexpected, major changes often trigger feelings of uncertainty, grief, anxiety, and identity confusion. Professional <strong>transition support</strong> can help you process these experiences and find your footing in your new reality.</p>
+        <!-- When Life Pulls the Rug Out Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>When Life Pulls the Rug Out</h2>
+                    
+                    <p>One day you're on solid ground, the next everything's shifting. Whether it's a relationship ending, a job loss, a death, or just the unsettling feeling that life isn't what you thought it would be - transition is disorienting.</p>
+                    
+                    <h3>The Transition Experience:</h3>
+                    <ul class="feature-list">
+                        <li><strong>The Disorientation:</strong> Nothing feels familiar anymore, even things that haven't changed</li>
+                        <li><strong>The Identity Questions:</strong> "Who am I without this relationship/job/role?"</li>
+                        <li><strong>The Emotional Whiplash:</strong> Fine one moment, devastated the next</li>
+                        <li><strong>The Decision Paralysis:</strong> Every choice feels monumentally important</li>
+                        <li><strong>The Isolation:</strong> Everyone else seems to have their life together</li>
+                    </ul>
+                    
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Going through a major life change? You don't have to figure it out alone.</p>
+                        <a href="tel:+14163062157" class="primary-cta">Get Support Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <h3>Common Life Transitions We Support</h3>
-        <p>Our <strong>life transitions counselling</strong> addresses various types of major changes:</p>
-        <ul>
-            <li><strong>Divorce and separation</strong> - Processing the end of relationships and co-parenting challenges</li>
-            <li><strong>Career changes</strong> - Job loss, career pivots, or retirement transitions</li>
-            <li><strong>Loss and grief</strong> - Death of loved ones, pet loss, or other significant losses</li>
-            <li><strong>Empty nest syndrome</strong> - Children leaving home and identity shifts</li>
-            <li><strong>Health changes</strong> - Chronic illness diagnosis or physical limitations</li>
-            <li><strong>Geographic moves</strong> - Relocating to new cities or countries</li>
-            <li><strong>Identity exploration</strong> - Sexual orientation, gender identity, or spiritual changes</li>
-            <li><strong>Aging transitions</strong> - Midlife changes and aging parent concerns</li>
-        </ul>
+        <!-- Types of Transitions Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Types of Transitions We Navigate</h2>
+                    
+                    <h3>Relationship Changes</h3>
+                    <ul class="feature-list">
+                        <li>Divorce and separation</li>
+                        <li>Break-ups and heartbreak</li>
+                        <li>Infidelity and betrayal</li>
+                        <li>New relationships after loss</li>
+                        <li>Shifting family dynamics</li>
+                    </ul>
+                    
+                    <h3>Career & Purpose Shifts</h3>
+                    <ul class="feature-list">
+                        <li>Job loss or retirement</li>
+                        <li>Career pivots and changes</li>
+                        <li>Empty nest syndrome</li>
+                        <li>Student to professional transition</li>
+                        <li>Finding meaning after success</li>
+                    </ul>
+                    
+                    <h3>Loss & Grief</h3>
+                    <ul class="feature-list">
+                        <li>Death of loved ones</li>
+                        <li>Pet loss</li>
+                        <li>Pregnancy loss</li>
+                        <li>Loss of health</li>
+                        <li>Loss of dreams or expectations</li>
+                    </ul>
+                    
+                    <h3>Life Stage Transitions</h3>
+                    <ul class="feature-list">
+                        <li>Becoming a parent</li>
+                        <li>Aging parents</li>
+                        <li>Quarter-life uncertainty</li>
+                        <li>Midlife reassessment</li>
+                        <li>Health diagnoses</li>
+                    </ul>
+                    
+                    <!-- CTA after explaining transitions -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Facing one of these transitions?</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="https://jesse-cynamon.janeapp.com/" class="primary-cta" target="_blank">Book Free Consultation</a>
+                            <a href="../index.html#contact" class="secondary-cta email-cta">Send a Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <h3>The Challenge of Change</h3>
-        <p>Even positive <strong>life changes</strong> can be difficult to navigate. Transitions often involve:</p>
-        <ul>
-            <li>Grief for what was lost or left behind</li>
-            <li>Anxiety about an uncertain future</li>
-            <li>Identity confusion and questioning</li>
-            <li>Social and relationship changes</li>
-            <li>Practical challenges and decisions</li>
-            <li>Feeling stuck between your old and new life</li>
-        </ul>
+        <!-- How Therapy Helps Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Therapy Helps During Transitions</h2>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Making Sense of the Chaos</h3>
+                        <p>Transitions are messy. We'll create space to process what's happening without rushing to "fix" everything.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Grieving What Was</h3>
+                        <p>Even positive changes involve loss. We'll acknowledge what you're leaving behind without minimizing its importance.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Finding Your Footing</h3>
+                        <p>Identifying what remains constant when everything else is changing. Your values, strengths, and core self.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Building What's Next</h3>
+                        <p>Not rushing into the future, but thoughtfully creating a life that fits who you're becoming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
+        <!-- My Approach Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>My Approach to Transition Support</h2>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Acceptance and Commitment Therapy</h3>
+                        <p>Focusing on what you can control while accepting what you cannot. Finding meaning even in difficult changes.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Grief-Informed Support</h3>
+                        <p>Understanding that transition involves grief, even when the change is chosen or positive.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h3>Narrative Therapy</h3>
+                        <p>Rewriting your story in a way that honors the past while opening to the future.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Practical Planning</h3>
+                        <p>Balancing emotional processing with concrete steps forward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <h3>Our Approach to Transition Support</h3>
-        <p>Our <strong>life transitions therapy</strong> utilizes evidence-based approaches to help you:</p>
-        <ul>
-            <li><strong>Process your emotions</strong> - Work through grief, anxiety, and other difficult feelings</li>
-            <li><strong>Clarify your values</strong> - Identify what matters most as you create your new life</li>
-            <li><strong>Develop coping strategies</strong> - Build resilience for navigating uncertainty</li>
-            <li><strong>Make decisions</strong> - Approach choices with clarity and confidence</li>
-            <li><strong>Find meaning</strong> - Discover opportunities for growth within challenges</li>
-            <li><strong>Build support</strong> - Strengthen relationships and create new connections</li>
-        </ul>
+        <!-- What to Expect Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What to Expect in Our Work</h2>
+                    
+                    <h3>Early Sessions: Stabilization</h3>
+                    <p>Creating safety and stability while everything feels uncertain. No pressure to have answers.</p>
+                    
+                    <h3>Middle Phase: Exploration</h3>
+                    <p>Understanding what this transition means for you. Processing emotions without judgment.</p>
+                    
+                    <h3>Integration: Moving Forward</h3>
+                    <p>Building skills and strategies for navigating your new reality. Finding hope without forcing positivity.</p>
+                    
+                    <h3>Ongoing: Growth</h3>
+                    <p>Discovering who you are on the other side of change. Often stronger than you expected.</p>
+                    
+                    <!-- CTA after explaining process -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to navigate this transition with support?</p>
+                        <a href="tel:+14163062157" class="primary-cta">Start Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <h3>Specialized Support for Divorce Transitions</h3>
-        <p><strong>Divorce therapy</strong> addresses the unique challenges of ending a marriage, including:</p>
-        <ul>
-            <li>Processing the complex emotions of divorce</li>
-            <li>Co-parenting effectively while managing conflict</li>
-            <li>Rebuilding identity as a single person</li>
-            <li>Managing financial and practical concerns</li>
-            <li>Dating and relationship readiness</li>
-        </ul>
+        <!-- There's Life After This Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>There's Life After This</h2>
+                    
+                    <p>Whatever transition you're facing, you don't have to figure it out alone. Change is hard, but it doesn't have to break you.</p>
+                    
+                    <h3>Common Thoughts During Transition:</h3>
+                    <ul class="feature-list">
+                        <li>"I don't know who I am anymore"</li>
+                        <li>"Will I ever feel normal again?"</li>
+                        <li>"Everyone else seems to handle this better"</li>
+                        <li>"I should be over this by now"</li>
+                        <li>"What if I'm making a mistake?"</li>
+                    </ul>
+                    
+                    <p><strong>All of these are normal. All of these are workable.</strong></p>
+                    
+                    <!-- Final service CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">You don't have to navigate this alone.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="https://jesse-cynamon.janeapp.com/" class="primary-cta" target="_blank">Book Free Consultation</a>
+                            <a href="../index.html#contact" class="secondary-cta email-cta">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <h3>Virtual Support Throughout Ontario</h3>
-        <p>Access <strong>transition support</strong> from the comfort and privacy of your own space. Flexible scheduling includes evening and weekend appointments to accommodate your changing life circumstances.</p>
-        
-        <h3>Building Your New Chapter</h3>
-        <p>Our <strong>life transitions counselling</strong> isn't just about surviving change - it's about helping you create a meaningful new chapter that aligns with who you're becoming.</p>
-        
-        <p>Investment: $175 per 50-minute session. Most extended health plans cover Registered Psychotherapists. We provide detailed receipts for insurance reimbursement.</p>
-        
-        <h3>About Jesse Cynamon, RP</h3>
-        <p>As a CRPO-registered therapist (#10979), I understand that life transitions can feel overwhelming and isolating. My approach provides a supportive space to process your experiences while developing practical strategies for moving forward with intention and hope.</p>
+        <!-- Contact Section -->
+        <section class="contact-highlight">
+            <div class="container">
+                <h3>Support When You Need It Most</h3>
+                <p>Transitions don't follow a convenient schedule. I offer flexible support options to meet you where you are.</p>
+                
+                <h4>Free 15-Minute Consultation</h4>
+                <p>Let's talk about what you're going through and how I can help. No judgment, just support.</p>
+                
+                <div class="hero-cta">
+                    <a href="https://jesse-cynamon.janeapp.com/" class="primary-cta" target="_blank">Book Your Call</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
+                        <a href="../index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Virtual Sessions Throughout Ontario<br>
+                    Crisis support and flexible scheduling available
+                </div>
+            </div>
+        </section>
     </main>
     
-    <!-- Trust Indicators -->
-    <section class="trust-indicators">
-        <div class="container">
-            <h3>Trusted Support Through Life's Changes</h3>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <div class="trust-icon">❤️</div>
-                    <span>Compassionate Care</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">💻</div>
-                    <span>Private Virtual Sessions</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">✓</div>
-                    <span>CRPO Registered</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">📅</div>
-                    <span>Flexible Scheduling</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <h3 id="contact-options">You Don't Have to Navigate This Alone</h3>
-            <p>Professional support through life's most challenging transitions. Reach out via our contact form or phone to find your footing in uncertain times.</p>
-            <a href="../index.html#contact" class="primary-btn">Fill Out Contact Form</a>
-            <a href="tel:+14163062157" class="primary-btn">Call or Text: (416) 306-2157</a>
-        </div>
-    </section>
-    
-    <!-- Related Services -->
-    <footer style="background: var(--neutral-cream); padding: var(--space-lg) 0;">
-        <div class="container">
-            <h3>Related Services</h3>
-            <ul style="display: flex; flex-wrap: wrap; gap: var(--space-md); list-style: none; padding: 0;">
-                <li><a href="depression-mood-support.html">Depression & Mood Support</a></li>
-                <li><a href="anxiety-therapy.html">Anxiety & Stress Management</a></li>
-                <li><a href="relationship-communication.html">Relationship & Communication</a></li>
-                <li><a href="../index.html">Back to Home</a></li>
-            </ul>
-        </div>
-    </footer>
-    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        📞 Call Now
+    </a>
 </body>
 </html>
