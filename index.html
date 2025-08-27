@@ -535,7 +535,7 @@
         
         .section-header {
             text-align: center;
-            margin-bottom: var(--space-xl);
+            margin-bottom: var(--space-xxl);
         }
         
         .section-header h2 {
@@ -555,9 +555,9 @@
         .approach-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
+            gap: var(--space-xxl);
             align-items: start;
-            margin-top: var(--space-xl);
+            margin-top: var(--space-lg);
         }
         
         .approach-content {
@@ -622,6 +622,51 @@
             width: 100%;
             height: 180px;
             object-fit: cover;
+        }
+        
+        /* Trust & Credentials Section */
+        .trust-section {
+            padding: var(--space-section) 0;
+            background: var(--neutral-cream);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .trust-item {
+            text-align: center;
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .trust-item h4 {
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+            font-size: 1.125rem;
+        }
+        
+        .trust-item p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            margin-bottom: 0;
         }
         
         /* Refined Specializations */
@@ -700,9 +745,12 @@
         
         .process-timeline {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: var(--space-lg);
             margin-top: var(--space-xl);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .process-step {
@@ -948,9 +996,10 @@
             text-align: center;
             padding-top: var(--space-md);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
             font-weight: 400;
+            line-height: 1.6;
         }
         
         /* Premium Mobile Responsiveness */
@@ -986,6 +1035,11 @@
             
             .specializations-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
             }
         }
         
@@ -1107,7 +1161,7 @@
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset96.jpeg" alt="Jesse Cynamon, Registered Psychotherapist" onerror="this.innerHTML='JC'">
+                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" onerror="this.innerHTML='JC'">
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon</h3>
@@ -1163,8 +1217,8 @@
             <div class="container">
                 <div class="section-header">
                     <p class="section-subtitle">Areas of Focus</p>
-                    <h2>How I Support Your Growth</h2>
-                    <p class="lead-text">I work with individuals ready to invest in meaningful change, addressing complex challenges with evidence-based approaches.</p>
+                    <h2>How We Support Your Growth</h2>
+                    <p class="lead-text">We work with individuals ready to invest in meaningful change, addressing complex challenges with evidence-based approaches.</p>
                 </div>
                 
                 <div class="specializations-grid">
@@ -1212,7 +1266,7 @@
             <div class="container">
                 <div class="section-header">
                     <p class="section-subtitle">The Journey</p>
-                    <h2>My Therapeutic Process</h2>
+                    <h2>Our Therapeutic Process</h2>
                     <p class="lead-text">A thoughtful, four-phase approach designed to create lasting transformation while honoring your unique circumstances and goals.</p>
                     
                     <div class="process-image">
@@ -1248,6 +1302,33 @@
             </div>
         </section>
         
+        <!-- Trust & Credentials Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">🏛️</div>
+                        <h4>CRPO Registered</h4>
+                        <p>Licensed with the College of Registered Psychotherapists of Ontario</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🎓</div>
+                        <h4>Advanced Training</h4>
+                        <p>Specialized certification in Acceptance & Commitment Therapy</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🔒</div>
+                        <h4>Confidential & Secure</h4>
+                        <p>PHIPA compliant with strict privacy protection standards</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">💳</div>
+                        <h4>Insurance Accepted</h4>
+                        <p>Direct billing available for most extended health plans</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Contact -->
         <section class="contact" id="contact">
