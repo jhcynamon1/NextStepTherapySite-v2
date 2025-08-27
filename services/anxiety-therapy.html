@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- SEO Meta Data -->
-    <title>Anxiety Therapy Ontario | Virtual Stress Management - Next Step</title>
-    <meta name="description" content="Evidence-based anxiety therapy and stress management in Ontario. Virtual sessions, insurance receipts, CRPO registered. Book your free 15-minute consultation.">
+    <title>Anxiety Therapy Ontario | Professional Support for Worry & Stress - Next Step Therapy</title>
+    <meta name="description" content="Struggling with anxiety in Ontario? Professional virtual therapy for racing thoughts, worry, and stress. CRPO registered. Free consultation. Insurance receipts.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Anxiety Therapy & Stress Management | Next Step Therapy">
@@ -20,54 +23,34 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/services/anxiety-therapy">
     
-    <!-- Import main CSS -->
-    <link rel="stylesheet" href="../index.html">
-    
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Anxiety Therapy and Stress Management",
-      "description": "Evidence-based anxiety therapy services in Ontario",
+      "description": "Evidence-based anxiety therapy services in Ontario using Acceptance and Commitment Therapy",
       "url": "https://nextsteptherapy.ca/services/anxiety-therapy",
       "provider": {
-        "@type": "Psychologist",
+        "@type": "Person",
         "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": "CRPO Registration #10979",
         "areaServed": "Ontario, Canada"
       },
-      "medicalSpecialty": "Anxiety Disorders",
+      "medicalSpecialty": ["Anxiety Disorders", "Stress Management", "Acceptance and Commitment Therapy"],
       "availableService": {
         "@type": "MedicalTherapy",
         "name": "Anxiety Therapy",
-        "description": "Acceptance and Commitment Therapy for anxiety",
-        "serviceType": "Virtual Psychotherapy"
+        "description": "Virtual anxiety therapy using ACT approach",
+        "serviceType": "Virtual Psychotherapy",
+        "offers": {
+          "@type": "Offer",
+          "price": "175",
+          "priceCurrency": "CAD",
+          "description": "50-minute therapy session"
+        }
       }
-    }
-    </script>
-    
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://nextsteptherapy.ca"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://nextsteptherapy.ca/services"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Anxiety Therapy",
-        "item": "https://nextsteptherapy.ca/services/anxiety-therapy"
-      }]
     }
     </script>
     
@@ -97,7 +80,7 @@
             --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
             --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
         }
         
         * {
@@ -108,9 +91,12 @@
         
         body {
             font-family: var(--font-body);
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-primary);
             background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
@@ -119,22 +105,27 @@
             padding: 0 var(--space-md);
         }
         
-        /* Header Styling */
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(74, 107, 122, 0.08);
             position: sticky;
             top: 0;
             z-index: 100;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: var(--space-md) 0;
         }
         
         .header-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 1rem 0;
+            align-items: center;
         }
         
         .logo-section {
@@ -143,620 +134,291 @@
             gap: var(--space-sm);
         }
         
-        .logo {
-            height: 40px;
-            width: auto;
-        }
-        
         .logo-text {
             font-family: var(--font-display);
-            font-size: 1.375rem;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
             text-decoration: none;
-            letter-spacing: -0.025em;
         }
         
         .credentials-badge {
-            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 0.25rem 0.75rem;
+            padding: 0.375rem 0.875rem;
             border-radius: var(--radius-lg);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+            font-size: 0.8125rem;
+            font-weight: 500;
         }
         
         .nav {
             display: flex;
-            list-style: none;
             gap: var(--space-lg);
+            list-style: none;
             align-items: center;
         }
         
         .nav a {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 2px solid transparent;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
         }
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            border-bottom-color: var(--accent-warm);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 0.9375rem;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
         }
         
         .header-phone:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-soft);
+            background: var(--primary-soft-blue);
             color: white;
         }
         
-        /* Hero Section with Background Images */
-        .service-hero {
-            position: relative;
-            min-height: 500px;
-            padding: var(--space-section) 0;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-        
-        .hero-background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-texture {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-image: url('../images/about-texture.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .service-hero h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            margin-bottom: var(--space-lg);
-            color: var(--text-primary);
-            letter-spacing: -0.025em;
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
             line-height: 1.2;
-        }
-        
-        .service-hero h2 {
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Content Styling */
-        .service-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: var(--space-section) var(--space-md);
-            background: var(--background-primary);
-        }
-        
-        .service-content p {
-            margin-bottom: var(--space-lg);
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--text-primary);
-        }
-        
-        .service-content h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: var(--space-xxl) 0 var(--space-lg);
-            color: var(--primary-soft-blue);
-            letter-spacing: -0.025em;
-        }
-        
-        .service-content ul {
-            margin-bottom: var(--space-lg);
-            padding-left: var(--space-lg);
-        }
-        
-        .service-content li {
-            margin-bottom: var(--space-sm);
-            font-size: 1.0625rem;
-            line-height: 1.6;
-        }
-        
-        .service-content li::marker {
-            color: var(--accent-warm);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .cta-section h3 {
-            font-size: 2rem;
-            font-weight: 700;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
         }
         
-        .cta-section p {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .primary-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1.125rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 600;
-            margin: var(--space-sm);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 1rem;
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .primary-btn:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
-            color: white;
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb {
-            padding: var(--space-lg) 0;
-            background: var(--neutral-cream);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        .breadcrumb a {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--neutral-cream);
-            padding: var(--space-xxl) 0 var(--space-lg);
-            border-top: 1px solid rgba(74, 107, 122, 0.08);
-        }
-        
-        footer h3 {
-            color: var(--text-primary);
-            margin-bottom: var(--space-lg);
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        
-        footer ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-lg);
-            list-style: none;
-            padding: 0;
-        }
-        
-        footer a {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: var(--primary-deep);
-            text-decoration: underline;
-        }
-        
-        /* Conversion Optimization Styles */
-        .floating-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
-            z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: pulse 2s infinite;
-            font-size: 0.95rem;
-            white-space: nowrap;
-        }
-        
-        .floating-cta:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
-            color: white;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
-            50% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.5), 0 0 20px rgba(74, 107, 122, 0.2); }
-            100% { box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3); }
-        }
-        
-        .trust-indicators {
-            background: linear-gradient(135deg, var(--neutral-soft) 0%, var(--neutral-cream) 100%);
-            padding: var(--space-section) 0;
-            text-align: center;
-        }
-        
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: var(--space-xl);
-            margin: var(--space-xl) 0;
-            flex-wrap: wrap;
-        }
-        
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm) var(--space-lg);
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            font-weight: 600;
-            color: var(--text-primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .trust-badge:hover {
-            transform: translateY(-2px);
-        }
-        
-        .trust-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--accent-warm);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 14px;
-        }
-        
-        .social-proof {
-            background: var(--background-primary);
-            padding: var(--space-xl) 0;
-            text-align: center;
-        }
-        
-        .social-proof-stats {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-xxl);
-            margin: var(--space-lg) 0;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-soft-blue);
-            line-height: 1;
-        }
-        
-        .stat-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-            margin-top: var(--space-xs);
-        }
-        
-        .urgency-banner {
-            background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
-            color: white;
-            padding: var(--space-sm);
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .urgency-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 3s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-        
-        .testimonial-section {
-            background: var(--neutral-cream);
-            padding: var(--space-section) 0;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .testimonial-quote {
             font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
-            color: var(--text-primary);
+            max-width: 60ch;
         }
         
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary-soft-blue);
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: var(--space-lg);
-            font-size: 4rem;
-            color: var(--accent-warm);
-            opacity: 0.3;
-            font-family: serif;
-        }
-        
-        .enhanced-cta {
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
             position: relative;
             overflow: hidden;
         }
         
-        .enhanced-cta::before {
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
         }
         
-        .enhanced-cta:hover::before {
-            left: 100%;
+        .hero-content {
+            position: relative;
+            text-align: center;
         }
         
-        .hero-cta {
-            margin-top: var(--space-xl);
-            display: flex;
-            gap: var(--space-md);
-            justify-content: center;
+        /* Buttons */
+        .btn {
+            display: inline-flex;
             align-items: center;
-            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
         }
         
-        .hero-primary-btn {
+        .btn-primary {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.25);
-            position: relative;
-            overflow: hidden;
+            box-shadow: var(--shadow-soft);
         }
         
-        .hero-primary-btn:hover {
+        .btn-primary:hover {
             background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.35);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
             color: white;
         }
         
-        .hero-secondary-btn {
-            background: white;
+        .btn-secondary {
+            background: transparent;
             color: var(--primary-soft-blue);
-            padding: 1.25rem 2.5rem;
-            border: 2px solid var(--primary-soft-blue);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
-        .hero-secondary-btn:hover {
+        .btn-secondary:hover {
             background: var(--primary-soft-blue);
             color: white;
-            transform: translateY(-3px);
         }
         
-        .content-cta-inline {
-            background: var(--neutral-soft);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--accent-warm);
-            margin: var(--space-xxl) 0;
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
         }
         
-        .content-cta-inline h4 {
-            color: var(--primary-soft-blue);
-            font-size: 1.25rem;
-            font-weight: 700;
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-subtitle {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--accent-warm);
             margin-bottom: var(--space-sm);
         }
         
-        .content-cta-inline p {
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
             margin-bottom: var(--space-lg);
-            color: var(--text-secondary);
         }
         
-        /* Responsive Design */
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Contact Section */
+        .contact-highlight {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin: var(--space-xl) 0;
+        }
+        
+        .contact-highlight h3 {
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+        
+        .contact-highlight .btn {
+            background: white;
+            color: var(--primary-soft-blue);
+            margin: 0 var(--space-xs);
+        }
+        
+        .contact-highlight .btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-deep);
+        }
+        
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav {
                 display: none;
             }
             
-            .header-content {
-                justify-content: space-between;
-            }
-            
-            .service-hero {
-                min-height: 400px;
+            .hero {
                 padding: var(--space-xl) 0;
             }
             
-            .service-content {
-                padding: var(--space-xl) var(--space-md);
+            h1 {
+                font-size: 2.5rem;
             }
             
-            footer ul {
-                flex-direction: column;
-                gap: var(--space-md);
+            .content-card {
+                padding: var(--space-lg);
             }
             
-            .floating-cta {
-                bottom: 15px;
-                right: 15px;
-                padding: 0.875rem 1.25rem;
-                font-size: 0.9rem;
-            }
-            
-            .trust-badges {
-                gap: var(--space-md);
-            }
-            
-            .trust-badge {
-                padding: var(--space-xs) var(--space-md);
-                font-size: 0.9rem;
-            }
-            
-            .social-proof-stats {
-                gap: var(--space-lg);
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-md);
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .hero-primary-btn,
-            .hero-secondary-btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .contact-highlight .btn {
+                display: block;
+                margin: var(--space-sm) 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">Home</a> > <a href="../services.html">Services</a> > Anxiety Therapy
-        </div>
-    </nav>
-    
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="../index.html" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge">CRPO #10979</span>
                 </div>
@@ -770,123 +432,325 @@
                     </ul>
                 </nav>
                 
-                <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="header-phone">
-                    Book Consultation
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
                 </a>
             </div>
         </div>
     </header>
     
-    <!-- Hero Section -->
-    <section class="service-hero">
-        <!-- Background Image Container -->
-        <div class="hero-background">
-            <img src="../images/hero-background.jpg" alt="" loading="lazy">
-        </div>
-        
-        <!-- Subtle About Texture Background -->
-        <div class="hero-texture"></div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1>Anxiety Therapy Ontario - Virtual Stress Management That Works</h1>
-                <h2>Evidence-Based Anxiety Treatment | CRPO Registered Therapist</h2>
-                <div class="hero-cta">
-                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="hero-primary-btn enhanced-cta">Book Free 15-Min Consultation</a>
-                    <a href="#contact-options" class="hero-secondary-btn">Get In Touch Today</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
     <!-- Main Content -->
-    <main class="service-content">
-        <p>Professional <strong>anxiety therapy in Ontario</strong> for racing thoughts, panic attacks, and chronic worry. Our evidence-based <strong>stress management therapy</strong> helps you move from overwhelm to clarity using proven Acceptance and Commitment Therapy (ACT) techniques. Virtual <strong>anxiety counselling</strong> available throughout Ontario with insurance receipts provided.</p>
-        
-        <h3>Understanding Anxiety and Stress</h3>
-        <p>Anxiety affects millions of Canadians, yet many struggle to find effective <strong>anxiety therapy</strong> that addresses the root causes. Unlike traditional approaches that focus solely on symptom management, our <strong>stress management</strong> approach helps you develop a healthier relationship with difficult thoughts and emotions.</p>
-        
-        <p>Whether you're experiencing:</p>
-        <ul>
-            <li>Persistent worry and racing thoughts</li>
-            <li>Panic attacks or physical anxiety symptoms</li>
-            <li>Social anxiety and avoidance behaviors</li>
-            <li>Workplace anxiety and performance concerns</li>
-            <li>Generalized anxiety that impacts daily life</li>
-        </ul>
-        
-        
-        <h3>Our Evidence-Based Approach</h3>
-        <p>Our <strong>anxiety therapy</strong> utilizes Acceptance and Commitment Therapy (ACT), a scientifically-validated approach that helps you:</p>
-        <ul>
-            <li>Develop psychological flexibility and resilience</li>
-            <li>Learn mindfulness techniques for managing anxious thoughts</li>
-            <li>Identify and align with your personal values</li>
-            <li>Build effective stress management strategies</li>
-            <li>Create sustainable changes in your daily life</li>
-        </ul>
-        
-        <h3>Virtual Anxiety Therapy Across Ontario</h3>
-        <p>Access professional <strong>anxiety counselling</strong> from the comfort of your home. Our virtual <strong>stress management therapy</strong> serves clients throughout Ontario, with evening and weekend appointments available to fit your schedule.</p>
-        
-        <h3>What to Expect</h3>
-        <p>Your <strong>anxiety therapy</strong> journey begins with a free 15-minute consultation where we discuss your concerns and determine if we're a good fit. Sessions focus on practical strategies you can implement immediately while building long-term resilience.</p>
-        
-        <p>Investment: $175 per 50-minute session. Most extended health plans cover Registered Psychotherapists - we provide detailed receipts for insurance reimbursement.</p>
-        
-        <h3>About Jesse Cynamon, RP</h3>
-        <p>As a CRPO-registered therapist (#10979) with advanced training in ACT, I specialize in helping individuals overcome anxiety and develop effective stress management skills. My approach combines evidence-based techniques with genuine understanding of what it's like to struggle with anxiety.</p>
-    </main>
-    
-    <!-- Trust Indicators -->
-    <section class="trust-indicators">
-        <div class="container">
-            <h3>Why Choose Next Step Therapy?</h3>
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <div class="trust-icon">✓</div>
-                    <span>CRPO Registered</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">📋</div>
-                    <span>Insurance Coverage</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">💻</div>
-                    <span>Virtual Sessions</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">⭐</div>
-                    <span>Evidence-Based</span>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Anxiety Therapy That Actually Helps</h1>
+                    <p class="lead-text">You know that feeling when your chest gets tight for no apparent reason? We understand. Anxiety has a way of showing up uninvited, especially when you're already dealing with life's pressures. You don't have to navigate this alone.</p>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="#contact" class="btn btn-primary">Book Free 15-Minute Call</a>
+                        <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <h3 id="contact-options">Ready to Start Your Journey?</h3>
-            <p>Don't let anxiety control your life. Reach out via our contact form or phone to begin your path toward lasting change.</p>
-            <a href="../index.html#contact" class="primary-btn">Fill Out Contact Form</a>
-            <a href="tel:+14163062157" class="primary-btn">Call or Text: (416) 306-2157</a>
-        </div>
-    </section>
-    
-    <!-- Related Services -->
-    <footer style="background: var(--neutral-cream); padding: var(--space-lg) 0;">
-        <div class="container">
-            <h3>Related Services</h3>
-            <ul style="display: flex; flex-wrap: wrap; gap: var(--space-md); list-style: none; padding: 0;">
-                <li><a href="mens-mental-health.html">Men's Mental Health</a></li>
-                <li><a href="workplace-stress-burnout.html">Workplace Stress & Burnout</a></li>
-                <li><a href="depression-mood-support.html">Depression & Mood Support</a></li>
-                <li><a href="../index.html">Back to Home</a></li>
-            </ul>
-        </div>
-    </footer>
-    
+        </section>
+        
+        <!-- Problem Recognition Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Does This Sound Familiar?</h2>
+                    
+                    <p>Maybe it's the way your mind starts racing at 3 AM, cycling through every possible thing that could go wrong tomorrow. Or how your chest tightens during what should be routine meetings. Perhaps it's the constant feeling that you're forgetting something important, even when you've triple-checked your to-do list.</p>
+                    
+                    <p>If you're living in Ontario and searching for anxiety therapy, you're likely experiencing some of these moments:</p>
+                    
+                    <ul class="feature-list">
+                        <li><strong>The Sunday Night Spiral:</strong> That familiar dread that settles in before the work week begins, making it hard to enjoy your weekend.</li>
+                        <li><strong>Decision Paralysis:</strong> Spending twenty minutes at the grocery store debating between two identical products because what if you choose wrong?</li>
+                        <li><strong>The Exhaustion That Sleep Doesn't Fix:</strong> Waking up tired because your brain never really switched off, even while you slept.</li>
+                        <li><strong>Social Rehearsals:</strong> Mentally scripting conversations before they happen, then replaying them afterward for things you "should have said."</li>
+                        <li><strong>The Productivity Trap:</strong> Feeling anxious when you're not being "productive," but also feeling overwhelmed by your endless to-do list.</li>
+                        <li><strong>Physical Symptoms That Seem Random:</strong> Headaches, muscle tension, stomach issues that doctors can't quite explain.</li>
+                    </ul>
+                    
+                    <p>Here in Ontario, where the pace of life can feel relentless and the weather doesn't always cooperate with our mood, anxiety often shows up as a response to the pressure to have it all figured out. Whether you're in Toronto dealing with the constant hustle, in Ottawa navigating government work stress, or anywhere else in the province trying to balance career and personal life, anxiety has a way of making everything feel more complicated.</p>
+                    
+                    <p>You might catch yourself thinking, "Everyone else seems to handle this stuff better than I do." But here's what I've learned from working with clients across Ontario: the people who seem to have it all together are often the ones who've simply learned how to work with their anxiety rather than against it.</p>
+                    
+                    <p>The truth is, anxiety isn't a character flaw or a sign that you're not strong enough. It's often a sign that you care deeply about things that matter to you. The problem isn't that you experience anxiety – it's that nobody taught you what to do with it when it shows up.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Understanding the Issue Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Your Mind Does This to You</h2>
+                    
+                    <p>Before we talk about what helps with anxiety, it's worth understanding why your brain creates these experiences in the first place. And no, it's not because there's something wrong with you.</p>
+                    
+                    <p>Your brain's primary job isn't to make you happy – it's to keep you alive. The part of your brain that generates anxiety is actually trying to be helpful. It's constantly scanning for potential threats and problems, trying to keep you safe and prepared. In many ways, it's doing exactly what it's supposed to do.</p>
+                    
+                    <p>The challenge is that our modern lives in Ontario – with their work pressures, social media comparisons, financial concerns, and constant connectivity – present our brains with a steady stream of things to worry about. Your anxiety response, which was designed to help you escape from actual physical danger, now gets triggered by emails, social situations, and uncertainty about the future.</p>
+                    
+                    <h3>Common Misconceptions About Anxiety</h3>
+                    
+                    <p><strong>"I should be able to just stop worrying."</strong> This is like telling someone to stop being tall. Anxiety isn't a choice you're making – it's an experience your nervous system is creating. Fighting with it usually makes it stronger.</p>
+                    
+                    <p><strong>"If I worry enough about something, I can prevent it from happening."</strong> Worry feels productive because it tricks us into thinking we're solving problems. In reality, most of what we worry about either never happens or is outside our control anyway.</p>
+                    
+                    <p><strong>"Everyone else has their anxiety under control."</strong> According to Statistics Canada, anxiety disorders affect about 12% of Canadians in any given year. That's roughly one in eight people. In other words, you're definitely not alone in this.</p>
+                    
+                    <p><strong>"I need to eliminate my anxiety completely."</strong> Complete elimination of anxiety isn't possible or even desirable. Some anxiety actually helps us stay motivated and alert. The goal is learning how to have a different relationship with it.</p>
+                    
+                    <h3>Why Anxiety Persists</h3>
+                    
+                    <p>Anxiety tends to stick around because of what psychologists call "safety behaviors" – the things we do to try to manage our anxious feelings. These might include avoiding certain situations, constantly checking your work, seeking reassurance from others, or trying to control outcomes that are ultimately outside your influence.</p>
+                    
+                    <p>These strategies provide temporary relief, which teaches your brain that the anxiety was justified. So the next time a similar situation comes up, your brain helpfully provides even more anxiety to "protect" you.</p>
+                    
+                    <p>This is why simply trying to think your way out of anxiety rarely works long-term. It's not an intellectual problem that needs solving – it's a learned pattern that needs gentle, consistent retraining.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How Therapy Helps Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Anxiety Therapy Actually Works</h2>
+                    
+                    <p>Here's what I want you to know upfront: therapy for anxiety isn't about eliminating every anxious thought or feeling you'll ever have. That's not realistic, and honestly, it wouldn't be helpful even if it were possible. Instead, it's about developing a completely different relationship with anxiety – one where it doesn't control your decisions or limit your life.</p>
+                    
+                    <h3>The Approach We Use</h3>
+                    
+                    <p>I work primarily with an approach called Acceptance and Commitment Therapy (ACT), which has strong research support for anxiety concerns. Rather than focusing on reducing anxiety symptoms, ACT helps you build psychological flexibility – the ability to stay present with difficult emotions while still moving toward what matters to you.</p>
+                    
+                    <p>Think of it this way: imagine you're at a party where there's someone you find really annoying. You have two choices. You can spend the entire evening trying to avoid this person, checking where they are, leaving conversations when they approach, and generally organizing your whole experience around them. Or you can acknowledge they're there, accept that they're part of the party, and focus on connecting with the people you actually want to talk to.</p>
+                    
+                    <p>Anxiety therapy works similarly. Instead of organizing your entire life around avoiding anxiety, you learn to acknowledge its presence while still engaging in activities and relationships that matter to you.</p>
+                    
+                    <h3>What This Looks Like in Practice</h3>
+                    
+                    <p><strong>Mindfulness Without the Mysticism:</strong> We practice noticing thoughts and feelings without getting caught up in their content. This isn't about meditation retreats or chanting – it's about developing the ability to observe your internal experience with curiosity rather than judgment.</p>
+                    
+                    <p><strong>Values Clarification:</strong> Anxiety often pulls us away from what we care about. We work together to identify what truly matters to you, then figure out how to keep moving in that direction even when anxiety is present.</p>
+                    
+                    <p><strong>Behavioral Experiments:</strong> We start small and gradually practice engaging with situations that trigger anxiety, always at a pace that feels manageable. This isn't exposure therapy – it's about learning through experience that you can handle more than your anxiety tells you.</p>
+                    
+                    <p><strong>Cognitive Defusion:</strong> This involves learning to see thoughts as thoughts rather than facts. When your brain offers up "Everything will go wrong," you learn to respond with "I'm having the thought that everything will go wrong" – creating just enough distance to choose how much attention to give it.</p>
+                    
+                    <p><strong>Self-Compassion Skills:</strong> Anxiety often comes with a harsh inner critic. We work on developing a kinder, more supportive internal voice that can offer comfort during difficult moments.</p>
+                    
+                    <h3>Setting Realistic Expectations</h3>
+                    
+                    <p>Progress in anxiety therapy isn't linear. You'll have good weeks and challenging weeks. Some techniques will click immediately; others will take time to feel natural. This is completely normal and expected.</p>
+                    
+                    <p>Most people start noticing subtle shifts within the first month – maybe sleeping slightly better or feeling less overwhelmed by daily decisions. More significant changes typically develop over 3-6 months of consistent work.</p>
+                    
+                    <p>The goal isn't to become someone who never experiences anxiety. The goal is to become someone for whom anxiety is no longer the driving force behind major life decisions. You learn to experience it, acknowledge it, and then choose your actions based on your values rather than your fears.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What to Expect Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What to Expect from Our Work Together</h2>
+                    
+                    <h3>The First Few Sessions</h3>
+                    
+                    <p>We always start with a free 15-minute consultation call. This isn't a therapy session – it's a conversation about what's bringing you to therapy and whether we seem like a good fit to work together. There's no pressure and no commitment.</p>
+                    
+                    <p>If we decide to move forward, our first session is about understanding your unique experience with anxiety. I'll ask about when it typically shows up, how it affects your daily life, and what you've already tried. We'll also talk about what you're hoping will be different as a result of our work together.</p>
+                    
+                    <p>In sessions two and three, we start building your toolkit. This might include mindfulness exercises you can use in the moment when anxiety spikes, ways to identify and work with unhelpful thought patterns, or strategies for gradually engaging with situations you've been avoiding.</p>
+                    
+                    <h3>The Session Structure</h3>
+                    
+                    <p>Each 50-minute session typically includes a check-in about how things have been since we last talked, practice with specific techniques or skills, discussion of any challenges you've encountered, and planning for the week ahead.</p>
+                    
+                    <p>I don't believe in homework for the sake of homework, but we will often identify small experiments or practices you can try between sessions. These are always collaborative – if something doesn't feel right or workable for your life, we adjust it.</p>
+                    
+                    <h3>Virtual Therapy Benefits</h3>
+                    
+                    <p>All our sessions take place through secure, HIPAA-compliant video platform. Many clients throughout Ontario find virtual therapy especially helpful for anxiety work because:</p>
+                    
+                    <ul class="feature-list">
+                        <li>You're in your own comfortable space, which can make it easier to be open and vulnerable</li>
+                        <li>No travel time or parking stress before sessions</li>
+                        <li>Greater scheduling flexibility, including evening and weekend options</li>
+                        <li>You can immediately practice techniques in your actual environment</li>
+                        <li>Consistency is maintained even during weather events or other disruptions</li>
+                    </ul>
+                    
+                    <p>Virtual sessions are just as effective as in-person therapy for anxiety concerns. In fact, many clients report feeling more comfortable discussing sensitive topics from their own space.</p>
+                    
+                    <h3>Between Sessions</h3>
+                    
+                    <p>While the work we do in sessions is important, most of the change happens in your daily life. I'm available by email for brief questions or concerns that come up between sessions, though this isn't meant for crisis situations.</p>
+                    
+                    <p>Many clients find it helpful to keep brief notes about their experiences with the techniques we practice, what worked well, and what felt challenging. This information helps us fine-tune our approach in future sessions.</p>
+                    
+                    <h3>How Long Does This Take?</h3>
+                    
+                    <p>This is always one of the first questions people ask, and I understand why. When you're struggling with anxiety, you want to know when relief might come.</p>
+                    
+                    <p>Most clients work with me for 4-6 months, meeting weekly or bi-weekly. Some people feel ready to reduce session frequency after a few months; others prefer ongoing monthly sessions for continued support.</p>
+                    
+                    <p>The timeline depends partly on your specific goals, how long anxiety has been impacting your life, and what other stressors you're managing. We check in regularly about your progress and adjust our approach as needed.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Your Therapist Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>About Jesse Cynamon, RP</h2>
+                    
+                    <p>I became a psychotherapist because I believe everyone deserves support that actually helps. Too many people struggle in silence with anxiety, thinking they should be able to handle it alone or that seeking help means they're weak. Nothing could be further from the truth.</p>
+                    
+                    <p>I hold a Master's degree in Psychology and am registered with the College of Registered Psychotherapists of Ontario (CRPO #10979). My training includes advanced certification in Acceptance and Commitment Therapy, along with specialized training in anxiety disorders and stress management.</p>
+                    
+                    <p>But beyond the credentials, here's what I want you to know about my approach: I don't believe in one-size-fits-all therapy. What works for your colleague or your sister might not be the right fit for you, and that's okay. My job is to meet you where you are and adapt our work to fit your life, not the other way around.</p>
+                    
+                    <p>I've worked with clients throughout Ontario – from young professionals in downtown Toronto dealing with imposter syndrome to parents in smaller communities trying to manage work-life balance to older adults navigating major life transitions. While everyone's story is different, what remains consistent is this: people are far more resilient than they give themselves credit for.</p>
+                    
+                    <p>My therapy style is direct but warm. I won't waste your time with techniques that aren't helping, and I won't pretend to have all the answers. What I will do is offer you evidence-based tools, genuine support, and a space where you can be completely honest about what you're experiencing without judgment.</p>
+                    
+                    <p>I understand that reaching out for anxiety therapy can feel vulnerable. Many of my clients describe feeling nervous before our first call, wondering if they're "anxious enough" to warrant professional support or if they'll be judged for needing help. Let me be clear: if anxiety is impacting your quality of life, you deserve support. Period.</p>
+                    
+                    <p>I offer evening and weekend appointments because I know that anxiety doesn't operate on a 9-to-5 schedule, and neither should access to mental health support. My goal is to make therapy as accessible and comfortable as possible while maintaining the highest professional standards.</p>
+                    
+                    <h3>Why I Choose to Work Virtually</h3>
+                    
+                    <p>Virtual therapy allows me to work with clients throughout Ontario who might not otherwise have access to specialized anxiety support. Whether you're in a rural area where mental health resources are limited or in a urban center but prefer the comfort and convenience of home-based sessions, virtual therapy removes barriers while maintaining the same quality of care.</p>
+                    
+                    <p>I've found that many clients with anxiety actually prefer virtual sessions because they eliminate some of the logistical stressors (traffic, parking, arriving on time) that can increase anxiety before we even begin our work together.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Getting Started Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Taking the First Step</h2>
+                    
+                    <p>I know that deciding to start anxiety therapy can feel overwhelming – which is ironic, considering that's exactly what we'll be working on together. To make this as straightforward as possible, here's everything you need to know about getting started:</p>
+                    
+                    <h3>Your Free 15-Minute Consultation</h3>
+                    
+                    <p>Every new client relationship begins with a brief phone consultation. This gives us both a chance to see if we're a good fit before making any commitments. During this call, you can ask me anything about my approach, experience, or how I work with anxiety concerns.</p>
+                    
+                    <p>I'll ask you a few questions about what's bringing you to therapy and what you're hoping will be different. This isn't a mini-therapy session – it's simply a conversation to help us both determine if working together makes sense.</p>
+                    
+                    <p>There's no pressure during this call. If you decide I'm not the right therapist for your needs, I'm happy to provide referrals to other qualified professionals who might be a better fit.</p>
+                    
+                    <h3>Investment and Insurance</h3>
+                    
+                    <p>Individual therapy sessions are $175 for 50 minutes. I know this represents a significant investment, and I don't take that lightly. My goal is to provide you with tools and insights that create lasting change, not dependency on ongoing therapy.</p>
+                    
+                    <p>Most extended health plans in Ontario cover services provided by Registered Psychotherapists. Coverage typically ranges from $500 to $2,500 annually, depending on your specific plan. I provide detailed receipts with all the information your insurance company requires for reimbursement.</p>
+                    
+                    <p>If you're unsure about your coverage, I recommend calling the member services number on your insurance card and asking specifically about coverage for "Registered Psychotherapist services" with CRPO registration.</p>
+                    
+                    <p>Payment can be made by e-transfer or credit card, whichever is more convenient for you. Payment is due at the time of service.</p>
+                    
+                    <h3>Scheduling and Availability</h3>
+                    
+                    <p>I offer appointments throughout the week, including evening hours until 8 PM and weekend availability. This flexibility is especially important for anxiety support because I recognize that traditional business hours don't always align with when people are most available or comfortable engaging in therapeutic work.</p>
+                    
+                    <p>Sessions are typically scheduled weekly at first, though we can adjust frequency based on your needs and preferences. Some clients prefer twice-weekly sessions initially; others do better with bi-weekly meetings from the start.</p>
+                    
+                    <p>If you need to reschedule an appointment, I just ask for 24 hours notice when possible. I understand that life happens, and I try to be as flexible as possible while maintaining clear boundaries.</p>
+                    
+                    <h3>What You Need for Virtual Sessions</h3>
+                    
+                    <p>Virtual therapy requires a computer, tablet, or smartphone with a camera and microphone, plus a reliable internet connection. I use a secure, encrypted platform that doesn't require you to download any software – you simply click a link I send you before each session.</p>
+                    
+                    <p>You'll want to find a private space where you can speak freely without being interrupted or overheard. Many clients use their bedroom, home office, or even their car if privacy at home is limited.</p>
+                    
+                    <h3>Crisis and Emergency Support</h3>
+                    
+                    <p>While I'm available by email for brief questions between sessions, virtual therapy isn't appropriate for crisis situations. If you're experiencing thoughts of self-harm or are in immediate danger, please contact emergency services (911) or go to your nearest emergency room.</p>
+                    
+                    <p>For mental health crisis support in Ontario, you can also contact:</p>
+                    <ul class="feature-list">
+                        <li>Talk Suicide Canada: 1-833-456-4566 (24/7)</li>
+                        <li>Good2Talk (post-secondary students): 1-866-925-5454</li>
+                        <li>Ontario Mental Health Helpline: 1-866-531-2600</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>How do I know if I need anxiety therapy or if this is something I should be able to handle on my own?</h4>
+                    <p>This is one of the most common questions I hear, and I understand the internal struggle behind it. If anxiety is interfering with your sleep, relationships, work performance, or general enjoyment of life, professional support can be incredibly helpful. You don't need to wait until you're in crisis to reach out for help.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I've tried therapy before and it didn't help with my anxiety?</h4>
+                    <p>Not all therapy approaches are equally effective for anxiety, and not all therapists are the right fit for every person. If you've had an unhelpful therapy experience in the past, that doesn't mean therapy can't help you – it may mean you haven't found the right approach or therapist yet. I work specifically with anxiety concerns using evidence-based methods.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Will you prescribe medication for my anxiety?</h4>
+                    <p>As a Registered Psychotherapist, I don't prescribe medication – that's outside my scope of practice. However, I work collaboratively with family doctors and psychiatrists when clients are considering medication as part of their overall treatment plan. Many people find significant relief from anxiety through therapy alone.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How quickly will I start feeling better?</h4>
+                    <p>Many clients notice some initial relief within the first few sessions, often simply from having a space to talk openly about their experiences. More significant changes typically develop over 8-12 sessions. However, everyone's timeline is different, and we'll check in regularly about your progress and adjust our approach as needed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if my anxiety gets worse before it gets better?</h4>
+                    <p>Sometimes people experience temporary increases in anxiety when they first start paying closer attention to their internal experiences. This is normal and usually settles within a few sessions. I'll always work at a pace that feels manageable for you, and we can slow down or adjust our approach if needed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do you work with people who have other mental health concerns along with anxiety?</h4>
+                    <p>Absolutely. Anxiety often co-occurs with depression, ADHD, perfectionism, work stress, relationship difficulties, and other concerns. I take a holistic approach that considers all aspects of your mental health and life circumstances.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is virtual therapy as effective as in-person therapy for anxiety?</h4>
+                    <p>Research shows that virtual therapy is just as effective as in-person therapy for anxiety disorders. Many clients actually prefer virtual sessions because they can access support from their own comfortable space without the stress of travel or scheduling around office locations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-highlight">
+            <div class="container">
+                <h3>Ready to Take the Next Step?</h3>
+                <p>The hardest part is reaching out. Once you do, everything else becomes simpler. Your free 15-minute consultation is just a conversation – no forms, no commitment, no pressure.</p>
+                
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                    <a href="tel:+14163062157" class="btn">(416) 306-2157</a>
+                    <a href="mailto:jesse@nextsteptherapy.ca" class="btn">Email Jesse</a>
+                </div>
+                
+                <p style="margin-top: var(--space-md); font-size: 0.9rem; opacity: 0.9;">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Virtual Sessions Throughout Ontario<br>
+                    Evening & Weekend Appointments Available
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
