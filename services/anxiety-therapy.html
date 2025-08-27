@@ -365,36 +365,111 @@
             margin-bottom: var(--space-sm);
         }
         
-        /* Contact Section */
+        /* Contact Section - Match Homepage Style */
         .contact-highlight {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
+            background: white;
+            padding: var(--space-section) 0;
             text-align: center;
-            margin: var(--space-xl) 0;
         }
         
         .contact-highlight h3 {
-            color: white;
-            margin-bottom: var(--space-md);
-        }
-        
-        .contact-highlight .btn {
-            background: white;
-            color: var(--primary-deep);
-            margin: 0 var(--space-xs);
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
             font-weight: 600;
-            min-height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
-        .contact-highlight .btn:hover {
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--primary-deep);
-            transform: translateY(-1px);
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        /* CTA Buttons - Match Homepage */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
         }
         
         /* Mobile Responsive */
@@ -415,9 +490,26 @@
                 padding: var(--space-lg);
             }
             
-            .contact-highlight .btn {
-                display: block;
-                margin: var(--space-sm) 0;
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -729,20 +821,23 @@
                 <h3>Ready to Stop Living on High Alert?</h3>
                 <p>You don't have to white-knuckle your way through anxiety anymore. Therapy provides real tools for real relief.</p>
                 
-                <h4 style="color: white; margin-top: var(--space-lg); margin-bottom: var(--space-md);">Free 15-Minute Consultation</h4>
+                <h4>Free 15-Minute Consultation</h4>
                 <p>Let's talk about what you're experiencing and how I can help. No pressure, just a conversation.</p>
                 
-                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
-                    <a href="tel:+14163062157" class="btn">📞 (416) 306-2157</a>
-                    <a href="mailto:jesse@nextsteptherapy.ca" class="btn">✉️ Send a Message</a>
+                <div class="hero-cta">
+                    <a href="tel:+14163062157" class="primary-cta">Book Your Free Call</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
+                        <a href="mailto:jesse@nextsteptherapy.ca" class="secondary-cta email-cta">Send Message</a>
+                    </div>
                 </div>
                 
-                <p style="margin-top: var(--space-lg); font-size: 0.9rem; opacity: 0.9;">
+                <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
                     Virtual Sessions Throughout Ontario<br>
                     Evening & Weekend Appointments Available
-                </p>
+                </div>
             </div>
         </section>
     </main>
