@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Adult Therapy Ontario | Counseling 18-30 | NextStep Therapy</title>
+    <meta name="description" content="Therapy for young adults 18-30 in Ontario. Emerging adulthood challenges, career stress, relationships, quarter-life crisis. CRPO registered therapist. Book consultation.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Young Adult Therapy Ontario | Counseling 18-30">
+    <meta property="og:description" content="Specialized therapy for young adults navigating emerging adulthood. Career stress, relationships, identity exploration with CRPO therapist.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/young-adult-therapy">
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Person", "MedicalBusiness"],
+      "name": "Jesse Cynamon",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Young adult therapy specialist in Ontario focusing on emerging adulthood challenges, career stress, and relationship issues for ages 18-30",
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "url": "https://nextsteptherapy.ca",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario"
+      },
+      "medicalSpecialty": ["Young Adult Therapy", "Emerging Adulthood", "Career Counseling", "Relationship Therapy"],
+      "hasCredential": "CRPO Registration #10979"
+    }
+    </script>
+    
+    <style>
+        :root {
+            /* Refined therapeutic color palette (60-30-10 rule) */
+            --primary-soft-blue: #4a6b7a;
+            --primary-deep: #36525f;
+            --primary-light: #6b8a98;
+            --accent-warm: #c4a191;
+            --accent-gold: #b19976;
+            --neutral-cream: #faf8f5;
+            --neutral-soft: #f5f3ef;
+            --neutral-warm: #ede9e3;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --background-primary: #fefefe;
+            
+            /* Sophisticated typography system */
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Precise spacing system */
+            --space-xs: 0.5rem;    /* 8px */
+            --space-sm: 1rem;      /* 16px */
+            --space-md: 1.5rem;    /* 24px */
+            --space-lg: 2rem;      /* 32px */
+            --space-xl: 3rem;      /* 48px */
+            --space-xxl: 4rem;     /* 64px */
+            --space-section: 6rem; /* 96px */
+            
+            /* Refined radius system */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            
+            /* Shadow system */
+            --shadow-soft: 0 4px 20px rgba(74, 107, 122, 0.06);
+            --shadow-medium: 0 8px 30px rgba(74, 107, 122, 0.08);
+            --shadow-strong: 0 12px 40px rgba(74, 107, 122, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--background-primary);
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 0.002em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Hierarchy */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+            font-feature-settings: "kern" 1;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.025em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.015em;
+        }
+        
+        h4 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-family: var(--font-body);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            letter-spacing: -0.01em;
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 60ch;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        /* Container System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo {
+            height: 42px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9375rem;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.01em;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+            transform: translateY(-1px);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.025em;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .hero-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: var(--space-xl);
+        }
+        
+        .hero h1 {
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Button System */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            font-family: var(--font-body);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+            text-align: center;
+            letter-spacing: 0.025em;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.025em;
+            display: inline-block;
+            margin: var(--space-md) var(--space-sm) 0 0;
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+            color: white;
+        }
+        
+        .secondary-cta {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9375rem;
+            display: inline-block;
+            margin: var(--space-md) var(--space-sm) 0 0;
+            background: transparent;
+            border: 1.5px solid var(--primary-soft-blue);
+            color: var(--primary-soft-blue);
+        }
+        
+        .secondary-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: var(--space-section) 0;
+            background: white;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--neutral-soft);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xxl);
+        }
+        
+        .section-header h2 {
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+            text-align: center;
+            width: 100%;
+        }
+        
+        .section-subtitle {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--accent-warm);
+            margin-bottom: var(--space-sm);
+            font-weight: 400;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-lg);
+        }
+        
+        .content-card {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            border-top: 2px solid var(--primary-soft-blue);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--text-primary);
+        }
+        
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: var(--space-section) 0;
+            background: var(--neutral-soft);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-lg);
+        }
+        
+        .contact-info {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            border-top: 2px solid var(--primary-soft-blue);
+        }
+        
+        .contact-methods {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-methods li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+            padding: var(--space-md);
+            background: var(--neutral-cream);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .contact-methods li:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .contact-icon {
+            width: 24px;
+            margin-right: var(--space-sm);
+            color: var(--primary-soft-blue);
+            font-size: 1.125rem;
+        }
+        
+        .contact-details strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .contact-details a {
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .investment-highlight {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
+            color: white;
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            border-top: 2px solid var(--accent-warm);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.9375rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1.5px solid rgba(74, 107, 122, 0.1);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.9375rem;
+            background: var(--neutral-cream);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 400;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-soft-blue);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(74, 107, 122, 0.06);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-deep);
+            color: rgba(255, 255, 255, 1);
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-section h4 {
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: var(--space-sm);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.0625rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-section p {
+            color: rgba(255, 255, 255, 1);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .footer-section a {
+            color: rgba(255, 255, 255, 1);
+            text-decoration: none;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 400;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-warm);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 1) !important;
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            :root {
+                --space-section: 4rem;
+                --space-xxl: 2.5rem;
+                --space-xl: 2rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .hero-content {
+                padding-top: var(--space-md);
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index.html#approach">Approach</a></li>
+                        <li><a href="index.html#specializations">Services</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#contact">Connect</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Image Container -->
+        <div class="hero-background">
+            <img src="images/hero-background.jpg" alt="" loading="lazy">
+        </div>
+        
+        <!-- Subtle About Texture Background -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url('images/about-texture.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        "></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Therapy for Young Adults (18-30)</h1>
+                <p class="lead-text">Navigate the unique challenges of emerging adulthood. Professional support for quarter-life transitions, career anxiety, relationships, and finding your authentic path forward.</p>
+                
+                <div class="hero-cta">
+                    <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" target="_blank" class="primary-cta">
+                        Book Young Adult Consultation
+                    </a>
+                    <a href="tel:+14163062157" class="secondary-cta">(416) 306-2157</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Understanding Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Emerging Adulthood</p>
+                <h2>The Unique Challenges of Your Twenties</h2>
+                <p class="lead-text">Your twenties are a distinct life stage with specific challenges. You're not a teenager, but you might not feel like a "real adult" either. This in-between space brings unique pressures and opportunities.</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3 class="card-title">Identity Exploration</h3>
+                    <p class="card-description">Who am I really? What do I actually want? Explore your authentic identity beyond family expectations, social media personas, and career pressures.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Career Anxiety & Direction</h3>
+                    <p class="card-description">Feeling lost about career direction or overwhelmed by professional expectations. Navigate job market pressures and find work that actually aligns with your values.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Relationship Complexity</h3>
+                    <p class="card-description">Dating, friendships, family dynamics - all feel more complicated now. Learn to build healthy relationships while maintaining your independence and boundaries.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Quarter-Life Crisis</h3>
+                    <p class="card-description">Feeling like everyone else has it figured out while you're struggling. Address comparison, FOMO, and the pressure to have your life "together" by a certain age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Common Issues Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Real Talk</p>
+                <h2>What Young Adults Actually Struggle With</h2>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3 class="card-title">"Everyone else has it figured out"</h3>
+                    <p class="card-description">Constant comparison to peers who seem more successful, settled, or confident. Learn that everyone is figuring it out as they go, and comparison steals joy from your journey.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Financial Stress & Independence</h3>
+                    <p class="card-description">Student loans, entry-level salaries, cost of living, financial independence from parents. Navigate money anxiety and build healthy financial habits.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Dating & Relationship Confusion</h3>
+                    <p class="card-description">Dating apps, hookup culture, finding genuine connection. Learn what you actually want in relationships and how to communicate your needs effectively.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Family Dynamics Shifting</h3>
+                    <p class="card-description">Changing relationships with parents, setting boundaries, dealing with family expectations. Navigate the transition from dependent child to independent adult.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Social Media & FOMO</h3>
+                    <p class="card-description">Instagram anxiety, LinkedIn pressure, constant connectivity. Develop a healthier relationship with technology and social media comparison.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Adulting Overwhelm</h3>
+                    <p class="card-description">Taxes, insurance, career decisions, life admin. Learn to manage adult responsibilities without losing yourself in the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Life Domains Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Key Areas</p>
+                <h2>Where Young Adults Need Support</h2>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3 class="card-title">Career & Professional Development</h3>
+                    <p class="card-description">Finding direction, managing workplace anxiety, dealing with impostor syndrome, navigating office politics, and building professional confidence.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Relationships & Dating</h3>
+                    <p class="card-description">Building healthy romantic relationships, maintaining friendships through life changes, setting boundaries, and developing emotional intimacy skills.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Mental Health & Wellbeing</h3>
+                    <p class="card-description">Managing anxiety and depression, building resilience, developing healthy coping strategies, and creating sustainable self-care practices.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Life Transitions</h3>
+                    <p class="card-description">Graduating, moving cities, changing careers, relationship changes. Navigate major transitions with confidence and clarity about your values.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Personal Growth</h3>
+                    <p class="card-description">Developing authentic self-confidence, discovering your values, building emotional intelligence, and creating a life that feels genuinely yours.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Future Planning</h3>
+                    <p class="card-description">Making decisions about the future without knowing what you want. Learn to make choices that align with your evolving values and goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Approach Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Young Adult Approach</p>
+                <h2>Therapy That Actually Gets It</h2>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3 class="card-title">No Judgment Zone</h3>
+                    <p class="card-description">Therapy without the "you should have it figured out by now" attitude. Your struggles are valid, your timeline is your own, and there's no "right" way to be an adult.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Real-World Focus</h3>
+                    <p class="card-description">Practical strategies for actual problems - from dating anxiety to career decisions to managing money stress. Therapy that applies to your real life, not just theory.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h3 class="card-title">Values-Based Decision Making</h3>
+                    <p class="card-description">Instead of following what you "should" do, discover what you actually value. Make decisions based on your authentic priorities, not external expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Connect</p>
+                <h2>Ready to Figure It Out Together?</h2>
+                <p class="lead-text">You don't have to navigate your twenties alone. Get support that actually understands the unique challenges of emerging adulthood. Your struggles are real, and so is the possibility for positive change.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get Started</h3>
+                    
+                    <ul class="contact-methods">
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <div class="contact-details">
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+14163062157">(416) 306-2157</a><br>
+                                <small>Call or text - whatever's easier</small>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            <div class="contact-details">
+                                <strong>Email:</strong><br>
+                                <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a><br>
+                                <small>Response during business hours</small>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span class="contact-icon">💻</span>
+                            <div class="contact-details">
+                                <strong>Sessions:</strong><br>
+                                Virtual & In-Person<br>
+                                <small>Flexible scheduling for busy lives</small>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="investment-highlight">
+                        <h4>Investment & Coverage</h4>
+                        <p><strong>$175 per 50-minute session</strong></p>
+                        <p>Many extended health plans cover therapy<br>
+                        Detailed receipts for insurance claims</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Book Your Young Adult Consultation</h3>
+                    <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
+                        <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
+                        <input type="hidden" name="_subject" value="New Young Adult Therapy Consultation Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <label for="name">Your name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Age (optional)</label>
+                            <input type="number" id="age" name="age" min="18" max="30">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">What brings you here?</label>
+                            <select id="inquiry-type" name="inquiry-type">
+                                <option value="young-adult-consultation">Young adult consultation</option>
+                                <option value="quarter-life">Quarter-life crisis</option>
+                                <option value="career-anxiety">Career anxiety & direction</option>
+                                <option value="relationship-issues">Dating & relationships</option>
+                                <option value="identity">Identity exploration</option>
+                                <option value="family-dynamics">Family dynamics</option>
+                                <option value="life-transitions">Life transitions</option>
+                                <option value="anxiety-depression">Anxiety & depression</option>
+                                <option value="other">Other concerns</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Share what brings you here (optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Feel free to share as much or as little as you're comfortable with..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Specialized therapy for young adults (18-30) in Ontario. Support for emerging adulthood challenges, career anxiety, relationships, and identity exploration.</p>
+                    <p><strong>CRPO Registration #10979</strong></p>
+                </div>
+            
+                <div class="footer-section">
+                    <h4>Young Adult Services</h4>
+                    <ul>
+                        <li><a href="#">Career Direction & Anxiety</a></li>
+                        <li><a href="#">Relationship & Dating Support</a></li>
+                        <li><a href="#">Identity Exploration</a></li>
+                        <li><a href="#">Quarter-Life Crisis</a></li>
+                        <li><a href="#">Life Transitions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="index.html#approach">Therapeutic Approach</a></li>
+                        <li><a href="index.html#process">How It Works</a></li>
+                        <li><a href="#">Young Adult Focus</a></li>
+                        <li><a href="#">Insurance Coverage</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><strong>Phone:</strong> <a href="tel:+14163062157">(416) 306-2157</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a></li>
+                        <li><strong>Service Area:</strong> Ontario, Canada</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Ontario, Canada</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

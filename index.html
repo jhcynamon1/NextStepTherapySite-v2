@@ -1537,13 +1537,18 @@
                             <h4>Investment & Insurance</h4>
                             <p><strong>$175 per 50-minute session</strong></p>
                             <p>Extended health plans accepted<br>
-                            Direct billing available for most providers</p>
+                            Detailed receipts provided for insurance reimbursement</p>
                         </div>
                     </div>
                     
                     <div class="contact-form">
                         <h3>Book Your Free Consultation</h3>
-                        <form>
+                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
+                            <input type="hidden" name="_subject" value="New Consultation Request - Next Step Therapy">
+                            <input type="hidden" name="_captcha" value="false">
+                            
                             <div class="form-group">
                                 <label for="name">Your name *</label>
                                 <input type="text" id="name" name="name" required>
@@ -1587,7 +1592,7 @@
                                 <textarea id="message" name="message" rows="4" placeholder="Please share as much or as little as feels comfortable for you..."></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Book Free Consultation</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send Message</button>
                         </form>
                     </div>
                 </div>
