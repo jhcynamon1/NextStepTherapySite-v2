@@ -15,18 +15,29 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca">
     
-    <!-- Preload Critical Resources -->
+    <!-- Critical Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Optimized Font Loading with font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Preload Critical Images -->
-    <link rel="preload" as="image" href="images/hero-background.jpg">
-    <link rel="preload" as="image" href="images/asset103.png">
+    <!-- Preload Critical Resources for Mobile -->
+    <link rel="preload" as="image" href="hero-background-mobile.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="hero-background.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="asset103-optimized.webp">
     
-    <!-- Browser Caching Headers -->
+    <!-- DNS Prefetch for Third-party Domains -->
+    <link rel="dns-prefetch" href="//polyfill.io">
+    
+    <!-- Enhanced Browser Caching -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    
+    <!-- Mobile Performance Hints -->
+    <meta name="theme-color" content="#4a6b7a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="images/asset104-180.png">
     
     <!-- Enhanced JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -148,15 +159,54 @@
             -webkit-text-size-adjust: 100%;
             -moz-text-size-adjust: 100%;
             text-size-adjust: 100%;
+            /* Mobile performance optimizations */
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: touch;
         }
         
-        /* Refined Typography Hierarchy */
+        /* Font Display Optimization */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-display: swap;
+            src: local('Playfair Display');
+        }
+        
+        @font-face {
+            font-family: 'Source Sans 3';
+            font-display: swap;
+            src: local('Source Sans 3');
+        }
+        
+        /* Mobile-Optimized Typography Hierarchy */
         h1, h2, h3, h4 {
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
             color: var(--text-primary);
             font-feature-settings: "kern" 1;
+            /* Mobile text optimization */
+            text-rendering: optimizeSpeed;
+            will-change: auto;
+        }
+        
+        /* Critical Mobile Styles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            h1 {
+                font-size: clamp(2rem, 8vw, 3rem);
+                line-height: 1.1;
+            }
+            
+            h2 {
+                font-size: clamp(1.75rem, 6vw, 2.25rem);
+            }
         }
         
         h1 {
@@ -1662,9 +1712,9 @@
     
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
+        <!-- Optimized Hero Section -->
         <section class="hero" style="position: relative; min-height: 600px;">
-            <!-- Background Image Container -->
+            <!-- Optimized Background with WebP and Mobile Support -->
             <div class="hero-background" style="
                 position: absolute;
                 top: 0;
@@ -1673,16 +1723,27 @@
                 height: 100%;
                 z-index: 0;
                 overflow: hidden;
+                will-change: transform;
             ">
-                <img src="images/hero-background.jpg" alt="Peaceful therapy environment background" style="
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    opacity: 0.3;
-                " loading="eager">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="hero-background-mobile.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="hero-background-mobile.jpg">
+                    <source srcset="hero-background.webp" type="image/webp">
+                    <img src="hero-background.jpg" 
+                         alt="Peaceful therapy environment background" 
+                         style="
+                             width: 100%;
+                             height: 100%;
+                             object-fit: cover;
+                             opacity: 0.3;
+                             transform: translate3d(0,0,0);
+                         " 
+                         loading="eager"
+                         decoding="sync">
+                </picture>
             </div>
             
-            <!-- Subtle About Texture Background -->
+            <!-- Optimized Texture Background -->
             <div style="
                 position: absolute;
                 top: 0;
@@ -1690,10 +1751,11 @@
                 width: 100%;
                 height: 100%;
                 z-index: 0;
-                background-image: url('images/about-texture.jpg');
+                background-image: url('images/about-texture.webp');
                 background-size: cover;
                 background-position: center;
                 opacity: 0.15;
+                will-change: auto;
             "></div>
             
             <div class="container">
@@ -1715,7 +1777,10 @@
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" onerror="this.innerHTML='JC'">
+                            <picture>
+                                <source srcset="asset103-optimized.webp" type="image/webp">
+                                <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" onerror="this.innerHTML='JC'">
+                            </picture>
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon, RP</h3>
@@ -2190,33 +2255,66 @@
         </div>
     </footer>
     
+    <!-- Deferred JavaScript for Better Performance -->
     <script>
-        // Performance optimizations
-        if ('loading' in HTMLImageElement.prototype) {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.src = img.src;
-            });
-        } else {
-            // Fallback for browsers that don't support lazy loading
-            const script = document.createElement('script');
-            script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
-            document.body.appendChild(script);
-        }
+        // Critical mobile performance optimizations
+        (function() {
+            'use strict';
+            
+            // Lazy loading polyfill with improved performance
+            if ('loading' in HTMLImageElement.prototype) {
+                // Native lazy loading supported
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                lazyImages.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                });
+            } else {
+                // Intersection Observer fallback with throttling
+                let isPolyfillLoaded = false;
+                const loadPolyfill = () => {
+                    if (!isPolyfillLoaded) {
+                        const script = document.createElement('script');
+                        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+                        script.async = true;
+                        document.head.appendChild(script);
+                        isPolyfillLoaded = true;
+                    }
+                };
+                
+                // Load polyfill on user interaction
+                ['touchstart', 'scroll', 'mouseover'].forEach(event => {
+                    document.addEventListener(event, loadPolyfill, { once: true, passive: true });
+                });
+            }
+        })();
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // Optimized smooth scrolling with performance check
+        const initSmoothScroll = () => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, { passive: false });
             });
-        });
+        };
+        
+        // Initialize after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSmoothScroll);
+        } else {
+            initSmoothScroll();
+        }
         
         // Form handling with proper submission and feedback
         document.querySelector('form').addEventListener('submit', function(e) {
@@ -2296,5 +2394,8 @@
             });
         }
     </script>
+    
+    <!-- Mobile Performance Lazy Loading -->
+    <script src="performance-lazy-loading.js" defer></script>
 </body>
 </html>
