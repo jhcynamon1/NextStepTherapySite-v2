@@ -39,41 +39,121 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="images/asset104-180.png">
     
-    <!-- Enhanced JSON-LD Structured Data -->
+    <!-- Comprehensive Schema Markup for Maximum SEO Impact -->
+    
+    <!-- 1. Person Schema - Jesse Cynamon (Builds E-E-A-T) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Person", "MedicalBusiness", "Organization"],
-      "name": "Next Step Therapy",
-      "alternateName": "Jesse Cynamon, RP",
-      "founder": {
-        "@type": "Person",
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "CRPO #10979"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario",
+        "url": "https://crpo.ca"
       },
-      "description": "Evidence-based therapy in Ontario using ACT approach. Anxiety, depression, men's mental health & workplace stress. CRPO registered. Virtual sessions.",
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Anxiety Disorders",
+        "Depression Treatment",
+        "Men's Mental Health",
+        "Workplace Stress Management",
+        "Virtual Therapy"
+      ],
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Ontario",
+          "addressCountry": "CA"
+        }
+      },
+      "worksFor": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      }
+    }
+    </script>
+
+    <!-- 2. HealthBusiness Schema - Next Step Therapy Practice -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://nextsteptherapy.ca/#organization",
+      "name": "Next Step Therapy",
+      "alternateName": "Next Step Therapy Ontario",
+      "description": "Evidence-based therapy practice in Ontario using Acceptance and Commitment Therapy (ACT) approach. Specializing in anxiety, depression, men's mental health, and workplace stress. CRPO registered therapist offering virtual sessions throughout Ontario.",
       "url": "https://nextsteptherapy.ca",
-      "logo": "https://nextsteptherapy.ca/images/asset104.png",
-      "telephone": "+14163062157",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nextsteptherapy.ca/images/asset104.png"
+      },
+      "image": "https://nextsteptherapy.ca/images/asset104.png",
+      "telephone": "(416) 306-2157",
       "email": "jesse@nextsteptherapy.ca",
+      "founder": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "employee": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "Ontario",
-        "addressCountry": "CA"
+        "addressCountry": "Canada"
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario"
-      },
-      "serviceType": ["Anxiety Therapy", "Depression Therapy", "Men's Mental Health", "Workplace Stress Therapy", "Life Transitions Counseling", "Relationship Therapy"],
-      "medicalSpecialty": ["Acceptance and Commitment Therapy", "Anxiety Disorders", "Depression Treatment", "Stress Management"],
-      "memberOf": {
-        "@type": "Organization",
-        "name": "College of Registered Psychotherapists of Ontario"
-      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Ontario",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      ],
+      "medicalSpecialty": [
+        "Acceptance and Commitment Therapy",
+        "Anxiety Disorders Treatment",
+        "Depression Therapy",
+        "Men's Mental Health",
+        "Workplace Stress Management",
+        "Virtual Psychotherapy"
+      ],
+      "serviceType": [
+        "Individual Psychotherapy",
+        "Virtual Therapy Sessions",
+        "Mental Health Counseling",
+        "Anxiety Therapy",
+        "Depression Treatment",
+        "Stress Management"
+      ],
       "priceRange": "$175",
-      "paymentAccepted": ["Insurance", "Credit Card", "E-transfer"],
+      "paymentAccepted": [
+        "Insurance",
+        "Credit Card", 
+        "E-transfer"
+      ],
+      "currenciesAccepted": "CAD",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Therapy Services",
@@ -81,22 +161,105 @@
           {
             "@type": "Offer",
             "itemOffered": {
-              "@type": "Service",
+              "@type": "MedicalTherapy",
               "name": "Individual Therapy Session",
-              "description": "50-minute virtual or in-person therapy session"
+              "description": "50-minute evidence-based therapy session using ACT approach",
+              "provider": {
+                "@id": "https://nextsteptherapy.ca/#jessecynamon"
+              }
             },
             "price": "175",
-            "priceCurrency": "CAD"
+            "priceCurrency": "CAD",
+            "availability": "InStock",
+            "validFrom": "2024-01-01"
           }
         ]
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+14163062157",
-        "contactType": "Customer Service",
-        "availableLanguage": "English",
-        "areaServed": "Ontario"
-      }
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "(416) 306-2157",
+          "contactType": "Appointments",
+          "availableLanguage": "English",
+          "areaServed": "Ontario"
+        }
+      ]
+    }
+    </script>
+
+    <!-- 3. WebSite Schema with Search Action -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://nextsteptherapy.ca/#website",
+      "name": "Next Step Therapy Ontario",
+      "alternateName": "Next Step Therapy",
+      "url": "https://nextsteptherapy.ca",
+      "description": "Professional therapy services in Ontario specializing in anxiety, depression, and workplace stress using evidence-based ACT approach.",
+      "publisher": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- 4. FAQPage Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://nextsteptherapy.ca/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Registered Psychotherapist in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Registered Psychotherapist (RP) in Ontario is a mental health professional regulated by the College of Registered Psychotherapists of Ontario (CRPO). RPs have completed specific education and training requirements and are authorized to provide psychotherapy services. Jesse Cynamon holds CRPO registration #10979."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "What is Acceptance and Commitment Therapy (ACT)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acceptance and Commitment Therapy (ACT) is an evidence-based approach that helps people develop psychological flexibility. Instead of trying to eliminate difficult thoughts and feelings, ACT teaches you to change your relationship with them while taking action aligned with your values. It's particularly effective for anxiety, depression, and stress management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer virtual therapy sessions in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Yes, virtual therapy sessions are available throughout Ontario via secure video platform. Virtual therapy has been shown to be as effective as in-person sessions for most concerns. Sessions are 50 minutes long and can be scheduled for evenings and weekends to accommodate your schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What mental health concerns do you specialize in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Specialization areas include anxiety disorders, depression, men's mental health, workplace stress and burnout, life transitions, and relationship communication. The approach uses evidence-based methods including ACT and mindfulness techniques tailored to each person's specific situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does therapy cost in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Individual therapy sessions are $175 for 50 minutes. Many extended health insurance plans cover psychotherapy with a Registered Psychotherapist. Payment options include insurance direct billing, credit card, and e-transfer."
+          }
+        }
+      ]
     }
     </script>
     
