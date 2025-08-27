@@ -629,8 +629,9 @@
         
         .virtual-session-image img {
             width: 100%;
-            height: 180px;
+            height: 280px;
             object-fit: cover;
+            object-position: center center;
         }
         
         /* Trust & Credentials Section */
@@ -1162,9 +1163,41 @@
     <!-- Main Content -->
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" style="position: relative; min-height: 600px;">
+            <!-- Background Image Container -->
+            <div class="hero-background" style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                overflow: hidden;
+            ">
+                <img src="images/hero-background.jpg" alt="" style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.3;
+                " loading="lazy">
+            </div>
+            
+            <!-- Subtle About Texture Background -->
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background-image: url('images/about-texture.jpg');
+                background-size: cover;
+                background-position: center;
+                opacity: 0.15;
+            "></div>
+            
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content" style="position: relative; z-index: 1;">
                     <div class="hero-text fade-in-up">
                         <h1>You Don't Have to Navigate This Alone</h1>
                         <p class="lead-text">Professional virtual therapy for anxiety, stress, and life's challenging moments. Evidence-based support from a registered psychotherapist who gets it.</p>
@@ -1243,36 +1276,108 @@
                 
                 <div class="specializations-grid">
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-anxiety.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Anxiety & Stress Management</h3>
                         <p class="specialization-desc">When your mind won't stop racing at 3am. Practical tools for panic attacks and overwhelm. Finally understand why you worry so much.</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
                     </div>
                     
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-mens-health.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Men's Mental Health</h3>
                         <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
                     </div>
                     
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-workplace.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Workplace Stress & Burnout</h3>
                         <p class="specialization-desc">When Sunday nights fill you with dread. Beyond "just take a vacation" advice. Finding sustainability without quitting everything.</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
                     </div>
                     
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-transitions.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Life Transitions & Change</h3>
                         <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
                     </div>
                     
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-depression.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Depression & Mood Support</h3>
                         <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
                     </div>
                     
                     <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon" style="
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto 16px;
+                        ">
+                            <img src="images/services/icon-relationships.jpg" alt="" style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            " loading="lazy">
+                        </div>
                         <h3 class="specialization-title">Relationship & Communication</h3>
                         <p class="specialization-desc">When the same arguments keep happening. Understanding your patterns in relationships. Actually being heard (and hearing others).</p>
                         <a href="https://nextsteptherapy.janeapp.com/#staff_member/1" class="specialization-link">Learn more →</a>
@@ -1290,7 +1395,7 @@
                     <p class="lead-text">A straightforward process that respects your time and focuses on real progress.</p>
                     
                     <div class="process-image">
-                        <img src="images/asset22.jpg" alt="Professional consultation and therapy discussion">
+                        <img src="images/process-background.jpg" alt="Professional consultation and therapy discussion">
                     </div>
                 </div>
                 
@@ -1323,7 +1428,15 @@
         </section>
         
         <!-- Why Choose Section -->
-        <section class="trust-section">
+        <section class="trust-section" style="
+            background-image: linear-gradient(
+                rgba(255, 255, 255, 0.95),
+                rgba(255, 255, 255, 0.95)
+            ), url('images/trust-background.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+        ">
             <div class="container">
                 <div class="section-header">
                     <h2>Why Clients Choose Next Step</h2>
@@ -1417,7 +1530,7 @@
                         </ul>
                         
                         <div class="virtual-session-image">
-                            <img src="images/asset26.jpg" alt="Virtual therapy session setup">
+                            <img src="images/contact-background.jpg" alt="Virtual therapy session setup">
                         </div>
                         
                         <div class="investment-highlight">
