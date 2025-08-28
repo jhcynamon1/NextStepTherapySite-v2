@@ -17,6 +17,24 @@ Each template follows the proven conversion-focused structure identified in the 
     <meta name="description" content="Evidence-based [specialty] therapy in [location]. Confidential online sessions with registered therapist. Book free consultation today.">
 </head>
 <body>
+    <!-- CORRECT Header Structure - MUST USE THIS FORMAT -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <!-- Understanding Section -->
     <!-- How Therapy Helps -->
