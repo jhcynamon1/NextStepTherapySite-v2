@@ -198,7 +198,6 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
-            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -229,14 +228,12 @@
         }
         
         .header-content {
-            display: flex;
+            height: 42px;
             justify-content: space-between;
-            align-items: center;
         }
         
         .logo-section {
-            display: flex;
-            align-items: center;
+            height: 42px;
             gap: var(--space-sm);
         }
         
@@ -251,8 +248,7 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            text-decoration: none;
-        }
+            letter-spacing: -0.01em;            font-style: italic;        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
@@ -264,15 +260,13 @@
         }
         
         .nav {
-            display: flex;
+            height: 42px;
             gap: var(--space-lg);
             list-style: none;
-            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
-            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -281,16 +275,13 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            background-color: rgba(74, 107, 122, 0.04);
+            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
+            height: 42px;
             color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
+            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -307,25 +298,24 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
-            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 600;
+            font-weight: 400;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: var(--space-md);
         }
         
@@ -337,7 +327,6 @@
         
         .lead-text {
             font-size: 1.25rem;
-            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -373,12 +362,10 @@
         /* Buttons */
         .btn {
             display: inline-flex;
-            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
-            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -401,7 +388,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            border: 1.5px solid var(--primary-soft-blue);
+            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -425,7 +412,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            margin-bottom: var(--space-md);
+            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -435,7 +422,7 @@
         }
         
         .feature-list li {
-            display: flex;
+            height: 42px;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -447,7 +434,7 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 600;
+            font-weight: 400;
         }
         
         /* FAQ Section */
@@ -460,7 +447,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            margin-bottom: var(--space-sm);
+            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
@@ -473,17 +460,16 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
-            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 600;
+            font-weight: 400;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            margin-bottom: var(--space-md);
-            font-weight: 600;
+            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            font-weight: 400;
         }
         
         .contact-highlight p {
@@ -495,9 +481,8 @@
         
         /* CTA Buttons */
         .hero-cta {
-            display: flex;
+            height: 42px;
             flex-direction: column;
-            align-items: center;
             gap: var(--space-md);
         }
         
@@ -506,8 +491,7 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -521,7 +505,7 @@
         }
         
         .secondary-ctas {
-            display: flex;
+            height: 42px;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -530,7 +514,6 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
-            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -540,7 +523,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            border: 1.5px solid transparent;
+            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -552,7 +535,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            border: 1.5px solid var(--primary-soft-blue);
+            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -581,13 +564,11 @@
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 0.9375rem;
             box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
             transition: all 0.3s ease;
             min-height: 48px;
-            align-items: center;
             gap: 0.5rem;
         }
         
@@ -599,7 +580,7 @@
         
         @media (max-width: 768px) {
             .floating-cta {
-                display: flex;
+                height: 42px;
                 bottom: 15px;
                 right: 15px;
                 padding: 0.875rem 1.25rem;
@@ -685,7 +666,7 @@
                     <h1>Panic Attacks When Driving Ontario</h1>
                     <p class="lead-text">Whether it's the 401 at rush hour, merging on the QEW, or even quiet country roads - driving panic can make every trip feel like a threat. You're not alone, and you can overcome this.</p>
                     
-                    <div style="display: flex; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
                 </div>
             </div>
         </section>
@@ -714,8 +695,7 @@
                     
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">You can reclaim your confidence on the road.</p>
-                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
                             <a href="tel:+14163062157" class="primary-cta">Call or Text Now</a>
                             <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
                         </div>
@@ -798,8 +778,7 @@
                     
                     <!-- CTA after explaining benefits -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to overcome driving panic?</p>
-                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
                             <a href="tel:+14163062157" class="primary-cta">Start Your Journey</a>
                             <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
                         </div>
@@ -877,8 +856,7 @@
                     
                     <!-- Mid-section CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Virtual therapy - no driving required to get help.</p>
-                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
                             <a href="tel:+14163062157" class="primary-cta">Call or Text (416) 306-2157</a>
                             <a href="index.html#contact" class="secondary-cta email-cta">Get Help Today</a>
                         </div>

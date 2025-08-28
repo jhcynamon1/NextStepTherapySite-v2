@@ -192,7 +192,6 @@
         body {
             font-family: var(--font-body);
             line-height: 1.6;
-            color: var(--text-primary);
             background-color: var(--white);
             overflow-x: hidden;
         }
@@ -213,41 +212,33 @@
         }
 
         .header-content {
-            display: flex;
-            align-items: center;
+            height: 42px;
             justify-content: space-between;
             padding: var(--space-sm) 0;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            text-decoration: none;
-            color: var(--text-primary);
+            height: 42px;
         }
 
         .logo img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: auto;
         }
 
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 400;
             color: var(--primary-blue);
         }
 
         .nav {
-            display: flex;
+            height: 42px;
             gap: var(--space-md);
         }
 
         .nav a {
             color: var(--text-secondary);
-            text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
@@ -267,7 +258,6 @@
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 400;
-            color: var(--text-primary);
             margin-bottom: var(--space-md);
             line-height: 1.2;
         }
@@ -282,7 +272,7 @@
         }
 
         .cta-container {
-            display: flex;
+            height: 42px;
             gap: var(--space-sm);
             justify-content: center;
             flex-wrap: wrap;
@@ -290,12 +280,9 @@
 
         .primary-cta, .secondary-cta {
             display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
             padding: 1rem 2rem;
             border-radius: var(--radius-md);
-            font-weight: 600;
-            text-decoration: none;
+            font-weight: 400;
             transition: all 0.3s ease;
             font-size: 1.1rem;
         }
@@ -342,7 +329,6 @@
         .content-section h3 {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            color: var(--text-primary);
             margin-bottom: var(--space-sm);
         }
 
@@ -409,7 +395,6 @@
 
         .resource-links a {
             color: var(--primary-blue);
-            text-decoration: none;
             padding: var(--space-sm);
             background: var(--white);
             border-radius: var(--radius-sm);
@@ -447,7 +432,6 @@
             
             .cta-container {
                 flex-direction: column;
-                align-items: center;
             }
             
             .primary-cta, .secondary-cta {
@@ -469,7 +453,7 @@
                 </a>
                 <nav class="nav">
                     <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
+                    
                     <a href="index.html#contact">Contact</a>
                 </nav>
             </div>

@@ -261,7 +261,6 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
-            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -292,38 +291,30 @@
         }
         
         .header-content {
-            display: flex;
+            height: 42px;
             justify-content: space-between;
-            align-items: center;
         }
         
         .logo-section {
-            display: flex;
-            align-items: center;
+            height: 42px;
             gap: var(--space-sm);
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            text-decoration: none;
-            color: var(--text-primary);
+            height: 42px;
         }
         .logo img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: auto;
         }
         
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 400;
             
             color: var(--primary-soft-blue);
-            text-decoration: none;
-        }
+            letter-spacing: -0.01em;
+            font-style: italic;        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
@@ -345,8 +336,7 @@
         .hero-content h1 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 600;
-            color: var(--text-primary);
+            font-weight: 400;
             margin-bottom: var(--space-lg);
             line-height: 1.2;
         }
@@ -358,7 +348,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 600;
+            font-weight: 400;
         }
         
         /* Button Styles */
@@ -366,8 +356,7 @@
             display: inline-block;
             padding: 1rem 2rem;
             border-radius: var(--radius-md);
-            text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 1rem;
             transition: all 0.3s ease;
             border: none;
@@ -389,8 +378,7 @@
             color: white;
             padding: 1rem 2rem;
             border-radius: var(--radius-md);
-            text-decoration: none;
-            font-weight: 600;
+            font-weight: 400;
             transition: all 0.3s ease;
         }
         
@@ -415,23 +403,24 @@
         .content-card h2 {
             font-family: var(--font-display);
             font-size: 2rem;
-            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 600;
+            font-weight: 400;
         }
         
         .content-card h3 {
             font-family: var(--font-display);
             font-size: 1.5rem;
             color: var(--primary-soft-blue);
-            margin: var(--space-xl) 0 var(--space-md) 0;
-            font-weight: 600;
+            letter-spacing: -0.01em;
+            font-style: italic;            margin: var(--space-xl) 0 var(--space-md) 0;
+            font-weight: 400;
         }
         
         .content-card h4 {
             color: var(--primary-soft-blue);
-            margin: var(--space-lg) 0 var(--space-sm) 0;
-            font-weight: 600;
+            letter-spacing: -0.01em;
+            font-style: italic;            margin: var(--space-lg) 0 var(--space-sm) 0;
+            font-weight: 400;
         }
         
         .content-card p {
@@ -457,11 +446,11 @@
             position: absolute;
             left: 0;
             color: var(--primary-soft-blue);
-            font-weight: bold;
+            letter-spacing: -0.01em;
+            font-style: italic;            font-weight: bold;
         }
         
         .feature-list strong {
-            color: var(--text-primary);
         }
         
         /* Contact Section */
@@ -498,13 +487,14 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo">
-                    <span class="logo-text">Next Step Therapy</span>
-                </a>
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
                 <nav class="nav">
                     <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
                     <a href="index.html#contact">Contact</a>
                 </nav>
             </div>
@@ -519,7 +509,7 @@
                     <h1>Online Mental Health Support Ontario | Professional Virtual Care</h1>
                     <p class="lead-text">Professional online mental health support accessible across Ontario. Evidence-based therapy for anxiety, depression, stress, and life challenges.</p>
                     
-                    <div style="display: flex; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
                 </div>
             </div>
         </section>
@@ -578,8 +568,7 @@
                     </ul>
                     
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Professional support accessible throughout Ontario. Evening appointments available.</p>
-                        <div style="display: flex; justify-content: center;"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                        <div style="height: 42px; justify-content: center;"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
                     </div>
                 </div>
             </div>
