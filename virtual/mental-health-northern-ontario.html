@@ -22,34 +22,226 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/virtual/mental-health-northern-ontario">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Mental Health Northern Ontario",
-      "description": "Professional virtual mental health services accessible throughout Northern Ontario communities",
-      "url": "https://nextsteptherapy.ca/virtual/mental-health-northern-ontario",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": ["Northern Ontario", "Sudbury", "Timmins", "North Bay", "Sault Ste. Marie"]
-      },
-      "medicalSpecialty": ["Northern Ontario Mental Health", "Remote Community Therapy", "Virtual Mental Health"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Northern Ontario Mental Health Services",
-        "description": "Virtual therapy services specifically accessible to Northern Ontario communities",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "availability": "InStock"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Virtual Therapy",
+        "Northern Ontario Mental Health", 
+        "Remote Community Therapy",
+        "Seasonal Mental Health",
+        "Geographic Isolation Support"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Northern Ontario Mental Health -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual/mental-health-northern-ontario#service",
+      "name": "Mental Health Northern Ontario",
+      "alternateName": "Northern Ontario Virtual Therapy",
+      "description": "Professional virtual therapy services accessible throughout Northern Ontario communities. Specialized understanding of geographic challenges, seasonal mental health, and remote access barriers.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Virtual Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Northern Ontario Mental Health Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virtual Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session via secure video platform"
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Sudbury",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Timmins",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "North Bay",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Sault Ste. Marie",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Article Schema for Northern Ontario Mental Health Content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/virtual/mental-health-northern-ontario",
+      "headline": "Mental Health Northern Ontario - Professional Virtual Therapy Services",
+      "description": "Professional mental health services for Northern Ontario residents with specialized understanding of geographic challenges",
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/virtual/mental-health-northern-ontario"
+      },
+      "about": [
+        "Northern Ontario Mental Health",
+        "Remote Community Therapy",
+        "Virtual Mental Health Services"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I access mental health services from remote Northern Ontario communities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, virtual therapy is accessible from any Northern Ontario community with internet connection. This includes remote areas where in-person mental health services are limited or unavailable, providing professional support regardless of geographic isolation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does virtual therapy address seasonal mental health challenges in Northern Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual therapy provides consistent support during long Northern winters, addressing seasonal affective disorder, cabin fever, and isolation. Sessions continue regardless of weather conditions, storms, or travel barriers common in Northern Ontario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the therapist understand the unique challenges of Northern Ontario life?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, specialized understanding includes resource industry stress, boom/bust cycles, shift work challenges, geographic isolation, seasonal mental health impacts, and the economic pressures unique to Northern Ontario communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What internet connection do I need for virtual therapy in Northern Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basic broadband or cellular data connection works for virtual therapy sessions. Most Northern Ontario internet connections are sufficient for secure video therapy, and technical support is provided to ensure smooth sessions."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virtual Therapy",
+          "item": "https://nextsteptherapy.ca/virtual"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mental Health Northern Ontario",
+          "item": "https://nextsteptherapy.ca/virtual/mental-health-northern-ontario"
+        }
+      ]
     }
     </script>
     

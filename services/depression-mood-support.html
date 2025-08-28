@@ -22,34 +22,202 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/depression-mood-support">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
+        }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Depression Therapy",
+        "Mood Disorders", 
+        "Men's Mental Health",
+        "Workplace Stress",
+        "Anxiety Therapy"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Depression Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/depression-mood-support#service",
+      "name": "Depression and Mood Support Therapy",
+      "alternateName": "Depression Counseling",
+      "description": "Evidence-based depression therapy using Acceptance and Commitment Therapy (ACT) approach. Virtual sessions available throughout Ontario for depression, low mood, and emotional numbness.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Depression Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Depression Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session using ACT approach"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/depression-mood-support",
       "name": "Depression and Mood Support Therapy",
       "description": "Evidence-based therapy for depression, low mood, and emotional numbness in Ontario",
       "url": "https://nextsteptherapy.ca/services/depression-mood-support",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/depression-mood-support#service"
       },
-      "medicalSpecialty": ["Depression", "Mood Disorders", "Acceptance and Commitment Therapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Depression Therapy",
-        "description": "Virtual therapy for depression and mood support",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
-        }
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Depression Therapy",
+        "Mood Disorders",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
       }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if I have depression or if I'm just going through a tough time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depression involves persistent changes in mood, energy, sleep, appetite, and your ability to experience enjoyment that last for weeks or months. If these feelings are interfering with your daily life, professional support can help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will therapy help if medication hasn't worked for my depression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, therapy can be effective even when medication hasn't provided complete relief. ACT therapy focuses on changing your relationship with difficult emotions and building meaningful activities, which complements medical treatment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does depression therapy take to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many clients notice gradual improvements in their mood and energy within the first few sessions. Significant changes typically develop over 8-16 sessions, though everyone's healing process is different."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes ACT different from other therapy approaches for depression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACT focuses on acceptance of difficult emotions while building a meaningful life aligned with your values. Rather than just reducing symptoms, ACT helps you develop psychological flexibility to handle depression's challenges."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nextsteptherapy.ca/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Depression and Mood Support",
+          "item": "https://nextsteptherapy.ca/services/depression-mood-support"
+        }
+      ]
     }
     </script>
     

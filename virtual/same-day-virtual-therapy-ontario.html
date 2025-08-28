@@ -22,34 +22,200 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Same Day Virtual Therapy Ontario",
-      "description": "Same-day virtual therapy appointments for urgent mental health support in Ontario",
-      "url": "https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "medicalSpecialty": ["Crisis Therapy", "Same Day Mental Health", "Urgent Virtual Therapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Same Day Virtual Therapy",
-        "description": "Urgent virtual therapy sessions available the same day for crisis mental health support",
-        "serviceType": "Emergency Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "availability": "InStock"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Virtual Therapy",
+        "Crisis Support", 
+        "Emergency Appointments",
+        "Urgent Mental Health Care",
+        "Same-Day Therapy"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Same-Day Virtual Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario#service",
+      "name": "Same Day Virtual Therapy Ontario",
+      "alternateName": "Urgent Virtual Therapy",
+      "description": "Same-day virtual therapy appointments available across Ontario for urgent mental health support, crisis intervention, and emergency therapy needs.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Same-Day Virtual Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Same-Day Virtual Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Same-Day Virtual Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute crisis therapy session available same day via secure video platform"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Same-Day Virtual Therapy",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Article Schema for Same-Day Virtual Therapy Content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario",
+      "headline": "Same Day Virtual Therapy Ontario - Urgent Mental Health Support",
+      "description": "Same-day virtual therapy appointments available across Ontario when you cannot wait for mental health support",
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario"
+      },
+      "about": [
+        "Same-Day Virtual Therapy",
+        "Crisis Mental Health Support",
+        "Emergency Therapy Appointments"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When should I seek same-day virtual therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same-day virtual therapy is appropriate for urgent situations like panic attacks, work crises, relationship emergencies, overwhelming thoughts, or major life changes that need immediate professional support but are not life-threatening emergencies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I get a same-day virtual therapy appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Response times are typically 2-4 hours during business days for same-day appointment requests. Evening messages receive response by next morning, and weekend emergencies get response within 4-6 hours when possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens in a same-day virtual therapy session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same-day sessions focus on immediate stabilization, crisis assessment, safety planning, coping strategies specific to your situation, and developing a follow-up plan. The goal is to provide professional support exactly when you need it most."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is same-day virtual therapy available across all of Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, same-day virtual therapy appointments are available to Ontario residents regardless of location. Virtual sessions eliminate travel barriers and provide immediate access to professional support from anywhere with internet connection."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virtual Therapy",
+          "item": "https://nextsteptherapy.ca/virtual"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Same Day Virtual Therapy Ontario",
+          "item": "https://nextsteptherapy.ca/virtual/same-day-virtual-therapy-ontario"
+        }
+      ]
     }
     </script>
     

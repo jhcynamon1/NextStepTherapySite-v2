@@ -22,34 +22,194 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/virtual/virtual-therapy-ontario">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Virtual Therapy Ontario",
-      "description": "Professional virtual therapy services across Ontario with evening appointments available",
-      "url": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "medicalSpecialty": ["Virtual Therapy", "Online Mental Health", "Remote Psychotherapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Therapy Sessions",
-        "description": "Professional online therapy sessions with same effectiveness as in-person",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "availability": "InStock"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Virtual Therapy",
+        "Online Mental Health", 
+        "Depression Therapy",
+        "Anxiety Therapy",
+        "Workplace Stress"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Virtual Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario#service",
+      "name": "Virtual Therapy Ontario",
+      "alternateName": "Online Therapy Ontario",
+      "description": "Professional virtual therapy services across Ontario with evening appointments available. Evidence-based ACT approach delivered through secure online platform with same effectiveness as in-person sessions.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Virtual Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Virtual Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virtual Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session via secure video platform"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Article Schema for Virtual Therapy Content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario",
+      "headline": "Virtual Therapy Ontario - Professional Online Mental Health Support",
+      "description": "Professional virtual therapy services across Ontario with evening appointments available",
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario"
+      },
+      "about": [
+        "Virtual Therapy",
+        "Online Mental Health",
+        "Remote Psychotherapy"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy as effective as in-person therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research shows that virtual therapy is just as effective as in-person therapy for most mental health concerns, including anxiety, depression, and stress management. Many clients prefer the convenience and privacy of virtual sessions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technology do I need for virtual therapy sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need a device with internet connection, camera, and microphone - like a computer, tablet, or smartphone. Sessions are conducted through secure, HIPAA-compliant video platforms that protect your privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I access virtual therapy from anywhere in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as a CRPO registered therapist, Jesse Cynamon can provide virtual therapy services to clients anywhere in Ontario. This includes rural and remote areas where in-person mental health services may be limited."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are virtual therapy sessions confidential and secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Virtual sessions use encrypted, secure video platforms that meet healthcare privacy standards. Your sessions are just as private and confidential as in-person therapy, with the same professional ethical standards applying."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virtual Therapy",
+          "item": "https://nextsteptherapy.ca/virtual/virtual-therapy-ontario"
+        }
+      ]
     }
     </script>
     

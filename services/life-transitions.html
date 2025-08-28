@@ -24,33 +24,202 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/life-transitions">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
+        }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Life Transitions",
+        "Grief Support", 
+        "Depression Therapy",
+        "Anxiety Therapy",
+        "Change Management"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Life Transitions Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/life-transitions#service",
+      "name": "Life Transitions and Change Therapy",
+      "alternateName": "Life Change Counseling",
+      "description": "Support through divorce, loss, career changes, and life's unexpected turns using evidence-based ACT approach. Virtual sessions available throughout Ontario for navigating major life changes.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Life Transitions Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Life Transitions Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session for life transitions and major changes"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/life-transitions",
       "name": "Life Transitions and Change Therapy",
       "description": "Support through divorce, loss, career changes, and life's unexpected turns using evidence-based approaches",
       "url": "https://nextsteptherapy.ca/services/life-transitions",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/life-transitions#service"
       },
-      "medicalSpecialty": ["Life Transitions", "Grief Support", "Change Management"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Life Transitions Therapy",
-        "description": "Virtual therapy for life transitions and major changes",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
-        }
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Life Transitions",
+        "Change Management",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
       }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When should someone consider therapy during a life transition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Therapy can be helpful during any major life change - divorce, job loss, moving, loss of a loved one, career changes, or empty nest syndrome. Even positive changes like promotions or marriage can benefit from therapeutic support to navigate successfully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does therapy help with unexpected life changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Therapy provides tools to process difficult emotions, make sense of the change, develop coping strategies, and create a path forward. ACT therapy specifically helps you adapt flexibly to change while staying connected to your values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it normal to feel anxious or depressed during major life transitions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, anxiety and sadness are normal responses to significant changes, even positive ones. Life transitions often involve loss of familiar routines and uncertainty about the future, which can trigger these feelings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to adjust to a major life change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adjustment periods vary greatly depending on the change and individual factors. Some people adapt within a few months, while others may take a year or more. Therapy can help shorten this adjustment period by providing effective coping tools."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nextsteptherapy.ca/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Life Transitions",
+          "item": "https://nextsteptherapy.ca/services/life-transitions"
+        }
+      ]
     }
     </script>
     

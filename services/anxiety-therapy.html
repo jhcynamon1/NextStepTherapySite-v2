@@ -24,32 +24,131 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/anxiety-therapy">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Anxiety Therapy and Stress Management",
-      "description": "Evidence-based anxiety therapy services in Ontario using Acceptance and Commitment Therapy",
-      "url": "https://nextsteptherapy.ca/services/anxiety-therapy",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "medicalSpecialty": ["Anxiety Disorders", "Stress Management", "Acceptance and Commitment Therapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Anxiety Therapy",
-        "description": "Virtual anxiety therapy using ACT approach",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Anxiety Therapy",
+        "Depression Therapy", 
+        "Men's Mental Health",
+        "Workplace Stress",
+        "Performance Anxiety"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Anxiety Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/anxiety-therapy#service",
+      "name": "Anxiety Therapy",
+      "alternateName": "Anxiety Counseling",
+      "description": "Evidence-based anxiety therapy using Acceptance and Commitment Therapy (ACT) approach. Virtual sessions available throughout Ontario for racing thoughts, panic, and overwhelming worry.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Anxiety Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Anxiety Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session using ACT approach"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/anxiety-therapy",
+      "name": "Anxiety Therapy Ontario | When Your Mind Won't Stop Racing",
+      "description": "Stop struggling with anxiety in Ontario. Get professional virtual therapy for racing thoughts & overwhelming worry. CRPO registered therapist. Free consultation available today.",
+      "url": "https://nextsteptherapy.ca/services/anxiety-therapy",
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/anxiety-therapy#service"
+      },
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Anxiety Therapy",
+        "Mental Health Treatment",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
       }
     }
     </script>

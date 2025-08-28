@@ -22,34 +22,200 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Online Mental Health Support Ontario",
-      "description": "Professional online mental health support and virtual therapy sessions throughout Ontario",
-      "url": "https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "medicalSpecialty": ["Online Mental Health", "Virtual Therapy", "Digital Mental Health Support"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Online Mental Health Support",
-        "description": "Virtual therapy sessions for anxiety, depression, stress and other mental health concerns",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "availability": "InStock"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Virtual Therapy",
+        "Online Mental Health Support", 
+        "Digital Mental Health",
+        "Virtual Effectiveness",
+        "Technology Integration"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Online Mental Health Support -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario#service",
+      "name": "Online Mental Health Support Ontario",
+      "alternateName": "Virtual Mental Health Services",
+      "description": "Comprehensive online mental health support including virtual therapy sessions, between-session check-ins, and personalized treatment plans accessible across Ontario.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Online Mental Health Support",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Online Mental Health Support Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virtual Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute online therapy session via secure video platform"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Online Mental Health Support",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Article Schema for Online Mental Health Support Content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario",
+      "headline": "Online Mental Health Support Ontario - Professional Virtual Care",
+      "description": "Comprehensive online mental health support accessible across Ontario with evidence-based approaches",
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario"
+      },
+      "about": [
+        "Online Mental Health Support",
+        "Virtual Mental Health Services",
+        "Digital Mental Health Care"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is online mental health support as effective as traditional in-person therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, research consistently shows that online mental health support produces equivalent therapeutic outcomes to in-person sessions. The key therapeutic factors - relationship, communication, and evidence-based interventions - are equally effective through secure video platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technology do I need for online mental health support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need a device with internet connection, camera, and microphone - such as a smartphone, tablet, or computer. Sessions use secure, encrypted video platforms that protect your privacy and require no special software downloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accessible is online mental health support across Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Online mental health support is accessible from anywhere in Ontario with internet connection. This includes rural areas, remote communities, and urban centers, providing professional therapy regardless of geographic location or transportation barriers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does comprehensive online mental health support include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comprehensive online support includes regular virtual therapy sessions, between-session check-ins via email, personalized treatment plans, progress tracking, and crisis support access when needed - all delivered through secure, confidential platforms."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virtual Therapy",
+          "item": "https://nextsteptherapy.ca/virtual"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Online Mental Health Support Ontario",
+          "item": "https://nextsteptherapy.ca/virtual/online-mental-health-support-ontario"
+        }
+      ]
     }
     </script>
     

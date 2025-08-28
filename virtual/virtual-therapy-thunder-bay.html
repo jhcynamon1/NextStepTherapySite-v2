@@ -22,34 +22,226 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Virtual Therapy Thunder Bay",
-      "description": "Professional virtual therapy services for Thunder Bay and Northwestern Ontario residents",
-      "url": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": ["Thunder Bay", "Northwestern Ontario", "Kenora", "Dryden", "Fort Frances"]
-      },
-      "medicalSpecialty": ["Thunder Bay Virtual Therapy", "Northwestern Ontario Mental Health", "Virtual Psychotherapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Therapy Thunder Bay",
-        "description": "Virtual therapy sessions accessible to Thunder Bay and Northwestern Ontario residents",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "availability": "InStock"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Virtual Therapy",
+        "Thunder Bay Mental Health", 
+        "Northwestern Ontario Services",
+        "University Student Support",
+        "Regional Mental Health"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Thunder Bay Virtual Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay#service",
+      "name": "Virtual Therapy Thunder Bay",
+      "alternateName": "Northwestern Ontario Virtual Therapy",
+      "description": "Professional virtual therapy services for Thunder Bay and Northwestern Ontario residents, including specialized support for university students, resource industry workers, and regional challenges.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Virtual Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Thunder Bay Virtual Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Virtual Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session via secure video platform"
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Thunder Bay",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Kenora",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Dryden",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Fort Frances",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+          }
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- Article Schema for Thunder Bay Virtual Therapy Content -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay",
+      "headline": "Virtual Therapy Thunder Bay - Professional Online Mental Health Support",
+      "description": "Professional virtual therapy services for Thunder Bay and Northwestern Ontario with understanding of regional challenges",
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay"
+      },
+      "about": [
+        "Thunder Bay Virtual Therapy",
+        "Northwestern Ontario Mental Health",
+        "Regional Virtual Therapy Services"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy available throughout Northwestern Ontario including Thunder Bay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, virtual therapy is available to all residents of Thunder Bay and Northwestern Ontario communities including Kenora, Dryden, Fort Frances, and surrounding areas. Sessions are accessible from anywhere with internet connection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the therapist understand the unique challenges of Thunder Bay and Northwestern Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, specialized understanding includes resource industry stress, shift work challenges, seasonal mental health impacts, university student pressures, and the economic and social dynamics unique to Thunder Bay and Northwestern Ontario communities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy suitable for university students in Thunder Bay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Virtual therapy is ideal for university students, offering flexible scheduling between classes, privacy from campus visibility concerns, and specialized support for academic stress, financial pressures, and social adjustment challenges common to student life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does virtual therapy work with Thunder Bay's weather and seasonal challenges?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual therapy provides consistent support regardless of Northwestern Ontario weather conditions, storms, or seasonal access challenges. Sessions continue during blizzards, ice storms, or other weather events that might prevent in-person appointments."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Virtual Therapy",
+          "item": "https://nextsteptherapy.ca/virtual"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Virtual Therapy Thunder Bay",
+          "item": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay"
+        }
+      ]
     }
     </script>
     

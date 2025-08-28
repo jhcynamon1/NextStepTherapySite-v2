@@ -22,35 +22,202 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/mens-mental-health">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
+        }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Men's Mental Health",
+        "Depression Therapy", 
+        "Anxiety Therapy",
+        "Workplace Stress",
+        "Performance Anxiety"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Men's Mental Health Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/mens-mental-health#service",
+      "name": "Men's Mental Health Therapy",
+      "alternateName": "Men's Counseling",
+      "description": "Mental health therapy specifically designed for men's unique emotional needs and challenges. Virtual sessions available throughout Ontario using evidence-based ACT approach.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Men's Mental Health Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Men's Mental Health Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session designed for men's mental health needs"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/mens-mental-health",
       "name": "Men's Mental Health Therapy",
       "description": "Virtual therapy services designed for men's mental health needs in Ontario",
       "url": "https://nextsteptherapy.ca/services/mens-mental-health",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "gender": "Male",
-        "areaServed": "Ontario, Canada"
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/mens-mental-health#service"
       },
-      "medicalSpecialty": ["Men's Mental Health", "Stress Management", "Depression Therapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Men's Mental Health Therapy",
-        "description": "Therapy designed for how men process emotions and challenges",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
-        }
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Men's Mental Health",
+        "Mental Health Therapy",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
       }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should men consider therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Men face unique societal pressures and often lack spaces to process emotions safely. Therapy provides practical tools for handling stress, improving relationships, and building emotional resilience without judgment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is men's mental health therapy different from regular therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Men's therapy recognizes that men often process emotions differently and may be more action-oriented. The approach focuses on practical strategies, goal-setting, and building skills while creating a comfortable environment for emotional expression."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What issues do men commonly bring to therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common concerns include work stress, relationship difficulties, anger management, depression, anxiety, life transitions, and feeling stuck or unfulfilled. Many men also seek support for performance pressure and identity questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will virtual therapy work for men who aren't comfortable talking about emotions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual therapy can actually be more comfortable for many men as it provides privacy and removes some barriers. The focus is on practical problem-solving and building skills, not just talking about feelings."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nextsteptherapy.ca/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Men's Mental Health",
+          "item": "https://nextsteptherapy.ca/services/mens-mental-health"
+        }
+      ]
     }
     </script>
     

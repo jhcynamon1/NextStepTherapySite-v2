@@ -22,34 +22,202 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/relationship-communication">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
+        }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Relationship Therapy",
+        "Communication Skills", 
+        "Depression Therapy",
+        "Anxiety Therapy",
+        "Workplace Stress"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Relationship Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/relationship-communication#service",
+      "name": "Relationship and Communication Therapy",
+      "alternateName": "Individual Relationship Counseling",
+      "description": "Individual therapy for relationship patterns, communication skills, and attachment issues. Virtual sessions available throughout Ontario using ACT approach to improve relationship satisfaction.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Relationship Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Relationship Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session for relationship and communication issues"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/relationship-communication",
       "name": "Relationship and Communication Therapy",
       "description": "Individual therapy for relationship patterns and communication skills in Ontario",
       "url": "https://nextsteptherapy.ca/services/relationship-communication",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/relationship-communication#service"
       },
-      "medicalSpecialty": ["Relationship Counseling", "Communication Skills", "Attachment Therapy"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Individual Therapy for Relationships",
-        "description": "Individual therapy focusing on relationship patterns and communication",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
-        }
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Relationship Therapy",
+        "Communication Skills",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
       }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is individual therapy effective for relationship problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Individual therapy can be very effective for relationship issues. You can work on your communication patterns, attachment style, boundaries, and relationship skills. Many relationship improvements come from individual growth and self-awareness."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my partner won't come to therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Individual therapy allows you to focus on your own patterns, responses, and growth. As you change how you show up in the relationship, it often creates positive shifts that benefit both partners, even without couples counseling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can therapy help with communication problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Therapy helps you understand your communication patterns, learn active listening skills, express needs clearly, and manage emotional reactions during difficult conversations. You'll practice new communication techniques in a safe environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with people who are considering ending their relationship?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, therapy provides a space to explore your feelings and options without pressure. Whether you're working to improve your relationship or considering ending it, therapy helps you make decisions aligned with your values and well-being."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nextsteptherapy.ca/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Relationship and Communication",
+          "item": "https://nextsteptherapy.ca/services/relationship-communication"
+        }
+      ]
     }
     </script>
     

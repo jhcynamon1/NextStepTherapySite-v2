@@ -22,34 +22,202 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/services/workplace-stress-burnout">
     
     <!-- Schema Markup -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Workplace Stress and Burnout Therapy",
-      "description": "Virtual therapy services for professional burnout and workplace stress in Ontario",
-      "url": "https://nextsteptherapy.ca/services/workplace-stress-burnout",
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca#jesse-cynamon",
-        "name": "Jesse Cynamon, RP",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "medicalSpecialty": ["Occupational Stress", "Burnout Prevention", "Work-Life Balance"],
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Workplace Stress Therapy",
-        "description": "Evidence-based therapy for professional burnout and work anxiety",
-        "serviceType": "Virtual Psychotherapy",
-        "offers": {
-          "@type": "Offer",
-          "price": "175",
-          "priceCurrency": "CAD",
-          "description": "50-minute therapy session"
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
         }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Workplace Stress",
+        "Burnout Prevention", 
+        "Performance Anxiety",
+        "Depression Therapy",
+        "Anxiety Therapy"
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Workplace Stress Therapy -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/services/workplace-stress-burnout#service",
+      "name": "Workplace Stress and Burnout Therapy",
+      "alternateName": "Workplace Stress Counseling",
+      "description": "Evidence-based therapy for workplace stress, burnout, and professional challenges. Virtual sessions available throughout Ontario using ACT approach for sustainable stress management.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "serviceType": "Mental Health Therapy",
+      "category": "Healthcare",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Workplace Stress Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual Workplace Stress Therapy Session"
+            },
+            "price": "175",
+            "priceCurrency": "CAD",
+            "description": "50-minute virtual therapy session for workplace stress and burnout"
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "State", 
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "availableLanguage": "English"
       }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/services/workplace-stress-burnout",
+      "name": "Workplace Stress and Burnout Therapy",
+      "description": "Professional support for work-related stress, burnout, and career challenges in Ontario",
+      "url": "https://nextsteptherapy.ca/services/workplace-stress-burnout",
+      "mainEntity": {
+        "@id": "https://nextsteptherapy.ca/services/workplace-stress-burnout#service"
+      },
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "about": [
+        "Workplace Stress",
+        "Burnout Prevention",
+        "Acceptance and Commitment Therapy"
+      ],
+      "inLanguage": "en-CA",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://nextsteptherapy.ca/#website"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if work stress has become a serious problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When work stress affects your sleep, relationships, physical health, or ability to enjoy life outside of work, it's time to seek support. Other signs include feeling overwhelmed most days, difficulty concentrating, or using substances to cope."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between stress and burnout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stress is typically short-term pressure that can be motivating, while burnout is chronic exhaustion, cynicism, and feeling ineffective. Burnout develops over time when stress isn't managed effectively and can significantly impact your well-being."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will therapy help if my workplace is truly toxic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While therapy can't change your workplace, it can help you develop strategies to protect your mental health, set boundaries, make decisions about your career, and build resilience while you navigate challenging situations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I do therapy sessions during work hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many clients schedule virtual sessions during lunch breaks or use vacation time. Virtual therapy provides flexibility and privacy that makes it easier to fit sessions into your work schedule when needed."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://nextsteptherapy.ca/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Workplace Stress and Burnout",
+          "item": "https://nextsteptherapy.ca/services/workplace-stress-burnout"
+        }
+      ]
     }
     </script>
     

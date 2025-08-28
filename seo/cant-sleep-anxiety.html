@@ -22,27 +22,154 @@
     <link rel="preload" as="image" href="../images/asset104.png">
     
     <!-- Enhanced JSON-LD Structured Data -->
+    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Article", "MedicalWebPage"],
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "10979"
+        }
+      ],
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "url": "https://nextsteptherapy.ca",
+      "worksFor": {
+        "@type": "MedicalBusiness",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Sleep Anxiety",
+        "Insomnia Treatment", 
+        "Depression Therapy",
+        "Anxiety Therapy",
+        "Sleep Disorders"
+      ]
+    }
+    </script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://nextsteptherapy.ca/seo/cant-sleep-anxiety.html",
       "headline": "Can't Sleep Because of Anxiety",
       "description": "Comprehensive guide to breaking the sleep-anxiety cycle with practical nighttime strategies and professional support options.",
       "author": {
-        "@type": "Person", 
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "hasCredential": "CRPO Registration #10979"
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Next Step Therapy",
-        "logo": "https://nextsteptherapy.ca/images/asset104.png"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextsteptherapy.ca/images/asset104.png"
+        }
       },
       "datePublished": "2025-08-27",
       "dateModified": "2025-08-27",
       "url": "https://nextsteptherapy.ca/seo/cant-sleep-anxiety.html",
-      "mainEntityOfPage": "https://nextsteptherapy.ca/seo/cant-sleep-anxiety.html"
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/seo/cant-sleep-anxiety.html"
+      },
+      "about": [
+        "Sleep Anxiety",
+        "Insomnia",
+        "Sleep Disorders"
+      ],
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- FAQ Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why can't I sleep when I'm anxious?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anxiety activates your body's fight-or-flight response, releasing stress hormones like cortisol and adrenaline. This keeps your mind racing and body alert, making it difficult to relax into sleep. The worry thoughts that fuel anxiety also keep your brain active when it should be winding down."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I break the sleep-anxiety cycle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Break the cycle by establishing a consistent bedtime routine, practicing relaxation techniques before bed, limiting screen time, and creating a calm sleep environment. If anxiety persists, professional therapy using approaches like ACT can help you develop better coping strategies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do when I can't fall asleep due to racing thoughts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Try the 4-7-8 breathing technique, progressive muscle relaxation, or mindfulness meditation. If your mind is still racing after 20 minutes, get up and do a quiet activity until sleepy. Avoid looking at the clock, which can increase anxiety about not sleeping."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I seek professional help for sleep anxiety?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consider professional help if sleep problems persist for more than a few weeks, significantly impact your daily functioning, or if you experience panic attacks at bedtime. A registered psychotherapist can help you develop effective strategies to manage both anxiety and sleep issues."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nextsteptherapy.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Can't Sleep Because of Anxiety",
+          "item": "https://nextsteptherapy.ca/seo/cant-sleep-anxiety.html"
+        }
+      ]
     }
     </script>
 
