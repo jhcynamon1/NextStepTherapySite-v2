@@ -298,17 +298,22 @@
         }
         
         .logo {
-            height: 42px;
-            width: auto;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            text-decoration: none;
+            color: var(--text-primary);
         }
-        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            font-weight: 400;
-            font-style: italic;
+            font-weight: 600;
             color: var(--primary-soft-blue);
-            text-decoration: none;
         }
         
         .credentials-badge {
