@@ -18,7 +18,7 @@
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="../images/asset104.png">
     
     <!-- Enhanced JSON-LD Structured Data -->
@@ -188,7 +188,7 @@
             --shadow-soft: 0 4px 20px rgba(74, 107, 122, 0.1);
             --shadow-medium: 0 8px 30px rgba(74, 107, 122, 0.15);
             --font-display: 'Playfair Display', serif;
-            --font-body: 'Source Sans 3', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 2rem;
@@ -276,8 +276,30 @@
         /* Hero Section */
         .hero {
             padding: var(--space-section) 0;
-            background: linear-gradient(135deg, var(--neutral-light) 0%, var(--neutral-soft) 100%);
+            background: 
+                linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(236, 240, 241, 0.9) 100%),
+                url('../images/asset104.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -525,6 +547,15 @@
                 <h2>You're Not Alone in This Cycle</h2>
                 <p>It's 2 AM again. Your body is exhausted, but your mind won't stop. Every time you try to sleep, the thoughts rush in - work stress, relationship worries, that conversation you had three weeks ago, tomorrow's responsibilities.</p>
                 <p>The more you can't sleep, the more anxious you become about not sleeping. The anxiety keeps you awake longer, creating a vicious cycle that feels impossible to break.</p>
+                
+                <!-- Strategic CTA -->
+                <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                    <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to break the cycle tonight?</p>
+                    <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                        <a href="../index.html#contact" class="primary-cta">Get Professional Help</a>
+                        <a href="tel:4163062157" class="secondary-cta">(416) 306-2157</a>
+                    </div>
+                </div>
             </section>
 
             <section class="content-section">
@@ -626,31 +657,181 @@
 
                 <h3>Mindfulness-Based Approaches</h3>
                 <p>Techniques that help you stay present rather than getting pulled into future worries or past regrets that fuel bedtime anxiety.</p>
+                
+                <!-- Trust Signals & CTA -->
+                <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: var(--primary-blue); color: white; border-radius: var(--radius-md);">
+                    <h4 style="color: white; margin-bottom: var(--space-sm);">Evidence-Based Sleep Anxiety Treatment</h4>
+                    <p style="margin-bottom: var(--space-md); color: white;">Jesse Cynamon, RP (CRPO #10979) specializes in sleep-related anxiety using proven therapeutic approaches. Virtual sessions available across Ontario with evening availability for working professionals.</p>
+                    <a href="../index.html#contact" style="background: white; color: var(--primary-blue); padding: 1rem 2rem; border-radius: var(--radius-md); text-decoration: none; font-weight: 600; display: inline-block;">Start Your Recovery</a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Understanding Sleep Anxiety Patterns</h2>
+                <p>Sleep anxiety often follows predictable patterns that, once recognized, become easier to interrupt. Understanding your unique sleep anxiety fingerprint is the first step toward lasting change.</p>
+
+                <h3>Common Sleep Anxiety Triggers</h3>
+                <p>Different situations can trigger sleep anxiety for different people. Identifying your specific triggers helps you prepare and respond effectively:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>Sunday nights:</strong> Anticipating the work week ahead</li>
+                    <li><strong>After difficult days:</strong> When unprocessed stress surfaces at bedtime</li>
+                    <li><strong>Life transitions:</strong> New jobs, relationships, or living situations</li>
+                    <li><strong>Health concerns:</strong> Physical symptoms that worry you</li>
+                    <li><strong>Relationship conflicts:</strong> Unresolved arguments or tension</li>
+                    <li><strong>Financial stress:</strong> Money worries that feel overwhelming</li>
+                    <li><strong>Caffeine sensitivity:</strong> Even morning coffee affecting nighttime sleep</li>
+                    <li><strong>Screen exposure:</strong> Blue light disrupting natural sleep hormones</li>
+                </ul>
+
+                <h3>The Sleep Anxiety Timeline</h3>
+                <p>For many people, sleep anxiety follows a predictable progression throughout the evening:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>6-8 PM:</strong> Initial awareness that bedtime is approaching</li>
+                    <li><strong>8-9 PM:</strong> First worries about whether you'll be able to sleep</li>
+                    <li><strong>9-10 PM:</strong> Increased physical tension and racing thoughts</li>
+                    <li><strong>10-11 PM:</strong> Active anxiety about not sleeping enough</li>
+                    <li><strong>11 PM+:</strong> Full anxiety mode, counting hours until morning alarm</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>The Physical Impact of Sleep Anxiety</h2>
+                <p>Sleep anxiety doesn't just affect your mind - it creates real physical changes that make sleep even more difficult. Understanding these helps you recognize when to intervene.</p>
+
+                <h3>How Anxiety Changes Your Body at Night</h3>
+                <p>When anxiety kicks in at bedtime, your body responds as if facing a real threat:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>Heart rate increases:</strong> Making you aware of your heartbeat</li>
+                    <li><strong>Breathing becomes shallow:</strong> Reducing oxygen and increasing tension</li>
+                    <li><strong>Muscles tense up:</strong> Particularly shoulders, jaw, and stomach</li>
+                    <li><strong>Body temperature rises:</strong> Making it hard to feel comfortable in bed</li>
+                    <li><strong>Stress hormones surge:</strong> Cortisol and adrenaline flood your system</li>
+                    <li><strong>Digestion slows:</strong> Creating uncomfortable stomach sensations</li>
+                </ul>
+
+                <h3>Breaking the Physical Anxiety Cycle</h3>
+                <p>Since anxiety creates physical changes, we need physical interventions to restore calm:</p>
+                
+                <div class="sleep-strategies">
+                    <div class="strategy-card">
+                        <h4>Temperature Regulation</h4>
+                        <p>Keep your bedroom cool (65-68°F) and use breathable bedding. When anxiety raises your body temperature, a cool environment helps signal sleep readiness to your nervous system.</p>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h4>Tension Release Sequence</h4>
+                        <p>Starting with your toes, systematically tense each muscle group for 5 seconds, then release. Work up to your head. This active relaxation is more effective than trying to "just relax."</p>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h4>Heart Rate Variation</h4>
+                        <p>Try box breathing: inhale for 4, hold for 4, exhale for 4, hold for 4. This activates your parasympathetic nervous system and naturally slows your heart rate.</p>
+                    </div>
+
+                    <div class="strategy-card">
+                        <h4>Grounding Techniques</h4>
+                        <p>Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste. This shifts focus from internal anxiety to external reality.</p>
+                    </div>
+                </div>
             </section>
 
             <section class="content-section">
                 <h2>Building Long-Term Sleep Resilience</h2>
-                <p>Recovery involves more than just falling asleep - it's about creating sustainable patterns:</p>
+                <p>Recovery involves more than just falling asleep - it's about creating sustainable patterns that support both quality sleep and anxiety management:</p>
 
                 <h3>Daytime Anxiety Management</h3>
-                <p>Address anxiety during the day so it has less power at night. This includes stress management at work, relationship skills, and coping strategies.</p>
+                <p>What happens during your day directly affects your sleep quality. Building daytime resilience reduces nighttime anxiety:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>Morning routine:</strong> Start your day with intention rather than reaction</li>
+                    <li><strong>Stress processing:</strong> Address workplace stress as it happens, don't store it</li>
+                    <li><strong>Boundary setting:</strong> Protect your energy from draining situations</li>
+                    <li><strong>Regular breaks:</strong> Prevent stress accumulation throughout the day</li>
+                    <li><strong>Physical activity:</strong> Use movement to discharge nervous energy</li>
+                    <li><strong>Social connection:</strong> Maintain relationships that provide support</li>
+                </ul>
 
                 <h3>Sleep Hygiene Plus</h3>
-                <p>Beyond basic sleep hygiene, developing a personalized approach that accounts for your specific anxiety triggers and sleep patterns.</p>
+                <p>Beyond basic sleep hygiene, develop a personalized approach that accounts for your specific anxiety triggers and sleep patterns:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>Bedroom sanctuary:</strong> Make your bedroom associated only with sleep and intimacy</li>
+                    <li><strong>Light management:</strong> Use blackout curtains and avoid screens 1 hour before bed</li>
+                    <li><strong>Sound environment:</strong> White noise or earplugs to mask disruptions</li>
+                    <li><strong>Comfortable bedding:</strong> Invest in quality pillows and mattress that support good sleep</li>
+                    <li><strong>Air quality:</strong> Ensure good ventilation and consider an air purifier</li>
+                </ul>
 
                 <h3>Lifestyle Integration</h3>
-                <p>Creating daily routines that support both anxiety management and healthy sleep cycles - exercise timing, meal planning, and social activities.</p>
+                <p>Creating daily routines that support both anxiety management and healthy sleep cycles:</p>
+                
+                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
+                    <li><strong>Exercise timing:</strong> Finish vigorous workouts at least 3 hours before bed</li>
+                    <li><strong>Meal planning:</strong> Avoid large meals, caffeine, and alcohol near bedtime</li>
+                    <li><strong>Social activities:</strong> Balance stimulating social time with quiet downtime</li>
+                    <li><strong>Work boundaries:</strong> Establish clear end-of-workday rituals</li>
+                    <li><strong>Weekend recovery:</strong> Use weekends for genuine rest, not just more activity</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Sleep Anxiety FAQ - What Ontario Residents Ask</h2>
+                <p>These are the most common questions about sleep anxiety from clients across Ontario:</p>
+
+                <h3>"Will sleep medications help my anxiety?"</h3>
+                <p>Sleep medications can provide short-term relief, but they don't address the underlying anxiety causing sleep problems. Many people find they need increasing doses and experience dependence. Therapy teaches skills that provide lasting improvement without side effects.</p>
+
+                <h3>"How long does it take to overcome sleep anxiety?"</h3>
+                <p>Most people notice some improvement within 2-3 weeks of consistently applying new strategies. Significant, lasting change typically develops over 6-12 weeks. The timeline depends on how long you've been experiencing sleep anxiety and what underlying factors are contributing.</p>
+
+                <h3>"Is sleep anxiety related to depression?"</h3>
+                <p>Sleep problems and mood are closely connected. Anxiety can lead to depression, and depression can worsen sleep anxiety. If you're experiencing low mood along with sleep problems, addressing both together is often most effective.</p>
+
+                <h3>"Can therapy really help if I've had sleep problems for years?"</h3>
+                <p>Yes, absolutely. Even long-standing sleep anxiety responds well to therapy. In fact, understanding patterns that have developed over time often makes treatment more targeted and effective. Your brain remains capable of learning new sleep associations at any age.</p>
+
+                <h3>"What if my partner's sleep habits make my anxiety worse?"</h3>
+                <p>Sleep anxiety in relationships is common. Therapy can help you develop strategies that work within your relationship dynamic, and sometimes includes sessions with your partner to create a sleep environment that supports both of you.</p>
             </section>
 
             <!-- Related Resources -->
             <section class="related-resources">
                 <h3>Related Sleep & Anxiety Resources</h3>
+                <p style="text-align: center; margin-bottom: var(--space-lg); color: var(--text-secondary);">Explore these related topics to better understand and manage anxiety-related sleep issues:</p>
                 <div class="resource-links">
-                    <a href="why-feel-anxious-all-time.html">Why Do I Feel Anxious All the Time?</a>
-                    <a href="cant-stop-worrying-work.html">Can't Stop Worrying About Work</a>
-                    <a href="virtual-therapy-busy-parents.html">Virtual Therapy for Busy Schedules</a>
-                    <a href="online-counselling-remote-workers.html">Online Counselling for Remote Workers</a>
-                    <a href="../services/anxiety-therapy.html">Anxiety Therapy Services</a>
+                    <a href="sunday-night-anxiety.html">
+                        <strong>Sunday Night Anxiety</strong><br>
+                        <small>Weekend dread affecting your sleep</small>
+                    </a>
+                    <a href="why-feel-anxious-all-time.html">
+                        <strong>Chronic Daily Anxiety</strong><br>
+                        <small>Understanding persistent worry patterns</small>
+                    </a>
+                    <a href="cant-stop-worrying-work.html">
+                        <strong>Work-Related Worry</strong><br>
+                        <small>Managing job stress that disrupts sleep</small>
+                    </a>
+                    <a href="panic-attacks-driving-ontario.html">
+                        <strong>Panic Attack Management</strong><br>
+                        <small>When anxiety creates panic symptoms</small>
+                    </a>
+                    <a href="virtual-therapy-busy-parents.html">
+                        <strong>Virtual Therapy Options</strong><br>
+                        <small>Convenient online support for busy schedules</small>
+                    </a>
+                    <a href="../services/anxiety-therapy.html">
+                        <strong>Anxiety Therapy Services</strong><br>
+                        <small>Professional treatment options</small>
+                    </a>
+                </div>
+                
+                <!-- Additional Trust Elements -->
+                <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-md); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                    <p style="margin-bottom: var(--space-sm); font-weight: 500;">🎓 Professional Credentials</p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Jesse Cynamon is a Registered Psychotherapist (CRPO #10979) specializing in evidence-based treatments for sleep anxiety and related conditions. All sessions are confidential and follow CRPO professional standards.</p>
                 </div>
             </section>
 

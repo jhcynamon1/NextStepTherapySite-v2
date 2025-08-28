@@ -345,7 +345,12 @@
         /* Hero Section */
         .hero {
             padding: var(--space-section) 0;
-            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            background: 
+                linear-gradient(135deg, rgba(254, 254, 254, 0.7) 0%, rgba(245, 246, 247, 0.7) 100%),
+                url('../images/asset104.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             position: relative;
             overflow: hidden;
         }
@@ -972,6 +977,53 @@
                 <div class="faq-item">
                     <h4>Is this just part of adult life I need to accept?</h4>
                     <p>Absolutely not. While work involves some stress, dreading half your weekend is not normal or necessary. Many working adults enjoy their Sundays - you can too.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Related Resources Section -->
+        <section class="section" style="background: var(--neutral-soft);">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-lg);">Related Anxiety & Workplace Stress Resources</h2>
+                <p style="text-align: center; margin-bottom: var(--space-xl); color: var(--text-secondary);">Discover more about managing workplace anxiety, stress, and related concerns:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl);">
+                    <a href="cant-stop-worrying-work.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Work Worry & Stress</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">When work thoughts consume your entire weekend</p>
+                    </a>
+                    
+                    <a href="cant-sleep-anxiety.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Sleep Anxiety Help</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Breaking the cycle when anxiety keeps you awake</p>
+                    </a>
+                    
+                    <a href="why-feel-anxious-all-time.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Chronic Anxiety</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Understanding persistent daily anxiety patterns</p>
+                    </a>
+                    
+                    <a href="online-counselling-remote-workers.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Remote Work Support</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Virtual therapy for remote and hybrid workers</p>
+                    </a>
+                    
+                    <a href="virtual-therapy-busy-parents.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Therapy for Parents</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Flexible virtual sessions for busy parent schedules</p>
+                    </a>
+                    
+                    <a href="../services/anxiety-therapy.html" style="display: block; padding: var(--space-lg); background: white; border-radius: var(--radius-md); text-decoration: none; transition: all 0.3s ease; box-shadow: var(--shadow-soft);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-medium)'" onmouseout="this.style.transform=''; this.style.boxShadow='var(--shadow-soft)'">
+                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Anxiety Therapy Services</h4>
+                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Professional treatment approaches and options</p>
+                    </a>
+                </div>
+                
+                <!-- Trust Signals -->
+                <div style="text-align: center; padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                    <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-md);">Evidence-Based Treatment in Ontario</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--space-sm);">Jesse Cynamon, RP (CRPO #10979) provides specialized anxiety therapy using proven approaches like Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT).</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;"><strong>Virtual sessions available across Ontario</strong> • <strong>Evening appointments</strong> • <strong>Insurance receipts provided</strong> • <strong>Free consultation</strong></p>
                 </div>
             </div>
         </section>
