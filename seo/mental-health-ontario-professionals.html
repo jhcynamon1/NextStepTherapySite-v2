@@ -1,0 +1,925 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- SEO Meta Data - Exact Keyword Match -->
+    <title>Mental Health Support for Ontario Professionals - Executive Therapy</title>
+    <meta name="description" content="Mental health support for Ontario professionals. Confidential therapy for executives, entrepreneurs, and high-achievers. Virtual sessions. CRPO registered.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Mental Health Support for Ontario Professionals | Next Step Therapy">
+    <meta property="og:description" content="Specialized therapy for professionals navigating high-pressure careers in Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/mental-health-ontario-professionals">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/mental-health-ontario-professionals">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mental Health Support for Ontario Professionals",
+      "description": "Specialized therapy services for professionals and executives in Ontario",
+      "author": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      }
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Contact Section */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Floating CTA for Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
+                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="../index.html" class="nav-desktop">Home</a>
+                    <a href="../index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Mental Health Support for Ontario Professionals</h1>
+                    <p class="lead-text">Confidential therapy designed for high-achievers, executives, and professionals navigating the unique pressures of success in Ontario's competitive landscape.</p>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book Confidential Consultation</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Recognition Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>The Hidden Struggles of Professional Success</h2>
+                    
+                    <p>From the outside, you've made it. The career, the income, the respect. But success comes with unique mental health challenges that few understand. The pressure to maintain your image prevents you from seeking the support you need.</p>
+                    
+                    <p>Ontario's high-achieving professionals face distinct psychological pressures. Whether you're in Toronto's financial district, Ottawa's government corridors, or leading a tech startup in Waterloo, the weight of responsibility can become overwhelming.</p>
+                    
+                    <h3>The Professional's Dilemma:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Impostor Syndrome:</strong> Despite achievements, feeling like a fraud waiting to be exposed</li>
+                        <li><strong>Decision Fatigue:</strong> The mental exhaustion from constant high-stakes choices</li>
+                        <li><strong>Isolation at the Top:</strong> Fewer people to confide in as you climb higher</li>
+                        <li><strong>Work-Life Integration:</strong> When your identity merges completely with your role</li>
+                        <li><strong>Perfectionism Paralysis:</strong> Standards so high they become self-sabotaging</li>
+                        <li><strong>Success Depression:</strong> Achieving goals but feeling empty or unfulfilled</li>
+                        <li><strong>Relationship Strain:</strong> Professional demands affecting personal connections</li>
+                        <li><strong>Burnout Denial:</strong> Pushing through exhaustion because "leaders don't quit"</li>
+                    </ul>
+                    
+                    <p>You're not weak for struggling. You're human, navigating extraordinary pressures.</p>
+                    
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Executive-level support for executive-level challenges.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Get Confidential Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Unique Challenges Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Professionals Need Specialized Mental Health Support</h2>
+                    
+                    <p>Generic therapy approaches often miss the nuances of professional life. You need someone who understands the specific pressures of high-stakes careers and can provide relevant, practical support.</p>
+                    
+                    <h3>Professional-Specific Mental Health Challenges:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>The Performance Paradox</strong></h4>
+                        <p>Your success depends on appearing confident and capable, even when struggling internally. This performance requirement extends beyond work into all areas of life. The mask becomes exhausting to maintain. Mental health support for Ontario professionals must acknowledge this double life.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Confidentiality Concerns</strong></h4>
+                        <p>Fear that seeking help could damage your reputation or career prospects. Worry about running into clients or colleagues at therapy offices. Concern about insurance claims revealing mental health support. Virtual therapy provides the discretion professionals require.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Time Poverty</strong></h4>
+                        <p>Your schedule is packed with meetings, deadlines, and obligations. Traditional therapy requiring commutes and waiting rooms doesn't fit. You need efficient, flexible mental health support that respects your time constraints while providing real value.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>High-Functioning Anxiety</strong></h4>
+                        <p>Your anxiety drives success but at tremendous personal cost. Others see achievement; you feel constant internal pressure. The same traits that enable professional success can destroy personal wellbeing. Learning to harness anxiety without being consumed by it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Professional Sectors Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Supporting Ontario's Professional Sectors</h2>
+                    
+                    <p>Each professional field brings unique stressors. Understanding your specific industry context enables more effective mental health support.</p>
+                    
+                    <h3>Finance & Banking Professionals:</h3>
+                    <p>Market volatility creating constant stress. Responsibility for others' financial wellbeing. Long hours during deal-making periods. Pressure to generate returns in any economy. The weight of fiduciary duty.</p>
+                    
+                    <h3>Healthcare Leaders:</h3>
+                    <p>Compassion fatigue from constant caregiving. Administrative burden competing with patient care. Life-and-death decision pressure. Navigating Ontario's healthcare system challenges. Secondary trauma from patient outcomes.</p>
+                    
+                    <h3>Legal Professionals:</h3>
+                    <p>Billable hour pressure destroying work-life balance. Adversarial environment creating chronic stress. Perfectionism required in document preparation. Client emotional burdens becoming your own. Partnership track politics and pressure.</p>
+                    
+                    <h3>Tech Executives & Entrepreneurs:</h3>
+                    <p>Startup volatility and uncertainty. Investor pressure and runway anxiety. Rapid scaling challenges. Team management while building products. The isolation of leadership in fast-growth environments.</p>
+                    
+                    <h3>Government & Public Sector Leaders:</h3>
+                    <p>Public scrutiny of decisions. Political pressure from multiple directions. Bureaucratic frustration limiting effectiveness. Responsibility for public good. Media attention and criticism.</p>
+                    
+                    <p style="margin-top: var(--space-lg);">Whatever your professional context, specialized support understands your unique pressures.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How Therapy Helps Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Therapy Designed for High Achievers</h2>
+                    
+                    <p>Mental health support for Ontario professionals goes beyond traditional therapy. It's strategic, practical, and aligned with your goals while addressing the human behind the role.</p>
+                    
+                    <h3>Professional-Focused Therapeutic Approach:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Executive Functioning Enhancement</strong></h4>
+                        <p>Optimize decision-making processes under pressure. Develop strategies for managing cognitive load. Improve focus and productivity without sacrificing wellbeing. Learn to delegate effectively and trust your team.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Sustainable High Performance</strong></h4>
+                        <p>Build resilience without burning out. Create boundaries that protect energy without limiting success. Develop recovery protocols that fit your lifestyle. Learn when pushing through helps and when it harms.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Authentic Leadership Development</strong></h4>
+                        <p>Align your leadership style with your values. Navigate organizational politics with integrity. Build emotional intelligence for better team dynamics. Lead from a place of strength, not fear.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Work-Life Integration</strong></h4>
+                        <p>Move beyond failed work-life balance attempts. Create sustainable integration of professional and personal. Protect relationships while maintaining career momentum. Define success beyond professional metrics.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Confidential Processing Space</strong></h4>
+                        <p>Finally have somewhere to be fully honest about struggles. Process difficult decisions without judgment. Explore doubts and fears safely. Reconnect with why you chose this path.</p>
+                    </div>
+                    
+                    <!-- CTA after benefits -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Invest in the leader behind the title.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Schedule Executive Session</a>
+                            <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Confidential Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Success Stories Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What Professional Therapy Success Looks Like</h2>
+                    
+                    <p>While maintaining complete confidentiality, here are composite examples of how therapy helps Ontario professionals:</p>
+                    
+                    <h3>The Bay Street Executive:</h3>
+                    <p>Came seeking help for "stress management." Discovered deep burnout masked by achievement. Learned to set boundaries without sacrificing performance. Renewed passion for work while protecting personal life. Promoted to senior partner with better work-life integration.</p>
+                    
+                    <h3>The Startup Founder:</h3>
+                    <p>Struggled with impostor syndrome despite company success. Processed the isolation of leadership. Developed confidence in decision-making. Improved investor relations through authentic communication. Built sustainable practices preventing founder burnout.</p>
+                    
+                    <h3>The Healthcare Administrator:</h3>
+                    <p>Overwhelmed by pandemic-era healthcare management. Addressed secondary trauma from system failures. Created emotional boundaries while maintaining compassion. Found meaning again in healthcare leadership. Implemented self-care without guilt.</p>
+                    
+                    <h3>The Government Director:</h3>
+                    <p>Frustrated by bureaucratic limitations. Navigated political pressures affecting mental health. Developed strategies for influence within constraints. Renewed sense of public service purpose. Balanced cynicism with continued commitment.</p>
+                    
+                    <p style="margin-top: var(--space-lg);"><strong>Your success story starts with reaching out.</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Virtual Advantage Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Virtual Therapy: Built for Professional Lifestyles</h2>
+                    
+                    <p>Mental health support that fits seamlessly into professional life. No commutes, no waiting rooms, no chance encounters.</p>
+                    
+                    <h3>Professional-Friendly Features:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Complete Confidentiality</strong></h4>
+                        <p>Sessions from your private office or home. No risk of meeting colleagues in waiting rooms. Discrete billing descriptions. Your reputation protected while getting support.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Schedule Flexibility</strong></h4>
+                        <p>Early morning sessions before the market opens. Lunch hour appointments between meetings. Evening availability after long days. Weekend options for busy weeks.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Location Independence</strong></h4>
+                        <p>Consistency despite travel schedules. Sessions from Toronto office or Muskoka cottage. Support during business trips. No disruption when relocating.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Efficiency Maximized</strong></h4>
+                        <p>No commute time wasted. Back to work immediately after sessions. Preparation notes accessible digitally. Time-effective mental health support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Professional Mental Health FAQs</h2>
+                
+                <div class="faq-item">
+                    <h4>Will therapy make me less competitive or driven?</h4>
+                    <p>Actually the opposite. Therapy helps you perform sustainably at high levels. You'll learn to channel drive productively without self-destruction. Many clients report improved performance after addressing mental health.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can therapy really understand C-suite pressures?</h4>
+                    <p>With the right therapist, absolutely. Look for someone who works specifically with professionals and understands organizational dynamics, leadership challenges, and high-stakes decision-making.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do I know therapy won't affect my career?</h4>
+                    <p>Confidentiality is legally protected. Many successful leaders use therapy as their secret weapon. Virtual therapy adds extra privacy layer. Your career is more at risk from untreated mental health issues.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is professional therapy different from regular therapy?</h4>
+                    <p>Yes. It acknowledges unique professional contexts, speaks your language, respects time constraints, and focuses on practical strategies while addressing deeper issues.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I don't have time for weekly therapy?</h4>
+                    <p>Flexible scheduling includes biweekly or monthly options. Some professionals do intensive sessions periodically. Virtual format eliminates commute time. We work with your schedule.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I use company benefits confidentially?</h4>
+                    <p>Yes. Insurance claims show only "Registered Psychotherapist" services. No diagnostic information shared with employers. Many executives use benefits without concern.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>Executive-Level Mental Health Support</h3>
+                <p>Confidential therapy designed for Ontario's high-achieving professionals. Invest in the person behind the position.</p>
+                
+                <h4>Confidential Professional Consultation</h4>
+                <p>Discuss your unique challenges in a judgment-free, understanding environment. Complete discretion assured.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:+15198008323" class="primary-cta">Book Confidential Session</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Private Message</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Virtual Executive Therapy Throughout Ontario<br>
+                    Flexible scheduling for professional lifestyles<br>
+                    Complete confidentiality assured
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+15198008323" class="floating-cta">
+        📞 Call Now
+    </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.smart-sticky');
+            let lastScrollTop = 0;
+            
+            function handleScroll() {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
+
+</body></html>

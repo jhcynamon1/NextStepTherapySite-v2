@@ -105,9 +105,26 @@ Our research found that 95% of long-tail, location-specific keywords show "no da
 # Cost: $100/month (vs $450 for SEMrush)
 ```
 
-#### Step 2: Use the Right Endpoints
+#### Step 2: ESSENTIAL CREDENTIALS & CONFIG
+```bash
+# API Credentials (ALWAYS USE THESE)
+Login: jesse@nextsteptherapy.ca
+Password: 1d54adc9ada19782
+Base64: amVzc2VAbmV4dHN0ZXB0aGVyYXB5LmNhOjFkNTRhZGM5YWRhMTk3ODI=
+
+# MCP Config Location
+/Users/jessecynamon/.cursor/mcp.json
+
+# Working API Method (When MCP Fails)
+curl -X POST https://api.dataforseo.com/v3/dataforseo_labs/google/keyword_ideas/live \
+-H "Authorization: Basic amVzc2VAbmV4dHN0ZXB0aGVyYXB5LmNhOjFkNTRhZGM5YWRhMTk3ODI=" \
+-H "Content-Type: application/json" \
+-d '[{"keywords": ["therapy", "anxiety"], "location_name": "Canada", "language_code": "en", "limit": 100}]'
+```
+
+#### Step 3: Use the Right Endpoints
 ```javascript
-// For keyword discovery
+// For keyword discovery (PRIMARY METHOD)
 mcp_dataforseo_labs_google_keyword_ideas
 
 // For search volume validation
@@ -120,14 +137,20 @@ mcp_dataforseo_labs_google_competitors_domain
 mcp_dataforseo_labs_google_historical_serp
 ```
 
-#### Step 3: Seed Term Strategy
+#### Step 4: KEYWORD FOR KEYWORD Strategy (CRITICAL)
 ```javascript
-// Start broad, then narrow
+// ALWAYS use broad seed terms - NEVER specific long-tail
 const seedStrategies = {
-  level1: ["therapy", "counseling", "mental health"],
-  level2: ["anxiety therapy", "depression counseling", "couples therapy"],
-  level3: ["CBT therapy", "EMDR treatment", "DBT counseling"],
-  level4: ["anxiety therapy toronto", "depression help ottawa"]
+  level1: ["therapy", "counseling", "mental health", "anxiety", "virtual", "online"],
+  level2: ["therapist", "stress", "depression", "performance", "workplace"],
+  level3: ["professional", "burnout", "panic", "social anxiety"],
+  // DON'T use: ["anxiety therapy toronto"] - too specific for seeds
+};
+
+// Ontario Focus Filters
+const ontarioFilters = {
+  include: ["ontario", "toronto", "ottawa", "hamilton", "mississauga", "london", "virtual", "online", "crpo"],
+  exclude: ["canada"] // Too broad per user requirement
 };
 ```
 
@@ -137,6 +160,8 @@ const seedStrategies = {
 3. **Filter by competition score** - Focus on scores under 30 for quick wins
 4. **Check search volume trends** - Some keywords spike seasonally
 5. **Export to CSV** for bulk processing
+6. **REAL DATA ONLY** - Ignore null/0 volumes, focus on actual numbers
+7. **Ontario Focus** - Always filter for Ontario-specific terms, exclude Canada-wide
 
 ---
 
@@ -165,11 +190,17 @@ mcp_firecrawl_extract --urls ["url1", "url2"] --schema {structured_format}
 
 #### 3. **Perplexity MCP** - Content Research
 ```bash
+# ESSENTIAL CREDENTIALS & CONFIG
+API Key: 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
+MCP Config: /Users/jessecynamon/.cursor/mcp.json
+Tool Name: mcp_perplexity-ask_perplexity_ask
+
 # Real-time research with citations
-mcp_perplexity_ask --messages [{"role": "user", "content": "research query"}]
+mcp_perplexity-ask_perplexity_ask --messages [{"role": "user", "content": "research query"}]
 
 # Best for: Getting current information with sources
 # Advantage: Real-time web search with citations
+# Use for: SEO strategy research, expert insights, current best practices
 ```
 
 #### 4. **Playwright MCP** - Technical SEO Audits

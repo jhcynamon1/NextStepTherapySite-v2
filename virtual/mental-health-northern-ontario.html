@@ -1,0 +1,1013 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- SEO Meta Data - Exact Keyword Match -->
+    <title>Mental Health Services Northern Ontario - Virtual Therapy Access</title>
+    <meta name="description" content="Mental health services Northern Ontario residents deserve. Virtual therapy for Thunder Bay, Sudbury, North Bay regions. No travel required. CRPO #10979.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Mental Health Services Northern Ontario | Next Step Therapy">
+    <meta property="og:description" content="Quality mental health support for Northern Ontario. Professional virtual therapy eliminates distance barriers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/mental-health-northern-ontario">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/mental-health-northern-ontario">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Mental Health Services Northern Ontario",
+      "description": "Virtual mental health services for Northern Ontario communities",
+      "provider": {
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "areaServed": {
+          "@type": "State",
+          "name": "Ontario",
+          "containsPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Northern Ontario"
+          }
+        }
+      },
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Virtual Mental Health Services",
+        "description": "Online therapy for Northern Ontario residents",
+        "serviceType": "Telehealth"
+      },
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/book"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+            margin-right: 8px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        /* Regional Box */
+        .regional-box {
+            background: linear-gradient(135deg, rgba(74, 107, 122, 0.05), rgba(74, 107, 122, 0.02));
+            border-left: 4px solid var(--primary-soft-blue);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+        
+        .regional-box h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Crisis Resources */
+        .crisis-resources {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .crisis-resources h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Contact Section */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+        
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Floating CTA for Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="../images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="../index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="../index.html" class="nav-desktop">Home</a>
+                    <a href="../index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
+                </nav>
+                
+                <a href="tel:+15198008323" class="header-phone">
+                    (519) 800-8323
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Mental Health Services Northern Ontario</h1>
+                    <p class="lead-text">Living in Northern Ontario shouldn't mean settling for limited mental health options. Access professional therapy from Thunder Bay to Timmins, Sudbury to North Bay—no long drives required.</p>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="#contact" class="btn btn-primary">Access Support Today</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Opening Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Quality Mental Health Care for the North</h2>
+                    
+                    <p>You understand the unique challenges of Northern Ontario life. The winters that test your resilience. The distances that separate communities. The limited local mental health resources that leave you choosing between long drives and long waits. Mental health services Northern Ontario residents deserve shouldn't require a 4-hour round trip or months on a waitlist.</p>
+                    
+                    <p>Virtual therapy changes everything. Professional support that respects Northern realities—weather won't cancel your appointment, distance won't limit your options, and privacy stays protected in close-knit communities.</p>
+                    
+                    <h3>Serving All Northern Ontario Communities:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Thunder Bay & Northwestern Ontario:</strong> Fort William, Port Arthur, and region</li>
+                        <li><strong>Sudbury & Northeastern Ontario:</strong> Greater Sudbury, Nickel Belt area</li>
+                        <li><strong>North Bay & Gateway North:</strong> Nipissing District and beyond</li>
+                        <li><strong>Timmins & James Bay:</strong> Cochrane District communities</li>
+                        <li><strong>Sault Ste. Marie & Algoma:</strong> The Soo and surrounding areas</li>
+                        <li><strong>Kenora & Far Northwest:</strong> Lake of the Woods region</li>
+                        <li><strong>Small Communities:</strong> Every town, reserve, and remote area</li>
+                        <li><strong>Resource Towns:</strong> Mining and forestry communities</li>
+                    </ul>
+                    
+                    <p>Your location doesn't determine the quality of mental health support you receive.</p>
+                    
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Professional therapy without the drive.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Connect From Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Northern Challenges Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Understanding Northern Ontario Mental Health Challenges</h2>
+                    
+                    <p>Northern life brings unique stressors that southern Ontario doesn't always understand. We get it.</p>
+                    
+                    <h3>The Northern Reality:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Geographic Isolation</strong></h4>
+                        <p>Hours to the nearest city. Limited specialist access. Family and friends far away. Professional opportunities scarce. The isolation compounds mental health struggles. Virtual therapy bridges these distances instantly.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Seasonal Affective Challenges</strong></h4>
+                        <p>Long, harsh winters affecting mood. Minimal daylight for months. Cabin fever becoming real depression. Vitamin D deficiency impacting mental health. Weather barriers to accessing care. Online support available regardless of conditions.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Economic Pressures</strong></h4>
+                        <p>Resource industry boom-bust cycles. Higher cost of living up north. Limited job diversity. Youth exodus for opportunities. Financial stress affecting families. Mental health support through economic uncertainty.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Limited Local Resources</strong></h4>
+                        <p>Few mental health professionals available. Long waitlists for existing services. No specialized therapy options. Privacy concerns in small communities. Travel costs prohibitive for regular therapy. Virtual access solves these barriers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Regional Focus Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Mental Health Support by Region</h2>
+                    
+                    <p>Each Northern Ontario region faces distinct challenges. Mental health services Northern Ontario provides adapt to your specific context.</p>
+                    
+                    <div class="regional-box">
+                        <h4>Thunder Bay & Northwestern Ontario</h4>
+                        <p>The Lakehead's unique position brings unique stressors. University students far from home. Healthcare workers facing burnout. Indigenous communities needing culturally aware support. Resource workers managing isolation. Virtual therapy available across the vast northwest.</p>
+                    </div>
+                    
+                    <div class="regional-box">
+                        <h4>Sudbury & Northeastern Ontario</h4>
+                        <p>Mining community pressures affect mental health. Shift work disrupting life balance. Environmental health concerns. French-English service needs. Economic uncertainty in resource sectors. Professional support understanding local context.</p>
+                    </div>
+                    
+                    <div class="regional-box">
+                        <h4>North Bay & Central Corridor</h4>
+                        <p>Gateway community transitions. Military families needing support. College students managing stress. Healthcare system pressures. Seasonal tourism economy impacts. Mental health care that understands your reality.</p>
+                    </div>
+                    
+                    <div class="regional-box">
+                        <h4>Timmins & James Bay Lowlands</h4>
+                        <p>Extreme isolation challenges. Mining boom-bust stress. Indigenous community needs. Youth retention struggles. Healthcare accessibility issues. Virtual support reaching the furthest communities.</p>
+                    </div>
+                    
+                    <div class="regional-box">
+                        <h4>Sault Ste. Marie & Algoma</h4>
+                        <p>Border community dynamics. Steel industry changes. International bridge anxieties. Tourism sector pressures. Cross-border family separations. Therapy understanding unique position.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Virtual Advantage Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Virtual Works Better for Northern Ontario</h2>
+                    
+                    <p>Virtual therapy isn't a compromise for Northern communities—it's often the superior choice.</p>
+                    
+                    <h3>The Northern Advantage of Virtual:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Weather-Proof Mental Health Care</strong></h4>
+                        <p>Blizzards can't cancel your session. Ice storms won't delay support. No dangerous winter driving. Consistent care through all seasons. -40°C stays outside while you get help inside.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Complete Privacy Protected</strong></h4>
+                        <p>No encounters in small-town waiting rooms. Confidentiality in tight-knit communities. Support without local stigma. Professional distance when needed. Your mental health stays your business.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Eliminates Distance Barriers</strong></h4>
+                        <p>No 200km drives for therapy. Gas money stays in your pocket. Time saved for living. Equal access regardless of location. Quality care comes to you.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Specialized Support Available</strong></h4>
+                        <p>Access to specific expertise. Not limited to local generalists. Cultural competency options. Industry-specific understanding. The right therapist, not just the nearest one.</p>
+                    </div>
+                    
+                    <!-- CTA after advantages -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Quality mental health care shouldn't depend on your postal code.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Virtual Therapy</a>
+                            <a href="../index.html#contact" class="secondary-cta email-cta">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Common Northern Issues Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Common Mental Health Concerns in the North</h2>
+                    
+                    <p>Northern Ontario residents face mental health challenges shaped by geography, climate, and economy.</p>
+                    
+                    <h3>Seasonal Depression (SAD):</h3>
+                    <p>More than just "winter blues" up north. Months of darkness affecting brain chemistry. Energy depletion despite adequate sleep. Motivation vanishing with the sun. Professional strategies for northern SAD.</p>
+                    
+                    <h3>Isolation & Loneliness:</h3>
+                    <p>Geographic distance from loved ones. Limited social opportunities. Professional isolation in small markets. Cultural disconnect in remote areas. Building connection despite distance.</p>
+                    
+                    <h3>Resource Industry Stress:</h3>
+                    <p>Boom-bust anxiety cycles. Shift work disrupting family life. Safety concerns in dangerous industries. Economic uncertainty constant. Supporting families through instability.</p>
+                    
+                    <h3>Substance Use Concerns:</h3>
+                    <p>Limited activities leading to drinking culture. Self-medication for untreated mental health. Isolation increasing vulnerability. Trauma and addiction connections. Professional support without judgment.</p>
+                    
+                    <h3>Indigenous Community Trauma:</h3>
+                    <p>Intergenerational trauma impacts. Residential school aftermath. Cultural disconnection pain. Systemic barrier navigation. Culturally-aware therapeutic support.</p>
+                    
+                    <h3>Youth & Future Anxiety:</h3>
+                    <p>Pressure to leave for opportunities. Identity tied to place. Family separation decisions. Limited local career paths. Supporting major life transitions.</p>
+                    
+                    <p style="margin-top: var(--space-lg);"><strong>Whatever you're facing, you don't have to face it alone.</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Crisis Resources Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Northern Ontario Crisis Resources</h2>
+                    
+                    <p>While we offer quick access to therapy, immediate crisis support is available 24/7:</p>
+                    
+                    <div class="crisis-resources">
+                        <h4>Regional Crisis Lines:</h4>
+                        <p><strong>Thunder Bay Crisis Response:</strong> 1-807-346-8282</p>
+                        <p><strong>Sudbury Crisis Line:</strong> 1-705-675-4760</p>
+                        <p><strong>North Bay Crisis Centre:</strong> 1-705-728-5044</p>
+                        <p><strong>Talk Suicide Canada:</strong> 1-833-456-4566</p>
+                    </div>
+                    
+                    <div class="crisis-resources">
+                        <h4>Regional Hospitals:</h4>
+                        <p><strong>Thunder Bay Regional Health Sciences Centre</strong></p>
+                        <p><strong>Health Sciences North (Sudbury)</strong></p>
+                        <p><strong>North Bay Regional Health Centre</strong></p>
+                        <p><strong>Timmins and District Hospital</strong></p>
+                        <p><strong>Sault Area Hospital</strong></p>
+                    </div>
+                    
+                    <p>For ongoing support that isn't crisis-level, virtual therapy provides consistent professional care.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Northern Ontario Mental Health Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>Do you understand Northern Ontario's unique challenges?</h4>
+                    <p>Yes. While based virtually, I work extensively with Northern clients and understand the specific pressures of northern life—from isolation to seasonal challenges to resource industry stress.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if my internet isn't reliable?</h4>
+                    <p>Common concern up north. Phone sessions always available as backup. Lower bandwidth options work fine. Most northern internet handles video calls. We'll make it work regardless.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can virtual therapy help with seasonal depression?</h4>
+                    <p>Absolutely. Evidence-based strategies for northern SAD. Light therapy guidance, vitamin D discussions, activity planning for long winters. Many clients find virtual support especially helpful during harsh weather.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How quickly can I start?</h4>
+                    <p>Often within 48-72 hours. No months-long waitlists like local services. Free consultation within 24 hours. Northern Ontario deserves timely mental health access.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is it really as good as in-person therapy?</h4>
+                    <p>Research shows virtual therapy equally effective. Many northern clients actually prefer it—no travel, complete privacy, consistent access. The therapeutic relationship matters more than the medium.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What areas of Northern Ontario do you serve?</h4>
+                    <p>All of Northern Ontario. From Manitoba border to Quebec, James Bay to Lake Superior. Every community, no matter how remote. If you're in Northern Ontario, support is available.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do you maintain privacy in small communities?</h4>
+                    <p>Complete confidentiality guaranteed. No local office visits to explain. Secure, encrypted platform. No one in your community needs to know. Your mental health stays private.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>Mental Health Support for All of Northern Ontario</h3>
+                <p>From Thunder Bay to Timmins, Kenora to Kapuskasing. Professional therapy that understands northern life, available without the drive.</p>
+                
+                <h4>No More Waiting. No More Driving.</h4>
+                <p>Quality mental health care from the comfort of your northern home. Because geography shouldn't determine access to support.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:+15198008323" class="primary-cta">Access Northern Support</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="../index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Serving All of Northern Ontario Virtually<br>
+                    Professional Support Without the Distance<br>
+                    Your north, your mental health, no barriers
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+15198008323" class="floating-cta">
+        📞 Connect Now
+    </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        // Smart sticky header functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+            
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10; // Minimum scroll distance to trigger
+            
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+                
+                // Only proceed if scroll difference is significant
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+                
+                if (currentScrollY <= headerHeight) {
+                    // At the top of the page
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    // Scrolling down - hide header
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+                
+                lastScrollY = currentScrollY;
+            }
+            
+            // Use requestAnimationFrame for smooth performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+            
+            // Set initial styles
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+</body></html>
