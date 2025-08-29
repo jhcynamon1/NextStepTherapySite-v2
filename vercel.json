@@ -1,29 +1,17 @@
 {
-  "version": 2,
-  "name": "nextsteptherapy",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": ".",
   "alias": ["nextsteptherapy.ca", "www.nextsteptherapy.ca"],
-  "functions": {},
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*).html",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1.html",
-      "status": 200
-    }
-  ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.*).html",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=86400, stale-while-revalidate"
+        },
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
@@ -35,10 +23,6 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     }
