@@ -2,25 +2,22 @@
   "version": 2,
   "name": "nextsteptherapy",
   "alias": ["nextsteptherapy.ca", "www.nextsteptherapy.ca"],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "public": true,
+  "functions": {},
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
-      "src": "/university-anxiety",
-      "dest": "/university-anxiety.html"
+      "src": "/(.*).html",
+      "dest": "/$1.html"
     },
     {
-      "src": "/social-anxiety-university",
-      "dest": "/social-anxiety-university.html"
-    },
-    {
-      "src": "/college-anxiety",
-      "dest": "/college-anxiety.html"
-    },
-    {
-      "src": "/student-mental-health",
-      "dest": "/student-mental-health.html"
+      "src": "/(.*)",
+      "dest": "/$1.html",
+      "status": 200
     }
   ],
   "headers": [
