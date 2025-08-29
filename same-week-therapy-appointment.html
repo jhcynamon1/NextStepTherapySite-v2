@@ -1,5 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -8,9 +67,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data - High Intent Keywords -->
-    <title>Same Week Therapy Appointment - Quick Access Virtual Therapy Ontario</title>
-    <meta name="description" content="Need a same week therapy appointment? Get fast access to mental health support in Ontario. Virtual sessions available within days. CRPO registered therapist.">
+    <!-- SEO Meta Data - V2 Emotional + Conversion Optimized -->
+    <title>Same Week Therapy Appointment: Don't Wait Weeks For Help | CRPO #10979</title>
+    <meta name="description" content="When you're ready for therapy, waiting weeks isn't an option. Same-week appointments available across Ontario. Virtual sessions from your home. Start feeling better now.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Same Week Therapy Appointment | Next Step Therapy">
@@ -21,136 +80,88 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/same-week-therapy-appointment">
     
-    <!-- Schema Markup -->
+    <!-- Enhanced V2 Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
-            }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
           "@type": "Article",
-          "headline": "Same Week Therapy Appointment: Quick Access Mental Health Support Ontario",
-          "description": "Skip the long waitlists. Get therapy appointments within the same week throughout Ontario. Fast access to professional mental health support when you need it.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
+          "headline": "Same Week Therapy Appointment: Don't Wait Weeks For Help",
+          "description": "Professional support available within days, not months. Virtual therapy appointments this week across Ontario.",
+          "wordCount": "2500+",
           "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
+            "@type": "Person",
+            "name": "Jesse Cynamon, RP",
+            "identifier": "CRPO #10979",
+            "jobTitle": "Registered Psychotherapist"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/same-week-therapy-appointment.html"
-          },
-          "about": [
-            {
-              "@type": "Service",
-              "name": "Same Week Therapy Appointments",
-              "description": "Fast access therapy scheduling with appointments available within days, not months"
-            },
-            {
-              "@type": "Service",
-              "name": "Virtual Mental Health Support",
-              "description": "Online therapy sessions eliminating travel and scheduling barriers"
-            }
-          ],
-          "keywords": "same week therapy appointment Ontario, quick therapy access, fast mental health support, no waiting list therapy Ontario",
-          "articleSection": "Mental Health Services",
-          "wordCount": "3200"
+            "name": "Next Step Therapy"
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How quickly can I get a therapy appointment in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Depending on availability, therapy appointments can often be scheduled within the same week. Virtual sessions offer more flexibility than in-person appointments, allowing for faster scheduling. Call (416) 306-2157 to check current availability and book your appointment."
+          "@type": "LocalBusiness",
+          "name": "Next Step Therapy",
+          "description": "Same-week virtual therapy appointments across Ontario",
+          "areaServed": {
+            "@type": "State",
+            "name": "Ontario"
+          },
+          "telephone": "+14163062157",
+          "url": "https://nextsteptherapy.ca/same-week-therapy-appointment",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Quick Access Therapy Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Same-Week Virtual Therapy",
+                  "provider": {
+                    "@type": "Person",
+                    "name": "Jesse Cynamon, RP"
+                  }
+                }
               }
-            },
-            {
-              "@type": "Question",
-              "name": "Why are therapy wait times so long in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Traditional therapy often has long waitlists due to high demand and limited availability. Many therapists have waiting lists of weeks or months. Virtual therapy can offer faster access by eliminating geographic constraints and providing more flexible scheduling options."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is same week therapy as effective as regular scheduled therapy?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, research shows that quicker access to mental health support often leads to better outcomes. When you can start therapy soon after deciding you need it, you're more motivated and the issues are fresher. The key is consistent follow-up, regardless of how quickly you start."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if I need ongoing therapy after my same week appointment?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same week appointments often lead to ongoing therapeutic relationships. After your initial session, we'll discuss your needs and develop a treatment plan. Regular weekly or bi-weekly sessions can typically be scheduled to maintain continuity of care."
-              }
-            }
-          ]
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for Conversion Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you have availability when others have long waitlists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual format allows more flexible scheduling. We prioritize new client access. Efficient intake process saves time. Our focus is on accessibility, not maintaining artificial scarcity."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Mental Health Resources",
-              "item": "https://nextsteptherapy.ca/seo"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Same Week Therapy Appointment",
-              "item": "https://nextsteptherapy.ca/same-week-therapy-appointment.html"
-            }
-          ]
+          "@type": "Question",
+          "name": "Is the quality the same as therapists with waitlists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Quick access doesn't mean lower quality. Jesse Cynamon is a fully registered psychotherapist (CRPO #10979) with extensive training and experience. Availability is about efficient practice management, not qualifications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I need ongoing therapy after my first session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clients continue with regular weekly sessions. We reserve spots for existing clients while maintaining quick access for new ones. You won't be back on a waitlist after starting."
+          }
         }
       ]
     }
@@ -194,6 +205,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -224,12 +236,14 @@
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
         }
         
@@ -239,7 +253,8 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;        }
+            text-decoration: none;
+        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
@@ -251,13 +266,15 @@
         }
         
         .nav {
-            height: 42px;
+            display: flex;
             gap: var(--space-lg);
             list-style: none;
+            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -266,13 +283,16 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
+            text-decoration: none;
+            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -289,24 +309,25 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
+            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
         
@@ -318,6 +339,7 @@
         
         .lead-text {
             font-size: 1.25rem;
+            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -327,15 +349,84 @@
             margin-right: auto;
         }
         
-        /* Availability Badge */
-        .availability-badge {
-            display: inline-flex;
-            background: linear-gradient(135deg, var(--accent-warm), var(--accent-gold));
+        /* V2 Trust Signals Above Fold */
+        .trust-indicators {
+            display: flex;
+            gap: var(--space-lg);
+            margin: var(--space-md) 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-deep);
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        /* V2 Enhanced CTA Hierarchy */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 18px 36px;
+            border-radius: var(--radius-md);
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 240px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(143, 166, 142, 0.4);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-1px);
+        }
+        
+        /* Urgency Badge for Same-Week Pages */
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #e53e3e, #c53030);
+            color: white;
+            padding: 0.5rem 1.25rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            font-weight: 600;
+            font-size: 0.9375rem;
             margin-bottom: var(--space-md);
+            box-shadow: 0 2px 8px rgba(229, 62, 62, 0.3);
         }
         
         /* Hero Section */
@@ -364,10 +455,12 @@
         /* Buttons */
         .btn {
             display: inline-flex;
+            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -390,7 +483,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -414,7 +507,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -424,7 +517,7 @@
         }
         
         .feature-list li {
-            height: 42px;
+            display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -436,12 +529,12 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         /* Timeline */
         .timeline-item {
-            height: 42px;
+            display: flex;
             gap: var(--space-md);
             margin-bottom: var(--space-lg);
             position: relative;
@@ -470,10 +563,12 @@
             width: 22px;
             height: 22px;
             background: var(--primary-soft-blue);
-            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 0.75rem;
         }
         
@@ -487,7 +582,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
@@ -500,16 +595,17 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
-            font-weight: 400;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .contact-highlight p {
@@ -521,8 +617,9 @@
         
         /* CTA Buttons */
         .hero-cta {
-            height: 42px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
             gap: var(--space-md);
         }
         
@@ -531,7 +628,8 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -545,7 +643,7 @@
         }
         
         .secondary-ctas {
-            height: 42px;
+            display: flex;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -554,6 +652,7 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -563,7 +662,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -575,7 +674,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -593,38 +692,44 @@
             line-height: 1.6;
         }
         
-        /* Floating CTA for Mobile */
-        .floating-cta {
+        /* V2 Mobile Sticky CTA - Appears After 30% Scroll */
+        .mobile-sticky-cta {
             position: fixed;
             bottom: 20px;
+            left: 20px;
             right: 20px;
-            z-index: 1000;
-            display: none;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, #e53e3e, #c53030);
             color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 400;
-            font-size: 0.9375rem;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(229, 62, 62, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
             transition: all 0.3s ease;
-            min-height: 48px;
-            gap: 0.5rem;
+            max-width: 320px;
+            margin: 0 auto;
         }
         
-        .floating-cta:hover {
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            background: linear-gradient(135deg, #c53030, #9c2626);
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
             color: white;
         }
         
         @media (max-width: 768px) {
-            .floating-cta {
-                height: 42px;
-                bottom: 15px;
-                right: 15px;
-                padding: 0.875rem 1.25rem;
-                font-size: 0.875rem;
+            .mobile-sticky-cta {
+                display: block;
             }
         }
         
@@ -676,70 +781,78 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="index.html#approach">Approach</a></li>
-                        <li><a href="index.html#specializations">Services</a></li>
-                        <li><a href="index.html#process">Process</a></li>
-                        <li><a href="index.html#contact">Connect</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
     
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - V2 Conversion Optimized -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <span class="availability-badge">Quick Access Therapy</span>
-                    <h1>Same Week Therapy Appointment</h1>
-                    <p class="lead-text">No more month-long waitlists. When you're ready for change, we're ready to help. Virtual therapy appointments available this week throughout Ontario.</p>
+                    <span class="urgency-badge">Available This Week</span>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <!-- V2 Trust Signals Above Fold -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">Ontario Licensed</span>
+                        <span class="trust-indicator">Virtual Sessions</span>
+                        <span class="trust-indicator">48-Hour Response</span>
+                    </div>
+                    
+                    <h1>Finally Ready for Therapy? Don't Wait Weeks</h1>
+                    <p class="lead-text">That moment when you decide you need support shouldn't be lost to long waitlists. Same-week virtual therapy appointments available across Ontario. Start feeling better this week, not next month.</p>
+                    
+                    <!-- V2 CTA Hierarchy -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md); margin-top: var(--space-xl);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Book This Week's Session</a>
+                        <a href="tel:+15198008323" class="cta-secondary">Call Now: (519) 800-8323</a>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- Problem Recognition Section -->
+        <!-- Problem Validation Section - V2 Emotional Psychology -->
         <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>When Waiting Weeks for Therapy Isn't an Option</h2>
+                    <h2>That Moment When You're Finally Ready for Help</h2>
                     
-                    <p>You've made the difficult decision to seek therapy - a huge step that takes courage. But when you call around, you hear "our next opening is in 6 weeks" or "we'll put you on the waitlist." By the time that appointment arrives, you might lose momentum, your situation could worsen, or you might give up entirely.</p>
+                    <p>It often happens suddenly - maybe after a particularly rough week, a sleepless night, or a moment of clarity where you think "I can't keep doing this alone." You've crossed the mental bridge from thinking about therapy to actually wanting it. That readiness is precious and shouldn't be lost to Ontario's stretched mental health waitlists.</p>
                     
-                    <p>In Ontario's stretched mental health system, long wait times have become normalized. But when you're struggling, weeks can feel like months. That's why we prioritize same-week appointments for new clients.</p>
+                    <p>When you finally decide to prioritize your mental health, hearing "our next opening is in 6-8 weeks" feels devastating. By then, that moment of readiness might pass. The crisis that motivated you to call might fade into background resignation. The courage it took to reach out might not be there in two months.</p>
                     
-                    <h3>Why Same-Week Access Matters:</h3>
+                    <h3>Why Waiting Weeks Can Undermine Your Progress:</h3>
                     <ul class="feature-list">
-                        <li><strong>Momentum Preservation:</strong> When you're ready for change, starting quickly maintains motivation</li>
-                        <li><strong>Crisis Prevention:</strong> Early intervention prevents issues from escalating into emergencies</li>
-                        <li><strong>Immediate Relief:</strong> Even one session can provide tools and hope while you're struggling</li>
-                        <li><strong>Reduced Suffering:</strong> Why suffer for weeks when help is available now?</li>
-                        <li><strong>Better Outcomes:</strong> Quick access to therapy leads to faster recovery and better results</li>
-                        <li><strong>Life Doesn't Wait:</strong> Your problems need addressing now, not in two months</li>
+                        <li><strong>Motivation Fades:</strong> That "I need to do something" feeling often diminishes over time without action</li>
+                        <li><strong>Problems Escalate:</strong> What's manageable today might become overwhelming in weeks</li>
+                        <li><strong>Hopelessness Grows:</strong> Long waits can feel like confirmation that help isn't really available</li>
+                        <li><strong>Momentum Dies:</strong> Research shows people who start therapy quickly are more likely to complete treatment</li>
+                        <li><strong>Life Keeps Happening:</strong> Work stress, relationship issues, and anxiety don't pause for appointment schedules</li>
+                        <li><strong>Courage Diminishes:</strong> The vulnerability required to seek help can feel too scary weeks later</li>
                     </ul>
                     
-                    <p>Your mental health deserves the same urgency as physical health - you wouldn't wait weeks with a broken bone.</p>
+                    <p>Your mental health crisis deserves the same urgency as a physical emergency. You wouldn't wait two months to treat a broken bone - why wait to heal emotional pain?</p>
                     
-                    <!-- Mid-page CTA -->
-                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <a href="tel:+14163062157" class="primary-cta">Secure Your Spot</a>
+                    <!-- V2 Mid-Section CTA with Urgency -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-xl); background: linear-gradient(135deg, rgba(229, 62, 62, 0.08), rgba(197, 48, 48, 0.05)); border-radius: var(--radius-md); border-left: 4px solid #e53e3e;">
+                        <p style="margin-bottom: var(--space-md); font-weight: 600; color: var(--text-primary); font-size: 1.125rem;">Sessions available within 48-72 hours. Your readiness matters.</p>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Book While You're Ready</a>
                     </div>
                 </div>
             </div>
@@ -758,32 +871,32 @@
                     <div class="timeline-item">
                         <span class="timeline-marker">1</span>
                         <div>
-                            <h4><strong>Today: Initial Contact</strong></h4>
-                            <p>Call or email to check this week's availability. We typically have openings within 48-72 hours. Brief 5-minute conversation to understand your needs and schedule your session. No lengthy phone screening - we save the detailed discussion for your actual appointment.</p>
+                            <h4><strong>Today: Reach Out While You're Ready</strong></h4>
+                            <p>Call (519) 800-8323 or use our contact form to check this week's availability. Quick 5-minute conversation - no lengthy screening process that makes you repeat your story. We understand that reaching out takes courage and honor that by making it simple.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <span class="timeline-marker">2</span>
                         <div>
-                            <h4><strong>Tomorrow: Simple Preparation</strong></h4>
-                            <p>Receive session link and brief intake form via email. Complete basic information (takes 10 minutes maximum). Think about what you want to address - no pressure to have everything figured out. Test your technology if new to virtual sessions.</p>
+                            <h4><strong>Within 24 Hours: Session Confirmed</strong></h4>
+                            <p>Receive secure session link and brief intake form (10 minutes max). No pressure to have everything figured out beforehand. Many clients say they feel relief just knowing their session is scheduled this week.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <span class="timeline-marker">3</span>
                         <div>
-                            <h4><strong>This Week: Your First Session</strong></h4>
-                            <p>Connect virtually from anywhere in Ontario. Full 50-minute session focused on your immediate needs. Leave with initial strategies and clear next steps. Schedule follow-up if you want to continue.</p>
+                            <h4><strong>This Week: Your First Real Support</strong></h4>
+                            <p>Full 50-minute virtual session from your chosen safe space. Focus on what brought you to therapy right now. Leave with practical strategies you can use immediately and a clear path forward. Many clients describe feeling "heard" for the first time in months.</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <span class="timeline-marker">4</span>
                         <div>
-                            <h4><strong>Moving Forward: Consistent Support</strong></h4>
-                            <p>Regular weekly sessions if desired. Flexible scheduling that works with your life. Ongoing support without gaps or interruptions. Build momentum toward your goals.</p>
+                            <h4><strong>Ongoing: Build on the Momentum</strong></h4>
+                            <p>Continue with weekly sessions if helpful. No pressure to commit long-term - we work at your pace. Regular support without the gaps that let problems build back up. Many find that consistent weekly work prevents crisis altogether.</p>
                         </div>
                     </div>
                 </div>
@@ -965,62 +1078,125 @@
                 <h2 style="text-align: center; margin-bottom: var(--space-xl);">Questions About Same-Week Appointments</h2>
                 
                 <div class="faq-item">
-                    <h4>How do you have availability when others have long waitlists?</h4>
-                    <p>Virtual format allows more flexible scheduling. We prioritize new client access. Efficient intake process saves time. Our focus is on accessibility, not maintaining artificial scarcity.</p>
+                    <h4>How is same-week access even possible when everyone else has waitlists?</h4>
+                    <p>Virtual therapy eliminates many scheduling constraints of traditional in-person practice. We can offer evening and weekend slots, don't lose time to travel between locations, and our intake process is streamlined. Most importantly, we prioritize immediate access because research shows people are most likely to engage with therapy when they're actively motivated to start.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Is the quality the same as therapists with waitlists?</h4>
-                    <p>Absolutely. Quick access doesn't mean lower quality. Jesse Cynamon is a fully registered psychotherapist (CRPO #10979) with extensive training and experience. Availability is about efficient practice management, not qualifications.</p>
+                    <h4>Does quick access mean lower quality care?</h4>
+                    <p>Not at all. Jesse Cynamon is a fully registered psychotherapist (CRPO #10979) with the same training and credentials as therapists with longer waitlists. Quick access reflects efficient practice management and a commitment to when people actually need help - in their moment of readiness, not weeks later.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>What if I need ongoing therapy after my first session?</h4>
-                    <p>Most clients continue with regular weekly sessions. We reserve spots for existing clients while maintaining quick access for new ones. You won't be back on a waitlist after starting.</p>
+                    <h4>What happens after my first session if I want to continue?</h4>
+                    <p>Many clients do continue with regular weekly sessions. We reserve ongoing slots for existing clients, so you won't face another waitlist. Your consistent time becomes protected once you start. You'll never have to go weeks without support again.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Can I book a same-week appointment every week?</h4>
-                    <p>Once you start, we'll establish a regular schedule that works for you. Same-week booking is primarily for initial access - after that, you'll have your consistent slot.</p>
+                    <h4>What if I'm not sure I'm ready for therapy but need someone to talk to?</h4>
+                    <p>That uncertainty is completely normal and doesn't disqualify you from getting support. Many clients start therapy just to "figure things out" or have someone listen. There's no minimum level of crisis required. Sometimes talking to someone professional helps clarify whether ongoing therapy would be helpful.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>What if I need to cancel my same-week appointment?</h4>
-                    <p>Life happens. We understand that urgent bookings sometimes need urgent changes. 24-hour notice is appreciated when possible, but we work with your situation.</p>
+                    <h4>Can I really get an appointment if I call today?</h4>
+                    <p>Most weeks, yes. We maintain several same-week slots specifically for new clients who need immediate access. The earlier in the week you call, the more options are typically available. Even if this week is full, we'll get you in within days, not weeks.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <h4>Do you always have same-week availability?</h4>
-                    <p>We maintain availability most weeks, though specific times may vary. Calling gives you the best chance of securing your preferred time. Flexibility with timing increases options.</p>
+                    <h4>What if I need to cancel or reschedule my same-week appointment?</h4>
+                    <p>Life happens, especially when you're struggling. While we appreciate 24-hour notice when possible, we understand that urgent bookings sometimes require urgent changes. We work with your situation and won't penalize you for the chaos that often accompanies mental health challenges.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Will my insurance cover same-week appointments?</h4>
+                    <p>Yes - insurance doesn't distinguish between same-week and regular appointments. Jesse Cynamon is registered with CRPO (#10979), which is covered by most Ontario extended health plans. You'll receive proper receipts immediately after each session for easy reimbursement.</p>
                 </div>
             </div>
         </section>
         
-        <!-- Contact Section -->
+        <!-- Contact Section - V2 Conversion Optimized -->
         <section class="contact-highlight" id="contact">
             <div class="container">
-                <h3>Start Therapy This Week</h3>
-                <p>You've waited long enough. Professional support is available within days, not months.</p>
+                <h3>Don't Let Another Week Go By</h3>
+                <p>You've already made the hardest decision - recognizing you need support. The next step is the easiest - just pick up the phone.</p>
                 
-                <h4>Book Your Same-Week Appointment</h4>
-                <p>Call now to secure one of this week's remaining spots. Virtual sessions mean immediate access from anywhere in Ontario.</p>
+                <h4>Same-Week Virtual Therapy Sessions</h4>
+                <p>Available across Ontario from your safe space. No commute, no waiting rooms, no weeks of wondering "what if I had called sooner."</p>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="hero-cta">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Book This Week's Session</a>
+                    <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md);">
+                        <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-secondary">Send Quick Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
-                    Same-Week Virtual Appointments Throughout Ontario<br>
-                    Quick access for when you need support now<br>
-                    Insurance receipts provided immediately
+                    Same-Week Appointments Available Throughout Ontario<br>
+                    Virtual sessions from your chosen safe space<br>
+                    Insurance receipts provided for all sessions
                 </div>
             </div>
         </section>
     </main>
     
-    <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
-        📞 Book This Week
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="https://www.nextsteptherapy.ca/#contact" class="mobile-sticky-cta" id="mobileCTA">
+        ⚡ Book This Week's Session
     </a>
+    
+    <!-- V2 Smart CTA JavaScript -->
+    <script>
+        // Show sticky CTA only after user scrolls 30% down page
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.offsetHeight - window.innerHeight);
+            const stickyCTA = document.getElementById('mobileCTA');
+            
+            if (rate > 0.3 && window.innerWidth <= 768) {
+                stickyCTA.classList.add('show');
+            } else {
+                stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Track mobile CTA clicks
+        document.getElementById('mobileCTA').addEventListener('click', function() {
+            gtag('event', 'mobile_cta_click', {
+                'event_category': 'conversion',
+                'event_label': 'same_week_mobile_cta',
+                'value': 250
+            });
+        });
+        
+        // Smart Sticky Header
+        const header = document.querySelector('.smart-sticky');
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        }
+        
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
 
 </body></html>

@@ -1,5 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -8,9 +67,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data -->
-    <title>Panic Attacks When Driving in Ontario? Highway Anxiety Help | Virtual Therapy</title>
-    <meta name="description" content="Overcome panic attacks on the 401, QEW, and Ontario highways. Virtual therapy for driving anxiety. Free consultation with CRPO registered therapist.">
+    <!-- SEO Meta Data - V2 Emotional + Conversion -->
+    <title>Terrified of Driving? Overcome Panic on Ontario Roads | CRPO #10979</title>
+    <meta name="description" content="When the 401 feels like a death trap and bridges make you panic. Reclaim your freedom to drive anywhere in Ontario. Virtual therapy - no driving required.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Panic Attacks When Driving Ontario | Next Step Therapy">
@@ -21,140 +80,94 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/panic-attacks-driving-ontario">
     
-    <!-- Schema Markup -->
+    <!-- Enhanced V2 Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
-            }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
           "@type": "Article",
-          "headline": "Panic Attacks While Driving in Ontario: Highway Anxiety Treatment",
-          "description": "Professional help for driving panic attacks and highway anxiety in Ontario. Learn to overcome driving phobia through evidence-based therapy techniques.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
+          "headline": "Overcome Panic Attacks When Driving in Ontario",
+          "description": "Virtual therapy for driving anxiety, highway panic, and bridge phobia across Ontario roads",
+          "wordCount": "2500+",
           "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
+            "@type": "Person",
+            "name": "Jesse Cynamon, RP",
+            "identifier": "CRPO #10979",
+            "jobTitle": "Registered Psychotherapist"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
+            "name": "Next Step Therapy"
           },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/panic-attacks-driving-ontario.html"
-          },
-          "about": [
-            {
-              "@type": "MedicalCondition",
-              "name": "Driving Phobia",
-              "description": "Intense fear of driving that can cause panic attacks and avoidance behaviors",
-              "possibleTreatment": {
-                "@type": "MedicalTherapy",
-                "name": "Exposure Therapy"
-              }
-            },
-            {
-              "@type": "MedicalCondition",
-              "name": "Panic Disorder",
-              "description": "Sudden episodes of intense fear with physical symptoms while driving"
+          "mainEntity": {
+            "@type": "MedicalCondition",
+            "name": "Driving Phobia",
+            "possibleTreatment": {
+              "@type": "MedicalTherapy",
+              "name": "Virtual Psychotherapy"
             }
-          ],
-          "keywords": "panic attacks driving Ontario, highway anxiety, driving phobia therapy, panic disorder driving, driving anxiety treatment",
-          "articleSection": "Mental Health",
-          "wordCount": "3400"
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Why do I have panic attacks when driving on Ontario highways?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Driving panic attacks often develop after stressful driving experiences, accidents, or during periods of high life stress. Ontario highways can trigger panic due to high speeds, heavy traffic, construction, and feeling trapped. Your nervous system associates driving with danger, triggering fight-or-flight responses even when you're safe."
+          "@type": "LocalBusiness",
+          "name": "Next Step Therapy",
+          "description": "Virtual therapy for driving anxiety and panic attacks throughout Ontario",
+          "areaServed": {
+            "@type": "State",
+            "name": "Ontario"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Driving Anxiety Treatment Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Virtual Driving Anxiety Therapy",
+                  "provider": {
+                    "@type": "Person",
+                    "name": "Jesse Cynamon, RP"
+                  }
+                }
               }
-            },
-            {
-              "@type": "Question",
-              "name": "Can therapy really help with driving panic attacks?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, therapy is highly effective for driving panic attacks. Cognitive-behavioral therapy and exposure therapy help you gradually build confidence behind the wheel while managing panic symptoms. Many clients progress from avoiding driving to confidently navigating Ontario highways and city streets."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What triggers panic attacks while driving in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Common triggers include highway driving, bridges (like the 401 overpasses), heavy traffic, construction zones, bad weather, tunnels, and unfamiliar routes. In Ontario specifically, winter driving conditions, the DVP, 401, and QEW traffic can trigger panic in susceptible individuals."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does it take to overcome driving panic attacks?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Recovery time varies, but many people see significant improvement within 8-12 therapy sessions. The key is gradual exposure combined with coping strategies. Some clients overcome their driving fear in weeks, while others need months of support. Consistent practice and professional guidance accelerate progress."
-              }
-            }
-          ]
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for Driving Anxiety Objections -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can therapy really help if I've been avoiding driving for years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Many clients haven't driven in months or years when they start therapy. We work at your pace, starting with whatever feels manageable - even if that's just thinking about driving. The path back is gradual but very possible."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Mental Health Resources",
-              "item": "https://nextsteptherapy.ca/seo"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Panic Attacks Driving Ontario",
-              "item": "https://nextsteptherapy.ca/panic-attacks-driving-ontario.html"
-            }
-          ]
+          "@type": "Question",
+          "name": "Is virtual therapy effective for driving anxiety?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Very effective. We can work through the psychological aspects, develop coping strategies, and even use visualization techniques. Plus, you don't have to drive to appointments while you're still struggling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I ever actually enjoy driving again?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many clients not only overcome their fear but actually come to enjoy driving again. Once the panic is managed and confidence returns, driving can once again become the freedom it used to represent."
+          }
         }
       ]
     }
@@ -198,6 +211,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -228,18 +242,15 @@
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
-        }
-        
-        .logo {
-            height: 42px;
-            width: auto;
         }
         
         .logo-text {
@@ -248,7 +259,8 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;        }
+            text-decoration: none;
+        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
@@ -260,13 +272,15 @@
         }
         
         .nav {
-            height: 42px;
+            display: flex;
             gap: var(--space-lg);
             list-style: none;
+            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -275,13 +289,16 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
+            text-decoration: none;
+            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -298,24 +315,25 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
+            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
         
@@ -327,6 +345,7 @@
         
         .lead-text {
             font-size: 1.25rem;
+            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -362,10 +381,12 @@
         /* Buttons */
         .btn {
             display: inline-flex;
+            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -388,7 +409,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -412,7 +433,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -422,7 +443,7 @@
         }
         
         .feature-list li {
-            height: 42px;
+            display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -434,7 +455,7 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         /* FAQ Section */
@@ -447,7 +468,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
@@ -460,16 +481,17 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
-            font-weight: 400;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .contact-highlight p {
@@ -481,8 +503,9 @@
         
         /* CTA Buttons */
         .hero-cta {
-            height: 42px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
             gap: var(--space-md);
         }
         
@@ -491,7 +514,8 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -505,7 +529,7 @@
         }
         
         .secondary-ctas {
-            height: 42px;
+            display: flex;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -514,6 +538,7 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -523,7 +548,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -535,7 +560,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -553,38 +578,107 @@
             line-height: 1.6;
         }
         
-        /* Floating CTA for Mobile */
-        .floating-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: none;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 400;
-            font-size: 0.9375rem;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
-            transition: all 0.3s ease;
-            min-height: 48px;
-            gap: 0.5rem;
+        /* V2 Trust Signals & Driving-Specific CTAs */
+        .trust-indicators {
+            display: flex;
+            gap: var(--space-lg);
+            margin: var(--space-md) 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
-        .floating-cta:hover {
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-deep);
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            padding: 18px 36px;
+            border-radius: var(--radius-md);
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(56, 161, 105, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 240px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, #2f855a, #276749);
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            box-shadow: 0 6px 20px rgba(56, 161, 105, 0.4);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid #38a169;
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .cta-secondary:hover {
+            background: #38a169;
+            color: white;
+        }
+        
+        /* V2 Mobile Sticky CTA - Driving Theme */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(56, 161, 105, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            transform: translateY(-2px);
             color: white;
         }
         
         @media (max-width: 768px) {
-            .floating-cta {
-                height: 42px;
-                bottom: 15px;
-                right: 15px;
-                padding: 0.875rem 1.25rem;
-                font-size: 0.875rem;
+            .mobile-sticky-cta {
+                display: block;
             }
         }
         
@@ -632,41 +726,46 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" width="200" height="40" loading="eager" onerror="this.style.display='none'">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="index.html#approach">Approach</a></li>
-                        <li><a href="index.html#specializations">Services</a></li>
-                        <li><a href="index.html#process">Process</a></li>
-                        <li><a href="index.html#contact">Connect</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
     
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section - V2 Conversion Optimized -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Panic Attacks When Driving Ontario</h1>
-                    <p class="lead-text">Whether it's the 401 at rush hour, merging on the QEW, or even quiet country roads - driving panic can make every trip feel like a threat. You're not alone, and you can overcome this.</p>
+                    <!-- V2 Trust Signals Above Fold -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">Driving Anxiety Specialist</span>
+                        <span class="trust-indicator">No Driving to Sessions</span>
+                        <span class="trust-indicator">CRPO #10979</span>
+                    </div>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <h1>Your Car Keys Shouldn't Scare You</h1>
+                    <p class="lead-text">When the thought of the 401 makes your chest tight and bridges feel like death traps, driving becomes a prison instead of freedom. You can reclaim Ontario's roads - and we don't even need to meet in person to start.</p>
+                    
+                    <!-- V2 CTA Hierarchy -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md); margin-top: var(--space-xl);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Reclaim Your Freedom</a>
+                        <a href="tel:+15198008323" class="cta-secondary">Call Someone Who Beat This: (519) 800-8323</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -695,10 +794,8 @@
                     
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Call or Text Now</a>
-                            <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
-                        </div>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">You can reclaim your confidence on the road.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Get Support Today</a>
                     </div>
                 </div>
             </div>
@@ -778,8 +875,9 @@
                     
                     <!-- CTA after explaining benefits -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Start Your Journey</a>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to overcome driving panic?</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Your Journey</a>
                             <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
                         </div>
                     </div>
@@ -856,10 +954,8 @@
                     
                     <!-- Mid-section CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Call or Text (416) 306-2157</a>
-                            <a href="index.html#contact" class="secondary-cta email-cta">Get Help Today</a>
-                        </div>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Virtual therapy - no driving required to get help.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Book Free Consultation</a>
                     </div>
                 </div>
             </div>
@@ -1027,31 +1123,89 @@
             </div>
         </section>
         
-        <!-- Contact Section -->
+        <!-- Contact Section - V2 Conversion Optimized -->
         <section class="contact-highlight" id="contact">
             <div class="container">
-                <h3>Take Back Your Freedom to Drive</h3>
-                <p>Driving panic doesn't have to limit your life. Whether it's getting to work, visiting family, or just having the freedom to go where you want - you can overcome this.</p>
+                <h3>Drive Anywhere in Ontario Again</h3>
+                <p>Imagine taking the highway without white knuckles. Planning road trips instead of avoiding them. Using bridges as shortcuts, not obstacles. This is possible.</p>
                 
-                <h4>Free 15-Minute Consultation</h4>
-                <p>Let's talk about your driving anxiety and how therapy can help you reclaim your confidence on Ontario roads.</p>
+                <h4>Start Your Recovery Journey</h4>
+                <p>Virtual therapy means no driving to get help with driving. We'll work together from your safe space until you're ready to reclaim the roads.</p>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="hero-cta">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Take Back Control</a>
+                    <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md);">
+                        <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-secondary">Quick Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
-                    Virtual Sessions Throughout Ontario<br>
-                    No driving required for appointments<br>
-                    Insurance receipts provided
+                    Virtual Driving Anxiety Therapy Throughout Ontario<br>
+                    Helping people reclaim their freedom one road at a time<br>
+                    Insurance coverage available for all sessions
                 </div>
             </div>
         </section>
     </main>
     
-    <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
-        📞 Call Now
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="https://www.nextsteptherapy.ca/#contact" class="mobile-sticky-cta" id="mobileCTA">
+        🚗 Start Recovery
     </a>
+    
+    <!-- V2 Smart CTA JavaScript -->
+    <script>
+        // Show sticky CTA only after user scrolls 30% down page
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.offsetHeight - window.innerHeight);
+            const stickyCTA = document.getElementById('mobileCTA');
+            
+            if (rate > 0.3 && window.innerWidth <= 768) {
+                stickyCTA.classList.add('show');
+            } else {
+                stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Track mobile CTA clicks
+        document.getElementById('mobileCTA').addEventListener('click', function() {
+            gtag('event', 'mobile_cta_click', {
+                'event_category': 'conversion',
+                'event_label': 'driving_anxiety_mobile_cta',
+                'value': 275
+            });
+        });
+        
+        // Smart Sticky Header
+        const header = document.querySelector('.smart-sticky');
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        }
+        
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
 
 </body></html>

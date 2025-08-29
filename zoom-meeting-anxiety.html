@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Meeting Anxiety Therapy | Virtual Therapy in Ontario | CRPO #10979</title>
+    <title>Zoom Meeting Anxiety Ruining Your Day? Join Calls with Confidence | CRPO #10979</title>
     <meta name="description" content="Professional therapy for Zoom meeting anxiety in Ontario. Expert virtual treatment for video call stress, camera anxiety, and digital meeting overwhelm. CRPO registered therapist.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,17 +113,22 @@
     </script>
 </head>
 <body>
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
                     <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <!-- CONVERSION OPTIMIZATION: CRPO badge moved above fold -->
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
+                
                 <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <!-- CONVERSION OPTIMIZATION: Direct contact link -->
+                    <a href="#contact" class="nav-cta">Get Help Today</a>
+                    <!-- MOBILE: Phone CTA for sticky header -->
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
             </div>
         </div>
@@ -132,11 +137,17 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Zoom Meeting Anxiety Therapy in Ontario</h1>
+                <h1>Zoom Meeting Anxiety Ruining Your Day? Join Calls with Confidence</h1>
+                <!-- V2 CONVERSION: Trust indicators above fold -->
+                <div class="trust-indicators">
+                    <span class="trust-indicator">Ontario Licensed</span>
+                    <span class="trust-indicator">Virtual Sessions</span>
+                    <span class="trust-indicator">Same-Day Response</span>
+                </div>
                 <p class="hero-subtitle">Professional virtual therapy for video call stress, camera anxiety, and digital meeting overwhelm. CRPO registered psychotherapist providing specialized treatment throughout Ontario.</p>
-                <div class="cta-buttons">
-                    <a href="https://jesse-cynamon.janeapp.com/" class="cta-primary" target="_blank">Book Your Session</a>
-                    <a href="tel:+15198008323" class="cta-secondary">Call (519) 800-8323</a>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-primary">Get Professional Support Today</a>
+                    <a href="tel:+15198008323" class="cta-secondary">Talk to Someone Who Gets It</a>
                 </div>
             </div>
         </section>
@@ -400,7 +411,112 @@
         </section>
     </main>
 
+    <!-- Contact CTA -->
+    <section class="contact-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Video Call Experience?</h2>
+            <p>Professional therapy can help you develop confidence and skills needed to thrive in virtual environments.</p>
+            <div class="hero-cta">
+                <a href="tel:+15198008323" class="btn btn-primary">Call (519) 800-8323</a>
+                <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Email Jesse</a>
+            </div>
+        </section>
+    </main>
+
     <style>
+        :root {
+            /* Updated Color Palette - Professional & Calming */
+            --primary-soft-blue: #4a6b7a;
+            --primary-light: #6b8a98;
+            --secondary-sage: #7a8471;
+            --neutral-warm: #f4f2f0;
+            --text-primary: #2c3e50;
+            --text-secondary: #5a6c7d;
+            --white: #ffffff;
+            --accent-gold: #d4af37;
+            --accent-warm: #8fa68e;
+            --primary-deep: #3a5766;
+            
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing System */
+            --space-section: 80px;
+            --space-xl: 48px;
+            --space-lg: 32px;
+            --space-md: 24px;
+            --space-sm: 16px;
+            --space-xs: 8px;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        /* Smart Sticky Header - 2025 Mobile UX Optimized */
+        .header {
+            background: var(--white);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-sm) 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background: var(--neutral-warm);
+        }
+
         .hero h1 {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4rem);
@@ -411,6 +527,330 @@
             letter-spacing: -0.025em;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
+
+        /* V2 CONVERSION OPTIMIZATION CSS */
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
+        }
+
+        .nav-cta {
+            background: var(--accent-warm);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-deep);
+            transform: translateY(-1px);
+        }
+        
+        .nav-mobile-phone {
+            display: none;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-mobile-phone:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+        }
+
+        .nav-desktop {
+            display: inline-block;
+        }
+
+        .trust-indicators {
+            display: flex;
+            gap: 24px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-primary:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--primary-soft-blue);
+            border-color: white;
+        }
+
+        /* Smart Mobile Sticky CTA - 2025 Optimized */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            opacity: 1;
+        }
+
+@media (max-width: 768px) {
+    .header {
+        max-height: 50px;
+        padding: 0.25rem 0;
+    }
+    
+    .header-content {
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo-section {
+        gap: 0.5rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .credentials-badge-prominent {
+        display: none; /* Hidden in mobile sticky */
+    }
+    
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-cta {
+        display: none; /* Hide desktop CTA */
+    }
+    
+    .nav-mobile-phone {
+        display: inline-block; /* Show mobile phone CTA */
+    }
+    
+    .mobile-sticky-cta { 
+        display: block; 
+    }
+    
+    .trust-indicators {
+        gap: 16px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .trust-indicator {
+        justify-content: center;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        width: 100%;
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cta-primary,
+    .cta-secondary {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+        /* Contact CTA Section */
+        .contact-cta {
+            background: var(--primary-soft-blue);
+            color: var(--white);
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-cta p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--text-primary);
+        }
+
+        .btn-primary:hover {
+            background: #c19b26;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-soft-blue);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
     </style>
+<!-- V2 Smart Mobile Sticky CTA -->
+<a href="tel:+15198008323" class="mobile-sticky-cta">Talk to Someone Who Gets It</a>
+
+<!-- Smart Sticky Header + Progressive Mobile CTA JavaScript -->
+<script>
+// Smart sticky header - hide on scroll down, show on scroll up
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', function() {
+    if (window.innerWidth <= 768) { // Mobile only
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 80) {
+            // Scrolling down & past initial area
+            header.classList.add('hide-on-scroll');
+        } else if (scrollTop < lastScrollTop) {
+            // Scrolling up
+            header.classList.remove('hide-on-scroll');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }
+});
+
+// Show sticky CTA only after user scrolls 30% down page (less intrusive)
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled / document.body.offsetHeight;
+    const stickyCTA = document.querySelector('.mobile-sticky-cta');
+    
+    if (rate > 0.3 && window.innerWidth <= 768) {
+        stickyCTA.classList.add('show');
+    } else {
+        stickyCTA.classList.remove('show');
+    }
+});
+
+// Hide sticky CTA when user reaches contact section
+window.addEventListener('scroll', function() {
+    const contactSection = document.querySelector('.contact-cta');
+    if (contactSection) {
+        const contactTop = contactSection.offsetTop;
+        const scrolled = window.pageYOffset;
+        const stickyCTA = document.querySelector('.mobile-sticky-cta');
+        
+        if (scrolled + window.innerHeight > contactTop) {
+            stickyCTA.classList.remove('show');
+        }
+    }
+});
+</script>
+
 </body>
 </html>

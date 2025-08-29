@@ -1,618 +1,1143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Counselling for Remote Workers | WFH Mental Health Support</title>
-    <meta name="description" content="Online therapy for remote workers dealing with isolation, burnout, and work-from-home challenges. Specialized support for digital fatigue and boundary issues.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/online-counselling-remote-workers.html">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Online Counselling for Remote Workers | WFH Mental Health Support">
-    <meta property="og:description" content="Online therapy for remote workers dealing with isolation, burnout, digital fatigue, and work-from-home boundary challenges.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://nextsteptherapy.ca/online-counselling-remote-workers.html">
     
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="images/asset104.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Enhanced JSON-LD Structured Data -->
+    <!-- SEO Meta Data - V2 Emotional + Conversion -->
+    <title>Isolation Crushing You? Online Support for Remote Workers | CRPO #10979</title>
+    <meta name="description" content="When working from home becomes working from hell. Break the isolation, manage burnout, reclaim boundaries. Virtual therapy that gets remote work reality.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Online Counselling for Remote Workers | Next Step Therapy">
+    <meta property="og:description" content="Specialized therapy for the unique mental health challenges of remote work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/online-counselling-remote-workers">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/online-counselling-remote-workers">
+    
+    <!-- Enhanced V2 Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
-            }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
           "@type": "Article",
-          "headline": "Online Counselling for Remote Workers: WFH Mental Health Support",
-          "description": "Specialized online therapy for remote workers dealing with isolation, digital burnout, work-life boundary issues, and the unique mental health challenges of working from home.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
+          "headline": "Online Counselling for Remote Workers: Breaking Isolation",
+          "description": "Professional mental health support for the unique challenges of remote work and home-office isolation",
+          "wordCount": "2500+",
           "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
+            "@type": "Person",
+            "name": "Jesse Cynamon, RP",
+            "identifier": "CRPO #10979",
+            "jobTitle": "Registered Psychotherapist"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/online-counselling-remote-workers.html"
-          },
-          "about": [
-            {
-              "@type": "Service",
-              "name": "Remote Worker Therapy",
-              "description": "Specialized online counselling for work-from-home mental health challenges"
-            },
-            {
-              "@type": "Service",
-              "name": "Digital Burnout Support",
-              "description": "Professional support for remote work isolation and digital fatigue"
-            }
-          ],
-          "keywords": "online counselling remote workers, work from home mental health, remote work therapy Ontario, digital burnout support",
-          "articleSection": "Workplace Mental Health",
-          "wordCount": "3700"
+            "name": "Next Step Therapy"
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What mental health challenges do remote workers face?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Remote workers commonly experience isolation, digital fatigue, blurred work-life boundaries, lack of social connection, difficulty 'switching off' from work, impostor syndrome, communication anxiety, and challenges with time management and motivation. These issues can lead to depression, anxiety, and burnout."
+          "@type": "LocalBusiness",
+          "name": "Next Step Therapy",
+          "description": "Virtual therapy services specialized for Ontario remote workers",
+          "areaServed": {
+            "@type": "State",
+            "name": "Ontario"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Remote Worker Mental Health Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Online Counselling for Remote Workers",
+                  "provider": {
+                    "@type": "Person",
+                    "name": "Jesse Cynamon, RP"
+                  }
+                }
               }
-            },
-            {
-              "@type": "Question",
-              "name": "How can online therapy help remote workers in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Online therapy offers convenient access to professional support without adding commute stress. For remote workers, it provides strategies for setting boundaries, managing isolation, improving work-life balance, developing healthy routines, and addressing anxiety or depression related to remote work challenges."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it ironic to use online therapy as a remote worker?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not at all! While remote workers spend much time online, therapy sessions serve a completely different purpose than work meetings. Online therapy provides professional mental health support, human connection, and structured time for self-care - which are exactly what many remote workers need most."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I manage work-life balance while working from home?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Effective work-life balance for remote workers involves creating physical boundaries (dedicated workspace), time boundaries (set work hours), mental boundaries (end-of-day rituals), and social boundaries (scheduling non-work social activities). Therapy can help develop personalized strategies that work for your situation."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Mental Health Resources",
-              "item": "https://nextsteptherapy.ca/seo"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Online Counselling Remote Workers",
-              "item": "https://nextsteptherapy.ca/online-counselling-remote-workers.html"
-            }
-          ]
+            ]
+          }
         }
       ]
     }
     </script>
-
-    <style>
-        :root {
-            --primary-blue: #4a6b7a;
-            --primary-light: #6b8a99;
-            --primary-soft-blue: #87a8ba;
-            --accent-warm: #d4a574;
-            --text-primary: #2c3e50;
-            --text-secondary: #5a6c7d;
-            --text-light: #7f8c8d;
-            --neutral-light: #f8f9fa;
-            --neutral-soft: #ecf0f1;
-            --white: #ffffff;
-            --shadow-soft: 0 4px 20px rgba(74, 107, 122, 0.1);
-            --shadow-medium: 0 8px 30px rgba(74, 107, 122, 0.15);
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'Source Sans 3', sans-serif;
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 2rem;
-            --space-lg: 3rem;
-            --space-xl: 4rem;
-            --space-section: 5rem;
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 24px;
+    
+    <!-- FAQ Schema for Remote Worker Objections -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is therapy different for remote workers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We understand unique challenges like Zoom fatigue, boundary issues, isolation, and career invisibility. Strategies are tailored to home office realities, not traditional workplace assumptions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Won't more screen time make things worse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Therapeutic screen time is different from work calls. It's focused on you, not performance. We can also do audio-only sessions if screen fatigue is severe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is remote work depression real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Isolation, lack of structure, and reduced stimulation can trigger or worsen depression. It's a recognized phenomenon requiring real support."
+          }
         }
-
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: var(--font-body);
-            line-height: 1.6;
-            background-color: var(--white);
-            overflow-x: hidden;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
-        /* Header */
-        .header {
-            background: var(--white);
-            box-shadow: var(--shadow-soft);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 var(--space-md);
         }
-
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
-            padding: var(--space-sm) 0;
+            align-items: center;
         }
-
-        .logo {
-            height: 42px;
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
         }
-
-        .logo img {
-            width: auto;
-        }
-
+        
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 400;
-            color: var(--primary-blue);
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
         }
-
+        
+        .credentials-badge {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+        
         .nav {
-            height: 42px;
-            gap: var(--space-md);
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
         }
-
+        
         .nav a {
             color: var(--text-secondary);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: var(--space-section) 0;
-            background: linear-gradient(135deg, var(--neutral-light) 0%, var(--neutral-soft) 100%);
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            text-decoration: none;
             font-weight: 400;
-            margin-bottom: var(--space-md);
-            line-height: 1.2;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
         }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
             margin-bottom: var(--space-lg);
-            max-width: 600px;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
             margin-left: auto;
             margin-right: auto;
         }
-
-        .cta-container {
-            height: 42px;
-            gap: var(--space-sm);
-            justify-content: center;
-            flex-wrap: wrap;
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
         }
-
-        .primary-cta, .secondary-cta {
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
+        .btn {
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 1rem 2rem;
-            border-radius: var(--radius-md);
-            font-weight: 400;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
         }
-
-        .primary-cta {
-            background: var(--primary-blue);
-            color: var(--white);
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
             box-shadow: var(--shadow-soft);
         }
-
-        .primary-cta:hover {
-            background: var(--primary-light);
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-2px);
             box-shadow: var(--shadow-medium);
+            color: white;
         }
-
-        .secondary-cta {
-            background: var(--white);
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
-
-        .secondary-cta:hover {
-            background: var(--primary-blue);
-            color: var(--white);
+        
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
         }
-
-        /* Main Content */
-        .main-content {
+        
+        /* Sections */
+        .section {
             padding: var(--space-section) 0;
         }
-
-        .content-section {
-            margin-bottom: var(--space-xl);
-        }
-
-        .content-section h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: var(--primary-blue);
-            margin-bottom: var(--space-md);
-        }
-
-        .content-section h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            margin-bottom: var(--space-sm);
-        }
-
-        .content-section p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: var(--space-md);
-            color: var(--text-secondary);
-        }
-
-        .remote-challenges {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-md);
-            margin: var(--space-lg) 0;
-        }
-
-        .challenge-card {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            padding: var(--space-md);
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow-soft);
-            border-left: 4px solid var(--accent-warm);
+            margin-bottom: var(--space-lg);
         }
-
-        .challenge-card h4 {
-            color: var(--primary-blue);
-            font-family: var(--font-display);
-            font-size: 1.25rem;
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
             margin-bottom: var(--space-sm);
         }
-
-        .wfh-focus {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: var(--space-lg);
-            border-radius: var(--radius-md);
-            margin: var(--space-xl) 0;
+        
+        /* Contact Section */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
             text-align: center;
         }
-
-        .wfh-focus h3 {
-            color: var(--white);
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
             margin-bottom: var(--space-md);
+            font-weight: 600;
         }
-
-        .related-resources {
-            background: var(--neutral-light);
-            padding: var(--space-lg);
-            border-radius: var(--radius-md);
-            margin: var(--space-xl) 0;
+        
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
         }
-
-        .related-resources h3 {
-            color: var(--primary-blue);
-            margin-bottom: var(--space-md);
-            text-align: center;
+        
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
         }
-
-        .resource-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-sm);
-        }
-
-        .resource-links a {
-            color: var(--primary-blue);
-            padding: var(--space-sm);
-            background: var(--white);
-            border-radius: var(--radius-sm);
+        
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
             transition: all 0.3s ease;
-            display: block;
+            box-shadow: var(--shadow-soft);
         }
-
-        .resource-links a:hover {
-            background: var(--primary-blue);
-            color: var(--white);
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
             transform: translateY(-2px);
         }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: var(--space-lg) 0;
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* V2 Trust Signals & CTA Hierarchy */
+        .trust-indicators {
+            display: flex;
+            gap: var(--space-lg);
+            margin: var(--space-md) 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-deep);
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
+            color: white;
+            padding: 18px 36px;
+            border-radius: var(--radius-md);
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 240px;
             text-align: center;
         }
-
-        /* Mobile Styles */
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(143, 166, 142, 0.4);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 200px;
+            text-align: center;
+            display: inline-block;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+        
+        /* V2 Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-deep));
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(74, 107, 122, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+        
         @media (max-width: 768px) {
-            .container {
-                padding: 0 var(--space-sm);
+            .mobile-sticky-cta {
+                display: block;
             }
-            
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
             .nav {
                 display: none;
             }
             
             .hero {
-                padding: var(--space-lg) 0;
+                padding: var(--space-xl) 0;
             }
             
-            .cta-container {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
                 flex-direction: column;
-            }
-            
-            .primary-cta, .secondary-cta {
+                gap: var(--space-sm);
                 width: 100%;
                 max-width: 300px;
-                justify-content: center;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo">
-                    <span class="logo-text">Next Step Therapy</span>
-                </a>
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                
                 <nav class="nav">
-                    <a href="index.html">Home</a>
-                    
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
+                
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Online Counselling for Remote Workers</h1>
-            <p class="hero-subtitle">Specialized mental health support for work-from-home challenges, digital fatigue, isolation, and boundary struggles affecting remote professionals.</p>
-            
-            <div class="cta-container"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
-        </div>
-    </section>
-
+    
     <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            
-            <section class="content-section">
-                <h2>The Hidden Mental Health Cost of Remote Work</h2>
-                <p>Working from home was supposed to be the dream - no commute, flexible schedule, comfort of your own space. But for many remote workers, it's become a mental health challenge nobody talks about.</p>
-                <p>The isolation, boundary blur, and constant screen time create unique stressors that traditional workplace mental health resources don't address.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Remote Work Mental Health Challenges</h2>
-                
-                <div class="remote-challenges">
-                    <div class="challenge-card">
-                        <h4>Social Isolation</h4>
-                        <p>Days without meaningful face-to-face interaction, feeling disconnected from colleagues and missing the social energy of shared workspaces.</p>
+    <main>
+        <!-- Hero Section - V2 Conversion Optimized -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- V2 Trust Signals Above Fold -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">Remote Work Specialist</span>
+                        <span class="trust-indicator">Virtual-First Practice</span>
+                        <span class="trust-indicator">CRPO #10979</span>
                     </div>
-
-                    <div class="challenge-card">
-                        <h4>Boundary Erosion</h4>
-                        <p>When your bedroom is your office, work never truly ends. Home space becomes work space, affecting sleep and family relationships.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h4>Digital Fatigue</h4>
-                        <p>Screen exhaustion from back-to-back video calls, constant notifications, and the mental drain of communicating through technology all day.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h4>Imposter Syndrome</h4>
-                        <p>Feeling like you need to prove you're actually working when no one can see you, leading to overcompensation and burnout.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h4>Motivation and Focus Issues</h4>
-                        <p>Struggling to stay productive without office structure, dealing with home distractions, and lacking the energy of collaborative environments.</p>
-                    </div>
-
-                    <div class="challenge-card">
-                        <h4>Communication Stress</h4>
-                        <p>Anxiety about being misunderstood in written messages, pressure to be always available, and difficulty reading social cues virtually.</p>
+                    
+                    <h1>Working From Home Becoming Working From Hell?</h1>
+                    <p class="lead-text">When your bedroom is your boardroom and your couch is your cubicle, isolation hits different. You're not broken - you're human trying to adapt to an unnatural work environment. Let's figure this out together.</p>
+                    
+                    <!-- V2 CTA Hierarchy -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md); margin-top: var(--space-xl);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Break the Remote Work Isolation</a>
+                        <a href="tel:+15198008323" class="cta-secondary">Call Someone Who Gets It: (519) 800-8323</a>
                     </div>
                 </div>
-            </section>
-
-            <section class="wfh-focus">
-                <h3>Therapy for the Remote Work Reality</h3>
-                <p>This isn't about going back to the office - it's about making remote work sustainable for your mental health. We focus on practical strategies that fit your WFH lifestyle.</p>
-                <p>Sessions via the same technology you use for work, but designed to restore rather than drain your energy.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>What We Address in Remote Worker Therapy</h2>
-                
-                <h3>Creating Healthy Boundaries</h3>
-                <p>Strategies for mentally "leaving" work when your office is your living room. Physical and psychological techniques for work-home separation.</p>
-
-                <h3>Managing Digital Overwhelm</h3>
-                <p>Reducing screen fatigue, setting communication boundaries, and creating restorative breaks that actually help you recharge during the day.</p>
-
-                <h3>Building Connection</h3>
-                <p>Addressing isolation without forcing yourself into draining social situations. Finding meaningful connection that fits your remote work schedule.</p>
-
-                <h3>Sustainable Productivity</h3>
-                <p>Moving beyond toxic productivity culture to find rhythms that maintain your performance without sacrificing your wellbeing.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Common Remote Work Scenarios I Help With</h2>
-                <ul style="margin-left: 2rem; margin-bottom: 2rem; line-height: 1.8;">
-                    <li><strong>Home office anxiety:</strong> Your workspace has become associated with stress and it's affecting your home life</li>
-                    <li><strong>Zoom fatigue:</strong> Feeling completely drained after video call-heavy days</li>
-                    <li><strong>Always-on syndrome:</strong> Feeling guilty when you're not available or responding to messages immediately</li>
-                    <li><strong>Career stagnation fears:</strong> Worrying about professional growth and visibility when working remotely</li>
-                    <li><strong>Relationship strain:</strong> Family or roommate conflicts arising from shared spaces and constant presence</li>
-                    <li><strong>Sleep disruption:</strong> Trouble winding down when your bedroom is steps from your desk</li>
-                </ul>
-            </section>
-
-            <section class="content-section">
-                <h2>The Online Therapy Advantage for Remote Workers</h2>
-                <p>Virtual therapy sessions offer unique benefits for remote workers:</p>
-
-                <h3>Familiar Technology</h3>
-                <p>Use the same video platforms you're comfortable with for work, but in a therapeutic rather than transactional context.</p>
-
-                <h3>Schedule Flexibility</h3>
-                <p>Sessions during lunch breaks, between meetings, or outside traditional office hours to fit your remote work schedule.</p>
-
-                <h3>Environment Control</h3>
-                <p>Therapy from your chosen space where you feel most comfortable discussing work and home boundary issues.</p>
-
-                <h3>Immediate Implementation</h3>
-                <p>Practice new boundary-setting or stress management techniques in your actual work-from-home environment.</p>
-            </section>
-
-            <section class="content-section">
-                <h2>Building a Sustainable Remote Work Life</h2>
-                <p>Remote work isn't going anywhere, so let's make it work for your mental health:</p>
-
-                <h3>Routine Architecture</h3>
-                <p>Creating structure that supports both productivity and wellbeing without the external framework of office life.</p>
-
-                <h3>Energy Management</h3>
-                <p>Understanding your natural rhythms and designing a remote work schedule that enhances rather than depletes your energy.</p>
-
-                <h3>Social Strategy</h3>
-                <p>Intentional approaches to maintaining professional relationships and personal connections from a distance.</p>
-
-                <h3>Growth Mindset</h3>
-                <p>Reframing remote work challenges as opportunities for developing new skills in self-management and digital communication.</p>
-            </section>
-
-            <!-- Related Resources -->
-            <section class="related-resources">
-                <h3>Related Remote Work Resources</h3>
-                <div class="resource-links">
-                    <a href="cant-stop-worrying-work.html">Can't Stop Worrying About Work</a>
-                    <a href="cant-sleep-anxiety.html">Can't Sleep Because of Anxiety</a>
-                    <a href="mental-health-ontario-professionals.html">Mental Health for Professionals</a>
-                    <a href="virtual-therapy-busy-parents.html">Virtual Therapy Options</a>
-                    <a href="services/workplace-stress-burnout.html">Workplace Stress & Burnout</a>
+            </div>
+        </section>
+        
+        <!-- Problem Validation Section - V2 Emotional Psychology -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>When "Work From Home" Became "Trapped at Home"</h2>
+                    
+                    <p>Remember when remote work sounded like the dream? No commute, no office politics, work in your pajamas if you wanted. But somewhere between your 47th Zoom call of the week and realizing you haven't left the house in three days, the dream started feeling like a prison.</p>
+                    
+                    <p>You're staring at the same four walls all day, every day. Your "office" is your kitchen table, your couch, or that corner of your bedroom that never quite feels right for work. The line between "home" and "office" didn't just blur - it disappeared entirely. And with it, so did you.</p>
+                    
+                    <h3>The Reality No One Talks About in Remote Work Articles:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Soul-Crushing Isolation:</strong> Days passing without a single meaningful conversation with another human</li>
+                        <li><strong>Zoom Exhaustion:</strong> More drained from video calls than you ever were from in-person meetings</li>
+                        <li><strong>The Always-On Trap:</strong> Work laptop sitting there at 9 PM, silently judging your "work-life balance"</li>
+                        <li><strong>Invisible Employee Syndrome:</strong> Wondering if anyone would notice if you disappeared from Slack</li>
+                        <li><strong>Body Breaking Down:</strong> Back pain, eye strain, and the slow decay of never moving</li>
+                        <li><strong>Relationship Casualties:</strong> Your partner becoming a roommate you occasionally nod at between meetings</li>
+                        <li><strong>Social Skills Atrophy:</strong> Forgetting how to make small talk or feeling awkward in person</li>
+                        <li><strong>Identity Crisis:</strong> Who are you when "work you" and "home you" occupy the same space?</li>
+                    </ul>
+                    
+                    <p>If you're struggling with remote work, you're not failing at the "future of work" - you're having a normal human response to an abnormal situation.</p>
+                    
+                    <!-- V2 Mid-Section CTA with Psychology -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-xl); background: linear-gradient(135deg, rgba(74, 107, 122, 0.06), rgba(107, 137, 160, 0.04)); border-radius: var(--radius-md); border-left: 4px solid var(--primary-soft-blue);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 600; color: var(--text-primary); font-size: 1.125rem;">You're not meant to work in isolation. Let's change that.</p>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Talk to Someone Who Understands</a>
+                    </div>
                 </div>
-            </section>
-
-            <!-- Final CTA -->
-            <section class="content-section" style="text-align: center; padding: var(--space-lg); background: var(--neutral-light); border-radius: var(--radius-md);">
-                <h2>Make Remote Work Sustainable</h2>
-                <p style="font-size: 1.2rem; margin-bottom: var(--space-lg);">Let's create strategies that help you thrive in your work-from-home environment.</p>
-                <div class="cta-container"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
-            </section>
-
-        </div>
+            </div>
+        </section>
+        
+        <!-- Unique Challenges Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Remote Workers Need Specialized Support</h2>
+                    
+                    <p>Traditional workplace mental health approaches don't address the unique challenges of remote work. You need support that understands this new reality.</p>
+                    
+                    <h3>The Remote Work Mental Health Crisis:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>The Isolation Paradox</strong></h4>
+                        <p>Connected to colleagues through screens but profoundly alone. Constant communication but no real connection. Surrounded by family but can't discuss work stress. The loneliness is different from being alone - it's being unseen.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Always-On Culture</strong></h4>
+                        <p>When your laptop is always within reach, work never truly ends. The 9-to-5 dissolved into 24/7 availability. Eating lunch at your desk because no one sees you take breaks. The pressure to prove you're working by always being online.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Zoom Performance Anxiety</strong></h4>
+                        <p>Every meeting is a performance with you on display. Exhaustion from processing non-verbal cues through screens. Self-consciousness about your appearance and background. The drain of maintaining "camera presence" all day.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Career Invisibility</strong></h4>
+                        <p>Out of sight, out of mind for promotions and opportunities. Missing the informal networks and water cooler conversations. Wondering if anyone notices your contributions. Fear that remote workers will be first to go in layoffs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Physical and Mental Impact Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Remote Work Affects Your Whole Self</h2>
+                    
+                    <p>The impact of remote work extends far beyond just feeling lonely. It's reshaping how we think, feel, and exist in the world.</p>
+                    
+                    <h3>Mental Health Impacts:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Depression and Disconnection</strong></h4>
+                        <p>Days blend together without structure or variation. Motivation disappears when no one's watching. The fog of depression settling in gradually. Losing sense of purpose and meaning in work. Questioning if what you do matters.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Anxiety and Hypervigilance</strong></h4>
+                        <p>Constant worry about being seen as productive. Anxiety about job security without office presence. Panic about technology failures during important calls. Social anxiety growing stronger with each isolated day.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Cognitive Decline</strong></h4>
+                        <p>Brain fog from lack of stimulation and variety. Difficulty concentrating without office structure. Memory problems from days that all feel the same. Creative thinking suffering without collaboration.</p>
+                    </div>
+                    
+                    <h3>Physical Manifestations:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Body Breaking Down</strong></h4>
+                        <p>Back pain from makeshift office setups. Eye strain from endless screen time. Headaches from poor lighting and posture. Weight changes from proximity to kitchen. Sleep disruption from work-life boundary collapse.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Social Skills Atrophy</strong></h4>
+                        <p>Forgetting how to make small talk. Feeling awkward in person after months online. Voice getting weaker from lack of use. Body language skills deteriorating. Dreading any in-person interaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How Therapy Helps Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Online Counselling Transforms Remote Work Life</h2>
+                    
+                    <p>Online counselling for remote workers isn't just about managing symptoms - it's about thriving in this new work paradigm while protecting your mental health.</p>
+                    
+                    <h3>Therapeutic Strategies for Remote Workers:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Creating Boundaries in Boundaryless Work</strong></h4>
+                        <p>Develop rituals that separate work from personal time. Create physical and psychological boundaries in shared spaces. Learn to "commute" within your home. Establish non-negotiable offline hours. Protect your energy without guilt.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Combating Isolation Strategically</strong></h4>
+                        <p>Build connection routines that work for introverts and extroverts. Develop meaningful virtual relationships. Create accountability partnerships with other remote workers. Navigate the balance between solitude and loneliness.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Managing Zoom Fatigue and Digital Drain</strong></h4>
+                        <p>Understand why video calls exhaust you. Develop strategies for sustainable virtual presence. Learn when cameras off is self-care, not rudeness. Create recovery protocols between meetings.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Maintaining Career Momentum Remotely</strong></h4>
+                        <p>Stay visible without being performative. Build your professional brand from home. Navigate remote office politics effectively. Advocate for yourself when no one sees your work.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Rebuilding Structure and Purpose</strong></h4>
+                        <p>Create meaningful routines without external structure. Find purpose in work without office culture. Develop intrinsic motivation strategies. Build a life that's more than just work from home.</p>
+                    </div>
+                    
+                    <!-- CTA after benefits -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Transform isolation into intentional solitude.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Your Support</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Connect Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Remote Work Types Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Support for Every Type of Remote Worker</h2>
+                    
+                    <p>Remote work looks different for everyone. Online counselling adapts to your specific situation:</p>
+                    
+                    <h3>The Permanent Remote Employee:</h3>
+                    <p>Company went fully remote forever. Missing office culture and advancement opportunities. Struggling with invisibility in organization. Wondering if this is sustainable long-term. Need strategies for thriving, not just surviving.</p>
+                    
+                    <h3>The Hybrid Worker:</h3>
+                    <p>Worst of both worlds or best of both? Managing two different work modes. Social anxiety about office days. Guilt about preferring home days. Navigating colleague resentment about flexibility.</p>
+                    
+                    <h3>The Digital Nomad:</h3>
+                    <p>Freedom that feels like rootlessness. Timezone chaos and constant adaptation. Loneliness in paradise. Difficulty maintaining relationships. Identity crisis without home base.</p>
+                    
+                    <h3>The Freelancer/Contractor:</h3>
+                    <p>Isolation plus financial anxiety. No colleagues, no security. Imposter syndrome without validation. Feast or famine stress cycles. Difficulty separating work from worth.</p>
+                    
+                    <h3>The Entrepreneur:</h3>
+                    <p>Building alone from home. Decision fatigue without sounding boards. Success feels hollow when celebrated alone. Pressure to be "on" for virtual networking. Work consuming entire life.</p>
+                    
+                    <p style="margin-top: var(--space-lg);"><strong>Whatever your remote work situation, specialized support helps.</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ontario Specific Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>The Ontario Remote Work Experience</h2>
+                    
+                    <p>Ontario's remote workers face unique regional challenges that online counselling can address:</p>
+                    
+                    <h3>Ontario-Specific Remote Challenges:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Toronto Condo Isolation</strong></h4>
+                        <p>Working from 500 square feet with no separation. Hearing neighbors through walls during calls. No outdoor space for breaks. Paying downtown rent without downtown benefits. The city's energy outside while you're trapped inside.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Suburban Disconnect</strong></h4>
+                        <p>Moved to suburbs for space, found isolation. Everyone commutes except you. Neighborhood empty during work hours. Missing city energy and stimulation. Questioning life choices daily.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Rural Internet Struggles</strong></h4>
+                        <p>Unreliable connection adding technical stress. Limited coworking or coffee shop options. Professional isolation in small communities. City job with country limitations.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Seasonal Affective Remote Work</strong></h4>
+                        <p>Ontario winters hit harder when working from home. No reason to leave house for days. Darkness at start and end of workday. Vitamin D deficiency compounding depression. February as remote worker is particularly brutal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Practical Strategies Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Immediate Strategies for Remote Work Wellbeing</h2>
+                    
+                    <p>While therapy provides deep support, these strategies can help immediately:</p>
+                    
+                    <h3>Daily Structure Rebuilding:</h3>
+                    <ul class="feature-list">
+                        <li>Create fake commute - walk before and after work</li>
+                        <li>Dress for work even at home (psychological boundary)</li>
+                        <li>Set up dedicated workspace, even if small</li>
+                        <li>Use different devices for work and personal if possible</li>
+                        <li>Schedule "closing time" rituals</li>
+                    </ul>
+                    
+                    <h3>Connection Without Exhaustion:</h3>
+                    <ul class="feature-list">
+                        <li>Audio-only walking meetings when possible</li>
+                        <li>Virtual coworking sessions (work quietly together)</li>
+                        <li>Scheduled social calls separate from work</li>
+                        <li>Join remote worker communities online</li>
+                        <li>Regular in-person activities outside work</li>
+                    </ul>
+                    
+                    <h3>Energy Management:</h3>
+                    <ul class="feature-list">
+                        <li>Batch video calls to specific days/times</li>
+                        <li>Build in transition time between meetings</li>
+                        <li>Take real lunch breaks away from desk</li>
+                        <li>Use Pomodoro technique for focus</li>
+                        <li>End workday with physical activity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Remote Worker Therapy Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>How is therapy different for remote workers?</h4>
+                    <p>We understand unique challenges like Zoom fatigue, boundary issues, isolation, and career invisibility. Strategies are tailored to home office realities, not traditional workplace assumptions.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Won't more screen time make things worse?</h4>
+                    <p>Therapeutic screen time is different from work calls. It's focused on you, not performance. We can also do audio-only sessions if screen fatigue is severe.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can therapy help with work-from-home productivity?</h4>
+                    <p>Yes, but not through typical productivity hacks. We address underlying issues affecting focus - isolation, anxiety, boundary problems - for sustainable improvement.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if my partner is also working from home?</h4>
+                    <p>We'll work on creating privacy and boundaries even in shared spaces. Many clients do sessions from cars, during walks, or when partners are out.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is remote work depression real?</h4>
+                    <p>Absolutely. Isolation, lack of structure, and reduced stimulation can trigger or worsen depression. It's a recognized phenomenon requiring real support.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can therapy help me decide if remote work is right for me?</h4>
+                    <p>Yes. We'll explore what's not working, what could improve, and whether remote work aligns with your needs and values.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How quickly can therapy help with remote work struggles?</h4>
+                    <p>Many clients report feeling less alone after just one session. Practical strategies can provide relief within weeks, with deeper changes developing over months.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section - V2 Conversion Optimized -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>You Don't Have to Figure This Out Alone</h3>
+                <p>Remote work broke all the old rules about how work and life fit together. Let's create new ones that actually work for you.</p>
+                
+                <h4>Virtual Support for Virtual Workers</h4>
+                <p>From someone who understands that "quick video call" dread, the guilt of working from bed, and why Slack notifications make your chest tight.</p>
+                
+                <div class="hero-cta">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Start Untangling the Mess</a>
+                    <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md);">
+                        <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="cta-secondary">Send Quick Message</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Virtual Therapy for Ontario's Remote Workers<br>
+                    Because working from home shouldn't mean suffering at home<br>
+                    Insurance coverage available for virtual sessions
+                </div>
+            </div>
+        </section>
     </main>
+    
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="https://www.nextsteptherapy.ca/#contact" class="mobile-sticky-cta" id="mobileCTA">
+        💻 Break the Isolation
+    </a>
+    
+    <!-- V2 Smart CTA JavaScript -->
+    <script>
+        // Show sticky CTA only after user scrolls 30% down page
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.offsetHeight - window.innerHeight);
+            const stickyCTA = document.getElementById('mobileCTA');
+            
+            if (rate > 0.3 && window.innerWidth <= 768) {
+                stickyCTA.classList.add('show');
+            } else {
+                stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Track mobile CTA clicks
+        document.getElementById('mobileCTA').addEventListener('click', function() {
+            gtag('event', 'mobile_cta_click', {
+                'event_category': 'conversion',
+                'event_label': 'remote_worker_mobile_cta',
+                'value': 200
+            });
+        });
+        
+        // Smart Sticky Header
+        const header = document.querySelector('.smart-sticky');
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        }
+        
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Next Step Therapy. Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</p>
-            <p>Online counselling support for remote workers across Ontario.</p>
-        </div>
-    </footer>
-</body>
-</html>
+</body></html>

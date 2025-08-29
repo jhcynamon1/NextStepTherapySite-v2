@@ -1,5 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -9,8 +68,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- SEO Meta Data - High Intent Keywords -->
-    <title>Therapist Available Today Ontario - Same Day Virtual Therapy | CRPO Registered</title>
-    <meta name="description" content="Get a therapist TODAY in Ontario. Same-day virtual therapy appointments available now. Urgent mental health crisis support. CRPO registered. Call immediately.">
+    <title>Need a Therapist Today Ontario? Same-Day Support When You Can't Wait | CRPO #10979</title>
+    <meta name="description" content="When waiting weeks isn't an option. Same-day virtual therapy appointments available throughout Ontario. Crisis support from CRPO registered therapist. Book now.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Therapist Available Today Ontario | Next Step Therapy">
@@ -23,137 +82,78 @@
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Need a Therapist Today Ontario? Same-Day Support When You Can't Wait",
+      "description": "Same-day virtual therapy appointments available throughout Ontario for urgent mental health support",
+      "wordCount": "2500+",
+      "author": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Next Step Therapy"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Urgent Mental Health Support",
+        "description": "Same-day therapy access for urgent mental health needs"
+      }
+    },
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
+      "@type": "LocalBusiness",
+      "name": "Next Step Therapy",
+      "description": "Same-day virtual therapy services across Ontario",
+      "telephone": "+14163062157",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Therapy Services",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Same-Day Virtual Therapy",
+            "provider": {
+              "@type": "Person",
+              "name": "Jesse Cynamon, RP"
             }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
-          "@type": "Article",
-          "headline": "Therapist Available Today Ontario: Same Day Virtual Therapy Appointments",
-          "description": "Find immediate mental health support with same-day therapy appointments available throughout Ontario. Crisis support and urgent therapy consultations.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
-          "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/therapist-available-today-ontario.html"
-          },
-          "about": [
-            {
-              "@type": "Service",
-              "name": "Same Day Therapy Appointments",
-              "description": "Immediate virtual therapy consultations available for urgent mental health needs"
-            },
-            {
-              "@type": "Service",
-              "name": "Crisis Mental Health Support",
-              "description": "Professional support for acute mental health situations"
-            }
-          ],
-          "keywords": "therapist available today Ontario, same day therapy appointment, urgent mental health support, crisis therapy Ontario",
-          "articleSection": "Mental Health Services",
-          "wordCount": "2800"
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Can I really see a therapist today in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, depending on availability and the nature of your situation. For urgent mental health needs, same-day virtual consultations may be possible. Call (416) 306-2157 to check immediate availability. For life-threatening emergencies, please call 911 or go to your nearest emergency room."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What qualifies as needing a therapist immediately?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Situations that may warrant same-day support include severe anxiety or panic attacks, acute depression, relationship crises, work-related mental health emergencies, or significant life trauma. If you're in crisis or feeling unsafe, immediate professional support can be arranged."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do same-day therapy appointments work in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-day appointments are conducted via secure virtual sessions. After calling, we'll conduct a brief assessment to determine if immediate support is appropriate. Sessions can be scheduled within hours if availability permits and clinical need is established."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What's the cost for immediate therapy in Ontario?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-day consultations follow standard therapy rates. Many Ontario extended health benefits cover virtual therapy sessions. Payment options and insurance information will be discussed when booking. Cost should never be a barrier to accessing urgent mental health support."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Mental Health Resources",
-              "item": "https://nextsteptherapy.ca/seo"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Therapist Available Today Ontario",
-              "item": "https://nextsteptherapy.ca/therapist-available-today-ontario.html"
-            }
-          ]
+          }
+        }]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How quickly can I actually get a session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often within hours of contacting us, depending on availability. We prioritize urgent requests and do our best to accommodate same-day needs. Call rather than email for fastest response."
         }
-      ]
-    }
+      }, {
+        "@type": "Question",
+        "name": "Is same-day therapy as effective as regular therapy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While ongoing therapy allows for deeper work, same-day sessions provide crucial support when you need it most. Many clients start with urgent sessions and continue with regular therapy."
+        }
+      }]
+    }]
     </script>
     
     <style>
@@ -194,6 +194,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -221,15 +222,22 @@
             top: 0;
             z-index: 100;
             padding: var(--space-md) 0;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
         }
         
@@ -239,25 +247,30 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;        }
+            text-decoration: none;
+        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 0.375rem 0.875rem;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-lg);
-            font-size: 0.8125rem;
-            font-weight: 500;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
         }
         
         .nav {
-            height: 42px;
+            display: flex;
             gap: var(--space-lg);
             list-style: none;
+            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -266,13 +279,16 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
+            text-decoration: none;
+            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -289,24 +305,25 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
+            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
         
@@ -318,6 +335,7 @@
         
         .lead-text {
             font-size: 1.25rem;
+            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -330,11 +348,12 @@
         /* Urgency Badge */
         .urgency-badge {
             display: inline-flex;
+            align-items: center;
             background: linear-gradient(135deg, #D97706, #DC2626);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
             animation: pulse 2s infinite;
         }
@@ -370,10 +389,12 @@
         /* Buttons */
         .btn {
             display: inline-flex;
+            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -396,7 +417,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -420,7 +441,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -430,7 +451,7 @@
         }
         
         .feature-list li {
-            height: 42px;
+            display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -442,7 +463,7 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         /* FAQ Section */
@@ -455,7 +476,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
@@ -468,16 +489,17 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
-            font-weight: 400;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .contact-highlight p {
@@ -489,8 +511,9 @@
         
         /* CTA Buttons */
         .hero-cta {
-            height: 42px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
             gap: var(--space-md);
         }
         
@@ -499,7 +522,8 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -513,7 +537,7 @@
         }
         
         .secondary-ctas {
-            height: 42px;
+            display: flex;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -522,6 +546,7 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -531,7 +556,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -543,7 +568,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -561,35 +586,49 @@
             line-height: 1.6;
         }
         
-        /* Floating CTA for Mobile */
+        /* Smart Sticky CTA for Mobile - V2 Enhancement */
         .floating-cta {
             position: fixed;
             bottom: 20px;
+            left: 20px;
             right: 20px;
             z-index: 1000;
-            display: none;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 400;
-            font-size: 0.9375rem;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
             transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            display: none;
+            max-width: 280px;
+            margin: 0 auto;
             min-height: 48px;
-            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .floating-cta.show {
+            display: flex;
+            opacity: 1;
         }
         
         .floating-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            box-shadow: 0 6px 25px rgba(76, 175, 80, 0.4);
             color: white;
         }
         
         @media (max-width: 768px) {
             .floating-cta {
-                height: 42px;
+                display: block;
                 bottom: 15px;
+                left: 15px;
                 right: 15px;
                 padding: 0.875rem 1.25rem;
                 font-size: 0.875rem;
@@ -640,26 +679,21 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="index.html#approach">Approach</a></li>
-                        <li><a href="index.html#specializations">Services</a></li>
-                        <li><a href="index.html#process">Process</a></li>
-                        <li><a href="index.html#contact">Connect</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -671,10 +705,20 @@
             <div class="container">
                 <div class="hero-content">
                     <span class="urgency-badge">Same-Day Availability</span>
-                    <h1>Therapist Available Today Ontario</h1>
-                    <p class="lead-text">When you need support right now, not weeks from now. Virtual therapy sessions available today throughout Ontario for immediate mental health support.</p>
+                    <h1>Need a Therapist Today?</h1>
+                    <p class="lead-text">When waiting weeks feels impossible and you need support right now. Same-day virtual therapy appointments available throughout Ontario. Because your mental health can't wait for scheduling.</p>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <!-- V2 Trust Signals -->
+                    <div style="display: flex; justify-content: center; gap: 24px; margin: 16px 0; flex-wrap: wrap;">
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ Ontario Licensed CRPO #10979</span>
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ Virtual Sessions</span>
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ Same-Day Response</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Start Feeling Better Today</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">Talk to Someone Who Gets It</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -704,7 +748,8 @@
                     
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <a href="tel:+14163062157" class="primary-cta">Connect Now</a>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Don't wait. Support is available today.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Connect Now</a>
                     </div>
                 </div>
             </div>
@@ -898,6 +943,111 @@
             </div>
         </section>
         
+        <!-- When Minutes Matter Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>When Every Hour of Suffering Matters</h2>
+                    
+                    <p>Some moments in life demand immediate attention. When you're in emotional crisis, when anxiety has reached unbearable levels, when depression feels like it's winning - these aren't times for appointment waitlists and "we'll call you back." These are times for same-day action.</p>
+                    
+                    <p>Ontario's mental health system is stretched thin. While this reality affects many, it doesn't have to affect you today. Same-day therapy appointments recognize that mental health crises operate on their own timeline, not administrative convenience.</p>
+                    
+                    <h3>The Hidden Cost of Delays:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Lost Momentum</strong></h4>
+                        <p>The decision to seek therapy often comes at a crucial moment of recognition or crisis. Waiting weeks can mean losing that crucial motivation. Research shows that immediate access to therapy leads to better engagement and outcomes than delayed treatment.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Escalating Symptoms</strong></h4>
+                        <p>Untreated mental health concerns rarely remain static. What starts as manageable anxiety can spiral into panic disorder. Mild depression can deepen into major depressive episodes. Early intervention prevents this escalation.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Life Disruption</strong></h4>
+                        <p>Every day you wait is another day of potential impact on your work, relationships, and overall quality of life. In Ontario's competitive job market and high-stress environment, mental health struggles can quickly affect every area of functioning.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Relationship Strain</strong></h4>
+                        <p>Mental health struggles affect not just you, but your family, friends, and colleagues. Same-day support can prevent conflicts, misunderstandings, and the isolation that often accompanies untreated mental health concerns.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg); font-weight: 500;">Your pain has already waited long enough. You deserve immediate support.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Science of Crisis Response Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Your Brain Needs Immediate Support</h2>
+                    
+                    <p>When you're in crisis, your brain is operating in survival mode. The prefrontal cortex - responsible for rational thinking and problem-solving - goes offline. The amygdala, your brain's alarm system, takes control. This isn't a character flaw; it's basic neuroscience.</p>
+                    
+                    <h3>Understanding Crisis Brain:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>The Window of Tolerance</strong></h4>
+                        <p>Everyone has a "window of tolerance" - a zone where they can think clearly and cope effectively. Crisis pushes you outside this window into hyperarousal (anxiety, panic, rage) or hypoarousal (depression, numbness, disconnection). Same-day therapy helps bring you back into your window.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Stress Hormone Cascade</strong></h4>
+                        <p>During crisis, cortisol floods your system. Prolonged elevation damages memory, impairs immune function, and worsens depression and anxiety. Professional intervention helps interrupt this cascade before it becomes entrenched.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Neuroplasticity and Timing</strong></h4>
+                        <p>Your brain is most plastic - most capable of change - during heightened emotional states. This means crisis moments are actually optimal times for therapeutic intervention. The same neural activation that creates suffering can be redirected toward healing.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Social Connection as Medicine</strong></h4>
+                        <p>Humans are wired for co-regulation - using connection with others to stabilize our nervous systems. When you're in crisis, isolation makes everything worse. Professional support provides the co-regulation your nervous system desperately needs.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg); color: var(--text-primary);"><em>Understanding what's happening in your brain doesn't minimize your pain - it validates it and points toward evidence-based solutions.</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ontario Mental Health Landscape Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Navigating Ontario's Mental Health System</h2>
+                    
+                    <p>Ontario faces a mental health access crisis. The Centre for Addiction and Mental Health reports that only 1 in 3 Ontarians who need mental health services actually receive them. For those who do seek help, the average wait time is 18 weeks. When you're in crisis, 18 weeks might as well be 18 years.</p>
+                    
+                    <h3>The Reality of Public vs. Private Options:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>OHIP-Covered Services</strong></h4>
+                        <p>Family doctors can provide basic mental health support, but appointments are often brief and focused on medication rather than therapy. Psychiatrists are OHIP-covered but have months-long waitlists and primarily handle severe mental illness and medication management.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Community Mental Health</strong></h4>
+                        <p>Excellent services exist through organizations like CAMH, but they're overwhelmed with demand. Crisis lines provide immediate support but can't offer ongoing therapeutic relationship. Walk-in clinics focus on immediate safety rather than comprehensive treatment.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Private Practice Reality</strong></h4>
+                        <p>Private therapists often have full practices with waitlists. Many don't return calls promptly because they're managing existing caseloads. The irony: when you're well enough to plan ahead, you can wait; when you're in crisis and need immediate help, you can't access it.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>The Virtual Solution</strong></h4>
+                        <p>Virtual therapy breaks many traditional barriers. No office overhead means more flexible scheduling. No geographic limitations mean broader access. No commute time means appointments can fit into urgent windows. Technology becomes a bridge to immediate care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- FAQ Section -->
         <section class="section" style="background: var(--neutral-cream);">
             <div class="container-narrow">
@@ -935,30 +1085,6 @@
             </div>
         </section>
         
-        <!-- Related Resources Section -->
-        <section class="section" style="background: var(--neutral-soft); padding: var(--space-section) 0;">
-            <div class="container-narrow">
-                <h3 style="text-align: center; margin-bottom: var(--space-lg);">Quick Access Mental Health Support</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md);">
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Same Week Appointments</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">Fast access to therapy appointments without long waits.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Insurance Coverage</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">Understanding your benefits for immediate therapy access.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Crisis Support</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">When you need someone to talk to right now.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- Contact Section -->
         <section class="contact-highlight" id="contact">
             <div class="container">
@@ -968,7 +1094,13 @@
                 <h4>Immediate Booking Available</h4>
                 <p>Call now to secure your same-day appointment. Virtual sessions mean no travel time - just immediate support when you need it.</p>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="hero-cta">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="primary-cta">Start Feeling Better Today</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Urgent Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
@@ -981,9 +1113,42 @@
         </section>
     </main>
     
-    <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
-        📞 Call Now
+    <!-- Smart Sticky CTA for Mobile -->
+    <a href="https://www.nextsteptherapy.ca/#contact" class="floating-cta">
+        Get Help Today
     </a>
+    
+    <script>
+        // Smart sticky CTA - show after 30% scroll on mobile
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.offsetHeight - window.innerHeight);
+            const stickyCTA = document.querySelector('.floating-cta');
+            
+            if (rate > 0.3 && window.innerWidth <= 768) {
+                stickyCTA.classList.add('show');
+            } else {
+                stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768) {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 80) {
+                    header.classList.add('hide-on-scroll');
+                } else if (scrollTop < lastScrollTop) {
+                    header.classList.remove('hide-on-scroll');
+                }
+                
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }
+        });
+    </script>
 
 </body></html>

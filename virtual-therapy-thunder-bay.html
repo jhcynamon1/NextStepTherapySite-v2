@@ -1,270 +1,134 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data -->
-    <title>Virtual Therapy Thunder Bay | Online Mental Health Support Northwestern Ontario - Next Step Therapy</title>
-    <meta name="description" content="Professional virtual therapy services for Thunder Bay and Northwestern Ontario. Online mental health support accessible throughout the region.">
+    <!-- SEO Meta Data - Exact Keyword Match -->
+    <title>Virtual Therapy Thunder Bay Region - Online Counselling Northwestern ON</title>
+    <meta name="description" content="Virtual therapy Thunder Bay region and Northwestern Ontario. Professional online counselling, no travel required, immediate availability. CRPO #10979.">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Virtual Therapy Thunder Bay | Online Mental Health Support Northwestern Ontario">
-    <meta property="og:description" content="Professional virtual therapy services for Thunder Bay and Northwestern Ontario. Online mental health support accessible throughout the region.">
+    <meta property="og:title" content="Virtual Therapy Thunder Bay Region | Next Step Therapy">
+    <meta property="og:description" content="Professional therapy for Thunder Bay and Northwestern Ontario. Virtual support eliminates distance barriers.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-thunder-bay.html">
+    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-thunder-bay">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-thunder-bay.html">
+    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-thunder-bay">
     
     <!-- Schema Markup -->
-    <!-- Person Schema for Jesse Cynamon -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://nextsteptherapy.ca/#jessecynamon",
-      "name": "Jesse Cynamon",
-      "givenName": "Jesse",
-      "familyName": "Cynamon",
-      "additionalName": "RP",
-      "jobTitle": "Registered Psychotherapist",
-      "description": "Registered Psychotherapist specializing in Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Registered Psychotherapist",
-          "credentialCategory": "Professional License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "identifier": "10979"
-        }
-      ],
-      "telephone": "(416) 306-2157",
-      "email": "jesse@nextsteptherapy.ca",
-      "url": "https://nextsteptherapy.ca",
-      "worksFor": {
-        "@type": "MedicalBusiness",
-        "name": "Next Step Therapy",
-        "url": "https://nextsteptherapy.ca"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario",
-        "containedInPlace": {
-          "@type": "Country",
-          "name": "Canada"
-        }
-      },
-      "knowsAbout": [
-        "Acceptance and Commitment Therapy",
-        "Virtual Therapy",
-        "Thunder Bay Mental Health", 
-        "Northwestern Ontario Services",
-        "University Student Support",
-        "Regional Mental Health"
-      ]
-    }
-    </script>
-
-    <!-- Service Schema for Thunder Bay Virtual Therapy -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay#service",
-      "name": "Virtual Therapy Thunder Bay",
-      "alternateName": "Northwestern Ontario Virtual Therapy",
-      "description": "Professional virtual therapy services for Thunder Bay and Northwestern Ontario residents, including specialized support for university students, resource industry workers, and regional challenges.",
+      "@type": "MedicalWebPage",
+      "name": "Virtual Therapy Thunder Bay Region",
+      "description": "Online therapy services for Thunder Bay and Northwestern Ontario",
       "provider": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-      },
-      "serviceType": "Virtual Mental Health Therapy",
-      "category": "Healthcare",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Thunder Bay Virtual Therapy Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Virtual Therapy Session"
-            },
-            "price": "175",
-            "priceCurrency": "CAD",
-            "description": "50-minute virtual therapy session via secure video platform"
-          }
-        ]
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Thunder Bay",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Ontario"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Kenora",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Ontario"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Dryden",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Ontario"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Fort Frances",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Ontario"
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "areaServed": {
+          "@type": "State",
+          "name": "Ontario",
+          "containsPlace": {
+            "@type": "City",
+            "name": "Thunder Bay"
           }
         }
-      ],
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceType": "Virtual Therapy",
-        "availableLanguage": "English"
+      },
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Virtual Therapy Thunder Bay",
+        "description": "Online therapy for Thunder Bay and surrounding communities",
+        "serviceType": "Telehealth"
+      },
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/book"
+        }
       }
-    }
-    </script>
-
-    <!-- Article Schema for Thunder Bay Virtual Therapy Content -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay",
-      "headline": "Virtual Therapy Thunder Bay - Professional Online Mental Health Support",
-      "description": "Professional virtual therapy services for Thunder Bay and Northwestern Ontario with understanding of regional challenges",
-      "author": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Next Step Therapy",
-        "url": "https://nextsteptherapy.ca"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://nextsteptherapy.ca/virtual/virtual-therapy-thunder-bay"
-      },
-      "about": [
-        "Thunder Bay Virtual Therapy",
-        "Northwestern Ontario Mental Health",
-        "Regional Virtual Therapy Services"
-      ],
-      "inLanguage": "en-CA"
-    }
-    </script>
-
-    <!-- FAQ Schema Markup for Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is virtual therapy available throughout Northwestern Ontario including Thunder Bay?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, virtual therapy is available to all residents of Thunder Bay and Northwestern Ontario communities including Kenora, Dryden, Fort Frances, and surrounding areas. Sessions are accessible from anywhere with internet connection."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the therapist understand the unique challenges of Thunder Bay and Northwestern Ontario?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, specialized understanding includes resource industry stress, shift work challenges, seasonal mental health impacts, university student pressures, and the economic and social dynamics unique to Thunder Bay and Northwestern Ontario communities."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is virtual therapy suitable for university students in Thunder Bay?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. Virtual therapy is ideal for university students, offering flexible scheduling between classes, privacy from campus visibility concerns, and specialized support for academic stress, financial pressures, and social adjustment challenges common to student life."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does virtual therapy work with Thunder Bay's weather and seasonal challenges?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Virtual therapy provides consistent support regardless of Northwestern Ontario weather conditions, storms, or seasonal access challenges. Sessions continue during blizzards, ice storms, or other weather events that might prevent in-person appointments."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://nextsteptherapy.ca"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Virtual Therapy",
-          "item": "https://nextsteptherapy.ca/virtual"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Virtual Therapy Thunder Bay",
-          "item": "https://nextsteptherapy.ca/virtual-therapy-thunder-bay.html"
-        }
-      ]
     }
     </script>
     
     <style>
+        /* Match homepage design exactly */
         :root {
-            --primary-soft-blue: #4a6b7a;
-            --primary-deep: #36525f;
-            --primary-light: #6b8a98;
-            --accent-warm: #c4a191;
-            --accent-gold: #b19976;
-            --neutral-cream: #faf8f5;
-            --neutral-soft: #f5f3ef;
-            --neutral-warm: #ede9e3;
-            --text-primary: #2d3748;
-            --text-secondary: #4a5568;
-            --text-muted: #718096;
-            --background-primary: #fefefe;
-            --thunder-bay-blue: #2C4A5A;
-            --thunder-bay-light: #4A6B7A;
-            
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
-            
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
             --space-xs: 8px;
             --space-sm: 16px;
             --space-md: 24px;
@@ -272,12 +136,13 @@
             --space-xl: 48px;
             --space-xxl: 64px;
             --space-section: 80px;
-            
             --radius-sm: 6px;
             --radius-md: 8px;
             --radius-lg: 12px;
             --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
             --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
         }
         
         * {
@@ -289,6 +154,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -319,430 +185,864 @@
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
-        }
-        
-        .logo {
-            height: 42px;
-        }
-        .logo img {
-            width: auto;
         }
         
         .logo-text {
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 400;
-            
+            font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;
-            font-style: italic;        }
+            text-decoration: none;
+        }
         
-        .credentials-badge {
-            background: linear-gradient(135deg, var(--thunder-bay-blue), var(--thunder-bay-light));
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
             padding: 0.375rem 0.875rem;
             border-radius: var(--radius-lg);
             font-size: 0.8125rem;
             font-weight: 500;
-            letter-spacing: 0.02em;
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-soft) 100%);
-            padding: var(--space-3xl) 0;
-            text-align: center;
+        .logo {
+            height: 40px;
+            width: auto;
+            margin-right: 8px;
         }
         
-        .hero-content h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.5rem);
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
-            margin-bottom: var(--space-lg);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
             line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
         }
         
         .lead-text {
             font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 400;
         }
         
-        /* Button Styles */
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* Buttons */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 1rem 2rem;
-            border-radius: var(--radius-md);
-            font-weight: 400;
-            font-size: 1rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            font-size: 0.9375rem;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--thunder-bay-blue), var(--thunder-bay-light));
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
+            box-shadow: var(--shadow-soft);
         }
         
         .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
             transform: translateY(-2px);
             box-shadow: var(--shadow-medium);
-        }
-        
-        .primary-cta {
-            background: linear-gradient(135deg, var(--thunder-bay-blue), var(--thunder-bay-light));
             color: white;
-            padding: 1rem 2rem;
-            border-radius: var(--radius-md);
-            font-weight: 400;
-            transition: all 0.3s ease;
         }
         
-        .primary-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
-        /* Section Styles */
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        /* Sections */
         .section {
-            padding: var(--space-3xl) 0;
+            padding: var(--space-section) 0;
         }
         
+        /* Content Cards */
         .content-card {
             background: white;
-            padding: var(--space-2xl);
+            padding: var(--space-xl);
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-soft);
-            margin-bottom: var(--space-xl);
-        }
-        
-        .content-card h2 {
-            font-family: var(--font-display);
-            font-size: 2rem;
             margin-bottom: var(--space-lg);
-            font-weight: 400;
         }
         
         .content-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            color: var(--thunder-bay-blue);
-            margin: var(--space-xl) 0 var(--space-md) 0;
-            font-weight: 400;
-        }
-        
-        .content-card h4 {
-            color: var(--thunder-bay-blue);
-            margin: var(--space-lg) 0 var(--space-sm) 0;
-            font-weight: 400;
-        }
-        
-        .content-card p {
+            color: var(--primary-soft-blue);
             margin-bottom: var(--space-md);
-            color: var(--text-secondary);
-            font-size: 1rem;
         }
         
+        /* Lists */
         .feature-list {
             list-style: none;
-            margin: var(--space-lg) 0;
+            margin-bottom: var(--space-lg);
         }
         
         .feature-list li {
-            padding: var(--space-sm) 0;
-            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
             position: relative;
-            padding-left: var(--space-lg);
         }
         
         .feature-list li::before {
-            content: "⚡";
+            content: "✓";
             position: absolute;
             left: 0;
-            color: var(--thunder-bay-blue);
-            font-size: 0.9em;
+            color: var(--accent-warm);
+            font-weight: 600;
         }
         
-        .feature-list strong {
+        /* Community Box */
+        .community-box {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .community-box h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Crisis Resources */
+        .crisis-resources {
+            background: linear-gradient(135deg, rgba(74, 107, 122, 0.05), rgba(74, 107, 122, 0.02));
+            border: 2px solid var(--primary-soft-blue);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--space-lg) 0;
+            text-align: center;
+        }
+        
+        .crisis-resources h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
-        .contact-info {
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
             text-align: center;
-            margin-top: var(--space-lg);
-            padding: var(--space-lg);
-            background: var(--neutral-soft);
-            border-radius: var(--radius-md);
-            font-size: 0.9rem;
-            line-height: 1.6;
+        }
+        
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+        
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+        
+        .contact-highlight p {
             color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
         }
         
+        /* CTA Buttons */
         .hero-cta {
-            text-align: center;
-            margin: var(--space-xl) 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
         }
         
-        .thunder-bay-highlight {
-            background: linear-gradient(135deg, #f0f6fa, #e6f2fb);
-            border: 2px solid var(--thunder-bay-light);
-            padding: var(--space-lg);
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+        
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
-            margin: var(--space-xl) 0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+        }
+        
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+        
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+        
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+        
+        /* Floating CTA for Mobile */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
         }
         
         @media (max-width: 768px) {
+            .floating-cta {
+                display: flex;
+                bottom: 15px;
+                right: 15px;
+                padding: 0.875rem 1.25rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
             .hero {
-                padding: var(--space-2xl) 0;
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
             }
             
             .content-card {
                 padding: var(--space-lg);
             }
+            
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .contact-highlight h3 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
-
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
                     <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
                 <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
+                
+                <a href="tel:+15198008323" class="header-phone">
+                    (519) 800-8323
+                </a>
             </div>
         </div>
     </header>
-
+    
+    <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Virtual Therapy Thunder Bay | Professional Online Mental Health</h1>
-                    <p class="lead-text">Professional virtual therapy services for Thunder Bay and Northwestern Ontario. Mental health support accessible from anywhere in the region.</p>
+                    <h1>Virtual Therapy Thunder Bay Region</h1>
+                    <p class="lead-text">Quality mental health support for Thunder Bay and Northwestern Ontario. No more choosing between long drives and long waits. Professional virtual therapy that understands the Lakehead.</p>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Thunder Bay Mental Health Context Section -->
-        <section class="section" style="background: white;">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>Mental Health Support for Thunder Bay Region</h2>
-                    
-                    <p>Thunder Bay and Northwestern Ontario face unique mental health challenges. As the region's largest city, Thunder Bay serves as a hub, but many residents still struggle to access timely, professional mental health support.</p>
-                    
-                    <h3>Thunder Bay Mental Health Landscape</h3>
-                    <ul class="feature-list">
-                        <li><strong>Limited Local Therapists:</strong> Long wait times for mental health services</li>
-                        <li><strong>Seasonal Challenges:</strong> Harsh winters affecting mood and motivation</li>
-                        <li><strong>Economic Pressures:</strong> Resource industry volatility, transportation costs</li>
-                        <li><strong>Geographic Isolation:</strong> Distance from major centers like Toronto</li>
-                        <li><strong>University Population:</strong> Student mental health needs during academic stress</li>
-                        <li><strong>Regional Serving Role:</strong> People traveling to Thunder Bay from across Northwestern Ontario</li>
-                    </ul>
-                    
-                    <div class="thunder-bay-highlight">
-                        <h4 style="color: var(--thunder-bay-blue); margin-top: 0;">Northwestern Ontario Communities We Serve</h4>
-                        <ul class="feature-list">
-                            <li><strong>Thunder Bay:</strong> City center and surrounding communities</li>
-                            <li><strong>Rainy River District:</strong> Fort Frances, Atikokan, Rainy River</li>
-                            <li><strong>Kenora Region:</strong> Kenora, Dryden, Red Lake</li>
-                            <li><strong>Remote Communities:</strong> Sioux Lookout, Geraldton, Marathon</li>
-                            <li><strong>Mining Communities:</strong> Atikokan, Wawa, Manitouwadge</li>
-                        </ul>
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Start Thunder Bay Therapy</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Why Virtual Therapy Works for Thunder Bay Section -->
-        <section class="section" style="background: var(--neutral-soft);">
+        <!-- Opening Section -->
+        <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>Why Thunder Bay Residents Choose Virtual Therapy</h2>
+                    <h2>Mental Health Support for Thunder Bay & Northwestern Ontario</h2>
                     
-                    <h3>Overcoming Northwestern Ontario Barriers</h3>
+                    <p>Living in Thunder Bay means understanding isolation on a different scale. Whether you're in the city itself or hours away in surrounding communities, accessing quality mental health support has always meant compromise. Drive to limited local options. Wait months for appointments. Or simply go without. Virtual therapy Thunder Bay region changes this reality.</p>
+                    
+                    <p>From the shores of Superior to the Manitoba border, Northwestern Ontario deserves better than "good enough" mental health care. Professional support that respects your time, understands your context, and eliminates the barriers unique to the northwest.</p>
+                    
+                    <h3>Serving Thunder Bay and Surrounding Communities:</h3>
                     <ul class="feature-list">
-                        <li><strong>No Wait Lists:</strong> Access professional therapy without months-long delays</li>
-                        <li><strong>Weather Independent:</strong> Sessions continue regardless of blizzards or road conditions</li>
-                        <li><strong>No Travel Required:</strong> Save time and money on transportation</li>
-                        <li><strong>Privacy Protection:</strong> Mental health support without community visibility concerns</li>
-                        <li><strong>Flexible Scheduling:</strong> Evening appointments for shift workers</li>
-                        <li><strong>Consistent Care:</strong> Regular sessions regardless of seasonal challenges</li>
+                        <li><strong>Thunder Bay Proper:</strong> Fort William, Port Arthur, and all neighborhoods</li>
+                        <li><strong>Rural Communities:</strong> Kakabeka Falls, Shuniah, Oliver Paipoonge</li>
+                        <li><strong>Northwestern Towns:</strong> Nipigon, Schreiber, Terrace Bay, Marathon</li>
+                        <li><strong>Remote Areas:</strong> Armstrong, Geraldton, Longlac, Nakina</li>
+                        <li><strong>Indigenous Communities:</strong> Fort William First Nation, surrounding reserves</li>
+                        <li><strong>Border Region:</strong> Atikokan, Fort Frances, Rainy River District</li>
+                        <li><strong>Far Northwest:</strong> Dryden, Kenora, Sioux Lookout</li>
+                        <li><strong>Isolated Communities:</strong> Fly-in communities with internet access</li>
                     </ul>
                     
-                    <h3>Understanding Thunder Bay Life</h3>
-                    <ul class="feature-list">
-                        <li><strong>Shift Work Challenges:</strong> Understanding rotating schedules, sleep disruption</li>
-                        <li><strong>Seasonal Mental Health:</strong> Addressing winter depression, limited daylight</li>
-                        <li><strong>University Stress:</strong> Academic pressure, financial concerns, social challenges</li>
-                        <li><strong>Resource Industry Work:</strong> Job insecurity, physical demands, safety stress</li>
-                        <li><strong>Small City Dynamics:</strong> Community relationships, social connections</li>
-                    </ul>
+                    <p>Professional therapy reaches you wherever you are in Northwestern Ontario.</p>
                     
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">No more driving hours for mental health support.</p>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="primary-cta">Connect From Thunder Bay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Thunder Bay Specific Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Understanding Thunder Bay's Mental Health Needs</h2>
+                    
+                    <p>Thunder Bay faces unique mental health challenges. The combination of geographic isolation, economic pressures, and social dynamics creates a distinct need for accessible, understanding support.</p>
+                    
+                    <h3>The Thunder Bay Reality:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Geographic Isolation Impact</strong></h4>
+                        <p>Closest major city is 700km away. Family often provinces apart. Professional opportunities limited. Social circles necessarily small. This isolation intensifies mental health struggles. Virtual therapy Thunder Bay provides connection without distance.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Economic Uncertainty</strong></h4>
+                        <p>Forestry sector volatility. Mining boom-bust cycles. Public sector dominance. Youth leaving for opportunities. Cost of living pressures. Financial stress compounding mental health. Support through economic challenges.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Healthcare System Strain</strong></h4>
+                        <p>Regional hospital overwhelmed. Mental health services waitlisted. Specialist shortage chronic. Emergency room not ideal for mental health. Travel for care exhausting. Virtual access bypasses system limitations.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Cultural Complexities</strong></h4>
+                        <p>Indigenous-settler dynamics. University transient population. Resource worker culture. Outdoor lifestyle identity. Multiple communities within one city. Therapy understanding these nuances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Common Issues Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What Thunder Bay Residents Seek Support For</h2>
+                    
+                    <p>The challenges facing Thunder Bay and Northwestern Ontario create specific mental health needs:</p>
+                    
+                    <h3>Seasonal Depression (SAD):</h3>
+                    <p>Those Lake Superior winters hit different. Darkness at 4pm for months. Seasonal work limitations. Vitamin D deficiency endemic. Cabin fever becoming clinical depression. Evidence-based SAD strategies essential.</p>
+                    
+                    <h3>Isolation & Connection Issues:</h3>
+                    <p>Physical distance from loved ones. Dating pool limitations. Professional networking challenges. Social circles feeling too small. Everyone knows everyone dynamics. Building meaningful connections despite distance.</p>
+                    
+                    <h3>Workplace Stress:</h3>
+                    <p>Healthcare worker burnout epidemic. Public sector restructuring anxiety. Resource industry instability. Limited career advancement locally. Work-life balance in small markets. Professional support understanding regional employment.</p>
+                    
+                    <h3>University Student Challenges:</h3>
+                    <p>Lakehead University adjustment. Far from home loneliness. Northern culture shock. Limited student services. Academic pressure intensified by isolation. Support through university years.</p>
+                    
+                    <h3>Substance Use Concerns:</h3>
+                    <p>Limited social alternatives. Self-medication patterns. Trauma and addiction connections. Recovery support gaps. Stigma in small communities. Non-judgmental professional support.</p>
+                    
+                    <h3>Indigenous Community Trauma:</h3>
+                    <p>Residential school impacts. Intergenerational trauma. System navigation challenges. Cultural identity questions. Healing journey support. Culturally-aware therapeutic approaches.</p>
+                    
+                    <p style="margin-top: var(--space-lg);"><strong>Whatever you're facing in Thunder Bay, support is available.</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Virtual Works Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Virtual Therapy Works for Thunder Bay</h2>
+                    
+                    <p>Virtual therapy Thunder Bay isn't just convenient—it's often superior to traditional options for Northwestern Ontario residents.</p>
+                    
+                    <h3>Thunder Bay Virtual Advantages:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Weather-Independent Access</strong></h4>
+                        <p>Lake effect storms can't cancel therapy. Ice road conditions irrelevant. No dangerous winter driving. -40°C windchill stays outside. Consistent support regardless of weather. Northwestern Ontario winters respected.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Privacy in Connected Community</strong></h4>
+                        <p>Thunder Bay feels like a small town. Everyone knows everyone's business. Parking at therapy offices noticed. Waiting room encounters awkward. Complete confidentiality protected. Your mental health stays private.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Serves Vast Geographic Area</strong></h4>
+                        <p>Northwestern Ontario is massive. Communities hours apart. Specialist access impossible. Travel costs prohibitive. Time away from work difficult. Virtual brings therapy to you.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Flexible for Northern Lifestyles</strong></h4>
+                        <p>Shift work accommodation. Seasonal employment patterns. Outdoor activity schedules. Travel for work common. Family obligations complex. Therapy fitting your actual life.</p>
+                    </div>
+                    
+                    <!-- CTA after benefits -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <div style="height: 42px; justify-content: center;"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Thunder Bay deserves accessible mental health support.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Virtual Therapy</a>
+                            <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Learn More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Common Thunder Bay Mental Health Issues Section -->
+        <!-- Communities Section -->
         <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>Common Mental Health Concerns in Thunder Bay</h2>
+                    <h2>Supporting Northwestern Ontario Communities</h2>
                     
-                    <h3>Seasonal & Environmental Challenges</h3>
-                    <ul class="feature-list">
-                        <li><strong>Seasonal Affective Disorder:</strong> Depression during long, dark winters</li>
-                        <li><strong>Weather-Related Stress:</strong> Anxiety about storms, ice, travel safety</li>
-                        <li><strong>Cabin Fever:</strong> Restlessness and irritability from winter isolation</li>
-                        <li><strong>Limited Daylight Impact:</strong> Energy, mood, and sleep disruption</li>
-                    </ul>
+                    <p>Each community in the Thunder Bay region has its own character and challenges:</p>
                     
-                    <h3>Work & Economic Stress</h3>
-                    <ul class="feature-list">
-                        <li><strong>Resource Industry Anxiety:</strong> Job security, boom/bust cycles</li>
-                        <li><strong>Shift Work Challenges:</strong> Sleep disruption, family life impact</li>
-                        <li><strong>Transportation Costs:</strong> Financial pressure from high gas, vehicle maintenance</li>
-                        <li><strong>Limited Job Diversity:</strong> Career options concentrated in few industries</li>
-                    </ul>
+                    <div class="community-box">
+                        <h4>Thunder Bay Urban Core</h4>
+                        <p>Two cities becoming one. Fort William and Port Arthur identities. Waterfront revitalization stress. Downtown challenges. University district dynamics. Healthcare hub pressures. Urban issues in northern context.</p>
+                    </div>
                     
-                    <h3>University & Student Mental Health</h3>
-                    <ul class="feature-list">
-                        <li><strong>Academic Pressure:</strong> Performance anxiety, exam stress, grade pressure</li>
-                        <li><strong>Financial Stress:</strong> Student loans, part-time work, living costs</li>
-                        <li><strong>Social Adjustment:</strong> Making friends, dating, social anxiety</li>
-                        <li><strong>Career Uncertainty:</strong> Job prospects, post-graduation planning</li>
-                    </ul>
+                    <div class="community-box">
+                        <h4>Rural Thunder Bay District</h4>
+                        <p>Agricultural struggles. Bedroom community dynamics. Service accessibility issues. School consolidation impacts. Volunteer firefighter stress. Community identity questions. Rural mental health understood.</p>
+                    </div>
                     
-                    <h3>Community & Relationship Issues</h3>
-                    <ul class="feature-list">
-                        <li><strong>Social Connections:</strong> Building relationships in smaller community</li>
-                        <li><strong>Family Separation:</strong> Young people leaving for opportunities elsewhere</li>
-                        <li><strong>Limited Entertainment Options:</strong> Seasonal activity restrictions</li>
-                        <li><strong>Mental Health Stigma:</strong> Traditional attitudes in smaller communities</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Virtual Therapy Process Section -->
-        <section class="section" style="background: var(--neutral-soft);">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>How Virtual Therapy Works for Thunder Bay Residents</h2>
+                    <div class="community-box">
+                        <h4>Highway Communities</h4>
+                        <p>Trans-Canada Highway towns. Tourist season pressures. Winter isolation extreme. Economic vulnerability. Youth retention impossible. Essential services stretched. Support understanding small town life.</p>
+                    </div>
                     
-                    <h3>Simple Technology Setup</h3>
-                    <ul class="feature-list">
-                        <li><strong>Internet Connection:</strong> Basic broadband or cellular data (most Thunder Bay internet works well)</li>
-                        <li><strong>Device Options:</strong> Smartphone, tablet, laptop, or desktop computer</li>
-                        <li><strong>Private Space:</strong> Quiet location where you can speak freely</li>
-                        <li><strong>No Downloads:</strong> Simple click-to-join video session links</li>
-                    </ul>
+                    <div class="community-box">
+                        <h4>Indigenous Communities</h4>
+                        <p>Reserve life complexities. Urban Indigenous experiences. Traditional healing respect. System navigation support. Cultural identity exploration. Trauma-informed approaches. Bridging traditional and western therapy.</p>
+                    </div>
                     
-                    <h3>Flexible Scheduling for Northwestern Ontario</h3>
-                    <ul class="feature-list">
-                        <li><strong>Shift-Friendly Hours:</strong> Evening and weekend appointments available</li>
-                        <li><strong>Weather Contingency:</strong> Easy rescheduling for storms or power outages</li>
-                        <li><strong>University Schedule Friendly:</strong> Sessions between classes or during breaks</li>
-                        <li><strong>Central Time Zone:</strong> Scheduling that works for Northwestern Ontario</li>
-                    </ul>
-                    
-                    <h3>Getting Started Process</h3>
-                    <ul class="feature-list">
-                        <li><strong>Free Consultation:</strong> 15-minute phone call to discuss your needs</li>
-                        <li><strong>Technology Test:</strong> Quick tech check before first session</li>
-                        <li><strong>Initial Assessment:</strong> Comprehensive first session and goal-setting</li>
-                        <li><strong>Regular Sessions:</strong> Ongoing virtual therapy as needed</li>
-                    </ul>
-                    
-                    <h4>Privacy & Security</h4>
-                    <p>All sessions use encrypted, PIPEDA-compliant video technology. Your mental health information remains completely confidential and secure.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Therapeutic Approaches Section -->
-        <section class="section" style="background: white;">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>Evidence-Based Therapy Approaches</h2>
-                    
-                    <h3>Therapeutic Methods</h3>
-                    <ul class="feature-list">
-                        <li><strong>Cognitive Behavioral Therapy (CBT):</strong> Proven approach for anxiety and depression</li>
-                        <li><strong>Acceptance and Commitment Therapy (ACT):</strong> Building psychological flexibility</li>
-                        <li><strong>Mindfulness-Based Interventions:</strong> Present-moment awareness and stress reduction</li>
-                        <li><strong>Solution-Focused Therapy:</strong> Building on existing strengths and resources</li>
-                    </ul>
-                    
-                    <h3>Specialized Support Areas</h3>
-                    <ul class="feature-list">
-                        <li><strong>Seasonal Depression:</strong> Specific strategies for Northwestern Ontario winters</li>
-                        <li><strong>Work Stress Management:</strong> Shift work, resource industry challenges</li>
-                        <li><strong>University Student Support:</strong> Academic stress, social anxiety, career planning</li>
-                        <li><strong>Men's Mental Health:</strong> Direct approach designed for how men process emotions</li>
-                    </ul>
-                    
-                    <div class="thunder-bay-highlight">
-                        <h4 style="color: var(--thunder-bay-blue); margin-top: 0;">Thunder Bay Therapy Investment</h4>
-                        <ul class="feature-list">
-                            <li><strong>Session Fee:</strong> $175 per 50-minute virtual session</li>
-                            <li><strong>No Travel Costs:</strong> Save time and money on transportation</li>
-                            <li><strong>Insurance Coverage:</strong> Most extended health plans cover virtual therapy</li>
-                            <li><strong>Student-Friendly:</strong> Payment plans available for university students</li>
-                        </ul>
+                    <div class="community-box">
+                        <h4>Resource Towns</h4>
+                        <p>Mining camp dynamics. Fly-in/fly-out stress. Family separation strain. Boom-bust anxiety. Safety culture pressure. Masculine culture barriers. Supporting resource families.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- CTA Section -->
-        <section class="section" style="background: var(--neutral-soft);">
+        <!-- Getting Started Section -->
+        <section class="section" style="background: var(--neutral-cream);">
             <div class="container-narrow">
-                <h2 style="text-align: center; font-family: var(--font-display); margin-bottom: var(--space-lg);">Ready for Virtual Therapy in Thunder Bay?</h2>
+                <div class="content-card">
+                    <h2>Starting Virtual Therapy from Thunder Bay</h2>
+                    
+                    <p>Beginning therapy from Thunder Bay or surrounding areas is simpler than you might think:</p>
+                    
+                    <h3>Easy Steps to Support:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>1. Reach Out Today</strong></h4>
+                        <p>Call (519) 800-8323 or book online. Mention you're from Thunder Bay region. Free 15-minute consultation available. Often same-week appointments. No lengthy intake process.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>2. Tech Check (Simple)</strong></h4>
+                        <p>Most Thunder Bay internet handles video fine. Phone backup always available. Works on any device. Support provided if needed. Technology won't be a barrier.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>3. Find Your Space</strong></h4>
+                        <p>Home office, bedroom, even your car. Anywhere private and comfortable. No explaining therapy appointments. Your therapeutic sanctuary. Northwestern privacy respected.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>4. Begin Your Journey</strong></h4>
+                        <p>Professional support understanding Thunder Bay. Regional context acknowledged. Your unique challenges validated. Evidence-based strategies provided. Healing without leaving home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Crisis Resources Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Thunder Bay Crisis Resources</h2>
+                    
+                    <p>While we offer quick access therapy, immediate crisis support is available:</p>
+                    
+                    <div class="crisis-resources">
+                        <h4>Thunder Bay Crisis Response Service</h4>
+                        <p><strong>24/7 Crisis Line: 1-807-346-8282</strong></p>
+                        <p>Immediate support for Thunder Bay residents</p>
+                        <p>Mobile crisis team available</p>
+                    </div>
+                    
+                    <h3>Emergency Resources:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Thunder Bay Regional Health Sciences Centre:</strong> Emergency psychiatric services</li>
+                        <li><strong>St. Joseph's Care Group:</strong> Mental health programs</li>
+                        <li><strong>CMHA Thunder Bay:</strong> 807-345-5564</li>
+                        <li><strong>Thunder Bay Counselling:</strong> Walk-in counselling available</li>
+                        <li><strong>Indigenous Crisis Line:</strong> 1-855-242-3310</li>
+                        <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566</li>
+                    </ul>
+                    
+                    <p>For non-crisis mental health support, virtual therapy provides consistent professional care.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Thunder Bay Virtual Therapy Questions</h2>
                 
-                <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: var(--space-xl);">Professional mental health support accessible throughout Thunder Bay and Northwestern Ontario. No travel or wait times required.</p>
+                <div class="faq-item">
+                    <h4>Do you understand Thunder Bay's specific challenges?</h4>
+                    <p>Yes. I work with many Thunder Bay and Northwestern Ontario clients. I understand the isolation, the weather impact, the economic pressures, and the unique dynamics of Lakehead life.</p>
+                </div>
                 
-                <h4>Free 15-Minute Consultation</h4>
-                <p>Let's discuss your situation and how virtual therapy can provide the support you need. Understanding of Northwestern Ontario life and seasonal challenges included.</p>
+                <div class="faq-item">
+                    <h4>What if I'm hours from Thunder Bay?</h4>
+                    <p>Distance is no barrier. Whether you're in Kenora, Geraldton, or a fly-in community, if you have internet or phone service, therapy is available. Northwestern Ontario's vastness is respected.</p>
+                </div>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="faq-item">
+                    <h4>Can you help with seasonal depression?</h4>
+                    <p>Absolutely. SAD is extremely common in Thunder Bay. Evidence-based strategies including light therapy guidance, activity scheduling, and cognitive approaches specifically for northern winters.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is virtual therapy really private in Thunder Bay?</h4>
+                    <p>Completely. No parking at known therapy offices. No waiting room encounters. Your car, home, or office becomes your therapy space. Thunder Bay's small-town dynamics avoided.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How does billing work for Northwestern Ontario?</h4>
+                    <p>Same as anywhere in Ontario. Insurance receipts provided. Most extended health plans cover virtual therapy. No extra charges for remote locations. Thunder Bay residents pay standard rates.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What about Indigenous cultural considerations?</h4>
+                    <p>Respect for traditional healing approaches. Understanding of intergenerational trauma. Collaborative approach with traditional supports. Cultural humility practiced. Your healing journey honored.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>When can I start?</h4>
+                    <p>Usually within 48-72 hours. Much faster than Thunder Bay's typical waitlists. Free consultation today. Your mental health shouldn't wait months.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>Thunder Bay Deserves Accessible Mental Health Support</h3>
+                <p>From the Lakehead to the border, professional therapy that understands Northwestern Ontario. No driving, no waiting, just support when you need it.</p>
+                
+                <h4>Connect from Thunder Bay Today</h4>
+                <p>Virtual therapy that respects northern realities. Professional support from wherever you are in Northwestern Ontario.</p>
+                
+                <div class="hero-cta">
+                    <a href="tel:+15198008323" class="primary-cta">Start Thunder Bay Therapy</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
-                    Virtual Therapy Throughout Northwestern Ontario<br>
-                    Serving Thunder Bay, Kenora, Fort Frances, Dryden & Surrounding Communities<br>
-                    Evening appointments • Flexible scheduling • No travel required
+                    Serving Thunder Bay & Northwestern Ontario<br>
+                    Virtual Therapy Eliminating Distance Barriers<br>
+                    Because Thunder Bay matters
                 </div>
             </div>
         </section>
     </main>
+    
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+15198008323" class="floating-cta">
+        📞 Thunder Bay
+    </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        // Smart sticky header functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+            
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10; // Minimum scroll distance to trigger
+            
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+                
+                // Only proceed if scroll difference is significant
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+                
+                if (currentScrollY <= headerHeight) {
+                    // At the top of the page
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    // Scrolling down - hide header
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+                
+                lastScrollY = currentScrollY;
+            }
+            
+            // Use requestAnimationFrame for smooth performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+            
+            // Set initial styles
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
 </body></html>

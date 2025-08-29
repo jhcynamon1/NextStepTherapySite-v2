@@ -1,5 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -25,132 +84,27 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
-            }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
-          "@type": "Article",
-          "headline": "Sunday Night Anxiety: Understanding Weekend Dread and Work Anxiety",
-          "description": "Learn about Sunday night anxiety causes, symptoms, and evidence-based strategies to reclaim your weekends and reduce work-related anticipatory anxiety.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
-          "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/sunday-night-anxiety.html"
-          },
-          "about": [
-            {
-              "@type": "MedicalCondition",
-              "name": "Anticipatory Anxiety",
-              "description": "Anxiety about future events, particularly work-related stress",
-              "possibleTreatment": {
-                "@type": "MedicalTherapy",
-                "name": "Cognitive Behavioral Therapy"
-              }
-            },
-            {
-              "@type": "MedicalCondition",
-              "name": "Work-Related Stress",
-              "description": "Stress and anxiety related to workplace demands and pressures"
-            }
-          ],
-          "keywords": "Sunday night anxiety, weekend dread, work anxiety, anticipatory anxiety, Ontario therapy",
-          "articleSection": "Mental Health",
-          "wordCount": "3500"
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Why do I get Sunday night anxiety even when work is going well?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sunday night anxiety isn't always about work problems. It can stem from transition difficulty, loss of autonomy, or accumulated stress. Even positive work situations involve pressure and demands that can trigger anticipatory anxiety. The transition from weekend freedom to workday structure naturally activates your nervous system's threat detection."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How can I stop Sunday night anxiety from ruining my weekend?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Key strategies include: finishing work tasks completely on Friday, creating Sunday evening routines that ease transition, limiting work thoughts after 5 PM Sunday, engaging in restorative weekend activities, and addressing root causes through therapy. The goal is breaking the anticipatory anxiety cycle before it starts."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Sunday night anxiety a sign I should quit my job?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not necessarily. Sunday night anxiety can often be managed with better coping strategies, boundary setting, and stress management techniques. However, if anxiety persists despite multiple interventions, becomes severe, or significantly impacts your life, it may indicate deeper workplace issues worth exploring with professional support."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can therapy really help with Sunday night anxiety?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, therapy is highly effective for Sunday night anxiety. Cognitive-behavioral therapy helps reframe catastrophic thinking about Mondays, while mindfulness techniques keep you present rather than projecting into future stress. Many clients see improvement within weeks of implementing therapeutic strategies for anticipatory anxiety."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Sunday Night Anxiety",
-              "item": "https://nextsteptherapy.ca/sunday-night-anxiety.html"
-            }
-          ]
+      "@type": "Article",
+      "headline": "Sunday Night Anxiety",
+      "description": "Understanding and managing Sunday night anxiety and weekend work dread",
+      "author": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Anticipatory Anxiety",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Psychotherapy"
         }
-      ]
+      }
     }
     </script>
     
@@ -192,6 +146,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -222,12 +177,14 @@
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
         }
         
@@ -237,7 +194,8 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;        }
+            text-decoration: none;
+        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
@@ -249,13 +207,15 @@
         }
         
         .nav {
-            height: 42px;
+            display: flex;
             gap: var(--space-lg);
             list-style: none;
+            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -264,13 +224,16 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
+            text-decoration: none;
+            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -287,24 +250,25 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
+            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
         
@@ -316,6 +280,7 @@
         
         .lead-text {
             font-size: 1.25rem;
+            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -328,12 +293,7 @@
         /* Hero Section */
         .hero {
             padding: var(--space-section) 0;
-            background: 
-                linear-gradient(135deg, rgba(254, 254, 254, 0.7) 0%, rgba(245, 246, 247, 0.7) 100%),
-                url('images/asset104.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -356,10 +316,12 @@
         /* Buttons */
         .btn {
             display: inline-flex;
+            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -382,7 +344,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -406,7 +368,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -416,7 +378,7 @@
         }
         
         .feature-list li {
-            height: 42px;
+            display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -428,7 +390,7 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         /* FAQ Section */
@@ -441,7 +403,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section */
@@ -454,16 +416,17 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
-            font-weight: 400;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .contact-highlight p {
@@ -475,8 +438,9 @@
         
         /* CTA Buttons */
         .hero-cta {
-            height: 42px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
             gap: var(--space-md);
         }
         
@@ -485,7 +449,8 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -499,7 +464,7 @@
         }
         
         .secondary-ctas {
-            height: 42px;
+            display: flex;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -508,6 +473,7 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -517,7 +483,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -529,7 +495,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -558,11 +524,13 @@
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 50px;
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 0.9375rem;
             box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
             transition: all 0.3s ease;
             min-height: 48px;
+            align-items: center;
             gap: 0.5rem;
         }
         
@@ -574,7 +542,7 @@
         
         @media (max-width: 768px) {
             .floating-cta {
-                height: 42px;
+                display: flex;
                 bottom: 15px;
                 right: 15px;
                 padding: 0.875rem 1.25rem;
@@ -626,26 +594,20 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="index.html#approach">Approach</a></li>
-                        <li><a href="index.html#specializations">Services</a></li>
-                        <li><a href="index.html#process">Process</a></li>
-                        <li><a href="index.html#contact">Connect</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
-                
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -659,7 +621,10 @@
                     <h1>Sunday Night Anxiety</h1>
                     <p class="lead-text">That familiar knot that forms every Sunday afternoon. The creeping dread as the weekend fades. When Monday morning feels like a looming threat, not a fresh start.</p>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book Free 15-Minute Call</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -690,7 +655,8 @@
                     
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <a href="tel:+14163062157" class="primary-cta">Get Support Today</a>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Reclaim your Sundays and weekends.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Get Support Today</a>
                     </div>
                 </div>
             </div>
@@ -804,9 +770,10 @@
                     
                     <!-- CTA after explaining benefits -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Start Your Journey</a>
-                            <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to enjoy your entire weekend again?</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Your Journey</a>
+                            <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Ask a Question</a>
                         </div>
                     </div>
                 </div>
@@ -954,47 +921,6 @@
             </div>
         </section>
         
-        <!-- Related Resources Section -->
-        <section class="section" style="background: var(--neutral-soft);">
-            <div class="container-narrow">
-                <h2 style="text-align: center; margin-bottom: var(--space-lg);">Related Anxiety & Workplace Stress Resources</h2>
-                <p style="text-align: center; margin-bottom: var(--space-xl); color: var(--text-secondary);">Discover more about managing workplace anxiety, stress, and related concerns:</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-xl);">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Work Worry & Stress</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">When work thoughts consume your entire weekend</p>
-                    </a>
-                    
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Sleep Anxiety Help</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Breaking the cycle when anxiety keeps you awake</p>
-                    </a>
-                    
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Chronic Anxiety</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Understanding persistent daily anxiety patterns</p>
-                    </a>
-                    
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Remote Work Support</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Virtual therapy for remote and hybrid workers</p>
-                    </a>
-                    
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Therapy for Parents</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Flexible virtual sessions for busy parent schedules</p>
-                    </a>
-                    
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Anxiety Therapy Services</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="color: var(--text-secondary); margin: 0; font-size: 0.9rem;">Professional treatment approaches and options</p>
-                    </a>
-                </div>
-                
-                <!-- Trust Signals -->
-                <div style="text-align: center; padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                    <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-md);">Evidence-Based Treatment in Ontario</h4>
-            letter-spacing: -0.01em;            font-style: italic;                    <p style="color: var(--text-secondary); margin-bottom: var(--space-sm);">Jesse Cynamon, RP (CRPO #10979) provides specialized anxiety therapy using proven approaches like Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT).</p>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;"><strong>Virtual sessions available across Ontario</strong> • <strong>Evening appointments</strong> • <strong>Insurance receipts provided</strong> • <strong>Free consultation</strong></p>
-                </div>
-            </div>
-        </section>
-        
         <!-- Contact Section -->
         <section class="contact-highlight" id="contact">
             <div class="container">
@@ -1004,7 +930,13 @@
                 <h4>Free 15-Minute Consultation</h4>
                 <p>Let's discuss how therapy can help you overcome Sunday night anxiety and enjoy your full weekend.</p>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="hero-cta">
+                    <a href="tel:+15198008323" class="primary-cta">Book Your Free Call</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
@@ -1018,8 +950,44 @@
     </main>
     
     <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
+    <a href="tel:+15198008323" class="floating-cta">
         📞 Call Now
     </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.smart-sticky');
+            let lastScrollTop = 0;
+            let isScrollingUp = false;
+            
+            function handleScroll() {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                    // Scrolling down and past initial position
+                    isScrollingUp = false;
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                    // Scrolling up or at top
+                    isScrollingUp = true;
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
 
 </body></html>

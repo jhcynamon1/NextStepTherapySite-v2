@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Cynamon, Registered Psychotherapist | Evidence-Based Anxiety & Stress Therapy | Ontario</title>
+    <meta name="description" content="CRPO registered psychotherapist specializing in evidence-based anxiety treatment and personal growth. Virtual and in-person sessions across Ontario. Advanced ACT training. Free consultation.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jesse Cynamon, Registered Psychotherapist | Ontario">
+    <meta property="og:description" content="Evidence-based anxiety therapy and personal growth support across Ontario. CRPO registered with ACT specialization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Person", "MedicalBusiness"],
+      "name": "Jesse Cynamon",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "CRPO registered psychotherapist specializing in anxiety treatment and personal growth using Acceptance and Commitment Therapy",
+      "telephone": "(416) 306-2157",
+      "email": "jesse@nextsteptherapy.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "url": "https://nextsteptherapy.ca",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario"
+      },
+      "medicalSpecialty": ["Anxiety Therapy", "Acceptance and Commitment Therapy", "Personal Growth Counseling"],
+      "hasCredential": "CRPO Registration #10979"
+    }
+    </script>
+    
+    <style>
+        :root {
+            /* Professional therapeutic color palette - adapted from original */
+            --sage-primary: #7a8a75;
+            --sage-light: #a4b59f;
+            --sage-dark: #5f6d5a;
+            --warm-gold: #bc945a;
+            --warm-light: #e0d0b6;
+            --navy-deep: #333b5a;
+            --accent-light: #a7acce;
+            --earth-cream: #faf8f5;
+            --earth-warm: #f4f1ec;
+            --text-primary: #2c2c2c;
+            --text-secondary: #5a5a5a;
+            --text-light: #737373;
+            
+            /* Typography */
+            --font-serif: 'Crimson Text', 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-xxl: 4.5rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            color: var(--text-primary);
+            background-color: var(--earth-cream);
+            font-size: 18px;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(250, 248, 245, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(122, 138, 117, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--sage-primary);
+            text-decoration: none;
+        }
+        
+        .credentials-badge {
+            background: var(--sage-primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .nav a:hover {
+            color: var(--sage-primary);
+            background-color: rgba(122, 138, 117, 0.06);
+        }
+        
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--sage-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--sage-primary);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .header-phone:hover {
+            background: var(--sage-primary);
+            color: white;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-family: var(--font-sans);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--sage-primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(122, 138, 117, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: var(--sage-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(122, 138, 117, 0.3);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--sage-primary);
+            border: 2px solid var(--sage-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--sage-primary);
+            color: white;
+        }
+        
+        .btn-gold {
+            background: var(--warm-gold);
+            color: white;
+        }
+        
+        .btn-gold:hover {
+            background: #a67f47;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-xxl) 0;
+            background: linear-gradient(135deg, var(--earth-cream) 0%, var(--earth-warm) 100%);
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: var(--space-md);
+            font-style: italic;
+            color: var(--navy-deep);
+        }
+        
+        .hero-subtext {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            max-width: 400px;
+        }
+        
+        .primary-cta {
+            background: var(--sage-primary);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 16px rgba(122, 138, 117, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .primary-cta:hover {
+            background: var(--sage-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(122, 138, 117, 0.3);
+            color: white;
+        }
+        
+        .secondary-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .phone-cta {
+            flex: 1;
+            background: transparent;
+            border: 2px solid var(--sage-primary);
+            color: var(--sage-primary);
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .phone-cta:hover {
+            background: var(--sage-primary);
+            color: white;
+        }
+        
+        .email-cta {
+            flex: 1;
+            background: var(--warm-gold);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .email-cta:hover {
+            background: #a67f47;
+            color: white;
+        }
+        
+        .therapist-card {
+            background: white;
+            border-radius: 16px;
+            padding: var(--space-lg);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(122, 138, 117, 0.1);
+        }
+        
+        .therapist-photo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--sage-light), var(--warm-gold));
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .therapist-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .therapist-info {
+            text-align: center;
+        }
+        
+        .therapist-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        
+        .therapist-title {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .therapist-credentials {
+            background: var(--sage-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+        
+        .quick-facts {
+            list-style: none;
+            font-size: 0.9rem;
+        }
+        
+        .quick-facts li {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-xs);
+            color: var(--text-secondary);
+        }
+        
+        .quick-facts li::before {
+            content: "✓";
+            color: var(--sage-primary);
+            font-weight: bold;
+            margin-right: var(--space-xs);
+        }
+        
+        /* Approach Section */
+        .approach {
+            padding: var(--space-xxl) 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .section-title {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--navy-deep);
+        }
+        
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+        
+        .approach-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+        
+        .approach-highlight {
+            background: var(--warm-light);
+            padding: var(--space-lg);
+            border-radius: 12px;
+            border-left: 4px solid var(--warm-gold);
+        }
+        
+        .approach-highlight h3 {
+            color: var(--navy-deep);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .specialization-badge {
+            background: var(--warm-gold);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Specializations */
+        .specializations {
+            padding: var(--space-xxl) 0;
+            background: var(--earth-cream);
+        }
+        
+        .specializations-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+            list-style: none;
+        }
+        
+        .specialization-item {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: 12px;
+            border-left: 4px solid var(--sage-primary);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+        
+        .specialization-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .specialization-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--navy-deep);
+        }
+        
+        .specialization-desc {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .specialization-link {
+            color: var(--sage-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .specialization-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: var(--space-xxl) 0;
+            background: white;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--earth-warm);
+            border-radius: 12px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--sage-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto var(--space-md);
+        }
+        
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--navy-deep);
+        }
+        
+        .step-desc {
+            color: var(--text-secondary);
+        }
+        
+        /* Testimonial */
+        .testimonial {
+            padding: var(--space-xxl) 0;
+            background: var(--navy-deep);
+            color: white;
+            text-align: center;
+        }
+        
+        .testimonial-quote {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: var(--space-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .testimonial-author {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: var(--space-xxl) 0;
+            background: var(--earth-cream);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+        }
+        
+        .contact-info {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: 16px;
+            border: 1px solid rgba(122, 138, 117, 0.1);
+        }
+        
+        .contact-methods {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-methods li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+            padding: var(--space-md);
+            background: var(--earth-warm);
+            border-radius: 10px;
+        }
+        
+        .contact-icon {
+            width: 24px;
+            margin-right: var(--space-sm);
+            color: var(--sage-primary);
+            font-weight: bold;
+        }
+        
+        .contact-details strong {
+            color: var(--navy-deep);
+        }
+        
+        .contact-details a {
+            color: var(--sage-primary);
+            text-decoration: none;
+        }
+        
+        .insurance-info {
+            background: var(--warm-gold);
+            color: white;
+            padding: var(--space-md);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: 16px;
+            border: 1px solid rgba(122, 138, 117, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--navy-deep);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(122, 138, 117, 0.1);
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            background: var(--earth-cream);
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--sage-primary);
+            background: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--navy-deep);
+            color: rgba(255, 255, 255, 0.8);
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-section h4 {
+            color: var(--sage-light);
+            margin-bottom: var(--space-sm);
+            font-family: var(--font-sans);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--sage-light);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .approach-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .secondary-cta {
+                flex-direction: column;
+            }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--sage-primary);
+            color: white;
+            padding: 8px;
+            z-index: 1001;
+            text-decoration: none;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        .btn:focus,
+        input:focus,
+        textarea:focus,
+        a:focus {
+            outline: 3px solid var(--sage-light);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="#" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#approach">Approach</a></li>
+                        <li><a href="#specializations">Services</a></li>
+                        <li><a href="#process">How It Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="tel:+14163062157" class="header-phone">
+                    📞 (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Evidence-based therapy for individuals ready to transform anxiety into growth</h1>
+                        <p class="hero-subtext">I'm Jesse Cynamon, a registered psychotherapist specializing in helping individuals across Ontario move beyond coping strategies to create lasting change using advanced Acceptance and Commitment Therapy (ACT) approaches.</p>
+                        
+                        <div class="hero-cta">
+                            <a href="#contact" class="primary-cta">
+                                Book Your Free 20-Minute Consultation
+                            </a>
+                            <div class="secondary-cta">
+                                <a href="tel:+14163062157" class="phone-cta">Call (416) 306-2157</a>
+                                <a href="mailto:jesse@nextsteptherapy.ca" class="email-cta">Send Email</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="therapist-card">
+                        <div class="therapist-photo">
+                            <img src="images/therapist-photo.jpg" alt="Jesse Cynamon, Registered Psychotherapist" onerror="this.innerHTML='JC'">
+                        </div>
+                        <div class="therapist-info">
+                            <h3 class="therapist-name">Jesse Cynamon, RP</h3>
+                            <p class="therapist-title">Registered Psychotherapist</p>
+                            <div class="therapist-credentials">CRPO #10979</div>
+                            <ul class="quick-facts">
+                                <li>Advanced ACT Certification</li>
+                                <li>Virtual & In-Person Sessions</li>
+                                <li>Free 20-Minute Consultation</li>
+                                <li>Extended Health Plans Accepted</li>
+                                <li>Serving All of Ontario</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Approach Section -->
+        <section class="approach" id="approach">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Beyond Coping Strategies</h2>
+                    <p class="section-desc">I believe in helping you transform obstacles into opportunities for growth, not just managing symptoms. My approach combines clinical expertise with real-world understanding of life's pressures.</p>
+                </div>
+                
+                <div class="approach-content">
+                    <div>
+                        <div class="specialization-badge">Advanced ACT Certification</div>
+                        <h3>Evidence-Based Approach</h3>
+                        <p>I specialize in Acceptance and Commitment Therapy (ACT), combined with mindfulness-based interventions. This approach helps you develop psychological flexibility – the ability to stay present with your experiences and take action guided by your values, even when facing difficult thoughts and feelings.</p>
+                        
+                        <p><strong>My Background:</strong> With a Master's in Psychology and specialized training in crisis intervention, I understand how stress and anxiety impact your life. Having worked in high-pressure environments myself, I bring both clinical expertise and real-world experience to our work together.</p>
+                    </div>
+                    
+                    <div class="approach-highlight">
+                        <h3>What Makes This Different</h3>
+                        <p><strong>Measure What Matters:</strong> I use validated measurement tools to track your progress and the quality of our therapeutic relationship. Brief assessments at the beginning and end of each session provide real-time data about your growth and our work together.</p>
+                        
+                        <p><strong>Personalized Process:</strong> Your therapy journey is unique. I adapt evidence-based approaches to fit your specific situation, goals, and life circumstances.</p>
+                        
+                        <p><strong>Lasting Change:</strong> Rather than just symptom management, we focus on building skills and insights that create sustainable improvement in how you think, feel, and navigate life's challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Specializations -->
+        <section class="specializations" id="specializations">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How I can support you</h2>
+                    <p class="section-desc">I work with individuals facing a range of challenges, always with the goal of helping you develop the skills and insights needed for lasting positive change.</p>
+                </div>
+                
+                <ul class="specializations-list">
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">Anxiety & Stress Management</h3>
+                        <p class="specialization-desc">Transform overwhelming anxiety and stress into manageable experiences using evidence-based ACT and mindfulness approaches. Learn to work with anxiety rather than against it.</p>
+                        <a href="#" class="specialization-link">Learn more about anxiety therapy →</a>
+                    </li>
+                    
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">Life Transitions & Adjustment</h3>
+                        <p class="specialization-desc">Navigate major life changes including relationship transitions, career shifts, loss, or identity exploration with support and practical strategies.</p>
+                        <a href="#" class="specialization-link">Explore transition support →</a>
+                    </li>
+                    
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">Personal Growth & Values Clarification</h3>
+                        <p class="specialization-desc">Develop self-awareness, build confidence, and create a more fulfilling life aligned with your authentic values and goals.</p>
+                        <a href="#" class="specialization-link">Learn about personal growth work →</a>
+                    </li>
+                    
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">Relationship & Communication Issues</h3>
+                        <p class="specialization-desc">Improve communication patterns, set healthy boundaries, and navigate relationship challenges with partners, family, or friends.</p>
+                        <a href="#" class="specialization-link">Learn about relationship therapy →</a>
+                    </li>
+                    
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">Men's Mental Health</h3>
+                        <p class="specialization-desc">Specialized support addressing the unique mental health challenges men face, in a judgment-free environment that respects different approaches to emotional expression.</p>
+                        <a href="#" class="specialization-link">Explore men's mental health →</a>
+                    </li>
+                    
+                    <li class="specialization-item">
+                        <h3 class="specialization-title">High-Pressure Situations & Performance</h3>
+                        <p class="specialization-desc">Build resilience and develop effective strategies for managing stress in challenging environments, whether academic, professional, or personal.</p>
+                        <a href="#" class="specialization-link">Learn about performance support →</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Process Section -->
+        <section class="process" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My therapeutic process</h2>
+                    <p class="section-desc">Here's what you can expect when we work together, adapted to your unique needs and goals.</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Insight & Understanding</h3>
+                        <p class="step-desc">We'll explore how your challenges specifically impact your daily life, relationships, and overall wellbeing, identifying patterns and triggers.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Pattern Recognition</h3>
+                        <p class="step-desc">Together we'll uncover the underlying patterns that contribute to your stress, anxiety, or other concerns, and understand how they developed.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Strategic Intervention</h3>
+                        <p class="step-desc">Develop practical, evidence-based strategies that fit your lifestyle and goals, using ACT and mindfulness approaches tailored to your situation.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Sustainable Integration</h3>
+                        <p class="step-desc">Create lasting change by integrating new skills and insights into your daily life, enhancing both your resilience and overall wellbeing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonial -->
+        <section class="testimonial">
+            <div class="container">
+                <blockquote class="testimonial-quote">
+                    "Jesse helped me understand that I didn't need to eliminate my anxiety completely – I learned to work with it in a way that actually made me stronger and more confident in challenging situations."
+                </blockquote>
+                <cite class="testimonial-author">— Alex M., Toronto</cite>
+            </div>
+        </section>
+        
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Ready to get started?</h2>
+                    <p class="section-desc">Reach out today for your free consultation. I respond to all inquiries within 2 hours during business hours.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in touch</h3>
+                        
+                        <ul class="contact-methods">
+                            <li>
+                                <span class="contact-icon">📞</span>
+                                <div class="contact-details">
+                                    <strong>Phone:</strong><br>
+                                    <a href="tel:+14163062157">(416) 306-2157</a><br>
+                                    <small>Call or text for fastest response</small>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <span class="contact-icon">✉️</span>
+                                <div class="contact-details">
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a><br>
+                                    <small>I respond within 2 hours</small>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <span class="contact-icon">💻</span>
+                                <div class="contact-details">
+                                    <strong>Sessions:</strong><br>
+                                    Virtual across Ontario<br>
+                                    <small>In-person options available</small>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="insurance-info">
+                            <h4>💰 Investment & Insurance</h4>
+                            <p><strong>$175 per 50-minute session</strong></p>
+                            <p>Extended health plans accepted<br>
+                            Direct billing available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send me a message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-contact">Preferred contact method</label>
+                                <select id="preferred-contact" name="preferred-contact">
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone call</option>
+                                    <option value="text">Text message</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inquiry-type">What would you like to discuss?</label>
+                                <select id="inquiry-type" name="inquiry-type">
+                                    <option value="consultation">Free consultation</option>
+                                    <option value="anxiety">Anxiety & stress</option>
+                                    <option value="transitions">Life transitions</option>
+                                    <option value="relationships">Relationship concerns</option>
+                                    <option value="growth">Personal growth</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Additional details (optional)</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Share as much or as little as you're comfortable with..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Registered Psychotherapist providing evidence-based therapy using Acceptance and Commitment Therapy (ACT) and mindfulness approaches across Ontario.</p>
+                    <p><strong>CRPO Registration #10979</strong></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Anxiety & Stress Management</a></li>
+                        <li><a href="#">Life Transitions</a></li>
+                        <li><a href="#">Personal Growth</a></li>
+                        <li><a href="#">Men's Mental Health</a></li>
+                        <li><a href="#">Relationship Issues</a></li>
+                        <li><a href="#">Performance Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Jesse & My Approach</a></li>
+                        <li><a href="#">How Therapy Works</a></li>
+                        <li><a href="#">What is ACT?</a></li>
+                        <li><a href="#">Investment & Insurance</a></li>
+                        <li><a href="#">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal & Ethics</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Professional Ethics</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Next Step Therapy. All rights reserved. | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! I will respond within 2 hours during business hours.');
+        });
+        
+        // Phone number click tracking
+        document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
+            phone.addEventListener('click', function() {
+                console.log('Phone number clicked for conversion tracking');
+            });
+        });
+    </script>
+</body>
+</html>

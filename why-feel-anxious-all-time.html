@@ -1,5 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -9,8 +68,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- SEO Meta Data -->
-    <title>Why Do I Feel Anxious All the Time? Understanding Chronic Anxiety | Ontario Therapy</title>
-    <meta name="description" content="Discover why you feel anxious all the time and how therapy can help. Virtual support for chronic anxiety throughout Ontario. Free consultation. CRPO registered.">
+    <title>Why Do I Feel Anxious All the Time? Break the Cycle of Constant Worry | CRPO #10979</title>
+    <meta name="description" content="That exhausting feeling of being anxious all the time isn't your fault. Understand chronic anxiety and find relief through virtual therapy across Ontario. CRPO registered therapist.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Why Do I Feel Anxious All the Time? | Next Step Therapy">
@@ -23,141 +82,81 @@
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Why Do I Feel Anxious All the Time? Break the Cycle of Constant Worry",
+      "description": "Understanding chronic anxiety and finding relief through evidence-based therapy in Ontario",
+      "wordCount": "2500+",
+      "author": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Next Step Therapy"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Chronic Anxiety",
+        "description": "Persistent anxiety that affects daily life and wellbeing",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Evidence-based psychotherapy"
+        }
+      }
+    },
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://nextsteptherapy.ca/#jessecynamon",
-          "name": "Jesse Cynamon, RP",
-          "givenName": "Jesse",
-          "familyName": "Cynamon",
-          "additionalName": "RP",
-          "description": "Registered Psychotherapist specializing in anxiety therapy and workplace stress management",
-          "jobTitle": "Registered Psychotherapist",
-          "url": "https://nextsteptherapy.ca",
-          "email": "jesse@nextsteptherapy.ca",
-          "telephone": "+14163062157",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
-          },
-          "memberOf": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario",
-            "url": "https://crpo.ca"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional License",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
+      "@type": "LocalBusiness",
+      "name": "Next Step Therapy",
+      "description": "Virtual therapy services for chronic anxiety across Ontario",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Therapy Services",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Virtual Therapy for Chronic Anxiety",
+            "provider": {
+              "@type": "Person",
+              "name": "Jesse Cynamon, RP"
             }
-          },
-          "identifier": "CRPO #10979"
-        },
-        {
-          "@type": "Article",
-          "headline": "Why Do I Feel Anxious All the Time? Understanding Chronic Anxiety",
-          "description": "Comprehensive guide to understanding chronic anxiety, its causes, and how therapy can provide relief. Evidence-based treatment for persistent anxiety in Ontario.",
-          "datePublished": "2024-12-01",
-          "dateModified": "2024-12-01",
-          "author": {
-            "@id": "https://nextsteptherapy.ca/#jessecynamon"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Next Step Therapy",
-            "url": "https://nextsteptherapy.ca"
-          },
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/why-feel-anxious-all-time.html"
-          },
-          "about": [
-            {
-              "@type": "MedicalCondition",
-              "name": "Generalized Anxiety Disorder",
-              "description": "Persistent, excessive anxiety and worry about various aspects of life",
-              "possibleTreatment": {
-                "@type": "MedicalTherapy",
-                "name": "Cognitive Behavioral Therapy"
-              }
-            },
-            {
-              "@type": "MedicalCondition",
-              "name": "Chronic Anxiety",
-              "description": "Long-term anxiety that persists and interferes with daily functioning"
-            }
-          ],
-          "keywords": "chronic anxiety, feel anxious all the time, generalized anxiety disorder, anxiety therapy Ontario, persistent worry",
-          "articleSection": "Mental Health",
-          "wordCount": "4200"
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Why do I feel anxious all the time even when nothing bad is happening?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Chronic anxiety often occurs when your nervous system becomes hypersensitive to potential threats. Your brain's alarm system (amygdala) starts interpreting everyday situations as dangerous. This can happen due to past experiences, accumulated stress, or living in high-pressure environments. It's not about current danger - it's about your nervous system being stuck in a protective mode."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is feeling anxious constantly a sign of a mental health condition?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Persistent anxiety that interferes with daily life may indicate Generalized Anxiety Disorder or another anxiety condition. However, you don't need a formal diagnosis to benefit from therapy. If anxiety is impacting your quality of life, relationships, work, or sleep, that's reason enough to seek professional support."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can therapy really help if I've been anxious for years?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Absolutely. Even long-standing anxiety patterns can change through therapy. The brain's neuroplasticity means you can develop new neural pathways at any age. Many clients who've dealt with chronic anxiety for decades find significant relief through evidence-based therapeutic approaches. The key is finding the right support and being patient with the process."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What's the difference between normal worry and chronic anxiety?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Normal worry is proportionate to actual threats and resolves when the situation passes. Chronic anxiety is persistent, excessive, difficult to control, and often focuses on unlikely worst-case scenarios. It interferes with daily functioning, causes physical symptoms, and doesn't respond to logical reasoning. If you're anxious most days for more than six months, it may be chronic anxiety that would benefit from professional support."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://nextsteptherapy.ca"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Mental Health Resources",
-              "item": "https://nextsteptherapy.ca/seo"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Why Feel Anxious All Time",
-              "item": "https://nextsteptherapy.ca/why-feel-anxious-all-time.html"
-            }
-          ]
+          }
+        }]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is feeling anxious all the time actually a mental health condition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Persistent anxiety that interferes with daily life may indicate Generalized Anxiety Disorder or another anxiety condition. However, you don't need a formal diagnosis to benefit from therapy. If anxiety is impacting your quality of life, that's reason enough to seek support."
         }
-      ]
-    }
+      }, {
+        "@type": "Question",
+        "name": "Can therapy really help if I've been anxious for years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. While long-standing anxiety patterns take time to shift, they're not permanent. Many clients who've dealt with anxiety for decades find relief through therapy. The brain's neuroplasticity means change is possible at any age."
+        }
+      }]
+    }]
     </script>
     
     <style>
@@ -198,6 +197,7 @@
         body {
             font-family: var(--font-body);
             line-height: 1.7;
+            color: var(--text-primary);
             background: var(--background-primary);
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
@@ -225,21 +225,23 @@
             top: 0;
             z-index: 100;
             padding: var(--space-md) 0;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
         }
         
         .header-content {
-            height: 42px;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         
         .logo-section {
-            height: 42px;
+            display: flex;
+            align-items: center;
             gap: var(--space-sm);
-        }
-        
-        .logo {
-            height: 42px;
-            width: auto;
         }
         
         .logo-text {
@@ -248,25 +250,30 @@
             font-weight: 400;
             font-style: italic;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;        }
+            text-decoration: none;
+        }
         
         .credentials-badge {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
-            padding: 0.375rem 0.875rem;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-lg);
-            font-size: 0.8125rem;
-            font-weight: 500;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
         }
         
         .nav {
-            height: 42px;
+            display: flex;
             gap: var(--space-lg);
             list-style: none;
+            align-items: center;
         }
         
         .nav a {
             color: var(--text-secondary);
+            text-decoration: none;
             font-weight: 400;
             padding: var(--space-xs) var(--space-sm);
             border-radius: var(--radius-lg);
@@ -275,13 +282,16 @@
         
         .nav a:hover {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            background-color: rgba(74, 107, 122, 0.04);
+            background-color: rgba(74, 107, 122, 0.04);
         }
         
         .header-phone {
-            height: 42px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            font-weight: 500;
+            text-decoration: none;
+            font-weight: 500;
             padding: var(--space-sm) var(--space-md);
             border: 1.5px solid var(--primary-soft-blue);
             border-radius: var(--radius-lg);
@@ -298,24 +308,25 @@
             font-family: var(--font-display);
             line-height: 1.2;
             margin-bottom: var(--space-md);
+            color: var(--text-primary);
         }
         
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
+            font-weight: 600;
             font-style: italic;
             margin-bottom: var(--space-lg);
         }
         
         h2 {
             font-size: clamp(2rem, 4vw, 2.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-lg);
         }
         
         h3 {
             font-size: clamp(1.375rem, 3vw, 1.75rem);
-            font-weight: 400;
+            font-weight: 600;
             margin-bottom: var(--space-md);
         }
         
@@ -327,6 +338,7 @@
         
         .lead-text {
             font-size: 1.25rem;
+            color: var(--text-primary);
             font-weight: 500;
             line-height: 1.6;
             margin-bottom: var(--space-lg);
@@ -339,12 +351,7 @@
         /* Hero Section */
         .hero {
             padding: var(--space-section) 0;
-            background: 
-                linear-gradient(135deg, rgba(254, 254, 254, 0.7) 0%, rgba(245, 246, 247, 0.7) 100%),
-                url('images/asset104.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -367,10 +374,12 @@
         /* Buttons */
         .btn {
             display: inline-flex;
+            align-items: center;
             justify-content: center;
             padding: 1rem 2rem;
             border-radius: var(--radius-lg);
             font-weight: 500;
+            text-decoration: none;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -393,7 +402,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .btn-secondary:hover {
@@ -430,7 +439,7 @@
         
         .content-card h3 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-md);
         }
         
         /* Lists */
@@ -440,7 +449,7 @@
         }
         
         .feature-list li {
-            height: 42px;
+            display: flex;
             align-items: flex-start;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-md);
@@ -452,7 +461,7 @@
             position: absolute;
             left: 0;
             color: var(--accent-warm);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         /* FAQ Section */
@@ -465,7 +474,7 @@
         
         .faq-item h4 {
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-sm);
+            margin-bottom: var(--space-sm);
         }
         
         /* Contact Section - Match Homepage Style */
@@ -478,16 +487,17 @@
         .contact-highlight h3 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
             margin-bottom: var(--space-lg);
-            font-weight: 400;
+            font-weight: 600;
         }
         
         .contact-highlight h4 {
             font-family: var(--font-display);
             font-size: 1.375rem;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            margin-bottom: var(--space-md);
-            font-weight: 400;
+            margin-bottom: var(--space-md);
+            font-weight: 600;
         }
         
         .contact-highlight p {
@@ -499,8 +509,9 @@
         
         /* CTA Buttons - Match Homepage */
         .hero-cta {
-            height: 42px;
+            display: flex;
             flex-direction: column;
+            align-items: center;
             gap: var(--space-md);
         }
         
@@ -509,7 +520,8 @@
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
-            font-weight: 400;
+            text-decoration: none;
+            font-weight: 600;
             font-size: 1.0625rem;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -523,7 +535,7 @@
         }
         
         .secondary-ctas {
-            height: 42px;
+            display: flex;
             gap: var(--space-sm);
             margin-top: var(--space-xs);
         }
@@ -532,6 +544,7 @@
             flex: 1;
             padding: 1rem 1.5rem;
             text-align: center;
+            text-decoration: none;
             border-radius: var(--radius-md);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -541,7 +554,7 @@
         .phone-cta {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
         }
         
         .phone-cta:hover {
@@ -553,7 +566,7 @@
         .email-cta {
             background: transparent;
             color: var(--primary-soft-blue);
-            letter-spacing: -0.01em;            font-style: italic;            border: 1.5px solid var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
         }
         
         .email-cta:hover {
@@ -571,39 +584,49 @@
             line-height: 1.6;
         }
         
-        /* Floating CTA for Mobile */
+        /* Smart Sticky CTA for Mobile - V2 Enhancement */
         .floating-cta {
             position: fixed;
             bottom: 20px;
+            left: 20px;
             right: 20px;
             z-index: 1000;
-            display: none;
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 400;
-            font-size: 0.9375rem;
-            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
             transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            display: none;
+            max-width: 280px;
+            margin: 0 auto;
             min-height: 48px;
-            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .floating-cta.show {
+            display: flex;
+            opacity: 1;
         }
         
         .floating-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            box-shadow: 0 6px 25px rgba(76, 175, 80, 0.4);
             color: white;
-        }
-        
-        .floating-cta:active {
-            transform: translateY(0);
         }
         
         @media (max-width: 768px) {
             .floating-cta {
-                height: 42px;
+                display: block;
                 bottom: 15px;
+                left: 15px;
                 right: 15px;
                 padding: 0.875rem 1.25rem;
                 font-size: 0.875rem;
@@ -666,27 +689,21 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" width="200" height="40" loading="eager" onerror="this.style.display='none'">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
                     <a href="index.html" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="index.html#approach">Approach</a></li>
-                        <li><a href="index.html#specializations">Services</a></li>
-                        <li><a href="index.html#process">Process</a></li>
-                        <li><a href="index.html#contact">Connect</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -697,10 +714,20 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Why Do I Feel Anxious All the Time</h1>
-                    <p class="lead-text">Understanding that constant state of unease, worry, and tension that never seems to go away. You're not alone in this, and there's a path forward.</p>
+                    <h1>Why Do I Feel Anxious All the Time?</h1>
+                    <p class="lead-text">That exhausting feeling of constant worry, the racing thoughts that won't quiet, the tension that never fully leaves your body. You're not broken, and this isn't forever.</p>
                     
-                    <div style="height: 42px; justify-content: center; margin-top: var(--space-lg);"><a href="index.html#contact" class="btn btn-primary">Get Help Today</a></div>
+                    <!-- V2 Trust Signals -->
+                    <div style="display: flex; justify-content: center; gap: 24px; margin: 16px 0; flex-wrap: wrap;">
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ CRPO Registered #10979</span>
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ Virtual Sessions</span>
+                        <span style="display: flex; align-items: center; gap: 8px; color: var(--primary-deep); font-size: 0.9rem; font-weight: 500;">✓ Evidence-Based</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Start Feeling Better Today</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">Talk to Someone Who Gets It</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -729,10 +756,8 @@
                     
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Call or Text Now</a>
-                            <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
-                        </div>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">You don't have to live with constant anxiety.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Get Support Today</a>
                     </div>
                 </div>
             </div>
@@ -814,8 +839,9 @@
                     
                     <!-- CTA after explaining benefits -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Start Your Journey</a>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to understand and manage your anxiety?</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="tel:+15198008323" class="primary-cta">Start Your Journey</a>
                             <a href="index.html#contact" class="secondary-cta email-cta">Ask a Question</a>
                         </div>
                     </div>
@@ -961,11 +987,119 @@
                     
                     <!-- Mid-section CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <div style="height: 42px; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Call or Text (416) 306-2157</a>
-                            <a href="index.html#contact" class="secondary-cta email-cta">Get Help Today</a>
-                        </div>
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Virtual therapy available throughout Ontario.</p>
+                        <a href="tel:+15198008323" class="primary-cta">Book Free Consultation</a>
                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Breaking the Anxiety Cycle Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Understanding the Anxiety Cycle That Keeps You Stuck</h2>
+                    
+                    <p>Chronic anxiety isn't just about feeling worried. It's a self-perpetuating cycle that gets stronger each time it completes its loop. Understanding this cycle is crucial to breaking free from it.</p>
+                    
+                    <h3>The Four-Stage Anxiety Cycle:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Stage 1: The Trigger</strong></h4>
+                        <p>Something activates your anxiety - a work email, a social situation, even just waking up in the morning. Your brain, conditioned by past experiences, immediately interprets this as a threat. The trigger doesn't have to be rational or even real; your nervous system responds to perceived danger.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Stage 2: The Physical Response</strong></h4>
+                        <p>Your body floods with stress hormones - adrenaline, cortisol, norepinephrine. Heart rate increases, muscles tense, breathing becomes shallow. This is your fight-or-flight response, designed to help you escape actual physical danger. But when the "threat" is your boss's tone of voice, these physical sensations feel overwhelming and inappropriate.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Stage 3: The Mental Spiral</strong></h4>
+                        <p>Your thinking brain tries to make sense of why your body is reacting so strongly. It starts generating explanations: "Something terrible must be about to happen," "I can't handle this," "What if...?" These thoughts fuel more physical symptoms, creating a feedback loop.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Stage 4: The Avoidance and Reinforcement</strong></h4>
+                        <p>To escape the discomfort, you avoid the trigger or engage in safety behaviors - canceling plans, checking email obsessively, seeking reassurance. While this provides temporary relief, it teaches your brain that the trigger was indeed dangerous, making you more likely to react the same way next time.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg); font-weight: 500;">Breaking this cycle requires interrupting it at multiple points - and you don't have to do it alone.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- The Hidden Costs Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>The Hidden Costs of Living with Constant Anxiety</h2>
+                    
+                    <p>When you've been anxious for so long, you might not even realize all the ways it's affecting your life. Chronic anxiety has ripple effects that extend far beyond the worry itself.</p>
+                    
+                    <h3>What Anxiety Steals From Your Life:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Cognitive Resources</strong></h4>
+                        <p>Anxiety is mentally exhausting. It hijacks your cognitive resources, making it harder to concentrate, remember things, or think creatively. You might notice you're not as sharp at work, struggle to follow conversations, or feel like you're in a constant mental fog.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Physical Health</strong></h4>
+                        <p>Chronic anxiety takes a toll on your body. Persistent muscle tension leads to headaches and back pain. Shallow breathing reduces oxygen to your cells. Stress hormones suppress immune function and interfere with digestion. Many people with chronic anxiety develop physical symptoms that seem unrelated but aren't.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Relationship Intimacy</strong></h4>
+                        <p>Anxiety makes you self-focused by necessity - you're constantly monitoring for threats. This can make you seem distracted, unavailable, or irritable to others. Partners might feel like they're walking on eggshells. Friendships might drift as you turn down invitations or seem too preoccupied to be fully present.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Career Advancement</strong></h4>
+                        <p>Anxiety can make you risk-averse, leading you to avoid opportunities that might advance your career. You might decline speaking opportunities, avoid applying for promotions, or turn down projects that stretch your comfort zone. Over time, this limits your professional growth.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Joy and Spontaneity</strong></h4>
+                        <p>Perhaps most tragically, chronic anxiety robs you of the ability to be present for positive experiences. You might be at a beautiful location but worried about the drive home. You might achieve something significant but immediately worry about what comes next. Life becomes about managing anxiety rather than experiencing joy.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg); color: var(--text-primary);"><em>The good news? All of these can be reclaimed through proper treatment.</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Neuroplasticity and Hope Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Your Anxious Brain Can Change</h2>
+                    
+                    <p>One of the most hopeful discoveries in neuroscience is neuroplasticity - your brain's ability to form new neural pathways throughout your life. This means the anxious patterns that feel so fixed and permanent are actually changeable.</p>
+                    
+                    <h3>The Science of Change:</h3>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Neural Pathways Are Like Hiking Trails</strong></h4>
+                        <p>Imagine your anxious thoughts as a well-worn path through the forest. You've walked this path so many times that it's become automatic - the easiest route for your mind to take. But just as you can create new paths through the forest, you can create new neural pathways in your brain.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Repetition Creates Change</strong></h4>
+                        <p>Every time you practice a new way of thinking or responding, you strengthen that neural pathway. At first, it takes conscious effort - like bushwhacking through dense forest. But with repetition, it becomes easier, more automatic. Meanwhile, the old anxious pathways, with less use, begin to weaken.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Therapy Accelerates Neuroplasticity</strong></h4>
+                        <p>While your brain can change on its own, therapy provides the tools and guidance to make changes more efficiently. Evidence-based approaches target specific aspects of anxiety, helping you develop new patterns more quickly than trying to change on your own.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>Age Is Not a Barrier</strong></h4>
+                        <p>Neuroplasticity continues throughout life. Whether you're 25 or 65, your brain retains the ability to form new connections and patterns. Many clients are surprised by how much they can change patterns they've had for decades.</p>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-lg); font-weight: 500;">Your anxious brain isn't broken - it's just stuck in old patterns that can be updated.</p>
                 </div>
             </div>
         </section>
@@ -1039,30 +1173,6 @@
             </div>
         </section>
         
-        <!-- Related Resources Section -->
-        <section class="section" style="background: var(--neutral-soft); padding: var(--space-section) 0;">
-            <div class="container-narrow">
-                <h3 style="text-align: center; margin-bottom: var(--space-lg);">Related Support & Resources</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md);">
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Professional Anxiety Therapy</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">Evidence-based treatment for racing thoughts and constant worry throughout Ontario.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Work-Related Stress</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">When job pressures contribute to your anxiety levels.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center;">
-                        <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Workplace Stress Support</h4>
-            letter-spacing: -0.01em;            font-style: italic;                        <p style="margin-bottom: var(--space-md);">Professional therapy for work-related anxiety and burnout.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- Contact Section -->
         <section class="contact-highlight" id="contact">
             <div class="container">
@@ -1072,7 +1182,13 @@
                 <h4>Free 15-Minute Consultation</h4>
                 <p>Let's talk about what you're experiencing and how therapy might help. No pressure, no judgment - just a conversation about possibilities.</p>
                 
-                <div class="hero-cta"><a href="index.html#contact" class="primary-cta">Get Help Today</a></div>
+                <div class="hero-cta">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="primary-cta">Start Feeling Better Today</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+                </div>
                 
                 <div class="contact-info">
                     <strong>Jesse Cynamon, RP</strong><br>
@@ -1085,9 +1201,42 @@
         </section>
     </main>
     
-    <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
-        📞 Call Now
+    <!-- Smart Sticky CTA for Mobile -->
+    <a href="https://www.nextsteptherapy.ca/#contact" class="floating-cta">
+        Find Peace Today
     </a>
+    
+    <script>
+        // Smart sticky CTA - show after 30% scroll on mobile
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.offsetHeight - window.innerHeight);
+            const stickyCTA = document.querySelector('.floating-cta');
+            
+            if (rate > 0.3 && window.innerWidth <= 768) {
+                stickyCTA.classList.add('show');
+            } else {
+                stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768) {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 80) {
+                    header.classList.add('hide-on-scroll');
+                } else if (scrollTop < lastScrollTop) {
+                    header.classList.remove('hide-on-scroll');
+                }
+                
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }
+        });
+    </script>
 
 </body></html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Therapy Ontario | Virtual Therapy Canada | NextStep Therapy</title>
-    <meta name="description" content="Professional online therapy throughout Ontario. Virtual therapy sessions with CRPO registered therapist. Secure video sessions, flexible scheduling, insurance receipts. Book consultation today.">
+    <title>Online Therapy Ontario - Break Free from Life's Overwhelming Challenges | Next Step Therapy</title>
+    <meta name="description" content="Transform your life with professional online therapy in Ontario. Evidence-based virtual sessions that help you break free from anxiety, depression, and life's challenges. CRPO registered therapist.">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Online Therapy Ontario | Virtual Therapy Canada">
@@ -44,10 +44,10 @@
     
     <style>
         :root {
-            /* Refined therapeutic color palette (60-30-10 rule) */
-            --primary-soft-blue: #4a6b7a;
-            --primary-deep: #36525f;
-            --primary-light: #6b8a98;
+            /* V2 Conversion Optimized Color Palette */
+            --primary-green: #2E7D32;
+            --primary-deep: #1B5E20;
+            --primary-light: #4CAF50;
             --accent-warm: #c4a191;
             --accent-gold: #b19976;
             --neutral-cream: #faf8f5;
@@ -207,19 +207,20 @@
             font-size: 1.5rem;
             font-weight: 400;
             font-style: italic;
-            color: var(--primary-soft-blue);
+            color: var(--primary-green);
             text-decoration: none;
             letter-spacing: -0.01em;
         }
         
         .credentials-badge {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-light));
             color: white;
             padding: 0.375rem 0.875rem;
             border-radius: var(--radius-lg);
             font-size: 0.8125rem;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(46, 125, 50, 0.2);
         }
         
         .nav {
@@ -241,31 +242,31 @@
         }
         
         .nav a:hover {
-            color: var(--primary-soft-blue);
-            background-color: rgba(74, 107, 122, 0.04);
+            color: var(--primary-green);
+            background-color: rgba(46, 125, 50, 0.04);
             transform: translateY(-1px);
         }
         
         .header-phone {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            color: var(--primary-soft-blue);
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-light));
+            color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 0.9375rem;
             padding: var(--space-sm) var(--space-md);
-            border: 1.5px solid var(--primary-soft-blue);
+            border: 2px solid transparent;
             border-radius: var(--radius-lg);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             letter-spacing: 0.025em;
+            box-shadow: 0 2px 12px rgba(46, 125, 50, 0.3);
         }
         
         .header-phone:hover {
-            background: var(--primary-soft-blue);
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-green));
             color: white;
             transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+            box-shadow: 0 4px 16px rgba(46, 125, 50, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
         /* Hero Section */
@@ -341,39 +342,44 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-light));
             color: white;
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+            border: 2px solid transparent;
+            font-weight: 700;
         }
         
         .btn-primary:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-green));
             transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
             color: white;
+            border-color: rgba(255, 255, 255, 0.2);
         }
         
         .primary-cta {
-            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-light));
             color: white;
             padding: 1.25rem 2.5rem;
             border-radius: var(--radius-lg);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 1rem;
             text-align: center;
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.35);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             letter-spacing: 0.025em;
             display: inline-block;
             margin: var(--space-md) var(--space-sm) 0 0;
+            border: 2px solid transparent;
         }
         
         .primary-cta:hover {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-green));
             transform: translateY(-3px);
-            box-shadow: var(--shadow-strong);
+            box-shadow: 0 6px 25px rgba(46, 125, 50, 0.45);
             color: white;
+            border-color: rgba(255, 255, 255, 0.3);
         }
         
         .secondary-cta {
@@ -381,20 +387,22 @@
             text-align: center;
             text-decoration: none;
             border-radius: var(--radius-md);
-            font-weight: 500;
+            font-weight: 700;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-size: 0.9375rem;
             display: inline-block;
             margin: var(--space-md) var(--space-sm) 0 0;
-            background: transparent;
-            border: 1.5px solid var(--primary-soft-blue);
-            color: var(--primary-soft-blue);
+            background: white;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            box-shadow: 0 2px 12px rgba(46, 125, 50, 0.15);
         }
         
         .secondary-cta:hover {
-            background: var(--primary-soft-blue);
+            background: var(--primary-green);
             color: white;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(46, 125, 50, 0.25);
         }
         
         /* Content Sections */
@@ -634,8 +642,51 @@
             line-height: 1.6;
         }
         
+        /* Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-light));
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.4);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+        }
+        
+        .mobile-sticky-cta.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .mobile-sticky-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-green));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(46, 125, 50, 0.5);
+            color: white;
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-sticky-cta {
+                display: none;
+            }
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .header.hide-on-scroll {
+                transform: translateY(-100%);
+            }
             :root {
                 --space-section: 4rem;
                 --space-xxl: 2.5rem;
@@ -710,12 +761,12 @@
         
         <div class="container">
             <div class="hero-content">
-                <h1>Online Therapy Throughout Ontario</h1>
-                <p class="lead-text">Professional virtual therapy sessions from the comfort of your own space. Secure, convenient, and effective mental health support with a CRPO registered psychotherapist.</p>
+                <h1>Transform Your Life from the Comfort of Home</h1>
+                <p class="lead-text">Break free from anxiety, depression, and life's overwhelming challenges with professional online therapy throughout Ontario. Evidence-based virtual sessions that create real change.</p>
                 
                 <div class="hero-cta">
                     <a href="tel:+14163062157" class="primary-cta">
-                        Book Virtual Consultation
+                        Get Professional Support Today
                     </a>
                     <a href="tel:+14163062157" class="secondary-cta">(416) 306-2157</a>
                 </div>
@@ -987,5 +1038,54 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Mobile Sticky CTA -->
+    <a href="tel:+14163062157" class="mobile-sticky-cta" id="mobileCTA">
+        Get Professional Support Today
+    </a>
+    
+    <script>
+        // Smart sticky header behavior for mobile
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768) {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 80) {
+                    header.classList.add('hide-on-scroll');
+                } else if (scrollTop < lastScrollTop) {
+                    header.classList.remove('hide-on-scroll');
+                }
+                
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }
+        });
+        
+        // Progressive mobile CTA - show after 30% scroll
+        const mobileCTA = document.getElementById('mobileCTA');
+        let hasShownCTA = false;
+        
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth <= 768 && !hasShownCTA) {
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                
+                if (scrollPercent > 30) {
+                    mobileCTA.classList.add('show');
+                    hasShownCTA = true;
+                }
+            }
+        });
+        
+        // Hide mobile CTA on desktop resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileCTA.classList.remove('show');
+                hasShownCTA = false;
+            }
+        });
+    </script>
+    
 </body>
 </html>
