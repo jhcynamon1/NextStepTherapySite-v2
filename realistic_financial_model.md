@@ -128,3 +128,4 @@ The $500K profit target is **achievable but challenging**. Success requires:
 ---
 
 *Sources: Perplexity research on Canadian therapy platform economics, First Session data, Ontario therapy market analysis, industry benchmarks for digital health platforms*
+

@@ -1,18 +1,26 @@
 {
-  "name": "nextsteptherapy",
+  "name": "nextstep-gsc-extractor",
   "version": "1.0.0",
-  "description": "This repository contains the code and resources for the Next Step Therapy business, including the website, SEO management, and financial tracking.",
-  "main": "index.js",
+  "description": "Automated Google Search Console keyword data extractor for Next Step Therapy",
+  "main": "gsc_automated_extractor.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "extract": "node gsc_automated_extractor.js",
+    "setup": "npm install && echo 'Setup complete! Run: npm run extract'",
+    "schedule-daily": "echo '0 9 * * * cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -",
+    "schedule-weekly": "echo '0 9 * * 1 cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^1.11.0",
-    "cheerio": "^1.1.2",
-    "fs-extra": "^11.3.1",
-    "playwright": "^1.55.0"
-  }
+    "csv-parser": "^3.2.0",
+    "googleapis": "^128.0.0"
+  },
+  "keywords": [
+    "google-search-console",
+    "seo",
+    "keyword-research",
+    "automation",
+    "therapy",
+    "ontario"
+  ],
+  "author": "Next Step Therapy",
+  "license": "MIT"
 }
