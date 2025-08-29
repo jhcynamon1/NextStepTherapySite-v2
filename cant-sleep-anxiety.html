@@ -714,26 +714,20 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="https://www.nextsteptherapy.ca" class="logo-text">Next Step Therapy</a>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="https://www.nextsteptherapy.ca/services.html">Services</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/about.html">About</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/blog.html">Resources</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/contact.html">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
-                
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -789,7 +783,7 @@
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">You deserve peaceful nights and restful sleep.</p>
-                        <a href="tel:+14163062157" class="primary-cta">Start Sleeping Again</a>
+                        <a href="tel:+15198008323" class="primary-cta">Start Sleeping Again</a>
                     </div>
                 </div>
             </div>
@@ -942,8 +936,8 @@
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: var(--neutral-cream); border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Peaceful sleep is possible again.</p>
                         <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Reclaim Your Nights</a>
-                            <a href="https://www.nextsteptherapy.ca#contact" class="secondary-cta email-cta">Learn More</a>
+                            <a href="tel:+15198008323" class="primary-cta">Reclaim Your Nights</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -1065,10 +1059,10 @@
                 <p>Address both the racing mind and the exhausted body. Get tools that work tonight and strategies that last.</p>
                 
                 <div class="hero-cta">
-                    <a href="tel:+14163062157" class="primary-cta">Start Sleeping Better</a>
+                    <a href="tel:+15198008323" class="primary-cta">Start Sleeping Better</a>
                     <div class="secondary-ctas">
-                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
-                        <a href="https://www.nextsteptherapy.ca#contact" class="secondary-cta email-cta">Send Message</a>
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
+                        <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
                     </div>
                 </div>
                 
@@ -1084,8 +1078,44 @@
     </main>
     
     <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
+    <a href="tel:+15198008323" class="floating-cta">
         📞 Call Now
     </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.smart-sticky');
+            let lastScrollTop = 0;
+            let isScrollingUp = false;
+            
+            function handleScroll() {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                    // Scrolling down and past initial position
+                    isScrollingUp = false;
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                    // Scrolling up or at top
+                    isScrollingUp = true;
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
 
 </body></html>

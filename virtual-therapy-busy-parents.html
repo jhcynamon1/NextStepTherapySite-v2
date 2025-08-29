@@ -718,26 +718,20 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="https://www.nextsteptherapy.ca" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="https://www.nextsteptherapy.ca/services.html">Services</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/about.html">About</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/blog.html">Resources</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/contact.html">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
-                
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -761,7 +755,7 @@
                     <!-- V2 CTA Hierarchy -->
                     <div style="display: flex; flex-direction: column; align-items: center; gap: var(--space-md); margin-top: var(--space-xl);">
                         <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Find Yourself Again</a>
-                        <a href="tel:+14163062157" class="cta-secondary">Call Another Parent Who Gets It: (416) 306-2157</a>
+                        <a href="tel:+15198008323" class="cta-secondary">Call Another Parent Who Gets It: (519) 800-8323</a>
                     </div>
                 </div>
             </div>
@@ -938,8 +932,8 @@
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: var(--neutral-cream); border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Your mental health matters to your whole family.</p>
                         <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Start Your Support</a>
-                            <a href="https://www.nextsteptherapy.ca#contact" class="secondary-cta email-cta">Ask Questions</a>
+                            <a href="tel:+15198008323" class="primary-cta">Start Your Support</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Ask Questions</a>
                         </div>
                     </div>
                 </div>
@@ -1066,7 +1060,7 @@
                 <div class="hero-cta">
                     <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Put Yourself on the List</a>
                     <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; margin-top: var(--space-md);">
-                        <a href="tel:+14163062157" class="cta-secondary">(416) 306-2157</a>
+                        <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="cta-secondary">Quick Message</a>
                     </div>
                 </div>
@@ -1108,6 +1102,42 @@
                 'event_category': 'conversion',
                 'event_label': 'parent_mobile_cta',
                 'value': 225
+            });
+        });
+    </script>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.smart-sticky');
+            let lastScrollTop = 0;
+            let isScrollingUp = false;
+            
+            function handleScroll() {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                    // Scrolling down and past initial position
+                    isScrollingUp = false;
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                    // Scrolling up or at top
+                    isScrollingUp = true;
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
             });
         });
     </script>
