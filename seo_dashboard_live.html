@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Performance Dashboard - Next Step Therapy</title>
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/index.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --success-green: #10B981;
+            --warning-orange: #F59E0B;
+            --danger-red: #EF4444;
+            --neutral-gray: #6B7280;
+            --background: #F9FAFB;
+            --white: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --border: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .dashboard-header {
+            background: var(--white);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .last-updated {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-change {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .metric-change.positive {
+            color: var(--success-green);
+        }
+
+        .metric-change.negative {
+            color: var(--danger-red);
+        }
+
+        .metric-change.neutral {
+            color: var(--text-light);
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .data-table {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .table-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            background: var(--background);
+        }
+
+        .table-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--background);
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            color: var(--text-dark);
+        }
+
+        .page-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .page-link:hover {
+            text-decoration: underline;
+        }
+
+        .ranking-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            min-width: 40px;
+        }
+
+        .ranking-excellent {
+            background: #DCFCE7;
+            color: #166534;
+        }
+
+        .ranking-good {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+
+        .ranking-needs-work {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+
+        .conversion-rate {
+            font-weight: 600;
+        }
+
+        .conversion-high {
+            color: var(--success-green);
+        }
+
+        .conversion-medium {
+            color: var(--warning-orange);
+        }
+
+        .conversion-low {
+            color: var(--danger-red);
+        }
+
+        .refresh-button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .refresh-button:hover {
+            background: var(--primary-light);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-light);
+        }
+
+        .insights-section {
+            margin-top: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .insights-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .insight-item {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-blue);
+            background: var(--background);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .insight-type {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .insight-text {
+            margin-top: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-container {
+                padding: 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="header-content">
+            <h1 class="dashboard-title">SEO Performance Dashboard</h1>
+            <div>
+                <button class="refresh-button" onclick="refreshData()">Refresh Data</button>
+                <div class="last-updated" id="lastUpdated">Last updated: Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Key Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Total Impressions</div>
+                <div class="metric-value" id="totalImpressions">-</div>
+                <div class="metric-change" id="impressionsChange">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Total Clicks</div>
+                <div class="metric-value" id="totalClicks">-</div>
+                <div class="metric-change" id="clicksChange">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Average CTR</div>
+                <div class="metric-value" id="averageCTR">-</div>
+                <div class="metric-change" id="ctrChange">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Total Conversions</div>
+                <div class="metric-value" id="totalConversions">-</div>
+                <div class="metric-change" id="conversionsChange">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Total Revenue</div>
+                <div class="metric-value" id="totalRevenue">-</div>
+                <div class="metric-change" id="revenueChange">Loading...</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Avg. Position</div>
+                <div class="metric-value" id="averagePosition">-</div>
+                <div class="metric-change" id="positionChange">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3 class="chart-title">Performance Trends (Last 30 Days)</h3>
+                <canvas id="trendsChart" width="400" height="200"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Top Converting Pages</h3>
+                <canvas id="conversionChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Page Performance Table -->
+        <div class="data-table">
+            <div class="table-header">
+                <h3 class="table-title">Page Performance Analysis</h3>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Page</th>
+                            <th>Avg. Position</th>
+                            <th>Impressions</th>
+                            <th>Clicks</th>
+                            <th>CTR</th>
+                            <th>Conversions</th>
+                            <th>Conv. Rate</th>
+                            <th>Revenue</th>
+                            <th>Opportunity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pagePerformanceTable">
+                        <tr>
+                            <td colspan="9" class="loading">Loading page performance data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- AI Insights -->
+        <div class="insights-section">
+            <h3 class="insights-title">🤖 AI-Powered Insights & Recommendations</h3>
+            <div id="insightsContainer">
+                <div class="loading">Analyzing your data for insights...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dashboard data and functionality
+        let dashboardData = {
+            summary: {},
+            pages: [],
+            trends: [],
+            insights: []
+        };
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardData();
+        });
+
+        async function loadDashboardData() {
+            try {
+                // In a real implementation, this would fetch from your data sources
+                // For now, we'll simulate with sample data
+                await loadSampleData();
+                updateMetrics();
+                updateCharts();
+                updateTable();
+                updateInsights();
+                updateLastUpdated();
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+                showError('Failed to load dashboard data');
+            }
+        }
+
+        
+        async function loadSampleData() {
+            // Load real data from integration
+            dashboardData = {
+          "lastUpdated": "2025-08-29T12:45:36.609Z",
+          "summary": {
+                    "totalImpressions": 1699,
+                    "totalClicks": 87,
+                    "totalConversions": 0,
+                    "totalRevenue": 0,
+                    "averageCTR": 5.12,
+                    "averagePosition": 37.1,
+                    "changes": {
+                              "impressions": 6.031908318277232,
+                              "clicks": -7.361060415350775,
+                              "ctr": 1.1956255995355747,
+                              "conversions": 5.925010635903092,
+                              "revenue": -13.028596982715053,
+                              "position": -1.7507025344978597
+                    }
+          },
+          "pages": [
+                    {
+                              "page": "/",
+                              "title": "Homepage",
+                              "impressions": 1699,
+                              "clicks": 87,
+                              "ctr": 5.12,
+                              "avgPosition": 37.1,
+                              "conversions": 0,
+                              "revenue": 0,
+                              "keywords": [
+                                        "jesse cynamon",
+                                        "next step therapy",
+                                        "next step therapy",
+                                        "jesse cynamon",
+                                        "next step therapy clinic",
+                                        "next step psychotherapy",
+                                        "next step psychotherapy",
+                                        "next steps therapy",
+                                        "next step therapy clinic",
+                                        "nextstep therapy",
+                                        "alison gomez",
+                                        "anxiety and stress at work",
+                                        "anxiety and stress therapy",
+                                        "anxiety counselling cochrane",
+                                        "anxiety from work",
+                                        "anxiety management for athletes in toronto",
+                                        "anxiety work",
+                                        "anxiety work related",
+                                        "best hypnotherapist near me",
+                                        "best therapist in toronto",
+                                        "burnout counseling ontario",
+                                        "burnout therapy toronto",
+                                        "burnout therapy toronto",
+                                        "burnout treatment toronto",
+                                        "burnout treatment toronto",
+                                        "cbt therapy for performance anxiety",
+                                        "counsellor near by me",
+                                        "eq high",
+                                        "eq high",
+                                        "executive performance",
+                                        "growth through change",
+                                        "high ei",
+                                        "how to be a better performer",
+                                        "how to deal with work stress and anxiety",
+                                        "impostor syndrome therapy",
+                                        "jesse cynamon",
+                                        "job related anxiety",
+                                        "job stress and anxiety",
+                                        "mental health therapist near me",
+                                        "new step therapy",
+                                        "nex step",
+                                        "next level therapy",
+                                        "next level therapy",
+                                        "next stage therapy",
+                                        "next stage therapy",
+                                        "next step",
+                                        "next step",
+                                        "next step clinic",
+                                        "next step contact",
+                                        "next step counseling",
+                                        "next step counseling",
+                                        "next step counseling services",
+                                        "next step counseling services",
+                                        "next step counselling",
+                                        "next step counselling",
+                                        "next step counselling",
+                                        "next step massage",
+                                        "next step near me",
+                                        "next step near me",
+                                        "next step physiotherapy",
+                                        "next step physiotherapy",
+                                        "next step psychiatry",
+                                        "next step psychology",
+                                        "next step psychology and counselling",
+                                        "next step psychotherapy",
+                                        "next step psychotherapy and wellbeing",
+                                        "next step rehab",
+                                        "next step treatment",
+                                        "next stepp",
+                                        "next steps",
+                                        "next steps counseling",
+                                        "next steps counselling",
+                                        "next steps counselling",
+                                        "next steps psychology",
+                                        "next steps psychology",
+                                        "next steps therapy",
+                                        "next therapy",
+                                        "next therapy",
+                                        "next therapy solutions",
+                                        "next therapy solutions",
+                                        "nextcare urgent care",
+                                        "nextstep",
+                                        "nextstep",
+                                        "nextstep counseling",
+                                        "nextstep counseling",
+                                        "nextstep health",
+                                        "nextstep therapy",
+                                        "nxtstep ontario",
+                                        "nxtstep ontario",
+                                        "old therapy toronto",
+                                        "online psychotherapy ontario",
+                                        "overcoming performance fear toronto",
+                                        "perfectionism and burnout",
+                                        "perfectionism and burnout",
+                                        "performance anxiety cbt therapy",
+                                        "performance anxiety counselling toronto",
+                                        "performance anxiety therapist",
+                                        "performance anxiety therapist",
+                                        "performance anxiety therapy",
+                                        "performance enhancement therapy",
+                                        "performance psychology services toronto",
+                                        "performance therapy",
+                                        "personal development therapy",
+                                        "personal growth therapy",
+                                        "personal growth therapy",
+                                        "professional core values",
+                                        "professional fulfillment services",
+                                        "professional performance",
+                                        "professional performance",
+                                        "professional therapeutic",
+                                        "professional therapy",
+                                        "professional therapy",
+                                        "professionalism as a core value",
+                                        "psychotherapist near me",
+                                        "psychotherapist near me in-person",
+                                        "psychotherapy",
+                                        "psychotherapy clinics near me",
+                                        "psychotherapy near me",
+                                        "psychotherapy toronto",
+                                        "step by step toronto",
+                                        "step therapy",
+                                        "step therapy",
+                                        "steps therapy",
+                                        "stress and anxiety at work",
+                                        "stress and anxiety from work",
+                                        "stress and anxiety in the workplace",
+                                        "stress and anxiety treatment",
+                                        "stress assessment",
+                                        "stress assessments",
+                                        "stress level assessment tools",
+                                        "stress tech",
+                                        "stress therapy toronto",
+                                        "stressed by work",
+                                        "the next step counseling",
+                                        "the next step counseling services",
+                                        "the next step therapy",
+                                        "the next step therapy",
+                                        "the next step toronto",
+                                        "the next step toronto",
+                                        "the next step website",
+                                        "then next step",
+                                        "therapist near me",
+                                        "therapist professional development",
+                                        "therapy for business professionals",
+                                        "therapy for business professionals",
+                                        "therapy for businesses",
+                                        "therapy for healthcare professionals",
+                                        "therapy for high achievers",
+                                        "therapy for imposter syndrome ontario",
+                                        "therapy for imposter syndrome toronto",
+                                        "therapy for perfectionism and burnout",
+                                        "therapy for performance anxiety",
+                                        "therapy for professionals",
+                                        "therapy for professionals",
+                                        "therapy for work anxiety",
+                                        "transformative counselling",
+                                        "transformative psychotherapy consulting",
+                                        "virtual therapy for high achievers",
+                                        "virtual therapy toronto",
+                                        "virtual therapy toronto",
+                                        "work and anxiety",
+                                        "work anxiety",
+                                        "work anxiety",
+                                        "work assessment",
+                                        "work related anxiety",
+                                        "work stress",
+                                        "work stress",
+                                        "work stress and anxiety",
+                                        "work stress anxiety",
+                                        "work stress assessment",
+                                        "work stress management",
+                                        "work stress therapy",
+                                        "workplace anxiety",
+                                        "workplace stress and anxiety"
+                              ],
+                              "conversionRate": 0
+                    }
+          ],
+          "trends": [
+                    {
+                              "date": "2025-07-31",
+                              "impressions": 2188,
+                              "clicks": 84,
+                              "conversions": 2
+                    },
+                    {
+                              "date": "2025-08-01",
+                              "impressions": 2466,
+                              "clicks": 45,
+                              "conversions": 2
+                    },
+                    {
+                              "date": "2025-08-02",
+                              "impressions": 2065,
+                              "clicks": 49,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-03",
+                              "impressions": 2035,
+                              "clicks": 90,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-04",
+                              "impressions": 2893,
+                              "clicks": 108,
+                              "conversions": 1
+                    },
+                    {
+                              "date": "2025-08-05",
+                              "impressions": 2208,
+                              "clicks": 97,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-06",
+                              "impressions": 2353,
+                              "clicks": 84,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-07",
+                              "impressions": 2840,
+                              "clicks": 40,
+                              "conversions": 1
+                    },
+                    {
+                              "date": "2025-08-08",
+                              "impressions": 1371,
+                              "clicks": 40,
+                              "conversions": 0
+                    },
+                    {
+                              "date": "2025-08-09",
+                              "impressions": 2397,
+                              "clicks": 50,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-10",
+                              "impressions": 2687,
+                              "clicks": 67,
+                              "conversions": 2
+                    },
+                    {
+                              "date": "2025-08-11",
+                              "impressions": 1811,
+                              "clicks": 116,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-12",
+                              "impressions": 2856,
+                              "clicks": 77,
+                              "conversions": 0
+                    },
+                    {
+                              "date": "2025-08-13",
+                              "impressions": 1124,
+                              "clicks": 77,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-14",
+                              "impressions": 1820,
+                              "clicks": 40,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-15",
+                              "impressions": 1047,
+                              "clicks": 112,
+                              "conversions": 0
+                    },
+                    {
+                              "date": "2025-08-16",
+                              "impressions": 1196,
+                              "clicks": 46,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-17",
+                              "impressions": 1805,
+                              "clicks": 48,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-18",
+                              "impressions": 2424,
+                              "clicks": 37,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-19",
+                              "impressions": 1642,
+                              "clicks": 77,
+                              "conversions": 2
+                    },
+                    {
+                              "date": "2025-08-20",
+                              "impressions": 1070,
+                              "clicks": 109,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-21",
+                              "impressions": 2745,
+                              "clicks": 122,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-22",
+                              "impressions": 2270,
+                              "clicks": 39,
+                              "conversions": 0
+                    },
+                    {
+                              "date": "2025-08-23",
+                              "impressions": 1099,
+                              "clicks": 51,
+                              "conversions": 3
+                    },
+                    {
+                              "date": "2025-08-24",
+                              "impressions": 1126,
+                              "clicks": 73,
+                              "conversions": 1
+                    },
+                    {
+                              "date": "2025-08-25",
+                              "impressions": 2442,
+                              "clicks": 85,
+                              "conversions": 2
+                    },
+                    {
+                              "date": "2025-08-26",
+                              "impressions": 2096,
+                              "clicks": 79,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-27",
+                              "impressions": 1830,
+                              "clicks": 44,
+                              "conversions": 4
+                    },
+                    {
+                              "date": "2025-08-28",
+                              "impressions": 1688,
+                              "clicks": 70,
+                              "conversions": 0
+                    },
+                    {
+                              "date": "2025-08-29",
+                              "impressions": 1659,
+                              "clicks": 121,
+                              "conversions": 2
+                    }
+          ],
+          "insights": [],
+          "rawData": {
+                    "gscRecords": 174,
+                    "ga4Records": 1,
+                    "rankingRecords": 1
+          }
+};
+        }
+                },
+                pages: [
+                    {
+                        page: '/seo/cant-sleep-anxiety.html',
+                        title: 'Can\'t Sleep Because of Anxiety',
+                        avgPosition: 3.2,
+                        impressions: 8450,
+                        clicks: 412,
+                        ctr: 4.87,
+                        conversions: 8,
+                        conversionRate: 1.94,
+                        revenue: 1400,
+                        opportunity: 9.2
+                    },
+                    {
+                        page: '/seo/university-anxiety.html',
+                        title: 'University Anxiety Support',
+                        avgPosition: 5.8,
+                        impressions: 6230,
+                        clicks: 287,
+                        ctr: 4.61,
+                        conversions: 5,
+                        conversionRate: 1.74,
+                        revenue: 875,
+                        opportunity: 8.7
+                    },
+                    {
+                        page: '/seo/work-anxiety-and-stress.html',
+                        title: 'Work Anxiety and Stress',
+                        avgPosition: 12.4,
+                        impressions: 12450,
+                        clicks: 198,
+                        ctr: 1.59,
+                        conversions: 2,
+                        conversionRate: 1.01,
+                        revenue: 350,
+                        opportunity: 8.9
+                    }
+                ],
+                trends: [
+                    { date: '2025-01-01', impressions: 1200, clicks: 48, conversions: 1 },
+                    { date: '2025-01-02', impressions: 1350, clicks: 52, conversions: 2 },
+                    { date: '2025-01-03', impressions: 1180, clicks: 45, conversions: 1 }
+                ],
+                insights: [
+                    {
+                        type: 'High Opportunity',
+                        text: 'Your "work anxiety" page has high impressions (12,450) but low CTR (1.59%). Improving the title and meta description could increase clicks by 40-60%.'
+                    },
+                    {
+                        type: 'Top Performer',
+                        text: 'The "can\'t sleep anxiety" page is your best converter at 1.94%. Consider creating similar content around sleep-related anxiety topics.'
+                    },
+                    {
+                        type: 'Ranking Opportunity',
+                        text: 'You\'re ranking #5.8 for university anxiety keywords. With some content optimization, you could reach top 3 and increase traffic by 35%.'
+                    }
+                ]
+            };
+        }
+
+        function updateMetrics() {
+            const { summary } = dashboardData;
+            
+            document.getElementById('totalImpressions').textContent = summary.totalImpressions.toLocaleString();
+            document.getElementById('totalClicks').textContent = summary.totalClicks.toLocaleString();
+            document.getElementById('averageCTR').textContent = summary.averageCTR + '%';
+            document.getElementById('totalConversions').textContent = summary.totalConversions;
+            document.getElementById('totalRevenue').textContent = '$' + summary.totalRevenue.toLocaleString();
+            document.getElementById('averagePosition').textContent = summary.averagePosition;
+
+            // Update change indicators
+            updateChangeIndicator('impressionsChange', summary.changes.impressions);
+            updateChangeIndicator('clicksChange', summary.changes.clicks);
+            updateChangeIndicator('ctrChange', summary.changes.ctr);
+            updateChangeIndicator('conversionsChange', summary.changes.conversions);
+            updateChangeIndicator('revenueChange', summary.changes.revenue);
+            updateChangeIndicator('positionChange', summary.changes.position, true);
+        }
+
+        function updateChangeIndicator(elementId, change, inverse = false) {
+            const element = document.getElementById(elementId);
+            const isPositive = inverse ? change < 0 : change > 0;
+            const isNegative = inverse ? change > 0 : change < 0;
+            
+            element.textContent = (change > 0 ? '+' : '') + change + '%';
+            element.className = 'metric-change ' + (isPositive ? 'positive' : isNegative ? 'negative' : 'neutral');
+        }
+
+        function updateCharts() {
+            // Trends Chart
+            const trendsCtx = document.getElementById('trendsChart').getContext('2d');
+            new Chart(trendsCtx, {
+                type: 'line',
+                data: {
+                    labels: dashboardData.trends.map(d => new Date(d.date).toLocaleDateString()),
+                    datasets: [
+                        {
+                            label: 'Impressions',
+                            data: dashboardData.trends.map(d => d.impressions),
+                            borderColor: '#4A6B7A',
+                            backgroundColor: 'rgba(74, 107, 122, 0.1)',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Clicks',
+                            data: dashboardData.trends.map(d => d.clicks),
+                            borderColor: '#10B981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Conversion Chart
+            const conversionCtx = document.getElementById('conversionChart').getContext('2d');
+            new Chart(conversionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: dashboardData.pages.map(p => p.title),
+                    datasets: [{
+                        data: dashboardData.pages.map(p => p.conversions),
+                        backgroundColor: [
+                            '#4A6B7A',
+                            '#10B981',
+                            '#F59E0B',
+                            '#EF4444',
+                            '#8B5CF6'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTable() {
+            const tbody = document.getElementById('pagePerformanceTable');
+            tbody.innerHTML = '';
+
+            dashboardData.pages.forEach(page => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><a href="${page.page}" class="page-link" target="_blank">${page.title}</a></td>
+                    <td><span class="ranking-badge ${getRankingClass(page.avgPosition)}">${page.avgPosition}</span></td>
+                    <td>${page.impressions.toLocaleString()}</td>
+                    <td>${page.clicks.toLocaleString()}</td>
+                    <td>${page.ctr}%</td>
+                    <td>${page.conversions}</td>
+                    <td><span class="conversion-rate ${getConversionClass(page.conversionRate)}">${page.conversionRate}%</span></td>
+                    <td>$${page.revenue.toLocaleString()}</td>
+                    <td>${page.opportunity}/10</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function getRankingClass(position) {
+            if (position <= 3) return 'ranking-excellent';
+            if (position <= 10) return 'ranking-good';
+            return 'ranking-needs-work';
+        }
+
+        function getConversionClass(rate) {
+            if (rate >= 1.5) return 'conversion-high';
+            if (rate >= 1.0) return 'conversion-medium';
+            return 'conversion-low';
+        }
+
+        function updateInsights() {
+            const container = document.getElementById('insightsContainer');
+            container.innerHTML = '';
+
+            dashboardData.insights.forEach(insight => {
+                const insightDiv = document.createElement('div');
+                insightDiv.className = 'insight-item';
+                insightDiv.innerHTML = `
+                    <div class="insight-type">${insight.type}</div>
+                    <div class="insight-text">${insight.text}</div>
+                `;
+                container.appendChild(insightDiv);
+            });
+        }
+
+        function updateLastUpdated() {
+            document.getElementById('lastUpdated').textContent = 
+                'Last updated: ' + new Date().toLocaleString();
+        }
+
+        function refreshData() {
+            document.getElementById('lastUpdated').textContent = 'Refreshing...';
+            loadDashboardData();
+        }
+
+        function showError(message) {
+            // Show error message to user
+            console.error(message);
+        }
+    </script>
+</body>
+</html>

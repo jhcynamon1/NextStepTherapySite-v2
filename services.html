@@ -1,5 +1,64 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="pointer crjs skrollr skrollr-desktop"><head>
     <style id="customRules"></style><meta charset="utf-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     
 
 
@@ -624,7 +683,7 @@
 *#dm *.dmBody div.u_1645703244
 {
 	background-repeat:no-repeat !important;
-	background-image:url(./images/asset49.jpeg) !important;
+	background-image:urlimages/asset49.jpeg) !important;
 }
 *#dm *.dmBody div.u_1817787988
 {
@@ -711,7 +770,7 @@
 *#dm *.dmBody div.u_1329382120
 {
 	background-repeat:no-repeat !important;
-	background-image:url(./images/asset55.jpeg) !important;
+	background-image:urlimages/asset55.jpeg) !important;
 	background-size:cover !important;
 	border-radius:44px 0px 44px 0px !important;
 }
@@ -722,7 +781,7 @@
 *#dm *.dmBody div.u_1221180056
 {
 	background-repeat:no-repeat !important;
-	background-image:url(./images/asset56.jpeg) !important;
+	background-image:urlimages/asset56.jpeg) !important;
 	background-size:cover !important;
 	border-radius:36px 0px 36px 0px !important;
 }
@@ -750,7 +809,7 @@
 *#dm *.dmBody div.u_1040988607
 {
 	background-repeat:no-repeat !important;
-	background-image:url(./images/asset57.png) !important;
+	background-image:urlimages/asset57.png) !important;
 	background-size:cover !important;
 	border-radius:0px 0px 48px 0px !important;
 }
@@ -1655,7 +1714,7 @@
 </div> 
 </div> 
 </div> 
- <div class="dmRespRow dmDefaultListContentRow u_1853091134 mini-header-show-row" style="text-align:center" id="1853091134"> <div class="dmRespColsWrapper" id="1669858737"> <div class="u_1554027585 small-12 dmRespCol large-3 medium-3 has-one-widget-only" id="1554027585"> <div class="u_1116556134 imageWidget align-center" data-widget-type="image" id="1116556134" data-element-type="image" editablewidget="true"> <a href="/" id="1874536050"><img src="./images/asset46.png" id="1864784789" class="" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY.png" width="1500" height="582" alt="performance anxiety therapy, ontario, Manage performance anxiety" onerror="handleImageLoadError(this)"></a> 
+ <div class="dmRespRow dmDefaultListContentRow u_1853091134 mini-header-show-row" style="text-align:center" id="1853091134"> <div class="dmRespColsWrapper" id="1669858737"> <div class="u_1554027585 small-12 dmRespCol large-3 medium-3 has-one-widget-only" id="1554027585"> <div class="u_1116556134 imageWidget align-center" data-widget-type="image" id="1116556134" data-element-type="image" editablewidget="true"> <a href="/" id="1874536050"><img src=images/asset46.png" id="1864784789" class="" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY.png" width="1500" height="582" alt="performance anxiety therapy, ontario, Manage performance anxiety" onerror="handleImageLoadError(this)"></a> 
 </div> 
 </div> 
  <div class="u_1020870716 dmRespCol small-12 large-9 medium-9 has-one-widget-only" id="1020870716"> <span id="1685418692"></span> 
@@ -1720,7 +1779,7 @@
  <div class="dmRespRow" id="1509667179"> <div class="dmRespColsWrapper" id="1322474052"> <div class="dmRespCol large-12 medium-12 small-12 u_1096239898" id="1096239898"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1816833547"> <h2 class="text-align-center"><span style="display: unset;">Our Services</span></h2> 
 </div> 
  <div class="u_1968131892 dmDividerWrapper clearfix" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1968131892"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1813565672"></div> 
- <div class="u_1660113303 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hasFullWidth photo-gallery-done photoGallery text-layout-bottom captionAlignment-top_left" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="3" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1660113303" data-desktop-caption-alignment="top_left" data-rows-to-show="100" data-placeholder="false" data-image-hover-effect="zoomout" data-mobile-layout="square" data-mobile-columns="1" editablewidget="true" data-widget-type="photoGallery"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div><div class="layout-container square"><div class="photogallery-row" data-index="0"><div class="photogallery-column  column-3" data-index="0"><div index="0" class="photoGalleryThumbs animated null" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1907438231" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-2696299-e22ce65f.jpeg" style="background-image: url(&quot;./images/asset50.jpeg&quot;);"><img id="1095324259" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-2696299-e22ce65f-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
+ <div class="u_1660113303 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hasFullWidth photo-gallery-done photoGallery text-layout-bottom captionAlignment-top_left" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="3" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1660113303" data-desktop-caption-alignment="top_left" data-rows-to-show="100" data-placeholder="false" data-image-hover-effect="zoomout" data-mobile-layout="square" data-mobile-columns="1" editablewidget="true" data-widget-type="photoGallery"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div><div class="layout-container square"><div class="photogallery-row" data-index="0"><div class="photogallery-column  column-3" data-index="0"><div index="0" class="photoGalleryThumbs animated null" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1907438231" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-2696299-e22ce65f.jpeg" style="background-image: url(&quotimages/asset50.jpeg&quot;);"><img id="1095324259" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-2696299-e22ce65f-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div id="1543054471" class="caption-container u_1543054471" style="height: 242px;"> <span class="caption-inner"> <h3 id="1111935752" class="caption-title u_1111935752">Work Anxiety and Stress</h3> 
  <div id="1059052539" class="caption-text u_1059052539"><p class="rteBlock">We can help you manage workplace pressures, reduce anxiety, and foster a healthier professional life.</p></div> 
@@ -1731,7 +1790,7 @@
 </span> 
 </div> 
 </div> 
-</div></div><div class="photogallery-column  column-3" data-index="1"><div index="1" class="photoGalleryThumbs animated null" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1610685870" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-3201694-6661c718.jpeg" style="background-image: url(&quot;./images/asset51.jpeg&quot;);"><img id="1187835847" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-3201694-6661c718-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
+</div></div><div class="photogallery-column  column-3" data-index="1"><div index="1" class="photoGalleryThumbs animated null" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1610685870" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-3201694-6661c718.jpeg" style="background-image: url(&quotimages/asset51.jpeg&quot;);"><img id="1187835847" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-3201694-6661c718-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div id="1511498484" class="caption-container u_1511498484" style="display: none; height: 242px;"> <span class="caption-inner"> <h3 id="1430390665" class="caption-title u_1430390665">Executive &amp; Professional Performance Enhancement</h3> 
  <div id="1707575182" class="caption-text u_1707575182"><p class="rteBlock">Elevate your career. We can help enhance leadership, decision-making, and resilience for optimal professional growth.</p></div> 
@@ -1742,7 +1801,7 @@
 </span> 
 </div> 
 </div> 
-</div></div><div class="photogallery-column  column-3" data-index="2"><div index="2" class="photoGalleryThumbs animated null" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1405933597" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-7176297-10324b67.jpeg" style="background-image: url(&quot;./images/asset52.jpeg&quot;);"><img id="1426308678" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-7176297-10324b67-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
+</div></div><div class="photogallery-column  column-3" data-index="2"><div index="2" class="photoGalleryThumbs animated null" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1405933597" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-7176297-10324b67.jpeg" style="background-image: url(&quotimages/asset52.jpeg&quot;);"><img id="1426308678" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-7176297-10324b67-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div id="1662606758" class="caption-container u_1662606758" style="display: none; height: 242px;"> <span class="caption-inner"> <h3 id="1091224025" class="caption-title u_1091224025">General Anxiety and Stress Therapy</h3> 
  <div id="1863557796" class="caption-text u_1863557796"><p class="rteBlock">A supportive space to explore life's challenges. We can help you develop insights and new coping strategies.</p></div> 
@@ -1753,7 +1812,7 @@
 </span> 
 </div> 
 </div> 
-</div></div></div><div class="photogallery-row" data-index="1"><div class="photogallery-column  column-3" data-index="0"><div index="3" class="photoGalleryThumbs animated null" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1831562623" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-9198314-9e0edacb.jpeg" style="background-image: url(&quot;./images/asset53.jpeg&quot;);"><img id="1330745873" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-9198314-9e0edacb-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
+</div></div></div><div class="photogallery-row" data-index="1"><div class="photogallery-column  column-3" data-index="0"><div index="3" class="photoGalleryThumbs animated null" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1831562623" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-9198314-9e0edacb.jpeg" style="background-image: url(&quotimages/asset53.jpeg&quot;);"><img id="1330745873" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-9198314-9e0edacb-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div id="1791450603" class="caption-container u_1791450603" style="display: none; height: 215px;"> <span class="caption-inner"> <h3 id="1846089385" class="caption-title u_1846089385">Mood</h3> 
  <div id="1494636106" class="caption-text u_1494636106"><p class="rteBlock">Understand and manage mood shifts. We can help you cultivate emotional regulation for greater well-being.</p></div> 
@@ -1764,7 +1823,7 @@
 </span> 
 </div> 
 </div> 
-</div></div><div class="photogallery-column  column-3" data-index="1"><div index="4" class="photoGalleryThumbs animated null" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1602707976" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-7688173-ab285d9a.jpeg" style="background-image: url(&quot;./images/asset54.jpeg&quot;);"><img id="1861855205" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-7688173-ab285d9a-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
+</div></div><div class="photogallery-column  column-3" data-index="1"><div index="4" class="photoGalleryThumbs animated null" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Manage performance anxiety, Performance anxiety therapy services, Ontario" data-dm-force-device="mobile" class="u_1602707976" data-image-url="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-7688173-ab285d9a.jpeg" style="background-image: url(&quotimages/asset54.jpeg&quot;);"><img id="1861855205" data-src="https://lirp.cdn-website.com/460814e6/dms3rep/multi/opt/pexels-photo-7688173-ab285d9a-1920w.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div id="1942977407" class="caption-container u_1942977407" style="display: none; height: 215px;"> <span class="caption-inner"> <h3 id="1721085807" class="caption-title u_1721085807">Motivation</h3> 
  <div id="1499439546" class="caption-text u_1499439546"><p class="rteBlock">Rekindle your drive. We can help identify barriers and build habits to achieve your personal and professional goals.</p></div> 
@@ -1784,7 +1843,7 @@
  <div class="u_1471739785 dmRespRow dmReadySection fullBleedChanged fullBleedMode dmSectionNoParallax mobile-columns-reversed" dm:templateid="List" id="1471739785"> <div class="dmRespColsWrapper ListSection" id="1339982523"> <div class="dmRespCol small-12 medium-6 large-6 u_1244193862" id="1244193862"> <div class="u_1068621886 dmNewParagraph" id="1068621886" data-element-type="paragraph" data-version="5" style="text-align: center;"> <h2 style="letter-spacing: var(--heading-font-letter-spacing); line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-3-size-value))/25));"><span style="display: initial;">Our Therapeutic Approach for Performance Anxiety in Ontario</span></h2> 
  <h2 style="letter-spacing: var(--heading-font-letter-spacing); line-height: calc(var(--heading-font-line-height) * (1 + (1 - var(--heading-3-size-value))/25));" class="size-24 m-size-19"><span style="display: initial;" class="font-size-24 m-font-size-19">Manage performance anxiety</span><span style="display: initial;"><br></span></h2> 
 </div> <div class="u_1946919772 dmNewParagraph" id="1946919772" style="transition: opacity 1s ease-in-out 0s; display: block; text-align: center;" data-version="5"><p class="text-align-left"><span style="display: initial;">Our approach integrates evidence-based methods (ACT, CBT, mindfulness) with insights from performance psychology, designed manage performance anxiety and to address the complex demands of high-performance careers. This unique combination aims to provide both helpful strategies for immediate concerns and approaches for longer-term growth.</span></p><p class="text-align-left" style="line-height: var(--body-font-line-height);"><span style="display: initial;"><br></span></p><p class="text-align-left"><span style="display: initial;">As a professional, your challenges are specific to your context. Our collaborative approach adapts to your unique situation, providing strategies that work in your professional environment while addressing deeper patterns for sustainable growth.</span></p></div></div> 
- <div class="u_1843598455 dmRespCol small-12 medium-6 large-6" id="1843598455"> <div class="u_1694230813 imageWidget align-center" data-widget-type="image" id="1694230813" data-element-type="image" editablewidget="true"><img src="./images/asset47.jpeg" id="1466511910" class="" width="1920" height="1281" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-8872206.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></div> 
+ <div class="u_1843598455 dmRespCol small-12 medium-6 large-6" id="1843598455"> <div class="u_1694230813 imageWidget align-center" data-widget-type="image" id="1694230813" data-element-type="image" editablewidget="true"><img src=images/asset47.jpeg" id="1466511910" class="" width="1920" height="1281" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/pexels-photo-8872206.jpeg" alt="Manage performance anxiety, Performance anxiety therapy services, Ontario" onerror="handleImageLoadError(this)"></div> 
 </div> 
 </div> 
 </div> 
@@ -1839,7 +1898,7 @@
  <span class="text" id="1926100140">Book A Free Consultation</span> 
 </a> 
 </div> 
- <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1686005289 dmRespRow" style="text-align: center;" id="1686005289"> <div class="dmRespColsWrapper" id="1837856251"> <div class="u_1188157081 dmRespCol small-12 medium-4 large-4" id="1188157081"> <div class="u_1119773125 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1119773125" editablewidget="true"> <a href="/" id="1277103949"><img src="./images/asset48.png" alt="Manage performance anxiety, Performance anxiety therapy services, Toronto" id="1200401256" class="" width="1500" height="582" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY+2.png" onerror="handleImageLoadError(this)"></a> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1686005289 dmRespRow" style="text-align: center;" id="1686005289"> <div class="dmRespColsWrapper" id="1837856251"> <div class="u_1188157081 dmRespCol small-12 medium-4 large-4" id="1188157081"> <div class="u_1119773125 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1119773125" editablewidget="true"> <a href="/" id="1277103949"><img src=images/asset48.png" alt="Manage performance anxiety, Performance anxiety therapy services, Toronto" id="1200401256" class="" width="1500" height="582" data-dm-image-path="https://irp.cdn-website.com/460814e6/dms3rep/multi/NEXT+STEP+THERAPY+2.png" onerror="handleImageLoadError(this)"></a> 
 </div> 
  <div class="u_1209896453 dmNewParagraph" id="1209896453" style="display: block;" data-element-type="paragraph" data-version="5"><p class="text-align-center" style="line-height: var(--body-font-line-height);"><span style="display: initial; color: var(--color_2);">For immediate crisis support, please contact local emergency services or a crisis line. While we provide ongoing therapeutic support, we are not an emergency service.</span><span style="display: initial;"><br></span></p></div></div> 
  <div class="u_1738521024 dmRespCol small-12 medium-4 large-4" id="1738521024"> <div class="u_1868858082 graphicWidget" data-widget-type="graphic" id="1868858082" data-element-type="graphic"> <svg viewBox="0 0 1792 1792" id="1898680202" class="svg u_1898680202" data-icon-name="fa-comments-o"> <path fill="inherit" d="M704 384q-153 0-286 52t-211.5 141-78.5 191q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191-211.5-141-286-52zM704 256q191 0 353.5 68.5t256.5 186.5 94 257-94 257-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t0.5-6.5 2-6l2.5-5t3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5zM1526 1425q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5t2 6 0.5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5t-195 176.5z" id="1600393282"></path> 

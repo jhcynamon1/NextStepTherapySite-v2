@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Mental Health Therapy | Next Step Therapy | Ontario</title>
+    <meta name="description" content="Specialized mental health support for men in Ontario. Breaking stigma, addressing unique challenges, and providing confidential therapy in a supportive environment. Book your free consultation.">
+    <meta name="keywords" content="mens mental health, therapy for men ontario, male therapist, men's counselling, depression anxiety men">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Men's Mental Health Therapy | Next Step Therapy">
+    <meta property="og:description" content="Specialized mental health support for men in Ontario. Breaking stigma and addressing unique challenges in a supportive environment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/mens-mental-health">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Men's Mental Health Therapy",
+      "description": "Specialized therapy addressing men's mental health challenges",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "College of Registered Psychotherapists of Ontario"
+        }
+      },
+      "areaServed": "Ontario, Canada"
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Same design system as main page */
+        :root {
+            --sage-green: #8FA68E;
+            --soft-blue: #6B9BD1;
+            --professional-navy: #1e3e72;
+            --warm-coral: #E07A5F;
+            --warm-gold: #D4A574;
+            --warm-orange: #f37336;
+            --background-white: #F5F5F0;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #343A40;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 32px;
+            --spacing-lg: 48px;
+            --spacing-xl: 64px;
+            --font-heading: 'Poppins', 'Montserrat', sans-serif;
+            --font-body: 'Source Sans Pro', 'Lato', system-ui, -apple-system, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--background-white);
+            font-size: 16px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+        }
+        
+        p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage-green);
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+        
+        .nav li a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .nav li a:hover {
+            background-color: var(--sage-green);
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 44px;
+            min-height: 44px;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background-color: var(--warm-coral);
+            color: white;
+            box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #d66b50;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(224, 122, 95, 0.4);
+            color: white;
+        }
+        
+        .btn-phone {
+            background-color: var(--warm-gold);
+            color: white;
+            font-size: 0.9rem;
+            padding: 10px 16px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--professional-navy) 0%, var(--sage-green) 100%);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-content {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .content-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: start;
+        }
+        
+        .stats-section {
+            background: var(--light-gray);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .stat-item {
+            padding: var(--spacing-md);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--professional-navy);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-weight: 600;
+        }
+        
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .challenge-card {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--professional-navy);
+        }
+        
+        .challenge-card h3 {
+            color: var(--professional-navy);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .approach-section {
+            background: var(--sage-green);
+            color: white;
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .approach-section h2 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .approach-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+        
+        .approach-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-sm);
+            padding: var(--spacing-xs);
+        }
+        
+        .approach-list li::before {
+            content: "✓";
+            color: white;
+            font-weight: bold;
+            margin-right: var(--spacing-xs);
+            margin-top: 2px;
+        }
+        
+        .cta-section {
+            background: var(--warm-coral);
+            color: white;
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            text-align: center;
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--warm-coral);
+            font-weight: 600;
+            padding: 14px 28px;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .btn-white:hover {
+            background: #f0f0f0;
+            color: var(--professional-navy);
+        }
+        
+        .quote-section {
+            background: var(--light-gray);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .quote-text {
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .quote-source {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            font-weight: 600;
+        }
+        
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: var(--spacing-sm) 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--soft-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--spacing-lg) 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="new-index.html" class="logo">Next Step Therapy</a>
+            
+            <nav>
+                <ul class="nav">
+                    <li><a href="new-index.html">Home</a></li>
+                    <li><a href="new-index.html#about">About</a></li>
+                    <li><a href="new-index.html#services">Services</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="new-index.html#contact">Contact</a></li>
+                    <li><a href="tel:+1-XXX-XXX-XXXX" class="btn btn-phone">📞 Call Now</a></li>
+                    <li><a href="new-index.html#contact" class="btn btn-primary">Book Free Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="new-index.html">Home</a> / <a href="new-index.html#services">Services</a> / Men's Mental Health
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Men's Mental Health Therapy</h1>
+            <p class="subtitle">Breaking stigma, addressing unique challenges, and providing confidential support for men ready to prioritize their mental wellbeing</p>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <!-- Opening Section -->
+            <section class="content-section">
+                <div class="two-column">
+                    <div>
+                        <h2>You Don't Have to Handle Everything Alone</h2>
+                        <p>Seeking therapy takes courage, especially when society tells men they should "tough it out" or "man up." The reality is that taking care of your mental health is one of the strongest, most responsible things you can do—for yourself, your relationships, and your future.</p>
+                        
+                        <p>Many men face unique challenges that can make it harder to ask for help: pressure to be the provider, difficulty expressing emotions, fear of being seen as weak, or simply not knowing where to start.</p>
+                        
+                        <p>At Next Step Therapy, we understand these challenges. Our approach is straightforward, practical, and focused on helping you develop the tools and insights you need to feel more confident, balanced, and in control of your life.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Common Reasons Men Seek Therapy:</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Relationship problems or communication issues</li>
+                            <li>Work stress, burnout, or career transitions</li>
+                            <li>Anger management and emotional regulation</li>
+                            <li>Depression, anxiety, or persistent low mood</li>
+                            <li>Substance use concerns</li>
+                            <li>Life transitions (divorce, job loss, health issues)</li>
+                            <li>Fatherhood challenges and family dynamics</li>
+                            <li>Identity questions and personal growth</li>
+                            <li>Trauma processing and recovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <h2>The Reality of Men's Mental Health</h2>
+                <p>These statistics highlight why specialized support for men's mental health is so important:</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">76%</span>
+                        <span class="stat-label">of suicides are by men</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1 in 8</span>
+                        <span class="stat-label">men will experience depression</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">65%</span>
+                        <span class="stat-label">less likely to seek help than women</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">of men never talked to anyone about their mental health</span>
+                    </div>
+                </div>
+                
+                <p style="margin-top: var(--spacing-md); font-style: italic;">You can be part of changing these statistics. Getting support is a sign of strength, not weakness.</p>
+            </div>
+            
+            <!-- Unique Challenges -->
+            <section class="content-section">
+                <h2>Unique Challenges Men Face</h2>
+                <p>Men often experience mental health challenges differently and face unique barriers to getting help:</p>
+                
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <h3>Social Expectations</h3>
+                        <p>Pressure to be strong, independent, and emotionally controlled can make it difficult to acknowledge when you're struggling or need support.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>Emotional Expression</h3>
+                        <p>Many men weren't taught how to identify or express emotions effectively, leading to internalized stress and relationship difficulties.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>Work-Life Pressure</h3>
+                        <p>Balancing career demands, financial responsibilities, and family obligations while maintaining personal wellbeing can feel overwhelming.</p>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <h3>Different Symptoms</h3>
+                        <p>Depression and anxiety in men often manifest as irritability, anger, or withdrawal rather than sadness, making them harder to recognize.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quote Section -->
+            <div class="quote-section">
+                <p class="quote-text">"Therapy isn't about fixing something that's broken. It's about building the skills and awareness to handle life more effectively."</p>
+                <p class="quote-source">- Jesse Cynamon, Registered Psychotherapist</p>
+            </div>
+            
+            <!-- Approach Section -->
+            <div class="approach-section">
+                <h2>Our Men-Focused Approach</h2>
+                <p>We understand that men often prefer practical, solution-focused therapy. Our approach combines understanding with actionable strategies:</p>
+                
+                <div class="two-column" style="margin-top: var(--spacing-md);">
+                    <div>
+                        <h3>What Makes Our Approach Different:</h3>
+                        <ul class="approach-list">
+                            <li><strong>Direct Communication:</strong> Straightforward discussions without unnecessary psychoanalysis</li>
+                            <li><strong>Solution-Focused:</strong> Practical tools and strategies you can use immediately</li>
+                            <li><strong>Goal-Oriented:</strong> Clear objectives and measurable progress</li>
+                            <li><strong>Flexible Scheduling:</strong> Evening and weekend appointments available</li>
+                            <li><strong>Confidential Environment:</strong> Safe space free from judgment</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Areas We Address:</h3>
+                        <ul class="approach-list">
+                            <li>Anger management and emotional regulation</li>
+                            <li>Relationship and communication skills</li>
+                            <li>Stress management and work-life balance</li>
+                            <li>Depression and anxiety (as they show up in men)</li>
+                            <li>Identity and life purpose questions</li>
+                            <li>Substance use and addictive behaviors</li>
+                            <li>Trauma processing and recovery</li>
+                            <li>Fatherhood and family dynamics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What to Expect -->
+            <section class="content-section">
+                <h2>What to Expect in Therapy</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>First Session:</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>No-pressure conversation about what brought you in</li>
+                            <li>Discussion of your goals and what you want to work on</li>
+                            <li>Overview of our approach and what therapy will look like</li>
+                            <li>Immediate strategies you can start using right away</li>
+                        </ul>
+                        
+                        <h3>Ongoing Sessions:</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Work on specific issues and situations</li>
+                            <li>Develop practical coping and communication skills</li>
+                            <li>Process challenges and setbacks</li>
+                            <li>Build long-term resilience and emotional intelligence</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Common Outcomes:</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Better emotional regulation and stress management</li>
+                            <li>Improved communication in relationships</li>
+                            <li>Increased self-awareness and confidence</li>
+                            <li>Better work-life balance and boundary setting</li>
+                            <li>Reduced anxiety and depression symptoms</li>
+                            <li>Stronger sense of purpose and direction</li>
+                        </ul>
+                        
+                        <p style="margin-top: var(--spacing-md);"><strong>Timeline:</strong> Many men notice initial improvements within 3-4 sessions, with significant progress typically occurring within 2-3 months of consistent work.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Take Control of Your Mental Health?</h2>
+                <p>Taking the first step is often the hardest part. Our free consultation gives you a chance to see if therapy feels right for you, with no pressure or commitment.</p>
+                <a href="new-index.html#contact" class="btn btn-white">Book Your Free 20-Minute Consultation</a>
+                <p style="margin-top: var(--spacing-sm); font-size: 0.9rem; opacity: 0.9;">Confidential • Male therapist available • Virtual and in-person options • Insurance accepted</p>
+            </div>
+            
+            <!-- Frequently Asked Questions -->
+            <section class="content-section">
+                <h2>Questions Men Often Ask</h2>
+                
+                <div style="background: white; border-radius: 8px; overflow: hidden; margin-top: var(--spacing-md);">
+                    <div style="background: var(--light-gray); padding: var(--spacing-md); font-weight: 600; color: var(--professional-navy);">
+                        How do I know if I need therapy?
+                    </div>
+                    <div style="padding: var(--spacing-md);">
+                        <p>If you're asking this question, it's worth exploring. Common signs include: persistent stress or worry, relationship problems, anger outbursts, trouble sleeping, feeling disconnected or "stuck," or using substances to cope. You don't need to be in crisis to benefit from therapy.</p>
+                    </div>
+                </div>
+                
+                <div style="background: white; border-radius: 8px; overflow: hidden; margin-top: var(--spacing-sm);">
+                    <div style="background: var(--light-gray); padding: var(--spacing-md); font-weight: 600; color: var(--professional-navy);">
+                        Will therapy make me "soft" or change who I am?
+                    </div>
+                    <div style="padding: var(--spacing-md);">
+                        <p>Absolutely not. Therapy helps you become more of who you want to be, not less. Building emotional skills and self-awareness actually makes you more effective in all areas of life—relationships, work, and personal goals.</p>
+                    </div>
+                </div>
+                
+                <div style="background: white; border-radius: 8px; overflow: hidden; margin-top: var(--spacing-sm);">
+                    <div style="background: var(--light-gray); padding: var(--spacing-md); font-weight: 600; color: var(--professional-navy);">
+                        How long does therapy take?
+                    </div>
+                    <div style="padding: var(--spacing-md);">
+                        <p>It varies based on your goals and situation. Some men see improvements in just a few sessions, while others prefer longer-term support. We'll regularly check in about your progress and adjust as needed. You're always in control of how long you participate.</p>
+                    </div>
+                </div>
+                
+                <div style="background: white; border-radius: 8px; overflow: hidden; margin-top: var(--spacing-sm);">
+                    <div style="background: var(--light-gray); padding: var(--spacing-md); font-weight: 600; color: var(--professional-navy);">
+                        Is everything I say confidential?
+                    </div>
+                    <div style="padding: var(--spacing-md);">
+                        <p>Yes, with very limited exceptions (immediate danger to yourself or others). What you share in therapy stays in therapy. This confidential space allows you to be completely honest about what you're experiencing without fear of judgment or consequences.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer style="background: var(--professional-navy); color: white; padding: var(--spacing-md) 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 Next Step Therapy | CRPO Registered Psychotherapist #10979 | <a href="new-index.html#contact" style="color: var(--sage-green);">Contact Us</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

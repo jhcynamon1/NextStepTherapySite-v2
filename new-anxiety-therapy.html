@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety & Stress Therapy Services | Next Step Therapy | Ontario</title>
+    <meta name="description" content="Professional anxiety and stress therapy for individuals in Ontario. Evidence-based treatment approaches for managing anxiety, stress, and overwhelming feelings. Book your free consultation.">
+    <meta name="keywords" content="anxiety therapy ontario, stress management, anxiety treatment, panic disorder, social anxiety, generalized anxiety disorder">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Anxiety & Stress Therapy Services | Next Step Therapy">
+    <meta property="og:description" content="Professional anxiety and stress therapy for individuals in Ontario. Evidence-based treatment approaches for managing overwhelming feelings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/anxiety-therapy">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Anxiety & Stress Therapy",
+      "description": "Evidence-based therapy for anxiety and stress management",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "memberOf": {
+          "@type": "Organization",
+          "name": "College of Registered Psychotherapists of Ontario"
+        }
+      },
+      "areaServed": "Ontario, Canada"
+    }
+    </script>
+    
+    <!-- Link to main stylesheet (same styles as main page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Include same CSS as main page */
+        :root {
+            --sage-green: #8FA68E;
+            --soft-blue: #6B9BD1;
+            --professional-navy: #1e3e72;
+            --warm-coral: #E07A5F;
+            --warm-gold: #D4A574;
+            --warm-orange: #f37336;
+            --background-white: #F5F5F0;
+            --light-gray: #F8F9FA;
+            --medium-gray: #6C757D;
+            --dark-gray: #343A40;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 32px;
+            --spacing-lg: 48px;
+            --spacing-xl: 64px;
+            --font-heading: 'Poppins', 'Montserrat', sans-serif;
+            --font-body: 'Source Sans Pro', 'Lato', system-ui, -apple-system, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--background-white);
+            font-size: 16px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+        }
+        
+        p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage-green);
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+        
+        .nav li a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .nav li a:hover {
+            background-color: var(--sage-green);
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 44px;
+            min-height: 44px;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background-color: var(--warm-coral);
+            color: white;
+            box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #d66b50;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(224, 122, 95, 0.4);
+            color: white;
+        }
+        
+        .btn-phone {
+            background-color: var(--warm-gold);
+            color: white;
+            font-size: 0.9rem;
+            padding: 10px 16px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--soft-blue) 0%, var(--light-gray) 100%);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .page-content {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .content-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: start;
+        }
+        
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .symptom-card {
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--soft-blue);
+        }
+        
+        .symptom-card h3 {
+            color: var(--professional-navy);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .treatment-approach {
+            background: var(--light-gray);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .approach-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+        
+        .approach-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-sm);
+            padding: var(--spacing-xs);
+        }
+        
+        .approach-list li::before {
+            content: "✓";
+            color: var(--sage-green);
+            font-weight: bold;
+            margin-right: var(--spacing-xs);
+            margin-top: 2px;
+        }
+        
+        .cta-section {
+            background: var(--sage-green);
+            color: white;
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            text-align: center;
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--sage-green);
+            font-weight: 600;
+            padding: 14px 28px;
+            margin-top: var(--spacing-sm);
+        }
+        
+        .btn-white:hover {
+            background: #f0f0f0;
+            color: var(--professional-navy);
+        }
+        
+        .faq-section {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .faq-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: var(--light-gray);
+            padding: var(--spacing-md);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--professional-navy);
+        }
+        
+        .faq-answer {
+            padding: var(--spacing-md);
+            display: none;
+        }
+        
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: var(--spacing-sm) 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--soft-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--spacing-lg) 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="new-index.html" class="logo">Next Step Therapy</a>
+            
+            <nav>
+                <ul class="nav">
+                    <li><a href="new-index.html">Home</a></li>
+                    <li><a href="new-index.html#about">About</a></li>
+                    <li><a href="new-index.html#services">Services</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="new-index.html#contact">Contact</a></li>
+                    <li><a href="tel:+1-XXX-XXX-XXXX" class="btn btn-phone">📞 Call Now</a></li>
+                    <li><a href="new-index.html#contact" class="btn btn-primary">Book Free Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="new-index.html">Home</a> / <a href="new-index.html#services">Services</a> / Anxiety & Stress Therapy
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Anxiety & Stress Therapy</h1>
+            <p class="subtitle">Professional support for managing anxiety, stress, and overwhelming feelings that impact your daily life and wellbeing</p>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <!-- Understanding Anxiety Section -->
+            <section class="content-section">
+                <div class="two-column">
+                    <div>
+                        <h2>Understanding Anxiety and Stress</h2>
+                        <p>Anxiety and stress are natural human responses, but when they become overwhelming or persistent, they can significantly impact your quality of life, relationships, and daily functioning.</p>
+                        
+                        <p>You might be experiencing anxiety if you find yourself constantly worrying, feeling on edge, or avoiding certain situations. Stress might manifest as feeling overwhelmed, having difficulty concentrating, or experiencing physical symptoms like tension headaches or sleep disturbances.</p>
+                        
+                        <p>The good news is that anxiety and stress are highly treatable conditions. With the right support and evidence-based therapeutic approaches, you can learn effective strategies to manage these challenges and reclaim your sense of calm and control.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>Common Signs You Might Benefit from Support:</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Persistent worry or racing thoughts</li>
+                            <li>Physical symptoms (rapid heartbeat, sweating, tension)</li>
+                            <li>Avoiding situations due to anxiety</li>
+                            <li>Difficulty sleeping or concentrating</li>
+                            <li>Feeling overwhelmed by daily responsibilities</li>
+                            <li>Panic attacks or intense fear episodes</li>
+                            <li>Social anxiety or fear of judgment</li>
+                            <li>Perfectionism or fear of making mistakes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Types of Anxiety -->
+            <section class="content-section">
+                <h2>Types of Anxiety We Support</h2>
+                <div class="symptoms-grid">
+                    <div class="symptom-card">
+                        <h3>Generalized Anxiety</h3>
+                        <p>Persistent, excessive worry about various aspects of life that interferes with daily activities and relationships.</p>
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <h3>Social Anxiety</h3>
+                        <p>Intense fear of social situations, being judged by others, or embarrassing yourself in public settings.</p>
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <h3>Panic Disorder</h3>
+                        <p>Recurring panic attacks with intense physical symptoms and fear of having future attacks.</p>
+                    </div>
+                    
+                    <div class="symptom-card">
+                        <h3>Stress-Related Anxiety</h3>
+                        <p>Anxiety stemming from life transitions, relationship challenges, health concerns, or major life changes.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Treatment Approach -->
+            <div class="treatment-approach">
+                <h2>Our Evidence-Based Treatment Approach</h2>
+                <p>At Next Step Therapy, we use proven therapeutic methods tailored to your unique needs and circumstances. Our approach focuses on both immediate relief and long-term resilience building.</p>
+                
+                <div class="two-column" style="margin-top: var(--spacing-md);">
+                    <div>
+                        <h3>Therapeutic Modalities We Use:</h3>
+                        <ul class="approach-list">
+                            <li><strong>Acceptance and Commitment Therapy (ACT):</strong> Learn to accept difficult thoughts and feelings while taking action aligned with your values</li>
+                            <li><strong>Cognitive Behavioral Therapy (CBT):</strong> Identify and change unhelpful thought patterns that contribute to anxiety</li>
+                            <li><strong>Mindfulness-Based Approaches:</strong> Develop present-moment awareness and emotional regulation skills</li>
+                            <li><strong>Exposure and Response Prevention:</strong> Gradually face feared situations in a safe, supportive environment</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>What You Can Expect:</h3>
+                        <ul class="approach-list">
+                            <li>Personalized treatment plan based on your specific needs</li>
+                            <li>Practical coping strategies you can use immediately</li>
+                            <li>Understanding of your anxiety triggers and patterns</li>
+                            <li>Tools for long-term emotional regulation and resilience</li>
+                            <li>Support in developing healthy lifestyle habits</li>
+                            <li>Flexible session scheduling (virtual and in-person options)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Session Structure -->
+            <section class="content-section">
+                <h2>What to Expect in Therapy</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Initial Sessions (1-3):</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Comprehensive assessment of your anxiety and stress patterns</li>
+                            <li>Discussion of your goals and preferences</li>
+                            <li>Development of your personalized treatment plan</li>
+                            <li>Introduction to initial coping strategies</li>
+                        </ul>
+                        
+                        <h3>Ongoing Therapy (4-12+ sessions):</h3>
+                        <ul style="margin-left: 20px;">
+                            <li>Working through specific anxiety triggers and situations</li>
+                            <li>Learning and practicing new coping skills</li>
+                            <li>Gradual exposure to feared situations (when appropriate)</li>
+                            <li>Processing and integration of new insights</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Timeline and Progress:</h3>
+                        <p><strong>First 2-4 weeks:</strong> Many clients notice initial relief as they begin to understand their anxiety patterns and learn basic coping strategies.</p>
+                        
+                        <p><strong>6-8 weeks:</strong> Most clients report significant improvement in their ability to manage anxiety and stress in daily situations.</p>
+                        
+                        <p><strong>3-6 months:</strong> Development of long-term resilience and confidence in managing anxiety independently.</p>
+                        
+                        <p><em>Remember: Everyone's journey is unique. We'll work at your pace and adjust our approach based on your progress and feedback.</em></p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Take Control of Your Anxiety?</h2>
+                <p>You don't have to struggle with anxiety and stress alone. Professional support can help you develop the tools and confidence you need to live more peacefully.</p>
+                <a href="new-index.html#contact" class="btn btn-white">Book Your Free 20-Minute Consultation</a>
+                <p style="margin-top: var(--spacing-sm); font-size: 0.9rem; opacity: 0.9;">No commitment required • Insurance accepted • Virtual and in-person options available</p>
+            </div>
+            
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does anxiety therapy typically take?</div>
+                    <div class="faq-answer">
+                        <p>Most clients see meaningful improvement within 6-12 sessions, though this varies based on individual circumstances. Some people benefit from short-term focused work (8-16 sessions), while others prefer longer-term support. We'll discuss your goals and preferences to determine what feels right for you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Will I need to take medication for my anxiety?</div>
+                    <div class="faq-answer">
+                        <p>As a psychotherapist, I don't prescribe medication, but many clients find therapy alone to be very effective for managing anxiety. If you're interested in exploring medication options, I can help you connect with appropriate medical professionals and work collaboratively with your healthcare team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between anxiety and stress?</div>
+                    <div class="faq-answer">
+                        <p>Stress is typically a response to external pressures or demands, while anxiety often involves worry about future events or situations. Both can cause similar physical and emotional symptoms, and they often occur together. In therapy, we address both patterns and develop strategies that work for your specific experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is virtual therapy as effective as in-person sessions?</div>
+                    <div class="faq-answer">
+                        <p>Research shows that virtual therapy can be just as effective as in-person therapy for anxiety and stress-related concerns. Many clients appreciate the convenience and comfort of attending sessions from their own space. We can discuss which format feels most comfortable for you.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Simple Footer -->
+    <footer style="background: var(--professional-navy); color: white; padding: var(--spacing-md) 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 Next Step Therapy | CRPO Registered Psychotherapist #10979 | <a href="new-index.html#contact" style="color: var(--sage-green);">Contact Us</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                // Hide all other answers
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                
+                // Toggle current answer
+                answer.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
