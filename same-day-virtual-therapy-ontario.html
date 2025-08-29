@@ -198,13 +198,19 @@
             text-decoration: none;
         }
         
-        .credentials-badge {
+        .credentials-badge-prominent {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
             color: white;
             padding: 0.375rem 0.875rem;
             border-radius: var(--radius-lg);
             font-size: 0.8125rem;
             font-weight: 500;
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+            margin-right: 8px;
         }
         
         .nav {
@@ -615,25 +621,23 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="https://www.nextsteptherapy.ca" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="https://www.nextsteptherapy.ca/services.html">Services</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/about.html">About</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/blog.html">Resources</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/contact.html">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
+                <a href="tel:+15198008323" class="header-phone">
+                    (519) 800-8323
                 </a>
             </div>
         </div>
@@ -649,7 +653,7 @@
                     <p class="lead-text">When you can't wait for support. Same day virtual therapy available throughout Ontario. Professional help when you need it most—today.</p>
                     
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
-                        <a href="tel:+14163062157" class="btn btn-primary">Get Support Today</a>
+                        <a href="tel:+15198008323" class="btn btn-primary">Get Support Today</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-secondary">Book Now Online</a>
                     </div>
                 </div>
@@ -666,7 +670,7 @@
                     
                     <div class="urgency-box">
                         <h3>Available Today</h3>
-                        <p>Call now: (416) 306-2157</p>
+                        <p>Call now: (519) 800-8323</p>
                         <p>Morning, afternoon, or evening slots available</p>
                         <p>Start your session within hours, not weeks</p>
                     </div>
@@ -688,7 +692,7 @@
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Professional support is available right now.</p>
-                        <a href="tel:+14163062157" class="primary-cta">Connect Today</a>
+                        <a href="tel:+15198008323" class="primary-cta">Connect Today</a>
                     </div>
                 </div>
             </div>
@@ -706,7 +710,7 @@
                     
                     <div style="margin-bottom: var(--space-xl);">
                         <h4><strong>1. Call or Book Online Now</strong></h4>
-                        <p>Contact us this morning, get support this afternoon. Call (416) 306-2157 or use our online booking. Tell us you need same day support. We'll find an available slot today. No judgment about the urgency—your needs are valid.</p>
+                        <p>Contact us this morning, get support this afternoon. Call (519) 800-8323 or use our online booking. Tell us you need same day support. We'll find an available slot today. No judgment about the urgency—your needs are valid.</p>
                     </div>
                     
                     <div style="margin-bottom: var(--space-xl);">
@@ -784,7 +788,7 @@
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Don't wait weeks when you need help today.</p>
                         <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Get Same Day Support</a>
+                            <a href="tel:+15198008323" class="primary-cta">Get Same Day Support</a>
                             <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Book Online Now</a>
                         </div>
                     </div>
@@ -935,9 +939,9 @@
                 <p>Call now for same day appointment. Don't suffer through another night without support.</p>
                 
                 <div class="hero-cta">
-                    <a href="tel:+14163062157" class="primary-cta">Get Same Day Therapy Now</a>
+                    <a href="tel:+15198008323" class="primary-cta">Get Same Day Therapy Now</a>
                     <div class="secondary-ctas">
-                        <a href="tel:+14163062157" class="secondary-cta phone-cta">Call: (416) 306-2157</a>
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">Call: (519) 800-8323</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Book Online</a>
                     </div>
                 </div>
@@ -954,8 +958,65 @@
     </main>
     
     <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
+    <a href="tel:+15198008323" class="floating-cta">
         📞 Today
     </a>
 
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        // Smart sticky header functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+            
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10; // Minimum scroll distance to trigger
+            
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+                
+                // Only proceed if scroll difference is significant
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+                
+                if (currentScrollY <= headerHeight) {
+                    // At the top of the page
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    // Scrolling down - hide header
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+                
+                lastScrollY = currentScrollY;
+            }
+            
+            // Use requestAnimationFrame for smooth performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+            
+            // Set initial styles
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
 </body></html>

@@ -586,26 +586,21 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="https://www.nextsteptherapy.ca" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="https://www.nextsteptherapy.ca/services.html">Services</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/about.html">About</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/blog.html">Resources</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/contact.html">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -621,7 +616,7 @@
                     
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
                         <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book Confidential Consultation</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
                     </div>
                 </div>
             </div>
@@ -654,7 +649,7 @@
                     <!-- Mid-page CTA -->
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Executive-level support for executive-level challenges.</p>
-                        <a href="tel:+14163062157" class="primary-cta">Get Confidential Support</a>
+                        <a href="tel:+15198008323" class="primary-cta">Get Confidential Support</a>
                     </div>
                 </div>
             </div>
@@ -760,7 +755,7 @@
                     <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Invest in the leader behind the title.</p>
                         <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+14163062157" class="primary-cta">Schedule Executive Session</a>
+                            <a href="tel:+15198008323" class="primary-cta">Schedule Executive Session</a>
                             <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Confidential Inquiry</a>
                         </div>
                     </div>
@@ -873,9 +868,9 @@
                 <p>Discuss your unique challenges in a judgment-free, understanding environment. Complete discretion assured.</p>
                 
                 <div class="hero-cta">
-                    <a href="tel:+14163062157" class="primary-cta">Book Confidential Session</a>
+                    <a href="tel:+15198008323" class="primary-cta">Book Confidential Session</a>
                     <div class="secondary-ctas">
-                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Private Message</a>
                     </div>
                 </div>
@@ -892,8 +887,39 @@
     </main>
     
     <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
+    <a href="tel:+15198008323" class="floating-cta">
         📞 Call Now
     </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.smart-sticky');
+            let lastScrollTop = 0;
+            
+            function handleScroll() {
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
 
 </body></html>

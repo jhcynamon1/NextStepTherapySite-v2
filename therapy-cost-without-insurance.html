@@ -624,26 +624,21 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="https://www.nextsteptherapy.ca" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='"none"'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav>
-                    <ul class="nav">
-                        <li><a href="https://www.nextsteptherapy.ca/services.html">Services</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/about.html">About</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/blog.html">Resources</a></li>
-                        <li><a href="https://www.nextsteptherapy.ca/contact.html">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
                 </nav>
                 
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
-                </a>
             </div>
         </div>
     </header>
@@ -666,7 +661,7 @@
                     
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
                         <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Start Feeling Better Today</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary">Talk to Someone Who Gets It</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">Talk to Someone Who Gets It</a>
                     </div>
                 </div>
             </div>
@@ -946,7 +941,7 @@
                         <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Let's explore what works for your situation and budget.</p>
                         <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
                             <a href="https://www.nextsteptherapy.ca/#contact" class="primary-cta">Start Feeling Better Today</a>
-                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Talk to Someone Who Gets It</a>
+                            <a href="tel:+15198008323" class="secondary-cta phone-cta">Talk to Someone Who Gets It</a>
                         </div>
                     </div>
                 </div>
@@ -1032,7 +1027,7 @@
                 <div class="hero-cta">
                     <a href="https://www.nextsteptherapy.ca/#contact" class="primary-cta">Start Feeling Better Today</a>
                     <div class="secondary-ctas">
-                        <a href="tel:+14163062157" class="secondary-cta phone-cta">Talk to Someone Who Gets It</a>
+                        <a href="tel:+15198008323" class="secondary-cta phone-cta">Talk to Someone Who Gets It</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Ask About Options</a>
                     </div>
                 </div>
@@ -1064,6 +1059,33 @@
                 stickyCTA.classList.add('show');
             } else {
                 stickyCTA.classList.remove('show');
+            }
+        });
+        
+        // Smart Sticky Header
+        const header = document.querySelector('.smart-sticky');
+        let lastScrollTop = 0;
+        
+        function handleScroll() {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else if (currentScrollTop < lastScrollTop || currentScrollTop <= 100) {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        }
+        
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
             }
         });
     </script>
