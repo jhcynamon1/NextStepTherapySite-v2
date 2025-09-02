@@ -1,31 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
-    {
-      "source": "/counselling-services",
-      "destination": "/counselling-services.html"
-    },
-    {
-      "source": "/same-day-virtual-therapy", 
-      "destination": "/same-day-virtual-therapy.html"
-    },
-    {
-      "source": "/mental-health-professionals",
-      "destination": "/mental-health-professionals.html"
-    },
-    {
-      "source": "/university-anxiety",
-      "destination": "/university-anxiety.html"
-    },
-    {
-      "source": "/perfectionism-and-burnout-therapy-toronto",
-      "destination": "/perfectionism-and-burnout-therapy-toronto.html"
-    },
-    {
-      "source": "/((?!.*\\.html$).*)",
-      "destination": "/$1.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
