@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // FIRE CONVERSION EVENT ON THANK YOU PAGE LOAD
+        gtag('event', 'generate_lead', {
+            'event_category': 'conversion',
+            'value': 175,
+            'currency': 'CAD'
+        });
+
+        // Track phone clicks on thank you page
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <title>Thank You | Next Step Therapy</title>
+    <meta name="description" content="Thank you for reaching out. Your message has been received and will be responded to within 2 hours.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <style>
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-section: 80px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-soft) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-md);
+        }
+        
+        .thank-you-container {
+            background: white;
+            padding: var(--space-section);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent-warm);
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xl);
+            line-height: 1.6;
+        }
+        
+        .next-steps {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+        
+        .next-steps h3 {
+            font-family: var(--font-display);
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+        }
+        
+        .next-steps p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .contact-item strong {
+            color: var(--primary-soft-blue);
+            font-size: 1.125rem;
+        }
+        
+        .phone-link {
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: var(--space-md) var(--space-lg);
+            border: 2px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .phone-link:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+        
+        .home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .home-link:hover {
+            color: var(--primary-soft-blue);
+        }
+        
+        .credentials {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: var(--space-lg);
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="checkmark">✓</div>
+        
+        <h1>Thank You for Reaching Out</h1>
+        
+        <p class="lead-text">
+            Your message has been received. I will respond within 2 hours during business hours with care and confidentiality.
+        </p>
+        
+        <div class="next-steps">
+            <h3>What Happens Next</h3>
+            <p>I personally read every message and will reach out to discuss how we can work together. This first conversation is always confidential and pressure-free.</p>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Call or Text</strong>
+                <a href="tel:+14163062157" class="phone-link">(416) 306-2157</a>
+            </div>
+            
+            <div class="contact-item">
+                <strong>Response Time</strong>
+                <span>Within 2 hours during business hours</span>
+            </div>
+        </div>
+        
+        <a href=https://www.nextsteptherapy.ca" class="home-link">
+            ← Return to Homepage
+        </a>
+        
+        <div class="credentials">
+            <strong>Jesse Cynamon, RP</strong><br>
+            Registered Psychotherapist | CRPO #10979<br>
+            Virtual Therapy Throughout Ontario
+        </div>
+    </div>
+</body>
+</html>
