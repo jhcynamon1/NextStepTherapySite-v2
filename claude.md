@@ -41,6 +41,75 @@ curl -X POST "https://api.dataforseo.com/v3/dataforseo_labs/google/keyword_ideas
 
 ---
 
+## 🚨 VERCEL DEPLOYMENT - COMPLETE SOLUTION
+
+### THE PROBLEM:
+New HTML pages return 404 errors even when they exist locally and are committed to Git.
+
+### THE SOLUTION (FOLLOW EXACTLY):
+
+#### Step 1: Create Your HTML Page
+```bash
+# Create your page normally in the root directory
+# Example: my-new-page.html
+```
+
+#### Step 2: Git Commit (CRITICAL)
+```bash
+git add my-new-page.html
+git commit -m "Add new page"
+git push
+```
+
+#### Step 3: Verify Correct Vercel Project
+```bash
+# Check you're linked to the RIGHT project (the one with your real homepage)
+curl -s https://nextsteptherapy-fresh.vercel.app | grep "title"
+
+# Should show: "Next Step Therapy Ontario | ACT Therapy & Mental Health"
+# If not, relink:
+rm -rf .vercel
+vercel link --project nextsteptherapy-fresh --yes
+```
+
+#### Step 4: Deploy
+```bash
+vercel --prod --force --yes
+```
+
+#### Step 5: Test (Wait 5-10 minutes for DNS)
+```bash
+curl -I https://www.nextsteptherapy.ca/my-new-page
+# Should return HTTP/2 200 (not 404)
+```
+
+### CRITICAL VERCEL.JSON CONFIGURATION:
+```json
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": ".",
+  "headers": [...]
+}
+```
+
+### TROUBLESHOOTING:
+- ❌ **404 Error**: File not committed to Git OR wrong Vercel project
+- ❌ **All pages 404**: Wrong outputDirectory in vercel.json
+- ❌ **Homepage works, others don't**: DNS propagation (wait 10 minutes)
+
+### NEVER AGAIN CHECKLIST:
+1. ✅ HTML file in root directory (not public/)
+2. ✅ Git add, commit, push
+3. ✅ Linked to nextsteptherapy-fresh project
+4. ✅ outputDirectory: "." in vercel.json
+5. ✅ cleanUrls: true for clean URLs
+6. ✅ Force deploy with --force flag
+7. ✅ Wait 5-10 minutes for DNS propagation
+
+---
+
 ## Other MCP Tools
 
 ### When User Asks About Other MCPs:
