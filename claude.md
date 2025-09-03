@@ -100,13 +100,20 @@ curl -I https://www.nextsteptherapy.ca/my-new-page
 - ❌ **Homepage works, others don't**: DNS propagation (wait 10 minutes)
 
 ### NEVER AGAIN CHECKLIST:
-1. ✅ HTML file in root directory (not public/)
-2. ✅ Git add, commit, push
-3. ✅ Linked to nextsteptherapy-fresh project
-4. ✅ outputDirectory: "." in vercel.json
+1. ✅ ALL HTML files in public/ directory (NOT root!)
+2. ✅ outputDirectory: "public" in vercel.json
+3. ✅ Git add, commit, push ALL files
+4. ✅ Linked to nextsteptherapy-fresh project
 5. ✅ cleanUrls: true for clean URLs
 6. ✅ Force deploy with --force flag
-7. ✅ Wait 5-10 minutes for DNS propagation
+7. ✅ Wait 10-15 minutes for DNS propagation
+8. ✅ Test both vercel.app URL and custom domain
+
+### PERPLEXITY RESEARCH CONFIRMS:
+- Vercel requires ALL static HTML files in public/ directory
+- outputDirectory must point to public/
+- Only index.html gets special treatment in root
+- DNS propagation can take 10-15 minutes
 
 ---
 
