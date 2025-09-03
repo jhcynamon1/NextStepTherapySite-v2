@@ -99,21 +99,17 @@ curl -I https://www.nextsteptherapy.ca/my-new-page
 - ❌ **All pages 404**: Wrong outputDirectory in vercel.json
 - ❌ **Homepage works, others don't**: DNS propagation (wait 10 minutes)
 
-### NEVER AGAIN CHECKLIST:
-1. ✅ ALL HTML files in public/ directory (NOT root!)
-2. ✅ outputDirectory: "public" in vercel.json
-3. ✅ Git add, commit, push ALL files
-4. ✅ Linked to nextsteptherapy-fresh project
-5. ✅ cleanUrls: true for clean URLs
-6. ✅ Force deploy with --force flag
-7. ✅ Wait 10-15 minutes for DNS propagation
-8. ✅ Test both vercel.app URL and custom domain
+### 🚨 ACTUAL ISSUE DISCOVERED:
+**Vercel is NOT deploying new files from public/ directory!**
+- Existing files work fine (counselling-ontario.html returns 200)
+- New files return 404 even after 12+ hours
+- Even brand new test files don't deploy
+- This is NOT a timing/DNS issue
 
-### PERPLEXITY RESEARCH CONFIRMS:
-- Vercel requires ALL static HTML files in public/ directory
-- outputDirectory must point to public/
-- Only index.html gets special treatment in root
-- DNS propagation can take 10-15 minutes
+### REAL SOLUTION NEEDED:
+❌ **Current approach doesn't work**: Files in public/ directory
+✅ **Need to investigate**: Why Vercel ignores new files in public/
+🔍 **Next steps**: Check Vercel project settings or recreate deployment
 
 ---
 
