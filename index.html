@@ -9,10 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
-    <!-- Google Analytics 4 + Conversion Tracking -->
+    <!-- Google Analytics 4 + Conversion Tracking - Deferred for Performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
-    <script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -22,7 +22,7 @@
             'send_page_view': true
         });
 
-        // Track phone clicks
+        // Track phone clicks - deferred for performance
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -406,7 +406,7 @@
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="100vw" onerror="this.innerHTML='JC'">
+                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon, RP</h3>
@@ -449,7 +449,10 @@
                         <p>You're the expert on your life - I'm just here with the tools and training to help you navigate it better. No judgment, no telling you what to do. Just genuine collaboration toward the changes you want to see.</p>
                         
                         <div class="office-image">
-                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300" loading="eager" fetchpriority="high" sizes="100vw" loading="eager" fetchpriority="high" sizes="100vw">
+                            <picture>
+                                <source srcset="images/asset34.webp" type="image/webp">
+                                <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300" loading="lazy" sizes="(max-width: 768px) 100vw, 400px">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -473,11 +476,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-anxiety.jpg" alt="Anxiety therapy support icon" style="
+                            <img src="images/services/icon-anxiety.jpg" alt="Anxiety therapy support icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Anxiety & Stress Management</h3>
                         <p class="specialization-desc">When your mind won't stop racing at 3am. Practical tools for panic attacks and overwhelm. Finally understand why you worry so much.</p>
@@ -491,11 +494,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-mens-health.jpg" alt="Men's mental health therapy icon" style="
+                            <img src="images/services/icon-mens-health.jpg" alt="Men's mental health therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Men's Mental Health</h3>
                         <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
@@ -509,11 +512,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-workplace.jpg" alt="Workplace stress therapy icon" style="
+                            <img src="images/services/icon-workplace.jpg" alt="Workplace stress therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Workplace Stress & Burnout</h3>
                         <p class="specialization-desc">When Sunday nights fill you with dread. Beyond "just take a vacation" advice. Finding sustainability without quitting everything.</p>
@@ -527,11 +530,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-transitions.jpg" alt="Life transitions therapy icon" style="
+                            <img src="images/services/icon-transitions.jpg" alt="Life transitions therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Life Transitions & Change</h3>
                         <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
@@ -545,11 +548,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-depression.jpg" alt="Depression therapy support icon" style="
+                            <img src="images/services/icon-depression.jpg" alt="Depression therapy support icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Depression & Mood Support</h3>
                         <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
@@ -563,11 +566,11 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/services/icon-relationships.jpg" alt="Relationship therapy communication icon" style="
+                            <img src="images/services/icon-relationships.jpg" alt="Relationship therapy communication icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Relationship & Communication</h3>
                         <p class="specialization-desc">When the same arguments keep happening. Understanding your patterns in relationships. Actually being heard (and hearing others).</p>
