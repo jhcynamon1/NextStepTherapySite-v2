@@ -2,86 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4A90E2">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- SEO Meta Data -->
-    <title>Teen Eating Disorder Help Ontario | Adolescent Eating Disorder Support | CRPO #10979</title>
-    <meta name="description" content="Professional eating disorder support for teenagers in Ontario. Specialized therapy for teen anorexia, bulimia, and disordered eating patterns. Virtual sessions available statewide.">
-    <meta name="keywords" content="teen eating disorder, adolescent eating disorder, anorexia help Ontario, bulimia treatment, teen therapy, eating disorder recovery, virtual therapy Ontario">
-    <link rel="canonical" href="https://www.nextsteptherapy.ca/teen-eating-disorder-help">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextsteptherapy.ca/teen-eating-disorder-help">
-    <meta property="og:title" content="Teen Eating Disorder Help Ontario | Professional Support | CRPO #10979">
-    <meta property="og:description" content="Specialized eating disorder support for teenagers throughout Ontario. Evidence-based therapy for anorexia, bulimia, and disordered eating recovery.">
-    <meta property="og:image" content="https://www.nextsteptherapy.ca/images/teen-eating-disorder-support.jpg">
-    <meta property="og:site_name" content="Next Step Therapy Ontario">
-    <meta property="og:locale" content="en_CA">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.nextsteptherapy.ca/teen-eating-disorder-help">
-    <meta property="twitter:title" content="Teen Eating Disorder Help Ontario | Professional Support">
-    <meta property="twitter:description" content="Specialized eating disorder support for teenagers throughout Ontario. Evidence-based therapy for recovery and healing.">
-    <meta property="twitter:image" content="https://www.nextsteptherapy.ca/images/teen-eating-disorder-support.jpg">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Next Step Therapy Ontario - Teen Eating Disorder Support",
-        "description": "Professional eating disorder therapy for teenagers throughout Ontario, specializing in anorexia, bulimia, and disordered eating recovery.",
-        "url": "https://www.nextsteptherapy.ca/teen-eating-disorder-help",
-        "telephone": "+1-416-306-2157",
-        "email": "info@nextsteptherapy.ca",
-        "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Ontario",
-            "addressCountry": "Canada"
-        },
-        "areaServed": {
-            "@type": "State",
-            "name": "Ontario"
-        },
-        "medicalSpecialty": "Eating Disorder Treatment",
-        "priceRange": "$175",
-        "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
-        "availableService": [
-            {
-                "@type": "MedicalTherapy",
-                "name": "Teen Eating Disorder Therapy",
-                "description": "Specialized treatment for adolescent eating disorders including anorexia, bulimia, and binge eating"
-            },
-            {
-                "@type": "MedicalTherapy", 
-                "name": "Family-Based Treatment",
-                "description": "Evidence-based family therapy approach for teen eating disorder recovery"
-            },
-            {
-                "@type": "MedicalTherapy",
-                "name": "Virtual Therapy Sessions",
-                "description": "Online eating disorder therapy throughout Ontario"
-            }
-        ],
-        "provider": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "credential": "CRPO #10979"
-        }
-    }
-    </script>
-    
-    <!-- Google Analytics 4 -->
+    <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -93,6 +14,7 @@
             'send_page_view': true
         });
 
+        // Track phone clicks
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -103,7 +25,20 @@
                     });
                 });
             });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
 
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('form').forEach(form => {
                 form.addEventListener('submit', function() {
                     gtag('event', 'generate_lead', {
@@ -113,81 +48,1016 @@
                     });
                 });
             });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
         });
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Shared Styles -->
-    <link rel="stylesheet" href="shared.min.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero" style="position: relative; min-height: 600px;">
-        <!-- Optimized Background with WebP and Mobile Support -->
-        <div class="hero-background" style="
+    <!-- V2 Conversion-Optimized Meta Data -->
+    <title>Teen Eating Disorder Help | Adolescent Recovery Support Ontario | CRPO #10979</title>
+    <meta name="description" content="Professional eating disorder support for teenagers throughout Ontario. Evidence-based therapy for anorexia, bulimia, and binge eating recovery. Virtual sessions available.">
+    
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Teen Eating Disorder Help | Professional Recovery Support Ontario">
+    <meta property="og:description" content="Specialized eating disorder therapy for teenagers. Evidence-based treatment for anorexia, bulimia, and disordered eating recovery throughout Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/teen-eating-disorder-help">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/teen-eating-disorder-og.jpg">
+    
+    <!-- Canonical URL for SEO -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/teen-eating-disorder-help">
+    
+    <!-- Enhanced Article Schema - V2 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Teen Eating Disorder Help: Professional Support for Adolescent Recovery",
+      "description": "Comprehensive guide to understanding and treating teen eating disorders, including anorexia, bulimia, and evidence-based recovery strategies",
+      "wordCount": "2500",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://nextsteptherapy.ca/#organization",
+        "name": "Next Step Therapy"
+      },
+      "datePublished": "2025-01-28",
+      "dateModified": "2025-01-28",
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Teen Eating Disorders",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Psychotherapy"
+        }
+      }
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema for Ontario Targeting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Next Step Therapy",
+      "description": "Professional eating disorder therapy for teenagers throughout Ontario",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Teen Eating Disorder Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Teen Eating Disorder Support",
+              "provider": {
+                "@type": "Person",
+                "name": "Jesse Cynamon, RP"
+              }
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Enhanced FAQ Schema - V2 Conversion Focus -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the warning signs of teen eating disorders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Warning signs include dramatic weight changes, obsession with food and calories, avoiding family meals, excessive exercise, mood changes, social withdrawal, and physical symptoms like fatigue or hair loss. Eating disorders affect up to 10% of teenagers and require professional intervention for successful recovery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy effective for teen eating disorders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research shows virtual therapy is highly effective for teen eating disorders when combined with family involvement. Virtual sessions offer privacy, flexibility for school schedules, and continuous support during recovery. Many teens find it easier to open up in their own environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I help my teenager with an eating disorder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seek professional help immediately, avoid commenting on food or weight, provide emotional support without enabling behaviors, learn about eating disorders, and consider family-based treatment approaches. Early intervention significantly improves recovery outcomes for teenagers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What treatment approaches work best for teen eating disorders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Family-Based Treatment (FBT) is considered the gold standard for teen eating disorders, especially anorexia. Other effective approaches include CBT-E, DBT skills training, and medical monitoring. Treatment should address both eating behaviors and underlying emotional factors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my teenager's eating disorder affect their development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Untreated eating disorders can significantly impact adolescent brain development, physical growth, bone density, and social development. However, with proper treatment, most teens can recover fully and resume normal development. Early intervention is crucial for the best outcomes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does teen eating disorder recovery take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recovery timelines vary depending on the severity, type of eating disorder, and individual factors. With consistent treatment, many teens see improvement within months, but full recovery often takes 1-2 years. The key is maintaining consistent professional support and family involvement."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly with V2 enhancements */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* V2 Smart Sticky Header */
+        .header {
+            background: var(--background-primary);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        /* V2 Prominent CRPO Badge */
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav-desktop {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-desktop:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
+            color: white;
+        }
+        
+        .nav-mobile-phone {
+            display: none;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Smart Header Optimization */
+        @media (max-width: 768px) {
+            .header {
+                max-height: 50px;
+                padding: 0.25rem 0;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo-section {
+                gap: 0.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .credentials-badge-prominent {
+                display: none; /* Hidden in mobile sticky */
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+            
+            .nav-cta {
+                display: none; /* Hide desktop CTA */
+            }
+            
+            .nav-mobile-phone {
+                display: inline-block; /* Show mobile phone CTA */
+            }
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            /* Mobile responsive - max 2.5rem on mobile */
+            max-height: calc(2.5rem * 2.2); /* 2 lines max */
+            overflow: hidden;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section with V2 Conversion Focus */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(74, 107, 122, 0.9), rgba(107, 143, 163, 0.8)), 
-                        url('images/hero-background.jpg') center/cover no-repeat;
-            z-index: 0;
-            will-change: transform;
-        ">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero-background-mobile.webp" type="image/webp">
-                <source media="(max-width: 768px)" srcset="images/hero-background-mobile.jpg">
-                <source srcset="images/hero-background.webp" type="image/webp">
-                <img src="images/hero-background.jpg" 
-                     alt="Peaceful therapy environment background" 
-                     style="
-                         width: 100%;
-                         height: 100%;
-                         object-fit: cover;
-                         opacity: 0;
-                     " loading="eager">
-            </picture>
-        </div>
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
         
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* V2 Trust Signal Hierarchy - Above Fold */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-deep);
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(74, 107, 122, 0.08);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .trust-indicators {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .trust-indicator {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+        
+        /* V2 CTA Optimization */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 160px;
+            text-align: center;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            margin: var(--space-lg) 0;
+        }
+        
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        .text-cta {
+            color: var(--primary-soft-blue);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .text-cta:hover {
+            color: var(--primary-deep);
+        }
+        
+        /* V2 Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-sticky-cta { 
+                display: block; 
+            }
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--neutral-soft);
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-soft-blue);
+            font-weight: 600;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .info-card {
+            background: var(--neutral-soft);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .info-card .label {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card .value {
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-soft-blue);
+        }
+        
+        /* CTA Callouts */
+        .cta-callout {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg);
+            background: rgba(74, 107, 122, 0.05);
+            border-radius: var(--radius-md);
+        }
+        
+        .cta-callout p {
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--background-primary) 100%);
+            padding: var(--space-xxl) 0 var(--space-lg);
+            margin-top: var(--space-section);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--space-xs);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- V2 Smart Sticky Header -->
+    <header class="header smart-sticky">
         <div class="container">
-            <div class="hero-content" style="position: relative; z-index: 1;">
-                <div class="hero-text fade-in-up">
-                    <h1>Teen Eating Disorder Help Ontario</h1>
-                    <p class="lead-text">Specialized support for teenagers struggling with eating disorders. Evidence-based therapy for recovery, healing, and healthy relationships with food and body image throughout Ontario.</p>
-                    
-                    <div class="hero-cta">
-                        <a href="#contact" class="primary-cta">
-                            Get Teen Support
-                        </a>
-                        <a href="tel:+14163062157" class="secondary-cta">
-                            (416) 306-2157
-                        </a>
-                    </div>
-                    
-                    <div class="hero-trust">
-                        <p>CRPO Registered Psychotherapist #10979 | Virtual Sessions Available | Evidence-Based Treatment</p>
-                    </div>
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="logo-text">Next Step Therapy</a>
+                    <!-- V2 CRPO badge moved above fold -->
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
+                
+                <nav class="nav">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="nav-desktop">Home</a>
+                    <!-- V2 Direct contact link -->
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="nav-cta">Get Help Today</a>
+                    <!-- Mobile: Phone CTA for sticky header -->
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- V2 Conversion-Optimized Hero Section - 300 words -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Teen Eating Disorder Threatening Their Future? Get Professional Help Today</h1>
+            <p class="lead-text">
+                Is your teenager struggling with disordered eating, body image issues, or dangerous 
+                weight control behaviors? Eating disorders during adolescence can be life-threatening 
+                and require immediate professional intervention. You don't have to navigate this alone - 
+                specialized support is available to help your family through recovery.
+            </p>
+            
+            <!-- V2 Above-fold trust signals -->
+            <div class="trust-indicators">
+                <span class="trust-indicator">Ontario Licensed</span>
+                <span class="trust-indicator">Teen Specialists</span>
+                <span class="trust-indicator">Family-Focused</span>
+            </div>
+            
+            <!-- V2 Primary CTA above fold -->
+            <div class="button-group">
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Get Professional Help Today</a>
+                <a href="tel:+15198008323" class="cta-secondary">Talk to Someone Who Understands</a>
+            </div>
+            
+            <p style="margin-top: var(--space-sm); text-align: center;">
+                Or text <a href="sms:+14163062157" class="text-cta">(519) 800-8323</a> for same-day response
+            </p>
+        </div>
+    </section>
+    
+    <!-- V2 Problem Validation Section - 400 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>When Eating Becomes the Enemy: Teen Eating Disorders in Ontario</h2>
+            
+            <p>
+                You used to love watching your teenager enjoy life - sports, friends, family dinners. 
+                But somewhere along the way, food became complicated. Maybe you've noticed dramatic 
+                weight changes, secretive eating behaviors, or an obsession with "healthy" eating 
+                that's anything but. Perhaps your teen from Toronto is exercising compulsively, or 
+                your child in Ottawa is avoiding family meals, or your teenager in Hamilton seems 
+                to be disappearing before your eyes.
+            </p>
+            
+            <h3>Teen Eating Disorders Show Up As:</h3>
+            <ul>
+                <li>Dramatic weight loss or gain that seems to happen overnight</li>
+                <li>Obsession with calories, food labels, and "clean" or "safe" foods</li>
+                <li>Avoiding family meals or social situations involving food</li>
+                <li>Excessive exercise that takes priority over everything else</li>
+                <li>Mood swings, irritability, especially around meal times</li>
+                <li>Social withdrawal from friends and activities they used to love</li>
+                <li>Physical symptoms like fatigue, dizziness, hair loss, or dental problems</li>
+                <li>Perfectionist behaviors that extend beyond food and body image</li>
+                <li>Secretive eating, hiding food wrappers, or frequent bathroom trips after meals</li>
+                <li>Body image distortion - seeing themselves differently than reality</li>
+                <li>Rigid thinking about "good" and "bad" foods or body shapes</li>
+                <li>Using food restriction, binging, or purging to cope with stress and emotions</li>
+            </ul>
+            
+            <p>
+                This isn't typical teenage behavior or "just a phase." Eating disorders have the 
+                highest mortality rate of any mental health condition, and they're increasingly 
+                common among Ontario teenagers. The combination of social media pressures, academic 
+                stress, peer relationships, and the normal challenges of adolescent development 
+                creates a perfect storm for disordered eating to take hold.
+            </p>
+            
+            <p>
+                The most frightening part? Eating disorders are often invisible at first. Your 
+                teenager might maintain normal weight with bulimia, or their restrictive eating 
+                might be praised as "healthy." By the time physical symptoms appear, the eating 
+                disorder has often been entrenched for months or even years. But here's what you 
+                need to know: eating disorders are treatable, and early intervention saves lives.
+            </p>
+        </div>
+    </section>
+    <!-- Understanding Teen Eating Disorders - 500 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Why Teenagers Are Vulnerable to Eating Disorders</h2>
+            
+            <h3>The Perfect Storm of Adolescent Development</h3>
+            <p>
+                Teen eating disorders don't happen in isolation - they develop during a time 
+                when your teenager is navigating massive physical, emotional, and social changes. 
+                The adolescent brain is still developing, particularly areas responsible for 
+                decision-making and emotional regulation. This makes teens more vulnerable to 
+                rigid thinking patterns and less able to recognize when eating behaviors become dangerous.
+            </p>
+            
+            <p>
+                During puberty, rapid physical changes can trigger body dissatisfaction and 
+                comparison with peers or social media ideals. Your teen might feel like their 
+                body is betraying them, leading them to attempt control through food, exercise, 
+                or weight manipulation. The development of abstract thinking allows teenagers 
+                to create complex rules about food and eating that can quickly become obsessive.
+            </p>
+            
+            <h3>Ontario's Unique Teen Environment</h3>
+            <p>
+                Ontario teenagers face specific pressures that can contribute to eating disorder 
+                development. The competitive academic environment in cities like Toronto and 
+                Ottawa creates high-achieving teens who often struggle with perfectionism. 
+                Social media exposure is constant, presenting unrealistic body standards and 
+                "lifestyle" content that promotes diet culture and unhealthy relationships with food.
+            </p>
+            
+            <p>
+                The diversity of Ontario also means teens from different cultural backgrounds 
+                may face unique pressures around body image, family expectations, and food 
+                traditions. Some cultures emphasize thinness or specific body types, while 
+                others may have complex relationships with food that can be confusing for 
+                developing teenagers trying to find their identity.
+            </p>
+            
+            <h3>The Neuroscience Behind Teen Eating Disorders</h3>
+            <p>
+                When your teenager restricts food, their brain interprets this as starvation, 
+                triggering primitive survival mechanisms that make rational thinking about food 
+                nearly impossible. Malnutrition actually changes brain function, making teens 
+                more anxious, obsessive, and unable to see their situation clearly.
+            </p>
+            
+            <p>
+                This creates a vicious cycle: eating disorder behaviors impair brain function, 
+                impaired brain function makes it harder to make healthy choices, and the cycle 
+                intensifies. Many parents describe feeling like they're "losing" their teenager 
+                to the eating disorder - and in many ways, that's exactly what's happening neurologically.
+            </p>
+            
+            <h3>Common Risk Factors in Ontario Teens</h3>
+            <ul>
+                <li><strong>Academic pressure:</strong> High-achieving teens in competitive school environments</li>
+                <li><strong>Social media influence:</strong> Constant exposure to filtered images and diet culture</li>
+                <li><strong>Sports participation:</strong> Especially aesthetic or weight-category sports</li>
+                <li><strong>Family dieting:</strong> Growing up in households focused on weight and appearance</li>
+                <li><strong>Perfectionism:</strong> All-or-nothing thinking that extends beyond food</li>
+                <li><strong>Trauma history:</strong> Including bullying, abuse, or significant life changes</li>
+                <li><strong>Anxiety and depression:</strong> Using food behaviors to cope with difficult emotions</li>
+                <li><strong>Identity struggles:</strong> Uncertainty about sexuality, gender, or future direction</li>
+            </ul>
+            
+            <p>
+                Understanding these factors isn't about blame - it's about recognizing that eating 
+                disorders are complex mental health conditions that require professional treatment. 
+                With proper support, the vast majority of teenagers can recover fully and develop 
+                healthy relationships with food and their bodies.
+            </p>
+        </div>
+    </section>
+            
+    <!-- V2 Virtual Therapy Benefits - 450 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Why Virtual Therapy Works Perfectly for Teen Eating Disorder Recovery</h2>
+            
+            <p>
+                You might wonder if virtual therapy can really address something as serious as a 
+                teen eating disorder. Research consistently shows that virtual therapy is highly 
+                effective for eating disorder treatment when combined with family involvement. 
+                For families dealing with teen eating disorders, virtual therapy offers unique 
+                advantages that can actually enhance treatment outcomes.
+            </p>
+            
+            <h3>Addressing Common Virtual Therapy Concerns</h3>
+            <p>
+                <strong>"Can we really address something this serious virtually?"</strong> Absolutely. 
+                Virtual eating disorder therapy allows for immediate intervention during meal times, 
+                real-time coaching for challenging situations, and consistent support throughout 
+                recovery. Many families find that having professional guidance available in their 
+                home environment where eating behaviors actually occur is more helpful than 
+                office-based sessions.
+            </p>
+            
+            <p>
+                <strong>"What about medical monitoring and safety?"</strong> Virtual therapy works 
+                in coordination with your teenager's medical team. We help you understand when 
+                medical intervention is needed and maintain communication with healthcare providers 
+                to ensure comprehensive care. Virtual sessions don't replace medical monitoring - 
+                they enhance the therapeutic support between medical appointments.
+            </p>
+            
+            <p>
+                <strong>"Will my teenager actually engage in virtual sessions?"</strong> Most teens 
+                are comfortable with virtual platforms and often find them less intimidating than 
+                traditional office visits. The privacy and comfort of being in their own space 
+                can actually help teenagers open up more freely about their eating disorder experiences.
+            </p>
+            
+            <h3>Family-Specific Advantages</h3>
+            <ul>
+                <li><strong>Real-time meal support:</strong> Professional guidance during actual meal times when eating disorder behaviors occur</li>
+                <li><strong>Family involvement:</strong> Parents can participate easily without scheduling complications</li>
+                <li><strong>Crisis accessibility:</strong> Immediate support during challenging moments or setbacks</li>
+                <li><strong>Consistent care:</strong> No interruption during school breaks, family trips, or semester changes</li>
+                <li><strong>Reduced stigma:</strong> Privacy that helps teenagers feel more comfortable seeking help</li>
+                <li><strong>Flexible scheduling:</strong> Sessions that work around school, work, and family commitments</li>
+                <li><strong>Environmental integration:</strong> Working on recovery in the actual environment where eating occurs</li>
+            </ul>
+            
+            <h3>Evidence-Based Approaches We Use</h3>
+            <p>
+                Virtual therapy allows us to implement proven techniques specifically effective for 
+                teen eating disorders, including Family-Based Treatment (FBT), Cognitive Behavioral 
+                Therapy for Eating Disorders (CBT-E), and Dialectical Behavior Therapy (DBT) skills. 
+                These approaches help address both the eating behaviors and underlying emotional 
+                factors while supporting the entire family through recovery.
+            </p>
+            
+            <p>
+                Many families find that having consistent therapeutic support helps them navigate 
+                the challenging aspects of eating disorder recovery while maintaining hope and 
+                connection. When your family isn't constantly fighting the eating disorder, you 
+                can focus on healing, growth, and rebuilding healthy relationships with food and each other.
+            </p>
+            
+            <!-- V2 Mid-section CTA -->
+            <div class="cta-callout">
+                <p>Ready to get professional help for your teenager?</p>
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Start Recovery Today</a>
+                <p style="margin-top: var(--space-sm);">Or call <a href="tel:+15198008323" class="text-cta">(519) 800-8323</a></p>
             </div>
         </div>
     </section>
-
-    <!-- Understanding Teen Eating Disorders Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Understanding Teen Eating Disorders: Warning Signs and Impact</h2>
-                <p class="section-subtitle">Eating disorders among teenagers have reached alarming rates, affecting adolescents across all demographics in Ontario. Early recognition and intervention are crucial for successful recovery.</p>
-            </div>
-            
-            <div class="content-grid">
-                <div class="content-main">
-                    <div class="content-block">
-                        <h3>Common Teen Eating Disorders</h3>
-                        
-                        <div class="disorder-type">
-                            <h4>Anorexia Nervosa</h4>
                             <p>Characterized by severe food restriction, intense fear of weight gain, and distorted body image. Teenagers with anorexia may engage in excessive exercise, avoid social eating situations, and experience significant weight loss while continuing to perceive themselves as overweight. The physical and psychological impacts can be severe and life-threatening, affecting brain development, bone density, heart function, and overall growth during this critical developmental period.</p>
                             
                             <p>Signs often include dramatic weight loss, obsession with calories and food labels, wearing baggy clothes to hide weight loss, withdrawal from social activities involving food, and extreme sensitivity to cold. Academic performance may initially improve due to perfectionist tendencies but can later decline as malnutrition affects cognitive function.</p>
@@ -295,39 +1165,455 @@
         </div>
     </section>
 
-    <!-- Treatment Approaches Section -->
-    <section class="content-section alternate">
-        <div class="container">
-            <div class="section-header">
-                <h2>Evidence-Based Treatment for Teen Eating Disorders</h2>
-                <p class="section-subtitle">Effective treatment for teen eating disorders requires specialized approaches that address both the eating behaviors and underlying psychological factors while considering the unique developmental needs of adolescents.</p>
+    <!-- Immediate Strategies Section - 500 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Immediate Steps for Parents Concerned About Teen Eating Disorders</h2>
+            
+            <p>
+                While professional support is essential for eating disorder recovery, you don't 
+                have to wait to start helping your teenager. These evidence-based strategies can 
+                provide immediate support and begin the healing process. Remember: these tools 
+                work best when combined with professional treatment for lasting recovery.
+            </p>
+            
+            <h3>Creating a Supportive Home Environment</h3>
+            <p>
+                <strong>Remove Triggers and Diet Culture:</strong> Clear your home of diet books, 
+                weight loss products, and scales. Stop commenting on food choices, body shapes, 
+                or weight - both for your teenager and other family members. This includes "positive" 
+                comments about weight loss or "healthy" eating that might reinforce disordered behaviors.
+            </p>
+            
+            <p>
+                <strong>Establish Regular Family Meals:</strong> Create structured meal times that 
+                happen together as a family. This isn't about forcing your teenager to eat, but 
+                about normalizing food and eating as social, nourishing experiences. Keep meals 
+                relaxed and focus on connection rather than food consumption.
+            </p>
+            
+            <p>
+                <strong>Model Healthy Food Relationships:</strong> Demonstrate balanced eating, 
+                enjoyment of food, and body acceptance. Your teenager needs to see adults who 
+                have healthy, flexible relationships with food and their bodies. This means 
+                avoiding diet talk, body criticism, and rigid eating rules.
+            </p>
+            
+            <h3>Communication Strategies</h3>
+            <p>
+                <strong>Listen Without Fixing:</strong> When your teenager shares struggles, 
+                resist the urge to immediately solve the problem or offer advice. Simple responses 
+                like "That sounds really hard" or "I'm glad you told me" can be more helpful 
+                than trying to logic them out of their eating disorder thoughts.
+            </p>
+            
+            <p>
+                <strong>Separate Your Teen from the Eating Disorder:</strong> Remember that the 
+                eating disorder is not your teenager's choice or identity. Statements like "The 
+                eating disorder is telling you that, but what do YOU think?" help externalize 
+                the illness and preserve your relationship.
+            </p>
+            
+            <h3>When to Seek Emergency Help</h3>
+            <p>
+                <strong>Medical Emergency Signs:</strong> Seek immediate medical attention if your 
+                teenager has fainting, chest pain, difficulty breathing, severe dehydration, or 
+                signs of electrolyte imbalance. Don't wait - eating disorders can be medically 
+                dangerous, especially in adolescents whose bodies are still developing.
+            </p>
+            
+            <p>
+                <strong>Mental Health Crisis:</strong> If your teenager expresses thoughts of 
+                self-harm, talks about not wanting to live, or engages in dangerous behaviors 
+                like severe restriction or frequent purging, seek professional help immediately. 
+                Crisis resources are available 24/7 for families in emergency situations.
+            </p>
+            
+            <h3>Building Your Support Network</h3>
+            <p>
+                <strong>Educate Yourself:</strong> Learn about eating disorders from reputable sources 
+                to understand what your teenager is experiencing. Knowledge helps you respond 
+                appropriately and reduces your own anxiety about the situation.
+            </p>
+            
+            <p>
+                Remember: you cannot "fix" your teenager's eating disorder through willpower, 
+                love, or logical arguments. But you can provide the consistent, non-judgmental 
+                support they need while professional treatment addresses the underlying issues 
+                that drive disordered eating behaviors.
+            </p>
+        </div>
+    </section>
+    <!-- Recovery Success Stories - 400 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Teen Eating Disorder Recovery is Possible</h2>
+            
+            <p>
+                There's hope beyond the eating disorder. While recovery takes time, commitment, 
+                and professional support, the vast majority of teenagers can recover fully and 
+                develop healthy relationships with food, their bodies, and their lives. Recovery 
+                doesn't just mean stopping eating disorder behaviors - it means reclaiming joy, 
+                spontaneity, and genuine connection with others.
+            </p>
+            
+            <h3>What Recovery Actually Looks Like</h3>
+            <p>
+                Recovery isn't a perfect straight line, and it's not about becoming someone who 
+                "never thinks about food." True recovery means your teenager can eat flexibly 
+                without extreme anxiety, engage in social activities involving food, pursue their 
+                interests and relationships, and handle life's stresses without turning to eating 
+                disorder behaviors.
+            </p>
+            
+            <p>
+                Many families are surprised by how much their teenager changes during recovery - 
+                not just physically, but emotionally and socially. As malnutrition resolves and 
+                eating disorder thoughts quiet down, you often see the return of your teenager's 
+                personality, humor, creativity, and ability to connect with others.
+            </p>
+            
+            <h3>The Importance of Early Intervention</h3>
+            <ul>
+                <li><strong>Better outcomes:</strong> Earlier treatment leads to faster recovery and lower relapse rates</li>
+                <li><strong>Reduced medical complications:</strong> Preventing long-term physical damage from malnutrition</li>
+                <li><strong>Protecting development:</strong> Ensuring normal brain, bone, and reproductive development continues</li>
+                <li><strong>Academic preservation:</strong> Maintaining school performance and educational opportunities</li>
+                <li><strong>Social connection:</strong> Preventing isolation from friends and important teenage experiences</li>
+                <li><strong>Family healing:</strong> Addressing the eating disorder before it severely impacts family relationships</li>
+            </ul>
+            
+            <p>
+                Think about the parents and teenagers you admire most - they likely demonstrate 
+                resilience without constant struggle. They enjoy food as fuel and pleasure, pursue 
+                meaningful goals, and maintain close relationships. This is possible for your 
+                teenager too, even if it's hard to imagine right now.
+            </p>
+            
+            <p>
+                When you address your teenager's eating disorder with professional help, you're 
+                not just treating a mental health condition - you're giving them the tools to 
+                build a fulfilling, connected life. You're helping them develop coping strategies 
+                that will serve them throughout their adult years, and you're modeling that seeking 
+                help is a sign of strength, not weakness.
+            </p>
+            
+            <p>
+                Many families discover that eating disorder recovery becomes a catalyst for 
+                deeper family connection, improved communication, and greater overall well-being 
+                for everyone. Your teenager's recovery can be the beginning of a healthier, 
+                happier chapter for your entire family.
+            </p>
+        </div>
+    </section>
+    <!-- What to Expect in Therapy - 350 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>What to Expect in Teen Eating Disorder Therapy</h2>
+            
+            <p>
+                Starting therapy for your teenager's eating disorder begins with understanding 
+                your family's unique situation, your teenager's specific challenges, and the 
+                factors that contributed to the eating disorder's development. Every teen and 
+                family is different, and treatment should be tailored to your specific needs 
+                and circumstances.
+            </p>
+            
+            <h3>Your First Session</h3>
+            <p>
+                We'll explore your teenager's eating disorder history, medical status, current 
+                symptoms, and family dynamics. This isn't about blame or judgment - it's about 
+                understanding the full picture so we can develop the most effective treatment plan. 
+                We'll also discuss your goals for recovery and what success looks like for your family.
+            </p>
+            
+            <p>
+                For parents, we'll address your concerns, fears, and questions about the eating 
+                disorder. Many parents feel overwhelmed, guilty, or confused about how to help 
+                their teenager. These feelings are normal, and therapy provides education and 
+                support for the entire family throughout the recovery process.
+            </p>
+            
+            <h3>The Family-Centered Treatment Process</h3>
+            <p>
+                Early sessions often focus on immediate safety and stabilization - ensuring your 
+                teenager is medically stable and beginning to interrupt dangerous eating disorder 
+                behaviors. We work closely with medical providers and use evidence-based approaches 
+                like Family-Based Treatment when appropriate.
+            </p>
+            
+            <p>
+                As treatment progresses, we address the underlying factors that contribute to 
+                the eating disorder - perfectionism, anxiety, trauma, identity issues, or family 
+                dynamics. We work at your family's pace, always prioritizing your teenager's 
+                safety and well-being while building toward lasting recovery.
+            </p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="label">Session Length</span>
+                    <span class="value">50 Minutes</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Format</span>
+                    <span class="value">Virtual Ontario</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Scheduling</span>
+                    <span class="value">Flexible/Evening</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Investment</span>
+                    <span class="value">$175/session</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Insurance</span>
+                    <span class="value">Receipts Provided</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Confidentiality</span>
+                    <span class="value">Complete Privacy</span>
+                </div>
             </div>
             
-            <div class="treatment-grid">
-                <div class="treatment-approach">
-                    <div class="approach-header">
-                        <h3>Family-Based Treatment (FBT)</h3>
-                        <span class="evidence-badge">Gold Standard</span>
-                    </div>
-                    <p>Family-Based Treatment is considered the gold standard for adolescent eating disorders, particularly anorexia nervosa. This approach positions parents as the primary agents of change, temporarily taking control of their teenager's eating while working to restore healthy weight and eating patterns. FBT recognizes that teenagers with eating disorders often cannot make rational decisions about food due to the neurobiological effects of malnutrition and the developmental limitations of the adolescent brain.</p>
-                    
-                    <div class="approach-phases">
-                        <h4>Three Treatment Phases:</h4>
-                        <div class="phase">
-                            <strong>Phase 1:</strong> Weight restoration and parental control of eating, with parents taking charge of all eating decisions until medical stability is achieved.
-                        </div>
-                        <div class="phase">
-                            <strong>Phase 2:</strong> Gradually returning control to the adolescent as they demonstrate ability to make healthy eating choices independently.
-                        </div>
-                        <div class="phase">
-                            <strong>Phase 3:</strong> Establishing healthy adolescent identity and family relationships, addressing broader developmental issues and relapse prevention.
-                        </div>
-                    </div>
-                    
-                    <p>This approach has shown superior outcomes compared to individual therapy alone for many teenagers with eating disorders, with higher rates of recovery and lower relapse rates when families are fully engaged in the treatment process.</p>
+            <p>
+                Many families find evening or weekend sessions work well with their teenager's 
+                school schedule and family commitments. We'll find a schedule that supports 
+                consistent attendance and engagement in the recovery process.
+            </p>
+        </div>
+    </section>
+    
+    <!-- About Your Therapist - 250 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>About Your Therapist</h2>
+            
+            <p>
+                Hi, I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who specializes 
+                in helping teenagers and families navigate eating disorder recovery throughout Ontario. 
+                I understand that eating disorders in adolescence aren't just about food - they're 
+                complex responses to emotional pain, family dynamics, social pressures, and the 
+                challenges of growing up in today's world.
+            </p>
+            
+            <p>
+                I work with families from Toronto, Ottawa, Hamilton, London, and across Ontario 
+                who are dealing with anorexia, bulimia, binge eating disorder, and other forms 
+                of disordered eating. I understand that watching your teenager struggle with an 
+                eating disorder can feel terrifying, overwhelming, and isolating for the entire family.
+            </p>
+            
+            <p>
+                My approach combines evidence-based treatments like Family-Based Treatment (FBT) 
+                with genuine understanding that every teenager and family is unique. Recovery isn't 
+                about following a rigid protocol - it's about finding the approaches that work for 
+                your teenager while supporting your entire family through the healing process.
+            </p>
+            
+            <p>
+                I believe that parents are often their teenager's greatest resource in eating 
+                disorder recovery, not the cause of the problem. My role is to educate, support, 
+                and empower families to help their teenagers reclaim their lives from eating 
+                disorders while rebuilding healthy family relationships.
+            </p>
+            
+            <p>
+                I offer virtual sessions throughout Ontario with flexible scheduling to accommodate 
+                your family's needs. Because eating disorder recovery requires consistent support, 
+                and sometimes the most important work happens outside traditional office hours.
+            </p>
+        </div>
+    </section>
+    
+    <!-- FAQ Section - V2 Objection Handling -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is virtual therapy really effective for something as serious as teen eating disorders?</div>
+                <p>
+                    Research shows virtual therapy is highly effective for eating disorder treatment when combined 
+                    with family involvement. Virtual sessions actually offer unique advantages: real-time support 
+                    during meal times, immediate crisis intervention, and the ability to work in the environment 
+                    where eating actually occurs. Many families find virtual therapy more accessible and less 
+                    intimidating for their teenagers.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I know if my teenager's eating behaviors require professional help?</div>
+                <p>
+                    Consider professional help if you notice significant weight changes, obsessive thoughts about 
+                    food or body image, avoidance of social eating situations, mood changes around meals, physical 
+                    symptoms like fatigue or hair loss, or any behaviors that interfere with your teenager's normal 
+                    activities. Trust your instincts - if you're concerned, it's worth getting a professional assessment.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will my teenager resist treatment, and how do we handle that?</div>
+                <p>
+                    Resistance to treatment is common because eating disorders often feel protective to teenagers. 
+                    This is where family-based approaches are particularly helpful - parents can provide the structure 
+                    and support needed while teenagers gradually develop their own motivation for recovery. Resistance 
+                    doesn't mean your teenager can't recover - it means they need more support, not less.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What role do parents play in teen eating disorder treatment?</div>
+                <p>
+                    Parents play a crucial role in teen eating disorder recovery. Research shows that family involvement 
+                    significantly improves outcomes. This doesn't mean parents caused the eating disorder - it means 
+                    you're often your teenager's best resource for recovery. Treatment includes education, support, 
+                    and specific strategies for helping your teenager heal while maintaining family relationships.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does teen eating disorder recovery typically take?</div>
+                <p>
+                    Recovery timelines vary widely depending on the type and severity of the eating disorder, how 
+                    early treatment begins, and individual factors. Many teenagers see significant improvement within 
+                    months of starting treatment, but full recovery often takes 1-2 years of consistent support. 
+                    Early intervention typically leads to faster and more complete recovery.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if we've tried therapy before and it didn't work?</div>
+                <p>
+                    Not all eating disorder treatment is the same. Many therapists lack specialized training in 
+                    adolescent eating disorders or evidence-based family approaches. Previous unsuccessful treatment 
+                    doesn't mean your teenager can't recover - it may mean you need a different approach. Specialized 
+                    eating disorder treatment has much higher success rates than general therapy.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Getting Started - FINAL CTA Section - 200 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Ready to Help Your Teenager Break Free from Eating Disorders?</h2>
+            
+            <p>
+                Your teenager's eating disorder doesn't have to define their future. With proper 
+                treatment, the vast majority of teenagers recover fully and go on to live healthy, 
+                fulfilling lives. The eating disorder might feel all-consuming right now, but 
+                recovery is not only possible - it's probable with the right support.
+            </p>
+            
+            <p>
+                The hardest part for most parents is making that first call. Once you do, you've 
+                already started changing the trajectory for your entire family. Whether you're ready 
+                to begin treatment or just want to understand your options, professional support 
+                is available when you're ready.
+            </p>
+            
+            <p>
+                Your teenager deserves to experience life without the constant struggle of an 
+                eating disorder. They deserve to enjoy food, feel comfortable in their body, 
+                and pursue their dreams without this burden. Take the first step toward the 
+                future your family wants.
+            </p>
+            
+            <!-- Final CTAs -->
+            <div class="button-group" style="margin-top: var(--space-xl);">
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Get Professional Help Today</a>
+                <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--space-md);">
+                Prefer to text? Send a message to <a href="sms:+14163062157" class="text-cta">(519) 800-8323</a>
+            </p>
+            
+            <p style="text-align: center; margin-top: var(--space-lg); font-style: italic; color: var(--text-secondary);">
+                Teen eating disorder therapy throughout Ontario | Family-based treatment | Virtual sessions available
+            </p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="../about">About Jesse</a>
+                    <a href="../services">Services</a>
+                    <a href="../approach">Therapeutic Approach</a>
+                    <a href="../fees">Fees & Insurance</a>
+                    <a href="https://www.nextsteptherapy.ca/#contact">Contact Form</a>
                 </div>
                 
-                <div class="treatment-approach">
+                <div class="footer-section">
+                    <h4>Teen Support</h4>
+                    <a href="../teen-eating-disorder-help">Teen Eating Disorders</a>
+                    <a href="../university-anxiety">University Anxiety</a>
+                    <a href="../anxiety-therapy">Anxiety Therapy</a>
+                    <a href="../workplace-stress-burnout">Workplace Stress</a>
+                    <a href="../depression-support">Depression Support</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Virtual Sessions Throughout Ontario</p>
+                    <p>📧 info@nextsteptherapy.ca</p>
+                    <p>📞 <a href="tel:+15198008323">(519) 800-8323</a></p>
+                    <p>💬 <a href="sms:+14163062157">Text Available</a></p>
+                    <p><strong>CRPO Registration #10979</strong></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Step Therapy | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="tel:+15198008323" class="mobile-sticky-cta">Get Support Now</a>
+    
+    <!-- V2 Smart Header & Mobile CTA JavaScript -->
+    <script>
+    // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) { // Mobile only
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Scrolling down & past initial area
+                header.classList.add('hide-on-scroll');
+            } else if (scrollTop < lastScrollTop) {
+                // Scrolling up
+                header.classList.remove('hide-on-scroll');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
+    });
+    
+    // Show mobile sticky CTA after scrolling 30% down page
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled / document.body.offsetHeight;
+        const stickyCTA = document.querySelector('.mobile-sticky-cta');
+        
+        if (rate > 0.3 && window.innerWidth <= 768) {
+            stickyCTA.classList.add('show');
+        } else {
+            stickyCTA.classList.remove('show');
+        }
+    });
+    </script>
+</body>
+</html>
                     <div class="approach-header">
                         <h3>Cognitive Behavioral Therapy for Eating Disorders (CBT-E)</h3>
                         <span class="evidence-badge">Evidence-Based</span>

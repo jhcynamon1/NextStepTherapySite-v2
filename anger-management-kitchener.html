@@ -2,93 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4A90E2">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    
-    <!-- SEO Meta Data -->
-    <title>Anger Management Kitchener | Professional Anger Therapy Ontario | CRPO #10979</title>
-    <meta name="description" content="Professional anger management therapy in Kitchener and throughout Ontario. Learn healthy coping strategies for anger, irritability, and emotional regulation through evidence-based treatment.">
-    <meta name="keywords" content="anger management Kitchener, anger therapy Ontario, anger counselling, emotional regulation, virtual anger therapy, CRPO registered therapist">
-    <link rel="canonical" href="https://www.nextsteptherapy.ca/anger-management-kitchener">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextsteptherapy.ca/anger-management-kitchener">
-    <meta property="og:title" content="Anger Management Kitchener | Professional Anger Therapy Ontario | CRPO #10979">
-    <meta property="og:description" content="Professional anger management therapy in Kitchener and throughout Ontario. Learn effective strategies for managing anger, improving relationships, and emotional regulation.">
-    <meta property="og:image" content="https://www.nextsteptherapy.ca/images/anger-management-therapy.jpg">
-    <meta property="og:site_name" content="Next Step Therapy Ontario">
-    <meta property="og:locale" content="en_CA">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.nextsteptherapy.ca/anger-management-kitchener">
-    <meta property="twitter:title" content="Anger Management Kitchener | Professional Anger Therapy Ontario">
-    <meta property="twitter:description" content="Professional anger management therapy in Kitchener and throughout Ontario. Learn effective strategies for managing anger and improving relationships.">
-    <meta property="twitter:image" content="https://www.nextsteptherapy.ca/images/anger-management-therapy.jpg">
-    
-    <!-- Schema.org markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Next Step Therapy Ontario - Anger Management Kitchener",
-        "description": "Professional anger management therapy in Kitchener and throughout Ontario, specializing in emotional regulation and healthy anger expression strategies.",
-        "url": "https://www.nextsteptherapy.ca/anger-management-kitchener",
-        "telephone": "+1-416-306-2157",
-        "email": "info@nextsteptherapy.ca",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kitchener",
-            "addressRegion": "Ontario",
-            "addressCountry": "Canada"
-        },
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Kitchener"
-            },
-            {
-                "@type": "State",
-                "name": "Ontario"
-            }
-        ],
-        "medicalSpecialty": "Anger Management Therapy",
-        "priceRange": "$175",
-        "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
-        "availableService": [
-            {
-                "@type": "MedicalTherapy",
-                "name": "Anger Management Therapy",
-                "description": "Individual therapy for anger management and emotional regulation"
-            },
-            {
-                "@type": "MedicalTherapy",
-                "name": "CBT for Anger",
-                "description": "Cognitive behavioral therapy techniques for anger management"
-            },
-            {
-                "@type": "MedicalTherapy",
-                "name": "Virtual Anger Therapy",
-                "description": "Online anger management therapy throughout Ontario"
-            }
-        ],
-        "provider": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "credential": "CRPO #10979"
-        }
-    }
-    </script>
-    
-    <!-- Google Analytics 4 -->
+    <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -100,6 +14,7 @@
             'send_page_view': true
         });
 
+        // Track phone clicks
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -110,7 +25,20 @@
                     });
                 });
             });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
 
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('form').forEach(form => {
                 form.addEventListener('submit', function() {
                     gtag('event', 'generate_lead', {
@@ -120,803 +48,1477 @@
                     });
                 });
             });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
         });
     </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Shared Styles -->
-    <link rel="stylesheet" href="shared.min.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero" style="position: relative; min-height: 600px;">
-        <!-- Optimized Background with WebP and Mobile Support -->
-        <div class="hero-background" style="
+    <!-- V2 Conversion-Optimized Meta Data -->
+    <title>Anger Issues Destroying Your Life? Learn Healthy Control Strategies | CRPO #10979</title>
+    <meta name="description" content="Professional anger management therapy throughout Ontario. Learn evidence-based strategies for controlling anger, improving relationships, and emotional regulation. Virtual sessions available.">
+    
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Anger Management Therapy | Professional Support Ontario">
+    <meta property="og:description" content="Learn healthy anger management strategies with professional support. Evidence-based therapy for anger control, emotional regulation, and relationship improvement throughout Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/anger-management-kitchener">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/anger-management-og.jpg">
+    
+    <!-- Canonical URL for SEO -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/anger-management-kitchener">
+    
+    <!-- Enhanced Article Schema - V2 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Anger Management: Professional Strategies for Healthy Emotional Control",
+      "description": "Comprehensive guide to understanding and managing anger issues, including professional therapy approaches and evidence-based coping strategies",
+      "wordCount": "2500",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://nextsteptherapy.ca/#organization",
+        "name": "Next Step Therapy"
+      },
+      "datePublished": "2025-01-28",
+      "dateModified": "2025-01-28",
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Anger Management Issues",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Psychotherapy"
+        }
+      }
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema for Ontario Targeting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Next Step Therapy",
+      "description": "Professional anger management therapy services throughout Ontario",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Anger Management Therapy Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Anger Management Support",
+              "provider": {
+                "@type": "Person",
+                "name": "Jesse Cynamon, RP"
+              }
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Enhanced FAQ Schema - V2 Conversion Focus -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What causes anger management problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anger issues often stem from learned patterns, unresolved trauma, stress, anxiety, depression, or difficulty expressing other emotions. Professional therapy helps identify personal triggers and develop healthy coping strategies for better emotional regulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy effective for anger management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research shows virtual therapy is highly effective for anger management. Online sessions provide privacy, flexibility, and immediate access to support during challenging situations. Many clients find it easier to practice new skills in their own environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if I need professional help for anger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consider therapy if anger is affecting relationships, work performance, or daily life. Signs include frequent outbursts, verbal or physical aggression, feeling out of control, relationship problems, or using substances to cope with anger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What techniques are used in anger management therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evidence-based approaches include Cognitive Behavioral Therapy (CBT), mindfulness techniques, trigger identification, relaxation training, communication skills, and emotion regulation strategies. Treatment is tailored to individual needs and circumstances."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can anger management therapy help improve my relationships?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, anger management therapy significantly improves relationships by teaching healthy communication, conflict resolution, empathy development, and emotional regulation. Many clients report better family, work, and social relationships after treatment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does anger management therapy take to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many clients notice improvements within 4-6 sessions, with significant progress typically seen within 3-6 months. Duration depends on individual factors, severity of issues, and commitment to practicing new skills between sessions."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Match homepage design exactly with V2 enhancements */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* V2 Smart Sticky Header */
+        .header {
+            background: var(--background-primary);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        /* V2 Prominent CRPO Badge */
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav-desktop {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-desktop:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
+            color: white;
+        }
+        
+        .nav-mobile-phone {
+            display: none;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Smart Header Optimization */
+        @media (max-width: 768px) {
+            .header {
+                max-height: 50px;
+                padding: 0.25rem 0;
+            }
+            
+            .header-content {
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo-section {
+                gap: 0.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .credentials-badge-prominent {
+                display: none; /* Hidden in mobile sticky */
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+            
+            .nav-cta {
+                display: none; /* Hide desktop CTA */
+            }
+            
+            .nav-mobile-phone {
+                display: inline-block; /* Show mobile phone CTA */
+            }
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            /* Mobile responsive - max 2.5rem on mobile */
+            max-height: calc(2.5rem * 2.2); /* 2 lines max */
+            overflow: hidden;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section with V2 Conversion Focus */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(74, 107, 122, 0.9), rgba(107, 143, 163, 0.8)), 
-                        url('images/hero-background.jpg') center/cover no-repeat;
-            z-index: 0;
-            will-change: transform;
-        ">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero-background-mobile.webp" type="image/webp">
-                <source media="(max-width: 768px)" srcset="images/hero-background-mobile.jpg">
-                <source srcset="images/hero-background.webp" type="image/webp">
-                <img src="images/hero-background.jpg" 
-                     alt="Peaceful therapy environment background" 
-                     style="
-                         width: 100%;
-                         height: 100%;
-                         object-fit: cover;
-                         opacity: 0;
-                     " loading="eager">
-            </picture>
-        </div>
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
         
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* V2 Trust Signal Hierarchy - Above Fold */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-deep);
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(74, 107, 122, 0.08);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .trust-indicators {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .trust-indicator {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+        
+        /* V2 CTA Optimization */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 160px;
+            text-align: center;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            margin: var(--space-lg) 0;
+        }
+        
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        .text-cta {
+            color: var(--primary-soft-blue);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .text-cta:hover {
+            color: var(--primary-deep);
+        }
+        
+        /* V2 Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-sticky-cta { 
+                display: block; 
+            }
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--neutral-soft);
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-soft-blue);
+            font-weight: 600;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .info-card {
+            background: var(--neutral-soft);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .info-card .label {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card .value {
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-soft-blue);
+        }
+        
+        /* CTA Callouts */
+        .cta-callout {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg);
+            background: rgba(74, 107, 122, 0.05);
+            border-radius: var(--radius-md);
+        }
+        
+        .cta-callout p {
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--background-primary) 100%);
+            padding: var(--space-xxl) 0 var(--space-lg);
+            margin-top: var(--space-section);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--space-xs);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- V2 Smart Sticky Header -->
+    <header class="header smart-sticky">
         <div class="container">
-            <div class="hero-content" style="position: relative; z-index: 1;">
-                <div class="hero-text fade-in-up">
-                    <h1>Anger Management Kitchener</h1>
-                    <p class="lead-text">Professional anger management therapy in Kitchener and throughout Ontario. Learn effective strategies for managing anger, improving relationships, and developing emotional regulation skills.</p>
-                    
-                    <div class="hero-cta">
-                        <a href="#contact" class="primary-cta">
-                            Get Anger Support
-                        </a>
-                        <a href="tel:+14163062157" class="secondary-cta">
-                            (416) 306-2157
-                        </a>
-                    </div>
-                    
-                    <div class="hero-trust">
-                        <p>CRPO Registered Psychotherapist #10979 | Virtual Sessions Available | Evidence-Based Treatment</p>
-                    </div>
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="logo-text">Next Step Therapy</a>
+                    <!-- V2 CRPO badge moved above fold -->
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
+                
+                <nav class="nav">
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="nav-desktop">Home</a>
+                    <!-- V2 Direct contact link -->
+                    <a href="https://www.nextsteptherapy.ca/#contact" class="nav-cta">Get Help Today</a>
+                    <!-- Mobile: Phone CTA for sticky header -->
+                    <a href="tel:+15198008323" class="nav-mobile-phone">Call Now</a>
+                </nav>
             </div>
         </div>
+    </header>
+    
+    <!-- V2 Conversion-Optimized Hero Section - 300 words -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Anger Issues Destroying Your Life? Learn Healthy Control Strategies</h1>
+            <p class="lead-text">
+                Is uncontrolled anger ruining your relationships, career, and peace of mind? 
+                Whether you're struggling with explosive outbursts, constant irritation, or anger 
+                that simmers beneath the surface, you don't have to let anger control your life. 
+                Professional support can help you develop healthy ways to manage and express anger.
+            </p>
+            
+            <!-- V2 Above-fold trust signals -->
+            <div class="trust-indicators">
+                <span class="trust-indicator">Ontario Licensed</span>
+                <span class="trust-indicator">Virtual Sessions</span>
+                <span class="trust-indicator">Evidence-Based</span>
+            </div>
+            
+            <!-- V2 Primary CTA above fold -->
+            <div class="button-group">
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Get Professional Help Today</a>
+                <a href="tel:+15198008323" class="cta-secondary">Talk to Someone Who Understands</a>
+            </div>
+            
+            <p style="margin-top: var(--space-sm); text-align: center;">
+                Or text <a href="sms:+14163062157" class="text-cta">(519) 800-8323</a> for same-day response
+            </p>
+        </div>
     </section>
-
-    <!-- Understanding Anger Section -->
+    
+    <!-- V2 Problem Validation Section - 400 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Understanding Anger: When Professional Support Helps</h2>
-                <p class="section-subtitle">Anger is a normal human emotion that serves important functions, but when it becomes frequent, intense, or destructive, professional support can provide valuable tools for healthier expression and management.</p>
-            </div>
+        <div class="container-narrow">
+            <h2>When Anger Takes Control of Your Life</h2>
             
-            <div class="content-grid">
-                <div class="content-main">
-                    <div class="content-block">
-                        <h3>The Nature of Anger</h3>
-                        
-                        <p>Anger is a fundamental human emotion that signals when our boundaries are crossed, our values are challenged, or we feel threatened, frustrated, or powerless. It's an adaptive emotion designed to mobilize us for action and self-protection. However, the way we experience and express anger is shaped by our upbringing, cultural background, personal experiences, and learned coping patterns.</p>
-                        
-                        <p>In our modern world, the situations that trigger anger often require more nuanced responses than the fight-or-flight reactions that anger naturally prepares us for. Learning to understand anger's messages while choosing how to respond appropriately is a crucial life skill that benefits all areas of functioning, from personal relationships to professional success.</p>
-                        
-                        <p>Healthy anger expression involves recognizing anger early, understanding its source, and choosing responses that address the underlying issue while maintaining relationships and personal integrity. When anger becomes problematic, it often indicates underlying issues such as stress, unmet needs, past trauma, or learned patterns that can be addressed through professional support.</p>
-                    </div>
-                    
-                    <div class="content-block">
-                        <h3>Signs That Anger May Be Problematic</h3>
-                        
-                        <div class="anger-indicator">
-                            <h4>Intensity and Frequency Concerns</h4>
-                            <p>Anger that feels overwhelming, happens frequently throughout the day, or seems disproportionate to triggering situations may indicate a need for professional support. If you find yourself angry more often than not, or if your anger escalates quickly from minor irritation to rage, these patterns suggest underlying issues that could benefit from therapeutic intervention.</p>
-                            
-                            <p>Problematic anger intensity might include explosive outbursts, feeling like you "see red" or lose control, physical sensations that feel overwhelming (rapid heartbeat, muscle tension, shaking), or anger that persists long after the triggering event has passed. When anger feels like it's controlling you rather than providing useful information, professional support can help develop better regulation strategies.</p>
-                        </div>
-                        
-                        <div class="anger-indicator">
-                            <h4>Relationship Impact</h4>
-                            <p>When anger consistently creates conflict in relationships with family, friends, or colleagues, professional support can help. This includes verbal aggression, yelling, threatening behavior, or withdrawal and silent treatment that punishes others for perceived slights or disagreements. Relationships require emotional safety to thrive, and persistent anger can undermine this foundation.</p>
-                            
-                            <p>Signs of relationship damage from anger include family members walking on eggshells, friends avoiding certain topics or interactions, workplace tensions or complaints, or a pattern of relationships ending due to anger-related conflicts. Children may show signs of anxiety or behavioral problems when exposed to frequent anger in the home environment.</p>
-                        </div>
-                        
-                        <div class="anger-indicator">
-                            <h4>Physical and Behavioral Manifestations</h4>
-                            <p>Anger that manifests in physical aggression toward objects or people, breaking things, slamming doors, aggressive driving, or physical symptoms like headaches, muscle tension, or sleep problems indicates a need for anger management strategies and professional guidance.</p>
-                            
-                            <p>Other concerning behaviors include using anger to control or intimidate others, substance use to cope with anger, legal problems related to anger expressions, workplace disciplinary actions, or feeling physically ill after anger episodes. These patterns suggest that anger is negatively impacting multiple areas of life and professional intervention could be beneficial.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-inline">
-                        <div class="cta-content">
-                            <h3>Ready to develop healthier anger management skills?</h3>
-                            <p>Professional support can help you understand your anger patterns and develop effective coping strategies.</p>
-                            <a href="#contact" class="btn-primary">Start Anger Management</a>
-                        </div>
-                    </div>
-                    
-                    <div class="content-block">
-                        <h3>Understanding Anger Triggers and Patterns</h3>
-                        
-                        <p>Effective anger management begins with understanding personal anger triggers and patterns. This self-awareness allows for earlier intervention and more targeted coping strategies. Common anger triggers include feeling disrespected, misunderstood, or powerless, experiencing unfair treatment or injustice, dealing with stress or overwhelm, having expectations disappointed, or feeling criticized or blamed.</p>
-                        
-                        <div class="trigger-categories">
-                            <h4>External Triggers</h4>
-                            <ul>
-                                <li>Traffic, waiting in lines, or other daily frustrations</li>
-                                <li>Conflict or disagreement with others</li>
-                                <li>Feeling criticized, judged, or misunderstood</li>
-                                <li>Witnessing injustice or unfair treatment</li>
-                                <li>Technology problems or equipment failures</li>
-                                <li>Work pressures, deadlines, or unrealistic expectations</li>
-                                <li>Financial stress or unexpected expenses</li>
-                                <li>Changes in routine or unexpected disruptions</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="trigger-categories">
-                            <h4>Internal Triggers</h4>
-                            <ul>
-                                <li>Perfectionist expectations that aren't met</li>
-                                <li>Physical discomfort, hunger, or fatigue</li>
-                                <li>Memories of past hurts or traumas</li>
-                                <li>Feeling overwhelmed or out of control</li>
-                                <li>Low self-esteem or feelings of inadequacy</li>
-                                <li>Anxiety about future events or outcomes</li>
-                                <li>Depression or persistent low mood</li>
-                                <li>Physical health problems or chronic pain</li>
-                            </ul>
-                        </div>
-                        
-                        <p>Understanding your specific triggers helps develop targeted strategies for prevention and management. This might include lifestyle changes to reduce overall stress, communication skills to address relationship conflicts, or coping strategies for unavoidable trigger situations.</p>
-                        
-                        <h4>Anger as a Secondary Emotion</h4>
-                        <p>Anger often serves as a secondary emotion, masking underlying feelings such as hurt, fear, sadness, disappointment, or vulnerability. Professional therapy helps identify these primary emotions and develop healthier ways of expressing and addressing them rather than defaulting to anger as the primary response.</p>
-                        
-                        <p>For example, anger about a partner coming home late might mask hurt feelings about feeling unimportant or fear about relationship stability. Anger at work criticism might cover shame about perceived inadequacy or anxiety about job security. Learning to identify and express these underlying emotions often reduces the intensity and frequency of anger episodes.</p>
-                    </div>
-                    
-                    <div class="content-block">
-                        <h3>The Cost of Unmanaged Anger</h3>
-                        
-                        <div class="cost-category">
-                            <h4>Physical Health Impact</h4>
-                            <p>Chronic anger takes a significant toll on physical health, increasing risk of cardiovascular problems including high blood pressure, heart disease, and stroke. The stress response activated by frequent anger weakens the immune system, making individuals more susceptible to illness and slower to recover from health problems.</p>
-                            
-                            <p>Other physical impacts include chronic muscle tension leading to headaches and back pain, digestive problems, sleep disturbances, and accelerated aging. The body's stress response system, when repeatedly activated by anger, can lead to chronic inflammation and various stress-related health conditions.</p>
-                        </div>
-                        
-                        <div class="cost-category">
-                            <h4>Mental Health Consequences</h4>
-                            <p>Mentally, ongoing anger can contribute to depression, anxiety, and difficulty concentrating or making clear decisions. The mental energy spent on anger and resentment leaves less capacity for positive experiences, creativity, and problem-solving. Chronic anger is also associated with increased risk of substance abuse as people seek ways to numb or escape difficult emotions.</p>
-                            
-                            <p>Anger can create a negative cognitive cycle where individuals become hypervigilant for threats or slights, interpreting neutral situations negatively and perpetuating the anger response. This can lead to pessimistic thinking patterns, social isolation, and reduced life satisfaction.</p>
-                        </div>
-                        
-                        <div class="cost-category">
-                            <h4>Professional and Social Consequences</h4>
-                            <p>Professionally, uncontrolled anger can damage career prospects, create workplace conflicts, limit leadership opportunities, and result in disciplinary action or job loss. The reputation for being "difficult" or "hot-tempered" can follow individuals throughout their career, affecting networking and advancement opportunities.</p>
-                            
-                            <p>In relationships, anger can create fear, resentment, and emotional distance, ultimately damaging the very connections that provide meaning and support in life. Children exposed to frequent anger may develop anxiety, behavioral problems, or their own anger management difficulties. Social relationships may suffer as friends and extended family become uncomfortable with anger displays.</p>
-                        </div>
-                        
-                        <div class="cost-category">
-                            <h4>Legal and Financial Impact</h4>
-                            <p>Severe anger problems can lead to legal consequences including assault charges, property damage lawsuits, restraining orders, or custody issues in divorce proceedings. The financial costs of anger can include property damage, legal fees, lost employment income, and relationship dissolution expenses.</p>
-                            
-                            <p>Road rage incidents can result in traffic violations, license suspension, or accidents with significant financial and legal consequences. The cumulative cost of anger-related problems can be substantial and long-lasting, affecting financial security and future opportunities.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>
+                You used to be able to handle stress, frustration, and disappointment without 
+                losing your cool. But somewhere along the way, anger became your default response 
+                to life's challenges. Maybe you explode over minor inconveniences, snap at people 
+                you care about, or feel a constant undercurrent of irritation that never seems 
+                to fade. Whether you're in Toronto dealing with work stress, in Hamilton struggling 
+                with family conflicts, or anywhere in Ontario feeling overwhelmed by daily pressures.
+            </p>
+            
+            <h3>Anger Issues Show Up As:</h3>
+            <ul>
+                <li>Explosive outbursts that surprise even you with their intensity</li>
+                <li>Constant irritability that makes everything feel like a personal attack</li>
+                <li>Road rage, workplace conflicts, or arguments with family members</li>
+                <li>Physical symptoms like clenched jaw, tension headaches, or elevated blood pressure</li>
+                <li>Saying things in anger that damage important relationships</li>
+                <li>Feeling guilty and ashamed after angry episodes</li>
+                <li>Using alcohol or substances to numb anger or cope with its aftermath</li>
+                <li>People walking on eggshells around you or avoiding difficult conversations</li>
+                <li>Work problems due to conflicts with colleagues or authority figures</li>
+                <li>Sleep problems because you can't stop replaying frustrating situations</li>
+                <li>Feeling like others are always doing things to provoke or disrespect you</li>
+                <li>Physical aggression like throwing objects, punching walls, or worse</li>
+            </ul>
+            
+            <p>
+                This isn't about having a "short fuse" or being naturally hot-tempered. Chronic 
+                anger problems affect millions of Canadians and can seriously impact your health, 
+                relationships, career, and overall quality of life. The stress of constant anger 
+                takes a toll on your cardiovascular system, immune function, and mental health.
+            </p>
+            
+            <p>
+                The most frustrating part? You might know your anger is a problem but feel 
+                powerless to control it in the moment. You're intelligent, capable, and don't 
+                want to hurt the people you care about. But anger feels automatic, overwhelming, 
+                and impossible to stop once it starts. The good news is that anger management 
+                skills can be learned, and professional support makes all the difference.
+            </p>
         </div>
     </section>
-
-    <!-- Treatment Approaches Section -->
-    <section class="content-section alternate">
-        <div class="container">
-            <div class="section-header">
-                <h2>Evidence-Based Anger Management Approaches</h2>
-                <p class="section-subtitle">Effective anger management therapy combines multiple evidence-based approaches tailored to individual needs and circumstances, addressing both immediate management strategies and underlying factors.</p>
-            </div>
-            
-            <div class="treatment-grid">
-                <div class="treatment-approach">
-                    <div class="approach-header">
-                        <h3>Cognitive Behavioral Therapy (CBT) for Anger</h3>
-                        <span class="evidence-badge">Gold Standard</span>
-                    </div>
-                    <p>CBT is one of the most effective approaches for anger management, focusing on the connection between thoughts, feelings, and behaviors. This approach helps identify anger-provoking thoughts and beliefs, challenge distorted thinking patterns that escalate anger, and develop more balanced, realistic ways of interpreting situations that typically trigger anger responses.</p>
-                    
-                    <div class="cbt-techniques">
-                        <h4>Key CBT Techniques for Anger:</h4>
-                        <div class="technique">
-                            <strong>Thought Challenging:</strong> Learning to question automatic thoughts that fuel anger, examining evidence for and against anger-provoking beliefs, and developing more balanced interpretations of triggering situations.
-                        </div>
-                        <div class="technique">
-                            <strong>Perspective-Taking:</strong> Exercises that help see situations from multiple viewpoints, considering others' motivations and circumstances, and reducing the tendency to assume malicious intent.
-                        </div>
-                        <div class="technique">
-                            <strong>Behavioral Experiments:</strong> Testing whether anger-driven assumptions are accurate through real-world observations and experiences, gathering evidence to challenge negative thinking patterns.
-                        </div>
-                        <div class="technique">
-                            <strong>Coping Self-Talk:</strong> Developing internal dialogue that promotes calm responses, practicing calming statements during anger episodes, and building confidence in ability to manage difficult situations.
-                        </div>
-                    </div>
-                    
-                    <p>CBT provides practical tools for interrupting anger escalation and choosing more effective responses. Clients learn to recognize early warning signs of anger, implement coping strategies before anger becomes overwhelming, and evaluate the effectiveness of different response options.</p>
-                </div>
-                
-                <div class="treatment-approach">
-                    <div class="approach-header">
-                        <h3>Acceptance and Commitment Therapy (ACT)</h3>
-                        <span class="evidence-badge">Values-Based</span>
-                    </div>
-                    <p>ACT approaches anger management by developing psychological flexibility and helping individuals respond to anger triggers in ways that align with their values rather than being controlled by emotional reactions. This approach teaches that trying to eliminate anger entirely isn't realistic or necessary – instead, the focus is on changing the relationship with anger.</p>
-                    
-                    <div class="act-components">
-                        <h4>ACT Anger Management Elements:</h4>
-                        <ul>
-                            <li>Mindfulness skills for observing anger without being overwhelmed by it</li>
-                            <li>Acceptance techniques for tolerating difficult emotions without acting destructively</li>
-                            <li>Values clarification to guide behavior choices even when experiencing intense emotions</li>
-                            <li>Defusion strategies to create distance from anger-triggering thoughts</li>
-                            <li>Committed action toward meaningful goals despite emotional discomfort</li>
-                            <li>Psychological flexibility to adapt responses based on situational demands</li>
-                        </ul>
-                    </div>
-                    
-                    <p>ACT helps individuals understand that anger provides information about what matters to them, but doesn't have to dictate their actions. This approach is particularly effective for people whose anger stems from deeply held values about fairness, respect, or justice, teaching them to respond to violations of these values in constructive rather than destructive ways.</p>
-                </div>
-                
-                <div class="treatment-approach">
-                    <div class="approach-header">
-                        <h3>Dialectical Behavior Therapy (DBT) Skills</h3>
-                        <span class="evidence-badge">Skills-Based</span>
-                    </div>
-                    <p>DBT provides specific skills for managing intense emotions, including anger. The four core skill sets are particularly useful for anger management, offering concrete techniques that can be implemented during anger episodes to prevent escalation and maintain relationships.</p>
-                    
-                    <div class="dbt-skills">
-                        <h4>Four Core DBT Skills for Anger:</h4>
-                        <div class="skill-module">
-                            <strong>Mindfulness:</strong> Staying present during anger episodes, observing anger sensations without judgment, and maintaining awareness of the current moment rather than getting lost in anger-fueled thoughts about the past or future.
-                        </div>
-                        <div class="skill-module">
-                            <strong>Distress Tolerance:</strong> Managing anger without making situations worse through impulsive actions, using crisis survival skills during intense anger episodes, and tolerating frustration without immediate action.
-                        </div>
-                        <div class="skill-module">
-                            <strong>Emotion Regulation:</strong> Understanding the function of anger, identifying triggers and early warning signs, and using specific techniques to reduce emotional intensity and duration.
-                        </div>
-                        <div class="skill-module">
-                            <strong>Interpersonal Effectiveness:</strong> Expressing anger appropriately while maintaining relationships, asking for what you need assertively rather than aggressively, and setting boundaries without damaging connections.
-                        </div>
-                    </div>
-                    
-                    <div class="practical-techniques">
-                        <h4>Practical DBT Techniques:</h4>
-                        <ul>
-                            <li><strong>STOP Skill:</strong> Stop, Take a breath, Observe the situation, Proceed mindfully</li>
-                            <li><strong>TIPP:</strong> Temperature (cold water), Intense exercise, Paced breathing, Progressive muscle relaxation</li>
-                            <li><strong>DEAR MAN:</strong> Describe, Express, Assert, Reinforce, Mindful, Appear confident, Negotiate</li>
-                            <li><strong>Opposite Action:</strong> Acting opposite to the anger urge when anger isn't justified or helpful</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="treatment-approach">
-                    <div class="approach-header">
-                        <h3>Relaxation and Stress Management</h3>
-                        <span class="evidence-badge">Physiological Focus</span>
-                    </div>
-                    <p>Physical relaxation techniques help manage the physiological arousal associated with anger. These approaches address the body's stress response, helping individuals remain calm and think clearly during potentially triggering situations.</p>
-                    
-                    <div class="relaxation-techniques">
-                        <h4>Relaxation Strategies:</h4>
-                        <div class="technique-category">
-                            <strong>Progressive Muscle Relaxation:</strong> Systematic tensing and releasing of muscle groups to reduce physical tension and promote awareness of the difference between tense and relaxed states.
-                        </div>
-                        <div class="technique-category">
-                            <strong>Deep Breathing Exercises:</strong> Controlled breathing patterns that activate the parasympathetic nervous system and counteract the physical arousal of anger.
-                        </div>
-                        <div class="technique-category">
-                            <strong>Mindfulness Practices:</strong> Present-moment awareness techniques that help observe anger sensations without becoming overwhelmed by them.
-                        </div>
-                        <div class="technique-category">
-                            <strong>Visualization:</strong> Mental imagery techniques for promoting calm states and rehearsing successful anger management in challenging situations.
-                        </div>
-                    </div>
-                    
-                    <p>Regular stress management practices help prevent anger by addressing underlying tension and overwhelm that often contribute to anger reactivity. This includes lifestyle factors such as adequate sleep, regular exercise, healthy nutrition, and maintaining boundaries around work and personal responsibilities.</p>
-                </div>
-            </div>
-            
-            <div class="cta-inline">
-                <div class="cta-content">
-                    <h3>Ready to learn effective anger management strategies?</h3>
-                    <p>Professional support can help you develop personalized tools for managing anger and improving relationships.</p>
-                    <a href="#contact" class="btn-primary">Start Your Journey</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Communication and Conflict Resolution Section -->
+    
+    <!-- Understanding Anger Issues - 500 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Communication and Conflict Resolution Skills</h2>
-                <p class="section-subtitle">Many anger problems stem from or are exacerbated by poor communication skills and ineffective conflict resolution approaches. Learning healthy communication builds stronger relationships while reducing anger triggers.</p>
-            </div>
+        <div class="container-narrow">
+            <h2>Why Anger Becomes Uncontrollable</h2>
             
-            <div class="communication-grid">
-                <div class="communication-skill">
-                    <h3>Assertive Communication</h3>
-                    <p>Assertive communication allows individuals to express their needs, concerns, and boundaries clearly without aggression or passive-aggressive behavior. This involves stating feelings and needs directly, using "I" statements rather than blame, setting clear boundaries, and requesting specific changes in behavior.</p>
-                    
-                    <div class="assertiveness-examples">
-                        <h4>Assertive vs. Aggressive Communication:</h4>
-                        <div class="communication-example">
-                            <strong>Aggressive:</strong> "You never listen to me! You're so selfish!"
-                        </div>
-                        <div class="communication-example">
-                            <strong>Assertive:</strong> "I feel unheard when I'm interrupted. I need to finish my thoughts before you respond."
-                        </div>
-                        <div class="communication-example">
-                            <strong>Aggressive:</strong> "You're always late! You obviously don't respect my time!"
-                        </div>
-                        <div class="communication-example">
-                            <strong>Assertive:</strong> "When you arrive late, I feel frustrated because I value punctuality. Can we agree on a realistic time that works for both of us?"
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="communication-skill">
-                    <h3>Active Listening Skills</h3>
-                    <p>Active listening reduces conflict and anger by ensuring all parties feel heard and understood. This involves giving full attention to the speaker, reflecting back what was heard, asking clarifying questions, and avoiding defensive responses or immediate problem-solving.</p>
-                    
-                    <div class="listening-techniques">
-                        <h4>Active Listening Components:</h4>
-                        <ul>
-                            <li>Full attention without distractions (phones, multitasking)</li>
-                            <li>Reflecting back what was heard: "It sounds like you're saying..."</li>
-                            <li>Asking open-ended questions: "Can you help me understand...?"</li>
-                            <li>Validating emotions: "I can see this is really important to you"</li>
-                            <li>Avoiding interruptions, advice-giving, or defending</li>
-                            <li>Summarizing understanding before responding</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="communication-skill">
-                    <h3>Constructive Conflict Resolution</h3>
-                    <p>Healthy conflict resolution focuses on addressing problems rather than attacking personalities, finding mutually acceptable solutions, and maintaining respect throughout the process. This reduces the likelihood of conflicts escalating into anger episodes.</p>
-                    
-                    <div class="conflict-resolution-steps">
-                        <h4>Conflict Resolution Process:</h4>
-                        <div class="resolution-step">
-                            <strong>Step 1:</strong> Cool-down period if emotions are high
-                        </div>
-                        <div class="resolution-step">
-                            <strong>Step 2:</strong> Define the problem without blame
-                        </div>
-                        <div class="resolution-step">
-                            <strong>Step 3:</strong> Listen to all perspectives
-                        </div>
-                        <div class="resolution-step">
-                            <strong>Step 4:</strong> Brainstorm potential solutions
-                        </div>
-                        <div class="resolution-step">
-                            <strong>Step 5:</strong> Evaluate options and choose solution
-                        </div>
-                        <div class="resolution-step">
-                            <strong>Step 6:</strong> Implement and follow up
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="communication-skill">
-                    <h3>Managing Difficult Conversations</h3>
-                    <p>Learning to navigate challenging conversations without escalating to anger is crucial for maintaining relationships and achieving desired outcomes. This includes preparation strategies, staying calm under pressure, and knowing when to take breaks.</p>
-                    
-                    <div class="difficult-conversation-strategies">
-                        <h4>Strategies for Difficult Conversations:</h4>
-                        <ul>
-                            <li>Prepare main points in advance to stay focused</li>
-                            <li>Choose appropriate timing and setting</li>
-                            <li>Start with positive intent: "I want to work this out"</li>
-                            <li>Focus on specific behaviors rather than character</li>
-                            <li>Take breaks if conversation becomes heated</li>
-                            <li>Look for common ground and shared goals</li>
-                            <li>End with agreed-upon next steps</li>
-                        </ul>
-                    </div>
-                </div>
+            <h3>The Physiology of Anger</h3>
+            <p>
+                Anger isn't just an emotion - it's a complex physiological response designed 
+                to protect you from threats. When your brain perceives danger (real or imagined), 
+                it triggers a cascade of stress hormones that prepare your body for fight-or-flight. 
+                Your heart rate increases, muscles tense, breathing quickens, and rational thinking 
+                becomes difficult. This response helped our ancestors survive physical threats, 
+                but it's less helpful when dealing with modern stressors.
+            </p>
+            
+            <p>
+                For people with anger management issues, this response gets triggered too easily 
+                and too frequently. Minor frustrations activate the same neurological pathways 
+                as life-threatening situations, making it nearly impossible to respond proportionally. 
+                The more often this happens, the more sensitized your nervous system becomes, 
+                creating a cycle where smaller and smaller triggers set off explosive reactions.
+            </p>
+            
+            <h3>Common Root Causes</h3>
+            <p>
+                Anger rarely exists in isolation. It's often a secondary emotion that covers 
+                up more vulnerable feelings like fear, hurt, disappointment, or shame. Many 
+                people with anger issues grew up in environments where anger was the only 
+                "acceptable" emotion, where other feelings were dismissed or punished. Others 
+                learned that anger was an effective way to get needs met or avoid feeling powerless.
+            </p>
+            
+            <p>
+                Underlying mental health conditions can also contribute to anger problems. 
+                Depression, anxiety, trauma, ADHD, and chronic stress all make emotional 
+                regulation more difficult. Substance use, lack of sleep, poor nutrition, 
+                and medical conditions can also lower your threshold for anger and make 
+                self-control more challenging.
+            </p>
+            
+            <h3>How Anger Affects Your Brain and Relationships</h3>
+            <p>
+                Chronic anger literally changes your brain structure. The amygdala (your brain's 
+                alarm system) becomes hyperactive while the prefrontal cortex (responsible for 
+                rational thinking and impulse control) becomes less efficient. This makes you 
+                more reactive and less able to pause before responding to frustrating situations.
+            </p>
+            
+            <p>
+                Meanwhile, anger creates a toxic cycle in relationships. When you respond to 
+                stress with anger, others become defensive, withdraw, or respond with their 
+                own anger. This reinforces your belief that people are against you and justifies 
+                future angry responses, creating a self-fulfilling prophecy that damages the 
+                relationships you care most about.
+            </p>
+            
+            <h3>Common Anger Triggers</h3>
+            <ul>
+                <li><strong>Feeling disrespected:</strong> When others don't acknowledge your needs or boundaries</li>
+                <li><strong>Loss of control:</strong> Situations where you feel powerless or helpless</li>
+                <li><strong>Unfairness:</strong> When life, work, or relationships feel unjust</li>
+                <li><strong>Overwhelm:</strong> Too many demands and not enough resources to cope</li>
+                <li><strong>Physical discomfort:</strong> Hunger, fatigue, pain, or illness lowering your threshold</li>
+                <li><strong>Past trauma:</strong> Current situations triggering old wounds or betrayals</li>
+                <li><strong>Unmet expectations:</strong> When reality doesn't match what you hoped for</li>
+                <li><strong>Communication breakdowns:</strong> Feeling misunderstood or not heard</li>
+            </ul>
+            
+            <p>
+                Understanding these patterns is the first step toward change. Anger management 
+                isn't about suppressing anger or becoming passive - it's about developing 
+                healthy ways to recognize, understand, and express anger that serve your 
+                relationships and life goals rather than sabotaging them.
+            </p>
+        </div>
+    </section>
+    
+    <!-- V2 Virtual Therapy Benefits - 450 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Why Virtual Therapy Works Perfectly for Anger Management</h2>
+            
+            <p>
+                You might wonder if virtual therapy can really address something as intense 
+                as anger management. Research consistently shows that virtual therapy is highly 
+                effective for anger management - and for many people, it offers unique advantages 
+                that make it even more accessible and effective than traditional in-person therapy.
+            </p>
+            
+            <h3>Addressing Common Virtual Therapy Concerns</h3>
+            <p>
+                <strong>"Will I be able to practice anger management skills virtually?"</strong> 
+                Absolutely. Virtual sessions allow us to work on real-time anger management 
+                techniques, practice communication skills, and develop coping strategies you 
+                can immediately implement in your daily life. You can practice breathing techniques, 
+                muscle relaxation, and cognitive strategies in your own environment where you'll 
+                actually need to use them.
+            </p>
+            
+            <p>
+                <strong>"What about privacy and feeling judged?"</strong> Many people find it 
+                easier to discuss anger issues from the privacy of their own home. There's 
+                no stigma of walking into a mental health clinic, and you can focus entirely 
+                on the work without worrying about who might see you. Virtual therapy provides 
+                the same confidentiality as in-person sessions with added privacy benefits.
+            </p>
+            
+            <p>
+                <strong>"Can virtual therapy handle crisis situations?"</strong> While virtual 
+                therapy focuses on prevention and skill-building, we establish clear safety 
+                plans and crisis protocols. Most anger management work involves developing 
+                tools to recognize early warning signs and intervene before anger escalates 
+                to dangerous levels.
+            </p>
+            
+            <h3>Specific Advantages for Anger Management</h3>
+            <ul>
+                <li><strong>Immediate accessibility:</strong> Get support when you need it most, including evenings and weekends</li>
+                <li><strong>Environmental practice:</strong> Learn anger management techniques in the places where you actually get triggered</li>
+                <li><strong>Reduced shame and stigma:</strong> Easier to seek help when you don't have to face the judgment of going to therapy</li>
+                <li><strong>Consistent support:</strong> No transportation barriers or scheduling conflicts that interrupt your progress</li>
+                <li><strong>Family integration:</strong> Partners or family members can join sessions when appropriate</li>
+                <li><strong>Real-world application:</strong> Practice new skills in your actual environment rather than an artificial office setting</li>
+                <li><strong>Crisis prevention:</strong> Easier to schedule urgent sessions when you feel anger building</li>
+            </ul>
+            
+            <h3>Evidence-Based Approaches We Use</h3>
+            <p>
+                Virtual therapy allows us to use proven techniques specifically effective for 
+                anger management, including Cognitive Behavioral Therapy (CBT) for identifying 
+                anger triggers and changing thought patterns, mindfulness techniques for 
+                emotional regulation, communication skills training for healthier relationships, 
+                and stress management strategies for overall emotional wellness.
+            </p>
+            
+            <p>
+                Many clients find that having consistent therapeutic support helps them not 
+                just control their anger, but actually improve their relationships, work 
+                performance, and overall life satisfaction. When you're not constantly managing 
+                anger crises, you can focus on building the life and relationships you actually want.
+            </p>
+            
+            <!-- V2 Mid-section CTA -->
+            <div class="cta-callout">
+                <p>Ready to take control of your anger?</p>
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Start Building Better Relationships Today</a>
+                <p style="margin-top: var(--space-sm);">Or call <a href="tel:+15198008323" class="text-cta">(519) 800-8323</a></p>
             </div>
         </div>
     </section>
-
-    <!-- Virtual Therapy Benefits Section -->
-    <section class="content-section alternate">
-        <div class="container">
-            <div class="section-header">
-                <h2>Virtual Anger Management Therapy</h2>
-                <p class="section-subtitle">Virtual anger management therapy provides convenient, private access to professional support throughout Ontario, offering unique advantages for anger management treatment.</p>
-            </div>
+    
+    <!-- Immediate Strategies Section - 500 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Immediate Anger Management Strategies</h2>
             
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-privacy"></i>
-                    </div>
-                    <h3>Privacy and Reduced Stigma</h3>
-                    <p>Some individuals feel embarrassed or ashamed about seeking anger management support due to cultural stigma or concerns about professional reputation. Virtual sessions provide additional privacy that can reduce barriers to seeking help and encourage more open communication about anger challenges and their impact on relationships and life satisfaction.</p>
-                    
-                    <p>The confidential nature of virtual sessions allows individuals to access professional support without concerns about being seen entering a mental health facility or potential impact on professional relationships or community standing.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-accessibility"></i>
-                    </div>
-                    <h3>Flexible Access and Consistency</h3>
-                    <p>Anger management requires consistent practice and support to develop new patterns and coping skills. Virtual therapy allows for regular sessions that fit around work schedules, family commitments, and other responsibilities, increasing the likelihood of sustained engagement and successful outcomes.</p>
-                    
-                    <p>Sessions can be scheduled during lunch breaks, evenings, or weekends as needed, making it easier to maintain regular attendance and build momentum in developing anger management skills.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-real-time"></i>
-                    </div>
-                    <h3>Real-Time Support and Skills Practice</h3>
-                    <p>Virtual sessions can provide immediate support during challenging periods and allow for real-time practice of anger management techniques. This immediate application helps reinforce learning and builds confidence in using new skills in daily situations where anger typically occurs.</p>
-                    
-                    <p>Therapists can guide clients through relaxation techniques, thought challenging exercises, or communication practice during sessions, providing immediate feedback and support for skill development.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-comfort"></i>
-                    </div>
-                    <h3>Comfortable Environment</h3>
-                    <p>Participating in therapy from a familiar, comfortable environment can help individuals feel more at ease discussing sensitive topics related to anger and its impact on relationships. This comfort can lead to more honest communication and faster therapeutic progress.</p>
-                    
-                    <p>Being in one's own space can also make it easier to practice relaxation techniques and other anger management skills during sessions, as the environment is already familiar and controllable.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-geographic"></i>
-                    </div>
-                    <h3>Geographic Accessibility</h3>
-                    <p>Virtual therapy eliminates geographical barriers, allowing individuals throughout Ontario, including rural and remote areas, to access specialized anger management support. This is particularly important for individuals in smaller communities where specialized mental health services may not be readily available.</p>
-                    
-                    <p>Eliminating travel time and costs also makes it more feasible to maintain regular sessions, which is crucial for developing and reinforcing anger management skills over time.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="icon-continuity"></i>
-                    </div>
-                    <h3>Continuity During Life Changes</h3>
-                    <p>Virtual therapy provides continuity of care during work travel, family responsibilities, or other life changes that might interrupt in-person treatment. This consistency is particularly important for anger management, where maintaining therapeutic momentum helps prevent relapse into old patterns.</p>
-                    
-                    <p>The ability to maintain regular sessions regardless of external circumstances helps ensure that progress in anger management continues even during stressful or challenging life periods when anger management skills are most needed.</p>
-                </div>
-            </div>
+            <p>
+                While professional support creates lasting change, you don't have to wait to 
+                start managing your anger more effectively. These evidence-based strategies 
+                can provide relief starting today. Remember: these are tools to help you cope, 
+                but they work best when combined with professional support for deeper, lasting change.
+            </p>
+            
+            <h3>In-the-Moment Anger Control</h3>
+            <p>
+                <strong>The STOP Technique:</strong> When you feel anger rising, immediately 
+                STOP what you're doing, Take a breath, Observe what's happening in your body 
+                and mind, and Proceed with intention rather than reaction. This simple acronym 
+                creates a pause that prevents impulsive reactions you'll later regret.
+            </p>
+            
+            <p>
+                <strong>Progressive Muscle Release:</strong> Anger creates physical tension. 
+                When you notice anger building, systematically tense and then release each 
+                muscle group - clench your fists tight for 5 seconds, then relax completely. 
+                Move through your shoulders, face, and core. This interrupts the physical 
+                anger response and gives your rational mind time to engage.
+            </p>
+            
+            <p>
+                <strong>The 24-Hour Rule:</strong> For major decisions or confrontations, 
+                implement a 24-hour waiting period when you're angry. Tell yourself "I'll 
+                address this tomorrow" and engage in a calming activity. Most anger-driven 
+                decisions improve significantly with a day of perspective.
+            </p>
+            
+            <h3>Communication Strategies</h3>
+            <p>
+                <strong>"I" Statements:</strong> Replace accusations with personal observations. 
+                Instead of "You never listen to me," try "I feel unheard when I'm interrupted." 
+                This reduces defensiveness in others and keeps conversations focused on solutions 
+                rather than blame.
+            </p>
+            
+            <p>
+                <strong>Time-Outs:</strong> Develop a signal with family members or colleagues 
+                that means you need to step away before discussing something further. "I need 
+                15 minutes to collect my thoughts" prevents escalation and shows respect for 
+                the relationship.
+            </p>
+            
+            <h3>Daily Anger Prevention</h3>
+            <p>
+                <strong>Morning Emotional Check-In:</strong> Start each day by assessing your 
+                stress level, sleep quality, and emotional state. When you're already running 
+                on empty, minor frustrations feel major. Plan gentler days when you wake up 
+                with less emotional reserves.
+            </p>
+            
+            <p>
+                <strong>Physical Outlet Routine:</strong> Regular exercise, especially cardiovascular 
+                activity, helps process stress hormones and reduces overall anger intensity. 
+                Find physical activities that work for your schedule - even 10 minutes of 
+                brisk walking can make a significant difference.
+            </p>
+            
+            <p>
+                <strong>Trigger Mapping:</strong> Keep a brief anger log noting what triggered 
+                your anger, how intense it was, and what happened next. Patterns will emerge 
+                that help you anticipate and prepare for your most common anger situations.
+            </p>
+            
+            <h3>Relationship Repair</h3>
+            <p>
+                <strong>The Repair Conversation:</strong> After an angry episode, take responsibility 
+                without justifying your behavior. "I'm sorry I raised my voice. My anger was 
+                about my own frustration, not about you personally. How can I make this right?" 
+                This rebuilds trust and shows you're working on the problem.
+            </p>
+            
+            <p>
+                Remember: these strategies provide temporary relief and build coping skills. 
+                For lasting change that transforms your relationships and overall quality of 
+                life, professional support helps address the root causes of your anger while 
+                building long-term emotional regulation skills.
+            </p>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Professional Anger Management Support</h2>
-                    <p class="contact-subtitle">Evidence-based anger management therapy throughout Ontario. Learn healthier ways to manage emotions and improve relationships through professional support.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="icon-phone"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Call Directly</h3>
-                                <p><a href="tel:+14163062157">(416) 306-2157</a></p>
-                                <span class="method-note">Confidential consultation</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="icon-calendar"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>Schedule Online</h3>
-                                <p>Use our secure contact form</p>
-                                <span class="method-note">24-48 hour response</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <i class="icon-shield"></i>
-                            </div>
-                            <div class="method-details">
-                                <h3>CRPO Registered</h3>
-                                <p>Psychotherapist #10979</p>
-                                <span class="method-note">Professional standards</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="service-highlights">
-                        <h3>Comprehensive Anger Management Support</h3>
-                        <ul>
-                            <li>Individual CBT and ACT therapy approaches</li>
-                            <li>DBT skills training for emotional regulation</li>
-                            <li>Communication and conflict resolution skills</li>
-                            <li>Virtual sessions throughout Ontario</li>
-                            <li>Flexible scheduling for working professionals</li>
-                            <li>Evidence-based treatment approaches</li>
-                        </ul>
-                    </div>
+    
+    <!-- Healthy Relationships Section - 400 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Building Healthy Relationships After Anger Issues</h2>
+            
+            <p>
+                One of the biggest misconceptions about anger management is that learning to 
+                control anger means becoming passive or letting people walk all over you. 
+                In reality, healthy anger management leads to stronger, more authentic relationships 
+                where you can express your needs and boundaries without damaging the connections 
+                you care about most.
+            </p>
+            
+            <h3>The Difference Between Anger and Assertiveness</h3>
+            <p>
+                Anger often feels necessary because it's the only way you've learned to advocate 
+                for yourself. But anger typically pushes people away and makes them less likely 
+                to hear your actual concerns. Assertiveness, on the other hand, communicates 
+                your needs clearly while respecting others' feelings and maintaining the relationship.
+            </p>
+            
+            <p>
+                When you develop healthy communication skills, you can address problems directly 
+                without the explosive emotions that shut down productive conversations. People 
+                are more likely to work with you when you approach conflicts with curiosity 
+                rather than criticism, seeking solutions rather than assigning blame.
+            </p>
+            
+            <h3>Rebuilding Trust</h3>
+            <ul>
+                <li><strong>Consistent behavior change:</strong> Trust rebuilds through repeated positive interactions, not grand gestures</li>
+                <li><strong>Taking responsibility:</strong> Acknowledging the impact of your anger without defending or minimizing it</li>
+                <li><strong>Following through:</strong> Making commitments about anger management and keeping them consistently</li>
+                <li><strong>Patience with others:</strong> Understanding that people may be cautious until they see sustained change</li>
+                <li><strong>Open communication:</strong> Talking about your anger management work and asking for feedback</li>
+                <li><strong>Professional support:</strong> Showing that you're serious about change by getting appropriate help</li>
+            </ul>
+            
+            <p>
+                Many people are surprised by how much their relationships improve when they 
+                address anger issues. Partners feel safer expressing their own needs. Children 
+                become more open and affectionate. Colleagues respect your communication style. 
+                Friends enjoy spending time with you without worrying about setting you off.
+            </p>
+            
+            <p>
+                When you're not constantly managing anger or dealing with its aftermath, you 
+                have more emotional energy for the positive aspects of relationships - intimacy, 
+                humor, shared activities, and genuine connection. You can be present for the 
+                people you care about instead of always being preoccupied with your own 
+                emotional volatility.
+            </p>
+            
+            <p>
+                Professional anger management therapy helps you develop these relationship 
+                skills while also addressing the underlying factors that contribute to anger. 
+                The goal isn't to eliminate anger entirely - it's to transform it from a 
+                destructive force into useful information about your needs and boundaries 
+                that you can express in healthy, relationship-building ways.
+            </p>
+        </div>
+    </section>
+    
+    <!-- What to Expect in Therapy - 350 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>What to Expect in Anger Management Therapy</h2>
+            
+            <p>
+                Starting therapy for anger management begins with understanding your unique 
+                anger patterns, triggers, and goals. Every person's relationship with anger 
+                is different, and your therapy should reflect your specific challenges, 
+                circumstances, and the changes you want to make in your life.
+            </p>
+            
+            <h3>Your First Session</h3>
+            <p>
+                We'll explore your anger history, current triggers, and the impact anger has 
+                had on your relationships, work, and well-being. We'll also discuss what you've 
+                already tried, what's worked (even partially), and what hasn't been helpful. 
+                This isn't about judgment - it's about understanding your starting point and 
+                designing an approach that builds on your strengths.
+            </p>
+            
+            <p>
+                We'll also establish your goals for anger management. Some people want to 
+                eliminate explosive outbursts. Others want to improve communication in their 
+                marriage or reduce workplace conflicts. Some are focused on being a better 
+                role model for their children. All goals are valid and will guide our work together.
+            </p>
+            
+            <h3>The Anger Management Process</h3>
+            <p>
+                Early sessions focus on immediate safety and stability - developing tools to 
+                prevent dangerous anger escalation and practicing techniques for de-escalation 
+                when anger does arise. We'll work on recognizing your early warning signs and 
+                creating specific plans for managing anger in high-risk situations.
+            </p>
+            
+            <p>
+                As therapy progresses, we explore deeper patterns and root causes. This might 
+                involve addressing underlying trauma, anxiety, depression, or communication 
+                patterns learned in childhood. We work at your pace, always balancing immediate 
+                skill-building with longer-term emotional healing.
+            </p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="label">Session Length</span>
+                    <span class="value">50 Minutes</span>
                 </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form" action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
-                        <input type="hidden" name="_subject" value="Anger Management Support Inquiry">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://www.nextsteptherapy.ca/thank-you">
-                        
-                        <div class="form-header">
-                            <h3>Start Managing Anger Effectively</h3>
-                            <p>Confidential consultation for anger management support</p>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="age">Age Range</label>
-                                <select id="age" name="age">
-                                    <option value="">Select age range</option>
-                                    <option value="18-25">18-25</option>
-                                    <option value="26-35">26-35</option>
-                                    <option value="36-45">36-45</option>
-                                    <option value="46-55">46-55</option>
-                                    <option value="56-65">56-65</option>
-                                    <option value="65+">65+</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="location">Ontario Location</label>
-                            <input type="text" id="location" name="location" placeholder="City/Region in Ontario">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="anger-concerns">Primary Anger Concerns</label>
-                            <select id="anger-concerns" name="anger_concerns" required>
-                                <option value="">Select primary concern</option>
-                                <option value="explosive-outbursts">Explosive anger outbursts</option>
-                                <option value="relationship-conflicts">Relationship conflicts</option>
-                                <option value="workplace-anger">Workplace anger issues</option>
-                                <option value="road-rage">Road rage or driving anger</option>
-                                <option value="family-tensions">Family tensions and conflicts</option>
-                                <option value="chronic-irritability">Chronic irritability</option>
-                                <option value="anger-control">General anger control problems</option>
-                                <option value="multiple-concerns">Multiple anger concerns</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="anger-frequency">How often do anger episodes occur?</label>
-                            <select id="anger-frequency" name="anger_frequency">
-                                <option value="">Select frequency</option>
-                                <option value="daily">Daily or multiple times per day</option>
-                                <option value="several-weekly">Several times per week</option>
-                                <option value="weekly">About once per week</option>
-                                <option value="few-monthly">A few times per month</option>
-                                <option value="monthly">About once per month</option>
-                                <option value="occasional">Occasional but intense episodes</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="impact-areas">Which areas of life are most affected?</label>
-                            <select id="impact-areas" name="impact_areas">
-                                <option value="">Select most affected area</option>
-                                <option value="romantic-relationship">Romantic relationship/marriage</option>
-                                <option value="family-relationships">Family relationships</option>
-                                <option value="work-career">Work or career</option>
-                                <option value="friendships">Friendships</option>
-                                <option value="parenting">Parenting</option>
-                                <option value="physical-health">Physical health</option>
-                                <option value="multiple-areas">Multiple areas</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="triggers">What typically triggers your anger?</label>
-                            <select id="triggers" name="triggers">
-                                <option value="">Select primary trigger</option>
-                                <option value="feeling-disrespected">Feeling disrespected or criticized</option>
-                                <option value="unfairness">Perceived unfairness or injustice</option>
-                                <option value="stress-overwhelm">Stress and feeling overwhelmed</option>
-                                <option value="traffic-delays">Traffic, delays, or inconveniences</option>
-                                <option value="work-pressure">Work pressure or deadlines</option>
-                                <option value="family-conflicts">Family conflicts or disagreements</option>
-                                <option value="financial-stress">Financial stress</option>
-                                <option value="multiple-triggers">Multiple triggers</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="previous-help">Have you sought help for anger before?</label>
-                            <select id="previous-help" name="previous_help">
-                                <option value="">Select option</option>
-                                <option value="no-previous">No previous help</option>
-                                <option value="therapy-helpful">Previous therapy - helpful</option>
-                                <option value="therapy-not-helpful">Previous therapy - not helpful</option>
-                                <option value="anger-management-course">Anger management course</option>
-                                <option value="self-help-only">Self-help books/resources only</option>
-                                <option value="medication">Medication for mood/anger</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="urgency">How urgent is your need for support?</label>
-                            <select id="urgency" name="urgency" required>
-                                <option value="">Select urgency level</option>
-                                <option value="very-urgent">Very urgent - recent serious incident</option>
-                                <option value="urgent">Urgent - anger affecting job/relationships</option>
-                                <option value="soon">Soon - want to address before it gets worse</option>
-                                <option value="planning">Planning ahead for anger management</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Additional Information</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Share any additional details about your anger concerns, specific incidents, or what you hope to achieve through anger management therapy..."></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="virtual-preference" name="virtual_preference">
-                            <label for="virtual-preference">I prefer virtual/online sessions</label>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="flexible-scheduling" name="flexible_scheduling">
-                            <label for="flexible-scheduling">I need flexible scheduling (evenings/weekends)</label>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary btn-large">Get Professional Support</button>
-                        
-                        <div class="form-footer">
-                            <p><i class="icon-shield"></i> Your information is completely confidential and secure</p>
-                            <p><i class="icon-clock"></i> We typically respond within 24-48 hours</p>
-                        </div>
-                    </form>
+                <div class="info-card">
+                    <span class="label">Format</span>
+                    <span class="value">Virtual Ontario</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Scheduling</span>
+                    <span class="value">Flexible/Evening</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Investment</span>
+                    <span class="value">$175/session</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Insurance</span>
+                    <span class="value">Receipts Provided</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Confidentiality</span>
+                    <span class="value">Complete Privacy</span>
                 </div>
             </div>
             
-            <div class="additional-resources">
-                <div class="resource-section">
-                    <h3>Crisis Resources</h3>
-                    <div class="emergency-contacts">
-                        <div class="emergency-contact">
-                            <strong>Crisis Text Line:</strong> Text HOME to 686868
-                        </div>
-                        <div class="emergency-contact">
-                            <strong>Distress Centre:</strong> 416-408-4357
-                        </div>
-                        <div class="emergency-contact">
-                            <strong>Emergency:</strong> Call 911 if immediate safety concerns
-                        </div>
-                        <div class="emergency-contact">
-                            <strong>Assaulted Women's Helpline:</strong> 1-866-863-0511
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="credentials-display">
-                    <div class="credential-badge">
-                        <div class="badge-icon">
-                            <i class="icon-certification"></i>
-                        </div>
-                        <div class="badge-info">
-                            <h4>CRPO Registered</h4>
-                            <p>Psychotherapist #10979</p>
-                            <span>College of Registered Psychotherapists of Ontario</span>
-                        </div>
-                    </div>
-                    
-                    <div class="treatment-info">
-                        <h4>Specialized Training</h4>
-                        <ul>
-                            <li>CBT for anger management</li>
-                            <li>ACT therapy approaches</li>
-                            <li>DBT skills for emotional regulation</li>
-                            <li>Conflict resolution training</li>
-                            <li>Communication skills development</li>
-                        </ul>
-                    </div>
-                </div>
+            <p>
+                Many people find evening sessions work well with their work schedules and 
+                family commitments. We'll find a schedule that supports consistent attendance 
+                and allows you to practice new skills between sessions.
+            </p>
+        </div>
+    </section>
+    
+    <!-- About Your Therapist - 250 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>About Your Therapist</h2>
+            
+            <p>
+                Hi, I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who specializes 
+                in helping people develop healthier relationships with anger throughout Ontario. 
+                I understand that anger management isn't about becoming passive or suppressing 
+                emotions - it's about learning to express anger in ways that serve your 
+                relationships and life goals.
+            </p>
+            
+            <p>
+                I've worked with individuals from Toronto, Hamilton, Ottawa, London, and across 
+                Ontario who struggle with explosive anger, chronic irritability, workplace 
+                conflicts, and relationship problems caused by anger issues. I understand that 
+                anger often covers up other emotions like hurt, fear, or feelings of powerlessness, 
+                and that effective anger management addresses these underlying factors.
+            </p>
+            
+            <p>
+                My approach combines evidence-based techniques like Cognitive Behavioral Therapy 
+                and mindfulness training with practical communication and relationship skills. 
+                I believe that everyone deserves relationships where they feel heard, respected, 
+                and valued - and that includes learning to extend that same respect to others 
+                even when you're frustrated or disappointed.
+            </p>
+            
+            <p>
+                I work collaboratively with clients to develop personalized anger management 
+                strategies that fit their lifestyle, relationships, and goals. Recovery from 
+                anger issues is definitely possible, and many people are surprised by how 
+                much their overall quality of life improves when they develop healthier 
+                emotional regulation skills.
+            </p>
+            
+            <p>
+                I offer virtual sessions throughout Ontario with flexible scheduling to 
+                accommodate your work and family commitments. Because the best time to work 
+                on anger management is when you're motivated to create positive change.
+            </p>
+        </div>
+    </section>
+    
+    <!-- FAQ Section - V2 Objection Handling -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is virtual therapy really effective for anger management issues?</div>
+                <p>
+                    Research shows virtual therapy is highly effective for anger management. Online sessions offer 
+                    unique advantages including privacy, flexibility, and the ability to practice new skills in 
+                    your actual environment. Many clients find it easier to open up about anger issues from the 
+                    comfort of their own space, and virtual sessions can be scheduled more easily during crisis periods.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I know if my anger is serious enough to need professional help?</div>
+                <p>
+                    Consider therapy if anger is affecting your relationships, work performance, or daily life. 
+                    Warning signs include frequent outbursts, verbal or physical aggression, people avoiding you 
+                    or walking on eggshells, relationship conflicts, work problems, or using substances to cope 
+                    with anger. Even if anger feels "normal" to you, if others are concerned, professional support can help.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will anger management therapy make me passive or weak?</div>
+                <p>
+                    No. Healthy anger management isn't about suppressing anger or becoming passive. It's about 
+                    learning to express your needs, set boundaries, and advocate for yourself in ways that 
+                    strengthen relationships rather than damaging them. Many people find they feel more 
+                    powerful and respected when they communicate assertively rather than aggressively.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can anger management therapy help improve my relationships?</div>
+                <p>
+                    Absolutely. Anger management therapy focuses heavily on communication skills, conflict resolution, 
+                    and rebuilding trust in damaged relationships. Many clients report significant improvements in 
+                    their marriages, family relationships, and workplace interactions. Partners often become more 
+                    open and affectionate when they no longer fear angry outbursts.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to see improvements in anger management?</div>
+                <p>
+                    Many people notice some improvement in anger control within the first 4-6 sessions as they 
+                    learn immediate coping strategies. Significant, lasting change typically occurs within 3-6 months 
+                    of consistent therapy. The timeline depends on factors like severity, underlying issues, and 
+                    commitment to practicing new skills between sessions.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if my anger is related to other mental health issues?</div>
+                <p>
+                    Anger often co-occurs with depression, anxiety, trauma, or other conditions. Comprehensive 
+                    anger management addresses both the anger symptoms and any underlying mental health factors. 
+                    This integrated approach leads to better outcomes than treating anger in isolation. We'll 
+                    assess for other conditions and develop a treatment plan that addresses your complete mental health picture.
+                </p>
             </div>
         </div>
     </section>
-
+    
+    <!-- Getting Started - FINAL CTA Section - 200 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Ready to Take Control of Your Anger?</h2>
+            
+            <p>
+                You don't have to let anger control your life and damage your relationships 
+                any longer. Many people are surprised by how quickly they can start making 
+                positive changes when they have the right tools and professional support. 
+                Anger management isn't about becoming a different person - it's about becoming 
+                the best version of yourself.
+            </p>
+            
+            <p>
+                The hardest part is reaching out for help. Once you do, you've already taken 
+                the most important step toward healthier relationships, better communication, 
+                and greater peace of mind. Whether you're ready to start therapy or just want 
+                to explore your options, professional support is available when you're ready.
+            </p>
+            
+            <p>
+                Your relationships can be sources of joy and support rather than constant 
+                conflict. Your work environment can be collaborative rather than combative. 
+                You can feel proud of how you handle difficult situations instead of ashamed 
+                of your reactions. Take the first step toward the life you actually want.
+            </p>
+            
+            <!-- Final CTAs -->
+            <div class="button-group" style="margin-top: var(--space-xl);">
+                <a href="https://www.nextsteptherapy.ca/#contact" class="cta-primary">Get Professional Help Today</a>
+                <a href="tel:+15198008323" class="cta-secondary">(519) 800-8323</a>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--space-md);">
+                Prefer to text? Send a message to <a href="sms:+14163062157" class="text-cta">(519) 800-8323</a>
+            </p>
+            
+            <p style="text-align: center; margin-top: var(--space-lg); font-style: italic; color: var(--text-secondary);">
+                Anger management therapy throughout Ontario | Virtual sessions available | Evening and weekend appointments
+            </p>
+        </div>
+    </section>
+    
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Next Step Therapy Ontario</h3>
-                    <p>Professional anger management therapy in Kitchener and throughout Ontario. Virtual sessions available.</p>
-                    
-                    <div class="footer-contact">
-                        <p><strong>Phone:</strong> <a href="tel:+14163062157">(416) 306-2157</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a></p>
-                        <p><strong>CRPO:</strong> Registered Psychotherapist #10979</p>
-                    </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="../about">About Jesse</a>
+                    <a href="../services">Services</a>
+                    <a href="../approach">Therapeutic Approach</a>
+                    <a href="../fees">Fees & Insurance</a>
+                    <a href="https://www.nextsteptherapy.ca/#contact">Contact Form</a>
                 </div>
                 
-                <div class="footer-services">
-                    <h4>Anger Management Services</h4>
-                    <ul>
-                        <li>Individual anger therapy</li>
-                        <li>CBT for anger management</li>
-                        <li>Communication skills training</li>
-                        <li>Conflict resolution support</li>
-                        <li>DBT emotional regulation skills</li>
-                        <li>Virtual therapy sessions</li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Professional Support</h4>
+                    <a href="../anger-management-kitchener">Anger Management</a>
+                    <a href="../teen-eating-disorder-help">Teen Eating Disorders</a>
+                    <a href="../university-anxiety">University Anxiety</a>
+                    <a href="../workplace-stress-burnout">Workplace Stress</a>
+                    <a href="../anxiety-therapy">Anxiety Therapy</a>
                 </div>
                 
-                <div class="footer-areas">
-                    <h4>Serving Ontario</h4>
-                    <ul>
-                        <li>Kitchener-Waterloo</li>
-                        <li>Toronto & GTA</li>
-                        <li>Hamilton & Burlington</li>
-                        <li>London & Southwestern Ontario</li>
-                        <li>Ottawa & Eastern Ontario</li>
-                        <li>All Ontario regions via virtual therapy</li>
-                    </ul>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Virtual Sessions Throughout Ontario</p>
+                    <p>📧 info@nextsteptherapy.ca</p>
+                    <p>📞 <a href="tel:+15198008323">(519) 800-8323</a></p>
+                    <p>💬 <a href="sms:+14163062157">Text Available</a></p>
+                    <p><strong>CRPO Registration #10979</strong></p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="footer-legal">
-                    <p>&copy; 2024 Next Step Therapy Ontario. Professional anger management support.</p>
-                    <div class="footer-links">
-                        <a href="/privacy-policy">Privacy Policy</a>
-                        <a href="/terms-of-service">Terms of Service</a>
-                    </div>
-                </div>
-                
-                <div class="footer-certifications">
-                    <span class="cert-badge">CRPO #10979</span>
-                    <span class="cert-badge">Secure & Confidential</span>
-                    <span class="cert-badge">Virtual Sessions Available</span>
-                </div>
+                <p>&copy; 2025 Next Step Therapy | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | All rights reserved</p>
             </div>
         </div>
     </footer>
+    
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="tel:+15198008323" class="mobile-sticky-cta">Get Support Now</a>
+    
+    <!-- V2 Smart Header & Mobile CTA JavaScript -->
+    <script>
+    // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) { // Mobile only
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Scrolling down & past initial area
+                header.classList.add('hide-on-scroll');
+            } else if (scrollTop < lastScrollTop) {
+                // Scrolling up
+                header.classList.remove('hide-on-scroll');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
+    });
+    
+    // Show mobile sticky CTA after scrolling 30% down page
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled / document.body.offsetHeight;
+        const stickyCTA = document.querySelector('.mobile-sticky-cta');
+        
+        if (rate > 0.3 && window.innerWidth <= 768) {
+            stickyCTA.classList.add('show');
+        } else {
+            stickyCTA.classList.remove('show');
+        }
+    });
+    </script>
 </body>
 </html>
