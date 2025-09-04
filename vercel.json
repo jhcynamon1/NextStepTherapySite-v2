@@ -3,7 +3,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": ".",
-
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
