@@ -14,6 +14,7 @@
             'send_page_view': true
         });
 
+        // Track phone clicks
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -24,10 +25,34 @@
                     });
                 });
             });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
 
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('form').forEach(form => {
                 form.addEventListener('submit', function() {
                     gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
                         'event_category': 'conversion',
                         'value': 175,
                         'currency': 'CAD'
@@ -43,28 +68,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- SEO Meta Data -->
-    <title>Workplace Burnout & Stress Therapy Ontario | Professional Support | CRPO #10979</title>
-    <meta name="description" content="Comprehensive guide to workplace burnout and stress therapy across Ontario. Professional support for professionals, leaders, and HR teams. Virtual therapy available.">
+    <!-- V2 Conversion-Optimized Meta Data -->
+    <title>Workplace Burnout Therapy Ontario | Professional Stress Support | CRPO #10979</title>
+    <meta name="description" content="Professional workplace burnout and stress therapy across Ontario. Evidence-based support for professionals, leaders, and employees. Virtual sessions available. CRPO registered therapist.">
     
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Workplace Burnout & Stress Therapy | Next Step Therapy">
-    <meta property="og:description" content="The complete guide to understanding and treating workplace burnout with professional therapy support across Ontario.">
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Workplace Burnout Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Professional workplace burnout and stress therapy across Ontario. Evidence-based support for professionals, leaders, and employees. Virtual sessions available.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/workplace-stress-burnout-therapy">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/workplace-burnout-og.jpg">
     
-    <!-- Canonical URL -->
+    <!-- Canonical URL for SEO -->
     <link rel="canonical" href="https://nextsteptherapy.ca/workplace-stress-burnout-therapy">
     
-    <!-- Article Schema -->
+    <!-- Enhanced Article Schema - V2 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "The Complete Guide to Workplace Burnout and Stress Therapy in Ontario",
-      "description": "Comprehensive guide covering workplace burnout symptoms, prevention strategies, and professional therapy support across Ontario cities.",
-      "wordCount": "3500",
+      "headline": "Workplace Burnout Therapy Ontario: Professional Support for Work-Related Stress",
+      "description": "Comprehensive guide to workplace burnout therapy and professional stress support in Ontario, including understanding burnout symptoms, therapeutic approaches, and recovery strategies",
+      "wordCount": "6000",
       "author": {
         "@type": "Person",
         "@id": "https://nextsteptherapy.ca/#jessecynamon",
@@ -74,61 +99,56 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Next Step Therapy",
-        "url": "https://nextsteptherapy.ca"
+        "@id": "https://nextsteptherapy.ca/#organization",
+        "name": "Next Step Therapy"
       },
-      "datePublished": "2025-09-03",
-      "dateModified": "2025-09-03"
+      "datePublished": "2025-09-04",
+      "dateModified": "2025-09-04",
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Workplace Burnout",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Workplace Burnout Therapy"
+        }
+      }
     }
     </script>
-
-    <!-- LocalBusiness Schema -->
+    
+    <!-- LocalBusiness Schema for Ontario Targeting -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Next Step Therapy - Workplace Stress & Burnout",
-      "description": "Professional workplace burnout and stress therapy services across Ontario",
-      "url": "https://nextsteptherapy.ca/workplace-stress-burnout-therapy",
-      "telephone": "(416) 306-2157",
-      "email": "info@nextsteptherapy.ca",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
+      "name": "Next Step Therapy",
+      "description": "Virtual workplace burnout and stress therapy across Ontario",
       "areaServed": [
         {
-          "@type": "Place",
-          "name": "Toronto, Ontario"
-        },
-        {
-          "@type": "Place", 
-          "name": "Ottawa, Ontario"
-        },
-        {
-          "@type": "Place",
-          "name": "Mississauga, Ontario"
+          "@type": "State",
+          "name": "Ontario"
         }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Workplace Stress Services",
+        "name": "Workplace Burnout Therapy Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Burnout Therapy",
-              "description": "Individual therapy for workplace burnout recovery"
+              "name": "Workplace Burnout and Stress Therapy",
+              "provider": {
+                "@type": "Person",
+                "name": "Jesse Cynamon, RP"
+              }
             }
           }
         ]
       }
     }
     </script>
-
-    <!-- FAQPage Schema -->
+    
+    <!-- Enhanced FAQ Schema - V2 Conversion Focus -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -136,10 +156,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What's the difference between stress and burnout?",
+          "name": "What are the early signs of workplace burnout?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stress is typically temporary and related to specific situations, while burnout is a state of physical, emotional, and mental exhaustion caused by prolonged exposure to demanding work conditions. Burnout includes cynicism, detachment, and a sense of ineffectiveness."
+            "text": "Early signs of workplace burnout include chronic exhaustion that doesn't improve with rest, decreased motivation and engagement at work, increased cynicism or negativity about work, difficulty concentrating, and physical symptoms like headaches or sleep problems. You might also notice decreased productivity, increased absences, or feeling emotionally drained by work demands."
           }
         },
         {
@@ -147,128 +167,112 @@
           "name": "How long does it take to recover from workplace burnout?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Recovery from burnout varies greatly depending on severity and individual factors. With proper support and therapy, many people begin feeling improvement within a few weeks to months. Complete recovery may take longer and often involves both therapeutic support and workplace changes."
+            "text": "Recovery from workplace burnout varies significantly depending on the severity, individual circumstances, and whether you're able to make necessary changes to reduce stress. With professional support and appropriate changes, some people notice improvement within weeks to months, while more severe burnout may require longer recovery periods. The key is addressing both the symptoms and underlying workplace factors contributing to burnout."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I get therapy for burnout while still working?",
+          "name": "Can workplace burnout therapy be conducted virtually?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Many people successfully engage in burnout therapy while continuing to work. Therapy can provide tools for managing current work stress while developing strategies for prevention and recovery. Virtual sessions offer flexibility for busy professionals."
+            "text": "Yes, virtual workplace burnout therapy is highly effective and often more convenient for busy professionals. Virtual sessions eliminate commute time, allow for flexible scheduling around work demands, and provide privacy that some people prefer when discussing workplace issues. Research shows virtual therapy is as effective as in-person sessions for burnout and stress-related concerns."
           }
         },
         {
           "@type": "Question",
-          "name": "What therapy approaches work best for workplace burnout?",
+          "name": "What therapeutic approaches are most effective for workplace burnout?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Effective approaches include Acceptance and Commitment Therapy (ACT) for building psychological flexibility, Cognitive Behavioral Therapy (CBT) for changing unhelpful thought patterns, and stress management techniques. The best approach depends on individual needs and circumstances."
+            "text": "Effective approaches for workplace burnout include Acceptance and Commitment Therapy (ACT) to develop psychological flexibility and values-based action, Cognitive Behavioral Therapy (CBT) to address negative thought patterns and develop coping skills, mindfulness-based approaches for stress reduction, and solution-focused therapy to identify practical changes and boundaries. The best approach depends on your specific situation and goals."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I prevent burnout from happening again?",
+          "name": "Should I tell my employer about workplace burnout therapy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Prevention involves developing better boundaries, stress management skills, self-advocacy, and realistic goal-setting. Therapy helps identify personal risk factors and develop sustainable work practices. Sometimes workplace changes are also necessary."
+            "text": "This is a personal decision that depends on your workplace culture and relationship with your employer. Some workplaces are supportive of mental health treatment, while others may not be. You're not required to disclose therapy, and sessions are confidential. Many people find therapy helpful for developing strategies to manage workplace stress without necessarily involving their employer in the process."
           }
         }
       ]
     }
     </script>
-
+    
     <style>
+        /* Match homepage design exactly with V2 enhancements */
         :root {
-            --primary-green: #2E7D32;
-            --secondary-green: #4CAF50;
-            --light-green: #E8F5E8;
-            --accent-blue: #1565C0;
-            --warm-gray: #F5F5F5;
-            --dark-gray: #424242;
-            --text-primary: #2c3e50;
-            --text-secondary: #546e7a;
-            --background-primary: #ffffff;
-            --background-secondary: #f8f9fa;
-            --border-light: #e9ecef;
-            --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --radius-sm: 4px;
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
             --radius-md: 8px;
             --radius-lg: 12px;
-            --max-width: 1200px;
-            --content-width: 800px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-body);
+            line-height: 1.7;
             color: var(--text-primary);
-            background-color: var(--background-primary);
-            font-size: 16px;
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
+        
         .container {
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 var(--space-md);
-            margin-left: auto;
-            margin-right: auto;
         }
-
-        /* Header */
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Minimal Landing Page Header */
         .header {
             background: var(--background-primary);
             padding: var(--space-sm) 0;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-
+        
         .minimal-header .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            text-decoration: none;
-        }
-
-        .credentials-badge-prominent {
-            background: var(--light-green);
-            color: var(--primary-green);
-            padding: 0.25rem 0.5rem;
-            border-radius: var(--radius-sm);
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
+        
         .header-cta {
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: var(--radius-md);
@@ -276,269 +280,550 @@
             font-weight: 600;
             transition: all 0.2s ease;
         }
-
+        
         .header-cta:hover {
             background: linear-gradient(135deg, #1B5E20, #388E3C);
             transform: translateY(-1px);
             color: white;
         }
-
-        /* Hero Section */
-        .hero {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(135deg, var(--light-green) 0%, var(--background-primary) 100%);
-            text-align: center;
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
         }
-
-        .hero-content {
-            max-width: var(--content-width);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-            line-height: 1.2;
-        }
-
-        .hero .lead-text {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-            color: white;
-            padding: var(--space-md) var(--space-xl);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.125rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--shadow-medium);
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--shadow-medium);
-            color: white;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .content-section:nth-child(even) {
-            background-color: var(--background-secondary);
-        }
-
-        .section-content {
-            max-width: var(--content-width);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-            text-align: center;
-        }
-
-        .section-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            margin: var(--space-lg) 0 var(--space-md) 0;
-        }
-
-        .section-content h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: var(--space-md) 0 var(--space-sm) 0;
-        }
-
-        .section-content p {
-            margin-bottom: var(--space-md);
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .section-content ul {
-            margin-bottom: var(--space-md);
-            padding-left: var(--space-lg);
-        }
-
-        .section-content li {
-            margin-bottom: var(--space-xs);
-            color: var(--text-secondary);
-        }
-
-        /* Local Services Section */
-        .local-services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-
-        .local-service-card {
-            background: var(--background-primary);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: 0 4px 15px var(--shadow-light);
-            border: 1px solid var(--border-light);
-        }
-
-        .local-service-card h4 {
-            color: var(--primary-green);
-            margin-bottom: var(--space-sm);
-        }
-
-        /* FAQ Section */
-        .faq-item {
-            margin-bottom: var(--space-lg);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: var(--background-secondary);
-            padding: var(--space-md);
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .faq-question:hover {
-            background: var(--light-green);
-        }
-
-        .faq-answer {
-            padding: var(--space-md);
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Contact CTA Section */
-        .contact-cta {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-            color: white;
-            text-align: center;
-        }
-
-        .contact-cta h2 {
-            color: white;
-            margin-bottom: var(--space-md);
-        }
-
-        .contact-cta p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: var(--space-xl);
-            font-size: 1.125rem;
-        }
-
-        .cta-buttons {
+        
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: var(--space-md);
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-flex;
+            justify-content: space-between;
             align-items: center;
-            gap: var(--space-xs);
-            background: white;
-            color: var(--primary-green);
-            padding: var(--space-md) var(--space-xl);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        /* V2 Prominent CRPO Badge */
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav-desktop {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-desktop:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
         }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            color: var(--primary-green);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
+        
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
             color: white;
-            border: 2px solid white;
         }
-
-        .cta-button.secondary:hover {
-            background: white;
-            color: var(--primary-green);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
+        
+        .nav-mobile-phone {
+            display: none;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
-            padding: var(--space-xl) 0;
-            text-align: center;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
-
-        .footer p {
-            margin-bottom: var(--space-sm);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* Responsive Design */
+        
+        /* Mobile Smart Header Optimization */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .header {
+                max-height: 50px;
+                padding: 0.25rem 0;
             }
-
-            .hero .lead-text {
-                font-size: 1rem;
-            }
-
-            .section-content h2 {
-                font-size: 1.75rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
+            
+            .header-content {
+                justify-content: space-between;
                 align-items: center;
             }
-
-            .minimal-header .header-content {
+            
+            .logo-section {
+                gap: 0.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .credentials-badge-prominent {
+                display: none; /* Hidden in mobile sticky */
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+            
+            .nav-cta {
+                display: none; /* Hide desktop CTA */
+            }
+            
+            .nav-mobile-phone {
+                display: inline-block; /* Show mobile phone CTA */
+            }
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            /* Mobile responsive - max 2.5rem on mobile */
+            max-height: calc(2.5rem * 2.2); /* 2 lines max */
+            overflow: hidden;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section with V2 Conversion Focus */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* V2 Trust Signal Hierarchy - Above Fold */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-deep);
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(74, 107, 122, 0.08);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .trust-indicators {
                 flex-direction: column;
                 gap: var(--space-sm);
-                text-align: center;
             }
-
-            .local-services {
-                grid-template-columns: 1fr;
+            
+            .trust-indicator {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+        
+        /* V2 CTA Optimization */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 160px;
+            text-align: center;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            margin: var(--space-lg) 0;
+        }
+        
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        .text-cta {
+            color: var(--primary-soft-blue);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .text-cta:hover {
+            color: var(--primary-deep);
+        }
+        
+        /* V2 Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-sticky-cta { 
+                display: block; 
+            }
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--neutral-soft);
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-soft-blue);
+            font-weight: 600;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .info-card {
+            background: var(--neutral-soft);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .info-card .label {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card .value {
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-soft-blue);
+        }
+        
+        /* CTA Callouts */
+        .cta-callout {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg);
+            background: rgba(74, 107, 122, 0.05);
+            border-radius: var(--radius-md);
+        }
+        
+        .cta-callout p {
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--background-primary) 100%);
+            padding: var(--space-xxl) 0 var(--space-lg);
+            margin-top: var(--space-section);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--space-xs);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
             }
         }
     </style>
 </head>
-
 <body>
     <!-- Minimal Landing Page Header -->
     <header class="header minimal-header">
@@ -555,377 +840,879 @@
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
+    
+    <!-- V2 Conversion-Optimized Hero Section - 300 words -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>The Complete Guide to Workplace Burnout & Stress Recovery</h1>
-                <p class="lead-text">
-                    Evidence-based strategies and professional therapy support for professionals, leaders, 
-                    and teams across Ontario struggling with workplace stress and burnout.
-                </p>
-                <a href="#contact-cta" class="hero-cta">
-                    Get Professional Support
-                </a>
+        <div class="hero-content">
+            <h1>Workplace Burnout Therapy Ontario - Professional Support</h1>
+            <p class="lead-text">
+                Are you experiencing chronic workplace stress, exhaustion, or feeling disconnected from your career? 
+                Workplace burnout affects professionals across Ontario, creating physical and emotional symptoms that 
+                impact both work performance and personal well-being. Professional therapy can provide evidence-based 
+                tools to address burnout, restore work-life balance, and help you rediscover meaning in your career.
+            </p>
+            
+            <!-- V2 Above-fold trust signals -->
+            <div class="trust-indicators">
+                <span class="trust-indicator">Ontario Licensed</span>
+                <span class="trust-indicator">Virtual Sessions</span>
+                <span class="trust-indicator">Workplace Specialized</span>
+            </div>
+            
+            <!-- V2 Primary CTA above fold -->
+            <div class="button-group">
+                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Your Recovery Journey</a>
+                <a href="tel:+14163062157" class="cta-secondary">Speak with a Professional</a>
+            </div>
+            
+            <p style="margin-top: var(--space-sm); text-align: center; margin-left: auto; margin-right: auto;">
+                Or text <a href="sms:+14163062157" class="text-cta">(416) 306-2157</a> for same-day response
+            </p>
+        </div>
+    </section>
+    
+    <!-- Understanding Workplace Burnout - 600 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Understanding Workplace Burnout</h2>
+            
+            <p>
+                Workplace burnout has reached epidemic proportions across Ontario, affecting professionals in every 
+                sector from healthcare and education to technology and finance. The World Health Organization now 
+                recognizes burnout as an occupational phenomenon, defining it as chronic workplace stress that has 
+                not been successfully managed, characterized by exhaustion, cynicism, and reduced professional efficacy.
+            </p>
+            
+            <p>
+                Burnout develops gradually through prolonged exposure to emotionally and physically demanding work 
+                situations. Unlike regular job stress that typically improves with rest or time off, burnout creates 
+                persistent exhaustion that doesn't resolve with typical recovery methods. It affects your ability to 
+                engage meaningfully with work, impairs decision-making, and can spill over into personal relationships 
+                and overall life satisfaction.
+            </p>
+            
+            <h3>The Three Dimensions of Workplace Burnout</h3>
+            
+            <p>
+                <strong>Emotional Exhaustion:</strong> This is often the most recognizable aspect of burnout. You feel 
+                drained, depleted, and emotionally overwhelmed by work demands. Even after adequate sleep, you wake up 
+                tired and struggle to find energy for work tasks. This exhaustion extends beyond physical tiredness to 
+                emotional and mental depletion that affects your capacity to care about work outcomes.
+            </p>
+            
+            <p>
+                <strong>Depersonalization and Cynicism:</strong> As burnout progresses, you may develop negative, cynical 
+                attitudes toward work, colleagues, clients, or your organization. You might find yourself becoming more 
+                critical, distant, or indifferent to work that once engaged you. This protective mechanism helps cope 
+                with overwhelming demands but can damage professional relationships and work quality.
+            </p>
+            
+            <p>
+                <strong>Reduced Professional Accomplishment:</strong> Burnout erodes confidence in your abilities and 
+                creates doubt about your professional competence. You may feel ineffective, question your contributions, 
+                or believe you're failing to meet expectations despite working harder than ever. This dimension particularly 
+                affects high-achieving professionals who define their identity through work success.
+            </p>
+            
+            <h3>Common Signs and Symptoms</h3>
+            <ul>
+                <li>Chronic fatigue that doesn't improve with rest or time off work</li>
+                <li>Difficulty concentrating, making decisions, or completing routine tasks</li>
+                <li>Increased irritability, impatience, or conflict with colleagues</li>
+                <li>Physical symptoms including headaches, muscle tension, digestive issues, or frequent illness</li>
+                <li>Sleep disturbances, either difficulty falling asleep or waking up feeling unrefreshed</li>
+                <li>Decreased motivation, engagement, or satisfaction with work achievements</li>
+                <li>Increased absenteeism, tardiness, or procrastination on work tasks</li>
+                <li>Feelings of dread about going to work or facing work-related responsibilities</li>
+                <li>Cynicism about workplace policies, leadership, or organizational values</li>
+                <li>Detachment from colleagues, clients, or work relationships</li>
+                <li>Decreased productivity despite working longer hours</li>
+                <li>Emotional numbness or inability to feel satisfaction from work accomplishments</li>
+            </ul>
+            
+            <h3>Risk Factors for Workplace Burnout</h3>
+            <p>
+                Certain workplace conditions significantly increase burnout risk. These include excessive workload that 
+                consistently exceeds your capacity, lack of control over work processes or decisions that affect you, 
+                insufficient rewards or recognition for your contributions, breakdown of workplace community and supportive 
+                relationships, absence of fairness in workplace policies or treatment, and conflict between personal values 
+                and workplace demands or practices.
+            </p>
+            
+            <p>
+                Individual factors also contribute to burnout susceptibility. Perfectionist tendencies, difficulty setting 
+                boundaries, high achievement orientation, and taking on excessive responsibility can create vulnerability 
+                to burnout. Additionally, major life transitions, financial stress, or family demands can reduce your 
+                resilience to workplace pressures.
+            </p>
+            
+            <p>
+                Understanding these factors helps identify whether your work environment contributes to burnout and which 
+                personal patterns might need attention in therapy. Recovery often involves addressing both environmental 
+                factors where possible and developing personal strategies for managing unavoidable workplace stressors.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Impact of Workplace Burnout - 550 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>The Far-Reaching Impact of Workplace Burnout</h2>
+            
+            <p>
+                Workplace burnout extends far beyond feeling tired after a demanding day. It creates cascading effects 
+                that touch every aspect of your life, from physical health and mental well-being to relationships and 
+                overall life satisfaction. Understanding these impacts helps recognize the importance of addressing 
+                burnout proactively rather than hoping it will resolve on its own.
+            </p>
+            
+            <h3>Physical Health Consequences</h3>
+            <p>
+                Chronic workplace stress and burnout create significant physical health risks. The persistent activation 
+                of your stress response system leads to elevated cortisol levels, which can suppress immune function, 
+                increase inflammation, and contribute to cardiovascular problems. Many people with burnout experience 
+                frequent colds or infections, digestive issues, tension headaches, and sleep disturbances.
+            </p>
+            
+            <p>
+                The exhaustion characteristic of burnout often leads to neglecting self-care practices that maintain 
+                health. You might skip meals, rely on caffeine or alcohol to manage energy and mood, reduce exercise, 
+                or postpone medical appointments. These patterns compound the physical toll of chronic stress and can 
+                lead to more serious health problems over time.
+            </p>
+            
+            <h3>Mental Health and Emotional Well-being</h3>
+            <p>
+                Burnout significantly increases risk for depression and anxiety disorders. The chronic stress and feelings 
+                of ineffectiveness associated with burnout can create hopelessness, worthlessness, and persistent low mood 
+                that extends beyond work situations. Many people with burnout develop anxiety about work performance, job 
+                security, or their professional future.
+            </p>
+            
+            <p>
+                The emotional exhaustion of burnout can also create numbness or disconnection from activities and relationships 
+                that once brought joy. This emotional flattening affects your capacity to experience pleasure, maintain 
+                motivation for personal goals, or engage authentically in relationships outside work.
+            </p>
+            
+            <h3>Relationship and Social Impact</h3>
+            <p>
+                Burnout often strains personal relationships as emotional exhaustion reduces your capacity for connection, 
+                empathy, and engagement with family and friends. You might find yourself irritable, withdrawn, or unable 
+                to be fully present during social interactions. Partners and family members may feel neglected or confused 
+                by changes in your mood and availability.
+            </p>
+            
+            <p>
+                The cynicism that develops with burnout can also affect how you relate to others, making you more critical, 
+                negative, or pessimistic in social situations. This can create distance in relationships and reduce access 
+                to social support that's crucial for stress management and recovery.
+            </p>
+            
+            <h3>Career and Professional Development</h3>
+            <p>
+                While burnout often stems from work situations, it paradoxically impairs work performance and career 
+                advancement. Decreased concentration, motivation, and energy affect productivity and quality of work. 
+                The cynicism and detachment of burnout can damage professional relationships and limit opportunities 
+                for collaboration or leadership.
+            </p>
+            
+            <p>
+                Many people with burnout become risk-averse, avoiding new challenges or responsibilities that could 
+                advance their careers. The self-doubt that accompanies burnout can prevent you from pursuing promotions, 
+                changing positions, or advocating for your professional needs.
+            </p>
+            
+            <h3>Long-term Life Satisfaction</h3>
+            <p>
+                Perhaps most significantly, burnout can erode your sense of meaning and purpose in life. When work 
+                consumes so much energy and provides so little satisfaction, it can create existential questioning 
+                about your career choices, life direction, and personal values. This can lead to feelings of being 
+                stuck, regretful about career paths, or uncertain about how to create a fulfilling professional life.
+            </p>
+            
+            <p>
+                The good news is that workplace burnout is treatable, and recovery is possible with appropriate support 
+                and interventions. Professional therapy can help address both the symptoms and underlying factors that 
+                contribute to burnout, providing tools for both immediate relief and long-term resilience. When workplace 
+                stress intersects with other life challenges, comprehensive support addressing grief counselling or 
+                men's mental health issues may be beneficial for holistic recovery.
+            </p>
+        </div>
+    </section>
+    
+    <!-- V2 Virtual Therapy Benefits for Professionals - 450 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Why Virtual Workplace Burnout Therapy Works for Professionals</h2>
+            
+            <p>
+                Busy professionals experiencing workplace burnout often struggle to find time for traditional in-person 
+                therapy appointments. Virtual therapy offers a practical solution that recognizes the realities of 
+                demanding work schedules while providing the same quality of support and evidence-based treatment 
+                approaches as in-person sessions.
+            </p>
+            
+            <h3>Scheduling Flexibility for Demanding Careers</h3>
+            <p>
+                Virtual therapy eliminates commute time and waiting room delays, making it easier to fit sessions into 
+                packed professional schedules. You can access therapy from your office during lunch breaks, from home 
+                before or after work hours, or even while traveling for business. This flexibility ensures consistency 
+                in treatment, which is crucial for burnout recovery.
+            </p>
+            
+            <p>
+                Many professionals find evening and weekend appointment options particularly valuable, as these times 
+                don't conflict with work obligations or require explanations to colleagues about time away from the office.
+            </p>
+            
+            <h3>Privacy and Confidentiality</h3>
+            <p>
+                For professionals concerned about workplace stigma around mental health treatment, virtual therapy offers 
+                enhanced privacy. You don't need to worry about being seen entering a therapist's office or taking time 
+                off that might raise questions about your mental health. Sessions can be conducted from the privacy of 
+                your home or private office space.
+            </p>
+            
+            <p>
+                This privacy is particularly important for executives, healthcare workers, lawyers, and other professionals 
+                in roles where there might be concerns about how seeking mental health support could affect career advancement 
+                or professional reputation.
+            </p>
+            
+            <h3>Reduced Barriers to Consistent Treatment</h3>
+            <ul>
+                <li><strong>No travel time:</strong> Eliminate commute stress and time constraints that often lead to missed appointments</li>
+                <li><strong>Flexible locations:</strong> Access therapy from home, office, or while traveling for work</li>
+                <li><strong>Evening availability:</strong> Schedule sessions outside traditional business hours</li>
+                <li><strong>Immediate access:</strong> Book urgent sessions during particularly stressful work periods</li>
+                <li><strong>Consistent support:</strong> Continue therapy during busy seasons, deadlines, or work travel</li>
+                <li><strong>Technology integration:</strong> Use familiar video platforms that professionals already use for work</li>
+            </ul>
+            
+            <h3>Evidence-Based Approaches for Workplace Issues</h3>
+            <p>
+                Virtual therapy allows access to specialized approaches particularly effective for workplace burnout, 
+                including Acceptance and Commitment Therapy (ACT) for developing psychological flexibility and values-based 
+                action, cognitive-behavioral techniques for managing work-related stress and negative thinking patterns, 
+                mindfulness-based stress reduction adapted for workplace situations, and solution-focused therapy for 
+                identifying practical changes and boundary-setting strategies.
+            </p>
+            
+            <p>
+                Research consistently shows that virtual therapy is as effective as in-person treatment for anxiety, 
+                depression, and stress-related disorders. For workplace burnout specifically, the convenience and 
+                accessibility of virtual therapy often enhance treatment engagement and outcomes by removing practical 
+                barriers that might otherwise interfere with consistent participation.
+            </p>
+            
+            <!-- V2 Mid-section CTA -->
+            <div class="cta-callout">
+                <p>Ready to address workplace burnout with professional support?</p>
+                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Your Recovery</a>
+                <p style="margin-top: var(--space-sm);">Or call <a href="tel:+14163062157" class="text-cta">(416) 306-2157</a></p>
             </div>
         </div>
     </section>
-
-    <!-- Understanding Burnout Section -->
+    
+    <!-- Therapeutic Approaches for Workplace Burnout - 550 words -->
     <section class="content-section">
+        <div class="container-narrow">
+            <h2>Evidence-Based Therapeutic Approaches for Workplace Burnout</h2>
+            
+            <p>
+                Effective treatment for workplace burnout requires specialized therapeutic approaches that address both 
+                the symptoms and underlying factors contributing to professional stress and exhaustion. Different evidence-based 
+                therapies offer unique tools and strategies for burnout recovery, and the most effective treatment often 
+                combines elements from multiple approaches tailored to your specific situation and goals.
+            </p>
+            
+            <h3>Acceptance and Commitment Therapy (ACT) for Workplace Issues</h3>
+            <p>
+                ACT is particularly effective for workplace burnout because it helps develop psychological flexibility – 
+                the ability to stay present and engaged with your values even when facing difficult work situations. 
+                Rather than trying to eliminate work stress entirely, ACT teaches you to change your relationship with 
+                stress and make choices based on what's most important to you professionally and personally.
+            </p>
+            
+            <p>
+                In ACT therapy, we explore your core values around work and career, helping you identify when current 
+                work situations align with or conflict with these values. You learn mindfulness techniques for staying 
+                present during stressful work moments, acceptance strategies for dealing with unchangeable workplace 
+                realities, and commitment processes for taking meaningful action even when motivation is low.
+            </p>
+            
+            <h3>Cognitive Behavioral Therapy (CBT) for Work-Related Stress</h3>
+            <p>
+                CBT helps identify and modify the thought patterns and behaviors that contribute to workplace burnout. 
+                Many professionals develop perfectionist thinking, catastrophic worry about work outcomes, or all-or-nothing 
+                beliefs about career success that increase stress and reduce resilience.
+            </p>
+            
+            <p>
+                Through CBT, you learn to recognize these problematic thought patterns and develop more balanced, realistic 
+                perspectives on work challenges. We also work on behavioral changes such as time management strategies, 
+                boundary-setting techniques, and stress management skills that can reduce the daily pressures contributing 
+                to burnout.
+            </p>
+            
+            <h3>Mindfulness-Based Stress Reduction (MBSR)</h3>
+            <p>
+                Mindfulness practices are particularly valuable for workplace burnout because they help develop awareness 
+                of stress responses before they become overwhelming. Regular mindfulness practice can reduce the physical 
+                symptoms of chronic stress, improve emotional regulation, and enhance your ability to respond rather than 
+                react to workplace challenges.
+            </p>
+            
+            <p>
+                We integrate mindfulness techniques that can be used in professional settings, including brief breathing 
+                exercises for stressful meetings, mindful transitions between work tasks, and end-of-day practices for 
+                leaving work stress at the office.
+            </p>
+            
+            <h3>Solution-Focused Therapy for Practical Changes</h3>
+            <p>
+                This approach focuses on identifying specific, achievable changes that can improve your work situation 
+                and reduce burnout symptoms. Rather than spending extensive time analyzing problems, solution-focused 
+                therapy helps you discover your existing strengths and resources for managing workplace stress.
+            </p>
+            
+            <p>
+                We explore times when you've successfully managed work stress, identify what worked in those situations, 
+                and develop strategies for applying these successful approaches to current challenges. This might include 
+                communication strategies for difficult workplace relationships, time management techniques, or boundary-setting 
+                approaches.
+            </p>
+            
+            <h3>Trauma-Informed Approaches for Workplace Trauma</h3>
+            <p>
+                Some workplace burnout includes traumatic elements such as workplace bullying, harassment, organizational 
+                betrayal, or exposure to traumatic events in helping professions. When burnout includes trauma components, 
+                specialized trauma-informed approaches help process these experiences while building resilience and safety.
+            </p>
+            
+            <p>
+                These approaches recognize how trauma affects the nervous system and provide tools for regulation and 
+                recovery that complement other burnout interventions. We work at a pace that feels safe while addressing 
+                both the trauma and the broader burnout syndrome.
+            </p>
+            
+            <p>
+                The most effective treatment combines these approaches based on your specific needs, work situation, and 
+                goals. Some people benefit most from practical skill-building, while others need deeper work on values 
+                clarification or trauma processing. Professional assessment helps determine the best combination of 
+                approaches for your unique situation and ensures you receive comprehensive support for workplace burnout recovery.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Building Resilience and Prevention - 500 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Building Resilience and Preventing Future Burnout</h2>
+            
+            <p>
+                Recovery from workplace burnout isn't just about addressing current symptoms – it's about developing 
+                long-term resilience that helps you navigate future workplace challenges without returning to burnout. 
+                Building resilience involves developing both personal coping strategies and creating supportive work 
+                environments that sustain your well-being over time.
+            </p>
+            
+            <h3>Personal Resilience Strategies</h3>
+            <p>
+                <strong>Values-Based Decision Making:</strong> Regularly reconnecting with your core personal and professional 
+                values helps guide decisions about work commitments, career moves, and daily priorities. When you're clear 
+                about what matters most, it becomes easier to say no to demands that don't align with these values and yes 
+                to opportunities that do.
+            </p>
+            
+            <p>
+                <strong>Boundary Setting and Maintenance:</strong> Effective boundaries are crucial for preventing burnout 
+                recurrence. This includes physical boundaries around work hours and availability, emotional boundaries 
+                around taking responsibility for others' problems, and mental boundaries that allow you to disconnect 
+                from work during personal time. Boundaries require both clear communication and consistent enforcement.
+            </p>
+            
+            <p>
+                <strong>Self-Care as Professional Development:</strong> Rather than viewing self-care as selfish or optional, 
+                treating it as essential professional development helps maintain long-term career sustainability. Regular 
+                exercise, adequate sleep, meaningful relationships, and restorative activities aren't luxuries – they're 
+                requirements for sustained professional performance.
+            </p>
+            
+            <h3>Stress Management and Emotional Regulation</h3>
+            <p>
+                <strong>Daily Stress Management Practices:</strong> Incorporating brief stress management techniques into 
+                your daily routine helps prevent stress accumulation that leads to burnout. This might include morning 
+                intention-setting, midday breathing exercises, brief walks between meetings, or end-of-day transition rituals 
+                that help you leave work stress at the office.
+            </p>
+            
+            <p>
+                <strong>Emotional Awareness and Processing:</strong> Developing skill in recognizing and processing emotions 
+                as they arise prevents the emotional numbing and cynicism characteristic of burnout. This includes naming 
+                emotions accurately, understanding their messages, and responding to them appropriately rather than 
+                suppressing or being overwhelmed by them.
+            </p>
+            
+            <h3>Professional Relationship Skills</h3>
+            <ul>
+                <li><strong>Communication assertiveness:</strong> Express needs, concerns, and limits clearly and professionally</li>
+                <li><strong>Conflict resolution:</strong> Address workplace conflicts constructively before they create ongoing stress</li>
+                <li><strong>Support network building:</strong> Cultivate positive relationships with colleagues and mentors</li>
+                <li><strong>Leadership skills:</strong> Develop influence and advocacy abilities that improve your work environment</li>
+                <li><strong>Delegation and collaboration:</strong> Share responsibilities appropriately rather than taking on everything yourself</li>
+            </ul>
+            
+            <h3>Career Development and Flexibility</h3>
+            <p>
+                <strong>Continuous Learning and Growth:</strong> Engaging in professional development that aligns with your 
+                interests and values can restore meaning and engagement with work. This might include new skills, leadership 
+                training, or exploring different aspects of your field that spark curiosity and motivation.
+            </p>
+            
+            <p>
+                <strong>Career Path Flexibility:</strong> Maintaining awareness of different career options and pathways 
+                reduces the feeling of being trapped in unsatisfying work situations. This might include exploring lateral 
+                moves, industry changes, entrepreneurship, or different work arrangements that better support your well-being.
+            </p>
+            
+            <p>
+                Building resilience is an ongoing process that evolves as your career and life circumstances change. 
+                Professional support can help you develop personalized resilience strategies that work for your specific 
+                situation and provide ongoing guidance for maintaining these practices during both stable periods and times 
+                of increased workplace stress.
+            </p>
+        </div>
+    </section>
+    
+    <!-- What to Expect in Therapy - 400 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>What to Expect in Workplace Burnout Therapy</h2>
+            
+            <p>
+                Starting therapy for workplace burnout often feels daunting, especially when you're already exhausted 
+                and overwhelmed. Understanding what to expect can help reduce anxiety about the process and help you 
+                feel more prepared to begin this important step toward recovery and resilience.
+            </p>
+            
+            <h3>Initial Assessment and Goal Setting</h3>
+            <p>
+                We'll begin by exploring your current work situation, burnout symptoms, and how these are affecting your 
+                life both professionally and personally. This includes understanding your work environment, job demands, 
+                relationships with colleagues and supervisors, and any recent changes that might have contributed to burnout.
+            </p>
+            
+            <p>
+                We'll also discuss your career history, previous experiences with work stress, and what strategies have 
+                helped or haven't worked in the past. This information helps develop a personalized approach that builds 
+                on your strengths while addressing specific challenges.
+            </p>
+            
+            <h3>The Therapeutic Process</h3>
+            <p>
+                Early sessions often focus on immediate symptom relief and crisis management. If you're experiencing severe 
+                exhaustion, anxiety, or depression related to burnout, we'll work on developing coping strategies for managing 
+                these symptoms while you're still navigating your work situation.
+            </p>
+            
+            <p>
+                As therapy progresses, we'll explore deeper themes such as your relationship with work, career values and 
+                goals, boundary-setting strategies, communication skills, and long-term resilience building. We always 
+                work at a pace that feels manageable given your current stress level and energy.
+            </p>
+            
+            <h3>Practical Skills and Tools</h3>
+            <p>
+                Workplace burnout therapy is highly practical, focusing on tools you can implement immediately in your 
+                work situation. This might include stress management techniques you can use during the workday, communication 
+                scripts for difficult conversations, boundary-setting strategies, and time management approaches that 
+                reduce overwhelming workloads.
+            </p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="label">Session Length</span>
+                    <span class="value">50 Minutes</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Format</span>
+                    <span class="value">Virtual Ontario</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Scheduling</span>
+                    <span class="value">Flexible/Evening</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Investment</span>
+                    <span class="value">$175/session</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Insurance</span>
+                    <span class="value">Receipts Provided</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Confidentiality</span>
+                    <span class="value">Complete Privacy</span>
+                </div>
+            </div>
+            
+            <p>
+                Workplace burnout therapy is collaborative – you bring expertise about your specific work situation and 
+                challenges, while I provide evidence-based tools and professional guidance for addressing burnout. Many 
+                clients find that having professional support not only helps with immediate burnout recovery but also 
+                provides valuable skills for preventing future burnout and building a more sustainable career.
+            </p>
+        </div>
+    </section>
+    
+    <!-- About Your Therapist - 250 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>About Your Therapist</h2>
+            
+            <p>
+                Hi, I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who understands the unique challenges 
+                facing professionals dealing with workplace burnout. I've worked with individuals across various industries 
+                in Ontario – from healthcare workers and teachers to executives and entrepreneurs – helping them recover 
+                from burnout and build sustainable, fulfilling careers.
+            </p>
+            
+            <p>
+                I recognize that workplace burnout isn't a personal failing but a response to chronic workplace stress that 
+                hasn't been successfully managed. Every professional's experience with burnout is shaped by their specific 
+                work environment, role demands, career stage, and personal circumstances. My role is to provide practical, 
+                evidence-based support that helps you address both immediate symptoms and underlying factors.
+            </p>
+            
+            <p>
+                My approach to workplace burnout therapy focuses on developing sustainable solutions that work within your 
+                current professional reality while building resilience for long-term career satisfaction. We'll work 
+                together to identify practical strategies for managing work stress, setting appropriate boundaries, and 
+                reconnecting with meaning and purpose in your career.
+            </p>
+            
+            <p>
+                I understand that seeking therapy for workplace issues can feel sensitive, especially concerns about 
+                confidentiality and professional reputation. I provide virtual therapy throughout Ontario with flexible 
+                scheduling that accommodates demanding professional schedules, ensuring you can access support without 
+                compromising your privacy or work commitments.
+            </p>
+            
+            <p>
+                Whether you're experiencing early signs of burnout or are in the midst of severe symptoms, whether you're 
+                considering career changes or wanting to improve your current situation – professional support can help you 
+                navigate these challenges and build a more sustainable relationship with work. Sometimes workplace stress 
+                intersects with other life challenges, and comprehensive care addressing family counselling or 
+                related concerns may provide the most effective support for your overall well-being.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="process" id="process">
         <div class="container">
-            <div class="section-content">
-                <h2>What is Workplace Burnout?</h2>
-                <p>
-                    Workplace burnout is more than just feeling stressed or tired after a long day. It's a state of 
-                    physical, emotional, and mental exhaustion caused by prolonged exposure to emotionally demanding 
-                    work situations. Unlike regular stress, burnout creates lasting changes in how we think, feel, 
-                    and function both at work and in our personal lives.
-                </p>
-
-                <h3>The Three Dimensions of Burnout</h3>
+            <div class="section-header">
+                <p class="section-subtitle">The Journey</p>
+                <h2>How We'll Work Together on Workplace Burnout</h2>
+                <p class="lead-text">A collaborative approach that addresses both immediate burnout symptoms and long-term resilience building.</p>
                 
-                <h4>1. Emotional Exhaustion</h4>
-                <p>
-                    The feeling of being emotionally drained and depleted. You may feel like you have nothing left 
-                    to give, even after rest or vacation time. Simple tasks feel overwhelming, and you may experience 
-                    frequent fatigue, irritability, or mood swings.
-                </p>
-
-                <h4>2. Depersonalization (Cynicism)</h4>
-                <p>
-                    Developing negative, callous, or detached attitudes toward work, colleagues, or clients. You might 
-                    find yourself becoming more critical, sarcastic, or emotionally distant from your work and the 
-                    people you serve.
-                </p>
-
-                <h4>3. Reduced Personal Accomplishment</h4>
-                <p>
-                    Feeling ineffective, unproductive, or questioning your competence. Even when you complete tasks, 
-                    you may feel like nothing you do matters or makes a difference. This can lead to decreased 
-                    motivation and self-doubt about your abilities.
-                </p>
+                <div class="process-image">
+                    <img src="images/workplace-process-background.jpg" alt="Professional workplace burnout consultation and therapy discussion" loading="eager" fetchpriority="high" sizes="100vw">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Signs and Symptoms -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Recognizing the Signs of Workplace Burnout</h2>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Initial Assessment</h3>
+                    <p class="step-desc">We start with understanding your specific workplace situation, burnout symptoms, and how they're affecting your professional and personal life. No judgment, just clarity.</p>
+                </div>
                 
-                <h3>Physical Symptoms</h3>
-                <ul>
-                    <li>Chronic fatigue that doesn't improve with rest</li>
-                    <li>Frequent headaches or muscle tension</li>
-                    <li>Changes in sleep patterns (insomnia or oversleeping)</li>
-                    <li>Frequent illness due to lowered immunity</li>
-                    <li>Digestive issues or changes in appetite</li>
-                    <li>Increased use of alcohol, caffeine, or other substances</li>
-                </ul>
-
-                <h3>Emotional and Mental Symptoms</h3>
-                <ul>
-                    <li>Feeling dread about going to work</li>
-                    <li>Increased irritability or impatience with colleagues</li>
-                    <li>Feeling trapped, helpless, or defeated</li>
-                    <li>Loss of motivation and decreased satisfaction</li>
-                    <li>Anxiety, depression, or mood swings</li>
-                    <li>Difficulty concentrating or making decisions</li>
-                </ul>
-
-                <h3>Behavioral Changes</h3>
-                <ul>
-                    <li>Increased absenteeism or lateness</li>
-                    <li>Procrastination or decreased productivity</li>
-                    <li>Withdrawing from colleagues or social activities</li>
-                    <li>Increased conflicts with coworkers or family</li>
-                    <li>Using work time for non-work activities</li>
-                    <li>Neglecting personal needs or self-care</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stress vs Burnout -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Understanding the Difference: Stress vs. Burnout</h2>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Symptom Stabilization</h3>
+                    <p class="step-desc">Priority one is helping you manage current symptoms while you're still navigating your work situation. Practical tools you can use immediately.</p>
+                </div>
                 
-                <p>
-                    While stress and burnout are related, they're not the same thing. Understanding the difference 
-                    is crucial for choosing the right approach to recovery.
-                </p>
-
-                <h3>Workplace Stress</h3>
-                <ul>
-                    <li>Usually temporary and situation-specific</li>
-                    <li>Can be motivating in small doses</li>
-                    <li>Often resolves when the stressor is removed</li>
-                    <li>May involve feeling overwhelmed but still engaged</li>
-                    <li>Can often be managed with stress reduction techniques</li>
-                </ul>
-
-                <h3>Workplace Burnout</h3>
-                <ul>
-                    <li>Chronic condition that develops over time</li>
-                    <li>Leads to disengagement and cynicism</li>
-                    <li>Doesn't automatically resolve with time off</li>
-                    <li>Involves feeling empty and emotionally exhausted</li>
-                    <li>Often requires professional support and systemic changes</li>
-                </ul>
-
-                <p>
-                    If you're experiencing ongoing stress that isn't improving with typical stress management 
-                    techniques, or if you're noticing signs of cynicism and disengagement, you may be dealing 
-                    with burnout rather than temporary stress.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How Therapy Helps -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>How Therapy Can Support Burnout Recovery</h2>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Skills Development</h3>
+                    <p class="step-desc">Building sustainable strategies for boundary-setting, stress management, and maintaining your values while meeting professional demands.</p>
+                </div>
                 
-                <h3>Building Psychological Flexibility</h3>
-                <p>
-                    Using Acceptance and Commitment Therapy (ACT) approaches, we work on developing psychological 
-                    flexibility - the ability to adapt to changing workplace demands while staying connected to 
-                    your values. This includes learning to notice difficult thoughts and feelings without being 
-                    controlled by them.
-                </p>
-
-                <h3>Cognitive Restructuring</h3>
-                <p>
-                    Burnout often involves unhelpful thought patterns like perfectionism, catastrophic thinking, 
-                    or excessive self-criticism. Cognitive Behavioral Therapy (CBT) techniques help identify and 
-                    change these patterns, leading to more balanced and realistic thinking.
-                </p>
-
-                <h3>Boundary Setting and Self-Advocacy</h3>
-                <p>
-                    Many people experiencing burnout struggle with saying no, setting limits, or advocating for 
-                    their needs. Therapy provides a space to develop these crucial skills and practice implementing 
-                    them in your specific work context.
-                </p>
-
-                <h3>Stress Management Tools</h3>
-                <p>
-                    Learn practical, evidence-based techniques for managing stress in the moment, including 
-                    mindfulness practices, relaxation techniques, and strategies for emotional regulation that 
-                    you can use throughout your workday.
-                </p>
-
-                <h3>Values Clarification</h3>
-                <p>
-                    Burnout often occurs when there's a disconnect between your personal values and your work 
-                    environment. Therapy helps clarify what matters most to you and develop strategies for 
-                    aligning your career with your values.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Prevention Strategies -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Prevention Strategies for Long-term Success</h2>
-                
-                <h3>Personal Prevention Strategies</h3>
-                <ul>
-                    <li>Regular self-assessment of stress levels and job satisfaction</li>
-                    <li>Maintaining clear boundaries between work and personal time</li>
-                    <li>Developing a strong support network both inside and outside work</li>
-                    <li>Prioritizing physical health through exercise, nutrition, and sleep</li>
-                    <li>Engaging in meaningful activities outside of work</li>
-                    <li>Learning to recognize early warning signs of burnout</li>
-                </ul>
-
-                <h3>Workplace Advocacy</h3>
-                <ul>
-                    <li>Communicating workload concerns to supervisors</li>
-                    <li>Seeking opportunities for skill development and growth</li>
-                    <li>Advocating for reasonable accommodations when needed</li>
-                    <li>Contributing to positive workplace culture changes</li>
-                    <li>Utilizing employee assistance programs when available</li>
-                </ul>
-
-                <h3>When Workplace Changes Are Needed</h3>
-                <p>
-                    Sometimes burnout occurs in toxic or unsustainable work environments. Therapy can help you 
-                    assess whether your workplace is contributing to burnout and develop strategies for either 
-                    improving your current situation or making necessary career changes.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local Services Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Finding Workplace Stress & Burnout Therapy in Ontario</h2>
-                <p>
-                    Professional support for workplace burnout is available throughout Ontario. Virtual therapy 
-                    eliminates geographical barriers and provides flexible scheduling for busy professionals.
-                </p>
-
-                <div class="local-services">
-                    <div class="local-service-card">
-                        <h4>Burnout Therapist Toronto</h4>
-                        <p>
-                            For those seeking <strong>burnout therapy in Toronto</strong>, our virtual practice offers 
-                            specialized support for professionals in Canada's largest business center. We understand 
-                            the unique pressures of Toronto's fast-paced work environment and provide evidence-based 
-                            treatment that fits into demanding schedules.
-                        </p>
-                    </div>
-
-                    <div class="local-service-card">
-                        <h4>Stress Counselling Ottawa</h4>
-                        <p>
-                            Federal employees and professionals seeking <strong>stress counselling in Ottawa</strong> 
-                            can access specialized support for government workplace pressures, public sector challenges, 
-                            and the unique stressors of working in Canada's capital city.
-                        </p>
-                    </div>
-
-                    <div class="local-service-card">
-                        <h4>Workplace Stress Therapist Mississauga</h4>
-                        <p>
-                            Professionals in Mississauga dealing with workplace stress can access virtual therapy 
-                            sessions designed for the corporate culture of Canada's sixth-largest city. We provide 
-                            support for <strong>workplace stress therapy in Mississauga</strong> that accommodates 
-                            busy professional schedules.
-                        </p>
-                    </div>
-
-                    <div class="local-service-card">
-                        <h4>Burnout Support Hamilton</h4>
-                        <p>
-                            Those seeking <strong>therapist for burnout in Hamilton</strong> can access comprehensive 
-                            support that understands both traditional industrial work environments and the growing 
-                            tech and healthcare sectors in the Hamilton area.
-                        </p>
-                    </div>
-
-                    <div class="local-service-card">
-                        <h4>Burnout Support London Ontario</h4>
-                        <p>
-                            Professionals in London, Ontario, can access <strong>burnout support in London Ontario</strong> 
-                            tailored to the education, healthcare, and business sectors prominent in Southwestern Ontario. 
-                            Virtual sessions provide flexibility for shift workers and busy professionals.
-                        </p>
-                    </div>
-
-                    <div class="local-service-card">
-                        <h4>Workplace Stress Therapy Kitchener-Waterloo</h4>
-                        <p>
-                            The tech corridor of Kitchener-Waterloo presents unique workplace challenges. Our support 
-                            for workplace stress in the KW area addresses the high-pressure environment of tech startups, 
-                            established corporations, and the academic pressures of the university community.
-                        </p>
-                    </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Resilience Building</h3>
+                    <p class="step-desc">Long-term planning for career sustainability, preventing future burnout, and creating a fulfilling professional life that aligns with your values.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- FAQ Section -->
+    
+    <!-- FAQ Section - V2 Objection Handling -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Frequently Asked Questions</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What's the difference between stress and burnout?</div>
-                    <div class="faq-answer">
-                        Stress is typically temporary and related to specific situations, while burnout is a state of 
-                        physical, emotional, and mental exhaustion caused by prolonged exposure to demanding work conditions. 
-                        Burnout includes cynicism, detachment, and a sense of ineffectiveness that doesn't resolve with 
-                        typical stress management techniques.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">How long does it take to recover from workplace burnout?</div>
-                    <div class="faq-answer">
-                        Recovery from burnout varies greatly depending on severity and individual factors. With proper 
-                        support and therapy, many people begin feeling improvement within a few weeks to months. Complete 
-                        recovery may take longer and often involves both therapeutic support and workplace changes. The 
-                        key is starting the recovery process as soon as possible.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Can I get therapy for burnout while still working?</div>
-                    <div class="faq-answer">
-                        Absolutely. Many people successfully engage in burnout therapy while continuing to work. Therapy 
-                        can provide tools for managing current work stress while developing strategies for prevention and 
-                        recovery. Virtual sessions offer flexibility for busy professionals, including evening appointments 
-                        and lunch-hour sessions.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">What therapy approaches work best for workplace burnout?</div>
-                    <div class="faq-answer">
-                        Effective approaches include Acceptance and Commitment Therapy (ACT) for building psychological 
-                        flexibility, Cognitive Behavioral Therapy (CBT) for changing unhelpful thought patterns, and 
-                        stress management techniques. The best approach depends on individual needs, work environment, 
-                        and personal preferences. Most effective treatment is tailored to your specific situation.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">How can I prevent burnout from happening again?</div>
-                    <div class="faq-answer">
-                        Prevention involves developing better boundaries, stress management skills, self-advocacy, and 
-                        realistic goal-setting. Therapy helps identify personal risk factors and develop sustainable 
-                        work practices. Sometimes workplace changes are also necessary, and therapy can help you navigate 
-                        these decisions and conversations with employers.
-                    </div>
-                </div>
+        <div class="container-narrow">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What are the early signs of workplace burnout?</div>
+                <p>
+                    Early signs of workplace burnout include chronic exhaustion that doesn't improve with rest, decreased 
+                    motivation and engagement at work, increased cynicism or negativity about work, difficulty concentrating, 
+                    and physical symptoms like headaches or sleep problems. You might also notice decreased productivity, 
+                    increased absences, or feeling emotionally drained by work demands. Recognizing these early signs is 
+                    important for seeking support before burnout becomes more severe.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does it take to recover from workplace burnout?</div>
+                <p>
+                    Recovery from workplace burnout varies significantly depending on the severity, individual circumstances, 
+                    and whether you're able to make necessary changes to reduce stress. With professional support and 
+                    appropriate changes, some people notice improvement within weeks to months, while more severe burnout 
+                    may require longer recovery periods. The key is addressing both the symptoms and underlying workplace 
+                    factors contributing to burnout rather than just pushing through the exhaustion.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can workplace burnout therapy be conducted virtually?</div>
+                <p>
+                    Yes, virtual workplace burnout therapy is highly effective and often more convenient for busy professionals. 
+                    Virtual sessions eliminate commute time, allow for flexible scheduling around work demands, and provide 
+                    privacy that some people prefer when discussing workplace issues. Research shows virtual therapy is as 
+                    effective as in-person sessions for burnout and stress-related concerns, and many professionals find 
+                    the convenience enhances their ability to maintain consistent treatment.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What therapeutic approaches are most effective for workplace burnout?</div>
+                <p>
+                    Effective approaches for workplace burnout include Acceptance and Commitment Therapy (ACT) to develop 
+                    psychological flexibility and values-based action, Cognitive Behavioral Therapy (CBT) to address negative 
+                    thought patterns and develop coping skills, mindfulness-based approaches for stress reduction, and 
+                    solution-focused therapy to identify practical changes and boundaries. The best approach depends on your 
+                    specific situation, work environment, and personal goals for recovery and resilience building.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Should I tell my employer about workplace burnout therapy?</div>
+                <p>
+                    This is a personal decision that depends on your workplace culture and relationship with your employer. 
+                    Some workplaces are supportive of mental health treatment, while others may not be. You're not required 
+                    to disclose therapy, and sessions are completely confidential. Many people find therapy helpful for 
+                    developing strategies to manage workplace stress without necessarily involving their employer in the 
+                    therapeutic process, though some choose to advocate for workplace changes that support their well-being.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will therapy help me decide whether to stay in my current job?</div>
+                <p>
+                    Therapy can provide valuable clarity about career decisions by helping you identify your core values, 
+                    assess your current work situation objectively, and explore options for improving job satisfaction. 
+                    Some people find that developing better coping skills and boundaries allows them to thrive in their 
+                    current position, while others discover that career changes are necessary for their well-being. Therapy 
+                    supports you in making informed decisions that align with your values and life goals rather than decisions 
+                    based on burnout symptoms alone.
+                </p>
             </div>
         </div>
     </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta" id="contact-cta">
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="section-content">
+            <div class="section-header">
+                <p class="section-subtitle">Connect</p>
                 <h2>Ready to Address Workplace Burnout?</h2>
-                <p>
-                    Professional support can help you recover from burnout and develop strategies for long-term 
-                    workplace wellness. Don't let burnout derail your career or well-being.
-                </p>
+                <p class="lead-text">Professional support for workplace burnout and career sustainability. Your free 15-minute consultation is just a conversation - no forms, no commitment, no pressure.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    
+                    <ul class="contact-methods">
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <div class="contact-details">
+                                <strong>Direct Line:</strong><br>
+                                <a href="#contact">Book Consultation</a><br>
+                                <small>Call or text for immediate response</small>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            <div class="contact-details">
+                                <strong>Email:</strong><br>
+                                <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a><br>
+                                <small>Response during business hours</small>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <span class="contact-icon">💻</span>
+                            <div class="contact-details">
+                                <strong>Session Options:</strong><br>
+                                Virtual throughout Ontario<br>
+                                <small>Flexible evening appointments</small>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="virtual-session-image">
+                        <img src="images/workplace-contact-background.jpg" alt="Professional workplace burnout therapy virtual session" loading="eager" fetchpriority="high" sizes="100vw">
+                    </div>
+                    
+                    <div class="investment-highlight">
+                        <h4>Investment & Insurance</h4>
+                        <p><strong>$175 per 50-minute session</strong></p>
+                        <p>Extended health plans accepted<br>
+                        Detailed receipts provided for insurance reimbursement</p>
+                    </div>
+                </div>
                 
-                <div class="cta-buttons">
-                    <a href="tel:+14163062157" class="cta-button">
-                        📞 Call (416) 306-2157
-                    </a>
-                    <a href="mailto:info@nextsteptherapy.ca?subject=Workplace Burnout Support Inquiry" class="cta-button secondary">
-                        ✉️ Email for Free Consultation
-                    </a>
+                <div class="contact-form">
+                    <h3>Book Your Free Consultation</h3>
+                    <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
+                        <input type="hidden" name="_subject" value="Workplace Burnout Consultation Request - Next Step Therapy">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="workplace-situation">Tell me about your workplace situation</label>
+                            <textarea id="workplace-situation" name="workplace-situation" rows="4" placeholder="What's bringing you to consider therapy for workplace burnout? Any specific work challenges or symptoms you're experiencing?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability">Preferred appointment times</label>
+                            <select id="availability" name="availability">
+                                <option value="">Select preference</option>
+                                <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+                                <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+                                <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+                                <option value="Weekends">Weekends</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="cta-primary">Request Free Consultation</button>
+                        
+                        <p class="form-disclaimer">
+                            By submitting this form, you consent to being contacted about your consultation request. 
+                            All information is kept strictly confidential.
+                        </p>
+                    </form>
+                    
+                    <div class="alternative-contact">
+                        <p><strong>Prefer to call or text?</strong></p>
+                        <p><a href="tel:+14163062157" class="cta-secondary">(416) 306-2157</a></p>
+                        <p>Available for same-day response</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <p><strong>Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</strong></p>
-            <p>Serving professionals across Ontario with virtual burnout and workplace stress therapy</p>
-            <p>© 2025 Next Step Therapy. Evidence-based support for workplace mental health.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="../about">About Jesse</a>
+                    <a href="../services">Services</a>
+                    <a href="../approach">Therapeutic Approach</a>
+                    <a href="../fees">Fees & Insurance</a>
+                    <a href="https://nextsteptherapy.ca/#contact">Contact Form</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Professional Support</h4>
+                    <a href="perfectionism-and-burnout-therapy-toronto.html">Perfectionism & Burnout</a>
+                    <a href="grief-counselling-toronto.html">Grief Counselling</a>
+                    <a href="university-anxiety.html">University Anxiety</a>
+                    <a href="virtual-therapy-ontario.html">Virtual Therapy Ontario</a>
+                    <a href="about.html">About Jesse</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Virtual Sessions Throughout Ontario</p>
+                    <p>📧 info@nextsteptherapy.ca</p>
+                    <p>📞 <a href="tel:+14163062157">(416) 306-2157</a></p>
+                    <p>💬 <a href="sms:+14163062157">Text Available</a></p>
+                    <p><strong>CRPO Registration #10979</strong></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Step Therapy | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | All rights reserved</p>
+            </div>
         </div>
     </footer>
+    
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="tel:+14163062157" class="mobile-sticky-cta">Get Support Now</a>
+    
+    <!-- V2 Smart Header & Mobile CTA JavaScript -->
+    <script>
+    // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) { // Mobile only
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Scrolling down & past initial area
+                header.classList.add('hide-on-scroll');
+            } else if (scrollTop < lastScrollTop) {
+                // Scrolling up
+                header.classList.remove('hide-on-scroll');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
+    });
+    
+    // Show mobile sticky CTA after scrolling 30% down page
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled / document.body.offsetHeight;
+        const stickyCTA = document.querySelector('.mobile-sticky-cta');
+        
+        if (rate > 0.3 && window.innerWidth <= 768) {
+            stickyCTA.classList.add('show');
+        } else {
+            stickyCTA.classList.remove('show');
+        }
+    });
+    </script>
 </body>
 </html>

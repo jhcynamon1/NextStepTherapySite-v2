@@ -33,20 +33,16 @@ class EnhancedGSCExtractor {
         console.log('✅ GSC API initialized');
     }
 
-    async extractPageLevelData() {
-        console.log('📊 Extracting page-level performance data...');
-        
-        const endDate = new Date();
-        const startDate = new Date();
-        startDate.setDate(startDate.getDate() - 28); // Last 28 days
+    async extractPageLevelData(startDate, endDate, fileName) {
+        console.log(`📊 Extracting page-level performance data from ${startDate} to ${endDate}...`);
         
         try {
             // Get page-level data
             const pageResponse = await this.searchconsole.searchanalytics.query({
                 siteUrl: this.siteUrl,
                 requestBody: {
-                    startDate: startDate.toISOString().split('T')[0],
-                    endDate: endDate.toISOString().split('T')[0],
+                    startDate: startDate,
+                    endDate: endDate,
                     dimensions: ['page'],
                     rowLimit: 1000,
                     startRow: 0
@@ -57,8 +53,8 @@ class EnhancedGSCExtractor {
             const pageQueryResponse = await this.searchconsole.searchanalytics.query({
                 siteUrl: this.siteUrl,
                 requestBody: {
-                    startDate: startDate.toISOString().split('T')[0],
-                    endDate: endDate.toISOString().split('T')[0],
+                    startDate: startDate,
+                    endDate: endDate,
                     dimensions: ['page', 'query'],
                     rowLimit: 5000,
                     startRow: 0
@@ -72,7 +68,7 @@ class EnhancedGSCExtractor {
             const enhancedPageData = this.combinePageData(pageData, pageQueryData);
             
             // Save data
-            this.savePageData(enhancedPageData);
+            this.savePageData(enhancedPageData, fileName);
             
             console.log(`✅ Extracted data for ${enhancedPageData.length} pages`);
             return enhancedPageData;
@@ -199,22 +195,25 @@ class EnhancedGSCExtractor {
         return Math.min(score, 10); // Cap at 10
     }
 
-    savePageData(data) {
+    savePageData(data, fileName) {
         // Ensure directory exists
         if (!fs.existsSync('gsc_data')) {
             fs.mkdirSync('gsc_data', { recursive: true });
         }
         
+        const jsonFileName = `gsc_data/${fileName}.json`;
+        const csvFileName = `gsc_data/${fileName}.csv`;
+        
         // Save detailed page data
-        fs.writeFileSync('gsc_data/page_performance_data.json', JSON.stringify(data, null, 2));
+        fs.writeFileSync(jsonFileName, JSON.stringify(data, null, 2));
         
         // Also save in CSV format for easy analysis
         const csvData = this.convertToCSV(data);
-        fs.writeFileSync('gsc_data/page_performance_data.csv', csvData);
+        fs.writeFileSync(csvFileName, csvData);
         
         console.log('💾 Page data saved to:');
-        console.log('   • gsc_data/page_performance_data.json');
-        console.log('   • gsc_data/page_performance_data.csv');
+        console.log(`   • ${jsonFileName}`);
+        console.log(`   • ${csvFileName}`);
     }
 
     convertToCSV(data) {
@@ -241,11 +240,11 @@ class EnhancedGSCExtractor {
         ).join('\n');
     }
 
-    async generatePageReport() {
+    async generatePageReport(fileName) {
         console.log('\n📊 PAGE PERFORMANCE REPORT');
         console.log('==========================\n');
         
-        const data = JSON.parse(fs.readFileSync('gsc_data/page_performance_data.json', 'utf8'));
+        const data = JSON.parse(fs.readFileSync(`gsc_data/${fileName}.json`, 'utf8'));
         
         // Sort by impressions
         data.sort((a, b) => b.impressions - a.impressions);
@@ -292,24 +291,40 @@ if (require.main === module) {
     
     switch (command) {
         case 'extract':
+            const startDate = process.argv[3];
+            const endDate = process.argv[4];
+            const fileName = process.argv[5];
+
+            if (!startDate || !endDate || !fileName) {
+                console.error('Usage: node enhanced_gsc_page_extractor.js extract <YYYY-MM-DD_start> <YYYY-MM-DD_end> <output_filename_no_extension>');
+                process.exit(1);
+            }
+
             extractor.initialize()
-                .then(() => extractor.extractPageLevelData())
-                .then(() => extractor.generatePageReport())
+                .then(() => extractor.extractPageLevelData(startDate, endDate, fileName))
+                .then(() => extractor.generatePageReport(fileName))
                 .catch(console.error);
             break;
         case 'report':
-            extractor.generatePageReport().catch(console.error);
+            const reportFileName = process.argv[3];
+            if (!reportFileName) {
+                console.log('Please provide the filename (without extension) of the data to report on.');
+                console.log('Usage: node enhanced_gsc_page_extractor.js report <filename>');
+                break;
+            }
+            extractor.generatePageReport(reportFileName).catch(console.error);
             break;
         default:
             console.log('📊 Enhanced GSC Page-Level Data Extractor');
             console.log('');
             console.log('Usage:');
-            console.log('  node enhanced_gsc_page_extractor.js extract  # Extract page-level data');
-            console.log('  node enhanced_gsc_page_extractor.js report   # Generate performance report');
+            console.log('  node enhanced_gsc_page_extractor.js extract <start_date> <end_date> <filename> # Extract page-level data for a date range');
+            console.log('  node enhanced_gsc_page_extractor.js report <filename>   # Generate performance report from a file');
             console.log('');
-            console.log('Output:');
-            console.log('  • gsc_data/page_performance_data.json');
-            console.log('  • gsc_data/page_performance_data.csv');
+            console.log('Example:');
+            console.log('  node enhanced_gsc_page_extractor.js extract 2024-05-01 2024-05-28 may_performance_data');
+            console.log('');
+            console.log('Output files will be saved in the "gsc_data" directory.');
     }
 }
 
