@@ -14,7 +14,7 @@
             'send_page_view': true
         });
 
-        // Track phone clicks and form submissions
+        // Track phone clicks
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -25,10 +25,34 @@
                     });
                 });
             });
+        });
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
 
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('form').forEach(form => {
                 form.addEventListener('submit', function() {
                     gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
                         'event_category': 'conversion',
                         'value': 175,
                         'currency': 'CAD'
@@ -44,28 +68,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- SEO Meta Data -->
-    <title>Grief Counselling Toronto | Bereavement Support & Loss Therapy | CRPO #10979</title>
-    <meta name="description" content="Compassionate grief counselling in Toronto. Professional bereavement support for loss, death, and life transitions. Virtual therapy with CRPO registered psychotherapist.">
+    <!-- V2 Conversion-Optimized Meta Data -->
+    <title>Grief Counselling Toronto | Find Hope Through Loss | CRPO #10979</title>
+    <meta name="description" content="Toronto grief counselling that honours your unique journey through loss. Professional support for navigating grief, bereavement, and healing. Virtual sessions across Ontario. CRPO registered therapist.">
     
-    <!-- Open Graph Tags -->
+    <!-- Open Graph Tags for Social Sharing -->
     <meta property="og:title" content="Grief Counselling Toronto | Next Step Therapy">
-    <meta property="og:description" content="Compassionate grief counselling and bereavement support in Toronto with evidence-based approaches.">
+    <meta property="og:description" content="Toronto grief counselling that honours your unique journey through loss. Professional support for navigating grief, bereavement, and healing. Virtual sessions across Ontario.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/grief-counselling-toronto">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/grief-counselling-og.jpg">
     
-    <!-- Canonical URL -->
+    <!-- Canonical URL for SEO -->
     <link rel="canonical" href="https://nextsteptherapy.ca/grief-counselling-toronto">
     
-    <!-- Article Schema -->
+    <!-- Enhanced Article Schema - V2 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Grief Counselling Toronto: Compassionate Support for Loss and Bereavement",
-      "description": "Professional grief counselling services in Toronto, helping individuals navigate loss, bereavement, and life transitions with compassionate care.",
-      "wordCount": "2500",
+      "headline": "Grief Counselling Toronto: Finding Hope and Healing Through Loss",
+      "description": "Comprehensive guide to grief counselling and bereavement support in Toronto, including understanding the grieving process, therapeutic approaches, and healing strategies for loss and bereavement",
+      "wordCount": "6000",
       "author": {
         "@type": "Person",
         "@id": "https://nextsteptherapy.ca/#jessecynamon",
@@ -75,34 +99,39 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Next Step Therapy",
-        "url": "https://nextsteptherapy.ca"
+        "@id": "https://nextsteptherapy.ca/#organization",
+        "name": "Next Step Therapy"
       },
-      "datePublished": "2025-09-03",
-      "dateModified": "2025-09-03"
+      "datePublished": "2025-09-04",
+      "dateModified": "2025-09-04",
+      "mainEntity": {
+        "@type": "MedicalCondition",
+        "name": "Grief and Bereavement",
+        "possibleTreatment": {
+          "@type": "MedicalTherapy",
+          "name": "Grief Counselling"
+        }
+      }
     }
     </script>
-
-    <!-- LocalBusiness Schema -->
+    
+    <!-- LocalBusiness Schema for Toronto Targeting -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Next Step Therapy - Grief Counselling Toronto",
-      "description": "Professional grief counselling and bereavement support services in Toronto",
-      "url": "https://nextsteptherapy.ca/grief-counselling-toronto",
-      "telephone": "(416) 306-2157",
-      "email": "info@nextsteptherapy.ca",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "ON",
-        "addressCountry": "CA",
-        "addressLocality": "Toronto"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Toronto, Ontario"
-      },
+      "name": "Next Step Therapy",
+      "description": "Virtual grief counselling and bereavement support across Toronto and Ontario",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Toronto"
+        },
+        {
+          "@type": "State",
+          "name": "Ontario"
+        }
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Grief Counselling Services",
@@ -111,16 +140,19 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Grief Counselling",
-              "description": "Individual grief counselling for loss and bereavement"
+              "name": "Grief Counselling and Bereavement Support",
+              "provider": {
+                "@type": "Person",
+                "name": "Jesse Cynamon, RP"
+              }
             }
           }
         ]
       }
     }
     </script>
-
-    <!-- FAQPage Schema -->
+    
+    <!-- Enhanced FAQ Schema - V2 Conversion Focus -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -128,34 +160,18 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is grief counselling and how can it help?",
+          "name": "Is there a right way to grieve?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Grief counselling provides a safe, supportive space to process the complex emotions that come with loss. It helps individuals understand that grief is a natural response and provides tools for coping with the unique challenges of bereavement."
+            "text": "No, there is no universal timeline or correct way to grieve. Grief is highly individual and can vary significantly based on your relationship to the person who died, your cultural background, personal coping style, and life circumstances. Some people grieve intensely at first then gradually adjust, while others experience waves of grief that come and go over time. Your grief is valid regardless of how it manifests."
           }
         },
         {
           "@type": "Question",
-          "name": "How long does the grief counselling process take?",
+          "name": "How long does grief last?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "There's no set timeline for grief counselling as everyone's journey is unique. Some people find benefit in just a few sessions, while others may need longer-term support. We work at your pace and adjust as your needs change."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of loss do you help with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We support individuals dealing with various types of loss including death of loved ones, relationship endings, job loss, health changes, pet loss, and other significant life transitions that involve grief."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is virtual grief counselling as effective as in-person?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Research has shown virtual therapy to be highly effective for grief counselling. Many clients appreciate the comfort and privacy of accessing support from their own space, especially during vulnerable times."
+            "text": "Grief doesn't follow a predictable timeline. While intense grief symptoms often lessen over months to years, love and memories of the person continue throughout life. Many people find that grief changes rather than ends - becoming less overwhelming while remaining meaningful. Some experience periodic waves of grief even years later, especially around anniversaries or significant life events, which is completely normal."
           }
         },
         {
@@ -163,104 +179,104 @@
           "name": "When should I seek grief counselling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Consider grief counselling if you're feeling overwhelmed by loss, experiencing persistent sadness or anxiety, having difficulty functioning in daily life, or if friends and family suggest you might benefit from professional support."
+            "text": "Consider grief counselling if you're feeling overwhelmed, isolated, or stuck in your grief. Counselling can help if you're experiencing prolonged difficulty functioning, complicated grief reactions, intense anger or guilt, or if you're struggling to find meaning after loss. There's no 'right' time to seek support - whether immediately after loss or months later, professional guidance can provide valuable tools for navigating your unique grief journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can virtual grief counselling be effective?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, virtual grief counselling can be highly effective. Many clients appreciate the comfort and privacy of receiving support from their own home, which can feel safer when dealing with vulnerable emotions. Virtual sessions eliminate transportation barriers and allow you to maintain consistent support even during difficult periods when leaving home feels challenging. The therapeutic relationship and healing process remain just as meaningful in a virtual format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does grief counselling help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grief counselling provides a safe space to express and process emotions, develop healthy coping strategies, and work through complicated feelings like guilt, anger, or numbness. It helps normalize the grief experience, addresses any complications in the grieving process, and supports you in finding ways to honour your loved one while rebuilding meaningful life. Counselling doesn't take away grief but helps you navigate it with support and understanding."
           }
         }
       ]
     }
     </script>
-
+    
     <style>
+        /* Match homepage design exactly with V2 enhancements */
         :root {
-            --primary-green: #2E7D32;
-            --secondary-green: #4CAF50;
-            --light-green: #E8F5E8;
-            --accent-blue: #1565C0;
-            --warm-gray: #F5F5F5;
-            --dark-gray: #424242;
-            --text-primary: #2c3e50;
-            --text-secondary: #546e7a;
-            --background-primary: #ffffff;
-            --background-secondary: #f8f9fa;
-            --border-light: #e9ecef;
-            --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-            --radius-sm: 4px;
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
             --radius-md: 8px;
             --radius-lg: 12px;
-            --max-width: 1200px;
-            --content-width: 800px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-body);
+            line-height: 1.7;
             color: var(--text-primary);
-            background-color: var(--background-primary);
-            font-size: 16px;
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
+        
         .container {
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 var(--space-md);
-            margin-left: auto;
-            margin-right: auto;
         }
-
+        
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
         /* Minimal Landing Page Header */
         .header {
             background: var(--background-primary);
             padding: var(--space-sm) 0;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-
+        
         .minimal-header .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            text-decoration: none;
-        }
-
-        .credentials-badge-prominent {
-            background: var(--light-green);
-            color: var(--primary-green);
-            padding: 0.25rem 0.5rem;
-            border-radius: var(--radius-sm);
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
+        
         .header-cta {
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
             padding: 0.5rem 1rem;
             border-radius: var(--radius-md);
@@ -268,237 +284,550 @@
             font-weight: 600;
             transition: all 0.2s ease;
         }
-
+        
         .header-cta:hover {
             background: linear-gradient(135deg, #1B5E20, #388E3C);
             transform: translateY(-1px);
             color: white;
         }
-
-        /* Hero Section */
-        .hero {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(135deg, var(--light-green) 0%, var(--background-primary) 100%);
-            text-align: center;
+        
+        .header.hide-on-scroll {
+            transform: translateY(-100%);
         }
-
-        .hero-content {
-            max-width: var(--content-width);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-            line-height: 1.2;
-        }
-
-        .hero .lead-text {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-xs);
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-            color: white;
-            padding: var(--space-md) var(--space-xl);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.125rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--shadow-medium);
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--shadow-medium);
-            color: white;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .content-section:nth-child(even) {
-            background-color: var(--background-secondary);
-        }
-
-        .section-content {
-            max-width: var(--content-width);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-md);
-            text-align: center;
-        }
-
-        .section-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            margin: var(--space-lg) 0 var(--space-md) 0;
-        }
-
-        .section-content p {
-            margin-bottom: var(--space-md);
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .section-content ul {
-            margin-bottom: var(--space-md);
-            padding-left: var(--space-lg);
-        }
-
-        .section-content li {
-            margin-bottom: var(--space-xs);
-            color: var(--text-secondary);
-        }
-
-        /* FAQ Section */
-        .faq-item {
-            margin-bottom: var(--space-lg);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: var(--background-secondary);
-            padding: var(--space-md);
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .faq-question:hover {
-            background: var(--light-green);
-        }
-
-        .faq-answer {
-            padding: var(--space-md);
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Contact CTA Section */
-        .contact-cta {
-            padding: var(--space-2xl) 0;
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
-            color: white;
-            text-align: center;
-        }
-
-        .contact-cta h2 {
-            color: white;
-            margin-bottom: var(--space-md);
-        }
-
-        .contact-cta p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: var(--space-xl);
-            font-size: 1.125rem;
-        }
-
-        .cta-buttons {
+        
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: var(--space-md);
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-flex;
+            justify-content: space-between;
             align-items: center;
-            gap: var(--space-xs);
-            background: white;
-            color: var(--primary-green);
-            padding: var(--space-md) var(--space-xl);
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+        
+        /* V2 Prominent CRPO Badge */
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
             border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            box-shadow: 0 2px 8px rgba(74, 107, 122, 0.2);
+        }
+        
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        
+        .nav-desktop {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-desktop:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
         }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-            color: var(--primary-green);
-        }
-
-        .cta-button.secondary {
-            background: transparent;
+        
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
             color: white;
-            border: 2px solid white;
         }
-
-        .cta-button.secondary:hover {
-            background: white;
-            color: var(--primary-green);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--text-primary);
+        
+        .nav-mobile-phone {
+            display: none;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
             color: white;
-            padding: var(--space-xl) 0;
-            text-align: center;
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
         }
-
-        .footer p {
-            margin-bottom: var(--space-sm);
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* Responsive Design */
+        
+        /* Mobile Smart Header Optimization */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .header {
+                max-height: 50px;
+                padding: 0.25rem 0;
             }
-
-            .hero .lead-text {
-                font-size: 1rem;
-            }
-
-            .section-content h2 {
-                font-size: 1.75rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
+            
+            .header-content {
+                justify-content: space-between;
                 align-items: center;
             }
-
-            .minimal-header .header-content {
+            
+            .logo-section {
+                gap: 0.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .credentials-badge-prominent {
+                display: none; /* Hidden in mobile sticky */
+            }
+            
+            .nav-desktop {
+                display: none;
+            }
+            
+            .nav-cta {
+                display: none; /* Hide desktop CTA */
+            }
+            
+            .nav-mobile-phone {
+                display: inline-block; /* Show mobile phone CTA */
+            }
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            /* Mobile responsive - max 2.5rem on mobile */
+            max-height: calc(2.5rem * 2.2); /* 2 lines max */
+            overflow: hidden;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+        
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero Section with V2 Conversion Focus */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+        
+        /* V2 Trust Signal Hierarchy - Above Fold */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            flex-wrap: wrap;
+        }
+        
+        .trust-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-deep);
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(74, 107, 122, 0.08);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 50px;
+        }
+        
+        .trust-indicator::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .trust-indicators {
                 flex-direction: column;
                 gap: var(--space-sm);
-                text-align: center;
+            }
+            
+            .trust-indicator {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+        
+        /* V2 CTA Optimization */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(143, 166, 142, 0.3);
+            transition: all 0.2s ease;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--primary-deep);
+            border: 2px solid var(--primary-light);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 160px;
+            text-align: center;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            margin: var(--space-lg) 0;
+        }
+        
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        .text-cta {
+            color: var(--primary-soft-blue);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .text-cta:hover {
+            color: var(--primary-deep);
+        }
+        
+        /* V2 Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+            display: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .mobile-sticky-cta.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .mobile-sticky-cta:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-sticky-cta { 
+                display: block; 
+            }
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section {
+            padding: var(--space-section) 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--neutral-soft);
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+        
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-soft-blue);
+            font-weight: 600;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .info-card {
+            background: var(--neutral-soft);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .info-card .label {
+            display: block;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .info-card .value {
+            display: block;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-soft-blue);
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-soft-blue);
+        }
+        
+        /* CTA Callouts */
+        .cta-callout {
+            text-align: center;
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg);
+            background: rgba(74, 107, 122, 0.05);
+            border-radius: var(--radius-md);
+        }
+        
+        .cta-callout p {
+            margin-bottom: var(--space-md);
+            font-weight: 500;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--background-primary) 100%);
+            padding: var(--space-xxl) 0 var(--space-lg);
+            margin-top: var(--space-section);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--space-xs);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-soft-blue);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(74, 107, 122, 0.08);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+            
+            .content-card {
+                padding: var(--space-lg);
             }
         }
     </style>
 </head>
-
 <body>
     <!-- Minimal Landing Page Header -->
     <header class="header minimal-header">
@@ -515,267 +844,948 @@
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
+    
+    <!-- V2 Conversion-Optimized Hero Section - 300 words -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Compassionate Grief Counselling in Toronto</h1>
-                <p class="lead-text">
-                    You don't have to navigate loss alone. Professional bereavement support and grief counselling 
-                    to help you process emotions, honor your loved one, and find your way forward with gentle care.
-                </p>
-                <a href="#contact-cta" class="hero-cta">
-                    Start Your Healing Journey
-                </a>
+        <div class="hero-content">
+            <h1>Grief Counselling Toronto - Find Hope Through Loss</h1>
+            <p class="lead-text">
+                Are you navigating the complex journey of grief and loss in Toronto? 
+                The death of someone important creates a profound experience that changes everything. 
+                You don't have to face this journey alone. Professional grief counselling can provide 
+                compassionate support, practical tools, and a safe space to honour your loved one while 
+                finding your way forward.
+            </p>
+            
+            <!-- V2 Above-fold trust signals -->
+            <div class="trust-indicators">
+                <span class="trust-indicator">Ontario Licensed</span>
+                <span class="trust-indicator">Virtual Sessions</span>
+                <span class="trust-indicator">Grief Specialized</span>
             </div>
+            
+            <!-- V2 Primary CTA above fold -->
+            <div class="button-group">
+                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Your Healing Journey</a>
+                <a href="tel:+14163062157" class="cta-secondary">Talk to Someone Who Understands</a>
+            </div>
+            
+            <p style="margin-top: var(--space-sm); text-align: center; margin-left: auto; margin-right: auto;">
+                Or text <a href="sms:+14163062157" class="text-cta">(416) 306-2157</a> for same-day response
+            </p>
         </div>
     </section>
-
-    <!-- Understanding Grief Section -->
+    
+    <!-- V2 Problem Validation Section - 500 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Understanding Grief and Loss</h2>
-                <p>
-                    Grief is one of the most natural human experiences, yet it can feel incredibly isolating and overwhelming. 
-                    Whether you're dealing with the death of a loved one, the end of a significant relationship, job loss, 
-                    or any major life change, grief affects every aspect of your life.
-                </p>
-                
-                <p>
-                    In Toronto's fast-paced environment, there's often pressure to "bounce back" quickly or "get over it." 
-                    But grief doesn't follow a timeline or neat stages. It's a deeply personal journey that deserves compassionate, 
-                    professional support.
-                </p>
-
-                <h3>What Grief Looks Like</h3>
-                <p>Grief can manifest in many ways, including:</p>
-                <ul>
-                    <li>Intense sadness, anger, or numbness</li>
-                    <li>Physical symptoms like fatigue, headaches, or changes in appetite</li>
-                    <li>Difficulty concentrating or making decisions</li>
-                    <li>Sleep disturbances or changes in sleep patterns</li>
-                    <li>Feeling disconnected from others or activities you once enjoyed</li>
-                    <li>Guilt, regret, or "what if" thoughts</li>
-                    <li>Anxiety about the future or fear of additional losses</li>
-                </ul>
-
-                <p>
-                    These responses are normal parts of the grieving process. Grief counselling provides a safe space 
-                    to explore these feelings without judgment and develop healthy ways to cope with loss.
-                </p>
-            </div>
+        <div class="container-narrow">
+            <h2>When Grief Feels Overwhelming</h2>
+            
+            <p>
+                Grief is one of life's most challenging experiences, yet our society often struggles to understand 
+                or support those who are grieving. You might feel pressure to "get over it" or "move on" according 
+                to other people's timelines. Perhaps well-meaning friends and family offer advice that doesn't 
+                match your experience, or avoid talking about your loved one altogether, leaving you feeling 
+                isolated in your grief.
+            </p>
+            
+            <p>
+                The reality is that grief is not a problem to be solved or an illness to be cured. It's a natural 
+                response to losing someone important to you. But that doesn't make it any less difficult to navigate. 
+                In Toronto's fast-paced environment, you might feel additional pressure to maintain normal routines 
+                while processing profound loss, making the grieving process even more challenging.
+            </p>
+            
+            <p>
+                Every person's grief is unique, shaped by your relationship with the person who died, the circumstances 
+                of their death, your personal coping style, and countless other factors. You might be dealing with 
+                the death of a parent, partner, sibling, child, close friend, or someone else significant in your life. 
+                The loss might have been expected or sudden, peaceful or traumatic, recent or from months or years ago.
+            </p>
+            
+            <h3>Common Grief Experiences Include:</h3>
+            <ul>
+                <li>Overwhelming sadness that comes in waves, sometimes triggered by unexpected reminders</li>
+                <li>Difficulty concentrating at work or maintaining usual responsibilities and routines</li>
+                <li>Physical symptoms like fatigue, appetite changes, sleep disturbances, or aches and pains</li>
+                <li>Feeling numb, detached, or like you're going through the motions of daily life</li>
+                <li>Intense yearning and searching for the person who died, even in crowds or familiar places</li>
+                <li>Anger at the person who died, at yourself, at others who are still alive, or at the situation</li>
+                <li>Guilt about things said or unsaid, actions taken or not taken, or about continuing to live</li>
+                <li>Fear about your own mortality or the safety of other loved ones</li>
+                <li>Feeling disconnected from friends, family, or activities that once brought you joy</li>
+                <li>Questioning your beliefs about meaning, purpose, fairness, or spirituality</li>
+                <li>Difficulty making decisions or feeling uncertain about the future without your loved one</li>
+                <li>Avoiding places, people, or activities that remind you of the person who died</li>
+            </ul>
+            
+            <p>
+                These experiences are all normal parts of grief, but they can feel frightening or confusing when 
+                you're in the midst of them. You might worry that you're not grieving "correctly" or that your 
+                intense emotions will never lessen. You might feel guilty when you have moments of happiness or 
+                normalcy, as if enjoying life means forgetting your loved one.
+            </p>
+            
+            <p>
+                Some people experience complicated grief, where intense grief reactions persist or become more 
+                distressing over time rather than gradually softening. This might happen when the death was sudden 
+                or traumatic, when you had an ambivalent relationship with the person who died, or when other life 
+                stressors complicate the mourning process. These situations often benefit from professional support 
+                to help process the complex emotions and circumstances involved.
+            </p>
+            
+            <p>
+                Whether your grief feels manageable most days or overwhelming and complicated, professional support 
+                can provide valuable tools, validation, and guidance for your unique journey through loss.
+            </p>
         </div>
     </section>
-
-    <!-- How Grief Counselling Helps -->
+    
+    <!-- Understanding Grief and Loss - 600 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>How Grief Counselling Can Support You</h2>
-                
-                <h3>A Safe Space to Process</h3>
-                <p>
-                    Grief counselling offers a confidential, supportive environment where you can express your feelings 
-                    without worry about burdening others or being judged. Sometimes we need permission to grieve fully, 
-                    and therapy provides that sacred space.
-                </p>
-
-                <h3>Understanding Your Unique Journey</h3>
-                <p>
-                    Every person's grief is different. What works for one person may not work for another. In our sessions, 
-                    we'll explore what your specific loss means to you, honor your unique relationship with what you've lost, 
-                    and develop coping strategies that align with your values and needs.
-                </p>
-
-                <h3>Tools for Coping</h3>
-                <p>
-                    Grief can feel overwhelming, but there are practical tools that can help. We'll work together to develop:
-                </p>
-                <ul>
-                    <li>Healthy ways to honor and remember your loved one</li>
-                    <li>Strategies for managing difficult emotions when they arise</li>
-                    <li>Skills for communicating your needs to family and friends</li>
-                    <li>Techniques for self-care during vulnerable times</li>
-                    <li>Ways to create meaning and find hope moving forward</li>
-                </ul>
-
-                <h3>Support for Complex Grief</h3>
-                <p>
-                    Sometimes grief becomes complicated by factors like sudden loss, difficult relationships, 
-                    multiple losses, or lack of support. If you're experiencing prolonged or intense grief that's 
-                    significantly impacting your daily functioning, professional support can be particularly helpful.
-                </p>
-            </div>
+        <div class="container-narrow">
+            <h2>Understanding Grief: What's Normal and What Helps</h2>
+            
+            <p>
+                Grief is often described as the price we pay for love. When someone important to us dies, our minds 
+                and bodies respond to this profound disruption with a complex array of emotional, physical, cognitive, 
+                and behavioral reactions. Understanding what's happening to you during grief can provide comfort and 
+                help normalize experiences that might otherwise feel frightening or overwhelming.
+            </p>
+            
+            <h3>The Myth of "Stages" of Grief</h3>
+            <p>
+                Many people are familiar with the "five stages of grief," but this model was originally developed 
+                to describe how people cope with their own terminal illness, not bereavement. Grief doesn't follow 
+                a linear progression through predictable stages. Instead, it's better understood as a non-linear 
+                process where different emotions, thoughts, and experiences come and go over time.
+            </p>
+            
+            <p>
+                You might experience denial and acceptance in the same day, or anger and peace within the same hour. 
+                You might feel like you're making progress, then have a particularly difficult day that makes you 
+                worry you're moving backward. This back-and-forth is completely normal and doesn't mean you're 
+                failing at grieving or getting stuck.
+            </p>
+            
+            <h3>Types of Grief Responses</h3>
+            <p>
+                <strong>Anticipatory Grief:</strong> If your loved one was ill for an extended period, you might have 
+                begun grieving before their death. This anticipatory grief is normal and doesn't make the grief after 
+                death any less intense or meaningful. Some people feel guilty about grieving while their loved one 
+                was still alive, but this response actually reflects the depth of your care and connection.
+            </p>
+            
+            <p>
+                <strong>Disenfranchised Grief:</strong> Some losses aren't fully recognized or supported by society. 
+                This might include the death of an ex-partner, a pet, someone you had a complicated relationship with, 
+                or someone who died by suicide. Your grief is valid regardless of whether others understand or 
+                acknowledge it.
+            </p>
+            
+            <p>
+                <strong>Ambiguous Loss:</strong> Sometimes death doesn't provide clear closure. This might happen with 
+                dementia, where you grieved the loss of the person's personality while they were still alive, or in 
+                situations where there are unanswered questions about the circumstances of death.
+            </p>
+            
+            <h3>Cultural and Individual Variations</h3>
+            <p>
+                Toronto's multicultural environment means people bring diverse cultural, religious, and familial 
+                approaches to death and mourning. Some cultures emphasize collective grieving and extended mourning 
+                periods, while others focus on individual processing and moving forward quickly. Some traditions 
+                include elaborate rituals and celebrations of life, while others prefer quiet, private remembrance.
+            </p>
+            
+            <p>
+                Your personal grief style might align with your cultural background, or you might find yourself 
+                needing something different. Some people are intuitive grievers who experience and express emotions 
+                openly, while others are instrumental grievers who process loss through action, problem-solving, or 
+                intellectual understanding. Neither approach is right or wrong.
+            </p>
+            
+            <h3>The Physical Reality of Grief</h3>
+            <p>
+                Grief isn't just emotional – it's a full-body experience. The stress of bereavement can affect your 
+                immune system, sleep patterns, appetite, energy levels, and overall physical health. This is why 
+                you might find yourself getting sick more often, feeling exhausted despite sleeping, or experiencing 
+                headaches, muscle tension, or digestive issues.
+            </p>
+            
+            <p>
+                Your brain is also working overtime to process the reality of loss and adjust to a world without 
+                your loved one. This can affect concentration, memory, decision-making, and your ability to focus 
+                on work or daily responsibilities. These cognitive effects are temporary but can be frustrating 
+                when you're already dealing with emotional pain.
+            </p>
+            
+            <h3>Continuing Bonds</h3>
+            <p>
+                Modern grief theory recognizes that healthy grief doesn't require "letting go" of your loved one. 
+                Instead, many people find healing through maintaining continuing bonds – finding ongoing ways to 
+                feel connected to the person who died while also engaging meaningfully with life. This might include 
+                carrying on traditions, talking to your loved one, keeping meaningful objects, or finding ways to 
+                honor their memory through how you live.
+            </p>
+            
+            <p>
+                The goal isn't to "get over" your grief but to integrate the loss into your life in a way that 
+                allows you to function, find meaning, and experience joy while still honoring your love for the 
+                person who died. Professional grief counselling can help you navigate this complex process while 
+                respecting your unique needs, cultural background, and relationship with the person you've lost.
+            </p>
         </div>
     </section>
-
-    <!-- Types of Loss Section -->
+    
+    <!-- Different Types of Loss - 550 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Supporting Various Types of Loss</h2>
-                
-                <h3>Death of Loved Ones</h3>
-                <p>
-                    Whether expected or sudden, the death of someone important to us can shatter our world. 
-                    We'll work together to process the reality of the loss, explore the relationship you had, 
-                    and find meaningful ways to carry their memory forward.
-                </p>
-
-                <h3>Relationship Endings</h3>
-                <p>
-                    The end of marriages, partnerships, or close friendships involves grieving the future you 
-                    imagined together, the daily presence of that person, and the identity you held within 
-                    that relationship.
-                </p>
-
-                <h3>Health Changes</h3>
-                <p>
-                    Receiving a serious diagnosis, experiencing disability, or losing physical abilities can 
-                    trigger profound grief for the life and health you once had. This type of loss is often 
-                    overlooked but deserves acknowledgment and support.
-                </p>
-
-                <h3>Life Transitions</h3>
-                <p>
-                    Major changes like job loss, retirement, children leaving home, or moving to a new city 
-                    can involve grieving what we're leaving behind, even when the change is positive.
-                </p>
-
-                <h3>Pet Loss</h3>
-                <p>
-                    The bond with beloved pets is real and significant. Grief after losing a pet is valid 
-                    and often underestimated by others. We provide the same compassionate support for 
-                    this important loss.
-                </p>
-            </div>
+        <div class="container-narrow">
+            <h2>Supporting Different Types of Loss</h2>
+            
+            <p>
+                Grief is a universal human experience, but each type of loss brings unique challenges and considerations. 
+                Professional grief counselling recognizes these differences and provides specialized support tailored 
+                to your specific situation. Understanding the particular aspects of your type of loss can help normalize 
+                your experience and guide your healing journey.
+            </p>
+            
+            <h3>Death of a Spouse or Life Partner</h3>
+            <p>
+                Losing a spouse or long-term partner affects every aspect of daily life. Beyond the emotional devastation, 
+                you're dealing with practical challenges like financial changes, household management, and social identity shifts. 
+                You might feel like you've lost not just your partner but also your future together, your social connections, 
+                and even parts of your own identity that were defined through the relationship.
+            </p>
+            
+            <p>
+                Many widowed people struggle with loneliness, decision-making without their partner's input, and well-meaning 
+                pressure from others to "start dating again" before they're ready. Grief counselling can help you navigate 
+                these complex adjustments while honoring your relationship and finding ways to carry your connection forward.
+            </p>
+            
+            <h3>Loss of a Parent</h3>
+            <p>
+                Losing a parent represents a profound shift in your place in the world. Even as adults, parents provide 
+                a sense of security and continuity with our past. Their death can trigger feelings about your own mortality, 
+                unresolved relationship issues, or regrets about time not spent together.
+            </p>
+            
+            <p>
+                Adult children often struggle with complicated emotions about their parent's death, especially if the 
+                relationship was difficult or if there were unresolved conflicts. You might feel relief if your parent 
+                suffered from illness or dementia, then feel guilty about that relief. These complex emotions are normal 
+                and deserve compassionate support.
+            </p>
+            
+            <h3>Loss of a Child</h3>
+            <p>
+                The death of a child is often described as the most devastating loss a parent can experience. This type 
+                of grief challenges our fundamental assumptions about the natural order of life and can shake your faith, 
+                worldview, and sense of meaning. Parents who lose children often describe feeling that part of their 
+                identity died with their child.
+            </p>
+            
+            <p>
+                Grief after child loss doesn't follow typical timelines or expectations. Many parents find that their 
+                grief is intense and long-lasting, which can create tension with others who expect them to "move on." 
+                Professional support specializes in understanding the unique aspects of parental grief and provides 
+                tools for carrying your child's memory while slowly rebuilding meaning in life.
+            </p>
+            
+            <h3>Loss of a Sibling</h3>
+            <p>
+                Sibling relationships are among our longest-lasting connections, often spanning decades and serving as 
+                links to childhood memories and family history. When a sibling dies, you might feel you've lost not 
+                only a family member but also a unique witness to your life story.
+            </p>
+            
+            <p>
+                Sibling grief is sometimes overlooked by others who focus support on spouses or parents, leaving surviving 
+                siblings feeling isolated. You might also struggle with changed family dynamics, particularly if you 
+                were close with the sibling who died or if their death affects your relationship with surviving family members.
+            </p>
+            
+            <h3>Sudden vs. Expected Loss</h3>
+            <p>
+                The circumstances of death significantly affect the grieving process. Sudden, unexpected deaths often 
+                involve shock, trauma, and difficulty accepting the reality of loss. You might replay the last conversation 
+                or wish you'd had the chance to say goodbye.
+            </p>
+            
+            <p>
+                Expected deaths after long illness allow for anticipatory grief and sometimes the opportunity for closure, 
+                but they also involve watching someone you love suffer and the exhaustion of caregiving. Both types of 
+                loss present unique challenges that benefit from specialized understanding and support.
+            </p>
+            
+            <h3>Pet Loss and Disenfranchised Grief</h3>
+            <p>
+                The death of a beloved pet can be profoundly devastating, yet this grief is often minimized or dismissed 
+                by others. Pets provide unconditional love, daily companionship, and routine structure. Their loss creates 
+                a genuine grief that deserves acknowledgment and support, even when others don't understand the depth of 
+                your bond. Professional grief counselling recognizes the validity of all types of loss and can help you 
+                process disenfranchised grief with compassion and understanding. When complicated by other life stressors, 
+                grief may intersect with teen eating disorder help or university anxiety, 
+                requiring comprehensive support.
+            </p>
         </div>
     </section>
-
-    <!-- What to Expect Section -->
+    
+    <!-- V2 Virtual Therapy Benefits - 450 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>What to Expect in Grief Counselling</h2>
-                
-                <h3>Your First Session</h3>
-                <p>
-                    Our first meeting will focus on understanding your specific situation and what brings you 
-                    to therapy. We'll discuss your loss, how it's affecting your daily life, and what kind of 
-                    support would be most helpful. There's no pressure to share more than you're comfortable with.
-                </p>
-
-                <h3>A Collaborative Approach</h3>
-                <p>
-                    You're the expert on your own experience. My role is to provide professional guidance, 
-                    evidence-based tools, and a supportive presence as you navigate your grief journey. 
-                    We'll work together to set goals that feel meaningful to you.
-                </p>
-
-                <h3>Flexible Pacing</h3>
-                <p>
-                    There's no timeline for grief counselling. Some people find relief in just a few sessions, 
-                    while others benefit from longer-term support. We'll regularly check in about your needs 
-                    and adjust our approach as your healing progresses.
-                </p>
-
-                <h3>Evidence-Based Approaches</h3>
-                <p>
-                    I draw from various therapeutic approaches proven effective for grief, including Acceptance 
-                    and Commitment Therapy (ACT), which helps you develop psychological flexibility in the face 
-                    of difficult emotions, and narrative therapy techniques that help you create meaning from loss.
-                </p>
+        <div class="container-narrow">
+            <h2>Why Virtual Grief Counselling Works in Toronto</h2>
+            
+            <p>
+                When you're grieving, even simple tasks can feel overwhelming. The idea of traveling to a therapist's 
+                office, sitting in a waiting room, or being around other people might feel like too much to manage. 
+                Virtual grief counselling offers a compassionate alternative that meets you where you are – literally 
+                and emotionally – while providing the same quality of support as in-person therapy.
+            </p>
+            
+            <h3>Comfort and Privacy When You Need It Most</h3>
+            <p>
+                Grief can be unpredictable. You might feel okay one moment and overwhelmed the next. Virtual therapy 
+                allows you to receive support from your own space, where you feel most comfortable expressing vulnerable 
+                emotions. You can have tissues nearby, your loved one's photos visible, or comfort items close at hand. 
+                If you become emotional during session, you're already in a private, familiar environment.
+            </p>
+            
+            <p>
+                Many clients appreciate not having to "put themselves together" to leave the house on difficult days. 
+                You can focus your emotional energy on the therapeutic work rather than on getting dressed, driving 
+                through traffic, or interacting with others when you're not ready.
+            </p>
+            
+            <h3>Accessibility During Difficult Periods</h3>
+            <p>
+                Grief can affect your energy, concentration, and motivation in waves. On particularly difficult days, 
+                the barrier of leaving home might prevent you from accessing support when you need it most. Virtual 
+                sessions eliminate this barrier, ensuring consistent support throughout your healing journey.
+            </p>
+            
+            <p>
+                Toronto's weather and traffic can add additional stress to already difficult days. Virtual therapy 
+                removes these practical obstacles, making it easier to maintain regular sessions that support your 
+                healing process.
+            </p>
+            
+            <h3>Maintaining Continuity of Care</h3>
+            <ul>
+                <li><strong>Flexible scheduling:</strong> Session times that work around work, family obligations, and grief's unpredictable nature</li>
+                <li><strong>Consistent support:</strong> Continue therapy during family visits, travel for memorial services, or life transitions</li>
+                <li><strong>Immediate accessibility:</strong> Schedule urgent sessions during grief crises or difficult anniversaries</li>
+                <li><strong>Family inclusion:</strong> Easily include family members in sessions when appropriate</li>
+                <li><strong>No transportation barriers:</strong> Maintain sessions when driving or public transit feels overwhelming</li>
+                <li><strong>Weather independence:</strong> Continue support through Toronto's challenging winter months</li>
+            </ul>
+            
+            <h3>Evidence-Based Approaches for Grief</h3>
+            <p>
+                Virtual grief counselling allows us to use proven therapeutic approaches specifically effective for 
+                bereavement, including narrative therapy to help you tell your loved one's story and explore continuing 
+                bonds, cognitive-behavioral techniques for managing difficult grief thoughts and behaviors, and 
+                mindfulness-based approaches for coping with grief's physical and emotional intensity.
+            </p>
+            
+            <p>
+                Research shows that virtual grief counselling is as effective as in-person therapy for most people. 
+                The therapeutic relationship – the foundation of healing – develops just as strongly through video 
+                sessions. Many clients find that the reduced barriers and increased comfort of virtual therapy actually 
+                enhance their ability to engage in the vulnerable work of grief processing.
+            </p>
+            
+            <!-- V2 Mid-section CTA -->
+            <div class="cta-callout">
+                <p>Ready to find support for your grief journey?</p>
+                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Healing Today</a>
+                <p style="margin-top: var(--space-sm);">Or call <a href="tel:+14163062157" class="text-cta">(416) 306-2157</a></p>
             </div>
         </div>
     </section>
-
-    <!-- FAQ Section -->
+    
+    <!-- Coping Strategies Section - 550 words -->
     <section class="content-section">
-        <div class="container">
-            <div class="section-content">
-                <h2>Frequently Asked Questions</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What is grief counselling and how can it help?</div>
-                    <div class="faq-answer">
-                        Grief counselling provides a safe, supportive space to process the complex emotions that come with loss. 
-                        It helps individuals understand that grief is a natural response and provides tools for coping with the 
-                        unique challenges of bereavement. Through counselling, you can learn to honor your loss while gradually 
-                        rebuilding your life.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">How long does the grief counselling process take?</div>
-                    <div class="faq-answer">
-                        There's no set timeline for grief counselling as everyone's journey is unique. Some people find benefit 
-                        in just a few sessions, while others may need longer-term support. Factors like the nature of your loss, 
-                        your support system, and personal coping style all influence the duration. We work at your pace and 
-                        adjust as your needs change.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">What types of loss do you help with?</div>
-                    <div class="faq-answer">
-                        We support individuals dealing with various types of loss including death of loved ones, relationship 
-                        endings, job loss, health changes, pet loss, and other significant life transitions that involve grief. 
-                        All forms of loss deserve acknowledgment and support.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Is virtual grief counselling as effective as in-person?</div>
-                    <div class="faq-answer">
-                        Research has shown virtual therapy to be highly effective for grief counselling. Many clients appreciate 
-                        the comfort and privacy of accessing support from their own space, especially during vulnerable times. 
-                        Virtual sessions also eliminate travel barriers and can provide more scheduling flexibility.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">When should I seek grief counselling?</div>
-                    <div class="faq-answer">
-                        Consider grief counselling if you're feeling overwhelmed by loss, experiencing persistent sadness or 
-                        anxiety, having difficulty functioning in daily life, feeling stuck in your grief, or if friends and 
-                        family suggest you might benefit from professional support. It's never too early or too late to seek help.
-                    </div>
-                </div>
-            </div>
+        <div class="container-narrow">
+            <h2>Practical Grief Coping Strategies for Daily Life</h2>
+            
+            <p>
+                While professional grief counselling provides essential support for your healing journey, there are 
+                also practical strategies you can use in daily life to cope with grief's challenges. These tools 
+                can help you navigate difficult moments and build resilience while honoring your loved one's memory.
+            </p>
+            
+            <h3>Managing Grief Waves and Triggers</h3>
+            <p>
+                <strong>Create a grief toolkit:</strong> Prepare for difficult moments by assembling comfort items in 
+                a easily accessible place. This might include photos of your loved one, their favorite blanket or 
+                clothing item, comforting music, journal and pen, herbal tea, or aromatherapy. Having these items 
+                ready helps you respond to grief waves with self-compassion rather than feeling caught off guard.
+            </p>
+            
+            <p>
+                <strong>Practice the RAIN technique:</strong> When intense grief hits, try Recognition (acknowledge 
+                what you're feeling), Allowing (give yourself permission to feel it), Investigation (explore where 
+                you feel it in your body), and Nurturing (offer yourself kindness). This mindfulness approach helps 
+                you move through difficult emotions rather than being overwhelmed by them.
+            </p>
+            
+            <p>
+                <strong>Identify and plan for triggers:</strong> Notice what tends to trigger intense grief reactions – 
+                certain songs, places, anniversaries, or activities. Rather than avoiding all triggers, develop plans 
+                for managing them. This might mean having support available, scheduling lighter days around anniversaries, 
+                or creating new rituals for meaningful dates.
+            </p>
+            
+            <h3>Honoring Your Loved One</h3>
+            <p>
+                <strong>Continue meaningful connections:</strong> Find ways to maintain your bond with your loved one. 
+                This might include talking to them during daily activities, writing letters, celebrating their birthday 
+                or important dates, or continuing traditions they enjoyed. These connections can provide comfort while 
+                helping integrate their memory into your ongoing life.
+            </p>
+            
+            <p>
+                <strong>Create memorial rituals:</strong> Develop personal or family rituals that honor your loved one's 
+                memory. Plant a garden, make donations to causes they cared about, volunteer in ways that reflect their 
+                values, or create photo albums or scrapbooks. These activities can provide meaningful ways to express 
+                your love and keep their impact alive.
+            </p>
+            
+            <h3>Supporting Your Physical and Emotional Health</h3>
+            <p>
+                <strong>Gentle movement and nature:</strong> Grief can make your body feel heavy and stagnant. Gentle 
+                movement like walking, yoga, or stretching can help process grief's physical aspects. Toronto's ravine 
+                system, waterfront trails, and parks provide healing natural environments that many grieving people 
+                find restorative.
+            </p>
+            
+            <p>
+                <strong>Maintain basic routines:</strong> While major life changes might need to wait, maintaining 
+                small daily routines provides stability during grief's chaos. This might include regular meal times, 
+                short walks, or consistent sleep schedules. Start small and be gentle with yourself on difficult days.
+            </p>
+            
+            <p>
+                <strong>Practice saying no:</strong> Grief requires emotional energy, and you may have less available 
+                for usual commitments. Practice saying no to non-essential demands while saying yes to support, rest, 
+                and activities that feel nourishing. This isn't selfish – it's necessary self-care during a vulnerable time.
+            </p>
+            
+            <h3>Building Support Networks</h3>
+            <p>
+                <strong>Communicate your needs:</strong> Let trusted friends and family know specifically how they can 
+                help. This might include practical support like meal preparation or household tasks, emotional support 
+                like listening without trying to "fix" anything, or social support like including you in activities 
+                without pressure to participate fully.
+            </p>
+            
+            <p>
+                <strong>Consider grief support groups:</strong> Connecting with others who understand grief firsthand 
+                can provide valuable validation and coping strategies. Toronto offers various grief support groups 
+                through community centers, hospices, and religious organizations.
+            </p>
+            
+            <p>
+                Remember that these strategies work best when combined with professional support that addresses your 
+                unique grief experience, provides personalized tools, and helps you process the complex emotions and 
+                adjustments that loss brings to your life.
+            </p>
         </div>
     </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-cta" id="contact-cta">
-        <div class="container">
-            <div class="section-content">
-                <h2>Ready to Begin Your Healing Journey?</h2>
+    
+    <!-- Moving Forward With Grief - 450 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Moving Forward While Honoring Memory</h2>
+            
+            <p>
+                One of the most challenging aspects of grief is figuring out how to continue living meaningfully while 
+                honoring your loved one's memory. You might feel guilty about experiencing moments of happiness, worry 
+                that moving forward means forgetting your loved one, or struggle with the question of what it means to 
+                "recover" from such a significant loss.
+            </p>
+            
+            <h3>Redefining Recovery and Healing</h3>
+            <p>
+                Healing from grief doesn't mean returning to who you were before the loss – that person no longer exists, 
+                and that's okay. The death of someone important changes us fundamentally. Recovery means learning to 
+                carry your love and memories forward while rebuilding capacity for joy, meaning, and connection in your 
+                life without your loved one physically present.
+            </p>
+            
+            <p>
+                Many people find that grief becomes less intense and overwhelming over time, but it doesn't disappear 
+                completely. Instead, it integrates into your life story. You might always feel sad about your loved 
+                one's death while simultaneously feeling grateful for the time you had together and hopeful about your 
+                future. These seemingly contradictory feelings can coexist.
+            </p>
+            
+            <h3>Finding Meaning After Loss</h3>
+            <ul>
+                <li><strong>Legacy living:</strong> Discovering ways your loved one's values, lessons, or impact continue through you</li>
+                <li><strong>Post-traumatic growth:</strong> Developing new perspectives on life, relationships, or priorities based on your loss</li>
+                <li><strong>Compassion expansion:</strong> Using your grief experience to connect with and help others facing loss</li>
+                <li><strong>Life appreciation:</strong> Finding deeper gratitude for relationships, experiences, and moments you still have</li>
+                <li><strong>Spiritual exploration:</strong> Questioning, deepening, or discovering beliefs about life, death, and meaning</li>
+                <li><strong>Relationship strengthening:</strong> Developing more authentic, vulnerable connections with people in your life</li>
+            </ul>
+            
+            <h3>Permission to Live Fully</h3>
+            <p>
+                Your loved one's death doesn't require you to stop living fully. In fact, many people find that 
+                experiencing profound loss helps them recognize how precious and fleeting life is, motivating them 
+                to engage more deeply with relationships, pursue meaningful goals, or appreciate simple pleasures 
+                they previously took for granted.
+            </p>
+            
+            <p>
+                Living fully while grieving isn't betrayal – it's often the most meaningful way to honor someone's 
+                impact on your life. Most people who love us want us to continue finding joy, purpose, and connection 
+                even after they're gone.
+            </p>
+            
+            <p>
+                Professional grief support helps you navigate this complex process of integration, meaning-making, and 
+                rebuilding while respecting your unique relationship with your loved one and your personal values about 
+                how to honor their memory. Whether you're recently bereaved or have been carrying grief for months or 
+                years, support is available to help you find your way forward.
+            </p>
+            
+            <h3>Seasonal Grief and Anniversaries</h3>
+            <p>
+                Grief often intensifies around significant dates – birthdays, anniversaries, holidays, or the anniversary 
+                of death. This is completely normal and doesn't mean you're not healing. Many people find it helpful 
+                to plan for these difficult times, perhaps by creating new traditions, spending time with supportive people, 
+                or engaging in activities that honor their loved one's memory.
+            </p>
+            
+            <p>
+                Some dates become easier over time, while others remain difficult. There's no timeline for when grief 
+                should lessen, and no shame in continuing to feel waves of sadness even years after loss. Professional 
+                support can help you develop strategies for managing these recurring difficulties while building resilience 
+                for ongoing challenges.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Complex and Traumatic Grief - 500 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>When Grief Becomes Complex or Traumatic</h2>
+            
+            <p>
+                While all grief is difficult, some circumstances create additional layers of complexity that can complicate 
+                the natural healing process. Understanding these complications helps normalize difficult experiences and 
+                highlights when specialized professional support might be particularly beneficial.
+            </p>
+            
+            <h3>Understanding Complicated Grief</h3>
+            <p>
+                Complicated grief, also called persistent complex bereavement disorder, occurs when intense grief reactions 
+                continue for an extended period without gradual softening. This isn't simply grief that lasts longer than 
+                others expect – it's grief that remains as intense and disruptive as in the immediate aftermath of loss, 
+                significantly impacting your ability to function in daily life.
+            </p>
+            
+            <p>
+                Signs of complicated grief include intense longing and yearning that doesn't lessen over months, difficulty 
+                accepting the reality of death, pervasive anger or guilt about the loss, avoiding people or places that 
+                remind you of your loved one, inability to trust others or move forward with life, and persistent belief 
+                that life is meaningless without the deceased person.
+            </p>
+            
+            <h3>Traumatic Grief and Sudden Loss</h3>
+            <p>
+                When someone dies unexpectedly, violently, or in traumatic circumstances, the grief process often becomes 
+                complicated by trauma symptoms. You might experience flashbacks, nightmares, hypervigilance, or intrusive 
+                thoughts about the circumstances of death. This combination of grief and trauma requires specialized 
+                therapeutic approaches that address both the loss and the traumatic aspects of the experience.
+            </p>
+            
+            <p>
+                Sudden deaths – from accidents, suicide, heart attacks, or violence – don't allow for preparation or 
+                goodbye. This can create a sense of shock and unreality that persists long after the death. Many people 
+                struggle with "what if" thoughts, replaying the events leading up to death, or feeling guilty about 
+                things left unsaid.
+            </p>
+            
+            <h3>Suicide Loss and Stigmatized Deaths</h3>
+            <p>
+                When someone dies by suicide, survivors often experience complicated emotions including guilt, anger, 
+                confusion, and shame. You might wonder if you could have prevented the death, feel angry at your loved 
+                one for choosing to die, or struggle with stigma from others who don't understand suicide.
+            </p>
+            
+            <p>
+                Grief after suicide loss is often disenfranchised – not fully acknowledged or supported by society. 
+                People might avoid mentioning your loved one or offering condolences, leaving you feeling isolated. 
+                Professional support understands the unique aspects of suicide bereavement and provides specialized tools 
+                for processing these complex emotions.
+            </p>
+            
+            <h3>Multiple Losses and Cumulative Grief</h3>
+            <p>
+                Sometimes people experience multiple losses in close succession, or significant losses during already 
+                stressful life periods. This cumulative grief can overwhelm your natural coping abilities and complicate 
+                the healing process. You might feel like you're constantly in crisis or unable to fully process one 
+                loss before another occurs.
+            </p>
+            
+            <p>
+                During events like the COVID-19 pandemic, many people experienced multiple losses – deaths of loved ones, 
+                job loss, health changes, or social connections. This layering of losses can create complex grief reactions 
+                that benefit from professional guidance in sorting through different types of grief and developing coping strategies.
+            </p>
+            
+            <h3>When to Seek Specialized Support</h3>
+            <p>
+                Consider specialized grief therapy if you're experiencing persistent, intense grief that isn't gradually 
+                softening over time, trauma symptoms related to the circumstances of death, thoughts of self-harm or 
+                joining your deceased loved one, substance use as a way to cope with grief, significant impairment in 
+                work, relationships, or daily functioning, or isolation from support systems and usual activities.
+            </p>
+            
+            <p>
+                These complications don't mean you're failing at grief or that something is wrong with you. They reflect 
+                the profound impact of loss combined with challenging circumstances. Professional support provides 
+                specialized tools for complex grief while honoring your unique experience and relationship with your 
+                loved one. Sometimes grief intersects with other mental health challenges like men's mental health issues or 
+                workplace stress, requiring comprehensive treatment approaches.
+            </p>
+        </div>
+    </section>
+    
+    <!-- What to Expect in Therapy - 400 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>What to Expect in Grief Counselling</h2>
+            
+            <p>
+                Starting grief counselling can feel daunting, especially when you're already dealing with the vulnerability 
+                of loss. Understanding what to expect can help ease some of the uncertainty and help you feel more 
+                prepared to begin this important support for your healing journey.
+            </p>
+            
+            <h3>Your First Session</h3>
+            <p>
+                We'll begin by talking about your loved one and your relationship with them. You'll have space to share 
+                who they were, what they meant to you, and the circumstances of their death if you're comfortable doing so. 
+                We'll explore how grief has been showing up in your life – emotionally, physically, socially, and practically – 
+                and discuss any particular challenges or concerns you're experiencing.
+            </p>
+            
+            <p>
+                We'll also talk about your goals for therapy. Some people want support managing overwhelming emotions, 
+                others need help with practical life adjustments, and still others are looking for meaning-making or 
+                spiritual support. There's no wrong reason to seek grief counselling, and your goals can evolve as we work together.
+            </p>
+            
+            <h3>The Grief Counselling Process</h3>
+            <p>
+                Early sessions often focus on immediate support – helping you cope with acute grief symptoms, developing 
+                strategies for difficult days, and creating safety and stability in your daily life. We'll work on 
+                building your toolkit for managing grief waves and triggers while providing a safe space to express 
+                and process complex emotions.
+            </p>
+            
+            <p>
+                As therapy progresses, we might explore deeper themes like your continuing relationship with your loved 
+                one, how grief has affected your sense of identity or worldview, family dynamics around loss, or how 
+                to rebuild meaning and purpose in life after loss. We always work at your pace, following your needs 
+                and readiness rather than any external timeline.
+            </p>
+            
+            <h3>Evidence-Based Approaches</h3>
+            <p>
+                I use therapeutic approaches specifically proven effective for grief and bereavement, including narrative 
+                therapy to help you tell your loved one's story and explore continuing bonds, Acceptance and Commitment 
+                Therapy (ACT) to develop psychological flexibility in responding to grief, cognitive-behavioral techniques 
+                for managing difficult thoughts and behaviors, and mindfulness-based approaches for coping with grief's 
+                physical and emotional intensity.
+            </p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="label">Session Length</span>
+                    <span class="value">50 Minutes</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Format</span>
+                    <span class="value">Virtual Ontario</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Scheduling</span>
+                    <span class="value">Flexible/Evening</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Investment</span>
+                    <span class="value">$175/session</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Insurance</span>
+                    <span class="value">Receipts Provided</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Confidentiality</span>
+                    <span class="value">Complete Privacy</span>
+                </div>
+            </div>
+            
+            <p>
+                Grief counselling is collaborative – you're the expert on your loss and your loved one, while I provide 
+                professional support, evidence-based tools, and a safe therapeutic relationship. Many people find that 
+                having professional support during grief not only helps them navigate the immediate challenges but also 
+                supports their long-term healing and growth.
+            </p>
+        </div>
+    </section>
+    
+    <!-- About Your Therapist - 300 words -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>About Your Therapist</h2>
+            
+            <p>
+                Hi, I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who understands that grief is one 
+                of life's most profound and challenging experiences. I've worked with individuals and families across 
+                Toronto and Ontario as they navigate different types of loss – from expected deaths after long illness 
+                to sudden, unexpected losses, from recent bereavements to grief that has persisted for years.
+            </p>
+            
+            <p>
+                I believe that grief is not a problem to be solved but a natural response to love and loss that deserves 
+                compassionate, patient support. Every person's grief is unique, shaped by their relationship with the 
+                person who died, their cultural background, personal coping style, and countless other factors. My role 
+                is to provide a safe, non-judgmental space where you can process your grief at your own pace while 
+                developing tools for managing its challenges.
+            </p>
+            
+            <p>
+                My approach to grief counselling recognizes that healing doesn't mean "getting over" your loss but rather 
+                learning to integrate it into your life in a way that honors your loved one while allowing you to continue 
+                living meaningfully. We'll work together to explore your unique grief experience, develop personalized 
+                coping strategies, and find ways to maintain connection with your loved one while rebuilding capacity for 
+                joy and purpose.
+            </p>
+            
+            <p>
+                I understand that asking for help during grief can feel difficult, especially when you're already vulnerable. 
+                I strive to make therapy as accessible and comfortable as possible, offering virtual sessions throughout 
+                Ontario with flexible scheduling that respects the unpredictable nature of grief and the demands of daily 
+                life in Toronto.
+            </p>
+            
+            <p>
+                Whether you're newly bereaved or have been carrying grief for months or years, whether your loss was 
+                expected or sudden, whether your grief feels manageable or overwhelming – support is available when you're 
+                ready to take this step in your healing journey. Sometimes grief occurs alongside other challenges like 
+                family counselling needs or work-related stress, 
+                and comprehensive support addresses all aspects of your wellbeing during this difficult time.
+            </p>
+        </div>
+    </section>
+    
+    <!-- FAQ Section - V2 Objection Handling -->
+    <section class="content-section">
+        <div class="container-narrow">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is there a right way to grieve?</div>
                 <p>
-                    You don't have to carry this burden alone. Compassionate, professional grief support 
-                    is available to help you navigate this difficult time with care and understanding.
+                    No, there is no universal timeline or correct way to grieve. Grief is highly individual and can vary 
+                    significantly based on your relationship to the person who died, your cultural background, personal 
+                    coping style, and life circumstances. Some people grieve intensely at first then gradually adjust, 
+                    while others experience waves of grief that come and go over time. Some express emotions openly while 
+                    others process internally. Your grief is valid regardless of how it manifests.
                 </p>
-                
-                <div class="cta-buttons">
-                    <a href="tel:+14163062157" class="cta-button">
-                        📞 Call (416) 306-2157
-                    </a>
-                    <a href="mailto:info@nextsteptherapy.ca?subject=Grief Counselling Inquiry" class="cta-button secondary">
-                        ✉️ Email for Free Consultation
-                    </a>
-                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How long does grief last?</div>
+                <p>
+                    Grief doesn't follow a predictable timeline. While intense grief symptoms often lessen over months to 
+                    years, love and memories of the person continue throughout life. Many people find that grief changes 
+                    rather than ends – becoming less overwhelming while remaining meaningful. Some experience periodic waves 
+                    of grief even years later, especially around anniversaries or significant life events, which is completely 
+                    normal. The goal isn't to "get over" grief but to learn to carry it while still engaging fully with life.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">When should I seek grief counselling?</div>
+                <p>
+                    Consider grief counselling if you're feeling overwhelmed, isolated, or stuck in your grief. Counselling 
+                    can help if you're experiencing prolonged difficulty functioning in daily life, complicated grief reactions, 
+                    intense anger or guilt that feels unmanageable, thoughts of self-harm, or if you're struggling to find 
+                    meaning or hope after loss. There's no "right" time to seek support – whether immediately after loss or 
+                    months later, professional guidance can provide valuable tools for navigating your unique grief journey.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can virtual grief counselling be effective?</div>
+                <p>
+                    Yes, virtual grief counselling can be highly effective. Many clients appreciate the comfort and privacy 
+                    of receiving support from their own home, which can feel safer when dealing with vulnerable emotions. 
+                    Virtual sessions eliminate transportation barriers and allow you to maintain consistent support even during 
+                    difficult periods when leaving home feels challenging. The therapeutic relationship and healing process 
+                    remain just as meaningful in a virtual format, and research supports the effectiveness of online therapy 
+                    for grief and bereavement.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does grief counselling help?</div>
+                <p>
+                    Grief counselling provides a safe space to express and process emotions without judgment, develop healthy 
+                    coping strategies for managing grief's challenges, and work through complicated feelings like guilt, anger, 
+                    or numbness. It helps normalize the grief experience, addresses any complications in the grieving process, 
+                    and supports you in finding ways to honour your loved one while rebuilding meaningful life. Counselling 
+                    doesn't take away grief but helps you navigate it with professional support, understanding, and personalized tools.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will grief counselling help me "move on" from my loved one?</div>
+                <p>
+                    Grief counselling doesn't aim to help you "move on" from your loved one – that would dishonor the 
+                    significance of your relationship. Instead, counselling helps you learn to "move forward" while maintaining 
+                    meaningful connection to the person who died. This might involve finding new ways to feel connected to them, 
+                    integrating their memory and impact into your ongoing life, and discovering how to honor their legacy while 
+                    still engaging fully with your present relationships and future possibilities.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I'm not ready to "let go" of my grief?</div>
+                <p>
+                    Modern grief therapy doesn't require "letting go" of grief or your loved one. Instead, the focus is on 
+                    learning to carry your grief and love in a way that allows you to function and find meaning in life. 
+                    Many people maintain meaningful connections to their deceased loved ones throughout their lives through 
+                    continuing bonds, memories, and ways of honoring their impact. Therapy helps you find the balance between 
+                    honoring your loss and engaging with life, not choosing between them.
+                </p>
             </div>
         </div>
     </section>
-
+    
+    <!-- Getting Started - FINAL CTA Section - 200 words -->
+    <section class="content-section" id="contact-cta">
+        <div class="container-narrow">
+            <h2>Ready to Begin Your Healing Journey?</h2>
+            
+            <p>
+                Grief is one of life's most challenging experiences, but you don't have to navigate it alone. 
+                Professional support can provide comfort, tools, and guidance while you process loss and find 
+                your way forward. Whether your grief feels overwhelming or you're looking for additional support 
+                alongside your natural healing process, compassionate help is available.
+            </p>
+            
+            <p>
+                Taking the step to reach out for grief support can feel difficult when you're already vulnerable. 
+                Remember that seeking help isn't a sign of weakness – it's a sign of self-compassion and recognition 
+                that healing happens in relationship with others who understand. Your loved one would likely want 
+                you to receive the support you need during this difficult time.
+            </p>
+            
+            <p>
+                Your grief journey is unique, and you deserve support that honors your individual needs, cultural 
+                background, and relationship with your loved one. Take the first step when you feel ready.
+            </p>
+            
+            <!-- Final CTAs -->
+            <div class="button-group" style="margin-top: var(--space-xl);">
+                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Healing Today</a>
+                <a href="tel:+14163062157" class="cta-secondary">(416) 306-2157</a>
+            </div>
+            
+            <p style="text-align: center; margin-top: var(--space-md);">
+                Prefer to text? Send a message to <a href="sms:+14163062157" class="text-cta">(416) 306-2157</a>
+            </p>
+            
+            <p style="text-align: center; margin-top: var(--space-lg); font-style: italic; color: var(--text-secondary);">
+                Virtual grief counselling throughout Ontario | Flexible scheduling | Evening and weekend appointments
+            </p>
+        </div>
+    </section>
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <p><strong>Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</strong></p>
-            <p>Serving Toronto and all of Ontario through secure virtual therapy sessions</p>
-            <p>© 2025 Next Step Therapy. Professional grief counselling with compassionate care.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="../about">About Jesse</a>
+                    <a href="../services">Services</a>
+                    <a href="../approach">Therapeutic Approach</a>
+                    <a href="../fees">Fees & Insurance</a>
+                    <a href="https://nextsteptherapy.ca/#contact">Contact Form</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Professional Support</h4>
+                    <a href="perfectionism-and-burnout-therapy-toronto.html">Perfectionism & Burnout</a>
+                    <a href="university-anxiety.html">University Anxiety</a>
+                    <a href="college-anxiety.html">College Anxiety</a>
+                    <a href="virtual-therapy-ontario.html">Virtual Therapy Ontario</a>
+                    <a href="about.html">About Jesse</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Virtual Sessions Throughout Ontario</p>
+                    <p>📧 info@nextsteptherapy.ca</p>
+                    <p>📞 <a href="tel:+14163062157">(416) 306-2157</a></p>
+                    <p>💬 <a href="sms:+14163062157">Text Available</a></p>
+                    <p><strong>CRPO Registration #10979</strong></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Step Therapy | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | All rights reserved</p>
+            </div>
         </div>
     </footer>
+    
+    <!-- V2 Mobile Sticky CTA -->
+    <a href="tel:+14163062157" class="mobile-sticky-cta">Get Support Now</a>
+    
+    <!-- V2 Smart Header & Mobile CTA JavaScript -->
+    <script>
+    // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 768) { // Mobile only
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Scrolling down & past initial area
+                header.classList.add('hide-on-scroll');
+            } else if (scrollTop < lastScrollTop) {
+                // Scrolling up
+                header.classList.remove('hide-on-scroll');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }
+    });
+    
+    // Show mobile sticky CTA after scrolling 30% down page
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled / document.body.offsetHeight;
+        const stickyCTA = document.querySelector('.mobile-sticky-cta');
+        
+        if (rate > 0.3 && window.innerWidth <= 768) {
+            stickyCTA.classList.add('show');
+        } else {
+            stickyCTA.classList.remove('show');
+        }
+    });
+    </script>
 </body>
 </html>
