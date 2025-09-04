@@ -109,6 +109,48 @@
     }
     </script>
     
+    <!-- NEW: FAQPage Schema from Master Template -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What technology do I need for virtual therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any device with a stable internet connection and a camera—such as a computer, tablet, or smartphone. Our platform works directly through your web browser, so no special software downloads are required. We ensure the technology is simple and reliable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy in Ontario regulated and confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. As a Registered Psychotherapist, all virtual therapy sessions are governed by the same CRPO regulations and PHIPA confidentiality standards as in-person therapy. Our platform uses bank-level encryption to ensure your privacy is protected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I start virtual therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often within the same week you reach out. We prioritize a prompt response and can typically schedule a free consultation within 24-48 hours, with your first full session available shortly after. There are no waitlists for virtual appointments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas of Ontario do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are licensed to provide virtual therapy to any resident of Ontario. From Toronto and the GTA to Ottawa, Northern Ontario, and rural communities, our services are accessible province-wide."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* Match homepage design exactly */
         :root {
@@ -629,18 +671,43 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Virtual Therapy Ontario</h1>
-                    <p class="lead-text">Professional therapy that fits your actual life. No commute, no waiting rooms, just genuine support from wherever you're comfortable. Virtual therapy throughout Ontario.</p>
+                    <h1>Can't Find Time for Therapy? Get Professional Support That Fits Your Life.</h1>
+                    <p class="lead-text">You want to start therapy, but the logistical hurdles—the commute, the waiting rooms, the rigid schedules—feel overwhelming. We provide professional, CRPO-registered virtual therapy throughout Ontario, designed for your real life.</p>
                     
+                    <!-- V2 Above-fold trust signals from Master Template -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">Ontario Licensed (CRPO #10979)</span>
+                        <span class="trust-indicator">Virtual & Flexible Sessions</span>
+                        <span class="trust-indicator">Insurance Receipts Provided</span>
+                    </div>
+
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
-                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Start Virtual Therapy Today</a>
-                        <a href="tel:+15198008323" class="btn btn-secondary">(519) 800-8323</a>
+                        <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book a Free 'Fit' Call</a>
+                        <a href="tel:+15198008323" class="btn btn-secondary">Call (519) 800-8323</a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Virtual Advantage Section -->
+        <!-- NEW Problem Validation Section (From Master Template) -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>The Invisible Barriers to Getting Support</h2>
+                    <p>It's not just you. For many busy professionals, parents, and students in Ontario, the idea of traditional, in-person therapy just doesn't fit. The reality of getting help often involves:</p>
+                    <ul class="feature-list">
+                        <li><strong>The Commute Battle:</strong> Losing hours to traffic, GO trains, or public transit for a 50-minute session.</li>
+                        <li><strong>Scheduling Tetris:</strong> Trying to find a therapist whose 9-to-5 schedule doesn't conflict with your own.</li>
+                        <li><strong>The Waiting Room Problem:</strong> Lack of privacy in small communities or busy downtown offices.</li>
+                        <li><strong>Geographic Limitations:</strong> Your ideal therapist might not have an office in your specific town or city.</li>
+                        <li><strong>Life's Interruptions:</strong> A sick child, a last-minute work meeting, or bad weather can derail your appointment.</li>
+                    </ul>
+                    <p>These aren't just inconveniences; they are significant barriers that prevent people from getting the consistent support they deserve. You're not alone in feeling this way—studies show a majority of Ontarians now prefer virtual therapy for its accessibility and convenience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REPOSITIONED Virtual Advantage Section -->
         <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
@@ -946,11 +1013,11 @@
                 <h3>Start Virtual Therapy From Anywhere in Ontario</h3>
                 <p>Professional support that fits your life. No commute, no waiting rooms, just genuine therapeutic connection from wherever you're comfortable.</p>
                 
-                <h4>Free Virtual Consultation</h4>
-                <p>Discover how virtual therapy can work for you. Quick tech check, answer your questions, and see if we're a good fit.</p>
+                <h4>Free 15-Minute 'Fit' Call</h4>
+                <p>Discover if we're a good fit. This is a no-pressure, confidential conversation to answer your questions and see if our approach feels right for you.</p>
                 
                 <div class="hero-cta">
-                    <a href="tel:+15198008323" class="primary-cta">Book Virtual Session Today</a>
+                    <a href="tel:+15198008323" class="primary-cta">Book Your Free 'Fit' Call</a>
                     <div class="secondary-ctas">
                         <a href="tel:+15198008323" class="secondary-cta phone-cta">(519) 800-8323</a>
                         <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
@@ -958,6 +1025,7 @@
                 </div>
                 
                 <div class="contact-info">
+                    <h4 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Your conversation is 100% confidential and pressure-free.</h4>
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
                     Serving All of Ontario Virtually<br>
