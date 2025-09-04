@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="theme-color" content="#4A90E2">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
     <!-- Google Analytics 4 + Conversion Tracking -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,6 +22,7 @@
             'send_page_view': true
         });
 
+        // Track phone clicks
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -24,79 +33,59 @@
                     });
                 });
             });
-
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function() {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
         });
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- SEO Meta Data -->
     <title>Family Counselling Toronto | Family Therapy & Relationship Healing | CRPO #10979</title>
-    <meta name="description" content="Professional family counselling in Toronto. Evidence-based family therapy for communication, conflict resolution, and healing family relationships. Virtual sessions throughout Ontario.">
-    <meta name="keywords" content="family counselling Toronto, family therapy Ontario, family conflict resolution, family communication therapy, virtual family counselling Canada">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Family Counselling Toronto | Family Therapy & Relationship Healing">
-    <meta property="og:description" content="Professional family counselling in Toronto. Evidence-based family therapy for communication, conflict resolution, and healing family relationships. Virtual sessions throughout Ontario.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/family-counselling-toronto">
-    <meta property="og:image" content="https://nextsteptherapy.ca/images/family-counselling-og.jpg">
-    <meta property="og:locale" content="en_CA">
-    <meta property="og:site_name" content="Next Step Therapy">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Family Counselling Toronto | Family Therapy & Relationship Healing">
-    <meta name="twitter:description" content="Professional family counselling in Toronto. Evidence-based family therapy for communication, conflict resolution, and healing family relationships.">
-    <meta name="twitter:image" content="https://nextsteptherapy.ca/images/family-counselling-og.jpg">
+    <meta name="description" content="Professional family counselling in Toronto. Evidence-based family therapy for communication, conflict resolution, and healing family relationships. CRPO registered therapist. Virtual sessions.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/family-counselling-toronto">
     
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Family Counselling Toronto | Family Therapy & Relationship Healing">
+    <meta property="og:description" content="Professional family counselling in Toronto. Evidence-based family therapy for communication, conflict resolution, and healing family relationships.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/family-counselling-toronto">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/family-counselling-og.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Optimized Font Loading with font-display: swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+    
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Family Counselling Toronto | Professional Family Therapy Services",
-        "description": "Comprehensive guide to family counselling in Toronto, covering family therapy approaches, communication strategies, conflict resolution, and healing family relationships.",
-        "author": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "affiliation": {
-                "@type": "Organization",
-                "name": "College of Registered Psychotherapists of Ontario"
-            }
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Next Step Therapy",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://nextsteptherapy.ca/images/logo.png"
-            }
-        },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nextsteptherapy.ca/family-counselling-toronto"
-        },
-        "image": "https://nextsteptherapy.ca/images/family-counselling-og.jpg"
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Family Counselling Toronto: Strengthening Family Relationships Through Professional Support",
+      "description": "Comprehensive guide to family counselling and therapy in Toronto, including family communication strategies, conflict resolution, and evidence-based approaches to family healing",
+      "wordCount": "6000",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextsteptherapy.ca/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nextsteptherapy.ca/family-counselling-toronto"
+      },
+      "image": "https://nextsteptherapy.ca/images/family-counselling-og.jpg"
     }
     </script>
     
@@ -115,1605 +104,482 @@
             "addressRegion": "Ontario",
             "addressCountry": "Canada"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "43.6532",
-            "longitude": "-79.3832"
-        },
         "openingHours": "Mo-Su 09:00-20:00",
         "sameAs": [
-            "https://crpo.ca"
+            "https://crpo.ca/find-a-registered-psychotherapist/registered-psychotherapist/cynamon-jesse-10979/"
         ],
         "priceRange": "$175",
         "paymentAccepted": "Credit Card, E-Transfer, Insurance",
         "currenciesAccepted": "CAD"
     }
     </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is family counselling and how can it help?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Family counselling is a form of therapy that works with families to improve communication, resolve conflicts, and strengthen relationships. It helps family members understand each other better, develop healthier interaction patterns, and create more supportive family dynamics."
-                }
-            },
-            {
-                "@type": "Question", 
-                "name": "How long does family therapy typically take?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The length of family therapy varies depending on the specific issues and goals. Some families see improvement within 8-12 sessions, while others may benefit from longer-term support. We work at your family's pace and adjust the timeline based on progress and needs."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can family counselling be done virtually?", 
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, virtual family counselling can be highly effective. Online sessions allow all family members to participate from the comfort of their home, which can actually reduce anxiety and create a more relaxed environment for difficult conversations."
-                }
-            }
-        ]
-    }
-    </script>
 
-    <!-- Shared Styles -->
     <link rel="stylesheet" href="shared.min.css">
-    
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            /* Color Palette */
-            --primary-deep: #4A6B7A;
-            --primary-soft-blue: #6B8FA3;
-            --primary-light: #B8D4E3;
-            --accent-warm: #D4A574;
-            --accent-soft: #E8C99B;
-            --neutral-cream: #F8F6F3;
-            --neutral-soft: #F1F0ED;
-            --text-primary: #2C3539;
-            --text-secondary: #5A6B73;
-            --background-primary: #FEFEFE;
-            
-            /* Typography */
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-display: 'Playfair Display', Georgia, serif;
-            
-            /* Spacing */
-            --space-xs: 8px;
-            --space-sm: 16px;
-            --space-md: 24px;
-            --space-lg: 32px;
-            --space-xl: 48px;
-            --space-xxl: 64px;
-            --space-section: 80px;
-            
-            /* Layout */
-            --max-width: 1200px;
-            --max-width-narrow: 800px;
-            --border-radius: 12px;
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-primary);
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--background-primary);
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Layout Components */
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-
-        .container-narrow {
-            max-width: var(--max-width-narrow);
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-
-        .content-section {
-            padding: var(--space-section) 0;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            line-height: 1.3;
-            margin-bottom: var(--space-sm);
-            color: var(--text-primary);
-        }
-
-        h1 {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: var(--space-md);
-        }
-
-        h2 {
-            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-            font-weight: 600;
-            margin-bottom: var(--space-md);
-            color: var(--primary-deep);
-        }
-
-        h3 {
-            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-            font-weight: 600;
-            margin-bottom: var(--space-sm);
-            color: var(--primary-soft-blue);
-        }
-
-        h4 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: var(--space-sm);
-            color: var(--primary-deep);
-        }
-
-        p {
-            margin-bottom: var(--space-sm);
-            color: var(--text-secondary);
-        }
-
-        strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        ul, ol {
-            margin-left: var(--space-md);
-            margin-bottom: var(--space-sm);
-        }
-
-        li {
-            margin-bottom: var(--space-xs);
-            color: var(--text-secondary);
-        }
-
-        /* Button Styles */
-        .cta-primary {
-            display: inline-block;
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
-            color: white;
-            text-decoration: none;
-            padding: var(--space-sm) var(--space-lg);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-primary:hover {
-            background: linear-gradient(135deg, #1B5E20, #388E3C);
-            transform: translateY(-2px);
-        }
-
-        .cta-secondary {
-            display: inline-block;
-            background: transparent;
-            color: var(--primary-deep);
-            text-decoration: none;
-            padding: var(--space-sm) var(--space-lg);
-            border: 2px solid var(--primary-soft-blue);
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-secondary:hover {
-            background: var(--primary-light);
-            transform: translateY(-1px);
-        }
-
-        .button-group {
-            display: flex;
-            gap: var(--space-sm);
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: var(--space-lg) 0;
-        }
-
-        /* CTA Callout */
-        .cta-callout {
-            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
-            border: 1px solid var(--primary-light);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-            text-align: center;
-            margin: var(--space-xl) 0;
-        }
-
-        .cta-callout p {
-            font-size: 1.125rem;
-            margin-bottom: var(--space-md);
-            color: var(--text-primary);
-        }
-
-        /* Header Styles */
-        .header {
-            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-sm) 0;
-            min-height: 70px;
-        }
-
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-deep);
-            text-decoration: none;
-        }
-
-        .header-cta {
-            background: rgba(74, 107, 122, 0.08);
-            color: var(--primary-deep);
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .header-cta:hover {
-            background: linear-gradient(135deg, var(--accent-warm), var(--primary-light));
-            color: white;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
-            padding: var(--space-xxl) 0;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            color: white;
-            margin-bottom: var(--space-lg);
-        }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: var(--space-xl);
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero .cta-primary {
-            background: transparent;
-            border: 2px solid white;
-        }
-
-        .hero .cta-primary:hover {
-            background: var(--primary-light);
-            color: var(--primary-deep);
-        }
-
-        /* Info Cards */
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-md);
-            margin: var(--space-xl) 0;
-        }
-
-        .info-card {
-            background: var(--neutral-soft);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            text-align: center;
-        }
-
-        .info-card .label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-xs);
-            display: block;
-        }
-
-        .info-card .value {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--primary-deep);
-        }
-
-        /* FAQ Styles */
-        .faq-item {
-            background: var(--neutral-soft);
-            border-radius: var(--radius-md);
-            margin-bottom: var(--space-md);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: rgba(74, 107, 122, 0.05);
-            padding: var(--space-md);
-            font-weight: 600;
-            color: var(--primary-deep);
-            font-size: 1.125rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--background-primary) 100%);
-        }
-
-        .faq-item p {
-            padding: 0 var(--space-md) var(--space-md);
-            margin: 0;
-        }
-
-        /* Process Section */
-        .process {
-            background: var(--neutral-soft);
-            padding: var(--space-section) 0;
-        }
-
-        .process-image {
-            text-align: center;
-            margin: var(--space-xl) 0;
-        }
-
-        .process-image img {
-            max-width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: var(--radius-md);
-        }
-
-        .process-timeline {
-            display: grid;
-            gap: var(--space-lg);
-            margin-top: var(--space-xl);
-        }
-
-        .process-step {
-            display: flex;
-            gap: var(--space-md);
-            align-items: flex-start;
-        }
-
-        .step-number {
-            background: var(--primary-deep);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 1.125rem;
-            flex-shrink: 0;
-        }
-
-        .step-title {
-            margin: 0 0 var(--space-sm) 0;
-            color: var(--primary-deep);
-        }
-
-        .step-desc {
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--background-primary);
-            padding: var(--space-section) 0;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xxl);
-            margin-top: var(--space-xl);
-        }
-
-        .contact-methods {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .contact-methods li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .contact-details {
-            flex: 1;
-        }
-
-        .contact-details strong {
-            display: block;
-            margin-bottom: var(--space-xs);
-            color: var(--primary-deep);
-        }
-
-        .contact-details a {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-        }
-
-        .contact-details a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-details small {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-        }
-
-        .virtual-session-image {
-            margin: var(--space-xl) 0;
-            text-align: center;
-        }
-
-        .virtual-session-image img {
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: var(--radius-md);
-        }
-
-        .investment-highlight {
-            background: var(--neutral-cream);
-            padding: var(--space-md);
-            border-radius: var(--radius-md);
-            margin-top: var(--space-lg);
-        }
-
-        .investment-highlight h4 {
-            color: var(--primary-deep);
-            margin-bottom: var(--space-sm);
-        }
-
-        .investment-highlight p {
-            margin: var(--space-xs) 0;
-            color: var(--text-secondary);
-        }
-
-        /* Form Styles */
-        .contact-form {
-            background: var(--neutral-soft);
-            padding: var(--space-lg);
-            border-radius: var(--radius-md);
-        }
-
-        .form-group {
-            margin-bottom: var(--space-md);
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: var(--space-xs);
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: var(--space-sm);
-            border: 1px solid rgba(74, 107, 122, 0.2);
-            border-radius: var(--radius-sm);
-            font-family: var(--font-primary);
-            font-size: 1rem;
-            background: white;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-soft-blue);
-            box-shadow: 0 0 0 3px rgba(107, 143, 163, 0.1);
-        }
-
-        .form-disclaimer {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-top: var(--space-sm);
-        }
-
-        .alternative-contact {
-            text-align: center;
-            margin-top: var(--space-lg);
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(74, 107, 122, 0.1);
-        }
-
-        .text-cta {
-            color: var(--primary-soft-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .text-cta:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-deep);
-            color: white;
-            padding: var(--space-xxl) 0 var(--space-lg);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-xl);
-        }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: var(--space-md);
-        }
-
-        .footer-section a {
-            display: block;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            margin-bottom: var(--space-xs);
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-section p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: var(--space-xs);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: var(--space-xl);
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Mobile Sticky CTA */
-        .mobile-sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
-            z-index: 1000;
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-sticky-cta.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Section Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-
-        .section-subtitle {
-            color: var(--accent-warm);
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: var(--space-sm);
-        }
-
-        .lead-text {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            :root {
-                --space-section: 60px;
-            }
-
-            .container,
-            .container-narrow {
-                padding: 0 var(--space-sm);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-xl);
-            }
-
-            .button-group {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .button-group a {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-
-            .info-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .step-number {
-                align-self: center;
-            }
-        }
-
-        /* Hide on scroll for mobile header */
-        .header.hide-on-scroll {
-            transform: translateY(-100%);
-        }
-
-        /* Animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="header-content">
-                <a href="../" class="logo">Next Step Therapy</a>
-                
-                <a href="#contact" class="header-cta">
-                    Book Consultation
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" width="40" height="40" loading="eager" fetchpriority="high">
+                    Next Step Therapy
                 </a>
-            </div>
+                
+                <div class="nav-actions">
+                    <a href="/#contact" class="cta-button">Book Consultation</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container-narrow">
-            <h1>Family Counselling Toronto</h1>
-            <p class="hero-subtitle">
-                Professional family therapy to heal relationships, improve communication, and strengthen family bonds. 
-                Evidence-based support for families throughout Ontario.
-            </p>
-            
-            <!-- V2 Primary CTA above fold -->
-            <div class="button-group">
-                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Family Healing Today</a>
-                <a href="tel:+14163062157" class="cta-secondary">Speak with a Professional</a>
-            </div>
-            
-            <p style="margin-top: var(--space-sm); text-align: center; margin-left: auto; margin-right: auto;">
-                Or text <a href="sms:+14163062157" class="text-cta">(416) 306-2157</a> for same-day response
-            </p>
-            
-            <p style="margin-top: var(--space-lg); font-size: 0.95rem; opacity: 0.8;">
-                Virtual family counselling throughout Ontario | Flexible scheduling | Evening appointments available<br>
-                <strong>CRPO Registered Psychotherapist #10979</strong>
-            </p>
-        </div>
-    </section>
-
-    <!-- Understanding Family Dynamics - 650 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>Understanding Family Dynamics and When Professional Support Helps</h2>
-            
-            <p>
-                Family relationships are among the most significant and complex connections in our lives, shaping who we 
-                are and how we relate to others. When family dynamics become strained, conflicted, or dysfunctional, 
-                the impact extends far beyond individual family members to affect work performance, other relationships, 
-                and overall well-being. Family counselling provides professional support for improving communication, 
-                resolving conflicts, and creating healthier family patterns.
-            </p>
-            
-            <h3>Common Family Challenges That Benefit from Professional Support</h3>
-            <p>
-                <strong>Communication Breakdown:</strong> Many families struggle with effective communication, leading to 
-                misunderstandings, hurt feelings, and escalating conflicts. Family members might feel unheard, dismissed, 
-                or constantly criticized. Poor communication patterns often develop over years, becoming so ingrained that 
-                family members don't recognize healthier alternatives exist.
-            </p>
-            
-            <p>
-                <strong>Conflict and Tension:</strong> Ongoing disputes about money, parenting decisions, household 
-                responsibilities, or lifestyle choices can create chronic stress within families. When conflicts remain 
-                unresolved, they tend to resurface repeatedly, often with increased intensity and emotional charge.
-            </p>
-            
-            <p>
-                <strong>Life Transitions and Changes:</strong> Major life events like divorce, remarriage, new babies, 
-                adolescent development, job loss, illness, or aging parent concerns can disrupt established family 
-                dynamics. These transitions require adaptation and new coping strategies that families might struggle 
-                to develop independently.
-            </p>
-            
-            <p>
-                <strong>Generational Differences:</strong> Different values, expectations, and communication styles between 
-                generations can create tension and misunderstanding. Parents and adult children, or grandparents and 
-                younger family members, might struggle to bridge these differences while maintaining respect and connection.
-            </p>
-            
-            <h3>The Impact of Family Dysfunction</h3>
-            <p>
-                When family relationships are strained, the effects ripple through all areas of life. Children in conflicted 
-                families may experience anxiety, depression, or behavioral problems. Adults might struggle with stress-related 
-                health issues, difficulty concentrating at work, or challenges in other relationships. The emotional exhaustion 
-                from ongoing family conflict can leave people feeling drained and hopeless about the possibility of change.
-            </p>
-            
-            <p>
-                Unhealthy family patterns often persist across generations, creating cycles of dysfunction that affect not 
-                only current family members but future generations as well. Children learn relationship patterns and 
-                communication styles from their families, carrying these into their own adult relationships and parenting.
-            </p>
-            
-            <h3>Understanding Family Systems</h3>
-            <p>
-                Families operate as interconnected systems where changes in one member affect all others. This means that 
-                individual problems rarely exist in isolation but are influenced by family dynamics, roles, and communication 
-                patterns. Understanding these systemic factors is crucial for creating lasting positive change.
-            </p>
-            
-            <p>
-                Family counselling takes a systems approach, examining how family members interact with each other rather 
-                than focusing solely on individual behaviors or problems. This perspective helps identify patterns that 
-                maintain difficulties and develop strategies for creating healthier family functioning.
-            </p>
-            
-            <h3>Signs Your Family Might Benefit from Professional Support</h3>
-            <p>
-                Consider family counselling if you're experiencing frequent arguments or conflicts that don't get resolved, 
-                communication that feels hostile, defensive, or shut down, family members avoiding each other or walking 
-                on eggshells, major life transitions creating stress and conflict, or feeling like your family is stuck 
-                in negative patterns that repeat despite efforts to change.
-            </p>
-            
-            <p>
-                It's important to recognize that seeking family counselling isn't a sign of failure but rather a proactive 
-                step toward creating the family relationships you want. Many families find that professional guidance helps 
-                them navigate challenges they couldn't resolve on their own and develop stronger, more supportive relationships. 
-                Sometimes family stress intersects with other challenges like workplace stress, requiring comprehensive 
-                support that addresses multiple life areas.
-            </p>
-            
-            <!-- V2 Mid-section CTA -->
-            <div class="cta-callout">
-                <p>Ready to strengthen your family relationships with professional support?</p>
-                <a href="https://nextsteptherapy.ca/#contact" class="cta-primary">Start Family Counselling</a>
-                <p style="margin-top: var(--space-sm);">Or call <a href="tel:+14163062157" class="text-cta">(416) 306-2157</a></p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Family Therapy Approaches - 600 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>Evidence-Based Family Therapy Approaches</h2>
-            
-            <p>
-                Effective family therapy draws from various evidence-based approaches, each offering unique tools and 
-                perspectives for addressing family challenges. The most appropriate approach depends on your family's 
-                specific needs, communication styles, and goals for therapy. Professional family therapy integrates 
-                multiple approaches to create personalized treatment that addresses your family's unique circumstances.
-            </p>
-            
-            <h3>Systemic Family Therapy</h3>
-            <p>
-                Systemic family therapy views families as interconnected systems where individual behaviors and problems 
-                are understood within the context of family relationships and interactions. This approach focuses on 
-                identifying and changing patterns of interaction that maintain problems, rather than focusing solely on 
-                individual symptoms or behaviors.
-            </p>
-            
-            <p>
-                In systemic work, we examine family roles, rules (both spoken and unspoken), boundaries, and communication 
-                patterns. The goal is to help families develop more flexible, adaptive ways of relating that support each 
-                member's growth and well-being while maintaining family connection and stability.
-            </p>
-            
-            <h3>Structural Family Therapy</h3>
-            <p>
-                Structural family therapy examines and modifies family organization, including hierarchies, boundaries, 
-                and subsystems within the family. This approach is particularly helpful when family boundaries are too 
-                rigid or too loose, when parent-child roles are confused, or when family coalitions create dysfunction.
-            </p>
-            
-            <p>
-                Structural interventions help families establish clear, appropriate boundaries while maintaining emotional 
-                connection. For example, helping parents work together as a parental subsystem while allowing children 
-                appropriate autonomy, or addressing situations where a child has taken on inappropriate adult responsibilities.
-            </p>
-            
-            <h3>Emotionally Focused Family Therapy</h3>
-            <p>
-                Emotionally focused therapy (EFT) for families helps family members identify, understand, and express 
-                emotions in ways that strengthen rather than damage relationships. This approach is based on attachment 
-                theory and recognizes that family members' behaviors often stem from underlying emotional needs for 
-                security, connection, and acceptance.
-            </p>
-            
-            <p>
-                EFT helps families move beyond surface-level conflicts to address the emotional needs and fears driving 
-                problematic behaviors. Family members learn to express vulnerability, respond to each other's emotional 
-                needs, and create secure emotional bonds that support healthy family functioning.
-            </p>
-            
-            <h3>Solution-Focused Family Therapy</h3>
-            <p>
-                Solution-focused therapy emphasizes families' existing strengths and resources rather than dwelling on 
-                problems and deficits. This approach helps families identify times when they function well and builds 
-                on these exceptions to create positive change.
-            </p>
-            
-            <p>
-                Solution-focused interventions include exploring family goals, identifying small steps toward improvement, 
-                and recognizing and amplifying positive changes. This approach can be particularly effective for families 
-                who feel overwhelmed by problems and need help reconnecting with their capabilities and hope for change.
-            </p>
-            
-            <h3>Communication-Focused Approaches</h3>
-            <p>
-                Many family therapy approaches emphasize improving communication skills as a foundation for better 
-                relationships. This includes teaching active listening, expressing needs and feelings clearly, managing 
-                conflict constructively, and developing empathy for other family members' perspectives.
-            </p>
-            
-            <p>
-                Communication skills training might involve practicing new ways of talking about difficult topics, 
-                learning to de-escalate conflicts, and developing family meetings or rituals that promote connection 
-                and problem-solving. The goal is helping families develop communication patterns that support rather 
-                than undermine their relationships.
-            </p>
-            
-            <h3>Integrated Treatment Approach</h3>
-            <p>
-                Most effective family therapy integrates techniques from multiple approaches based on your family's 
-                unique needs and circumstances. This might mean using structural techniques to address boundary issues 
-                while incorporating emotionally focused interventions to strengthen attachment bonds, or combining 
-                systemic understanding with practical communication skills training.
-            </p>
-            
-            <p>
-                The key is having a therapist who understands various approaches and can adapt treatment to your family's 
-                specific situation, goals, and preferences. This flexibility ensures that therapy addresses both immediate 
-                concerns and underlying patterns that contribute to family difficulties.
-            </p>
-        </div>
-    </section>
-    
-    <!-- Virtual Family Therapy Benefits - 500 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>Virtual Family Therapy: Effective Support from Home</h2>
-            
-            <p>
-                Virtual family therapy has proven highly effective for families throughout Ontario, offering unique 
-                advantages for family work while maintaining the therapeutic benefits of in-person sessions. Online 
-                family therapy can actually enhance certain aspects of family treatment, making it an excellent option 
-                for many families seeking professional support.
-            </p>
-            
-            <h3>Comfort and Safety of Home Environment</h3>
-            <p>
-                Meeting in your own home can reduce anxiety and defensiveness that sometimes arise in clinical settings. 
-                Family members, especially children and teenagers, often feel more comfortable and authentic in familiar 
-                surroundings. This comfort can lead to more genuine communication and faster therapeutic progress.
-            </p>
-            
-            <p>
-                The home environment also allows the therapist to better understand family dynamics as they naturally 
-                occur, rather than as they might be performed in an office setting. This can provide valuable insights 
-                into family patterns and interactions that inform more effective therapeutic interventions.
-            </p>
-            
-            <h3>Improved Accessibility and Participation</h3>
-            <p>
-                Virtual sessions eliminate transportation barriers, making it easier for all family members to participate 
-                consistently. This is particularly beneficial for families with busy schedules, multiple children, or 
-                members who live in different locations. Extended family members or other important support people can 
-                more easily join sessions when appropriate.
-            </p>
-            
-            <p>
-                The flexibility of virtual therapy often means better attendance and engagement from all family members, 
-                which is crucial for successful family treatment. When logistics aren't a barrier, families can focus 
-                their energy on the therapeutic work rather than coordinating complex schedules.
-            </p>
-            
-            <h3>Enhanced Privacy and Confidentiality</h3>
-            <p>
-                Some families appreciate the additional privacy of virtual sessions, particularly when dealing with 
-                sensitive family issues. There's no concern about running into someone you know in a waiting room, 
-                and family members can participate from private spaces within the home if needed.
-            </p>
-            
-            <p>
-                This enhanced privacy can encourage more open communication about difficult topics, leading to more 
-                productive therapeutic sessions and faster progress toward family goals.
-            </p>
-            
-            <h3>Practical Family Skills Practice</h3>
-            <p>
-                Virtual family therapy allows for immediate practice of communication skills and conflict resolution 
-                techniques in the family's actual living environment. Rather than learning skills in an office and 
-                trying to transfer them home, families can practice new approaches in real-time in their actual setting.
-            </p>
-            
-            <p>
-                Therapists can also provide in-the-moment coaching during family discussions, helping families implement 
-                new communication patterns as they're learning them. This immediate application often leads to faster 
-                skill development and more sustainable changes.
-            </p>
-            
-            <h3>Flexible Session Structure</h3>
-            <p>
-                Virtual family therapy allows for more flexible session structures that can better meet family needs. 
-                This might include shorter but more frequent sessions, separate time with family subsystems, or brief 
-                check-ins between regular sessions when families are working through challenging changes.
-            </p>
-            
-            <p>
-                The flexibility of virtual therapy supports families in maintaining therapeutic momentum between sessions 
-                and getting support when they need it most, rather than waiting for scheduled appointments. This 
-                responsiveness can be particularly valuable during times of family crisis or major transitions.
-            </p>
-            
-            <p>
-                Research consistently shows that virtual family therapy produces outcomes equivalent to in-person 
-                treatment, with many families reporting high satisfaction with the online format. The key is working 
-                with a therapist experienced in virtual family work who can adapt techniques effectively for the 
-                online environment while maintaining therapeutic effectiveness.
-            </p>
-        </div>
-    </section>
-    
-    <!-- Specific Family Issues - 650 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>Addressing Specific Family Challenges</h2>
-            
-            <p>
-                Family counselling addresses a wide range of specific challenges that families face throughout different 
-                life stages and circumstances. Understanding how therapy can help with particular family issues can help 
-                you determine whether professional support might benefit your family's unique situation.
-            </p>
-            
-            <h3>Parent-Child Conflict and Communication</h3>
-            <p>
-                Parent-child conflicts often involve struggles over autonomy, expectations, boundaries, and communication 
-                styles. These conflicts can be particularly intense during adolescence but can occur at any age when 
-                family members have different needs, values, or life goals.
-            </p>
-            
-            <p>
-                Family therapy helps parents and children understand each other's perspectives, develop more effective 
-                communication patterns, and negotiate boundaries that respect both parental authority and individual 
-                autonomy. This work often involves helping family members express needs and concerns more clearly while 
-                learning to listen to and validate each other's experiences.
-            </p>
-            
-            <h3>Blended Family Challenges</h3>
-            <p>
-                Blended families face unique challenges as they integrate different family cultures, parenting styles, 
-                and relationship histories. Children may struggle with loyalty conflicts, adjustment to new family 
-                members, and confusion about roles and expectations.
-            </p>
-            
-            <p>
-                Family counselling for blended families focuses on creating new family identity while respecting previous 
-                relationships and attachments. This includes developing consistent family rules and expectations, supporting 
-                children's adjustment to family changes, and helping all family members find their place in the new 
-                family structure.
-            </p>
-            
-            <h3>Divorce and Separation Impact</h3>
-            <p>
-                Divorce and separation significantly impact all family members, often requiring major adjustments in 
-                living arrangements, communication patterns, and family roles. Children may experience conflicted 
-                loyalties, anxiety about the future, or blame themselves for family changes.
-            </p>
-            
-            <p>
-                Family therapy during and after divorce focuses on helping family members process emotions related to 
-                family changes, develop effective co-parenting communication, and create stability and security for 
-                children. The goal is minimizing negative impacts of family transition while supporting healthy adjustment 
-                for all family members.
-            </p>
-            
-            <h3>Sibling Conflict and Rivalry</h3>
-            <p>
-                Sibling conflicts can create ongoing family stress and tension, particularly when parents feel constantly 
-                called upon to mediate disputes or when conflicts escalate to aggression or persistent hostility. Sibling 
-                rivalry often involves competition for parental attention, resources, or recognition.
-            </p>
-            
-            <p>
-                Family counselling addresses sibling conflicts by helping parents develop effective responses that don't 
-                reinforce rivalry, teaching siblings conflict resolution skills, and examining family dynamics that might 
-                contribute to competitive or hostile sibling relationships. The goal is fostering sibling relationships 
-                that can be sources of support rather than stress.
-            </p>
-            
-            <h3>Extended Family and Intergenerational Issues</h3>
-            <p>
-                Conflicts with grandparents, in-laws, or other extended family members can create significant stress within 
-                nuclear families. These issues often involve disagreements about parenting approaches, family traditions, 
-                financial support, or caregiving responsibilities.
-            </p>
-            
-            <p>
-                Family therapy helps families navigate intergenerational conflicts by clarifying boundaries, improving 
-                communication between generations, and developing strategies for maintaining family relationships while 
-                protecting nuclear family autonomy and values.
-            </p>
-            
-            <h3>Financial Stress and Family Conflict</h3>
-            <p>
-                Money-related stress can create or exacerbate family conflicts, affecting everything from daily decision-making 
-                to long-term planning and family security. Financial pressures often reveal different values, priorities, 
-                and coping styles within families.
-            </p>
-            
-            <p>
-                Family counselling addresses financial stress by helping families improve communication about money, 
-                develop collaborative financial decision-making processes, and reduce conflict related to spending, 
-                saving, and financial priorities. The focus is on strengthening family teamwork in addressing financial 
-                challenges rather than allowing money issues to damage relationships.
-            </p>
-            
-            <h3>Mental Health and Addiction Impact on Families</h3>
-            <p>
-                When a family member experiences mental health challenges or addiction, the entire family system is 
-                affected. Family members may struggle with fear, anger, guilt, or confusion about how to help while 
-                maintaining their own well-being.
-            </p>
-            
-            <p>
-                Family therapy provides education about mental health and addiction, helps families develop supportive 
-                responses that don't enable unhealthy behaviors, and addresses the impact of these challenges on family 
-                relationships. The goal is supporting both the individual struggling with mental health or addiction 
-                issues and the family members affected by these challenges. Sometimes individual concerns like men's 
-                mental health or related issues require integrated treatment approaches.
-            </p>
-        </div>
-    </section>
-
-    <!-- What to Expect in Family Therapy - 450 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>What to Expect in Family Counselling</h2>
-            
-            <p>
-                Starting family counselling can feel overwhelming, especially when family relationships are already 
-                strained. Understanding what to expect in the therapeutic process can help reduce anxiety and help 
-                your family prepare for this important step toward healing and improved communication.
-            </p>
-            
-            <h3>Initial Family Assessment</h3>
-            <p>
-                We'll begin by understanding each family member's perspective on current challenges, family history, 
-                and goals for therapy. This initial assessment helps identify family strengths, communication patterns, 
-                and specific areas that need attention. Everyone's voice is important, and we'll make sure each family 
-                member feels heard and valued in the process.
-            </p>
-            
-            <p>
-                We'll also discuss family logistics like who will participate in sessions, scheduling preferences, and 
-                any concerns about the therapeutic process. Some families benefit from having all members present for 
-                most sessions, while others need a combination of whole family sessions and smaller subsystem meetings.
-            </p>
-            
-            <h3>Building Safety and Trust</h3>
-            <p>
-                Early sessions focus on creating a safe therapeutic environment where family members can communicate 
-                honestly without fear of judgment or retaliation. We'll establish ground rules for respectful communication 
-                and work on reducing defensiveness and hostility that might interfere with productive dialogue.
-            </p>
-            
-            <p>
-                Building trust takes time, especially if family members have experienced hurt or betrayal in their 
-                relationships. The therapeutic process respects each person's need for safety while gently encouraging 
-                the vulnerability necessary for meaningful change.
-            </p>
-            
-            <h3>Learning New Communication Skills</h3>
-            <p>
-                Much of family therapy involves learning and practicing new ways of communicating with each other. 
-                This includes expressing needs and feelings clearly, listening actively to other family members, 
-                managing conflict constructively, and showing empathy for different perspectives.
-            </p>
-            
-            <p>
-                These skills are practiced during sessions and then implemented at home between appointments. We'll 
-                work on gradually increasing the complexity of conversations as family members become more comfortable 
-                with new communication patterns.
-            </p>
-            
-            <h3>Working Through Conflicts</h3>
-            <p>
-                Rather than avoiding difficult topics, family therapy provides a structured environment for addressing 
-                conflicts directly and productively. We'll work through specific disputes while teaching general 
-                conflict resolution skills that families can use independently.
-            </p>
-            
-            <p>
-                This process often involves helping family members understand the underlying needs and emotions driving 
-                their positions, finding creative solutions that meet everyone's important needs, and developing systems 
-                for addressing future conflicts before they escalate.
-            </p>
-            
-            <div class="info-cards">
-                <div class="info-card">
-                    <span class="label">Session Length</span>
-                    <span class="value">60-75 Minutes</span>
-                </div>
-                <div class="info-card">
-                    <span class="label">Format</span>
-                    <span class="value">Virtual Ontario</span>
-                </div>
-                <div class="info-card">
-                    <span class="label">Scheduling</span>
-                    <span class="value">Flexible/Evening</span>
-                </div>
-                <div class="info-card">
-                    <span class="label">Investment</span>
-                    <span class="value">$175/session</span>
-                </div>
-                <div class="info-card">
-                    <span class="label">Insurance</span>
-                    <span class="value">Receipts Provided</span>
-                </div>
-                <div class="info-card">
-                    <span class="label">Confidentiality</span>
-                    <span class="value">Complete Privacy</span>
-                </div>
-            </div>
-            
-            <p>
-                Family therapy is collaborative and goal-oriented. We work together to identify specific changes your 
-                family wants to see and develop practical strategies for achieving these goals. Progress is measured 
-                not just by reduced conflict but by increased connection, understanding, and family satisfaction.
-            </p>
-        </div>
-    </section>
-    
-    <!-- About Your Therapist - 300 words -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>About Your Family Therapist</h2>
-            
-            <p>
-                Hi, I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) with extensive experience helping 
-                families throughout Ontario strengthen their relationships and improve communication. I understand that 
-                family conflicts can feel overwhelming and that taking the step to seek professional support often 
-                feels difficult when relationships are already strained.
-            </p>
-            
-            <p>
-                I work with families facing a wide range of challenges – from communication breakdowns and ongoing 
-                conflicts to major life transitions and blended family adjustments. My approach recognizes that every 
-                family has unique strengths, challenges, and goals, and that effective therapy builds on existing 
-                family resources while introducing new skills and perspectives.
-            </p>
-            
-            <p>
-                I believe that families are capable of positive change when they have appropriate support and practical 
-                tools. My role is to provide a safe, non-judgmental environment where family members can express 
-                themselves honestly while learning more effective ways of relating to each other. I don't take sides 
-                in family conflicts but work to help everyone's perspective be heard and understood.
-            </p>
-            
-            <p>
-                My approach to family therapy integrates evidence-based techniques with genuine understanding of the 
-                pressures facing modern families. Whether you're dealing with parent-child conflicts, sibling rivalry, 
-                blended family challenges, or communication breakdowns, we'll work together to develop practical solutions 
-                that honor your family's values and support everyone's well-being.
-            </p>
-            
-            <p>
-                I provide virtual family therapy throughout Ontario with flexible scheduling that accommodates busy 
-                family schedules. Sessions are designed to be productive and collaborative, focusing on building skills 
-                and understanding that create lasting positive changes in family relationships. Sometimes family issues 
-                intersect with other life challenges, and I'm experienced in addressing these complex, interconnected concerns.
-            </p>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">The Journey</p>
-                <h2>How We'll Work Together on Family Healing</h2>
-                <p class="lead-text">A compassionate approach that honors your family's unique dynamics while building stronger connections.</p>
-                
-                <div class="process-image">
-                    <img src="images/family-process-background.jpg" alt="Professional family counselling consultation and therapy discussion" loading="eager" fetchpriority="high" sizes="100vw">
-                </div>
-            </div>
-            
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Family Assessment</h3>
-                    <p class="step-desc">We start by understanding each family member's perspective, identifying strengths, and clarifying goals for positive change together.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Building Safety</h3>
-                    <p class="step-desc">Creating a secure therapeutic environment where everyone can communicate openly without fear of judgment or retaliation.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Skills Development</h3>
-                    <p class="step-desc">Learning and practicing new communication patterns, conflict resolution techniques, and ways of showing empathy and understanding.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Lasting Change</h3>
-                    <p class="step-desc">Integrating new skills into daily family life, developing systems for ongoing support, and celebrating positive changes together.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="content-section">
-        <div class="container-narrow">
-            <h2>Frequently Asked Questions About Family Counselling</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">What is family counselling and how can it help?</div>
-                <p>
-                    Family counselling is a form of therapy that works with families to improve communication, resolve 
-                    conflicts, and strengthen relationships. It helps family members understand each other better, develop 
-                    healthier interaction patterns, and create more supportive family dynamics. Family therapy addresses 
-                    both current conflicts and underlying patterns that contribute to family difficulties.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Do all family members need to attend sessions?</div>
-                <p>
-                    While having all family members participate often produces the best results, it's not always necessary 
-                    or possible. We can work effectively with whoever is willing and able to attend, and sometimes individual 
-                    or smaller subsystem sessions are beneficial. The key is having the motivation to improve family 
-                    relationships, even if not everyone initially participates.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">How long does family therapy typically take?</div>
-                <p>
-                    The length of family therapy varies depending on the specific issues and goals. Some families see 
-                    improvement within 8-12 sessions, while others may benefit from longer-term support. We work at your 
-                    family's pace and adjust the timeline based on progress and needs. Most families notice some positive 
-                    changes within the first few sessions.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Can family counselling be done virtually?</div>
-                <p>
-                    Yes, virtual family counselling can be highly effective. Online sessions allow all family members 
-                    to participate from the comfort of their home, which can actually reduce anxiety and create a more 
-                    relaxed environment for difficult conversations. Research shows virtual family therapy produces 
-                    outcomes equivalent to in-person sessions.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">What if family members are resistant to therapy?</div>
-                <p>
-                    Resistance to therapy is common and understandable, especially if family relationships are strained. 
-                    We start slowly, focusing on building trust and reducing anxiety about the therapeutic process. Often, 
-                    resistant family members become more engaged once they experience the safety and support of therapeutic 
-                    sessions and see positive changes beginning to occur.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">How do you handle confidentiality in family therapy?</div>
-                <p>
-                    Family therapy confidentiality involves balancing individual privacy with family treatment goals. 
-                    We establish clear agreements about confidentiality at the beginning of treatment, including what 
-                    information can be shared between family members and what remains private. The goal is creating 
-                    safety for honest communication while supporting overall family healing.
-                </p>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">What approaches do you use in family therapy?</div>
-                <p>
-                    I integrate multiple evidence-based approaches including systemic family therapy, structural family 
-                    therapy, emotionally focused therapy, and communication-focused techniques. The specific approaches 
-                    used depend on your family's needs, goals, and preferences. The focus is always on practical skills 
-                    and strategies that create lasting positive changes in family relationships.
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-subtitle">Connect</p>
-                <h2>Ready to Strengthen Your Family Relationships?</h2>
-                <p class="lead-text">Professional family counselling support throughout Ontario. Your free 15-minute consultation is just a conversation - no forms, no commitment, no pressure.</p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero hero-family">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Family Counselling Toronto</h1>
+                    <p class="hero-subtitle">Professional family therapy to heal relationships, improve communication, and strengthen family bonds throughout Ontario.</p>
                     
-                    <ul class="contact-methods">
-                        <li>
-                            <span class="contact-icon">📞</span>
-                            <div class="contact-details">
-                                <strong>Direct Line:</strong><br>
-                                <a href="#contact">Book Consultation</a><br>
-                                <small>Call or text for immediate response</small>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <span class="contact-icon">✉️</span>
-                            <div class="contact-details">
-                                <strong>Email:</strong><br>
-                                <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a><br>
-                                <small>Response during business hours</small>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <span class="contact-icon">💻</span>
-                            <div class="contact-details">
-                                <strong>Session Options:</strong><br>
-                                Virtual throughout Ontario<br>
-                                <small>Flexible family appointments</small>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="virtual-session-image">
-                        <img src="images/family-contact-background.jpg" alt="Professional family counselling virtual session" loading="eager" fetchpriority="high" sizes="100vw">
+                    <div class="hero-cta">
+                        <a href="/#contact" class="cta-primary">Start Family Healing</a>
+                        <a href="tel:+14163062157" class="cta-secondary">(416) 306-2157</a>
                     </div>
                     
-                    <div class="investment-highlight">
-                        <h4>Investment & Insurance</h4>
-                        <p><strong>$175 per 60-75 minute session</strong></p>
-                        <p>Extended health plans accepted<br>
-                        Detailed receipts provided for insurance reimbursement</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Book Your Free Consultation</h3>
-                    <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
-                        <input type="hidden" name="_subject" value="Family Counselling Consultation Request - Next Step Therapy">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="box">
-                        
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="family-situation">Tell me about your family situation</label>
-                            <textarea id="family-situation" name="family-situation" rows="4" placeholder="What's bringing you to consider family counselling? Any specific family challenges or goals you're hoping to work on?"></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="availability">Preferred appointment times</label>
-                            <select id="availability" name="availability">
-                                <option value="">Select preference</option>
-                                <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
-                                <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
-                                <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
-                                <option value="Weekends">Weekends</option>
-                                <option value="Flexible">Flexible</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="cta-primary">Request Free Consultation</button>
-                        
-                        <p class="form-disclaimer">
-                            By submitting this form, you consent to being contacted about your consultation request. 
-                            All information is kept strictly confidential.
-                        </p>
-                    </form>
-                    
-                    <div class="alternative-contact">
-                        <p><strong>Prefer to call or text?</strong></p>
-                        <p><a href="tel:+14163062157" class="cta-secondary">(416) 306-2157</a></p>
-                        <p>Available for same-day response</p>
+                    <div class="hero-trust">
+                        <p>CRPO Registered Psychotherapist #10979 | Virtual Family Sessions Across Ontario</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+
+        <!-- Understanding Family Dynamics Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <h2>Understanding Family Dynamics and When Professional Support Helps</h2>
+                        
+                        <p class="lead">Family relationships are among the most significant and complex connections in our lives, shaping who we are and how we relate to others. When family dynamics become strained, conflicted, or dysfunctional, the impact extends far beyond individual family members to affect work performance, other relationships, and overall well-being.</p>
+                        
+                        <h3>Common Family Challenges That Benefit from Professional Support</h3>
+                        
+                        <div class="feature-card">
+                            <h4>Communication Breakdown</h4>
+                            <p>Many families struggle with effective communication, leading to misunderstandings, hurt feelings, and escalating conflicts. Family members might feel unheard, dismissed, or constantly criticized. Poor communication patterns often develop over years, becoming so ingrained that family members don't recognize healthier alternatives exist.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>Conflict and Tension</h4>
+                            <p>Ongoing disputes about money, parenting decisions, household responsibilities, or lifestyle choices can create chronic stress within families. When conflicts remain unresolved, they tend to resurface repeatedly, often with increased intensity and emotional charge.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>Life Transitions and Changes</h4>
+                            <p>Major life events like divorce, remarriage, new babies, adolescent development, job loss, illness, or aging parent concerns can disrupt established family dynamics. These transitions require adaptation and new coping strategies that families might struggle to develop independently.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h4>Generational Differences</h4>
+                            <p>Different values, expectations, and communication styles between generations can create tension and misunderstanding. Parents and adult children, or grandparents and younger family members, might struggle to bridge these differences while maintaining respect and connection.</p>
+                        </div>
+                        
+                        <h3>The Impact of Family Dysfunction</h3>
+                        
+                        <p>When family relationships are strained, the effects ripple through all areas of life. Children in conflicted families may experience anxiety, depression, or behavioral problems. Adults might struggle with stress-related health issues, difficulty concentrating at work, or challenges in other relationships. The emotional exhaustion from ongoing family conflict can leave people feeling drained and hopeless about the possibility of change.</p>
+                        
+                        <p>Unhealthy family patterns often persist across generations, creating cycles of dysfunction that affect not only current family members but future generations as well. Children learn relationship patterns and communication styles from their families, carrying these into their own adult relationships and parenting.</p>
+                        
+                        <div class="cta-inline">
+                            <div class="cta-inline-content">
+                                <h4>Concerned about your family relationships?</h4>
+                                <p>Professional family counselling can help identify patterns and develop healthier ways of relating.</p>
+                                <a href="/#contact" class="cta-primary">Get Professional Assessment</a>
+                            </div>
+                        </div>
+                        
+                        <h3>Understanding Family Systems</h3>
+                        
+                        <p>Families operate as interconnected systems where changes in one member affect all others. This means that individual problems rarely exist in isolation but are influenced by family dynamics, roles, and communication patterns. Understanding these systemic factors is crucial for creating lasting positive change.</p>
+                        
+                        <p>Family counselling takes a systems approach, examining how family members interact with each other rather than focusing solely on individual behaviors or problems. This perspective helps identify patterns that maintain difficulties and develop strategies for creating healthier family functioning.</p>
+                        
+                        <p>Sometimes family stress intersects with other challenges like workplace stress, requiring comprehensive support that addresses multiple life areas and their interconnections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence-Based Family Therapy Approaches Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <h2>Evidence-Based Family Therapy Approaches</h2>
+                        
+                        <p class="lead">Effective family therapy draws from various evidence-based approaches, each offering unique tools and perspectives for addressing family challenges. The most appropriate approach depends on your family's specific needs, communication styles, and goals for therapy.</p>
+                        
+                        <h3>Systemic Family Therapy</h3>
+                        
+                        <div class="treatment-approach">
+                            <p>Systemic family therapy views families as interconnected systems where individual behaviors and problems are understood within the context of family relationships and interactions. This approach focuses on identifying and changing patterns of interaction that maintain problems, rather than focusing solely on individual symptoms or behaviors.</p>
+                            
+                            <p>In systemic work, we examine family roles, rules (both spoken and unspoken), boundaries, and communication patterns. The goal is to help families develop more flexible, adaptive ways of relating that support each member's growth and well-being while maintaining family connection and stability.</p>
+                        </div>
+                        
+                        <h3>Structural Family Therapy</h3>
+                        
+                        <div class="treatment-approach">
+                            <p>Structural family therapy examines and modifies family organization, including hierarchies, boundaries, and subsystems within the family. This approach is particularly helpful when family boundaries are too rigid or too loose, when parent-child roles are confused, or when family coalitions create dysfunction.</p>
+                            
+                            <p>Structural interventions help families establish clear, appropriate boundaries while maintaining emotional connection. For example, helping parents work together as a parental subsystem while allowing children appropriate autonomy, or addressing situations where a child has taken on inappropriate adult responsibilities.</p>
+                        </div>
+                        
+                        <h3>Emotionally Focused Family Therapy</h3>
+                        
+                        <div class="treatment-approach">
+                            <p>Emotionally focused therapy (EFT) for families helps family members identify, understand, and express emotions in ways that strengthen rather than damage relationships. This approach is based on attachment theory and recognizes that family members' behaviors often stem from underlying emotional needs for security, connection, and acceptance.</p>
+                            
+                            <p>EFT helps families move beyond surface-level conflicts to address the emotional needs and fears driving problematic behaviors. Family members learn to express vulnerability, respond to each other's emotional needs, and create secure emotional bonds that support healthy family functioning.</p>
+                        </div>
+                        
+                        <h3>Solution-Focused Family Therapy</h3>
+                        
+                        <div class="treatment-approach">
+                            <p>Solution-focused therapy emphasizes families' existing strengths and resources rather than dwelling on problems and deficits. This approach helps families identify times when they function well and builds on these exceptions to create positive change.</p>
+                            
+                            <p>Solution-focused interventions include exploring family goals, identifying small steps toward improvement, and recognizing and amplifying positive changes. This approach can be particularly effective for families who feel overwhelmed by problems and need help reconnecting with their capabilities and hope for change.</p>
+                        </div>
+                        
+                        <h3>Communication-Focused Approaches</h3>
+                        
+                        <p>Many family therapy approaches emphasize improving communication skills as a foundation for better relationships. This includes:</p>
+                        
+                        <ul class="content-list">
+                            <li><strong>Active listening skills:</strong> Learning to truly hear and understand each family member's perspective</li>
+                            <li><strong>Clear expression:</strong> Teaching family members to express needs and feelings directly and respectfully</li>
+                            <li><strong>Conflict management:</strong> Developing constructive approaches to disagreements that strengthen rather than damage relationships</li>
+                            <li><strong>Empathy building:</strong> Helping family members understand and respond to each other's emotional experiences</li>
+                        </ul>
+                        
+                        <div class="cta-inline">
+                            <div class="cta-inline-content">
+                                <h4>Ready to strengthen your family relationships?</h4>
+                                <p>Evidence-based family therapy can help your family develop healthier communication and connection patterns.</p>
+                                <a href="/#contact" class="cta-primary">Start Family Counselling</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Family Therapy Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <h2>Virtual Family Therapy: Effective Support from Home</h2>
+                        
+                        <p class="lead">Virtual family therapy has proven highly effective for families throughout Ontario, offering unique advantages for family work while maintaining the therapeutic benefits of in-person sessions. Online family therapy can actually enhance certain aspects of family treatment.</p>
+                        
+                        <h3>Comfort and Safety of Home Environment</h3>
+                        
+                        <div class="benefit-card">
+                            <h4>Reduced Anxiety and Defensiveness</h4>
+                            <p>Meeting in your own home can reduce anxiety and defensiveness that sometimes arise in clinical settings. Family members, especially children and teenagers, often feel more comfortable and authentic in familiar surroundings. This comfort can lead to more genuine communication and faster therapeutic progress.</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h4>Natural Family Dynamics</h4>
+                            <p>The home environment allows the therapist to better understand family dynamics as they naturally occur, rather than as they might be performed in an office setting. This can provide valuable insights into family patterns and interactions that inform more effective therapeutic interventions.</p>
+                        </div>
+                        
+                        <h3>Improved Accessibility and Participation</h3>
+                        
+                        <p>Virtual sessions eliminate transportation barriers, making it easier for all family members to participate consistently. This is particularly beneficial for families with busy schedules, multiple children, or members who live in different locations. Extended family members or other important support people can more easily join sessions when appropriate.</p>
+                        
+                        <p>The flexibility of virtual therapy often means better attendance and engagement from all family members, which is crucial for successful family treatment. When logistics aren't a barrier, families can focus their energy on the therapeutic work rather than coordinating complex schedules.</p>
+                        
+                        <h3>Enhanced Privacy and Confidentiality</h3>
+                        
+                        <p>Some families appreciate the additional privacy of virtual sessions, particularly when dealing with sensitive family issues. There's no concern about running into someone you know in a waiting room, and family members can participate from private spaces within the home if needed.</p>
+                        
+                        <p>This enhanced privacy can encourage more open communication about difficult topics, leading to more productive therapeutic sessions and faster progress toward family goals.</p>
+                        
+                        <h3>Practical Family Skills Practice</h3>
+                        
+                        <p>Virtual family therapy allows for immediate practice of communication skills and conflict resolution techniques in the family's actual living environment. Rather than learning skills in an office and trying to transfer them home, families can practice new approaches in real-time in their actual setting.</p>
+                        
+                        <p>Therapists can also provide in-the-moment coaching during family discussions, helping families implement new communication patterns as they're learning them. This immediate application often leads to faster skill development and more sustainable changes.</p>
+                        
+                        <div class="research-note">
+                            <h4>Research Support</h4>
+                            <p>Research consistently shows that virtual family therapy produces outcomes equivalent to in-person treatment, with many families reporting high satisfaction with the online format. The key is working with a therapist experienced in virtual family work who can adapt techniques effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Addressing Specific Family Issues Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <h2>Addressing Specific Family Challenges</h2>
+                        
+                        <p class="lead">Family counselling addresses a wide range of specific challenges that families face throughout different life stages and circumstances. Understanding how therapy can help with particular family issues can help you determine whether professional support might benefit your family's unique situation.</p>
+                        
+                        <h3>Parent-Child Conflict and Communication</h3>
+                        
+                        <div class="issue-category">
+                            <p>Parent-child conflicts often involve struggles over autonomy, expectations, boundaries, and communication styles. These conflicts can be particularly intense during adolescence but can occur at any age when family members have different needs, values, or life goals.</p>
+                            
+                            <p>Family therapy helps parents and children understand each other's perspectives, develop more effective communication patterns, and negotiate boundaries that respect both parental authority and individual autonomy. This work often involves helping family members express needs and concerns more clearly while learning to listen to and validate each other's experiences.</p>
+                        </div>
+                        
+                        <h3>Blended Family Challenges</h3>
+                        
+                        <div class="issue-category">
+                            <p>Blended families face unique challenges as they integrate different family cultures, parenting styles, and relationship histories. Children may struggle with loyalty conflicts, adjustment to new family members, and confusion about roles and expectations.</p>
+                            
+                            <p>Family counselling for blended families focuses on creating new family identity while respecting previous relationships and attachments. This includes developing consistent family rules and expectations, supporting children's adjustment to family changes, and helping all family members find their place in the new family structure.</p>
+                        </div>
+                        
+                        <h3>Divorce and Separation Impact</h3>
+                        
+                        <div class="issue-category">
+                            <p>Divorce and separation significantly impact all family members, often requiring major adjustments in living arrangements, communication patterns, and family roles. Children may experience conflicted loyalties, anxiety about the future, or blame themselves for family changes.</p>
+                            
+                            <p>Family therapy during and after divorce focuses on helping family members process emotions related to family changes, develop effective co-parenting communication, and create stability and security for children. The goal is minimizing negative impacts of family transition while supporting healthy adjustment for all family members.</p>
+                        </div>
+                        
+                        <h3>Sibling Conflict and Rivalry</h3>
+                        
+                        <div class="issue-category">
+                            <p>Sibling conflicts can create ongoing family stress and tension, particularly when parents feel constantly called upon to mediate disputes or when conflicts escalate to aggression or persistent hostility. Sibling rivalry often involves competition for parental attention, resources, or recognition.</p>
+                            
+                            <p>Family counselling addresses sibling conflicts by helping parents develop effective responses that don't reinforce rivalry, teaching siblings conflict resolution skills, and examining family dynamics that might contribute to competitive or hostile sibling relationships. The goal is fostering sibling relationships that can be sources of support rather than stress.</p>
+                        </div>
+                        
+                        <h3>Extended Family and Intergenerational Issues</h3>
+                        
+                        <p>Conflicts with grandparents, in-laws, or other extended family members can create significant stress within nuclear families. These issues often involve disagreements about parenting approaches, family traditions, financial support, or caregiving responsibilities.</p>
+                        
+                        <p>Family therapy helps families navigate intergenerational conflicts by clarifying boundaries, improving communication between generations, and developing strategies for maintaining family relationships while protecting nuclear family autonomy and values.</p>
+                        
+                        <div class="cta-inline">
+                            <div class="cta-inline-content">
+                                <h4>Facing specific family challenges?</h4>
+                                <p>Professional family counselling can provide targeted strategies for your family's unique situation.</p>
+                                <a href="/#contact" class="cta-primary">Get Specialized Support</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="content-main">
+                    <h2>Frequently Asked Questions About Family Counselling</h2>
+                    
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h3 class="faq-question">Do all family members need to attend sessions?</h3>
+                            <div class="faq-answer">
+                                <p>While having all family members participate often produces the best results, it's not always necessary or possible. We can work effectively with whoever is willing and able to attend, and sometimes individual or smaller subsystem sessions are beneficial. The key is having the motivation to improve family relationships, even if not everyone initially participates.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">How long does family therapy typically take?</h3>
+                            <div class="faq-answer">
+                                <p>The length of family therapy varies depending on the specific issues and goals. Some families see improvement within 8-12 sessions, while others may benefit from longer-term support. We work at your family's pace and adjust the timeline based on progress and needs. Most families notice some positive changes within the first few sessions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">Can family counselling be done virtually?</h3>
+                            <div class="faq-answer">
+                                <p>Yes, virtual family counselling can be highly effective. Online sessions allow all family members to participate from the comfort of their home, which can actually reduce anxiety and create a more relaxed environment for difficult conversations. Research shows virtual family therapy produces outcomes equivalent to in-person sessions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">What if family members are resistant to therapy?</h3>
+                            <div class="faq-answer">
+                                <p>Resistance to therapy is common and understandable, especially if family relationships are strained. We start slowly, focusing on building trust and reducing anxiety about the therapeutic process. Often, resistant family members become more engaged once they experience the safety and support of therapeutic sessions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">How do you handle confidentiality in family therapy?</h3>
+                            <div class="faq-answer">
+                                <p>Family therapy confidentiality involves balancing individual privacy with family treatment goals. We establish clear agreements about confidentiality at the beginning of treatment, including what information can be shared between family members and what remains private. The goal is creating safety for honest communication while supporting overall family healing.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3 class="faq-question">What if our family has different cultural backgrounds?</h3>
+                            <div class="faq-answer">
+                                <p>Cultural diversity within families can create unique challenges and strengths. Family therapy respects and incorporates cultural differences while helping families find common ground and shared values. We explore how cultural backgrounds influence family expectations and work to create solutions that honor different cultural perspectives while promoting family harmony.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Ready to Strengthen Your Family Relationships?</h2>
+                        <p class="contact-intro">Professional family counselling support throughout Ontario. Your family's healing journey starts with understanding your dynamics and developing personalized strategies for healthier communication and connection.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-text">
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+14163062157">(416) 306-2157</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div class="contact-text">
+                                    <strong>Email:</strong>
+                                    <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">🌐</div>
+                                <div class="contact-text">
+                                    <strong>Sessions:</strong>
+                                    Virtual throughout Ontario
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="credentials">
+                            <h3>Professional Credentials</h3>
+                            <p><strong>Jesse Cynamon, Registered Psychotherapist</strong><br>
+                            CRPO Registration #10979<br>
+                            Accepting new families throughout Ontario</p>
+                        </div>
+                        
+                        <div class="session-info">
+                            <h3>Session Information</h3>
+                            <p><strong>Investment:</strong> $175 per 60-75 minute session<br>
+                            <strong>Insurance:</strong> Extended health benefits accepted<br>
+                            <strong>Scheduling:</strong> Flexible family appointments including evenings</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
+                            <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you">
+                            <input type="hidden" name="_subject" value="Family Counselling Toronto Inquiry">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <h3>Get Started Today</h3>
+                            <p>Send a message to schedule your free 15-minute family consultation call.</p>
+                            
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Tell me about your family situation *</label>
+                                <textarea id="message" name="message" rows="4" placeholder="What's bringing you to consider family counselling? Any specific family challenges or goals you're hoping to work on?" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-time">Preferred Contact Time</label>
+                                <select id="preferred-time" name="preferred-time">
+                                    <option value="">Select a time preference</option>
+                                    <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+                                    <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+                                    <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+                                    <option value="Weekend">Weekend</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="cta-primary">Send Message</button>
+                            
+                            <p class="form-note">By submitting this form, you consent to being contacted about your family therapy inquiry. All information is kept strictly confidential in accordance with CRPO ethical guidelines.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="../about">About Jesse</a>
-                    <a href="../services">Services</a>
-                    <a href="../approach">Therapeutic Approach</a>
-                    <a href="../fees">Fees & Insurance</a>
-                    <a href="https://nextsteptherapy.ca/#contact">Contact Form</a>
+                    <div class="footer-logo">
+                        <img src="images/asset104.png" alt="Next Step Therapy" width="30" height="30">
+                        <span>Next Step Therapy</span>
+                    </div>
+                    <p>Professional family therapy services throughout Ontario, specializing in family communication, conflict resolution, and relationship healing using evidence-based approaches.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Professional Support</h4>
-                    <a href="perfectionism-and-burnout-therapy-toronto.html">Perfectionism & Burnout</a>
-                    <a href="grief-counselling-toronto.html">Grief Counselling</a>
-                    <a href="workplace-stress-burnout-therapy.html">Workplace Burnout</a>
-                    <a href="university-anxiety.html">University Anxiety</a>
-                    <a href="virtual-therapy-ontario.html">Virtual Therapy Ontario</a>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="/anxiety-therapy-ontario">Anxiety Therapy</a></li>
+                        <li><a href="/family-counselling-toronto">Family Counselling</a></li>
+                        <li><a href="/mens-mental-health-ontario">Men's Mental Health</a></li>
+                        <li><a href="/workplace-stress-burnout-therapy">Workplace Burnout</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Connect</h4>
-                    <p>Virtual Sessions Throughout Ontario</p>
-                    <p>📧 info@nextsteptherapy.ca</p>
-                    <p>📞 <a href="tel:+14163062157">(416) 306-2157</a></p>
-                    <p>💬 <a href="sms:+14163062157">Text Available</a></p>
-                    <p><strong>CRPO Registration #10979</strong></p>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+14163062157">(416) 306-2157</a></li>
+                        <li><a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a></li>
+                        <li>Virtual Sessions Throughout Ontario</li>
+                        <li>CRPO #10979</li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Next Step Therapy | Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | All rights reserved</p>
+                <p>&copy; 2025 Next Step Therapy. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a> | Professional therapy services by Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Mobile Sticky CTA -->
-    <a href="tel:+14163062157" class="mobile-sticky-cta">Get Support Now</a>
-    
-    <!-- Smart Header & Mobile CTA JavaScript -->
-    <script>
-    // Smart sticky header - hide on scroll down, show on scroll up (mobile only)
-    let lastScrollTop = 0;
-    const header = document.querySelector('.header');
-    
-    window.addEventListener('scroll', function() {
-        if (window.innerWidth <= 768) { // Mobile only
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 80) {
-                // Scrolling down & past initial area
-                header.classList.add('hide-on-scroll');
-            } else if (scrollTop < lastScrollTop) {
-                // Scrolling up
-                header.classList.remove('hide-on-scroll');
-            }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }
-    });
-    
-    // Show mobile sticky CTA after scrolling 30% down page
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled / document.body.offsetHeight;
-        const stickyCTA = document.querySelector('.mobile-sticky-cta');
-        
-        if (rate > 0.3 && window.innerWidth <= 768) {
-            stickyCTA.classList.add('show');
-        } else {
-            stickyCTA.classList.remove('show');
-        }
-    });
-    </script>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="tel:+14163062157" class="mobile-cta-button">
+            <span class="mobile-cta-icon">📞</span>
+            <span class="mobile-cta-text">Call Now</span>
+        </a>
+    </div>
 </body>
 </html>
