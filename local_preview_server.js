@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
     filePath = filePath.replace(/\.\./g, '');
     
     // Get the actual file path
-    const actualPath = path.join(__dirname, filePath);
+    const actualPath = path.join(__dirname, 'public', filePath);
     
     // Check if file exists
     fs.access(actualPath, fs.constants.F_OK, (err) => {
