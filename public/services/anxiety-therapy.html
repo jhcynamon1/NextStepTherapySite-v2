@@ -83,9 +83,15 @@
     
     <style>
         /* Service Page Specific Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
         .service-hero {
             background: linear-gradient(135deg, var(--neutral-cream) 0%, var(--neutral-soft) 100%);
-            padding: var(--space-xxl) 0;
+            padding: 100px 20px 80px;
             position: relative;
             overflow: hidden;
         }
@@ -109,23 +115,25 @@
         
         .service-title {
             font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 600;
             color: var(--primary-deep);
-            margin-bottom: var(--space-md);
-            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            text-align: center;
         }
         
         .service-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.7;
             max-width: 800px;
-            margin: 0 auto var(--space-xl);
+            margin: 0 auto 2.5rem;
+            text-align: center;
         }
         
         .content-section {
-            padding: var(--space-section) 0;
+            padding: 80px 20px;
         }
         
         .content-section:nth-child(even) {
@@ -134,10 +142,11 @@
         
         .section-title {
             font-family: var(--font-display);
-            font-size: 2rem;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
             color: var(--primary-deep);
-            margin-bottom: var(--space-lg);
+            margin-bottom: 2.5rem;
             text-align: center;
+            line-height: 1.3;
         }
         
         .feature-grid {
@@ -214,28 +223,29 @@
         
         .cta-section {
             background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-deep));
-            padding: var(--space-xxl) 0;
+            padding: 80px 20px;
             color: white;
             text-align: center;
         }
         
         .cta-title {
             font-family: var(--font-display);
-            font-size: 2.5rem;
-            margin-bottom: var(--space-md);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
         }
         
         .cta-button {
             display: inline-block;
             background: white;
             color: var(--primary-deep);
-            padding: var(--space-md) var(--space-xl);
-            border-radius: var(--radius-sm);
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
-            margin-top: var(--space-lg);
+            margin-top: 1.5rem;
         }
         
         .cta-button:hover {
@@ -263,19 +273,71 @@
             font-family: var(--font-display);
         }
         
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .service-hero {
-                padding: var(--space-xl) 0;
+                padding: 80px 20px 60px;
+            }
+            
+            .service-title {
+                font-size: 1.8rem;
+            }
+            
+            .service-subtitle {
+                font-size: 1rem;
+            }
+            
+            .content-section {
+                padding: 60px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .process-step {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                align-items: flex-start;
+                text-align: left;
             }
             
             .process-number::after {
                 display: none;
+            }
+            
+            .cta-section {
+                padding: 60px 20px;
+            }
+            
+            .cta-title {
+                font-size: 1.6rem;
+            }
+            
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+            
+            /* Fix header on mobile */
+            .header .nav {
+                display: none;
+            }
+            
+            .header-phone {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            
+            /* Fix two-column layouts on mobile */
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
             }
         }
     </style>
@@ -311,10 +373,12 @@
         <!-- Hero Section -->
         <section class="service-hero">
             <div class="container">
-                <div class="hero-content" style="text-align: center;">
+                <div class="hero-content">
                     <h1 class="service-title">Professional Anxiety Therapy with Jesse Cynamon, RP</h1>
                     <p class="service-subtitle">Evidence-based treatment for anxiety disorders using Acceptance and Commitment Therapy (ACT). As a Registered Psychotherapist (CRPO #10979) specializing in anxiety treatment, I provide compassionate, effective therapy that helps you move from surviving to thriving.</p>
-                    <a href="#contact" class="cta-button">Book Your Free 15-Minute Consultation</a>
+                    <div style="text-align: center;">
+                        <a href="#contact" class="cta-button">Book Your Free 15-Minute Consultation</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -324,12 +388,12 @@
             <div class="container">
                 <h2 class="section-title">Understanding Your Anxiety: You're Not Alone</h2>
                 
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: var(--space-lg);">
+                <div style="max-width: 900px; margin: 0 auto 3rem;">
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
                         Anxiety affects millions of Canadians, with approximately 1 in 4 people experiencing an anxiety disorder at some point in their lives. As a Registered Psychotherapist specializing in anxiety treatment, I understand that anxiety isn't just "being worried" – it's a complex experience that affects your thoughts, emotions, physical sensations, and behaviors in profound ways.
                     </p>
                     
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: var(--space-lg);">
+                    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
                         Whether you're dealing with generalized anxiety disorder, panic attacks, social anxiety, or specific phobias, it's important to know that anxiety is highly treatable. Research consistently shows that psychotherapy, particularly approaches like Acceptance and Commitment Therapy (ACT), can be incredibly effective in helping people develop a healthier relationship with anxiety and reclaim their lives.
                     </p>
                 </div>
@@ -389,9 +453,9 @@
                     </p>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; max-width: 1200px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; max-width: 1200px; margin: 3rem auto 0;">
                     <div>
-                        <h3 style="color: var(--primary-deep); margin-bottom: var(--space-md); font-size: 1.5rem;">Core Components of ACT for Anxiety</h3>
+                        <h3 style="color: var(--primary-deep); margin-bottom: 1.5rem; font-size: 1.4rem;">Core Components of ACT for Anxiety</h3>
                         
                         <div style="margin-bottom: var(--space-lg);">
                             <h4 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Mindfulness & Present Moment Awareness</h4>
@@ -699,9 +763,9 @@
             <div class="container">
                 <h2 class="section-title">Book Your Free Consultation</h2>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
                     <div>
-                        <h3 style="color: var(--primary-deep); margin-bottom: var(--space-md);">Get Started Today</h3>
+                        <h3 style="color: var(--primary-deep); margin-bottom: 1.5rem;">Get Started Today</h3>
                         <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-lg);">
                             Taking the first step toward therapy can feel daunting, especially when you're dealing with anxiety. I offer a free 15-minute consultation to help you determine if we're a good therapeutic fit. This is a no-pressure conversation where you can ask questions and get a feel for my approach.
                         </p>
@@ -732,32 +796,32 @@
                     </div>
                     
                     <div>
-                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST" style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-medium);">
+                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
                             <input type="hidden" name="_subject" value="Anxiety Therapy Consultation Request">
                             <input type="hidden" name="_captcha" value="false">
                             
-                            <h3 style="color: var(--primary-deep); margin-bottom: var(--space-md);">Request Your Free Consultation</h3>
+                            <h3 style="color: var(--primary-deep); margin-bottom: 1.5rem;">Request Your Free Consultation</h3>
                             
-                            <div style="margin-bottom: var(--space-md);">
-                                <label for="name" style="display: block; margin-bottom: 8px; color: var(--text-primary); font-weight: 500;">Your Name *</label>
-                                <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 1rem;">
+                            <div style="margin-bottom: 1.2rem;">
+                                <label for="name" style="display: block; margin-bottom: 6px; color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Your Name *</label>
+                                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
                             </div>
                             
-                            <div style="margin-bottom: var(--space-md);">
-                                <label for="email" style="display: block; margin-bottom: 8px; color: var(--text-primary); font-weight: 500;">Email Address *</label>
-                                <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 1rem;">
+                            <div style="margin-bottom: 1.2rem;">
+                                <label for="email" style="display: block; margin-bottom: 6px; color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Email Address *</label>
+                                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
                             </div>
                             
-                            <div style="margin-bottom: var(--space-md);">
-                                <label for="phone" style="display: block; margin-bottom: 8px; color: var(--text-primary); font-weight: 500;">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 1rem;">
+                            <div style="margin-bottom: 1.2rem;">
+                                <label for="phone" style="display: block; margin-bottom: 6px; color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
                             </div>
                             
-                            <div style="margin-bottom: var(--space-md);">
-                                <label for="anxiety-type" style="display: block; margin-bottom: 8px; color: var(--text-primary); font-weight: 500;">Primary Anxiety Concern</label>
-                                <select id="anxiety-type" name="anxiety-type" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: var(--radius-sm); font-size: 1rem;">
+                            <div style="margin-bottom: 1.2rem;">
+                                <label for="anxiety-type" style="display: block; margin-bottom: 6px; color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">Primary Anxiety Concern</label>
+                                <select id="anxiety-type" name="anxiety-type" style="width: 100%; padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
                                     <option value="">Please select...</option>
                                     <option value="generalized">Generalized anxiety/constant worry</option>
                                     <option value="panic">Panic attacks</option>
