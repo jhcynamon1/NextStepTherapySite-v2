@@ -331,13 +331,13 @@
             h1{font-size:1.75rem}
             .hero{padding:2rem 1rem}
             .btn{min-height:48px;width:100%;margin-bottom:0.5rem}
-            /* MOBILE HEADER FIX - Critical */
-            .header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;height:50px !important;padding:5px 16px !important;background:rgba(255,255,255,0.98) !important;backdrop-filter:blur(10px) !important;z-index:1000 !important}
-            body{padding-top:50px !important;margin-top:0 !important}
-            .logo{height:25px !important;width:auto !important}
-            .logo-text{font-size:16px !important}
-            .credentials-badge{font-size:10px !important;padding:2px 4px !important}
-            .header-content{height:50px !important;align-items:center !important;justify-content:space-between !important}
+            /* MOBILE HEADER FIX - Remove sticky header on mobile */
+            .header{position:static !important;padding:10px 16px !important;background:white !important;box-shadow:none !important}
+            body{padding-top:0 !important;margin-top:0 !important}
+            .logo{height:30px !important}
+            .logo-text{font-size:18px !important}
+            .credentials-badge{display:none !important}
+            .header-content{height:auto !important}
         }
     </style>
     
