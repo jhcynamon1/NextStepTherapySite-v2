@@ -9,10 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
-    <!-- Google Analytics 4 + Conversion Tracking -->
+    <!-- Google Analytics 4 + Conversion Tracking - Deferred for Performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
-    <script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script defer>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -22,7 +22,7 @@
             'send_page_view': true
         });
 
-        // Track phone clicks
+        // Track phone clicks - deferred for performance
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -52,14 +52,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Optimized Font Loading with font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"&display=swap>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"&display=swap>
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"&display=swap></noscript>
+    <!-- Optimized Font Loading - Only essential weights -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Preload Critical Resources for Mobile -->
-    <link rel="preload" as="image" href="images/hero-background.jpg">
-    <link rel="preload" as="image" href="images/asset103.png">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" href="images/asset104.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero-background.jpg" fetchpriority="high">
+    
+    <!-- DNS prefetch for faster third-party connections -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
     <!-- DNS Prefetch for Third-party Domains -->
     <link rel="dns-prefetch" href="//polyfill.io">
@@ -141,7 +144,7 @@
         "url": "https://nextsteptherapy.ca/images/asset104.png"
       },
       "image": "https://nextsteptherapy.ca/images/asset104.png",
-      "telephone": "+14163062157",
+      "telephone": "Book Consultation",
       "email": "jesse@nextsteptherapy.ca",
       "founder": {
         "@id": "https://nextsteptherapy.ca/#jessecynamon"
@@ -222,7 +225,7 @@
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+14163062157",
+          "telephone": "Book Consultation",
           "contactType": "Appointments",
           "availableLanguage": "English",
           "areaServed": "Ontario"
@@ -307,7 +310,36 @@
     }
     </script>
     
-    <link rel="stylesheet" href="shared.min.css">
+    <!-- Critical CSS - Inline for instant first paint -->
+    <style>
+        /* Critical above-the-fold styles */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;color:#333;background:#fff}
+        .header{background:#fff;padding:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
+        .header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .logo{height:40px;width:auto}
+        .nav{display:flex;list-style:none;gap:1rem}
+        .nav a{text-decoration:none;color:#333;padding:0.5rem 1rem}
+        .hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:4rem 1rem;text-align:center}
+        .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+        h1{font-size:2.5rem;margin-bottom:1rem;font-weight:700}
+        .btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s;cursor:pointer;border:none;font-size:16px}
+        .btn-primary{background:#007bff;color:white}
+        .btn-secondary{background:transparent;color:white;border:2px solid white}
+        @media (max-width:768px){
+            .nav{display:none}
+            h1{font-size:1.75rem}
+            .hero{padding:2rem 1rem}
+            .btn{min-height:48px;width:100%;margin-bottom:0.5rem}
+        }
+    </style>
+    
+    <!-- Load full CSS async to avoid blocking render -->
+    <link rel="preload" href="shared.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="shared.min.css"></noscript>
+    
+    <link rel="preload" href="/mobile-optimizations.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/mobile-optimizations.min.css"></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -354,6 +386,9 @@
                 will-change: transform;
             ">
                 <picture>
+                    <source media="(max-width: 768px)" srcset="images/hero-background-mobile.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="images/hero-background-mobile.jpg">
+                    <source srcset="images/hero-background.webp" type="image/webp">
                     <img src="images/hero-background.jpg" 
                          alt="Peaceful therapy environment background" 
                          style="
@@ -402,7 +437,7 @@
                     
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
-                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="100vw" onerror="this.innerHTML='JC'">
+                            <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
                         </div>
                         <div class="therapist-info">
                             <h3 class="therapist-name">Jesse Cynamon, RP</h3>
@@ -445,7 +480,10 @@
                         <p>You're the expert on your life - I'm just here with the tools and training to help you navigate it better. No judgment, no telling you what to do. Just genuine collaboration toward the changes you want to see.</p>
                         
                         <div class="office-image">
-                            <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300" loading="eager" fetchpriority="high" sizes="100vw" loading="eager" fetchpriority="high" sizes="100vw">
+                            <picture>
+                                <source srcset="images/asset34.webp" type="image/webp">
+                                <img src="images/asset34.jpg" alt="Comfortable therapy office environment" width="400" height="300" loading="lazy" sizes="(max-width: 768px) 100vw, 400px">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -469,15 +507,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-anxiety.jpg" alt="Anxiety therapy support icon" style="
+                            <img src="images/icon-anxiety.jpg" alt="Anxiety therapy support icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Anxiety & Stress Management</h3>
                         <p class="specialization-desc">When your mind won't stop racing at 3am. Practical tools for panic attacks and overwhelm. Finally understand why you worry so much.</p>
-                        <a href="services/anxiety-therapy.html" class="specialization-link">Get Anxiety Therapy in Ontario →</a>
+                        <a href="public/services/anxiety-therapy.html" class="specialization-link">Get Anxiety Therapy in Ontario →</a>
                     </div>
                     
                     <div class="specialization-card">
@@ -487,15 +525,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-mens-health.jpg" alt="Men's mental health therapy icon" style="
+                            <img src="images/icon-mens-health.jpg" alt="Men's mental health therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Men's Mental Health</h3>
                         <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
-                        <a href="services/mens-mental-health.html" class="specialization-link">Men's Mental Health Support →</a>
+                        <a href="public/services/mens-mental-health.html" class="specialization-link">Men's Mental Health Support →</a>
                     </div>
                     
                     <div class="specialization-card">
@@ -505,15 +543,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-workplace.jpg" alt="Workplace stress therapy icon" style="
+                            <img src="images/icon-workplace.jpg" alt="Workplace stress therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Workplace Stress & Burnout</h3>
                         <p class="specialization-desc">When Sunday nights fill you with dread. Beyond "just take a vacation" advice. Finding sustainability without quitting everything.</p>
-                        <a href="services/workplace-stress-burnout.html" class="specialization-link">Workplace Stress Therapy →</a>
+                        <a href="public/services/workplace-stress-burnout.html" class="specialization-link">Workplace Stress Therapy →</a>
                     </div>
                     
                     <div class="specialization-card">
@@ -523,15 +561,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-transitions.jpg" alt="Life transitions therapy icon" style="
+                            <img src="images/icon-transitions.jpg" alt="Life transitions therapy icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Life Transitions & Change</h3>
                         <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
-                        <a href="services/life-transitions.html" class="specialization-link">Life Transitions Support →</a>
+                        <a href="public/services/life-transitions.html" class="specialization-link">Life Transitions Support →</a>
                     </div>
                     
                     <div class="specialization-card">
@@ -541,15 +579,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-depression.jpg" alt="Depression therapy support icon" style="
+                            <img src="images/icon-depression.jpg" alt="Depression therapy support icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Depression & Mood Support</h3>
                         <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
-                        <a href="services/depression-mood-support.html" class="specialization-link">Depression Therapy Ontario →</a>
+                        <a href="public/services/depression-mood-support.html" class="specialization-link">Depression Therapy Ontario →</a>
                     </div>
                     
                     <div class="specialization-card">
@@ -559,15 +597,15 @@
                             height: 80px;
                             margin: 0 auto 16px;
                         ">
-                            <img src="images/icon-relationships.jpg" alt="Relationship therapy communication icon" style="
+                            <img src="images/icon-relationships.jpg" alt="Relationship therapy communication icon" width="80" height="80" loading="lazy" sizes="80px" style="
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                            " loading="eager" fetchpriority="high" sizes="100vw">
+                            ">
                         </div>
                         <h3 class="specialization-title">Relationship & Communication</h3>
                         <p class="specialization-desc">When the same arguments keep happening. Understanding your patterns in relationships. Actually being heard (and hearing others).</p>
-                        <a href="services/relationship-communication.html" class="specialization-link">Relationship Therapy Help →</a>
+                        <a href="public/services/relationship-communication.html" class="specialization-link">Relationship Therapy Help →</a>
                     </div>
                 </div>
             </div>
@@ -582,7 +620,10 @@
                     <p class="lead-text">A straightforward process that respects your time and focuses on real progress.</p>
                     
                     <div class="process-image">
-                        <img src="images/process-background.jpg" alt="Professional consultation and therapy discussion" loading="eager" fetchpriority="high" sizes="100vw">
+                        <picture>
+                            <source srcset="images/about-texture.webp" type="image/webp">
+                            <img src="images/about-texture.webp" alt="Calming therapeutic environment" width="800" height="600" loading="lazy" sizes="(max-width: 768px) 100vw, 800px">
+                        </picture>
                     </div>
                 </div>
                 
@@ -754,7 +795,7 @@
                         </ul>
                         
                         <div class="virtual-session-image">
-                            <img src="images/contact-background.jpg" alt="Virtual therapy session setup" loading="eager" fetchpriority="high" sizes="100vw">
+                            <img src="images/homepage-contact-background.jpg" alt="Professional virtual therapy consultation setup" loading="eager" fetchpriority="high" sizes="100vw">
                         </div>
                         
                         <div class="investment-highlight">
@@ -838,12 +879,12 @@
                 <div class="footer-section">
                     <h4>Areas of Focus</h4>
                     <ul>
-                        <li><a href="services/anxiety-therapy.html">Anxiety & Stress Management</a></li>
-                        <li><a href="services/life-transitions.html">Life Transitions & Change</a></li>
-                        <li><a href="services/depression-mood-support.html">Depression & Mood Support</a></li>
-                        <li><a href="services/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="services/relationship-communication.html">Relationship & Communication</a></li>
-                        <li><a href="services/workplace-stress-burnout.html">Workplace Stress & Burnout</a></li>
+                        <li><a href="public/services/anxiety-therapy.html">Anxiety & Stress Management</a></li>
+                        <li><a href="public/services/life-transitions.html">Life Transitions & Change</a></li>
+                        <li><a href="public/services/depression-mood-support.html">Depression & Mood Support</a></li>
+                        <li><a href="public/services/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="public/services/relationship-communication.html">Relationship & Communication</a></li>
+                        <li><a href="public/services/workplace-stress-burnout.html">Workplace Stress & Burnout</a></li>
                     </ul>
                 </div>
                 
@@ -1065,3 +1106,24 @@
   }
 }
 </script>
+
+<!-- Core Web Vitals Performance Monitor -->
+<script defer src="/performance-monitor.js"></script>
+
+<!-- Service Worker Registration -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered successfully:', registration.scope);
+      })
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
+
+</body>
+</html>
