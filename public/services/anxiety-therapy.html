@@ -20,6 +20,59 @@
     
     <link rel="stylesheet" href="../shared.min.css">
     <link rel="stylesheet" href="professional-service-styles.css">
+    
+    <!-- Schema Markup for Service Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Anxiety Therapy",
+      "description": "Evidence-based anxiety therapy using Acceptance and Commitment Therapy (ACT) approach for panic attacks, generalized anxiety, social anxiety, and work-related stress.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+        "name": "Jesse Cynamon, RP",
+        "jobTitle": "Registered Psychotherapist",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "identifier": "CRPO #10979",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario"
+          }
+        }
+      },
+      "availableService": {
+        "@type": "MedicalService",
+        "name": "Individual Anxiety Therapy",
+        "serviceType": "Psychotherapy",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "50-minute Anxiety Therapy Session",
+              "price": "175",
+              "priceCurrency": "CAD",
+              "availability": "InStock",
+              "areaServed": "Ontario"
+            }
+          ]
+        }
+      },
+      "medicalSpecialty": "Anxiety Disorders Treatment",
+      "isAvailableGenerically": false,
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
