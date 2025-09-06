@@ -49,18 +49,20 @@
     <meta property="og:url" content="https://nextsteptherapy.ca">
     
     <!-- Critical Performance Optimizations -->
-    <link rel="preconnect" href="m nhttps://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Optimized Font Loading with font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"&display=swap>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"&display=swap>
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"&display=swap></noscript>
+    <!-- Optimized Font Loading - Only essential weights -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Preload Critical Resources for Mobile -->
-    <link rel="preload" as="image" href="images/hero-background-mobile.webp" media="(max-width: 768px)">
-    <link rel="preload" as="image" href="images/hero-background.webp" media="(min-width: 769px)">
-    <link rel="preload" as="image" href="images/asset103.png">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" href="images/asset104.png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero-background.jpg" fetchpriority="high">
+    
+    <!-- DNS prefetch for faster third-party connections -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
     <!-- DNS Prefetch for Third-party Domains -->
     <link rel="dns-prefetch" href="//polyfill.io">
@@ -308,8 +310,36 @@
     }
     </script>
     
-    <link rel="stylesheet" href="shared.min.css">
-    <link rel="stylesheet" href="/mobile-optimizations.min.css">
+    <!-- Critical CSS - Inline for instant first paint -->
+    <style>
+        /* Critical above-the-fold styles */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;color:#333;background:#fff}
+        .header{background:#fff;padding:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}
+        .header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+        .logo{height:40px;width:auto}
+        .nav{display:flex;list-style:none;gap:1rem}
+        .nav a{text-decoration:none;color:#333;padding:0.5rem 1rem}
+        .hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;padding:4rem 1rem;text-align:center}
+        .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+        h1{font-size:2.5rem;margin-bottom:1rem;font-weight:700}
+        .btn{display:inline-block;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s;cursor:pointer;border:none;font-size:16px}
+        .btn-primary{background:#007bff;color:white}
+        .btn-secondary{background:transparent;color:white;border:2px solid white}
+        @media (max-width:768px){
+            .nav{display:none}
+            h1{font-size:1.75rem}
+            .hero{padding:2rem 1rem}
+            .btn{min-height:48px;width:100%;margin-bottom:0.5rem}
+        }
+    </style>
+    
+    <!-- Load full CSS async to avoid blocking render -->
+    <link rel="preload" href="shared.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="shared.min.css"></noscript>
+    
+    <link rel="preload" href="/mobile-optimizations.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/mobile-optimizations.min.css"></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -415,7 +445,7 @@
                             <div class="therapist-credentials">CRPO #10979</div>
                             <p class="therapist-bio">I became a therapist because I believe everyone deserves support that actually helps. With advanced training in Acceptance and Commitment Therapy and years of experience with real people facing real challenges, I offer more than textbook solutions.</p>
                             <ul class="expertise-list">
-                                <li>M.A. Psychology</li>
+                                <li>MPsy (Master of Psychology)</li>
                                 <li>CRPO Registered (#10979)</li>
                                 <li>Advanced ACT Certification</li>
                                 <li>Crisis Intervention Training</li>
@@ -1076,3 +1106,9 @@
   }
 }
 </script>
+
+<!-- Core Web Vitals Performance Monitor -->
+<script defer src="/performance-monitor.js"></script>
+
+</body>
+</html>
