@@ -1,0 +1,286 @@
+/* Mobile-First Performance Optimizations */
+/* Critical for 70% of healthcare traffic */
+
+/* ========================================
+   MOBILE TOUCH TARGETS (48px minimum)
+   ======================================== */
+@media screen and (max-width: 768px) {
+  /* All buttons need 48px minimum height for mobile */
+  .btn,
+  button,
+  a.btn-primary,
+  a.btn-secondary,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 48px !important;
+    font-size: 16px !important; /* Prevents iOS zoom */
+    padding: 12px 24px !important;
+    touch-action: manipulation; /* Faster tap response */
+  }
+  
+  /* Form inputs optimized for mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on focus */
+    padding: 12px !important;
+    min-height: 48px !important;
+    border-radius: 8px;
+    -webkit-appearance: none; /* Remove iOS styling */
+  }
+  
+  /* Larger click areas for links */
+  nav a,
+  .nav a {
+    padding: 12px 16px !important;
+    display: inline-block;
+  }
+  
+  /* Phone number links - make them obvious */
+  a[href^="tel:"] {
+    background: #007bff;
+    color: white !important;
+    padding: 16px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin: 8px 0;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduce animations on mobile for better performance */
+@media screen and (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   MOBILE LAYOUT IMPROVEMENTS
+   ======================================== */
+@media screen and (max-width: 768px) {
+  /* Fixed header issue - make it smaller and less intrusive */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 8px 16px !important;
+    height: 60px;
+  }
+  
+  /* Add padding to body to account for fixed header */
+  body {
+    padding-top: 60px !important;
+  }
+  
+  /* Hide navigation on mobile to save space */
+  .nav {
+    display: none !important;
+  }
+  
+  /* Make header content more compact */
+  .header-content {
+    align-items: center !important;
+    height: 60px;
+  }
+  
+  /* Optimize logo size for mobile */
+  .logo {
+    height: 30px !important;
+    width: auto;
+  }
+  
+  .logo-text {
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+  
+  .credentials-badge {
+    font-size: 12px !important;
+    padding: 2px 6px !important;
+  }
+  
+  /* Reduce hero section height on mobile */
+  .hero,
+  .service-hero {
+    min-height: 50vh !important; /* Faster perceived load */
+    padding: 2rem 1rem !important;
+  }
+  
+  /* Single column layout on mobile */
+  .container {
+    padding: 0 16px !important;
+    max-width: 100% !important;
+  }
+  
+  /* Stack all grid items on mobile */
+  .detail-grid,
+  .approach-grid,
+  .cta-features {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Reduce font sizes slightly for mobile */
+  h1, .service-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+  
+  h2, .section-title {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: 20px !important;
+  }
+  
+  p, li {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* ========================================
+   MOBILE-SPECIFIC COMPONENTS
+   ======================================== */
+@media screen and (max-width: 768px) {
+  /* Sticky CTA button for mobile */
+  .mobile-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 12px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .mobile-sticky-cta .btn {
+    flex: 1;
+    text-align: center;
+    margin: 0 !important;
+  }
+  
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  /* Optimize footer for mobile */
+  .footer-content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+    width: 100% !important;
+  }
+}
+
+/* ========================================
+   TABLET OPTIMIZATIONS (768px - 1024px)
+   ======================================== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Hide mobile-only elements */
+  .mobile-sticky-cta {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   CRITICAL RENDERING PATH
+   ======================================== */
+
+/* Optimize web fonts loading */
+.fonts-loaded body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Use system fonts as fallback */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus styles for keyboard navigation */
+*:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Skip to content link for screen readers */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #007bff;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles if needed */
+}

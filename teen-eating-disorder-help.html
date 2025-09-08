@@ -407,8 +407,8 @@
             font-style: italic;
             margin-bottom: var(--space-lg);
             /* Mobile responsive - max 2.5rem on mobile */
-            max-height: calc(2.5rem * 2.2); /* 2 lines max */
-            overflow: hidden;
+            max-height: none; /* Remove height constraint */
+            overflow: visible;
         }
         
         @media (max-width: 600px) {

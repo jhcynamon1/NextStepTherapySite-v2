@@ -2,6 +2,7 @@
 
 const { google } = require('googleapis');
 const fs = require('fs');
+const path = require('path'); // Added for path.join
 
 /**
  * Enhanced GSC Page-Level Data Extractor
@@ -68,7 +69,7 @@ class EnhancedGSCExtractor {
             const enhancedPageData = this.combinePageData(pageData, pageQueryData);
             
             // Save data
-            this.savePageData(enhancedPageData, fileName);
+            await this.savePageData(enhancedPageData, fileName);
             
             console.log(`✅ Extracted data for ${enhancedPageData.length} pages`);
             return enhancedPageData;
@@ -195,25 +196,17 @@ class EnhancedGSCExtractor {
         return Math.min(score, 10); // Cap at 10
     }
 
-    savePageData(data, fileName) {
-        // Ensure directory exists
-        if (!fs.existsSync('gsc_data')) {
-            fs.mkdirSync('gsc_data', { recursive: true });
+    async savePageData(data, fileName) {
+        const filePath = path.join(__dirname, 'gsc_data', `${fileName}.json`);
+        console.log(`💾 Saving page data to ${filePath}...`);
+        
+        try {
+            fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+            console.log('✅ Page data saved successfully!');
+        } catch (err) {
+            console.error(`❌ Error saving page data: ${err.message}`);
+            console.error(err);
         }
-        
-        const jsonFileName = `gsc_data/${fileName}.json`;
-        const csvFileName = `gsc_data/${fileName}.csv`;
-        
-        // Save detailed page data
-        fs.writeFileSync(jsonFileName, JSON.stringify(data, null, 2));
-        
-        // Also save in CSV format for easy analysis
-        const csvData = this.convertToCSV(data);
-        fs.writeFileSync(csvFileName, csvData);
-        
-        console.log('💾 Page data saved to:');
-        console.log(`   • ${jsonFileName}`);
-        console.log(`   • ${csvFileName}`);
     }
 
     convertToCSV(data) {
