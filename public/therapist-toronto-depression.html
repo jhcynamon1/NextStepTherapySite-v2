@@ -25,40 +25,7 @@
             });
         });
     </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track form submissions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function() {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-
-            // Track phone clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -67,8 +34,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data - Exact Keyword Match -->
-    <title>Depression Therapy in Toronto | Find Relief & Feel Better</title>
+    <!-- SEO Meta Data - V3 Compliant -->
+    <title>Depression Therapy Toronto | Find Relief & Feel Better | CRPO #10979</title>
     <meta name="description" content="Feeling weighed down by depression? Find a compassionate therapist in Toronto for evidence-based, virtual support. Let's work together to help you feel like yourself again. Book a free, no-pressure consultation.">
     
     <!-- Open Graph Tags -->
@@ -80,36 +47,25 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/therapist-toronto-depression.html">
     
-    <!-- Schema Markup -->
+    <!-- V3 Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Therapy for Depression in Toronto",
-      "description": "Professional, evidence-based therapy for individuals in Toronto dealing with depression. Virtual sessions available.",
-      "provider": {
-        "@type": "Psychologist",
+      "@type": "Article",
+      "headline": "Depression Therapy in Toronto: Professional Support for High-Achievers",
+      "description": "A comprehensive guide to understanding and managing depression for professionals in Toronto, focusing on evidence-based approaches like ACT.",
+      "wordCount": "3658",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
         "name": "Jesse Cynamon, RP",
         "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Psychotherapy",
-        "description": "Online therapy sessions via secure video",
-        "serviceType": "Telehealth"
-      },
-      "potentialAction": {
-        "@type": "ScheduleAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://nextsteptherapy.ca/book"
-        }
+        "jobTitle": "Registered Psychotherapist"
       }
     }
     </script>
     
-    <!-- NEW: FAQPage Schema from Master Template -->
+    <!-- V3 FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -210,13 +166,12 @@
         
         /* Header */
         .header {
-            background: rgba(254, 254, 254, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            background: var(--background-primary);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: var(--space-md) 0;
         }
         
         .header-content {
@@ -639,27 +594,41 @@
                 font-size: 2rem;
             }
         }
+
+        /* V3 Minimal Landing Page Header CSS */
+        .header.minimal-header .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header.minimal-header .header-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .header.minimal-header .header-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header smart-sticky">
+    <!-- V3 Minimal Header -->
+    <header class="header minimal-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <a href="/" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav class="nav">
-                    <a href="index.html" class="nav-desktop">Home</a>
-                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
-                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
-                </nav>
-                
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
+                <a href="#contact" class="header-cta">
+                    Book Consultation
                 </a>
             </div>
         </div>
@@ -818,14 +787,14 @@
                     
                     <div style="margin-bottom: var(--space-xl);">
                         <h4><strong>It's about action, not just analysis.</strong></h4>
-                        <p>Instead of trying to eliminate negative thoughts, ACT teaches you to change your relationship with them. It helps you take meaningful, values-driven action even when feelings of depression are present, which is a powerful way to break the cycle.</p>
+                        <p>Instead of trying to fight or remove negative thoughts, ACT teaches you to change your relationship with them. It helps you take meaningful, values-driven action even when feelings of depression are present, which is a powerful way to break the cycle.</p>
                     </div>
                     
                     <h3>"Is everything I say confidential?"</h3>
                     
                     <div>
                         <h4><strong>Yes, 100%.</strong></h4>
-                        <p>As a Registered Psychotherapist, all of our communication is protected by strict confidentiality laws (PHIPA). Your privacy is a top priority.</p>
+                        <p>As a Registered Psychotherapist, all of our communication is protected by strict confidentiality laws (PHIPA). Your privacy is a primary priority.</p>
                     </div>
                     
                     <!-- CTA after concerns -->
@@ -857,7 +826,7 @@
                         <li>Reduces the likelihood of future relapse</li>
                     </ul>
                     
-                    <p>You can feel confident that you are receiving a top-tier, evidence-based treatment designed to create lasting change.</p>
+                    <p>You can feel confident that you are receiving a high-quality, evidence-based treatment designed to create lasting change.</p>
                 </div>
             </div>
         </section>
@@ -991,7 +960,7 @@
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
                     Serving Toronto & All of Ontario Virtually<br>
-                    Secure, Confidential Depression Therapy<br>
+                    Secure, Confidential Depression Therapy
                 </div>
             </div>
         </section>
@@ -1004,43 +973,31 @@
 
     <!-- Smart Sticky Header JavaScript -->
     <script>
-        // Smart sticky header functionality
         document.addEventListener('DOMContentLoaded', function() {
             const header = document.querySelector('.header.smart-sticky');
             if (!header) return;
-            
             let lastScrollY = window.scrollY;
             let isHeaderVisible = true;
             const headerHeight = header.offsetHeight;
-            const scrollThreshold = 10; // Minimum scroll distance to trigger
-            
+            const scrollThreshold = 10;
             function updateHeader() {
                 const currentScrollY = window.scrollY;
                 const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-                
-                // Only proceed if scroll difference is significant
                 if (scrollDifference < scrollThreshold) {
                     return;
                 }
-                
                 if (currentScrollY <= headerHeight) {
-                    // At the top of the page
                     header.style.transform = 'translateY(0)';
                     isHeaderVisible = true;
                 } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-                    // Scrolling down - hide header
                     header.style.transform = `translateY(-${headerHeight}px)`;
                     isHeaderVisible = false;
                 } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
-                    // Scrolling up - show header
                     header.style.transform = 'translateY(0)';
                     isHeaderVisible = true;
                 }
-                
                 lastScrollY = currentScrollY;
             }
-            
-            // Use requestAnimationFrame for smooth performance
             let ticking = false;
             function requestTick() {
                 if (!ticking) {
@@ -1048,13 +1005,10 @@
                     ticking = true;
                 }
             }
-            
             window.addEventListener('scroll', function() {
                 requestTick();
                 ticking = false;
             }, { passive: true });
-            
-            // Set initial styles
             header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
             header.style.transform = 'translateY(0)';
         });
