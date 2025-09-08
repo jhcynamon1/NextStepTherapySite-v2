@@ -25,40 +25,6 @@
             });
         });
     </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track form submissions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function() {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-
-            // Track phone clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -67,8 +33,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data - Exact Keyword Match -->
-    <title>Anxiety Therapy in Toronto | Manage Stress & Worry</title>
+    <!-- SEO Meta Data - V3 Compliant -->
+    <title>Anxiety Therapy in Toronto | Manage Stress & Worry | CRPO #10979</title>
     <meta name="description" content="Feeling overwhelmed by anxiety? Get practical, evidence-based support from a therapist in Toronto. Learn to manage workplace stress and quiet your mind. Book a free, no-pressure consultation today.">
     
     <!-- Open Graph Tags -->
@@ -80,36 +46,25 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/anxiety-therapy-toronto.html">
     
-    <!-- Schema Markup -->
+    <!-- V3 Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Anxiety Therapy in Toronto for Professionals",
-      "description": "Evidence-based virtual anxiety therapy for professionals in Toronto dealing with workplace stress, worry, and burnout.",
-      "provider": {
-        "@type": "Psychologist",
+      "@type": "Article",
+      "headline": "Anxiety Therapy for Professionals in Toronto",
+      "description": "A guide to managing workplace stress and anxiety for high-achievers in Toronto using evidence-based ACT therapy.",
+      "wordCount": "3575",
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
         "name": "Jesse Cynamon, RP",
         "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Psychotherapy",
-        "description": "Online therapy sessions via secure video",
-        "serviceType": "Telehealth"
-      },
-      "potentialAction": {
-        "@type": "ScheduleAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://nextsteptherapy.ca/book"
-        }
+        "jobTitle": "Registered Psychotherapist"
       }
     }
     </script>
     
-    <!-- NEW: FAQPage Schema from Master Template -->
+    <!-- V3 FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -210,13 +165,12 @@
         
         /* Header */
         .header {
-            background: rgba(254, 254, 254, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            background: var(--background-primary);
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: var(--space-md) 0;
         }
         
         .header-content {
@@ -639,27 +593,41 @@
                 font-size: 2rem;
             }
         }
+
+        /* V3 Minimal Landing Page Header CSS */
+        .header.minimal-header .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header.minimal-header .header-cta {
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .header.minimal-header .header-cta:hover {
+            background: linear-gradient(135deg, #1B5E20, #388E3C);
+            transform: translateY(-1px);
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header smart-sticky">
+    <!-- V3 Minimal Header -->
+    <header class="header minimal-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <a href="/" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <nav class="nav">
-                    <a href="index.html" class="nav-desktop">Home</a>
-                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
-                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
-                </nav>
-                
-                <a href="tel:+14163062157" class="header-phone">
-                    (416) 306-2157
+                <a href="#contact" class="header-cta">
+                    Book Consultation
                 </a>
             </div>
         </div>
@@ -869,30 +837,13 @@
         <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>Serving All of Ontario Virtually</h2>
+                    <h2>Virtual Therapy for Busy Toronto Professionals</h2>
+                    <p>My practice is fully virtual, offering you confidential and effective therapy without the need to commute. Get the support you need from the comfort of your home or office, at a time that works for your demanding schedule.</p>
                     
-                    <p>Licensed to practice throughout Ontario, I provide the same quality care whether you're in Toronto, Thunder Bay, or anywhere in between.</p>
-                    
-                    <h3>Virtual Therapy Across Ontario:</h3>
-                    
+                    <h3>Designed for the GTA Lifestyle:</h3>
                     <div style="margin-bottom: var(--space-xl);">
                         <h4><strong>Greater Toronto Area</strong></h4>
                         <p>Skip the traffic and parking hassles. No more GO Train scheduling around therapy. Support that fits into busy urban life. Privacy in densely populated areas. Professional development without leaving the office.</p>
-                    </div>
-                    
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h4><strong>Northern Ontario</strong></h4>
-                        <p>Quality therapy without the long drives. Consistent support despite harsh winters. Connection to specialized care. No more choosing between gas money and mental health. Equal access to professional support.</p>
-                    </div>
-                    
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h4><strong>Rural and Remote Communities</strong></h4>
-                        <p>Professional therapy comes to you. Maintain privacy in small communities. Access specialized support not available locally. Weather can't cancel your mental health care. Bridge the geographic gap to quality care.</p>
-                    </div>
-                    
-                    <div>
-                        <h4><strong>University Towns and Cities</strong></h4>
-                        <p>Continue therapy during school breaks. Support through academic stress. No disruption when moving between home and school. Consistent care through transitions. Accessible mental health for student budgets.</p>
                     </div>
                 </div>
             </div>
