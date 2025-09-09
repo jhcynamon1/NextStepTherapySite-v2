@@ -243,8 +243,8 @@ const FAQ_TEMPLATES = {
 // CRPO Compliance Checker
 class CRPOComplianceChecker {
     static PROHIBITED_WORDS = [
-        'cure', 'eliminate', 'fix', 'best', 'top', 'leading', 'guaranteed', 
-        'miracle', 'instant', 'permanent', 'complete recovery', 'total healing'
+        '\\bcure\\b', '\\beliminate\\b', '\\bfix\\b', '\\bbest\\b', '\\btop\\b', '\\bleading\\b', '\\bguaranteed\\b', 
+        '\\bmiracle\\b', '\\binstant\\b', '\\bpermanent\\b', 'complete recovery', 'total healing'
     ];
 
     static REQUIRED_DISCLAIMERS = [
@@ -257,10 +257,11 @@ class CRPOComplianceChecker {
         const issues = [];
         const lowerText = text.toLowerCase();
 
-        // Check for prohibited words
+        // Check for prohibited words using regex for word boundaries
         this.PROHIBITED_WORDS.forEach(word => {
-            if (lowerText.includes(word)) {
-                issues.push(`Prohibited word found: "${word}"`);
+            const regex = new RegExp(word, 'i');
+            if (regex.test(text)) {
+                issues.push(`Prohibited word found: "${word.replace(/\\b/g, '')}"`);
             }
         });
 
