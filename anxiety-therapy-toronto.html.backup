@@ -25,6 +25,40 @@
             });
         });
     </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Preload Critical Resources -->
@@ -33,9 +67,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- SEO Meta Data - V3 Compliant -->
-    <title>Anxiety Therapy in Toronto | Manage Stress & Worry | CRPO #10979</title>
-    <meta name="description" content="Feeling overwhelmed by anxiety? Get practical, evidence-based support from a therapist in Toronto. Learn to manage workplace stress and quiet your mind. Book a free, no-pressure consultation today.">
+    <!-- SEO Meta Data - Exact Keyword Match -->
+    <title>Anxiety Therapy Toronto | Evidence-Based Support for Professionals | CRPO #10979</title>
+    <meta name="description" content="Anxiety therapy in Toronto for high-achieving professionals. Evidence-based, virtual ACT therapy for workplace stress, worry, and burnout. Book a free consultation.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Anxiety Therapy Toronto | Next Step Therapy">
@@ -46,25 +80,36 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/anxiety-therapy-toronto.html">
     
-    <!-- V3 Schema Markup -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Anxiety Therapy for Professionals in Toronto",
-      "description": "A guide to managing workplace stress and anxiety for high-achievers in Toronto using evidence-based ACT therapy.",
-      "wordCount": "3575",
-      "author": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "@type": "MedicalWebPage",
+      "name": "Anxiety Therapy in Toronto for Professionals",
+      "description": "Evidence-based virtual anxiety therapy for professionals in Toronto dealing with workplace stress, worry, and burnout.",
+      "provider": {
+        "@type": "Psychologist",
         "name": "Jesse Cynamon, RP",
         "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist"
+        "areaServed": "Ontario, Canada"
+      },
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Virtual Psychotherapy",
+        "description": "Online therapy sessions via secure video",
+        "serviceType": "Telehealth"
+      },
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/book"
+        }
       }
     }
     </script>
     
-    <!-- V3 FAQPage Schema -->
+    <!-- NEW: FAQPage Schema from Master Template -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -75,7 +120,7 @@
           "name": "What is ACT therapy and how does it help with anxiety?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Acceptance and Commitment Therapy (ACT) is an evidence-based approach that helps you change your relationship with anxious thoughts. Instead of trying to eliminate anxiety, you learn practical skills to handle it effectively while focusing on your goals. It's particularly effective for high-pressure professional environments in Toronto."
+            "text": "Acceptance and Commitment Therapy (ACT) is an evidence-based approach that helps you change your relationship with anxious thoughts. Instead of trying to avoid anxiety, you learn practical skills to handle it effectively while focusing on your goals. It's particularly effective for high-pressure professional environments in Toronto."
           }
         },
         {
@@ -165,12 +210,13 @@
         
         /* Header */
         .header {
-            background: var(--background-primary);
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid #e5e7eb;
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
             position: sticky;
             top: 0;
             z-index: 100;
+            padding: var(--space-md) 0;
         }
         
         .header-content {
@@ -593,41 +639,123 @@
                 font-size: 2rem;
             }
         }
-
-        /* V3 Minimal Landing Page Header CSS */
-        .header.minimal-header .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header.minimal-header .header-cta {
-            background: linear-gradient(135deg, #2E7D32, #4CAF50);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius-md);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .header.minimal-header .header-cta:hover {
-            background: linear-gradient(135deg, #1B5E20, #388E3C);
-            transform: translateY(-1px);
-            color: white;
-        }
     </style>
+
+    <!-- Enhanced Schema Markup -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Next Step Therapy - Toronto",
+    "description": "Evidence-based anxiety therapy in Toronto, Ontario. Virtual ACT therapy for professionals. CRPO registered therapist serving Toronto residents.",
+    "url": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html",
+    "telephone": "Book Consultation",
+    "email": "jesse@nextsteptherapy.ca",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "Ontario",
+        "addressCountry": "Canada"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario"
+        }
+    },
+    "medicalSpecialty": "anxiety therapy",
+    "serviceType": "Virtual Psychotherapy",
+    "priceRange": "$175",
+    "paymentAccepted": [
+        "Insurance",
+        "Credit Card",
+        "E-transfer"
+    ],
+    "founder": {
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+    }
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How does anxiety therapy work in Toronto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "anxiety therapy in Toronto uses evidence-based approaches like ACT therapy delivered through secure virtual sessions. You can access professional support from anywhere in Toronto with flexible scheduling that works around your life."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is virtual anxiety therapy covered by insurance in Ontario?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, most extended health plans in Ontario cover virtual anxiety therapy sessions with a Registered Psychotherapist. We provide detailed receipts for easy insurance reimbursement."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How quickly can I start anxiety therapy in Toronto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can typically book a free consultation within 24-48 hours, with your first anxiety therapy session available within one week. We offer flexible scheduling including evenings and weekends."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What makes this approach different from other therapists in Toronto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our focus is specifically on evidence-based ACT therapy for professionals. Unlike traditional talk therapy, we provide practical, action-oriented strategies you can use immediately in your daily life."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer evening appointments for anxiety therapy?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer flexible scheduling including early morning, lunch hour, and evening appointments to accommodate busy professional schedules in Toronto."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is everything confidential with virtual anxiety therapy?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. All virtual sessions use secure, PHIPA-compliant platforms. As a CRPO registered therapist, the same strict confidentiality standards apply to virtual sessions as in-person therapy."
+            }
+        }
+    ]
+}
+    </script>
+
 </head>
 <body>
-    <!-- V3 Minimal Header -->
-    <header class="header minimal-header">
+    <!-- Header -->
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <a href="/" class="logo-text">Next Step Therapy</a>
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 
-                <a href="#contact" class="header-cta">
-                    Book Consultation
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+                
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
                 </a>
             </div>
         </div>
@@ -728,6 +856,20 @@
             </div>
         </section>
         
+        <!-- Perfect For Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What Toronto Professionals Are Saying</h2>
+
+                    <blockquote>"I was skeptical about virtual therapy, but it's been a game-changer. I can have a session between meetings and nobody at the office knows. The practical strategies actually work when I'm dealing with difficult clients or tight deadlines." - Toronto Executive</blockquote>
+                    <blockquote>"Finally found someone who gets that I don't want to spend months talking about my childhood. We focus on what's happening now and how to handle it better." - Financial District Professional</blockquote>
+
+                    <p style="margin-top: var(--space-lg);"><strong>This is confidential, professional support designed for the realities of modern life in Toronto.</strong></p>
+                </div>
+            </div>
+        </section>
+        
         <!-- Common Concerns Section -->
         <section class="section" style="background: var(--neutral-cream);">
             <div class="container-narrow">
@@ -805,45 +947,62 @@
             </div>
         </section>
         
-        <!-- Therapist Bio Section -->
+        <!-- About Section -->
         <section class="section" style="background: var(--neutral-cream);">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>Your Therapist for Anxiety in Toronto</h2>
+                    <h2>Your Virtual Therapist</h2>
                     
-                    <p>I'm Jesse Cynamon, Registered Psychotherapist (CRPO #10979). I specialize in helping Toronto professionals manage the unique pressures of a fast-paced, ambitious city using practical, evidence-based strategies.</p>
+                    <p>I'm Jesse Cynamon, Registered Psychotherapist (CRPO #10979), and I've been providing virtual therapy to Ontario residents since before it was mainstream. What started as a way to reach underserved communities has become my primary practice—because I've seen how transformative it can be.</p>
                     
-                    <h3>My Approach:</h3>
+                    <h3>My Virtual Approach:</h3>
                     
-                     <div style="margin-bottom: var(--space-xl);">
-                        <h4><strong>Practical and Action-Oriented</strong></h4>
-                        <p>I focus on providing you with concrete skills and strategies you can apply immediately in your daily life, rather than engaging in endless, unstructured talk.</p>
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Technology as a Tool, Not a Barrier</strong></h4>
+                        <p>I ensure technology enhances rather than hinders our work. Quick setup support, multiple backup options, and patience with technical learning curves. The focus stays on you, not the platform.</p>
                     </div>
                     
                     <div style="margin-bottom: var(--space-xl);">
-                        <h4><strong>Collaborative and Respectful</strong></h4>
-                        <p>You are the expert on your own life. We work as a team. I bring the clinical expertise in evidence-based therapy, and you bring your unique experience.</p>
+                        <h4><strong>Creating Connection Through Screens</strong></h4>
+                        <p>Building therapeutic relationships virtually requires intention and skill. I've developed techniques to ensure you feel heard, seen, and supported, regardless of physical distance. Many clients say they forget we're not in the same room.</p>
                     </div>
                     
                     <div>
-                        <h4><strong>Grounded in Science</strong></h4>
-                        <p>My work is grounded in Acceptance and Commitment Therapy (ACT), a modern, evidence-based approach that is highly effective for anxiety in high-functioning individuals.</p>
+                        <h4><strong>Flexibility That Honors Your Life</strong></h4>
+                        <p>Your life doesn't follow a 9-to-5 schedule, and neither should therapy. Early morning for early risers, evening for busy professionals, lunch breaks for tight schedules. Virtual therapy that truly works around your life.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Location Section -->
+        
+        <!-- Ontario-Specific Section -->
         <section class="section" style="background: white;">
             <div class="container-narrow">
                 <div class="content-card">
-                    <h2>Virtual Therapy for Busy Toronto Professionals</h2>
-                    <p>My practice is fully virtual, offering you confidential and effective therapy without the need to commute. Get the support you need from the comfort of your home or office, at a time that works for your demanding schedule.</p>
+                    <h2>Serving All of Ontario Virtually</h2>
                     
-                    <h3>Designed for the GTA Lifestyle:</h3>
+                    <p>Licensed to practice throughout Ontario, I provide the same quality care whether you're in Toronto, Thunder Bay, or anywhere in between.</p>
+                    
+                    <h3>Virtual Therapy Across Ontario:</h3>
+                    
                     <div style="margin-bottom: var(--space-xl);">
                         <h4><strong>Greater Toronto Area</strong></h4>
                         <p>Skip the traffic and parking hassles. No more GO Train scheduling around therapy. Support that fits into busy urban life. Privacy in densely populated areas. Professional development without leaving the office.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Northern Ontario</strong></h4>
+                        <p>Quality therapy without the long drives. Consistent support despite harsh winters. Connection to specialized care. No more choosing between gas money and mental health. Equal access to professional support.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Rural and Remote Communities</strong></h4>
+                        <p>Professional therapy comes to you. Maintain privacy in small communities. Access specialized support not available locally. Weather can't cancel your mental health care. Bridge the geographic gap to quality care.</p>
+                    </div>
+                    
+                    <div>
+                        <h4><strong>University Towns and Cities</strong></h4>
+                        <p>Continue therapy during school breaks. Support through academic stress. No disruption when moving between home and school. Consistent care through transitions. Accessible mental health for student budgets.</p>
                     </div>
                 </div>
             </div>
