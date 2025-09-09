@@ -86,32 +86,79 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "First Year University Anxiety: Navigating Academic and Social Transition Challenges",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/public/first-year-university-anxiety.html#webpage",
+      "url": "https://nextsteptherapy.ca/public/first-year-university-anxiety.html",
+      "name": "First Year University Anxiety: Navigating Academic and Social Transition Challenges",
       "description": "Comprehensive guide to understanding and managing first year university anxiety, including transition support, independence fears, and academic adjustment strategies",
-      "wordCount": "2500",
-      "author": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca/#jessecynamon",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Next Step Therapy"
+      "isPartOf": {
+        "@id": "https://nextsteptherapy.ca/#website"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "First Year University Stress",
+        "alternateName": ["Academic Transition Anxiety", "College Adjustment Stress", "University Transition Anxiety", "First Year Academic Stress"],
+        "associatedAnatomy": {
+          "@type": "AnatomicalSystem",
+          "name": "Mental Health"
+        },
+        "possibleTreatment": [
+          {
+            "@type": "MedicalTherapy",
+            "name": "Cognitive Behavioral Therapy for Academic Transition"
+          },
+          {
+            "@type": "MedicalTherapy",
+            "name": "Virtual Therapy Sessions"
+          },
+          {
+            "@type": "MedicalTherapy",
+            "name": "Adjustment Disorder Counseling"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "MedicalWebPage",
+        "medicalAudience": {
+          "@type": "Patient",
+          "audienceType": "First Year University Students and Parents",
+          "healthCondition": {
+            "@type": "MedicalCondition",
+            "name": "Academic Transition Stress"
+          }
+        },
+        "specialty": {
+          "@type": "MedicalSpecialty",
+          "name": "Psychology"
         }
       },
-      "publisher": {
-        "@type": "Organization",
-        "@id": "https://nextsteptherapy.ca/#organization",
-        "name": "Next Step Therapy"
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
       },
-      "datePublished": "2025-01-15",
-      "dateModified": "2025-01-15",
-      "mainEntity": {
-        "@type": "MedicalCondition",
-        "name": "Transition Anxiety",
-        "description": "Anxiety experienced during life transitions, particularly academic transitions to university"
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jesse-cynamon"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextsteptherapy.ca"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "University Student Support",
+            "item": "https://nextsteptherapy.ca/university-student-therapy"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "First Year University Anxiety"
+          }
+        ]
       }
     }
     </script>
@@ -143,6 +190,64 @@
             }
           }
         ]
+      }
+    }
+    </script>
+    
+    <!-- Service Connection Schema (CRPO Compliant + Error-Free) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/public/first-year-university-anxiety.html#service",
+      "name": "First Year University Stress Support for Ontario Students",
+      "description": "Virtual therapy and counseling for first-year university students experiencing academic transition anxiety. CRPO registered psychotherapist specializing in student adjustment and academic stress.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "Canada"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://nextsteptherapy.ca/public/first-year-university-anxiety.html",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "English"
+        }
+      },
+      "audience": [
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "First Year University Students"
+        },
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Parents of First Year Students"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "http://schema.org/InStock",
+        "description": "Virtual therapy sessions for first year university adjustment"
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/#contact"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Book First Year University Support Consultation"
+        }
       }
     }
     </script>
