@@ -84,26 +84,121 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/virtual-therapy-burlington.html#webpage",
+      "url": "https://nextsteptherapy.ca/virtual-therapy-burlington.html",
       "name": "Virtual Therapy in Burlington, Ontario",
       "description": "Professional and confidential online therapy services for residents of Burlington, Ontario, focusing on support for busy professionals and parents.",
-      "provider": {
-        "@type": "Psychologist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
+      "isPartOf": {
+        "@id": "https://nextsteptherapy.ca/#website"
       },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Psychotherapy",
-        "description": "Online therapy sessions via secure video",
-        "serviceType": "Telehealth"
+      "about": {
+        "@type": "Thing",
+        "name": "Virtual Mental Health Support for Burlington Residents",
+        "description": "Online therapy and counseling services for stress, anxiety, life transitions, and relationship concerns"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jesse-cynamon"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextsteptherapy.ca"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Virtual Therapy Ontario",
+            "item": "https://nextsteptherapy.ca/virtual-therapy-ontario"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Virtual Therapy Burlington"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Service Connection Schema (CRPO Compliant + Burlington-Focused) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/virtual-therapy-burlington.html#service",
+      "name": "Virtual Therapy Services for Burlington, Ontario Residents",
+      "description": "Professional virtual therapy and online counseling for Burlington residents. CRPO registered psychotherapist providing secure telehealth mental health support throughout Ontario.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Burlington",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario",
+            "containedInPlace": {
+              "@type": "Country",
+              "name": "Canada"
+            }
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Ontario",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://nextsteptherapy.ca/virtual-therapy-burlington.html",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "English"
+        }
+      },
+      "audience": [
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Burlington Ontario Residents"
+        },
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Busy Professionals in Burlington Area"
+        },
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Parents Seeking Virtual Mental Health Support"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "http://schema.org/InStock",
+        "description": "Virtual therapy sessions for Burlington residents"
       },
       "potentialAction": {
-        "@type": "ScheduleAction",
+        "@type": "ReserveAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://nextsteptherapy.ca/book"
+          "urlTemplate": "https://nextsteptherapy.ca/#contact"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Book Virtual Therapy Session for Burlington Resident"
         }
       }
     }
