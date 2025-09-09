@@ -876,7 +876,7 @@ Analytics and Tracking:
 Google Analytics 4 with conversion tracking
 Call tracking for phone inquiries
 Form analytics and abandonment tracking
-Partner dashboar     for lead quality monitoring
+Partner dashboard for lead quality monitoring
 Revenue Impact Projections
 Current State Analysis:
 
