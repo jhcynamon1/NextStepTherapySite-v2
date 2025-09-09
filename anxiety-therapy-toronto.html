@@ -80,30 +80,121 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/anxiety-therapy-toronto.html">
     
-    <!-- Schema Markup -->
+    <!-- TORONTO PAGE - WebPage Schema (CRPO Compliant) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
+      "@type": "WebPage",
+      "@id": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html#webpage",
+      "url": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html",
       "name": "Anxiety Therapy in Toronto for Professionals",
       "description": "Evidence-based virtual anxiety therapy for professionals in Toronto dealing with workplace stress, worry, and burnout.",
-      "provider": {
-        "@type": "Psychologist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
+      "isPartOf": {
+        "@id": "https://nextsteptherapy.ca/#website"
       },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Psychotherapy",
-        "description": "Online therapy sessions via secure video",
-        "serviceType": "Telehealth"
+      "about": {
+        "@type": "Thing",
+        "name": "Virtual Anxiety Therapy for Toronto Residents",
+        "description": "Online therapy and counseling services for stress, anxiety, and professional burnout in Toronto"
+      },
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "author": {
+        "@id": "https://nextsteptherapy.ca/#jesse-cynamon"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextsteptherapy.ca"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Anxiety Therapy Ontario",
+            "item": "https://nextsteptherapy.ca/anxiety-therapy-ontario"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Anxiety Therapy Toronto"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- TORONTO PAGE - Service Schema (CRPO Compliant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html#service",
+      "name": "Virtual Anxiety Therapy Services for Toronto Residents",
+      "description": "Professional virtual therapy and online counseling for Toronto residents experiencing anxiety, workplace stress, and burnout. CRPO registered psychotherapist providing secure telehealth mental health support throughout Ontario.",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Toronto",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario",
+            "containedInPlace": {
+              "@type": "Country",
+              "name": "Canada"
+            }
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Ontario",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html",
+        "availableLanguage": {
+          "@type": "Language",
+          "name": "English"
+        }
+      },
+      "audience": [
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Toronto Ontario Residents"
+        },
+        {
+          "@type": "PeopleAudience",
+          "audienceType": "Professionals in Toronto Seeking Anxiety Support"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "http://schema.org/InStock",
+        "description": "Virtual therapy sessions for Toronto residents experiencing anxiety"
       },
       "potentialAction": {
-        "@type": "ScheduleAction",
+        "@type": "ReserveAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://nextsteptherapy.ca/book"
+          "urlTemplate": "https://nextsteptherapy.ca/#contact"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Book Virtual Anxiety Therapy Session for Toronto Resident"
         }
       }
     }
@@ -641,43 +732,6 @@
         }
     </style>
 
-    <!-- Enhanced Schema Markup -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Next Step Therapy - Toronto",
-    "description": "Evidence-based anxiety therapy in Toronto, Ontario. Virtual ACT therapy for professionals. CRPO registered therapist serving Toronto residents.",
-    "url": "https://nextsteptherapy.ca/anxiety-therapy-toronto.html",
-    "telephone": "Book Consultation",
-    "email": "jesse@nextsteptherapy.ca",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "Ontario",
-        "addressCountry": "Canada"
-    },
-    "areaServed": {
-        "@type": "City",
-        "name": "Toronto",
-        "containedInPlace": {
-            "@type": "State",
-            "name": "Ontario"
-        }
-    },
-    "medicalSpecialty": "anxiety therapy",
-    "serviceType": "Virtual Psychotherapy",
-    "priceRange": "$175",
-    "paymentAccepted": [
-        "Insurance",
-        "Credit Card",
-        "E-transfer"
-    ],
-    "founder": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-    }
-}
-    </script>
 
     <script type="application/ld+json">
     {
