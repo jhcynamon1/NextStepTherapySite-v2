@@ -237,13 +237,13 @@
     }
     </script>
 
-    <!-- Additional Schema for Local Business -->
+    <!-- Medical Business Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "MedicalBusiness",
         "name": "Next Step Therapy Ontario",
-        "description": "Professional virtual therapy services across Ontario",
+        "description": "CRPO-registered psychotherapy services available to all Ontario residents through secure virtual platform",
         "url": "https://www.nextsteptherapy.ca",
         "telephone": "+1-416-306-2157",
         "email": "jesse@nextsteptherapy.ca",
@@ -253,12 +253,47 @@
             "addressCountry": "CA"
         },
         "areaServed": {
-            "@type": "State",
-            "name": "Ontario"
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {
+                "@type": "Country",
+                "name": "Canada"
+            }
         },
-        "priceRange": "$150-$200",
-        "paymentAccepted": "Insurance, Credit Card, E-transfer",
-        "currenciesAccepted": "CAD"
+        "priceRange": "$150-$200 CAD",
+        "paymentAccepted": "Insurance coverage, Credit card, E-transfer",
+        "currenciesAccepted": "CAD",
+        "physician": {
+            "@type": "Physician",
+            "name": "Jesse Cynamon",
+            "jobTitle": "Registered Psychotherapist",
+            "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "CRPO Registration",
+                "identifier": "#10979",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "College of Registered Psychotherapists of Ontario",
+                    "url": "https://crpo.ca"
+                }
+            }
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Virtual Therapy Services Ontario",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Virtual Individual Therapy",
+                        "description": "One-on-one online psychotherapy sessions"
+                    },
+                    "price": "175",
+                    "priceCurrency": "CAD"
+                }
+            ]
+        }
     }
     </script>
 
@@ -462,32 +497,37 @@
             justify-content: center;
         }
 
-        .cta-button {
+        .btn {
             display: inline-block;
-            background: var(--secondary);
-            color: white;
             padding: 18px 35px;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
             box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
         }
 
-        .cta-button:hover {
+        .btn-primary:hover {
             background: #38a169;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
         }
 
-        .cta-button.secondary {
+        .btn-secondary {
             background: transparent;
+            color: white;
             border: 2px solid white;
-            box-shadow: none;
         }
 
-        .cta-button.secondary:hover {
+        .btn-secondary:hover {
             background: white;
             color: var(--accent);
             transform: translateY(-2px);
@@ -751,24 +791,33 @@
             </div>
         </div>
 
-        <!-- CRPO Compliance Notice -->
+        <!-- CRPO Compliance Section -->
         <div class="compliance-notice">
-            <h3>⚖️ CRPO Professional Standards & Compliance</h3>
-            <p><strong>This information is provided by Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</strong></p>
-            <p>All virtual therapy services comply with CRPO professional standards and Ontario regulations. Virtual therapy is not suitable for all individuals or conditions. A professional assessment determines appropriateness for online treatment.</p>
-            <p><strong>Crisis Support:</strong> If experiencing a mental health emergency, contact 988 (Suicide Crisis Helpline), 911, or your local emergency department. Virtual therapy is not appropriate for crisis intervention.</p>
-            <p><strong>Disclaimer:</strong> This information is educational and does not constitute professional advice, diagnosis, or treatment. Individual circumstances vary and require personalized professional assessment.</p>
+            <h3>🏛️ CRPO Professional Standards & Compliance</h3>
+            <p><strong>Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</strong></p>
+            <p>All virtual therapy services comply with CRPO professional standards and Ontario regulations. You can verify my registration at <a href="https://crpo.ca" target="_blank" style="color: #92400e;">crpo.ca</a>.</p>
+
+            <p><strong>Important Limitations:</strong> Virtual therapy is not suitable for all individuals or conditions. A professional assessment determines appropriateness for online treatment. This information is educational and does not constitute professional advice, diagnosis, or treatment.</p>
+
+            <p><strong>Crisis Support:</strong> If experiencing a mental health emergency, contact:</p>
+            <p>• <strong>988</strong> - Suicide Crisis Helpline<br>
+            • <strong>911</strong> - Emergency Services<br>
+            • Your local emergency department</p>
+
+            <p><strong>Privacy Protection:</strong> All sessions comply with PIPEDA and PHIPA privacy requirements for Ontario healthcare.</p>
         </div>
 
         <!-- Call-to-Action Section -->
         <div class="cta-section">
-            <h3>Start Your Virtual Therapy Journey in Ontario</h3>
-            <p>Ready to begin? Book your free 15-minute consultation with a CRPO registered psychotherapist serving all of Ontario through secure, professional virtual therapy.</p>
+            <h3>Ready When You Are</h3>
+            <p>The hardest part is reaching out. Once you do, I make everything else simple. Your free 15-minute consultation is just a conversation - no forms, no commitment, no pressure.</p>
             <div class="cta-buttons">
-                <a href="tel:416-306-2157?utm_source=ai_engine&utm_medium=aeo&utm_campaign=virtual_therapy_comprehensive" class="cta-button">📞 Call: 416-306-2157</a>
-                <a href="https://jesse-cynamon.janeapp.com?utm_source=ai_engine&utm_medium=aeo&utm_campaign=virtual_therapy_comprehensive" class="cta-button">📅 Book Online Now</a>
-                <a href="mailto:jesse@nextsteptherapy.ca?subject=Virtual Therapy Inquiry&utm_source=ai_engine&utm_medium=aeo&utm_campaign=virtual_therapy_comprehensive" class="cta-button secondary">✉️ Email Questions</a>
+                <a href="https://www.nextsteptherapy.ca/#contact?utm_source=ai_engine&utm_medium=aeo&utm_campaign=virtual_therapy_comprehensive" class="btn btn-primary">Book Free Consultation</a>
+                <a href="tel:416-306-2157?utm_source=ai_engine&utm_medium=aeo&utm_campaign=virtual_therapy_comprehensive" class="btn btn-secondary">Call 416-306-2157</a>
             </div>
+            <p style="margin-top: 1rem; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                🍁 Ontario-Wide Service • ✓ CRPO Registered #10979 • 💳 Insurance Covered
+            </p>
         </div>
 
         <!-- Professional Credentials -->
