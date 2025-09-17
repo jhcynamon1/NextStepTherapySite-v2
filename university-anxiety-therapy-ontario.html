@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- SEO Meta Data -->
+    <title>University Anxiety Therapy Ontario | Student Mental Health Support</title>
+    <meta name="description" content="Specialized therapy for university and college students dealing with academic stress, social anxiety, and career pressure. Virtual sessions across Ontario campuses.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="University Anxiety Therapy Ontario | NextStep Therapy">
+    <meta property="og:description" content="Mental health support for Ontario students dealing with academic pressure, social anxiety, and university transitions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/university-anxiety-therapy-ontario.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/university-anxiety-therapy-ontario.html">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "University Anxiety Therapy Ontario - NextStep Therapy",
+      "description": "Specialized mental health support for Ontario university and college students dealing with academic stress, social anxiety, and transition challenges.",
+      "url": "https://nextsteptherapy.ca/university-anxiety-therapy-ontario.html",
+      "provider": {
+        "@type": "Psychologist",
+        "name": "Jesse Cynamon",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "University Anxiety Therapy",
+          "description": "Specialized therapy for academic stress and student mental health concerns"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Student Mental Health Support",
+          "description": "Virtual therapy designed for university and college student schedules"
+        }
+      ],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario",
+        "addressCountry": "CA"
+      },
+      "telephone": "+1-416-306-2157",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Student Mental Health Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "University Student Therapy",
+              "description": "Mental health support tailored to university student experiences and schedules"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2E5668;
+            --secondary-color: #8FBC8F;
+            --accent-color: #F4A460;
+            --text-dark: #2D3748;
+            --text-light: #718096;
+            --bg-light: #F7FAFC;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--bg-light);
+            padding: 2rem 0;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .trust-item span {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.2;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #CBD5E0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo">Next Step Therapy</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/counselling-services.html">Services</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>University Anxiety Therapy: Mental Health Support for Ontario Students</h1>
+        <p class="hero-subtitle">Specialized therapy for university and college students dealing with academic stress, social anxiety, and the transition to independent adult life</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item">
+                <span>✓</span> CRPO Registered #10979
+            </div>
+            <div class="trust-item">
+                <span>✓</span> Student-Friendly Scheduling
+            </div>
+            <div class="trust-item">
+                <span>✓</span> Insurance Covered
+            </div>
+            <div class="trust-item">
+                <span>✓</span> Virtual Sessions Available
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                University life in Ontario brings unique pressures that can overwhelm even the most prepared students. From managing heavy course loads at institutions like University of Toronto or McMaster to navigating social relationships, financial pressures, and career uncertainty, students face challenges that didn't exist in high school.
+            </p>
+
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 3rem;">
+                As a Registered Psychotherapist (CRPO #10979), I provide specialized support for university and college students across Ontario dealing with anxiety, depression, academic stress, and the complex transition to independent adult life.
+            </p>
+
+            <h2>Understanding University Anxiety in Ontario</h2>
+            <p style="margin-bottom: 2rem;">
+                Ontario's competitive academic environment, combined with rising tuition costs and uncertain job markets, creates a perfect storm for student mental health challenges. Whether you're at a large research university like UofT or Western, a specialized program at Waterloo, or a community college, the pressures can feel overwhelming.
+            </p>
+
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Unique Aspects of University Anxiety:</h3>
+                <ul style="margin-left: 1.5rem; margin-bottom: 0;">
+                    <li>Academic performance pressure in competitive programs</li>
+                    <li>Financial stress from tuition, housing, and living expenses</li>
+                    <li>Social anxiety in new environments with diverse populations</li>
+                    <li>Career anxiety about job prospects and student debt</li>
+                    <li>Independence anxiety when managing all aspects of life for the first time</li>
+                    <li>Imposter syndrome in challenging academic programs</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f5e8; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Ontario-Specific Factors:</h3>
+                <ul style="margin-left: 1.5rem; margin-bottom: 0;">
+                    <li>Residence life stress at institutions like Queen's or Western</li>
+                    <li>Commuter stress for students traveling to downtown Toronto campuses</li>
+                    <li>Seasonal affective patterns during long Ontario winters</li>
+                    <li>Co-op program stress at universities like Waterloo or McMaster</li>
+                    <li>International student adjustment challenges</li>
+                </ul>
+            </div>
+
+            <h2>Common Student Mental Health Challenges</h2>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Academic Anxiety</h3>
+                    <p>Fear of failure, perfectionism, test anxiety, and difficulty managing workload across multiple courses. This is particularly common in competitive programs like engineering, medicine, or business where admission was highly selective.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Social Anxiety</h3>
+                    <p>Difficulty making friends, dating anxiety, fear of judgment in group projects or presentations, and struggles with roommate relationships. University social environments can feel overwhelming for students who were comfortable in smaller high school settings.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Transition Anxiety</h3>
+                    <p>Homesickness, difficulty with independence, managing practical life skills (cooking, budgeting, healthcare), and navigating relationships with parents from a distance.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Future-Focused Anxiety</h3>
+                    <p>Worry about career prospects, graduate school admission, student debt repayment, and whether their chosen program will lead to meaningful employment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Depression</h3>
+                    <p>Persistent sadness, loss of motivation, sleep problems, social withdrawal, and difficulty concentrating on academic work. University depression often develops gradually as stress accumulates over semesters.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Eating and Body Image Concerns</h3>
+                    <p>Changes in eating patterns due to residence food, body image pressures in social environments, and using food to cope with stress or anxiety.</p>
+                </div>
+            </div>
+
+            <h2>How Therapy Supports Student Success</h2>
+            <p style="margin-bottom: 2rem;">
+                Therapy helps students develop effective coping strategies while processing the emotional aspects of university life:
+            </p>
+
+            <ul style="margin: 2rem 0; margin-left: 2rem;">
+                <li><strong>Academic Performance:</strong> Develop study strategies, manage test anxiety, improve time management, and build confidence without perfectionist pressure</li>
+                <li><strong>Social Connection:</strong> Work on social skills, communication strategies, and building authentic relationships while managing social anxiety</li>
+                <li><strong>Life Skills Development:</strong> Support practical coping skills while processing emotions that come with increased responsibility</li>
+                <li><strong>Identity Exploration:</strong> Explore questions about values, career direction, relationships, and personal goals without external pressure</li>
+                <li><strong>Stress Management:</strong> Learn to manage academic deadlines, social obligations, and personal responsibilities effectively</li>
+            </ul>
+
+            <h2>Virtual Therapy for Busy Student Schedules</h2>
+            <p style="margin-bottom: 1.5rem;">
+                University schedules change every semester, with classes, labs, work-study jobs, and extracurricular activities creating complex calendars. Virtual therapy accommodates irregular schedules and can work around midterms, finals, and co-op placements.
+            </p>
+
+            <p style="margin-bottom: 1.5rem;">
+                Whether you're studying in Toronto, attending Northern Ontario schools, or at specialized campuses, virtual therapy ensures consistent support regardless of location. Residence and shared housing situations can make privacy challenging, but virtual therapy allows you to have confidential sessions from your dorm room, library study room, or any private space on campus.
+            </p>
+
+            <p style="margin-bottom: 3rem;">
+                Most students have limited budgets. Virtual therapy eliminates transportation costs and can often be scheduled during times that don't conflict with paid work opportunities. University mental health services often aren't available during summer breaks or winter holidays when students may actually need more support. Virtual therapy provides consistent care year-round.
+            </p>
+
+            <h2>My Approach to Supporting Students</h2>
+            <p style="margin-bottom: 1.5rem;">
+                I understand that university students are navigating multiple transitions simultaneously – academic, social, financial, and developmental. My approach recognizes the unique pressures of student life while building skills that will serve you well beyond graduation.
+            </p>
+
+            <p style="margin-bottom: 1.5rem;">
+                <strong>Acceptance and Commitment Therapy (ACT)</strong> helps students develop psychological flexibility around academic pressures while staying connected to values and goals that extend beyond grades or career outcomes.
+            </p>
+
+            <p style="margin-bottom: 1.5rem;">
+                <strong>Cognitive Behavioural Therapy (CBT)</strong> techniques are particularly effective for test anxiety, social anxiety, and depression. Students often appreciate the practical, skill-based approach that provides tools they can use immediately.
+            </p>
+
+            <p style="margin-bottom: 1.5rem;">
+                <strong>Mindfulness approaches</strong> help students stay present during stressful periods rather than getting caught up in catastrophic thinking about future outcomes or past mistakes.
+            </p>
+
+            <p style="margin-bottom: 3rem;">
+                I typically suggest weekly sessions during particularly stressful periods (midterms, finals, major life decisions) with flexibility to adjust frequency based on academic calendar and personal needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Is therapy covered by student health plans?</div>
+                <div class="faq-answer">Most Ontario university health plans include mental health coverage. I can provide receipts that meet insurance requirements. Many students also have coverage through parents' extended health plans.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you maintain confidentiality in shared living situations?</div>
+                <div class="faq-answer">We'll discuss strategies for ensuring privacy during virtual sessions, whether you're in residence, shared apartments, or living with family. Headphones and scheduling during private times are usually sufficient.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can you help with academic accommodations?</div>
+                <div class="faq-answer">While I can't provide documentation for academic accommodations, I can help you understand your needs and support you in working with your university's accessibility services.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if I need to take a break from therapy during exams?</div>
+                <div class="faq-answer">University schedules require flexibility. We can adjust session frequency during busy periods and maintain connection through email check-ins if needed.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you understand the pressures of specific Ontario universities?</div>
+                <div class="faq-answer">I work with students from universities across Ontario and understand the different cultures and pressures at various institutions, from large research universities to specialized programs.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How quickly can I start if I'm in crisis?</div>
+                <div class="faq-answer">For urgent situations, contact your campus crisis services or local emergency resources. For non-emergency support, I typically have availability within the same week.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--bg-light); text-align: center;">
+        <div class="container">
+            <h2 class="section-title">Get Support for University Anxiety</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                University is challenging enough without struggling with anxiety or depression alone. Professional support can help you develop skills for managing current stressors while building resilience for future challenges.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Book Your Free Consultation</a>
+                <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-light);">
+                Supporting university and college students across Ontario with evidence-based mental health care
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/#about">About</a>
+                <a href="/counselling-services.html">Services</a>
+                <a href="/#contact">Contact</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+            </div>
+            <p>© 2025 Next Step Therapy | CRPO Registered Psychotherapist #10979</p>
+            <p style="margin-top: 0.5rem; opacity: 0.9;">University Anxiety Therapy Serving Ontario Students</p>
+        </div>
+    </footer>
+</body>
+</html>
