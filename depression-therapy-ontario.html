@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>Depression Therapy Ontario | Professional Depression Counselling | CRPO #10979</title>
+    <meta name="description" content="Expert depression therapy across Ontario. Evidence-based treatment for major depression, seasonal depression, and mood disorders. Virtual and in-person options.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Depression Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Professional depression counselling throughout Ontario. Evidence-based ACT and CBT approaches for lasting relief from depression.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/depression-therapy-ontario">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/depression-therapy-ontario">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Depression Therapy Ontario",
+      "description": "Professional depression therapy services across Ontario using evidence-based approaches",
+      "url": "https://nextsteptherapy.ca/depression-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2E5668;
+            --secondary-color: #8FBC8F;
+            --text-dark: #2C3E50;
+            --text-light: #5D6D7E;
+            --bg-light: #F8F9FA;
+            --border-light: #E1E8ED;
+            --accent-warm: #8FA68E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Main Content */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--accent-warm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .approach-item {
+            text-align: center;
+        }
+
+        .approach-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), #4A90E2);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Next Step Therapy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Depression Therapy Services Ontario</h1>
+        <p class="hero-subtitle">
+            Professional depression counselling across Ontario. When the weight feels too heavy and nothing seems to bring joy anymore, you don't have to carry it alone. Evidence-based therapy that meets you where you are.
+        </p>
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Book Free Consultation</a>
+            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <h2 class="section-title">Understanding Depression in Ontario</h2>
+        <p class="lead-text">
+            Depression in Ontario often reflects more than individual struggles—it mirrors the pressures of modern life here. Whether it's the isolation of long winters, the stress of housing costs, workplace pressures from Toronto to Ottawa, or the unique challenges of rural communities, depression can feel overwhelming. But it's also treatable, and there's hope.
+        </p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Major Depressive Disorder</h3>
+                <p>
+                    More than just sadness—persistent low mood, loss of interest, and the feeling that nothing will ever get better. Whether triggered by life events or arising without clear cause, major depression affects how you think, feel, and function. Together, we'll work on understanding your unique experience and building pathways back to meaning and connection.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Seasonal Affective Disorder (SAD)</h3>
+                <p>
+                    Ontario's long, dark winters can be particularly challenging for those susceptible to seasonal depression. More than just "winter blues," SAD significantly impacts mood, energy, and motivation. Using evidence-based approaches alongside practical strategies for managing Ontario's seasonal challenges.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Persistent Depressive Disorder</h3>
+                <p>
+                    Lower-level depression that lasts for years—often called "chronic depression" or dysthymia. It may not disable you completely, but it robs life of color and joy. Many people live with this for so long they forget what it feels like to feel genuinely good. Recovery is possible.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Depression with Anxiety</h3>
+                <p>
+                    Often depression and anxiety occur together, creating a complex experience of both withdrawal and agitation. This combination is particularly common in Ontario's high-pressure environment, where economic and social stressors can trigger both conditions simultaneously.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Postpartum Depression</h3>
+                <p>
+                    The transition to parenthood can be overwhelming, especially when dealing with Ontario's healthcare system, parental leave policies, and the pressure to "have it all together." Postpartum depression is common, treatable, and nothing to be ashamed of.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Depression in Later Life</h3>
+                <p>
+                    Depression in older adults often gets dismissed as "normal aging," but it's not. Whether triggered by retirement, health changes, loss of loved ones, or isolation, depression at any age deserves attention and care. Treatment can significantly improve quality of life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach-section">
+        <div class="section">
+            <h2 class="section-title">My Approach to Depression Treatment</h2>
+            <p class="lead-text">
+                After years of working with people experiencing depression across Ontario, I've learned that there's no one-size-fits-all approach. Depression affects everyone differently, and recovery looks different for everyone. My approach combines evidence-based methods with deep respect for your unique experience.
+            </p>
+
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h4>Acceptance & Commitment Therapy (ACT)</h4>
+                    <p>Instead of fighting depression, learn to make room for difficult feelings while still moving toward what matters to you. Particularly helpful for the guilt and self-criticism that often accompany depression.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Cognitive Behavioural Therapy (CBT)</h4>
+                    <p>Address the thought patterns and behaviors that maintain depression. CBT helps identify and challenge negative thinking while building behavioral activation and problem-solving skills.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Mindfulness-Based Approaches</h4>
+                    <p>Develop a different relationship with difficult thoughts and emotions. Mindfulness can help break the cycle of rumination and self-criticism that often fuels depression.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Behavioral Activation</h4>
+                    <p>When depression makes everything feel pointless, behavioral activation helps you gradually re-engage with activities and relationships that bring meaning, even when motivation is low.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ontario Context Section -->
+    <section class="section">
+        <h2 class="section-title">Depression Therapy Across Ontario</h2>
+        <p class="lead-text">
+            Every region of Ontario brings unique challenges that can contribute to or complicate depression. My virtual therapy practice means you get specialized support no matter where you are in the province.
+        </p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Urban Centers (Toronto, Ottawa, Hamilton)</h3>
+                <p>Fast-paced life, housing stress, commute fatigue, and the paradox of feeling lonely in crowded cities. Urban depression often involves overstimulation combined with disconnection from nature and community.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Suburban Communities</h3>
+                <p>The pressure to "have it all"—perfect family, house, career—while feeling isolated in car-dependent communities. Suburban depression often involves the gap between expectations and reality.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Rural & Northern Ontario</h3>
+                <p>Geographic isolation, limited mental health resources, economic uncertainty, and the challenges of small-town life where privacy can be difficult. Seasonal factors are often more pronounced in these areas.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>University Communities</h3>
+                <p>Academic pressure, financial stress, identity transitions, and the unique challenges of university life in cities like London, Kingston, or Waterloo. Student depression often involves questioning life direction and managing overwhelming expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Recovery Journey?</h2>
+        <p>Depression is treatable, and you don't have to face it alone. Professional support can help you rediscover hope, meaning, and connection—even when everything feels dark right now.</p>
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Start Your Journey</a>
+            <a href="tel:+14163062157" class="btn btn-secondary">Call Now: 416-306-2157</a>
+        </div>
+        <p style="margin-top: 1rem; opacity: 0.9;">CRPO Registered #10979 • Most insurance plans accepted • Evening appointments available</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="counselling-services.html">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <p>© 2024 Next Step Therapy | CRPO Registered Psychotherapist #10979</p>
+        <p>Serving all of Ontario with virtual therapy</p>
+    </footer>
+</body>
+</html>

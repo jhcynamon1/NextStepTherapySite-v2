@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>Workplace Stress Therapy Ontario | Burnout Counselling | CRPO #10979</title>
+    <meta name="description" content="Professional workplace stress and burnout therapy across Ontario. Evidence-based treatment for work anxiety, professional burnout, and career stress.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Workplace Stress Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Professional workplace stress counselling throughout Ontario. Evidence-based approaches for burnout, work anxiety, and career challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/workplace-stress-therapy-ontario">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/workplace-stress-therapy-ontario">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Workplace Stress Therapy Ontario",
+      "description": "Professional workplace stress and burnout therapy services across Ontario",
+      "url": "https://nextsteptherapy.ca/workplace-stress-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2E5668;
+            --secondary-color: #8FBC8F;
+            --text-dark: #2C3E50;
+            --text-light: #5D6D7E;
+            --bg-light: #F8F9FA;
+            --border-light: #E1E8ED;
+            --accent-warm: #8FA68E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Main Content */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--accent-warm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .approach-item {
+            text-align: center;
+        }
+
+        .approach-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), #4A90E2);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Next Step Therapy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Workplace Stress & Burnout Therapy Ontario</h1>
+        <p class="hero-subtitle">
+            Professional support for work-related stress and burnout across Ontario. When Sunday night dread becomes your norm and work consumes your life, it's time to reclaim your well-being and find sustainable success.
+        </p>
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Book Free Consultation</a>
+            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <h2 class="section-title">Understanding Workplace Stress in Ontario</h2>
+        <p class="lead-text">
+            Ontario's diverse work environments—from Bay Street finance to Ottawa government roles, from Northern mining to tech in Waterloo—each bring unique stressors. Whether you're dealing with toxic workplace culture, impossible deadlines, or the pressure to constantly perform, workplace stress affects every aspect of your life.
+        </p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Professional Burnout</h3>
+                <p>
+                    More than just being tired—burnout involves emotional exhaustion, cynicism, and a sense of reduced accomplishment. Whether you're in healthcare dealing with system pressures, education facing constant changes, or corporate environments with unrealistic demands, burnout can make everything feel meaningless.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Work Anxiety & Performance Pressure</h3>
+                <p>
+                    When work anxiety keeps you awake at night, affects your relationships, or makes you dread Monday mornings. From presentation anxiety to imposter syndrome, performance pressure in Ontario's competitive job market can be overwhelming.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Workplace Conflict & Toxic Environments</h3>
+                <p>
+                    Dealing with difficult colleagues, micromanaging bosses, or systemic workplace toxicity. When going to work feels like walking into a battlefield, it affects your mental health, confidence, and overall well-being.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Work-Life Balance Challenges</h3>
+                <p>
+                    In Ontario's demanding work culture, boundaries between work and life often disappear. Remote work, constant connectivity, and the pressure to always be available can make it impossible to truly disconnect and recharge.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Career Transitions & Job Insecurity</h3>
+                <p>
+                    Whether facing layoffs, considering career changes, or dealing with industry shifts, job insecurity creates chronic stress. The fear of unemployment, starting over, or not being good enough can be paralyzing.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Leadership & Management Stress</h3>
+                <p>
+                    The unique pressures of leadership—managing teams, making difficult decisions, being responsible for others' livelihoods—while maintaining your own well-being. Leadership can be isolating and overwhelming.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach-section">
+        <div class="section">
+            <h2 class="section-title">My Approach to Workplace Stress Treatment</h2>
+            <p class="lead-text">
+                After working with professionals across Ontario's various industries, I understand that workplace stress isn't just about "managing stress better"—it's about creating sustainable ways to succeed without sacrificing your health, relationships, or sense of self.
+            </p>
+
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h4>Acceptance & Commitment Therapy (ACT)</h4>
+                    <p>Learn to respond to workplace challenges from your values rather than reacting from stress and anxiety. Build psychological flexibility to handle uncertainty and pressure.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Stress & Burnout Recovery</h4>
+                    <p>Systematic approaches to recovering from burnout, rebuilding energy, and preventing future burnout through sustainable work practices and boundaries.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Assertiveness & Communication Skills</h4>
+                    <p>Develop the skills to communicate boundaries, handle difficult conversations, and advocate for yourself in professional settings without damaging relationships.</p>
+                </div>
+
+                <div class="approach-item">
+                    <h4>Values-Based Career Planning</h4>
+                    <p>Align your career choices with what truly matters to you, rather than external expectations or pressure. Find meaning and purpose in your professional life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Section -->
+    <section class="section">
+        <h2 class="section-title">Industry-Specific Support Across Ontario</h2>
+        <p class="lead-text">
+            Different industries bring different stressors. My practice serves professionals across Ontario's major sectors.
+        </p>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Healthcare Workers</h3>
+                <p>Dealing with system pressures, patient outcomes, staffing shortages, and the emotional toll of caring for others while navigating Ontario's healthcare challenges.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Government & Public Sector</h3>
+                <p>Political pressures, bureaucratic constraints, public scrutiny, and the unique stressors of serving the public interest in a politically charged environment.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Education Professionals</h3>
+                <p>Student needs, administrative demands, parent expectations, and constant educational reforms creating stress for teachers and administrators across Ontario.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Technology & Startups</h3>
+                <p>Fast-paced environments, long hours, equity pressures, and the unique stress of building something new in Ontario's growing tech sector.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Finance & Corporate</h3>
+                <p>High-pressure environments, long hours, performance targets, and the stress of managing large sums of money or making decisions that affect many people.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Small Business Owners</h3>
+                <p>The isolation and pressure of entrepreneurship, financial uncertainty, employee management, and the responsibility of keeping a business afloat in competitive markets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Reclaim Your Work-Life Balance?</h2>
+        <p>You don't have to choose between career success and personal well-being. Professional support can help you find sustainable ways to thrive at work while maintaining your health and relationships.</p>
+        <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Start Your Journey</a>
+            <a href="tel:+14163062157" class="btn btn-secondary">Call Now: 416-306-2157</a>
+        </div>
+        <p style="margin-top: 1rem; opacity: 0.9;">CRPO Registered #10979 • Most insurance plans accepted • Evening appointments available</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="counselling-services.html">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <p>© 2024 Next Step Therapy | CRPO Registered Psychotherapist #10979</p>
+        <p>Serving all of Ontario with virtual therapy</p>
+    </footer>
+</body>
+</html>
