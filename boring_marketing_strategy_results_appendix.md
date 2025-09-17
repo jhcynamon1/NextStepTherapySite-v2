@@ -601,3 +601,5 @@ Committed Action|Taking steps toward values despite difficult feelings|Action-or
 *   Emphasize practical skills over theoretical discussion
 *   Address high-achiever specific concerns with ACT approach
 *   Highlight virtual delivery advantages for ACT techniques
+
+
