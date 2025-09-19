@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Block access to admin and temporary pages
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /scripts/
+
+# Block access to backup files
+Disallow: /*backup*
+Disallow: /*BACKUP*
+Disallow: /*critical-css*
+Disallow: /D4_page_template*
+
+# Block duplicate content patterns
+Disallow: /*.html$
+Disallow: /*-qa-comprehensive*
+
+# Sitemap location
+Sitemap: https://nextsteptherapy.ca/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific bot rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0

@@ -1,0 +1,605 @@
+---
+// Workplace Stress Therapy Ontario - Manus Compliant Version (Complete Rewrite)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+
+                if (currentScrollY <= headerHeight) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>Workplace Stress Therapy Ontario | Professional Burnout Support | CRPO #10979</title>
+    <meta name="description" content="Workplace stress and burnout therapy across Ontario. Virtual support for professional exhaustion, work anxiety, and career pressure. Evidence-based help that works.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Workplace Stress Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Virtual workplace stress therapy throughout Ontario. Professional support for burnout, work anxiety, and career challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/workplace-stress-therapy-ontario">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/workplace-stress-therapy-ontario">
+
+    <!-- Import shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Workplace Stress Therapy Ontario",
+      "description": "Professional workplace stress and burnout therapy services across Ontario",
+      "url": "https://nextsteptherapy.ca/workplace-stress-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      }
+    }
+    </script>
+
+    <!-- Manus CTA Styling Override -->
+    <style>
+        .manus-primary-cta {
+            background: #6B8E6F !important;
+            color: white !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 2.5rem !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: none !important;
+            cursor: pointer !important;
+            font-size: 1.1rem !important;
+            min-height: 48px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .manus-primary-cta:hover {
+            background: #5A7D5E !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%238FA68E;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%234A6B7A;stop-opacity:0.3" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)"/></svg>') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        .hero::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(255, 255, 255, 0.3) !important;
+            z-index: 1 !important;
+        }
+
+        .hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        .trust-indicators {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 0.75rem !important;
+            justify-content: center !important;
+            margin: 1.5rem 0 !important;
+        }
+
+        .trust-indicator {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #4A6B7A !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            border: 2px solid #8FA68E !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Workplace Stress & Burnout Therapy Ontario | Professional Support for Work Exhaustion</h1>
+                    <p class="lead-text">That Sunday night feeling has turned into every night. Your promotion doesn't feel exciting anymore—it feels overwhelming. If work stress has stopped being about "busy days" and started being about dreading your alarm clock, you're experiencing what thousands of Ontario professionals face: the quiet erosion of joy that comes when career demands eclipse everything else in your life.</p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">CRPO #10979 Licensed</span>
+                        <span class="trust-indicator">Burnout Recovery Specialist</span>
+                        <span class="trust-indicator">Virtual & Flexible Sessions</span>
+                        <span class="trust-indicator">Insurance Receipts Provided</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="index.html#contact" class="manus-primary-cta">Book Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Recognition Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">When Success Starts Feeling Like Survival</h2>
+                    <p class="section-intro">Workplace stress in Ontario looks different depending on your industry—from Bay Street's pressure-cooker finance culture to healthcare workers managing impossible caseloads, from tech workers facing constant deadlines to government employees navigating political uncertainties. But the exhaustion feels the same.</p>
+
+                    <h3>Sound familiar?</h3>
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>The 24/7 Mental Occupation</h4>
+                            <p>Work doesn't end when you leave the office anymore. Your brain stays engaged with tomorrow's deadlines, last week's meeting, and next month's project. Even vacation feels like borrowed time that you'll pay for later.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Promotion Paradox</h4>
+                            <p>You've achieved what you thought you wanted—the title, the salary, the recognition—but instead of satisfaction, you feel trapped. More responsibility means more stress, and "success" starts feeling like a prison.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Emotional Flatline</h4>
+                            <p>Things that used to excite you about work—solving problems, collaborating with colleagues, achieving goals—now feel mechanical. You're competent but not engaged, productive but not passionate.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Relationship Collateral</h4>
+                            <p>Work stress is bleeding into everything else. You're irritable with family, you've stopped making plans with friends, and your partner keeps asking if you're okay. The answer is honestly: you're not sure anymore.</p>
+                        </div>
+                    </div>
+
+                    <p class="highlight-text">If these experiences resonate, you're not "weak" or "ungrateful"—you're human. Chronic workplace stress is a normal response to abnormal demands, and recognizing it is the first step toward reclaiming your life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Workplace Stress Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Why Workplace Stress Happens (And Why It's Not Your Fault)</h2>
+                    <p class="section-intro">Workplace stress often develops when there's a mismatch between job demands and available resources—whether that's time, support, autonomy, or clarity about expectations. In Ontario's competitive, fast-paced work environment, this mismatch has become the norm rather than the exception.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Ontario's Work Culture Realities</h4>
+                            <p>From Toronto's "always-on" startup culture to the bureaucratic pressures of Ottawa's government sector, Ontario workplaces often reward overwork and normalize stress. What feels like personal failure is often a predictable response to unsustainable systems.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Achiever's Dilemma</h4>
+                            <p>High performers often become victims of their own competence. You deliver excellent work, so you get more work. You handle pressure well, so you get more pressure. Success breeds expectation, and expectation can breed burnout.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Economic Pressures and Job Security</h4>
+                            <p>Ontario's housing costs, family financial pressures, and economic uncertainty create a context where saying "no" at work feels risky. When your livelihood feels precarious, boundaries feel like luxuries you can't afford.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Technology and Boundary Erosion</h4>
+                            <p>Smartphones and remote work capabilities have dissolved the traditional boundaries between work and life. "Urgent" emails at 9 PM and weekend Slack messages create a sense that work never really ends.</p>
+                        </div>
+                    </div>
+
+                    <p>Understanding these factors isn't about making excuses—it's about recognizing that workplace stress often results from systemic issues, not personal shortcomings. This perspective opens up possibilities for change that go beyond just "working harder" or "being more resilient."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Therapy Helps Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">How Therapy Can Help with Workplace Stress</h2>
+                    <p class="section-intro">Workplace stress therapy isn't about helping you tolerate more pressure—it's about developing skills to navigate professional challenges while maintaining your well-being, values, and sense of self. The goal is sustainable success, not just survival.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>Boundary Setting and Communication</h4>
+                            <p>Learn to set limits without jeopardizing your career. Develop skills to communicate needs assertively, manage unrealistic expectations, and protect your time and energy without coming across as difficult or uncommitted.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Stress Response Management</h4>
+                            <p>Build practical skills for managing acute stress in the moment. Learn techniques for staying calm during difficult meetings, managing deadline pressure, and recovering from challenging work situations.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Values Clarification and Career Alignment</h4>
+                            <p>Reconnect with what matters to you beyond external achievement. Explore how to make career decisions that align with your values, even within the constraints of your current situation.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Sustainable Performance Strategies</h4>
+                            <p>Develop approaches to professional excellence that don't require sacrificing your health or relationships. Learn to distinguish between productive effort and counterproductive overwork.</p>
+                        </div>
+                    </div>
+
+                    <p>This approach, drawing from Acceptance and Commitment Therapy (ACT) and cognitive-behavioral techniques, has strong research support for workplace stress. It's designed for professionals who want to excel at work while also having a life outside of it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">What to Expect in Workplace Stress Therapy</h2>
+                    <p class="section-intro">Therapy for workplace stress is highly practical and action-oriented. You're not here to analyze your entire career history—you're here to develop strategies that work in your actual professional environment.</p>
+
+                    <div class="content-card">
+                        <h3>Your First Sessions</h3>
+                        <p>We'll start by understanding your specific work situation—the pressures you face, the culture you're navigating, and how stress is affecting both your work performance and personal life.</p>
+
+                        <h4>We'll explore:</h4>
+                        <ul class="feature-list">
+                            <li>Your current work challenges and stress triggers</li>
+                            <li>How workplace stress is affecting your health, relationships, and well-being</li>
+                            <li>Your professional goals and what sustainable success looks like to you</li>
+                            <li>What you've already tried and what's been helpful or ineffective</li>
+                            <li>Immediate strategies you can implement this week</li>
+                        </ul>
+
+                        <h3>Building Skills and Taking Action</h3>
+                        <p>Each session includes practical elements you can apply directly in your work environment. You'll leave with specific strategies tailored to your industry, role, and workplace culture.</p>
+
+                        <h4>You'll learn to:</h4>
+                        <ul class="feature-list">
+                            <li>Manage stress and pressure in real-time during challenging work situations</li>
+                            <li>Set and maintain boundaries without damaging professional relationships</li>
+                            <li>Communicate assertively with colleagues, supervisors, and difficult personalities</li>
+                            <li>Make career decisions that align with your values and long-term well-being</li>
+                            <li>Prevent work stress from overwhelming your personal life</li>
+                            <li>Recover from setbacks and maintain perspective during high-pressure periods</li>
+                        </ul>
+
+                        <h3>Workplace Application</h3>
+                        <p>We'll practice strategies for your specific professional context—whether that's handling difficult clients, managing up to challenging supervisors, leading stressed teams, or navigating organizational politics. The skills you develop will be immediately applicable to your real work challenges.</p>
+
+                        <div class="cta-box">
+                            <p>Ready to reclaim your professional life without sacrificing your career?</p>
+                            <a href="tel:+14163062157" class="manus-primary-cta">Book Free Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Your Therapist Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">About Your Therapist</h2>
+                    <p class="section-intro">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who specializes in helping Ontario professionals navigate workplace stress while maintaining their career ambitions. I understand both the unique pressures of different professional environments and the universal challenge of finding sustainable ways to succeed.</p>
+
+                    <div class="content-card">
+                        <h3>Why I Work with Workplace Stress</h3>
+                        <p>Too many capable professionals are burning out in pursuit of goals that ultimately matter to them. What makes this work meaningful is helping people find ways to excel professionally while also maintaining their health, relationships, and sense of purpose.</p>
+
+                        <h3>My Approach to Professional Challenges</h3>
+                        <p>I work with professionals across Ontario's diverse industries—from healthcare workers in Kingston to tech employees in Waterloo, from government workers in Ottawa to financial professionals in Toronto. Each environment brings unique challenges, but the skills for managing workplace stress are transferable.</p>
+
+                        <h4>What clients appreciate about our work together:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Industry Understanding:</strong> Recognition of the real pressures you face in your specific field</li>
+                            <li><strong>Practical Solutions:</strong> Strategies you can implement immediately in your work environment</li>
+                            <li><strong>Career-Focused:</strong> Support that enhances rather than threatens your professional goals</li>
+                            <li><strong>Flexible Scheduling:</strong> Sessions that work around demanding professional schedules</li>
+                            <li><strong>Confidential Space:</strong> Complete privacy to discuss workplace challenges without professional consequences</li>
+                        </ul>
+
+                        <h3>Professional Background</h3>
+                        <p>I hold a Master's degree in counseling psychology and am licensed as a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I specialize in Acceptance and Commitment Therapy (ACT) and stress management techniques for working professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Therapy Benefits Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Why Virtual Therapy Works for Busy Professionals</h2>
+                    <p class="section-intro">When you're already overwhelmed with work demands, the last thing you need is additional stress getting to therapy appointments. Virtual therapy removes logistical barriers while providing all the benefits of professional support.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Maximizes Your Limited Time</h4>
+                            <p>Use lunch breaks, early mornings, or brief gaps in your schedule for therapy without travel time. Every minute counts when you're already stretched thin.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Complete Privacy Protection</h4>
+                            <p>No risk of running into colleagues or clients in waiting rooms. Your professional reputation and career trajectory remain completely protected.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Consistent Support</h4>
+                            <p>Work travel, late meetings, or urgent deadlines won't disrupt your therapy schedule. Maintain consistent progress regardless of work demands.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Immediate Application</h4>
+                            <p>Practice stress management techniques directly in your work environment. Apply boundary-setting skills immediately where you need them most.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Flexible Scheduling</h4>
+                            <p>Early morning sessions before the office opens, lunch hour appointments, or evening sessions after work. Therapy that adapts to your professional schedule.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Reduced Professional Disruption</h4>
+                            <p>No need to explain lengthy absences or make excuses for appointments. Maintain your professional presence while getting the support you need.</p>
+                        </div>
+                    </div>
+
+                    <p>Virtual therapy isn't a compromise—for busy professionals, it's often the optimal way to access mental health support while maintaining career momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Getting Started with Workplace Stress Therapy</h2>
+                    <p class="section-intro">Taking the first step toward addressing workplace stress can feel like adding another item to an already overwhelming to-do list. We've designed our process to be as efficient and low-pressure as possible.</p>
+
+                    <div class="content-card">
+                        <h3>Your Free 15-Minute Consultation</h3>
+                        <p>Before committing to therapy, you deserve to know if we're a good fit. This brief, focused conversation allows you to:</p>
+                        <ul class="feature-list">
+                            <li>Share your current workplace challenges</li>
+                            <li>Ask questions about the therapeutic process and approach</li>
+                            <li>Understand what to expect from virtual workplace stress therapy</li>
+                            <li>Determine if our approach feels right for your professional situation</li>
+                            <li>Learn about scheduling, fees, and insurance coverage</li>
+                        </ul>
+
+                        <h3>Practical Information</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h4>Session Length</h4>
+                                <p>50-minute sessions, typically weekly or bi-weekly based on your needs and professional schedule</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Insurance Coverage</h4>
+                                <p>Most extended health plans in Ontario cover Registered Psychotherapist services. Receipts provided for reimbursement</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Professional Flexibility</h4>
+                                <p>Early morning, lunch hour, and evening appointments available to work around demanding professional commitments</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Technology Requirements</h4>
+                                <p>Any device with internet and camera. Simple, secure platform that works from anywhere you have privacy</p>
+                            </div>
+                        </div>
+
+                        <h3>Investment in Your Professional Well-Being</h3>
+                        <p>Individual therapy sessions are $150. Many clients notice improvements in their work stress management within the first few sessions, with significant progress typically seen within 8-12 weeks of consistent work.</p>
+
+                        <div class="cta-box">
+                            <p>You don't have to choose between career success and personal well-being.</p>
+                            <div class="cta-buttons">
+                                <a href="tel:+14163062157" class="manus-primary-cta">Call for Free Consultation</a>
+                                <a href="index.html#contact" class="secondary-cta">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Common Questions About Workplace Stress Therapy</h2>
+                    <p class="section-intro">It's normal to have questions about therapy—especially when you're already managing a demanding professional schedule. Here are answers to concerns we hear most often from Ontario professionals.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>"Will this interfere with my career or professional goals?"</h4>
+                            <p>The goal is to enhance your professional effectiveness, not hinder it. We work on developing skills that make you more resilient, better at managing stress, and more effective in challenging work situations. Many clients find that therapy actually accelerates their career progress.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"I'm already busy—how can I fit therapy into my schedule?"</h4>
+                            <p>Virtual therapy is specifically designed for busy professionals. Sessions can happen during lunch breaks, early mornings, or evenings. No travel time means you can fit a session into even the busiest schedule. Many clients find that the stress management skills they learn actually give them more time and energy.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"What if someone finds out I'm in therapy?"</h4>
+                            <p>Your therapy is completely confidential. Virtual sessions add an extra layer of privacy since there are no waiting rooms or parking lots where you might be seen. As a Registered Psychotherapist, I'm bound by strict privacy laws (PHIPA) that protect your confidentiality.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"How is this different from just talking to friends or family about work stress?"</h4>
+                            <p>While support from loved ones is valuable, therapy provides specialized skills and strategies specifically for managing workplace stress. You'll learn evidence-based techniques that have been proven effective for professional challenges, not just general support.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"How long does workplace stress therapy typically take?"</h4>
+                            <p>This varies by individual and situation, but many clients notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"Can I use my employee benefits for virtual therapy?"</h4>
+                            <p>Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Reclaim Your Work-Life Balance?</h2>
+                    <p class="contact-lead">You don't have to choose between career success and personal well-being. Professional support can help you find sustainable ways to thrive at work while maintaining your health, relationships, and sense of self.</p>
+
+                    <h3>Start with a Free 15-Minute Consultation</h3>
+                    <p>This brief, no-pressure conversation helps us both determine if we're a good fit. You'll get clear answers about the process, timeline, and what to expect from virtual workplace stress therapy.</p>
+
+                    <div class="hero-cta">
+                        <a href="tel:+14163062157" class="manus-primary-cta">Book Your Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>Professional Support for Ontario's Workforce</h4>
+                        <div class="therapist-details">
+                            <strong>Jesse Cynamon, RP</strong><br>
+                            Registered Psychotherapist | CRPO #10979<br>
+                            Virtual sessions throughout Ontario<br>
+                            Insurance receipts provided
+                        </div>
+                    </div>
+
+                    <p class="final-message">Workplace stress doesn't have to be the price of professional success. With the right support, you can excel in your career while also maintaining your well-being and enjoying your life outside of work.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        📞 Get Support Today
+    </a>
+
+    <!-- Analytics Tracking -->
+    <script type="module">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

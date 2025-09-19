@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Breadcrumb {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    canonical: string;
+    robots?: string;
+    breadcrumbs?: Breadcrumb[];
+    structuredDataType?: 'homepage' | 'service' | 'about';
+    serviceName?: string;
+    serviceDescription?: string;
+    additionalSchema?: Record<string, any>[];
+    noindex?: boolean;
+    metaImage?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  breadcrumbs = [],
+  structuredDataType = 'service',
+  serviceName,
+  serviceDescription,
+  additionalSchema = [],
+  robots = frontmatter?.noindex ? 'noindex, follow' : 'index, follow',
+  metaImage
+} = frontmatter;
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  structuredDataType={structuredDataType}
+  serviceName={serviceName}
+  serviceDescription={serviceDescription}
+  robots={robots}
+  additionalStructuredData={[
+    ...breadcrumbs.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumbs.map((crumb, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": crumb.label,
+              "item": crumb.url
+            }))
+          }
+        ]
+      : [],
+    ...additionalSchema
+  ]}
+>
+  <section class="hero-with-bg">
+    <div class="hero-content">
+      <slot name="hero" />
+      <div class="cta-group" role="group" aria-label="Primary calls to action">
+        <a href="/contact" class="manus-primary-cta">Book a Free Consultation</a>
+        <a href="/services" class="manus-secondary-cta">View Services</a>
+      </div>
+      <p class="regulatory-note">CRPO Registered · Jesse Cynamon, RP · Registration #10979</p>
+    </div>
+  </section>
+
+  <section class="page-body">
+    <article class="main-content">
+      <slot />
+    </article>
+    <aside class="sidebar">
+      <slot name="aside" />
+    </aside>
+  </section>
+
+  <section class="cta-banner">
+    <h2>Ready to take the next step?</h2>
+    <p>Schedule a confidential 20-minute consultation with our CRPO-registered team. We respond within one business day.</p>
+    <a href="/contact" class="manus-primary-cta">Schedule Consultation</a>
+  </section>
+
+  <footer class="compliance">
+    <p><strong>Next Step Therapy</strong> · Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</p>
+    <p>Psychotherapy services comply with the Personal Health Information Protection Act (PHIPA). Your information is stored securely and discussed only with your consent.</p>
+    <p>If you or someone you know is in crisis, call 911 or go to the nearest emergency department. For 24/7 support in Ontario, contact ConnexOntario at 1-866-531-2600.</p>
+  </footer>
+
+  <style>
+    .hero-with-bg {
+      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(37,99,235,0.02));
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.25rem, 4vw, 3rem);
+      color: #1f2a44;
+    }
+
+    .hero-content .lead-text {
+      font-size: 1.125rem;
+      color: #475569;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .regulatory-note {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .page-body {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .main-content {
+      display: grid;
+      gap: 1.5rem;
+      font-size: 1.05rem;
+      color: #1f2937;
+    }
+
+    .main-content h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+      color: #1f2a44;
+      margin-top: 1.5rem;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 1.5rem;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+    }
+
+    .sidebar .card {
+      background: #f8fafc;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+    }
+
+    .cta-banner {
+      background: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+    }
+
+    .compliance {
+      background: #0f172a;
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .page-body {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+  </style>
+</BaseLayout>

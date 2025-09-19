@@ -1,0 +1,1729 @@
+diff --git a/package.json b/package.json
+index 4fe1d0b..c9a3797 100644
+--- a/package.json
++++ b/package.json
+@@ -7,7 +7,10 @@
+     "extract": "node gsc_automated_extractor.js",
+     "setup": "npm install && echo 'Setup complete! Run: npm run extract'",
+     "schedule-daily": "echo '0 9 * * * cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -",
+-    "schedule-weekly": "echo '0 9 * * 1 cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -"
++    "schedule-weekly": "echo '0 9 * * 1 cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -",
++    "astro:dev": "npm run dev --prefix nextstep-therapy-astro",
++    "astro:build": "npm run build --prefix nextstep-therapy-astro",
++    "astro:preview": "npm run preview --prefix nextstep-therapy-astro"
+   },
+   "dependencies": {
+     "axios": "^1.11.0",
+diff --git a/vercel.json b/vercel.json
+index dee93c5..0b53e9b 100644
+--- a/vercel.json
++++ b/vercel.json
+@@ -1,179 +1,72 @@
+ {
+-  "$schema": "https://openapi.vercel.sh/vercel.json",
+-  "cleanUrls": true,
+-  "trailingSlash": false,
+-  "buildCommand": null,
+-  "outputDirectory": ".",
+-  "framework": null,
+   "redirects": [
+-    {
+-      "source": "/virtual-therapy",
+-      "destination": "/virtual-therapy-ontario.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/depression-therapy",
+-      "destination": "/therapist-toronto-depression.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/college-anxiety.html",
+-      "destination": "/students/college-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/college-anxiety",
+-      "destination": "/students/college-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/first-year-university-anxiety.html",
+-      "destination": "/students/first-year-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/first-year-university-anxiety",
+-      "destination": "/students/first-year-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/university-anxiety.html",
+-      "destination": "/students/university-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/university-anxiety",
+-      "destination": "/students/university-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/depression-therapy-ottawa.html",
+-      "destination": "/locations/ottawa/depression-therapy",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/depression-therapy-ottawa",
+-      "destination": "/locations/ottawa/depression-therapy",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/workplace-stress-counselling-hamilton.html",
+-      "destination": "/locations/hamilton/workplace-stress",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/workplace-stress-counselling-hamilton",
+-      "destination": "/locations/hamilton/workplace-stress",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/mens-mental-health-therapy-london-ontario.html",
+-      "destination": "/locations/london/mens-mental-health",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/mens-mental-health-therapy-london-ontario",
+-      "destination": "/locations/london/mens-mental-health",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/performance-anxiety.html",
+-      "destination": "/professionals/performance-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/performance-anxiety",
+-      "destination": "/professionals/performance-anxiety",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/work-anxiety-and-stress.html",
+-      "destination": "/professionals/workplace-stress",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/work-anxiety-and-stress",
+-      "destination": "/professionals/workplace-stress",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/public/child-anxious-about-university",
+-      "destination": "/child-anxious-about-university.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/child-anxious-about-university.html",
+-      "destination": "/child-anxious-about-university.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/child-anxious-about-university",
+-      "destination": "/child-anxious-about-university.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/public/sunday-night-anxiety",
+-      "destination": "/sunday-night-anxiety.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/sunday-night-anxiety.html",
+-      "destination": "/sunday-night-anxiety.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/sunday-night-anxiety",
+-      "destination": "/sunday-night-anxiety.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/public/first-year-university-anxiety",
+-      "destination": "/first-year-university-anxiety.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/first-year-university-anxiety",
+-      "destination": "/first-year-university-anxiety.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/public/homesick-university",
+-      "destination": "/homesick-university.html",
+-      "permanent": true
+-    },
+-    {
+-      "source": "/homesick-university",
+-      "destination": "/homesick-university.html",
+-      "permanent": true
+-    }
++    { "source": "/services.html", "destination": "/services", "statusCode": 301 },
++    { "source": "/contact.html", "destination": "/contact", "statusCode": 301 },
++    { "source": "/university-exam-anxiety.html", "destination": "/students/university-exam-anxiety", "statusCode": 301 },
++    { "source": "/university-anxiety.html", "destination": "/students/university-anxiety", "statusCode": 301 },
++    { "source": "/student-mental-health.html", "destination": "/students/student-mental-health", "statusCode": 301 },
++    { "source": "/university-depression.html", "destination": "/students/university-depression", "statusCode": 301 },
++    { "source": "/students-with-anxiety.html", "destination": "/students/anxiety-support", "statusCode": 301 },
++    { "source": "/college-anxiety.html", "destination": "/students/college-anxiety", "statusCode": 301 },
++    { "source": "/college-stress.html", "destination": "/students/college-stress", "statusCode": 301 },
++    { "source": "/college-student-counseling.html", "destination": "/students/college-counselling", "statusCode": 301 },
++    { "source": "/study-anxiety.html", "destination": "/students/study-anxiety", "statusCode": 301 },
++    { "source": "/academic-stress-university.html", "destination": "/students/academic-stress", "statusCode": 301 },
++    { "source": "/first-year-university-anxiety.html", "destination": "/students/first-year-anxiety", "statusCode": 301 },
++    { "source": "/failing-university-anxiety.html", "destination": "/students/failing-university-anxiety", "statusCode": 301 },
++    { "source": "/university-counseling.html", "destination": "/students/university-counselling", "statusCode": 301 },
++    { "source": "/university-student-struggling.html", "destination": "/students/university-student-struggling", "statusCode": 301 },
++    { "source": "/university-student-therapy.html", "destination": "/students/university-therapy", "statusCode": 301 },
++    { "source": "/child-anxious-about-university.html", "destination": "/students/child-anxiety", "statusCode": 301 },
++    { "source": "/help-university-student-depression.html", "destination": "/students/student-depression-help", "statusCode": 301 },
++    { "source": "/social-anxiety-university.html", "destination": "/students/social-anxiety", "statusCode": 301 },
++    { "source": "/panic-attacks-university.html", "destination": "/students/panic-attacks", "statusCode": 301 },
++    { "source": "/homesick-university.html", "destination": "/students/homesickness-support", "statusCode": 301 },
++    { "source": "/same-day-virtual-therapy-ontario.html", "destination": "/virtual-therapy-ontario", "statusCode": 301 },
++    { "source": "/virtual-therapy-thunder-bay.html", "destination": "/locations/thunder-bay/virtual-therapy", "statusCode": 301 },
++    { "source": "/online-mental-health-support-ontario.html", "destination": "/virtual-therapy/mental-health-support", "statusCode": 301 },
++    { "source": "/mental-health-northern-ontario.html", "destination": "/locations/northern-ontario/mental-health-support", "statusCode": 301 },
++    { "source": "/therapy-cost-without-insurance.html", "destination": "/resources/therapy-cost-without-insurance", "statusCode": 301 },
++    { "source": "/therapy-covered-insurance-ontario.html", "destination": "/resources/therapy-covered-by-insurance", "statusCode": 301 },
++    { "source": "/therapist-available-today-ontario.html", "destination": "/services/therapist-available-today", "statusCode": 301 },
++    { "source": "/same-week-therapy-appointment.html", "destination": "/services/same-week-therapy", "statusCode": 301 },
++    { "source": "/why-feel-anxious-all-time.html", "destination": "/resources/why-feel-anxious-all-the-time", "statusCode": 301 },
++    { "source": "/cant-sleep-anxiety.html", "destination": "/resources/cant-sleep-due-to-anxiety", "statusCode": 301 },
++    { "source": "/cant-stop-worrying-work.html", "destination": "/professionals/work-anxiety", "statusCode": 301 },
++    { "source": "/constant-stress-from-job.html", "destination": "/professionals/constant-work-stress", "statusCode": 301 },
++    { "source": "/sunday-night-anxiety.html", "destination": "/professionals/sunday-night-anxiety", "statusCode": 301 },
++    { "source": "/panic-attacks-driving-ontario.html", "destination": "/resources/panic-attacks-driving", "statusCode": 301 },
++    { "source": "/mental-health-ontario-professionals.html", "destination": "/professionals/mental-health-ontario", "statusCode": 301 },
++    { "source": "/virtual-therapy-busy-parents.html", "destination": "/virtual-therapy/busy-parents", "statusCode": 301 },
++    { "source": "/performance-anxiety.html", "destination": "/professionals/performance-anxiety", "statusCode": 301 },
++    { "source": "/work-anxiety-and-stress.html", "destination": "/professionals/workplace-stress", "statusCode": 301 },
++    { "source": "/workplace-stress-burnout-therapy.html", "destination": "/professionals/workplace-burnout-therapy", "statusCode": 301 },
++    { "source": "/teen-eating-disorder-help.html", "destination": "/students/teen-eating-disorder-help", "statusCode": 301 },
++    { "source": "/anger-management-kitchener.html", "destination": "/locations/kitchener/anger-management", "statusCode": 301 },
++    { "source": "/therapist-toronto-depression.html", "destination": "/locations/toronto/depression-therapy", "statusCode": 301 },
++    { "source": "/workplace-stress-counselling-hamilton.html", "destination": "/locations/hamilton/workplace-stress", "statusCode": 301 },
++    { "source": "/mens-mental-health-therapy-london-ontario.html", "destination": "/locations/london/mens-mental-health", "statusCode": 301 },
++    { "source": "/depression-therapy-ottawa.html", "destination": "/locations/ottawa/depression-therapy", "statusCode": 301 },
++    { "source": "/acceptance-commitment-therapy-act.html", "destination": "/services/acceptance-commitment-therapy", "statusCode": 301 },
++    { "source": "/anxiety-counseling-ontario.html", "destination": "/anxiety-therapy-ontario", "statusCode": 301 },
++    { "source": "/toronto-depression-therapy.html", "destination": "/locations/toronto/depression-therapy", "statusCode": 301 },
++    { "source": "/online-therapy-depression.html", "destination": "/services/online-therapy-depression", "statusCode": 301 },
++    { "source": "/therapy-goals-depression.html", "destination": "/resources/therapy-goals-depression", "statusCode": 301 },
++    { "source": "/psychotherapy-counselling-depression.html", "destination": "/depression-therapy-ontario", "statusCode": 301 },
++    { "source": "/virtual-therapy-ontario-qa-comprehensive.html", "destination": "/virtual-therapy-ontario", "statusCode": 301 },
++    { "source": "/life-transitions-qa-comprehensive.html", "destination": "/life-transitions", "statusCode": 301 },
++    { "source": "/therapist-mississauga-qa-comprehensive.html", "destination": "/therapist-mississauga", "statusCode": 301 },
++    { "source": "/online-therapy-burlington.html", "destination": "/virtual-therapy-burlington", "statusCode": 301 },
++    { "source": "/burlington-online-therapy.html", "destination": "/virtual-therapy-burlington", "statusCode": 301 }
+   ],
+-  "rewrites": [
+-    {
+-      "source": "/faq",
+-      "destination": "/faq.html"
+-    }
+-  ],
+-  "headers": [
+-    {
+-      "source": "/(.*)",
+-      "headers": [
+-        {
+-          "key": "X-Content-Type-Options",
+-          "value": "nosniff"
+-        },
+-        {
+-          "key": "X-Frame-Options",
+-          "value": "DENY"
+-        },
+-        {
+-          "key": "X-XSS-Protection",
+-          "value": "1; mode=block"
+-        },
+-        {
+-          "key": "Cache-Control",
+-          "value": "public, max-age=3600, s-maxage=86400"
+-        }
+-      ]
++  "routes": [
++    {
++      "source": "/:path*",
++      "has": [
++        { "type": "host", "value": "www.nextsteptherapy.ca" }
++      ],
++      "destination": "https://nextsteptherapy.ca/:path*",
++      "statusCode": 301
+     }
+   ]
+-}
+\ No newline at end of file
++}
+diff --git a/.github/workflows/seo-audit.yml b/.github/workflows/seo-audit.yml
+new file mode 100644
+index 0000000..b33de96
+--- /dev/null
++++ b/.github/workflows/seo-audit.yml
+@@ -0,0 +1,39 @@
++name: SEO Audit
++
++on:
++  push:
++    branches: [ main, master ]
++  pull_request:
++
++jobs:
++  audit:
++    runs-on: ubuntu-latest
++    steps:
++      - name: Checkout repository
++        uses: actions/checkout@v4
++
++      - name: Setup Node.js
++        uses: actions/setup-node@v4
++        with:
++          node-version: 18
++
++      - name: Install dependencies
++        run: npm install
++        working-directory: nextstep-therapy-astro
++
++      - name: Build site (sitemap generated in prebuild)
++        run: npm run build
++        working-directory: nextstep-therapy-astro
++
++      - name: Run canonical audit against local preview
++        env:
++          SITE_BASE: http://127.0.0.1:4321
++        run: |
++          npm run preview -- --host 127.0.0.1 --port 4321 &
++          PREVIEW_PID=$!
++          sleep 5
++          node ../scripts/canonical-audit.mjs
++          kill $PREVIEW_PID
++        working-directory: nextstep-therapy-astro
++        shell: bash
++        timeout-minutes: 5
+diff --git a/scripts/generate-sitemap.mjs b/scripts/generate-sitemap.mjs
+new file mode 100644
+index 0000000..c530491
+--- /dev/null
++++ b/scripts/generate-sitemap.mjs
+@@ -0,0 +1,25 @@
++#!/usr/bin/env node
++import { readFileSync, writeFileSync } from 'node:fs';
++import { resolve } from 'node:path';
++
++const root = new URL('..', import.meta.url).pathname;
++const dataPath = resolve(root, 'nextstep-therapy-astro', 'data', 'canonicals.json');
++const outputPath = resolve(root, 'nextstep-therapy-astro', 'public', 'sitemap.xml');
++
++const canonicals = JSON.parse(readFileSync(dataPath, 'utf8'));
++const activeUrls = canonicals.filter((entry) => entry && entry.noindex === false);
++
++const now = new Date('2025-01-01T00:00:00.000Z').toISOString();
++
++const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
++  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
++  activeUrls
++    .map((entry) => {
++      const loc = entry.url.replace(/\/$/, '/');
++      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${now}</lastmod>\n  </url>`;
++    })
++    .join('\n') +
++  '\n</urlset>\n';
++
++writeFileSync(outputPath, xml, 'utf8');
++console.log(`Generated sitemap with ${activeUrls.length} URLs at ${outputPath}`);
+diff --git a/scripts/canonical-audit.mjs b/scripts/canonical-audit.mjs
+new file mode 100644
+index 0000000..45f67f7
+--- /dev/null
++++ b/scripts/canonical-audit.mjs
+@@ -0,0 +1,131 @@
++#!/usr/bin/env node
++import { readFileSync } from 'node:fs';
++import { resolve } from 'node:path';
++
++const canonicalsPath = resolve(new URL('..', import.meta.url).pathname, 'nextstep-therapy-astro', 'data', 'canonicals.json');
++const canonicalEntries = JSON.parse(readFileSync(canonicalsPath, 'utf8'));
++
++const productionBase = 'https://nextsteptherapy.ca';
++const siteBase = process.env.SITE_BASE || productionBase;
++
++const redirects = [
++  { from: 'https://nextsteptherapy.ca/services.html', to: 'https://nextsteptherapy.ca/services' },
++  { from: 'https://nextsteptherapy.ca/contact.html', to: 'https://nextsteptherapy.ca/contact' },
++  { from: 'https://nextsteptherapy.ca/university-exam-anxiety.html', to: 'https://nextsteptherapy.ca/students/university-exam-anxiety' },
++  { from: 'https://nextsteptherapy.ca/university-anxiety.html', to: 'https://nextsteptherapy.ca/students/university-anxiety' },
++  { from: 'https://nextsteptherapy.ca/student-mental-health.html', to: 'https://nextsteptherapy.ca/students/student-mental-health' },
++  { from: 'https://nextsteptherapy.ca/university-depression.html', to: 'https://nextsteptherapy.ca/students/university-depression' },
++  { from: 'https://nextsteptherapy.ca/students-with-anxiety.html', to: 'https://nextsteptherapy.ca/students/anxiety-support' },
++  { from: 'https://nextsteptherapy.ca/college-anxiety.html', to: 'https://nextsteptherapy.ca/students/college-anxiety' },
++  { from: 'https://nextsteptherapy.ca/college-stress.html', to: 'https://nextsteptherapy.ca/students/college-stress' },
++  { from: 'https://nextsteptherapy.ca/college-student-counseling.html', to: 'https://nextsteptherapy.ca/students/college-counselling' },
++  { from: 'https://nextsteptherapy.ca/study-anxiety.html', to: 'https://nextsteptherapy.ca/students/study-anxiety' },
++  { from: 'https://nextsteptherapy.ca/academic-stress-university.html', to: 'https://nextsteptherapy.ca/students/academic-stress' },
++  { from: 'https://nextsteptherapy.ca/first-year-university-anxiety.html', to: 'https://nextsteptherapy.ca/students/first-year-anxiety' },
++  { from: 'https://nextsteptherapy.ca/failing-university-anxiety.html', to: 'https://nextsteptherapy.ca/students/failing-university-anxiety' },
++  { from: 'https://nextsteptherapy.ca/university-counseling.html', to: 'https://nextsteptherapy.ca/students/university-counselling' },
++  { from: 'https://nextsteptherapy.ca/university-student-struggling.html', to: 'https://nextsteptherapy.ca/students/university-student-struggling' },
++  { from: 'https://nextsteptherapy.ca/university-student-therapy.html', to: 'https://nextsteptherapy.ca/students/university-therapy' },
++  { from: 'https://nextsteptherapy.ca/child-anxious-about-university.html', to: 'https://nextsteptherapy.ca/students/child-anxiety' },
++  { from: 'https://nextsteptherapy.ca/help-university-student-depression.html', to: 'https://nextsteptherapy.ca/students/student-depression-help' },
++  { from: 'https://nextsteptherapy.ca/social-anxiety-university.html', to: 'https://nextsteptherapy.ca/students/social-anxiety' },
++  { from: 'https://nextsteptherapy.ca/panic-attacks-university.html', to: 'https://nextsteptherapy.ca/students/panic-attacks' },
++  { from: 'https://nextsteptherapy.ca/homesick-university.html', to: 'https://nextsteptherapy.ca/students/homesickness-support' },
++  { from: 'https://nextsteptherapy.ca/same-day-virtual-therapy-ontario.html', to: 'https://nextsteptherapy.ca/virtual-therapy-ontario' },
++  { from: 'https://nextsteptherapy.ca/virtual-therapy-thunder-bay.html', to: 'https://nextsteptherapy.ca/locations/thunder-bay/virtual-therapy' },
++  { from: 'https://nextsteptherapy.ca/online-mental-health-support-ontario.html', to: 'https://nextsteptherapy.ca/virtual-therapy/mental-health-support' },
++  { from: 'https://nextsteptherapy.ca/mental-health-northern-ontario.html', to: 'https://nextsteptherapy.ca/locations/northern-ontario/mental-health-support' },
++  { from: 'https://nextsteptherapy.ca/therapy-cost-without-insurance.html', to: 'https://nextsteptherapy.ca/resources/therapy-cost-without-insurance' },
++  { from: 'https://nextsteptherapy.ca/therapy-covered-insurance-ontario.html', to: 'https://nextsteptherapy.ca/resources/therapy-covered-by-insurance' },
++  { from: 'https://nextsteptherapy.ca/therapist-available-today-ontario.html', to: 'https://nextsteptherapy.ca/services/therapist-available-today' },
++  { from: 'https://nextsteptherapy.ca/same-week-therapy-appointment.html', to: 'https://nextsteptherapy.ca/services/same-week-therapy' },
++  { from: 'https://nextsteptherapy.ca/why-feel-anxious-all-time.html', to: 'https://nextsteptherapy.ca/resources/why-feel-anxious-all-the-time' },
++  { from: 'https://nextsteptherapy.ca/cant-sleep-anxiety.html', to: 'https://nextsteptherapy.ca/resources/cant-sleep-due-to-anxiety' },
++  { from: 'https://nextsteptherapy.ca/cant-stop-worrying-work.html', to: 'https://nextsteptherapy.ca/professionals/work-anxiety' },
++  { from: 'https://nextsteptherapy.ca/constant-stress-from-job.html', to: 'https://nextsteptherapy.ca/professionals/constant-work-stress' },
++  { from: 'https://nextsteptherapy.ca/sunday-night-anxiety.html', to: 'https://nextsteptherapy.ca/professionals/sunday-night-anxiety' },
++  { from: 'https://nextsteptherapy.ca/panic-attacks-driving-ontario.html', to: 'https://nextsteptherapy.ca/resources/panic-attacks-driving' },
++  { from: 'https://nextsteptherapy.ca/mental-health-ontario-professionals.html', to: 'https://nextsteptherapy.ca/professionals/mental-health-ontario' },
++  { from: 'https://nextsteptherapy.ca/virtual-therapy-busy-parents.html', to: 'https://nextsteptherapy.ca/virtual-therapy/busy-parents' },
++  { from: 'https://nextsteptherapy.ca/performance-anxiety.html', to: 'https://nextsteptherapy.ca/professionals/performance-anxiety' },
++  { from: 'https://nextsteptherapy.ca/work-anxiety-and-stress.html', to: 'https://nextsteptherapy.ca/professionals/workplace-stress' },
++  { from: 'https://nextsteptherapy.ca/workplace-stress-burnout-therapy.html', to: 'https://nextsteptherapy.ca/professionals/workplace-burnout-therapy' },
++  { from: 'https://nextsteptherapy.ca/teen-eating-disorder-help.html', to: 'https://nextsteptherapy.ca/students/teen-eating-disorder-help' },
++  { from: 'https://nextsteptherapy.ca/anger-management-kitchener.html', to: 'https://nextsteptherapy.ca/locations/kitchener/anger-management' },
++  { from: 'https://nextsteptherapy.ca/therapist-toronto-depression.html', to: 'https://nextsteptherapy.ca/locations/toronto/depression-therapy' },
++  { from: 'https://nextsteptherapy.ca/workplace-stress-counselling-hamilton.html', to: 'https://nextsteptherapy.ca/locations/hamilton/workplace-stress' },
++  { from: 'https://nextsteptherapy.ca/mens-mental-health-therapy-london-ontario.html', to: 'https://nextsteptherapy.ca/locations/london/mens-mental-health' },
++  { from: 'https://nextsteptherapy.ca/depression-therapy-ottawa.html', to: 'https://nextsteptherapy.ca/locations/ottawa/depression-therapy' },
++  { from: 'https://nextsteptherapy.ca/acceptance-commitment-therapy-act.html', to: 'https://nextsteptherapy.ca/services/acceptance-commitment-therapy' },
++  { from: 'https://nextsteptherapy.ca/anxiety-counseling-ontario.html', to: 'https://nextsteptherapy.ca/anxiety-therapy-ontario' },
++  { from: 'https://nextsteptherapy.ca/toronto-depression-therapy.html', to: 'https://nextsteptherapy.ca/locations/toronto/depression-therapy' },
++  { from: 'https://nextsteptherapy.ca/online-therapy-depression.html', to: 'https://nextsteptherapy.ca/services/online-therapy-depression' },
++  { from: 'https://nextsteptherapy.ca/therapy-goals-depression.html', to: 'https://nextsteptherapy.ca/resources/therapy-goals-depression' },
++  { from: 'https://nextsteptherapy.ca/psychotherapy-counselling-depression.html', to: 'https://nextsteptherapy.ca/depression-therapy-ontario' },
++  { from: 'https://nextsteptherapy.ca/virtual-therapy-ontario-qa-comprehensive.html', to: 'https://nextsteptherapy.ca/virtual-therapy-ontario' },
++  { from: 'https://nextsteptherapy.ca/life-transitions-qa-comprehensive.html', to: 'https://nextsteptherapy.ca/life-transitions' },
++  { from: 'https://nextsteptherapy.ca/therapist-mississauga-qa-comprehensive.html', to: 'https://nextsteptherapy.ca/therapist-mississauga' },
++  { from: 'https://nextsteptherapy.ca/online-therapy-burlington.html', to: 'https://nextsteptherapy.ca/virtual-therapy-burlington' },
++  { from: 'https://nextsteptherapy.ca/burlington-online-therapy.html', to: 'https://nextsteptherapy.ca/virtual-therapy-burlington' },
++  { from: 'https://www.nextsteptherapy.ca/contact', to: 'https://nextsteptherapy.ca/contact' }
++];
++
++const failures = [];
++
++function buildUrl(pathname) {
++  if (pathname.startsWith('http')) return pathname;
++  return new URL(pathname, siteBase).toString();
++}
++
++async function verifyCanonical(entry) {
++  const targetUrl = buildUrl(entry.path || entry.url);
++  const res = await fetch(targetUrl, { redirect: 'manual' });
++  if (res.status !== 200) {
++    failures.push({ type: 'status', url: targetUrl, message: `Expected 200, received ${res.status}` });
++    return;
++  }
++  const body = await res.text();
++  const match = body.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
++  if (!match) {
++    failures.push({ type: 'canonical', url: targetUrl, message: 'Missing canonical tag' });
++    return;
++  }
++  const canonicalHref = match[1];
++  const expected = entry.url && siteBase === productionBase ? entry.url : targetUrl;
++  if (canonicalHref !== expected) {
++    failures.push({ type: 'canonical', url: targetUrl, message: `Canonical mismatch (${canonicalHref})` });
++  }
++}
++
++async function verifyRedirect(entry) {
++  const res = await fetch(entry.from, { redirect: 'manual' });
++  if (res.status !== 301) {
++    failures.push({ type: 'redirect', url: entry.from, message: `Expected 301, received ${res.status}` });
++    return;
++  }
++  const location = res.headers.get('location');
++  if (!location || location !== entry.to) {
++    failures.push({ type: 'redirect', url: entry.from, message: `Expected location ${entry.to}, received ${location}` });
++  }
++}
++
++const canonicalChecks = canonicalEntries.filter((entry) => entry.noindex === false).map(verifyCanonical);
++await Promise.all(canonicalChecks);
++
++if (siteBase === productionBase) {
++  for (const entry of redirects) {
++    await verifyRedirect(entry);
++  }
++} else {
++  console.log(`Skipping redirect checks because SITE_BASE is ${siteBase}`);
++}
++
++if (failures.length) {
++  console.error('Canonical/redirect audit failed:');
++  for (const failure of failures) {
++    console.error(`- [${failure.type}] ${failure.url}: ${failure.message}`);
++  }
++  process.exit(1);
++}
++
++console.log(`Canonical audit passed for ${canonicalChecks.length} canonical URLs${siteBase === productionBase ? ' and all redirects' : ''}.`);
+diff --git a/nextstep-therapy-astro/astro.config.mjs b/nextstep-therapy-astro/astro.config.mjs
+new file mode 100644
+index 0000000..a595a86
+--- /dev/null
++++ b/nextstep-therapy-astro/astro.config.mjs
+@@ -0,0 +1,7 @@
++// @ts-check
++import { defineConfig } from 'astro/config';
++
++// https://astro.build/config
++export default defineConfig({
++  site: 'https://nextsteptherapy.ca'
++});
+diff --git a/nextstep-therapy-astro/package.json b/nextstep-therapy-astro/package.json
+new file mode 100644
+index 0000000..38267f0
+--- /dev/null
++++ b/nextstep-therapy-astro/package.json
+@@ -0,0 +1,17 @@
++{
++  "name": "nextstep-therapy-astro",
++  "type": "module",
++  "version": "0.0.1",
++  "scripts": {
++    "dev": "astro dev",
++    "build": "astro build",
++    "preview": "astro preview",
++    "astro": "astro",
++    "generate:sitemap": "node ../scripts/generate-sitemap.mjs",
++    "audit:canonicals": "node ../scripts/canonical-audit.mjs",
++    "prebuild": "npm run generate:sitemap"
++  },
++  "dependencies": {
++    "astro": "^5.13.8"
++  }
++}
+diff --git a/nextstep-therapy-astro/data/canonicals.json b/nextstep-therapy-astro/data/canonicals.json
+new file mode 100644
+index 0000000..e0ba30c
+--- /dev/null
++++ b/nextstep-therapy-astro/data/canonicals.json
+@@ -0,0 +1,62 @@
++[
++  { "url": "https://nextsteptherapy.ca/", "path": "/", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/services", "path": "/services", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/contact", "path": "/contact", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/anxiety-therapy-ontario", "path": "/anxiety-therapy-ontario", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/anxiety-therapy-toronto", "path": "/anxiety-therapy-toronto", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/depression-therapy-ontario", "path": "/depression-therapy-ontario", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/virtual-therapy-ontario", "path": "/virtual-therapy-ontario", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/life-transitions", "path": "/life-transitions", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/mens-mental-health", "path": "/mens-mental-health", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-in-toronto", "path": "/performance-anxiety-therapy-in-toronto", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/counselling-services", "path": "/counselling-services", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/workplace-stress-therapy-ontario", "path": "/workplace-stress-therapy-ontario", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/students/university-anxiety", "path": "/students/university-anxiety", "noindex": false },
++  { "url": "https://nextsteptherapy.ca/faq", "path": "/faq", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/college-anxiety", "path": "/students/college-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/study-anxiety", "path": "/students/study-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/student-mental-health", "path": "/students/student-mental-health", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/virtual-therapy/busy-parents", "path": "/virtual-therapy/busy-parents", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/workplace-stress", "path": "/professionals/workplace-stress", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/workplace-burnout-therapy", "path": "/professionals/workplace-burnout-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/therapy-cost-without-insurance", "path": "/resources/therapy-cost-without-insurance", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/panic-attacks-driving", "path": "/resources/panic-attacks-driving", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/toronto/depression-therapy", "path": "/locations/toronto/depression-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/ottawa/depression-therapy", "path": "/locations/ottawa/depression-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/hamilton/workplace-stress", "path": "/locations/hamilton/workplace-stress", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/university-depression", "path": "/students/university-depression", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/anxiety-support", "path": "/students/anxiety-support", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/college-stress", "path": "/students/college-stress", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/college-counselling", "path": "/students/college-counselling", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/academic-stress", "path": "/students/academic-stress", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/first-year-anxiety", "path": "/students/first-year-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/failing-university-anxiety", "path": "/students/failing-university-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/university-counselling", "path": "/students/university-counselling", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/university-student-struggling", "path": "/students/university-student-struggling", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/university-therapy", "path": "/students/university-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/child-anxiety", "path": "/students/child-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/student-depression-help", "path": "/students/student-depression-help", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/social-anxiety", "path": "/students/social-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/panic-attacks", "path": "/students/panic-attacks", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/homesickness-support", "path": "/students/homesickness-support", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/thunder-bay/virtual-therapy", "path": "/locations/thunder-bay/virtual-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/virtual-therapy/mental-health-support", "path": "/virtual-therapy/mental-health-support", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/northern-ontario/mental-health-support", "path": "/locations/northern-ontario/mental-health-support", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/therapy-covered-by-insurance", "path": "/resources/therapy-covered-by-insurance", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/services/therapist-available-today", "path": "/services/therapist-available-today", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/services/same-week-therapy", "path": "/services/same-week-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/why-feel-anxious-all-the-time", "path": "/resources/why-feel-anxious-all-the-time", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/cant-sleep-due-to-anxiety", "path": "/resources/cant-sleep-due-to-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/work-anxiety", "path": "/professionals/work-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/constant-work-stress", "path": "/professionals/constant-work-stress", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/sunday-night-anxiety", "path": "/professionals/sunday-night-anxiety", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/professionals/mental-health-ontario", "path": "/professionals/mental-health-ontario", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/students/teen-eating-disorder-help", "path": "/students/teen-eating-disorder-help", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/kitchener/anger-management", "path": "/locations/kitchener/anger-management", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/locations/london/mens-mental-health", "path": "/locations/london/mens-mental-health", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/services/acceptance-commitment-therapy", "path": "/services/acceptance-commitment-therapy", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/services/online-therapy-depression", "path": "/services/online-therapy-depression", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/resources/therapy-goals-depression", "path": "/resources/therapy-goals-depression", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/therapist-mississauga", "path": "/therapist-mississauga", "noindex": true },
++  { "url": "https://nextsteptherapy.ca/virtual-therapy-burlington", "path": "/virtual-therapy-burlington", "noindex": true }
++]
+diff --git a/nextstep-therapy-astro/public/sitemap.xml b/nextstep-therapy-astro/public/sitemap.xml
+new file mode 100644
+index 0000000..60da079
+--- /dev/null
++++ b/nextstep-therapy-astro/public/sitemap.xml
+@@ -0,0 +1,55 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
++  <url>
++    <loc>https://nextsteptherapy.ca/</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/services</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/contact</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/anxiety-therapy-ontario</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/anxiety-therapy-toronto</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/depression-therapy-ontario</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/virtual-therapy-ontario</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/life-transitions</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/mens-mental-health</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/performance-anxiety-therapy-in-toronto</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/counselling-services</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/workplace-stress-therapy-ontario</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++  <url>
++    <loc>https://nextsteptherapy.ca/students/university-anxiety</loc>
++    <lastmod>2025-01-01T00:00:00.000Z</lastmod>
++  </url>
++</urlset>
+diff --git a/nextstep-therapy-astro/src/layouts/BaseLayout.astro b/nextstep-therapy-astro/src/layouts/BaseLayout.astro
+new file mode 100644
+index 0000000..232195d
+--- /dev/null
++++ b/nextstep-therapy-astro/src/layouts/BaseLayout.astro
+@@ -0,0 +1,261 @@
++---
++// Base layout for all therapy practice pages
++import Header from '../components/Header.astro';
++import Footer from '../components/Footer.astro';
++import StructuredData from '../components/StructuredData.astro';
++
++interface Props {
++	title: string;
++	description: string;
++	canonical?: string;
++	structuredDataType?: 'homepage' | 'service' | 'about';
++	serviceName?: string;
++	serviceDescription?: string;
++	robots?: string;
++	additionalStructuredData?: Record<string, any>[];
++}
++
++const {
++	title,
++	description,
++	canonical = "https://nextsteptherapy.ca",
++	structuredDataType = 'homepage',
++	serviceName,
++	serviceDescription,
++	robots = 'index, follow',
++	additionalStructuredData = []
++} = Astro.props;
++---
++
++<!DOCTYPE html>
++<html lang="en">
++	<head>
++		<meta charset="utf-8" />
++		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
++		<meta name="generator" content={Astro.generator} />
++
++		<!-- SEO Meta Tags -->
++		<title>{title}</title>
++		<meta name="description" content={description} />
++		<link rel="canonical" href={canonical} />
++
++		<!-- Open Graph -->
++		<meta property="og:title" content={title} />
++		<meta property="og:description" content={description} />
++		<meta property="og:type" content="website" />
++		<meta property="og:url" content={canonical} />
++
++		<!-- Favicon -->
++		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
++
++		<!-- Additional SEO Meta Tags -->
++		<meta name="robots" content={robots} />
++		<meta name="author" content="Jesse Cynamon, Registered Psychotherapist" />
++		<meta name="geo.region" content="CA-ON" />
++		<meta name="geo.placename" content="Ontario, Canada" />
++		<meta name="ICBM" content="43.6532, -79.3832" />
++
++		<!-- Professional Healthcare Keywords -->
++		<meta name="keywords" content="therapy Ontario, ACT therapy, performance anxiety, workplace stress, men's mental health, psychotherapist Toronto, CRPO registered" />
++
++		<!-- Sitemap -->
++		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
++
++		<!-- Fonts -->
++		<link rel="preconnect" href="https://fonts.googleapis.com" />
++		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
++
++		<!-- Structured Data for SEO -->
++		<StructuredData
++			type={structuredDataType}
++			serviceName={serviceName}
++			serviceDescription={serviceDescription}
++		/>
++		{additionalStructuredData.map((item) => (
++			<script type="application/ld+json" set:html={JSON.stringify(item)}></script>
++		))}
++
++		<slot name="head" />
++
++		<!-- Global Styles -->
++		<style>
++			/* Global Professional Healthcare Styles */
++			* {
++				margin: 0;
++				padding: 0;
++				box-sizing: border-box;
++			}
++
++			body {
++				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
++				line-height: 1.6;
++				color: #333;
++				background: #fff;
++				-webkit-font-smoothing: antialiased;
++			}
++
++			.container {
++				max-width: 1200px;
++				margin: 0 auto;
++				padding: 0 20px;
++			}
++
++			/* Professional Button Styles */
++			.btn {
++				display: inline-block;
++				padding: 12px 24px;
++				border-radius: 6px;
++				text-decoration: none;
++				font-weight: 600;
++				transition: all 0.2s;
++				border: 2px solid transparent;
++				cursor: pointer;
++			}
++
++			.btn-primary {
++				background: #2563eb;
++				color: white;
++				border-color: #2563eb;
++			}
++
++			.btn-primary:hover {
++				background: #1d4ed8;
++				border-color: #1d4ed8;
++				transform: translateY(-1px);
++			}
++
++			.btn-secondary {
++				background: transparent;
++				color: #2563eb;
++				border-color: #2563eb;
++			}
++
++			.btn-secondary:hover {
++				background: #2563eb;
++				color: white;
++				transform: translateY(-1px);
++			}
++
++			/* Section Styles */
++			.section {
++				padding: 5rem 0;
++			}
++
++			.section-title {
++				font-size: 2.5rem;
++				font-weight: 700;
++				text-align: center;
++				margin-bottom: 3rem;
++				color: #1e293b;
++			}
++
++			.section-subtitle {
++				font-size: 1.25rem;
++				text-align: center;
++				color: #64748b;
++				margin-bottom: 3rem;
++				max-width: 600px;
++				margin-left: auto;
++				margin-right: auto;
++			}
++
++			/* Card Styles */
++			.card {
++				background: white;
++				padding: 2rem;
++				border-radius: 8px;
++				box-shadow: 0 1px 3px rgba(0,0,0,0.1);
++				transition: transform 0.2s, box-shadow 0.2s;
++			}
++
++			.card:hover {
++				transform: translateY(-2px);
++				box-shadow: 0 4px 12px rgba(0,0,0,0.15);
++			}
++
++			/* Grid Styles */
++			.grid {
++				display: grid;
++				gap: 2rem;
++			}
++
++			.grid-2 {
++				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
++			}
++
++			.grid-3 {
++				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
++			}
++
++			/* Professional Typography */
++			h1, h2, h3, h4, h5, h6 {
++				font-weight: 600;
++				line-height: 1.3;
++				color: #1e293b;
++			}
++
++			p {
++				color: #64748b;
++				margin-bottom: 1rem;
++			}
++
++			a {
++				color: #2563eb;
++				text-decoration: none;
++				transition: color 0.2s;
++			}
++
++			a:hover {
++				color: #1d4ed8;
++			}
++
++			/* Mobile Optimizations */
++			@media (max-width: 768px) {
++				.section {
++					padding: 3rem 0;
++				}
++
++				.section-title {
++					font-size: 2rem;
++				}
++
++				.section-subtitle {
++					font-size: 1.1rem;
++				}
++
++				.grid {
++					grid-template-columns: 1fr;
++				}
++			}
++
++			/* Accessibility */
++			.skip-link {
++				position: absolute;
++				top: -40px;
++				left: 6px;
++				background: #2563eb;
++				color: white;
++				padding: 8px;
++				text-decoration: none;
++				border-radius: 4px;
++				z-index: 1000;
++			}
++
++			.skip-link:focus {
++				top: 6px;
++			}
++		</style>
++	</head>
++	<body>
++		<a href="#main-content" class="skip-link">Skip to main content</a>
++
++		<Header />
++
++		<main id="main-content">
++			<slot />
++		</main>
++
++		<Footer />
++	</body>
++</html>
+\ No newline at end of file
+diff --git a/nextstep-therapy-astro/src/pages/_templates/StandardPage.astro b/nextstep-therapy-astro/src/pages/_templates/StandardPage.astro
+new file mode 100644
+index 0000000..4ec97e1
+--- /dev/null
++++ b/nextstep-therapy-astro/src/pages/_templates/StandardPage.astro
+@@ -0,0 +1,203 @@
++---
++import BaseLayout from '../../layouts/BaseLayout.astro';
++
++interface Breadcrumb {
++  label: string;
++  url: string;
++}
++
++interface Props {
++  frontmatter: {
++    title: string;
++    description: string;
++    canonical: string;
++    robots?: string;
++    breadcrumbs?: Breadcrumb[];
++    structuredDataType?: 'homepage' | 'service' | 'about';
++    serviceName?: string;
++    serviceDescription?: string;
++    additionalSchema?: Record<string, any>[];
++    noindex?: boolean;
++    metaImage?: string;
++  };
++}
++
++const { frontmatter } = Astro.props;
++const {
++  title,
++  description,
++  canonical,
++  breadcrumbs = [],
++  structuredDataType = 'service',
++  serviceName,
++  serviceDescription,
++  additionalSchema = [],
++  robots = frontmatter?.noindex ? 'noindex, follow' : 'index, follow',
++  metaImage
++} = frontmatter;
++---
++<BaseLayout
++  title={title}
++  description={description}
++  canonical={canonical}
++  structuredDataType={structuredDataType}
++  serviceName={serviceName}
++  serviceDescription={serviceDescription}
++  robots={robots}
++  additionalStructuredData={[
++    ...breadcrumbs.length
++      ? [
++          {
++            "@context": "https://schema.org",
++            "@type": "BreadcrumbList",
++            "itemListElement": breadcrumbs.map((crumb, index) => ({
++              "@type": "ListItem",
++              "position": index + 1,
++              "name": crumb.label,
++              "item": crumb.url
++            }))
++          }
++        ]
++      : [],
++    ...additionalSchema
++  ]}
++>
++  <section class="hero-with-bg">
++    <div class="hero-content">
++      <slot name="hero" />
++      <div class="cta-group" role="group" aria-label="Primary calls to action">
++        <a href="/contact" class="manus-primary-cta">Book a Free Consultation</a>
++        <a href="/services" class="manus-secondary-cta">View Services</a>
++      </div>
++      <p class="regulatory-note">CRPO Registered · Jesse Cynamon, RP · Registration #10979</p>
++    </div>
++  </section>
++
++  <section class="page-body">
++    <article class="main-content">
++      <slot />
++    </article>
++    <aside class="sidebar">
++      <slot name="aside" />
++    </aside>
++  </section>
++
++  <section class="cta-banner">
++    <h2>Ready to take the next step?</h2>
++    <p>Schedule a confidential 20-minute consultation with our CRPO-registered team. We respond within one business day.</p>
++    <a href="/contact" class="manus-primary-cta">Schedule Consultation</a>
++  </section>
++
++  <footer class="compliance">
++    <p><strong>Next Step Therapy</strong> · Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</p>
++    <p>Psychotherapy services comply with the Personal Health Information Protection Act (PHIPA). Your information is stored securely and discussed only with your consent.</p>
++    <p>If you or someone you know is in crisis, call 911 or go to the nearest emergency department. For 24/7 support in Ontario, contact ConnexOntario at 1-866-531-2600.</p>
++  </footer>
++
++  <style>
++    .hero-with-bg {
++      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(37,99,235,0.02));
++      padding: 4rem 1.5rem;
++      text-align: center;
++    }
++
++    .hero-content {
++      max-width: 720px;
++      margin: 0 auto;
++      display: grid;
++      gap: 1rem;
++    }
++
++    .hero-content h1 {
++      font-size: clamp(2.25rem, 4vw, 3rem);
++      color: #1f2a44;
++    }
++
++    .hero-content .lead-text {
++      font-size: 1.125rem;
++      color: #475569;
++    }
++
++    .cta-group {
++      display: flex;
++      justify-content: center;
++      gap: 1rem;
++      flex-wrap: wrap;
++    }
++
++    .regulatory-note {
++      font-size: 0.9rem;
++      color: #475569;
++    }
++
++    .page-body {
++      display: grid;
++      grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
++      gap: 2.5rem;
++      max-width: 1100px;
++      margin: 0 auto;
++      padding: 4rem 1.5rem;
++    }
++
++    .main-content {
++      display: grid;
++      gap: 1.5rem;
++      font-size: 1.05rem;
++      color: #1f2937;
++    }
++
++    .main-content h2 {
++      font-size: clamp(1.6rem, 2.5vw, 2rem);
++      color: #1f2a44;
++      margin-top: 1.5rem;
++    }
++
++    .sidebar {
++      display: grid;
++      gap: 1.5rem;
++      position: sticky;
++      top: 2rem;
++      align-self: start;
++    }
++
++    .sidebar .card {
++      background: #f8fafc;
++      border-radius: 0.75rem;
++      padding: 1.5rem;
++      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
++    }
++
++    .cta-banner {
++      background: #1f2937;
++      color: #fff;
++      text-align: center;
++      padding: 3rem 1.5rem;
++      display: grid;
++      gap: 1rem;
++    }
++
++    .cta-banner h2 {
++      font-size: clamp(1.75rem, 3vw, 2.25rem);
++    }
++
++    .compliance {
++      background: #0f172a;
++      color: rgba(255,255,255,0.85);
++      padding: 2.5rem 1.5rem;
++      text-align: center;
++      font-size: 0.95rem;
++      display: grid;
++      gap: 0.75rem;
++    }
++
++    @media (max-width: 900px) {
++      .page-body {
++        grid-template-columns: 1fr;
++      }
++
++      .sidebar {
++        position: static;
++      }
++    }
++  </style>
++</BaseLayout>
+diff --git a/nextstep-therapy-astro/src/pages/services.astro b/nextstep-therapy-astro/src/pages/services.astro
+new file mode 100644
+index 0000000..717c48f
+--- /dev/null
++++ b/nextstep-therapy-astro/src/pages/services.astro
+@@ -0,0 +1,103 @@
++---
++import StandardPage from './_templates/StandardPage.astro';
++
++const frontmatter = {
++  title: 'Therapy Services in Ontario | CRPO-Registered Support',
++  description: 'Evidence-based psychotherapy for anxiety, depression, workplace stress, and life transitions across Ontario.',
++  canonical: 'https://nextsteptherapy.ca/services',
++  breadcrumbs: [
++    { label: 'Home', url: 'https://nextsteptherapy.ca/' },
++    { label: 'Services', url: 'https://nextsteptherapy.ca/services' }
++  ],
++  structuredDataType: 'service',
++  serviceName: 'Psychotherapy Services in Ontario',
++  serviceDescription: 'Registered psychotherapy services including anxiety therapy, depression treatment, workplace stress support, and student mental health programs across Ontario.',
++  additionalSchema: [
++    {
++      '@context': 'https://schema.org',
++      '@type': 'Service',
++      'name': 'Psychotherapy Services',
++      'description': 'Evidence-based therapy for anxiety, depression, workplace stress, and student mental health across Ontario.',
++      'provider': {
++        '@type': 'Organization',
++        'name': 'Next Step Therapy',
++        'url': 'https://nextsteptherapy.ca'
++      },
++      'areaServed': 'Ontario, Canada'
++    }
++  ]
++};
++---
++<StandardPage frontmatter={frontmatter}>
++  <div slot="hero">
++    <h1>Personalized Therapy Services Across Ontario</h1>
++    <p class="lead-text">Our CRPO-registered team supports ambitious professionals, students, and families using evidence-based ACT, CBT, and depth-oriented psychotherapy delivered virtually across Ontario.</p>
++  </div>
++
++  <section aria-labelledby="why-choose">
++    <h2 id="why-choose">Why Clients Choose Our CRPO-Registered Team</h2>
++    <p>Therapy is most effective when you feel understood and supported by someone who respects your pace. We tailor each plan to your goals, integrate science-backed approaches, and check in regularly to make sure the work fits your schedule and energy.</p>
++    <ul>
++      <li>CRPO registration (#10979) with transparent consent and privacy practices.</li>
++      <li>Virtual-first delivery, allowing evening availability and quick follow-up between sessions.</li>
++      <li>Collaborative treatment planning that honours cultural context, identity, and lived experience.</li>
++      <li>Secure client portal for intake, documents, and billing, compliant with PHIPA.</li>
++    </ul>
++  </section>
++
++  <section aria-labelledby="services-tailored">
++    <h2 id="services-tailored">Services Tailored to Your Needs</h2>
++    <div class="grid-2">
++      <article class="card">
++        <h3>Anxiety Therapy</h3>
++        <p>Work through performance anxiety, generalized worry, and panic with structured exposure, nervous system regulation, and resilience-focused skills.</p>
++        <a href="/anxiety-therapy-ontario" aria-label="Learn more about anxiety therapy">Learn more</a>
++      </article>
++      <article class="card">
++        <h3>Depression Therapy</h3>
++        <p>Restore motivation and clarity by combining behavioural activation with values-led work and compassionate accountability.</p>
++        <a href="/depression-therapy-ontario" aria-label="Learn more about depression therapy">Learn more</a>
++      </article>
++      <article class="card">
++        <h3>Workplace Stress Programs</h3>
++        <p>Support leaders and high performers with strategic coaching on burnout prevention, boundaries, and decision-making under pressure.</p>
++        <a href="/professionals/workplace-stress" aria-label="Explore workplace stress therapy">Explore programs</a>
++      </article>
++      <article class="card">
++        <h3>Student Mental Health</h3>
++        <p>Help university and college students navigate academic pressure, transitions, and identity shifts with collaborative, skill-building therapy.</p>
++        <a href="/students/student-mental-health" aria-label="Discover student mental health support">Discover support</a>
++      </article>
++    </div>
++  </section>
++
++  <section aria-labelledby="start-therapy">
++    <h2 id="start-therapy">How to Start With Next Step Therapy</h2>
++    <ol>
++      <li><strong>Book a consultation:</strong> Use our secure form to request a 20-minute call and confirm fit.</li>
++      <li><strong>Complete PHIPA-compliant intake:</strong> We gather relevant history, consent, and emergency contacts.</li>
++      <li><strong>Meet your therapist:</strong> Clarify goals, frequency, and between-session communication preferences.</li>
++      <li><strong>Review progress:</strong> Every 4–6 sessions we revisit progress markers and adapt strategy.</li>
++    </ol>
++    <p>All sessions include detailed invoices suitable for insurance reimbursement. We are out-of-network but provide receipts with our CRPO registration number.</p>
++  </section>
++
++  <div slot="aside">
++    <div class="card">
++      <h3>In This Guide</h3>
++      <ul>
++        <li><a href="#why-choose">Why clients choose us</a></li>
++        <li><a href="#services-tailored">Services tailored to your needs</a></li>
++        <li><a href="#start-therapy">How to get started</a></li>
++      </ul>
++    </div>
++    <div class="card">
++      <h3>Additional Support</h3>
++      <ul>
++        <li><a href="/faq">Therapy FAQ</a></li>
++        <li><a href="/virtual-therapy-ontario">Virtual therapy overview</a></li>
++        <li><a href="/resources/therapy-cost-without-insurance">Therapy cost guide</a></li>
++      </ul>
++    </div>
++  </div>
++</StandardPage>
+diff --git a/nextstep-therapy-astro/src/pages/contact.astro b/nextstep-therapy-astro/src/pages/contact.astro
+new file mode 100644
+index 0000000..75fe173
+--- /dev/null
++++ b/nextstep-therapy-astro/src/pages/contact.astro
+@@ -0,0 +1,157 @@
++---
++import StandardPage from './_templates/StandardPage.astro';
++
++const frontmatter = {
++  title: 'Contact Next Step Therapy | Book a Consultation',
++  description: 'Reach our CRPO-registered psychotherapy team for a free consultation. Secure online and in-person sessions across Ontario.',
++  canonical: 'https://nextsteptherapy.ca/contact',
++  breadcrumbs: [
++    { label: 'Home', url: 'https://nextsteptherapy.ca/' },
++    { label: 'Contact', url: 'https://nextsteptherapy.ca/contact' }
++  ],
++  structuredDataType: 'about',
++  additionalSchema: [
++    {
++      '@context': 'https://schema.org',
++      '@type': 'ContactPage',
++      'name': 'Contact Next Step Therapy',
++      'url': 'https://nextsteptherapy.ca/contact',
++      'description': 'Contact form and details for Next Step Therapy in Ontario.'
++    },
++    {
++      '@context': 'https://schema.org',
++      '@type': 'LocalBusiness',
++      'name': 'Next Step Therapy',
++      'url': 'https://nextsteptherapy.ca',
++      'telephone': '+1-416-306-2157',
++      'email': 'jesse@nextsteptherapy.ca',
++      'address': {
++        '@type': 'PostalAddress',
++        'addressRegion': 'ON',
++        'addressCountry': 'CA'
++      },
++      'image': 'https://nextsteptherapy.ca/images/asset104.png'
++    }
++  ]
++};
++---
++<StandardPage frontmatter={frontmatter}>
++  <div slot="hero">
++    <h1>Contact Next Step Therapy</h1>
++    <p class="lead-text">Book a free 20-minute consultation or send us a secure message. We respond within one business day and provide guidance on privacy, consent, and paperwork for CRPO-regulated psychotherapy.</p>
++  </div>
++
++  <section aria-labelledby="book-consultation">
++    <h2 id="book-consultation">Book a Free 20-Minute Consultation</h2>
++    <p>Use the contact form to share a few details about what you’re looking for and the best times to reach you. We’ll confirm fit, review consent, and schedule your first appointment.</p>
++    <div class="card">
++      <h3>Secure Contact Form</h3>
++      <p>All submissions are encrypted and reviewed only by our clinical team. Please avoid sharing crisis situations—if you are in immediate danger, contact emergency services.</p>
++      <form class="contact-form" aria-label="Contact Next Step Therapy">
++        <label>
++          Full Name
++          <input type="text" name="fullName" required autocomplete="name" />
++        </label>
++        <label>
++          Email
++          <input type="email" name="email" required autocomplete="email" />
++        </label>
++        <label>
++          Phone (optional)
++          <input type="tel" name="phone" autocomplete="tel" />
++        </label>
++        <label>
++          How can we help?
++          <textarea name="message" rows="5" required></textarea>
++        </label>
++        <p class="consent">By submitting this form you consent to being contacted by Next Step Therapy. We respect your privacy and follow PHIPA guidelines.</p>
++        <button type="submit" class="manus-primary-cta">Submit Secure Message</button>
++      </form>
++    </div>
++  </section>
++
++  <section aria-labelledby="clinic-hours">
++    <h2 id="clinic-hours">Clinic Hours and Availability</h2>
++    <div class="grid-2">
++      <div class="card">
++        <h3>Office Hours</h3>
++        <ul>
++          <li>Monday–Friday: 9:00 AM – 7:00 PM ET</li>
++          <li>Saturday: By appointment</li>
++          <li>Sunday: Closed</li>
++        </ul>
++      </div>
++      <div class="card">
++        <h3>Session Formats</h3>
++        <ul>
++          <li>Secure video sessions across Ontario</li>
++          <li>Phone sessions for follow-up or accessibility</li>
++          <li>In-person intensives (limited availability)</li>
++        </ul>
++      </div>
++    </div>
++  </section>
++
++  <section aria-labelledby="emergency-support">
++    <h2 id="emergency-support">Emergency and Crisis Resources</h2>
++    <p>We are not an emergency service. If you need immediate help, call 911 or go to the nearest emergency department. Additional supports:</p>
++    <ul>
++      <li><strong>ConnexOntario:</strong> 1-866-531-2600 — 24/7 mental health, addiction, and gambling support.</li>
++      <li><strong>Talk Suicide Canada:</strong> 988 — 24/7 crisis line.</li>
++      <li><strong>Good2Talk:</strong> 1-866-925-5454 — Post-secondary student crisis support.</li>
++    </ul>
++  </section>
++
++  <div slot="aside">
++    <div class="card">
++      <h3>Administrative Details</h3>
++      <ul>
++        <li>CRPO Registration: #10979</li>
++        <li>Invoices suitable for insurance reimbursement</li>
++        <li>Secure telehealth platform (PHIPA compliant)</li>
++      </ul>
++    </div>
++    <div class="card">
++      <h3>Helpful Links</h3>
++      <ul>
++        <li><a href="/services">Therapy services overview</a></li>
++        <li><a href="/resources/therapy-cost-without-insurance">Therapy cost guide</a></li>
++        <li><a href="/faq">Frequently asked questions</a></li>
++      </ul>
++    </div>
++  </div>
++
++  <style>
++    .contact-form {
++      display: grid;
++      gap: 1rem;
++    }
++
++    .contact-form label {
++      display: grid;
++      gap: 0.35rem;
++      font-weight: 600;
++      color: #1f2a44;
++    }
++
++    .contact-form input,
++    .contact-form textarea {
++      border: 1px solid #cbd5f5;
++      border-radius: 0.5rem;
++      padding: 0.75rem 1rem;
++      font-size: 1rem;
++      font-family: inherit;
++    }
++
++    .contact-form input:focus,
++    .contact-form textarea:focus {
++      outline: 2px solid #2563eb;
++      outline-offset: 2px;
++    }
++
++    .consent {
++      font-size: 0.9rem;
++      color: #475569;
++    }
++  </style>
++</StandardPage>
+diff --git a/nextstep-therapy-astro/src/pages/students/university-anxiety.astro b/nextstep-therapy-astro/src/pages/students/university-anxiety.astro
+new file mode 100644
+index 0000000..da6099e
+--- /dev/null
++++ b/nextstep-therapy-astro/src/pages/students/university-anxiety.astro
+@@ -0,0 +1,118 @@
++---
++import StandardPage from '../_templates/StandardPage.astro';
++
++const frontmatter = {
++  title: 'University Anxiety Support in Ontario | Next Step Therapy',
++  description: 'Evidence-based therapy for university students navigating anxiety, overwhelm, and burnout. Virtual sessions across Ontario.',
++  canonical: 'https://nextsteptherapy.ca/students/university-anxiety',
++  breadcrumbs: [
++    { label: 'Home', url: 'https://nextsteptherapy.ca/' },
++    { label: 'Students', url: 'https://nextsteptherapy.ca/students/student-mental-health' },
++    { label: 'University Anxiety', url: 'https://nextsteptherapy.ca/students/university-anxiety' }
++  ],
++  structuredDataType: 'service',
++  serviceName: 'University Anxiety Therapy',
++  serviceDescription: 'Therapy for university students managing anxiety, burnout, and academic pressure across Ontario.',
++  additionalSchema: [
++    {
++      '@context': 'https://schema.org',
++      '@type': 'Article',
++      'headline': 'Therapy for University Anxiety in Ontario',
++      'description': 'Guidance for Ontario university students seeking therapy for anxiety, burnout, and campus stress.',
++      'author': {
++        '@type': 'Person',
++        'name': 'Jesse Cynamon, RP'
++      },
++      'publisher': {
++        '@type': 'Organization',
++        'name': 'Next Step Therapy'
++      },
++      'datePublished': '2025-01-01',
++      'dateModified': '2025-01-01'
++    }
++  ]
++};
++---
++<StandardPage frontmatter={frontmatter}>
++  <div slot="hero">
++    <h1>Therapy for University Anxiety in Ontario</h1>
++    <p class="lead-text">We help undergraduates, graduate students, and professional school learners work through performance pressure, burnout, and big life transitions while staying aligned with their goals.</p>
++  </div>
++
++  <section aria-labelledby="signs">
++    <h2 id="signs">Signs You Might Be Experiencing University Anxiety</h2>
++    <p>University life comes with late nights, unpredictable schedules, and nonstop evaluation. Anxiety shows up in different ways for every student. Some warning signs include:</p>
++    <ul>
++      <li>Difficulty turning off academic thoughts, even when you try to rest.</li>
++      <li>Physical symptoms before class or exams: racing heart, stomach pain, or shortness of breath.</li>
++      <li>Avoiding classes, labs, or emails because you fear making mistakes.</li>
++      <li>Comparing yourself harshly with peers and feeling like an imposter.</li>
++    </ul>
++    <p>Therapy offers a confidential space to unpack these patterns, learn new coping skills, and develop habits that support long-term momentum.</p>
++  </section>
++
++  <section aria-labelledby="approach">
++    <h2 id="approach">How Therapy Supports Academic Success</h2>
++    <div class="grid-2">
++      <article class="card">
++        <h3>Skill Building</h3>
++        <p>We combine ACT, CBT, and somatic tools to help you notice anxious thoughts without letting them dictate your decisions.</p>
++      </article>
++      <article class="card">
++        <h3>Values Alignment</h3>
++        <p>Clarify why you chose your program and align daily routines with values, not pressure from faculty or family.</p>
++      </article>
++      <article class="card">
++        <h3>Performance Routines</h3>
++        <p>Design pre-exam and pre-presentation rituals that keep your nervous system regulated.</p>
++      </article>
++      <article class="card">
++        <h3>Boundaries & Rest</h3>
++        <p>Learn how to communicate limits to roommates, lab partners, or supervisors while maintaining professional credibility.</p>
++      </article>
++    </div>
++  </section>
++
++  <section aria-labelledby="next-steps">
++    <h2 id="next-steps">Getting Started as a Student Client</h2>
++    <ol>
++      <li><strong>Book a consultation:</strong> We discuss what’s happening, preferred pronouns, and access needs.</li>
++      <li><strong>Collaborative plan:</strong> Together we set pacing (weekly, biweekly) and decide if coaching add-ons are helpful.</li>
++      <li><strong>Resource toolkit:</strong> Between-session support may include grounding audio, worksheets, or referrals to campus services.</li>
++      <li><strong>Progress reviews:</strong> Every few sessions we assess progress and adjust strategies to keep you moving.</li>
++    </ol>
++    <p>We coordinate—with your consent—alongside physicians, accessibility offices, or academic advisors when documentation is required.</p>
++  </section>
++
++  <section aria-labelledby="testimonials" class="note">
++    <h2 id="testimonials">What Students Say</h2>
++    <p>“Therapy helped me shift from ‘I have to do everything perfectly’ to ‘I can take things one assignment at a time.’ My sleep improved and I stopped missing classes because of anxiety.” – Undergraduate client, shared with permission.</p>
++  </section>
++
++  <div slot="aside">
++    <div class="card">
++      <h3>Related Student Supports</h3>
++      <ul>
++        <li><a href="/students/student-mental-health">Student mental health hub</a></li>
++        <li><a href="/students/study-anxiety">Study anxiety strategies</a></li>
++        <li><a href="/resources/panic-attacks-driving">Driving-related anxiety tools</a></li>
++      </ul>
++    </div>
++    <div class="card">
++      <h3>Booking Tips</h3>
++      <ul>
++        <li>Evening sessions available Tuesday–Thursday.</li>
++        <li>Invoices include CRPO registration for insurance.</li>
++        <li>Ask about student pricing during intake.</li>
++      </ul>
++    </div>
++  </div>
++
++  <style>
++    .note {
++      background: #f8fafc;
++      border-radius: 1rem;
++      padding: 2rem;
++    }
++  </style>
++</StandardPage>
+diff --git a/nextstep-therapy-astro/src/pages/[...slug].astro b/nextstep-therapy-astro/src/pages/[...slug].astro
+new file mode 100644
+index 0000000..cbf4135
+--- /dev/null
++++ b/nextstep-therapy-astro/src/pages/[...slug].astro
+@@ -0,0 +1,204 @@
++---
++import StandardPage from './_templates/StandardPage.astro';
++import canonicals from '../data/canonicals.json';
++
++const slugParam = Astro.params.slug;
++const slug = Array.isArray(slugParam) ? slugParam.join('/') : slugParam ?? '';
++
++const noindexEntries = canonicals.filter((entry) => entry.noindex === true);
++const placeholderMap = new Map(noindexEntries.map((entry) => [entry.path.replace(/^\//, ''), entry]));
++
++if (!placeholderMap.has(slug)) {
++  return new Response(null, { status: 404 });
++}
++
++const overrides = {
++  'faq': {
++    title: 'Therapy FAQ for Ontario Clients',
++    description: 'Answers to common questions about psychotherapy, insurance, privacy, and getting started with Next Step Therapy.',
++    intro: 'We are finalizing detailed responses to the most common questions about working with a CRPO-registered psychotherapist. In the meantime, here is a quick overview.',
++    links: [
++      { href: '/services', label: 'Services' },
++      { href: '/contact', label: 'Contact' },
++      { href: '/resources/therapy-cost-without-insurance', label: 'Therapy Cost Guide' }
++    ]
++  },
++  'students/college-anxiety': {
++    title: 'College Anxiety Counselling in Ontario',
++    description: 'Therapy support for college students dealing with stress, overwhelm, and transitions.',
++    intro: 'A detailed breakdown of college stress management is coming soon. The counselling team is available now for virtual sessions.',
++    links: [
++      { href: '/students/study-anxiety', label: 'Study Anxiety' },
++      { href: '/students/student-mental-health', label: 'Student Mental Health' },
++      { href: '/contact', label: 'Book a Consultation' }
++    ]
++  },
++  'students/study-anxiety': {
++    title: 'Study Anxiety Therapy for Ontario Students',
++    description: 'Reduce panic and procrastination with therapy tailored to study anxiety.',
++    intro: 'Our comprehensive guide to beating study anxiety is in progress. Sessions are available now for students who need targeted support during exam cycles.',
++    links: [
++      { href: '/students/university-anxiety', label: 'University Anxiety' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'students/student-mental-health': {
++    title: 'Student Mental Health Therapy in Ontario',
++    description: 'Comprehensive therapy for Ontario students balancing academics, transitions, and mental health.',
++    intro: 'We are building a full hub for students navigating mental health, academics, and campus life. Until then, book a consultation to access student-focused support immediately.',
++    links: [
++      { href: '/students/university-anxiety', label: 'University Anxiety' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'virtual-therapy/busy-parents': {
++    title: 'Virtual Therapy for Busy Parents in Ontario',
++    description: 'Flexible online therapy for parents juggling work, caregiving, and stress.',
++    intro: 'This page is being expanded with scheduling tips, boundary-setting tools, and stories from parents who found more balance. Sessions are available now if you need support before the full guide launches.',
++    links: [
++      { href: '/virtual-therapy-ontario', label: 'Virtual Therapy Ontario' },
++      { href: '/services', label: 'Services' }
++    ]
++  },
++  'professionals/workplace-stress': {
++    title: 'Workplace Stress Therapy for Ontario Professionals',
++    description: 'Confidential therapy for professionals managing workplace stress and burnout.',
++    intro: 'Full program details are coming soon. We are finalizing case studies, leadership tools, and stress-reduction plans specific to high-pressure careers.',
++    links: [
++      { href: '/professionals/workplace-burnout-therapy', label: 'Burnout Therapy' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'professionals/workplace-burnout-therapy': {
++    title: 'Burnout Therapy for Professionals',
++    description: 'Evidence-based therapy for burnout, emotional exhaustion, and chronic workplace stress.',
++    intro: 'We are building a comprehensive burnout recovery resource including phased plans, rest strategies, and leadership support.',
++    links: [
++      { href: '/professionals/workplace-stress', label: 'Workplace Stress' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'resources/therapy-cost-without-insurance': {
++    title: 'How to Manage Therapy Costs Without Insurance in Ontario',
++    description: 'Understand pricing, sliding scales, and tax credits for psychotherapy when benefits aren’t available.',
++    intro: 'We are compiling detailed guidance on budgeting for therapy, accessing tax credits, and combining resources. Contact us if you need immediate cost information.',
++    links: [
++      { href: '/services', label: 'Services' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'resources/panic-attacks-driving': {
++    title: 'How Therapy Helps Panic Attacks While Driving',
++    description: 'Learn coping skills and therapy approaches for panic attacks behind the wheel.',
++    intro: 'Detailed strategies are on the way. The finished article will include exposure ideas, safety planning, and relaxation drills tailored to Ontario drivers.',
++    links: [
++      { href: '/anxiety-therapy-ontario', label: 'Anxiety Therapy' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'locations/toronto/depression-therapy': {
++    title: 'Depression Therapy in Toronto',
++    description: 'Personalized depression therapy for Toronto residents with evidence-based ACT and CBT.',
++    intro: 'A comprehensive location page is in progress. Until then, we are accepting Toronto-based clients for virtual and select in-person intensives.',
++    links: [
++      { href: '/depression-therapy-ontario', label: 'Ontario Depression Therapy' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'locations/ottawa/depression-therapy': {
++    title: 'Depression Therapy in Ottawa',
++    description: 'CRPO-registered depression therapy for residents of Ottawa and surrounding areas.',
++    intro: 'Full Ottawa-specific details are coming soon, including local resources and scheduling options. Reach out to begin therapy right away.',
++    links: [
++      { href: '/depression-therapy-ontario', label: 'Ontario Depression Therapy' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  },
++  'locations/hamilton/workplace-stress': {
++    title: 'Workplace Stress Counselling in Hamilton',
++    description: 'Therapy for professionals in Hamilton managing burnout, anxiety, and leadership stress.',
++    intro: 'We are preparing location-specific details for Hamilton professionals. Sessions are available virtually while we finalize onsite programming.',
++    links: [
++      { href: '/professionals/workplace-stress', label: 'Workplace Stress' },
++      { href: '/contact', label: 'Contact' }
++    ]
++  }
++};
++
++function titleCase(value) {
++  return value
++    .split('-')
++    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
++    .join(' ');
++}
++
++const override = overrides[slug] ?? {};
++const title = override.title ?? titleCase(slug.split('/').pop() ?? 'Page');
++const description = override.description ?? `Placeholder content for ${title}. Contact us for full details.`;
++const intro = override.intro ?? `We are preparing a detailed resource on ${title.toLowerCase()}. Reach out to start therapy before the full page is published.`;
++const links = override.links ?? [
++  { href: '/services', label: 'Services' },
++  { href: '/contact', label: 'Contact' }
++];
++
++const category = slug.includes('/') ? slug.split('/')[0] : 'general';
++
++const breadcrumbLookup = {
++  students: { label: 'Students', url: 'https://nextsteptherapy.ca/students/student-mental-health' },
++  services: { label: 'Services', url: 'https://nextsteptherapy.ca/services' },
++  'virtual-therapy': { label: 'Virtual Therapy', url: 'https://nextsteptherapy.ca/virtual-therapy-ontario' },
++  professionals: { label: 'Professionals', url: 'https://nextsteptherapy.ca/professionals/workplace-stress' },
++  resources: { label: 'Resources', url: 'https://nextsteptherapy.ca/services' },
++  locations: { label: 'Locations', url: 'https://nextsteptherapy.ca/services' },
++  general: { label: 'Services', url: 'https://nextsteptherapy.ca/services' }
++};
++
++const canonical = `https://nextsteptherapy.ca/${slug}`;
++const breadcrumbs = [
++  { label: 'Home', url: 'https://nextsteptherapy.ca/' },
++  breadcrumbLookup[category] ?? breadcrumbLookup.general,
++  { label: title, url: canonical }
++];
++---
++<StandardPage
++  frontmatter={{
++    title,
++    description,
++    canonical,
++    breadcrumbs,
++    structuredDataType: 'service',
++    noindex: true
++  }}
++>
++  <div slot="hero">
++    <h1>{title}</h1>
++    <p class="lead-text">{intro}</p>
++  </div>
++
++  <section>
++    <h2>What to Expect</h2>
++    <p>
++      We are writing in-depth guidance for this topic. Sessions are available immediately, and the full resource will be
++      published shortly. Until then, book a consultation to receive tailored advice and interim materials.
++    </p>
++  </section>
++
++  <section>
++    <h2>Next Steps</h2>
++    <p>
++      Share your goals when you reach out. We will provide interim materials, schedule time with a CRPO-registered
++      therapist, and coordinate with other providers when appropriate.
++    </p>
++  </section>
++
++  <div slot="aside">
++    <div class="card">
++      <h3>Helpful Links</h3>
++      <ul>
++        {links.map((item) => (
++          <li><a href={item.href}>{item.label}</a></li>
++        ))}
++      </ul>
++    </div>
++  </div>
++</StandardPage>

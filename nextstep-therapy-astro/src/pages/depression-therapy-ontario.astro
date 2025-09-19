@@ -1,0 +1,649 @@
+---
+// Depression Therapy Ontario - Manus Compliant Version
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+
+                if (currentScrollY <= headerHeight) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>Depression Therapy Ontario | Professional Support Throughout the Province | CRPO #10979</title>
+    <meta name="description" content="Depression therapy across Ontario with virtual sessions. Professional support for emotional exhaustion, disconnection, and reconnecting with what matters. Evidence-based help that works.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Depression Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Professional depression therapy throughout Ontario. Virtual support for emotional exhaustion and reconnecting with meaning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/depression-therapy-ontario">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/depression-therapy-ontario">
+
+    <!-- Import shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Depression Therapy Ontario",
+      "description": "Professional depression therapy services throughout Ontario",
+      "url": "https://nextsteptherapy.ca/depression-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      }
+    }
+    </script>
+
+    <!-- Manus CTA Styling Override -->
+    <style>
+        .manus-primary-cta {
+            background: #6B8E6F !important;
+            color: white !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 2.5rem !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: none !important;
+            cursor: pointer !important;
+            font-size: 1.1rem !important;
+            min-height: 48px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .manus-primary-cta:hover {
+            background: #5A7D5E !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%238FA68E;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%234A6B7A;stop-opacity:0.3" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)"/></svg>') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        .hero::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(255, 255, 255, 0.3) !important;
+            z-index: 1 !important;
+        }
+
+        .hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        .trust-indicators {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 0.75rem !important;
+            justify-content: center !important;
+            margin: 1.5rem 0 !important;
+        }
+
+        .trust-indicator {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #4A6B7A !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            border: 2px solid #8FA68E !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Depression Therapy Ontario | Professional Support for Emotional Exhaustion Throughout the Province</h1>
+                    <p class="lead-text">When "I'm fine" becomes your automatic response, but inside everything feels gray and exhausting. When success on paper doesn't translate to satisfaction in your heart. If you're moving through life feeling disconnected from joy, purpose, or even yourself—you're experiencing what millions of Ontarians face but rarely talk about. Depression isn't always obvious sadness; sometimes it's the quiet erosion of what used to make life meaningful.</p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">CRPO #10979 Licensed</span>
+                        <span class="trust-indicator">Depression Recovery Specialist</span>
+                        <span class="trust-indicator">Virtual Sessions Province-Wide</span>
+                        <span class="trust-indicator">Evidence-Based Treatment</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="index.html#contact" class="manus-primary-cta">Book Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Recognition Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">When Life Feels Like Going Through the Motions</h2>
+                    <p class="section-intro">Depression in Ontario affects people differently across our vast province—from urban professionals burning out in Toronto's fast pace to rural residents feeling isolated through long winters. But the core experience is similar: life feels muted, exhausting, and disconnected from what used to bring meaning.</p>
+
+                    <h3>Sound familiar?</h3>
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>The Invisible Weight</h4>
+                            <p>Everything feels harder than it should. Getting out of bed, making decisions, having conversations—tasks that used to be automatic now require conscious effort. You're functioning, but it feels like you're carrying invisible weight.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Emotional Numbness</h4>
+                            <p>You're not necessarily sad all the time—sometimes you don't feel much at all. Good news doesn't excite you, bad news doesn't devastate you. You're emotionally flatlining, going through the motions without the feelings that make life vibrant.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Success Paradox</h4>
+                            <p>From the outside, your life looks fine, maybe even impressive. Good job, stable relationships, achievements that should feel meaningful. But inside, there's a persistent emptiness, a sense that you're living someone else's definition of a good life.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Exhaustion That Sleep Can't Fix</h4>
+                            <p>You sleep eight hours but wake up tired. Social interactions drain you. Making decisions feels overwhelming. The energy you once had for interests, relationships, and goals has simply vanished, leaving you wondering where your motivation went.</p>
+                        </div>
+                    </div>
+
+                    <p class="highlight-text">If these experiences resonate, you're not broken or ungrateful—you're human. Depression is a common response to life circumstances that don't align with your deeper needs and values. Recognizing it is the first step toward reclaiming your sense of vitality.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Depression Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Understanding Depression in Ontario (And Why It's Not Your Fault)</h2>
+                    <p class="section-intro">Depression often develops when there's a persistent gap between how we're living and what our minds and bodies actually need to thrive. In Ontario's competitive, fast-paced environment, this disconnect can happen gradually, making depression feel like a personal failing rather than a understandable response to difficult circumstances.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Ontario's Unique Pressures</h4>
+                            <p>From Toronto's housing crisis to Northern Ontario's isolation, from seasonal darkness to economic uncertainty—living in Ontario comes with specific stressors that can contribute to depression. What you're experiencing makes sense in context.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Achievement Trap</h4>
+                            <p>Ontario's competitive culture often equates self-worth with external achievement. When your daily life focuses on productivity and success while neglecting connection, purpose, and joy, depression can emerge as your mind's protest against this imbalance.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Social Isolation in Plain Sight</h4>
+                            <p>You can be surrounded by people and still feel profoundly alone. Ontario's busy lifestyle can create surface-level connections while missing the deeper relationships that sustain mental health. Depression often signals this need for authentic connection.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Values Misalignment</h4>
+                            <p>Sometimes depression develops when you're living according to others' expectations rather than your own values. The career path that looked good on paper, the lifestyle that seems successful—if it doesn't match what actually matters to you, your mind rebels.</p>
+                        </div>
+                    </div>
+
+                    <p>Understanding these factors isn't about making excuses—it's about recognizing that depression often results from life circumstances that can be changed. This perspective opens up possibilities for healing that go beyond just managing symptoms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Therapy Helps Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">How Depression Therapy Can Help</h2>
+                    <p class="section-intro">Depression therapy isn't about forcing positivity or pushing through emotions. It's about understanding what's driving your depression and developing practical strategies to reconnect with meaning, energy, and satisfaction in your daily life.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>Understanding Your Patterns</h4>
+                            <p>Identify the thoughts, behaviors, and life circumstances contributing to your depression. This isn't about blame—it's about understanding what's maintaining the cycle so we can interrupt it effectively.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Behavioral Activation</h4>
+                            <p>Depression often involves withdrawing from activities that once brought joy or meaning. We'll work on gradually re-engaging with life in ways that rebuild your sense of purpose and connection, even when motivation is low.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Cognitive Flexibility</h4>
+                            <p>Depression often involves rigid thinking patterns—all-or-nothing thoughts, harsh self-criticism, or hopeless predictions. Learn to recognize these patterns and develop more balanced, realistic ways of thinking.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Values-Based Living</h4>
+                            <p>Reconnect with what truly matters to you beyond external expectations. Learn to make life choices based on your values rather than others' definitions of success, leading to greater authenticity and satisfaction.</p>
+                        </div>
+                    </div>
+
+                    <p>This approach, drawing primarily from Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), has strong research support for depression. It focuses on both symptom relief and building a more meaningful, sustainable way of living.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types of Depression Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Different Ways Depression Shows Up</h2>
+                    <p class="section-intro">Depression isn't one-size-fits-all. Understanding how it might be manifesting in your life can help you recognize that what you're experiencing is real and treatable, even if it doesn't look like the stereotypical image of depression.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>High-Functioning Depression</h4>
+                            <p><strong>You're successful but empty inside.</strong> You meet deadlines, maintain relationships, and appear to have it together, but internally you feel disconnected, exhausted, and like you're just going through the motions.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Situational Depression</h4>
+                            <p><strong>Triggered by specific life events.</strong> Job loss, relationship changes, health issues, or major transitions have left you feeling overwhelmed, hopeless, or unable to cope with daily life.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Seasonal Depression (SAD)</h4>
+                            <p><strong>Ontario's winters hit hard.</strong> As daylight hours decrease and temperatures drop, your energy, motivation, and mood plummet. This pattern repeats yearly and significantly affects your functioning.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Persistent Depressive Disorder</h4>
+                            <p><strong>Long-term, low-grade depression.</strong> You've felt "blah" for months or years. Not severely depressed, but not well either. Life feels chronically gray and joyless.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Depression with Anxiety</h4>
+                            <p><strong>The exhausting combination.</strong> You feel both empty and worried, unmotivated and restless. The coexistence of these conditions creates unique challenges and requires specialized approaches.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Postpartum/Perinatal Depression</h4>
+                            <p><strong>More than "baby blues."</strong> Persistent sadness, anxiety, or emptiness during pregnancy or after childbirth that interferes with your ability to function and bond with your baby.</p>
+                        </div>
+                    </div>
+
+                    <p>Regardless of how depression is showing up in your life, the core therapeutic approaches remain similar—understanding the patterns, developing coping strategies, and rebuilding connection to what makes life meaningful.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">What to Expect in Depression Therapy</h2>
+                    <p class="section-intro">Depression therapy is collaborative and practical. While understanding your emotions is important, the focus is on developing concrete strategies that help you feel better and function more effectively in your daily life.</p>
+
+                    <div class="content-card">
+                        <h3>Your First Sessions</h3>
+                        <p>We start by understanding your specific experience of depression—how it shows up, what triggers it, and how it's affecting your life. We also identify your existing strengths and resources that we can build upon.</p>
+
+                        <h4>We'll explore:</h4>
+                        <ul class="feature-list">
+                            <li>Your current depression symptoms and their impact on daily functioning</li>
+                            <li>Life circumstances that may be contributing to your depression</li>
+                            <li>What you've already tried and what's been helpful or unhelpful</li>
+                            <li>Your goals for therapy and what "better" would look like for you</li>
+                            <li>Immediate strategies you can start using between sessions</li>
+                        </ul>
+
+                        <h3>Building Skills and Taking Action</h3>
+                        <p>Each session includes practical elements you can apply between appointments. Depression recovery isn't just about talking—it's about making specific changes that improve how you feel and function.</p>
+
+                        <h4>You'll work on:</h4>
+                        <ul class="feature-list">
+                            <li>Behavioral activation—gradually re-engaging with meaningful activities</li>
+                            <li>Cognitive strategies for managing depressive thoughts and self-criticism</li>
+                            <li>Energy management and sustainable self-care practices</li>
+                            <li>Social connection and relationship enhancement</li>
+                            <li>Problem-solving skills for life challenges contributing to depression</li>
+                            <li>Values clarification and alignment for greater life satisfaction</li>
+                        </ul>
+
+                        <h3>Progress Monitoring and Adjustment</h3>
+                        <p>Depression recovery isn't linear—some weeks will be better than others. We'll track your progress, celebrate improvements, and adjust our approach when things aren't working. The goal is sustainable improvement, not perfection.</p>
+
+                        <div class="cta-box">
+                            <p>Ready to move beyond just surviving and start reconnecting with what makes life meaningful?</p>
+                            <a href="tel:+14163062157" class="manus-primary-cta">Book Free Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Your Therapist Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">About Your Therapist</h2>
+                    <p class="section-intro">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who specializes in helping people across Ontario work through depression and reconnect with meaningful, satisfying lives. I understand that depression affects everyone differently and requires individualized approaches.</p>
+
+                    <div class="content-card">
+                        <h3>Why I Work with Depression</h3>
+                        <p>Depression affects so many intelligent, capable people who simply want to feel connected to their lives again. What makes this work meaningful is witnessing the gradual return of energy, hope, and satisfaction as people develop skills and make changes that align with who they really are.</p>
+
+                        <h3>My Approach to Depression Treatment</h3>
+                        <p>I don't believe in pushing people to "think positive" or minimizing the reality of depression. Instead, I focus on understanding what's driving your depression and building practical strategies that create genuine, sustainable improvement.</p>
+
+                        <h4>What clients appreciate about our work together:</h4>
+                        <ul class="feature-list">
+                            <li><strong>No Toxic Positivity:</strong> Recognition that depression is real and requires genuine strategies, not cheerful platitudes</li>
+                            <li><strong>Practical Focus:</strong> Concrete tools and strategies you can use immediately to feel better</li>
+                            <li><strong>Individualized Approach:</strong> Treatment adapted to your specific type of depression and life circumstances</li>
+                            <li><strong>Collaborative Style:</strong> Working with you as the expert on your own life</li>
+                            <li><strong>Hope with Realism:</strong> Honest about the work involved while maintaining genuine optimism about recovery</li>
+                        </ul>
+
+                        <h3>Professional Background</h3>
+                        <p>I hold a Master's degree in counseling psychology and am licensed as a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I specialize in evidence-based treatments for depression, including ACT, CBT, and behavioral activation approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Therapy Benefits Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Why Virtual Depression Therapy Works Across Ontario</h2>
+                    <p class="section-intro">When you're dealing with depression, the barriers to getting help can feel insurmountable. Virtual therapy removes many of these obstacles while providing effective, evidence-based treatment from the comfort of your own space.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Reduces Energy Barriers</h4>
+                            <p>When depression saps your energy, getting dressed and traveling to appointments can feel overwhelming. Virtual sessions eliminate this barrier, making it easier to access help when you need it most.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Comfortable Environment</h4>
+                            <p>Being in your own space can make it easier to open up about difficult feelings. You have control over your environment, access to your own comforts, and privacy that can enhance the therapeutic process.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Consistent Access</h4>
+                            <p>Ontario weather, seasonal depression, or transportation issues won't disrupt your therapy routine. Maintain consistent progress regardless of external circumstances that might otherwise interfere with treatment.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Immediate Application</h4>
+                            <p>Practice the skills you learn in therapy directly in your real environment. Apply mood improvement strategies immediately in the spaces where you need them most.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Privacy and Stigma Reduction</h4>
+                            <p>No waiting rooms where you might run into people you know. For many people, the reduced visibility makes it easier to seek help for depression without concerns about judgment or stigma.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Research-Backed Effectiveness</h4>
+                            <p>Multiple studies show virtual therapy is as effective as in-person treatment for depression, with many clients preferring the convenience and reduced barriers to accessing care.</p>
+                        </div>
+                    </div>
+
+                    <p>Virtual therapy isn't a compromise for depression treatment—it's often the most accessible and effective way to get professional help while managing the energy limitations and practical challenges that come with depression.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Getting Started with Depression Therapy</h2>
+                    <p class="section-intro">When depression makes everything feel difficult, starting therapy can seem like one more overwhelming task. We've designed our process to be as simple and low-pressure as possible while ensuring you get the support you need.</p>
+
+                    <div class="content-card">
+                        <h3>Your Free 15-Minute Consultation</h3>
+                        <p>Before committing to therapy, you deserve to know if we're a good fit. This brief, no-pressure conversation allows you to:</p>
+                        <ul class="feature-list">
+                            <li>Share what you're experiencing and what kind of support you need</li>
+                            <li>Ask questions about depression treatment and the therapeutic process</li>
+                            <li>Understand what to expect from virtual depression therapy</li>
+                            <li>Determine if our approach feels right for your situation</li>
+                            <li>Learn about scheduling, fees, and insurance coverage</li>
+                        </ul>
+
+                        <h3>Practical Information</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h4>Session Length</h4>
+                                <p>50-minute sessions, typically weekly initially, with frequency adjusted based on your progress and needs</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Insurance Coverage</h4>
+                                <p>Most extended health plans in Ontario cover Registered Psychotherapist services. Receipts provided for reimbursement</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Flexible Scheduling</h4>
+                                <p>Understanding that depression affects energy levels, we offer flexible appointment times and accommodations when needed</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Technology Requirements</h4>
+                                <p>Any device with internet and camera. Simple, secure platform with technical support available if needed</p>
+                            </div>
+                        </div>
+
+                        <h3>Investment in Your Recovery</h3>
+                        <p>Individual therapy sessions are $150. Many clients with depression notice improvements in their mood and energy within the first few sessions, with significant progress typically seen within 8-12 weeks of consistent work.</p>
+
+                        <div class="cta-box">
+                            <p>Ready to move beyond surviving and start building a life that feels meaningful again?</p>
+                            <div class="cta-buttons">
+                                <a href="tel:+14163062157" class="manus-primary-cta">Call for Free Consultation</a>
+                                <a href="index.html#contact" class="secondary-cta">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Common Questions About Depression Therapy</h2>
+                    <p class="section-intro">It's normal to have questions about therapy when you're struggling with depression. Here are honest answers to common concerns from people across Ontario who are considering professional support.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>"How do I know if I have depression or if I'm just going through a rough patch?"</h4>
+                            <p>If you've been feeling empty, exhausted, or disconnected for more than a few weeks, and it's affecting your daily functioning, it's worth exploring. Depression isn't just about duration—it's about impact. Even "situational" depression benefits from professional support.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"Will therapy just make me more depressed by focusing on negative things?"</h4>
+                            <p>Good depression therapy isn't about dwelling on problems—it's about understanding them so you can change them. We balance exploring difficulties with building practical skills and taking action that improves how you feel.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"What if I don't have the energy for therapy right now?"</h4>
+                            <p>That's exactly when therapy can be most helpful. We work with your energy levels, not against them. Sessions can be adjusted based on how you're feeling, and virtual therapy eliminates many energy-draining barriers like travel.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"How long does depression therapy typically take?"</h4>
+                            <p>This varies greatly by individual and circumstances. Some people notice improvements within the first few sessions, while others need longer-term support. We'll regularly check in about your progress and adjust our timeline accordingly.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"Should I try medication instead of or along with therapy?"</h4>
+                            <p>As a therapist, I can't prescribe medication, but I can help you think through this decision. Many people benefit from therapy alone, others from combination treatment. We can discuss how to find psychiatric consultation if you're interested in exploring medication.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"What if I can't afford therapy right now?"</h4>
+                            <p>Most extended health plans in Ontario cover psychotherapist services. If cost is a barrier, let's discuss options during your free consultation. Your mental health is worth the investment, and we can often find ways to make it work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Reconnect with What Makes Life Meaningful?</h2>
+                    <p class="contact-lead">Depression doesn't have to be your permanent companion. Professional support can help you understand what's driving your depression and develop practical strategies for rebuilding connection, energy, and satisfaction in your daily life.</p>
+
+                    <h3>Start with a Free 15-Minute Consultation</h3>
+                    <p>This brief, no-pressure conversation helps us both determine if we're a good fit. You'll get clear answers about the process, timeline, and what to expect from depression therapy.</p>
+
+                    <div class="hero-cta">
+                        <a href="tel:+14163062157" class="manus-primary-cta">Book Your Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>Professional Depression Support Across Ontario</h4>
+                        <div class="therapist-details">
+                            <strong>Jesse Cynamon, RP</strong><br>
+                            Registered Psychotherapist | CRPO #10979<br>
+                            Virtual sessions throughout Ontario<br>
+                            Insurance receipts provided
+                        </div>
+                    </div>
+
+                    <p class="final-message">Depression tells you that nothing will change and nothing matters. That's the depression talking, not the truth. With the right support, you can reconnect with energy, purpose, and joy in your life.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        📞 Get Support Today
+    </a>
+
+    <!-- Analytics Tracking -->
+    <script type="module">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

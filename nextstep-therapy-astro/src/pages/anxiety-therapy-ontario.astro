@@ -1,0 +1,605 @@
+---
+// Anxiety Therapy Ontario - Manus Compliant Version (Complete Rewrite)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+
+                if (currentScrollY <= headerHeight) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>Anxiety Therapy Ontario | Virtual Support Across the Province | CRPO #10979</title>
+    <meta name="description" content="Anxiety therapy throughout Ontario with virtual sessions. Professional support for worry, panic, and social anxiety. Evidence-based approaches that actually help. Free consultation.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Anxiety Therapy Ontario | Next Step Therapy">
+    <meta property="og:description" content="Virtual anxiety therapy throughout Ontario. Understanding support for worry, panic, and social anxiety with evidence-based approaches.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/anxiety-therapy-ontario">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/anxiety-therapy-ontario">
+
+    <!-- Import shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Anxiety Therapy Ontario",
+      "description": "Virtual anxiety therapy services throughout Ontario for professionals dealing with worry, panic, and social anxiety",
+      "url": "https://nextsteptherapy.ca/anxiety-therapy-ontario",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      }
+    }
+    </script>
+
+    <!-- Manus CTA Styling Override -->
+    <style>
+        .manus-primary-cta {
+            background: #6B8E6F !important;
+            color: white !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 2.5rem !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: none !important;
+            cursor: pointer !important;
+            font-size: 1.1rem !important;
+            min-height: 48px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .manus-primary-cta:hover {
+            background: #5A7D5E !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%238FA68E;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%234A6B7A;stop-opacity:0.3" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)"/></svg>') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        .hero::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(255, 255, 255, 0.3) !important;
+            z-index: 1 !important;
+        }
+
+        .hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        .trust-indicators {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 0.75rem !important;
+            justify-content: center !important;
+            margin: 1.5rem 0 !important;
+        }
+
+        .trust-indicator {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #4A6B7A !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            border: 2px solid #8FA68E !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Anxiety Therapy Ontario | Professional Support Throughout the Province</h1>
+                    <p class="lead-text">Do you lie awake replaying conversations from three years ago? Does your chest tighten when you see an unexpected meeting on your calendar? If anxiety has become your constant companion—whispering "what if" scenarios while you're trying to focus on what actually matters—you're not alone. Across Ontario, from Toronto's boardrooms to Sudbury's quiet streets, anxiety affects more people than you might think.</p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">CRPO #10979 Licensed</span>
+                        <span class="trust-indicator">Virtual Sessions Province-Wide</span>
+                        <span class="trust-indicator">Insurance Receipts Provided</span>
+                        <span class="trust-indicator">Free 15-Min Consultation</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="index.html#contact" class="manus-primary-cta">Book Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Recognition Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">When Worry Becomes Your Full-Time Job</h2>
+                    <p class="section-intro">Anxiety in Ontario looks different depending on where you live and work, but the feeling is universal: that sense that something bad is always about to happen, even when everything is technically fine.</p>
+
+                    <h3>Sound familiar?</h3>
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>The Sunday Night Spiral</h4>
+                            <p>That sinking feeling that starts around 3 PM every Sunday. Your brain begins cataloging everything that could go wrong in the upcoming week, and before you know it, you've mentally catastrophized through Thursday.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The 2 AM Mind Race</h4>
+                            <p>You're exhausted, but your brain won't stop. It replays today's meetings, tomorrow's presentations, and that text message you sent last week that didn't get a response fast enough. Sleep feels impossible when your mind is stuck in overdrive.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Constant "What If" Commentary</h4>
+                            <p>Your brain has become a 24/7 news channel dedicated to potential disasters. "What if I'm late?" "What if they don't like the proposal?" "What if something happens to my family?" The questions never stop.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Physical Exhaustion</h4>
+                            <p>Anxiety isn't just mental—it's physically draining. Your shoulders are constantly tense, your jaw is clenched, and you feel tired even after a full night's sleep. Your body is running a marathon even when you're sitting still.</p>
+                        </div>
+                    </div>
+
+                    <p class="highlight-text">If these experiences feel familiar, you're not overreacting or "too sensitive." Anxiety is your brain's attempt to protect you, but when it becomes constant, it stops being helpful and starts taking over your life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Anxiety Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Why Anxiety Develops (And Why It's Not Your Fault)</h2>
+                    <p class="section-intro">Anxiety often starts as a helpful response to real challenges—tight job markets, financial pressures, family responsibilities, health concerns. But when your brain's alarm system gets stuck in the "on" position, normal life becomes a constant source of threat detection.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Ontario's Unique Pressures</h4>
+                            <p>From Toronto's housing costs to Northern Ontario's isolation, from Ottawa's political volatility to London's university pressures—each region brings specific stressors that can feed anxiety. What you're experiencing makes sense given where you live and work.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Achievement Trap</h4>
+                            <p>Many Ontarians develop anxiety because they've learned to equate self-worth with productivity and achievement. When success becomes your only source of security, every challenge feels like a threat to your identity.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Information Overload</h4>
+                            <p>We're constantly exposed to worst-case scenarios through news, social media, and workplace conversations. Your brain isn't designed to process this much potential threat information—it's natural that it would become hypervigilant.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>The Perfectionist's Paradox</h4>
+                            <p>High standards that once helped you succeed can become a prison when anxiety amplifies them. Suddenly, "good enough" feels dangerous, and every decision requires exhaustive analysis to avoid imagined catastrophes.</p>
+                        </div>
+                    </div>
+
+                    <p>Understanding why anxiety happens isn't about finding someone to blame—it's about recognizing that your response makes sense. This understanding becomes the foundation for developing a different relationship with anxious thoughts and feelings.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Therapy Helps Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">How Therapy Can Help with Anxiety</h2>
+                    <p class="section-intro">Anxiety therapy isn't about eliminating worried thoughts—it's about changing your relationship with them. Instead of spending your energy trying to control anxiety, you learn to move forward with important goals even when anxious feelings are present.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>Learning to Observe Rather Than Obey</h4>
+                            <p>You'll develop skills to notice anxious thoughts without automatically believing or acting on them. This creates space between you and your anxiety, allowing for more thoughtful responses to challenging situations.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Building Tolerance for Uncertainty</h4>
+                            <p>Much of anxiety comes from trying to control outcomes that are ultimately uncertain. We'll work on building your capacity to take meaningful action even when you can't guarantee specific results.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Practical Coping Strategies</h4>
+                            <p>You'll learn evidence-based techniques for managing physical anxiety symptoms, redirecting worried thinking, and staying grounded during overwhelming moments. These aren't abstract concepts—they're tools you can use immediately.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h4>Values-Based Action</h4>
+                            <p>Anxiety often makes us focus on avoiding discomfort rather than pursuing what matters. We'll help you reconnect with your values and take steps toward important goals, even when anxiety tries to hold you back.</p>
+                        </div>
+                    </div>
+
+                    <p>This approach, based primarily on Acceptance and Commitment Therapy (ACT), has strong research support for anxiety disorders. It's particularly effective for people who are tired of fighting their thoughts and want to learn how to live well alongside whatever mental experiences arise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">What to Expect in Anxiety Therapy</h2>
+                    <p class="section-intro">Starting therapy for anxiety can feel overwhelming—after all, if you had anxiety about everyday things, you probably have some anxiety about therapy too. Here's what our work together actually looks like.</p>
+
+                    <div class="content-card">
+                        <h3>Your First Sessions</h3>
+                        <p>We'll start by understanding your specific experience of anxiety—how it shows up, what triggers it, and how it's affecting your daily life. Rather than diving into your entire life history, we focus on what's happening now and what you want to change.</p>
+
+                        <h4>We'll explore:</h4>
+                        <ul class="feature-list">
+                            <li>How anxiety manifests in your body, thoughts, and behaviors</li>
+                            <li>Specific situations or thoughts that tend to trigger worried thinking</li>
+                            <li>What you've already tried and what's been helpful (or not)</li>
+                            <li>Your goals for therapy and what "better" would look like for you</li>
+                            <li>Immediate strategies you can start using between sessions</li>
+                        </ul>
+
+                        <h3>Building Skills and Taking Action</h3>
+                        <p>Each session includes practical elements you can apply in your daily life. You're not just talking about anxiety—you're building a comprehensive toolkit for managing it in real-world situations.</p>
+
+                        <h4>You'll learn to:</h4>
+                        <ul class="feature-list">
+                            <li>Recognize anxiety patterns before they spiral out of control</li>
+                            <li>Use breathing and grounding techniques that actually work</li>
+                            <li>Challenge catastrophic thinking without dismissing legitimate concerns</li>
+                            <li>Take action on important goals even when anxiety is present</li>
+                            <li>Set boundaries that protect your mental energy</li>
+                            <li>Communicate about anxiety with family and friends</li>
+                        </ul>
+
+                        <h3>Gradual Exposure and Confidence Building</h3>
+                        <p>When anxiety has led to avoidance, we'll work together to gradually and safely help you re-engage with situations you've been avoiding. This process is always at your pace and builds genuine confidence through experience.</p>
+
+                        <div class="cta-box">
+                            <p>Ready to start building a different relationship with anxiety?</p>
+                            <a href="tel:+14163062157" class="manus-primary-cta">Book Free Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Your Therapist Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">About Your Therapist</h2>
+                    <p class="section-intro">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who specializes in helping Ontarians navigate anxiety while maintaining their busy, meaningful lives. I understand both the unique pressures of different regions across our province and the universal human challenge of managing worry and uncertainty.</p>
+
+                    <div class="content-card">
+                        <h3>Why I Work with Anxiety</h3>
+                        <p>Anxiety affects so many capable, thoughtful people who simply want to live their lives without constant mental interference. What makes this work meaningful to me is witnessing the relief that comes when someone learns they don't have to eliminate anxiety to live well—they just need to change their relationship with it.</p>
+
+                        <h3>My Approach to Virtual Therapy</h3>
+                        <p>Virtual therapy isn't a compromise—for many people with anxiety, it's actually ideal. You can access professional support from your own safe space, without the additional stress of travel, parking, or sitting in unfamiliar waiting rooms.</p>
+
+                        <h4>What clients appreciate about our work together:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Practical Focus:</strong> Strategies you can use immediately in real-world situations</li>
+                            <li><strong>Understanding Approach:</strong> No judgment about anxiety—just skilled help in managing it</li>
+                            <li><strong>Flexible Scheduling:</strong> Therapy that works around demanding Ontario life</li>
+                            <li><strong>Evidence-Based Methods:</strong> Approaches backed by research, not just good intentions</li>
+                            <li><strong>Regional Awareness:</strong> Understanding of the specific pressures you face where you live</li>
+                        </ul>
+
+                        <h3>Professional Background</h3>
+                        <p>I hold a Master's degree in counseling psychology and am licensed as a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I specialize in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT) for anxiety disorders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Therapy Benefits Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Why Virtual Anxiety Therapy Works Across Ontario</h2>
+                    <p class="section-intro">When you're dealing with anxiety, the last thing you need is additional stress getting to appointments. Virtual therapy removes logistical barriers while providing all the benefits of professional therapeutic support.</p>
+
+                    <div class="card-grid">
+                        <div class="content-card">
+                            <h4>Eliminates Travel Anxiety</h4>
+                            <p>No worrying about traffic on the 401, finding parking in downtown cores, or navigating unfamiliar areas. Access professional support from wherever you feel most comfortable.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Consistent Support</h4>
+                            <p>Ontario weather, work schedules, or family emergencies won't disrupt your therapy routine. Maintain consistent progress regardless of external circumstances.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Privacy and Comfort</h4>
+                            <p>No risk of running into colleagues or acquaintances in waiting rooms. Receive therapy in your own safe space, which can actually enhance the therapeutic process.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Immediate Application</h4>
+                            <p>Practice the skills you learn in therapy directly in your real environment. Apply coping strategies immediately where you need them most.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Flexible Scheduling</h4>
+                            <p>Early morning sessions before work, lunch hour appointments, or evening sessions after the kids are in bed. Therapy that adapts to your Ontario lifestyle.</p>
+                        </div>
+
+                        <div class="content-card">
+                            <h4>Research-Backed Effectiveness</h4>
+                            <p>Multiple studies show virtual therapy is as effective as in-person sessions for anxiety, with many clients preferring the convenience and reduced barriers to access.</p>
+                        </div>
+                    </div>
+
+                    <p>Virtual therapy isn't a second-choice option—for many people with anxiety, it's actually the optimal way to access mental health support while managing their demanding lives.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Getting Started with Anxiety Therapy</h2>
+                    <p class="section-intro">Taking the first step toward addressing anxiety can feel overwhelming—especially when anxiety makes everything feel overwhelming. We've designed our process to be as straightforward and low-pressure as possible.</p>
+
+                    <div class="content-card">
+                        <h3>Your Free 15-Minute Consultation</h3>
+                        <p>Before committing to therapy, you deserve to know if we're a good fit. This brief, no-pressure conversation allows you to:</p>
+                        <ul class="feature-list">
+                            <li>Share what's bringing you to therapy</li>
+                            <li>Ask questions about the process and approach</li>
+                            <li>Understand what to expect from virtual anxiety therapy</li>
+                            <li>Determine if our therapeutic approach feels right for you</li>
+                            <li>Learn about scheduling, fees, and insurance coverage</li>
+                        </ul>
+
+                        <h3>Practical Information</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h4>Session Length</h4>
+                                <p>50-minute sessions, typically weekly or bi-weekly based on your needs and schedule</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Insurance Coverage</h4>
+                                <p>Most extended health plans in Ontario cover Registered Psychotherapist services. Receipts provided for reimbursement</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Scheduling Flexibility</h4>
+                                <p>Early morning, lunch hour, and evening appointments available to work around your responsibilities</p>
+                            </div>
+                            <div class="info-card">
+                                <h4>Technology Requirements</h4>
+                                <p>Any device with internet and camera. Simple, secure platform with technical support available</p>
+                            </div>
+                        </div>
+
+                        <h3>Investment in Your Well-Being</h3>
+                        <p>Individual therapy sessions are $150. Many clients notice improvements in their anxiety symptoms within the first few sessions, with significant progress typically seen within 8-12 weeks of consistent work.</p>
+
+                        <div class="cta-box">
+                            <p>You don't have to let anxiety control your life. Professional support is available.</p>
+                            <div class="cta-buttons">
+                                <a href="tel:+14163062157" class="manus-primary-cta">Call for Free Consultation</a>
+                                <a href="index.html#contact" class="secondary-cta">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Common Questions About Anxiety Therapy</h2>
+                    <p class="section-intro">It's normal to have questions before starting therapy—especially when anxiety makes you overthink everything. Here are answers to concerns we hear most often from people across Ontario considering anxiety support.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>"How is virtual therapy different from in-person sessions?"</h4>
+                            <p>The therapeutic process is exactly the same—we build a genuine relationship, explore your challenges, and develop practical strategies. The main difference is convenience and comfort. Many clients with anxiety actually prefer virtual sessions because they can access support without additional travel stress.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"Will therapy just make me talk about my feelings for 50 minutes?"</h4>
+                            <p>While understanding your emotional experience is important, our sessions are highly practical and action-oriented. You'll leave each session with specific strategies you can implement immediately in your daily life.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"What if my anxiety isn't 'bad enough' for therapy?"</h4>
+                            <p>If anxiety is affecting your daily life, relationships, or sense of well-being, it's worth addressing. You don't need to wait for a crisis. Many people benefit from therapy precisely because it helps them manage anxiety before it becomes overwhelming.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"How long does anxiety therapy typically take?"</h4>
+                            <p>This varies by individual, but many clients notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"Can I use my employee benefits for virtual therapy?"</h4>
+                            <p>Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>"What if I live in a small Ontario town?"</h4>
+                            <p>Virtual therapy is perfect for smaller communities where mental health resources may be limited. As long as you're a resident of Ontario, you can access this support regardless of your location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Break Free from Constant Worry?</h2>
+                    <p class="contact-lead">You don't have to let anxiety dictate how you live your life. Professional support can help you develop the tools and confidence to face whatever Ontario life throws at you—without losing yourself to worry and "what if" thinking.</p>
+
+                    <h3>Start with a Free 15-Minute Consultation</h3>
+                    <p>This brief, no-pressure conversation helps us both determine if we're a good fit. You'll get clear answers about the process, timeline, and what to expect from virtual anxiety therapy.</p>
+
+                    <div class="hero-cta">
+                        <a href="tel:+14163062157" class="manus-primary-cta">Book Your Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>Professional Anxiety Support for All of Ontario</h4>
+                        <div class="therapist-details">
+                            <strong>Jesse Cynamon, RP</strong><br>
+                            Registered Psychotherapist | CRPO #10979<br>
+                            Virtual sessions throughout Ontario<br>
+                            Insurance receipts provided
+                        </div>
+                    </div>
+
+                    <p class="final-message">Anxiety doesn't have to be your constant companion. With the right support, you can reclaim your peace of mind and focus on what actually matters in your life.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
+        📞 Get Support Today
+    </a>
+
+    <!-- Analytics Tracking -->
+    <script type="module">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track phone clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "nextstep-therapy-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate:sitemap": "node ../scripts/generate-sitemap.mjs",
+    "audit:canonicals": "node ../scripts/canonical-audit.mjs",
+    "prebuild": "npm run generate:sitemap"
+  },
+  "dependencies": {
+    "astro": "^5.13.8"
+  }
+}

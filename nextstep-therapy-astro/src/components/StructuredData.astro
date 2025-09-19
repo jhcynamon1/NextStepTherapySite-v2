@@ -1,0 +1,114 @@
+---
+// Structured Data for Therapy Practice SEO
+interface Props {
+	type?: 'homepage' | 'service' | 'about';
+	serviceName?: string;
+	serviceDescription?: string;
+}
+
+const { type = 'homepage', serviceName, serviceDescription } = Astro.props;
+
+const baseData = {
+	"@context": "https://schema.org",
+	"@type": "HealthAndBeautyBusiness",
+	"@id": "https://nextsteptherapy.ca/#organization",
+	"name": "Next Step Therapy",
+	"alternateName": "Next Step Therapy Ontario",
+	"description": "Professional therapy services in Ontario specializing in performance anxiety, workplace stress, and men's mental health using evidence-based ACT approach.",
+	"url": "https://nextsteptherapy.ca",
+	"logo": "https://nextsteptherapy.ca/logo.png",
+	"image": "https://nextsteptherapy.ca/images/next-step-therapy-office.jpg",
+	"telephone": "+14163062157",
+	"email": "jesse@nextsteptherapy.ca",
+	"priceRange": "$$",
+	"paymentAccepted": ["Insurance", "Cash", "Credit Card"],
+	"currenciesAccepted": "CAD",
+	"areaServed": {
+		"@type": "State",
+		"name": "Ontario",
+		"alternateName": "ON"
+	},
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Toronto",
+		"addressRegion": "ON",
+		"addressCountry": "CA"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": 43.6532,
+		"longitude": -79.3832
+	},
+	"openingHours": [
+		"Mo-Fr 09:00-17:00"
+	],
+	"sameAs": [
+		"https://www.crpo.ca/crpo-member/?memberid=10979"
+	],
+	"hasCredential": {
+		"@type": "EducationalOccupationalCredential",
+		"credentialCategory": "Professional License",
+		"recognizedBy": {
+			"@type": "Organization",
+			"name": "College of Registered Psychotherapists of Ontario",
+			"alternateName": "CRPO"
+		},
+		"identifier": "10979"
+	}
+};
+
+const personData = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"@id": "https://nextsteptherapy.ca/#therapist",
+	"name": "Jesse Cynamon",
+	"jobTitle": "Registered Psychotherapist",
+	"description": "Registered Psychotherapist specializing in ACT therapy, performance anxiety, and men's mental health.",
+	"url": "https://nextsteptherapy.ca",
+	"email": "jesse@nextsteptherapy.ca",
+	"telephone": "+14163062157",
+	"hasCredential": {
+		"@type": "EducationalOccupationalCredential",
+		"credentialCategory": "Professional License",
+		"recognizedBy": {
+			"@type": "Organization",
+			"name": "College of Registered Psychotherapists of Ontario",
+			"alternateName": "CRPO"
+		},
+		"identifier": "10979"
+	},
+	"worksFor": {
+		"@id": "https://nextsteptherapy.ca/#organization"
+	},
+	"areaServed": {
+		"@type": "State",
+		"name": "Ontario",
+		"alternateName": "ON"
+	}
+};
+
+let serviceData = null;
+if (type === 'service' && serviceName && serviceDescription) {
+	serviceData = {
+		"@context": "https://schema.org",
+		"@type": "MedicalTherapy",
+		"name": serviceName,
+		"description": serviceDescription,
+		"provider": {
+			"@id": "https://nextsteptherapy.ca/#organization"
+		},
+		"areaServed": {
+			"@type": "State",
+			"name": "Ontario",
+			"alternateName": "ON"
+		},
+		"availableLanguage": "English"
+	};
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(baseData)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(personData)}></script>
+{serviceData && (
+	<script type="application/ld+json" set:html={JSON.stringify(serviceData)}></script>
+)}

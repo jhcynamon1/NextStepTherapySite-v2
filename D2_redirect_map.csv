@@ -1,0 +1,109 @@
+from_url,to_url,status_code,reason
+# Wildcard www to apex redirect (implement first)
+https://www.nextsteptherapy.ca/*,https://nextsteptherapy.ca/:splat,301,canonical_host
+
+# Fix high-priority 404s with existing pages
+/virtual-therapy-ontario.html,/virtual-therapy-ontario,301,extensionless
+/online-counselling-remote-workers.html,/online-counselling-remote-workers,301,extensionless
+/university-anxiety.html,/students/university-anxiety,301,consolidation
+/services/life-transitions.html,/life-transitions,301,simplification
+/services/mens-mental-health.html,/mens-mental-health,301,simplification
+/services/anxiety-therapy,/anxiety-therapy-ontario,301,consolidation
+/therapy-goals-depression,/depression-therapy-ontario,301,consolidation
+/online-therapy-depression,/depression-therapy-ontario,301,consolidation
+
+# Comprehensive pages to canonical versions
+/virtual-therapy-ontario-qa-comprehensive.html,/virtual-therapy-ontario,301,consolidation
+/life-transitions-qa-comprehensive.html,/life-transitions,301,consolidation
+/therapist-mississauga-qa-comprehensive.html,/therapist-mississauga,301,consolidation
+
+# Burlington consolidation
+/online-therapy-burlington.html,/virtual-therapy-burlington,301,consolidation
+/burlington-online-therapy.html,/virtual-therapy-burlington,301,consolidation
+
+# Student page redirects (already in vercel.json but targets missing)
+/university-exam-anxiety.html,/students/university-exam-anxiety,301,existing
+/university-anxiety.html,/students/university-anxiety,301,existing
+/student-mental-health.html,/students/student-mental-health,301,existing
+/university-depression.html,/students/university-depression,301,existing
+/students-with-anxiety.html,/students/anxiety-support,301,existing
+/college-anxiety.html,/students/college-anxiety,301,existing
+/college-stress.html,/students/college-stress,301,existing
+/college-student-counseling.html,/students/college-counselling,301,existing
+/study-anxiety.html,/students/study-anxiety,301,existing
+/academic-stress-university.html,/students/academic-stress,301,existing
+/first-year-university-anxiety.html,/students/first-year-anxiety,301,existing
+/failing-university-anxiety.html,/students/failing-university-anxiety,301,existing
+/university-counseling.html,/students/university-counselling,301,existing
+/university-student-struggling.html,/students/university-student-struggling,301,existing
+/university-student-therapy.html,/students/university-therapy,301,existing
+/child-anxious-about-university.html,/students/child-anxiety,301,existing
+/help-university-student-depression.html,/students/student-depression-help,301,existing
+/social-anxiety-university.html,/students/social-anxiety,301,existing
+/panic-attacks-university.html,/students/panic-attacks,301,existing
+/homesick-university.html,/students/homesickness-support,301,existing
+
+# Service and extension cleanup
+/services.html,/services,301,extensionless
+/contact.html,/contact,301,extensionless
+/counselling-ontario.html,/counselling-ontario,301,extensionless
+/anxiety-therapy-ontario.html,/anxiety-therapy-ontario,301,extensionless
+/depression-therapy-ontario.html,/depression-therapy-ontario,301,extensionless
+/life-transitions.html,/life-transitions,301,extensionless
+/virtual-therapy-burlington.html,/virtual-therapy-burlington,301,extensionless
+/therapist-mississauga.html,/therapist-mississauga,301,extensionless
+
+# Virtual therapy consolidation
+/same-day-virtual-therapy-ontario.html,/virtual-therapy-ontario,301,consolidation
+/online-mental-health-support-ontario.html,/virtual-therapy-ontario,301,consolidation
+/virtual-therapy-thunder-bay.html,/virtual-therapy-ontario,301,consolidation
+
+# Professional pages
+/performance-anxiety.html,/professionals/performance-anxiety,301,organization
+/work-anxiety-and-stress.html,/professionals/workplace-stress,301,consolidation
+/workplace-stress-burnout-therapy.html,/professionals/workplace-burnout-therapy,301,organization
+/cant-stop-worrying-work.html,/professionals/work-anxiety,301,organization
+/constant-stress-from-job.html,/professionals/constant-work-stress,301,organization
+/sunday-night-anxiety.html,/professionals/sunday-night-anxiety,301,organization
+/mental-health-ontario-professionals.html,/professionals/mental-health-ontario,301,organization
+
+# Resources pages
+/why-feel-anxious-all-time.html,/resources/why-feel-anxious-all-the-time,301,organization
+/cant-sleep-anxiety.html,/resources/cant-sleep-due-to-anxiety,301,organization
+/panic-attacks-driving-ontario.html,/resources/panic-attacks-driving,301,organization
+/therapy-cost-without-insurance.html,/resources/therapy-cost-without-insurance,301,organization
+/therapy-covered-insurance-ontario.html,/resources/therapy-covered-by-insurance,301,organization
+
+# Services availability
+/therapist-available-today-ontario.html,/services/therapist-available-today,301,organization
+/same-week-therapy-appointment.html,/services/same-week-therapy,301,organization
+
+# ACT therapy
+/acceptance-commitment-therapy-act.html,/services/acceptance-commitment-therapy,301,organization
+
+# Location-specific redirects to general pages
+/anger-management-kitchener.html,/anger-management-therapy,301,consolidation
+/therapist-toronto-depression.html,/depression-therapy-ontario,301,consolidation
+/workplace-stress-counselling-hamilton.html,/workplace-stress-therapy-ontario,301,consolidation
+/mens-mental-health-therapy-london-ontario.html,/mens-mental-health,301,consolidation
+/depression-therapy-ottawa.html,/depression-therapy-ontario,301,consolidation
+/anxiety-counseling-ontario.html,/anxiety-therapy-ontario,301,consolidation
+/toronto-depression-therapy.html,/depression-therapy-ontario,301,consolidation
+/psychotherapy-counselling-depression.html,/depression-therapy-ontario,301,consolidation
+
+# Teen/eating disorder
+/teen-eating-disorder-help.html,/students/teen-eating-disorder-help,301,organization
+
+# Virtual therapy for specific groups
+/virtual-therapy-busy-parents.html,/virtual-therapy-ontario,301,consolidation
+
+# Northern Ontario
+/mental-health-northern-ontario.html,/virtual-therapy-ontario,301,consolidation
+
+# Anxiety specific locations
+/anxiety-therapy-london-ontario.html,/anxiety-therapy-ontario,301,consolidation
+/anxiety-therapy-mississauga.html,/anxiety-therapy-ontario,301,consolidation
+/anxiety-therapy-toronto.html,/anxiety-therapy-ontario,301,consolidation
+/depression-therapy-hamilton.html,/depression-therapy-ontario,301,consolidation
+/depression-therapy-london-ontario.html,/depression-therapy-ontario,301,consolidation
+/depression-therapy-mississauga.html,/depression-therapy-ontario,301,consolidation
