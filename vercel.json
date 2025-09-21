@@ -3,15 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": ".",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "headers": { "host": "www.nextsteptherapy.ca" },
-      "status": 301,
-      "dest": "https://nextsteptherapy.ca/$1"
-    }
-  ],
   "redirects": [
+    { "source": "/(.*)", "has": [{"type": "host", "value": "www.nextsteptherapy.ca"}], "destination": "https://nextsteptherapy.ca/$1", "permanent": true },
     { "source": "/services.html", "destination": "/services", "permanent": true },
     { "source": "/contact.html", "destination": "/contact", "permanent": true },
     { "source": "/counselling-ontario.html", "destination": "/counselling-ontario", "permanent": true },
