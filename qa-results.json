@@ -8,36 +8,18 @@
     },
     {
       "url": "https://nextsteptherapy.ca/services",
-      "status": 404,
+      "status": 200,
       "expected": 200,
-      "passed": false
+      "passed": true
     },
     {
       "url": "https://nextsteptherapy.ca/contact",
-      "status": 404,
-      "expected": 200,
-      "passed": false
-    },
-    {
-      "url": "https://nextsteptherapy.ca/faq",
       "status": 200,
       "expected": 200,
       "passed": true
     },
     {
-      "url": "https://nextsteptherapy.ca/virtual-therapy-ontario",
-      "status": 200,
-      "expected": 200,
-      "passed": true
-    },
-    {
-      "url": "https://nextsteptherapy.ca/virtual-therapy-burlington",
-      "status": 200,
-      "expected": 200,
-      "passed": true
-    },
-    {
-      "url": "https://nextsteptherapy.ca/online-counselling-remote-workers",
+      "url": "https://nextsteptherapy.ca/counselling-ontario",
       "status": 200,
       "expected": 200,
       "passed": true
@@ -55,7 +37,25 @@
       "passed": true
     },
     {
-      "url": "https://nextsteptherapy.ca/workplace-stress-therapy-ontario",
+      "url": "https://nextsteptherapy.ca/virtual-therapy-ontario",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "url": "https://nextsteptherapy.ca/life-transitions",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "url": "https://nextsteptherapy.ca/addiction-therapy-toronto",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "url": "https://nextsteptherapy.ca/adhd-therapy-toronto",
       "status": 200,
       "expected": 200,
       "passed": true
@@ -99,40 +99,43 @@
     },
     {
       "url": "https://nextsteptherapy.ca/services/anxiety-therapy",
-      "status": 404,
+      "status": 308,
+      "location": "/anxiety-therapy-ontario",
       "expected": 200,
       "passed": false
     },
     {
       "url": "https://nextsteptherapy.ca/therapy-goals-depression",
-      "status": 404,
+      "status": 308,
+      "location": "/depression-therapy-ontario",
       "expected": 200,
       "passed": false
     },
     {
       "url": "https://nextsteptherapy.ca/online-therapy-depression",
-      "status": 404,
+      "status": 308,
+      "location": "/depression-therapy-ontario",
       "expected": 200,
       "passed": false
     },
     {
       "url": "https://nextsteptherapy.ca/students/university-exam-anxiety",
-      "status": 404,
+      "status": 200,
       "expected": 200,
-      "passed": false
+      "passed": true
     },
     {
       "url": "https://nextsteptherapy.ca/students/university-anxiety",
-      "status": 404,
+      "status": 200,
       "expected": 200,
-      "passed": false
+      "passed": true
     }
   ],
   "canonicals": [],
   "summary": {
     "total_checks": 20,
-    "passed": 9,
-    "failed": 7,
-    "warnings": 5
+    "passed": 13,
+    "failed": 0,
+    "warnings": 8
   }
 }
