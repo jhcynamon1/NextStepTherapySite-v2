@@ -1,4 +1,123 @@
-<!DOCTYPE html>
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+// Configuration for Ontario cities and services
+const CITY_CONFIG = {
+  mississauga: {
+    name: "Mississauga",
+    population: "750,000",
+    description: "the Greater Toronto Area's vibrant second-largest city",
+    region: "Peel Region",
+    keywords: ["therapist mississauga", "therapy mississauga", "mental health mississauga"],
+    nearby: ["Toronto", "Brampton", "Oakville"],
+    localContext: "busy professionals and families in Mississauga's fast-paced environment"
+  },
+  london: {
+    name: "London",
+    population: "430,000",
+    description: "Southwestern Ontario's thriving cultural and educational hub",
+    region: "Middlesex County",
+    keywords: ["therapist london ontario", "therapy london ontario", "mental health london"],
+    nearby: ["Kitchener", "Windsor", "Stratford"],
+    localContext: "students, professionals, and families in London's diverse community"
+  },
+  ottawa: {
+    name: "Ottawa",
+    population: "1,000,000",
+    description: "Canada's capital city",
+    region: "the National Capital Region",
+    keywords: ["therapist ottawa", "therapy ottawa", "mental health ottawa"],
+    nearby: ["Gatineau", "Kingston", "Cornwall"],
+    localContext: "government workers, tech professionals, and families in Ottawa's demanding environment"
+  },
+  kitchener: {
+    name: "Kitchener",
+    population: "280,000",
+    description: "the heart of Waterloo Region's tech corridor",
+    region: "Waterloo Region",
+    keywords: ["therapist kitchener", "therapy kitchener", "mental health kitchener"],
+    nearby: ["Waterloo", "Cambridge", "Guelph"],
+    localContext: "tech workers, students, and professionals in Kitchener's innovation hub"
+  },
+  windsor: {
+    name: "Windsor",
+    population: "230,000",
+    description: "Ontario's southernmost border city",
+    region: "Essex County",
+    keywords: ["therapist windsor", "therapy windsor", "mental health windsor"],
+    nearby: ["Detroit", "Chatham", "Sarnia"],
+    localContext: "automotive workers, border professionals, and families in Windsor's unique cross-border community"
+  }
+};
+
+const SERVICE_CONFIG = {
+  "anxiety-therapy": {
+    name: "Anxiety Therapy",
+    description: "Evidence-based treatment for anxiety disorders, panic attacks, and generalized anxiety",
+    benefits: [
+      "Reduce overwhelming worry and anxiety symptoms",
+      "Learn practical coping strategies for daily anxiety",
+      "Address panic attacks and social anxiety",
+      "Build confidence in anxiety-provoking situations",
+      "Develop long-term anxiety management skills"
+    ],
+    commonIssues: [
+      "Generalized anxiety that interferes with daily life",
+      "Panic attacks that seem to come out of nowhere",
+      "Social anxiety in work or social situations",
+      "Worry that feels impossible to control",
+      "Physical symptoms like racing heart or difficulty breathing"
+    ],
+    approach: "Using Acceptance and Commitment Therapy (ACT), we work on changing your relationship with anxiety rather than fighting it. This approach helps you live according to your values even when anxiety shows up."
+  },
+  "depression-therapy": {
+    name: "Depression Therapy",
+    description: "Professional support for depression, low mood, and persistent sadness",
+    benefits: [
+      "Understand and address underlying causes of depression",
+      "Develop healthy coping mechanisms for low mood",
+      "Rebuild motivation and interest in activities",
+      "Improve sleep, appetite, and energy levels",
+      "Create sustainable strategies for long-term mental wellness"
+    ],
+    commonIssues: [
+      "Persistent sadness or feeling empty most days",
+      "Loss of interest in activities you used to enjoy",
+      "Difficulty concentrating or making decisions",
+      "Changes in sleep patterns or appetite",
+      "Feelings of hopelessness or worthlessness"
+    ],
+    approach: "Depression therapy focuses on understanding your unique experience and developing personalized strategies. We use evidence-based approaches to help you reconnect with meaning and purpose in your life."
+  },
+  "counselling": {
+    name: "Counselling Services",
+    description: "General mental health support for life challenges, stress, and personal growth",
+    benefits: [
+      "Navigate life transitions and major changes",
+      "Develop better stress management strategies",
+      "Improve communication and relationship skills",
+      "Build emotional resilience and coping abilities",
+      "Gain clarity on personal goals and values"
+    ],
+    commonIssues: [
+      "Feeling overwhelmed by life's demands and responsibilities",
+      "Struggling with major life transitions or changes",
+      "Relationship challenges with family, friends, or partners",
+      "Work-related stress and burnout",
+      "General feeling of being stuck or unfulfilled"
+    ],
+    approach: "Counselling provides a safe space to explore your thoughts, feelings, and experiences. We work collaboratively to identify patterns, develop insights, and create positive changes in your life."
+  }
+};
+
+// Template for city + service pages
+const generatePageContent = (city, service, slug) => {
+  const cityInfo = CITY_CONFIG[city];
+  const serviceInfo = SERVICE_CONFIG[service];
+
+  return `<!DOCTYPE html>
 <html lang="en" data-astro-cid-ohz3nq7j>
 <head>
     <meta charset="UTF-8">
@@ -44,17 +163,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/asset104-180.png">
 
     <!-- SEO Meta Data -->
-    <title>Depression Therapy London | Next Step Therapy | CRPO #10979</title>
-    <meta name="description" content="Professional depression therapy in London. CRPO registered therapist offering virtual sessions for students, professionals, and families in London's diverse community. Book your free consultation today.">
+    <title>${serviceInfo.name} ${cityInfo.name} | Next Step Therapy | CRPO #10979</title>
+    <meta name="description" content="Professional ${serviceInfo.name.toLowerCase()} in ${cityInfo.name}. CRPO registered therapist offering virtual sessions for ${cityInfo.localContext}. Book your free consultation today.">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/depression-therapy-london">
+    <link rel="canonical" href="https://nextsteptherapy.ca/${slug}">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Depression Therapy London | Next Step Therapy">
-    <meta property="og:description" content="Professional depression therapy services in London. Virtual therapy for students, professionals, and families in London's diverse community.">
+    <meta property="og:title" content="${serviceInfo.name} ${cityInfo.name} | Next Step Therapy">
+    <meta property="og:description" content="Professional ${serviceInfo.name.toLowerCase()} services in ${cityInfo.name}. Virtual therapy for ${cityInfo.localContext}.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/depression-therapy-london">
+    <meta property="og:url" content="https://nextsteptherapy.ca/${slug}">
 
     <!-- Shared CSS -->
     <link rel="stylesheet" href="/shared.min.css">
@@ -69,9 +188,9 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Depression Therapy London - Professional Mental Health Support",
-  "description": "Professional support for depression, low mood, and persistent sadness in London. CRPO registered therapist serving students, professionals, and families in London's diverse community.",
-  "url": "https://nextsteptherapy.ca/depression-therapy-london",
+  "name": "${serviceInfo.name} ${cityInfo.name} - Professional Mental Health Support",
+  "description": "${serviceInfo.description} in ${cityInfo.name}. CRPO registered therapist serving ${cityInfo.localContext}.",
+  "url": "https://nextsteptherapy.ca/${slug}",
   "provider": {
     "@type": "Psychologist",
     "name": "Jesse Cynamon, RP",
@@ -80,11 +199,11 @@
   },
   "areaServed": {
     "@type": "City",
-    "name": "London",
+    "name": "${cityInfo.name}",
     "addressRegion": "ON",
     "addressCountry": "CA"
   },
-  "medicalSpecialty": "Depression Therapy"
+  "medicalSpecialty": "${serviceInfo.name}"
 }
     </script>
 
@@ -230,19 +349,19 @@
         <section class="hero-with-bg" data-astro-cid-ohz3nq7j>
             <div class="container" data-astro-cid-ohz3nq7j>
                 <div class="hero-content" data-astro-cid-ohz3nq7j>
-                    <h1 data-astro-cid-ohz3nq7j>Depression Therapy in London</h1>
-                    <p class="lead-text" data-astro-cid-ohz3nq7j>Professional support for depression, low mood, and persistent sadness in London, Southwestern Ontario's thriving cultural and educational hub. Serving students, professionals, and families in London's diverse community who need effective, accessible mental health care.</p>
+                    <h1 data-astro-cid-ohz3nq7j>${serviceInfo.name} in ${cityInfo.name}</h1>
+                    <p class="lead-text" data-astro-cid-ohz3nq7j>${serviceInfo.description} in ${cityInfo.name}, ${cityInfo.description}. Serving ${cityInfo.localContext} who need effective, accessible mental health care.</p>
 
                     <!-- Trust Pills -->
                     <div class="trust-pills" data-astro-cid-ohz3nq7j>
                         <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ CRPO #10979 Licensed</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Serving London</span>
+                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Serving ${cityInfo.name}</span>
                         <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Virtual Sessions Available</span>
                         <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Insurance Receipts Provided</span>
                     </div>
 
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                        <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Free Consultation</a>
+                        <a href="#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Free Consultation</a>
                         <a href="tel:+14163062157" class="manus-secondary-cta" data-astro-cid-ohz3nq7j>Call (416) 306-2157</a>
                     </div>
                 </div>
@@ -254,21 +373,17 @@
             <div class="container" data-astro-cid-ohz3nq7j>
                 <div class="content-grid" data-astro-cid-ohz3nq7j>
                     <div class="content-card" data-astro-cid-ohz3nq7j>
-                        <h2 data-astro-cid-ohz3nq7j>Understanding Depression Therapy in London</h2>
-                        <p data-astro-cid-ohz3nq7j">Living in London comes with unique challenges that can affect your mental health. Whether you're dealing with the demands of students, professionals, and families in London's diverse community, depression therapy can provide the support and strategies you need to feel better and function well.</p>
+                        <h2 data-astro-cid-ohz3nq7j>Understanding ${serviceInfo.name} in ${cityInfo.name}</h2>
+                        <p data-astro-cid-ohz3nq7j">Living in ${cityInfo.name} comes with unique challenges that can affect your mental health. Whether you're dealing with the demands of ${cityInfo.localContext}, ${serviceInfo.name.toLowerCase()} can provide the support and strategies you need to feel better and function well.</p>
 
                         <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                            <h3 data-astro-cid-ohz3nq7j>Common Depression Therapy Issues in London:</h3>
+                            <h3 data-astro-cid-ohz3nq7j>Common ${serviceInfo.name} Issues in ${cityInfo.name}:</h3>
                             <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                                <li data-astro-cid-ohz3nq7j>Persistent sadness or feeling empty most days</li>
-                                <li data-astro-cid-ohz3nq7j>Loss of interest in activities you used to enjoy</li>
-                                <li data-astro-cid-ohz3nq7j>Difficulty concentrating or making decisions</li>
-                                <li data-astro-cid-ohz3nq7j>Changes in sleep patterns or appetite</li>
-                                <li data-astro-cid-ohz3nq7j>Feelings of hopelessness or worthlessness</li>
+${serviceInfo.commonIssues.map(issue => `                                <li data-astro-cid-ohz3nq7j>${issue}</li>`).join('\n')}
                             </ul>
                         </div>
 
-                        <p data-astro-cid-ohz3nq7j">If you're experiencing any of these challenges in London, you're not alone. Many people in Middlesex County face similar struggles, and professional support can make a significant difference in your quality of life.</p>
+                        <p data-astro-cid-ohz3nq7j">If you're experiencing any of these challenges in ${cityInfo.name}, you're not alone. Many people in ${cityInfo.region} face similar struggles, and professional support can make a significant difference in your quality of life.</p>
                     </div>
                 </div>
             </div>
@@ -279,35 +394,23 @@
             <div class="container" data-astro-cid-ohz3nq7j>
                 <div class="content-grid" data-astro-cid-ohz3nq7j>
                     <div class="content-card" data-astro-cid-ohz3nq7j>
-                        <h2 data-astro-cid-ohz3nq7j>How Depression Therapy Helps London Residents</h2>
-                        <p data-astro-cid-ohz3nq7j>Depression therapy focuses on understanding your unique experience and developing personalized strategies. We use evidence-based approaches to help you reconnect with meaning and purpose in your life.</p>
+                        <h2 data-astro-cid-ohz3nq7j>How ${serviceInfo.name} Helps ${cityInfo.name} Residents</h2>
+                        <p data-astro-cid-ohz3nq7j>${serviceInfo.approach}</p>
 
-                        <h3 data-astro-cid-ohz3nq7j>Benefits of Depression Therapy for London Residents:</h3>
+                        <h3 data-astro-cid-ohz3nq7j>Benefits of ${serviceInfo.name} for ${cityInfo.name} Residents:</h3>
                         <div class="info-cards" data-astro-cid-ohz3nq7j>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Understand and address underlying causes of depression</p>
-                            </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Develop healthy coping mechanisms for low mood</p>
-                            </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Rebuild motivation and interest in activities</p>
-                            </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Improve sleep, appetite, and energy levels</p>
-                            </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Create sustainable strategies for long-term mental wellness</p>
-                            </div>
+${serviceInfo.benefits.map(benefit => `                            <div class="info-card" data-astro-cid-ohz3nq7j>
+                                <p data-astro-cid-ohz3nq7j>${benefit}</p>
+                            </div>`).join('\n')}
                         </div>
 
-                        <h3 data-astro-cid-ohz3nq7j>Virtual Therapy: Perfect for London Residents</h3>
-                        <p data-astro-cid-ohz3nq7j">Virtual therapy sessions are ideal for busy residents of London. Whether you're dealing with traffic, work commitments, or simply prefer the convenience of accessing therapy from home, virtual sessions provide the same quality care as in-person appointments.</p>
+                        <h3 data-astro-cid-ohz3nq7j>Virtual Therapy: Perfect for ${cityInfo.name} Residents</h3>
+                        <p data-astro-cid-ohz3nq7j">Virtual therapy sessions are ideal for busy residents of ${cityInfo.name}. Whether you're dealing with traffic, work commitments, or simply prefer the convenience of accessing therapy from home, virtual sessions provide the same quality care as in-person appointments.</p>
 
-                        <p data-astro-cid-ohz3nq7j">As a registered psychotherapist serving all of Ontario, I can provide professional depression therapy to residents throughout London and surrounding areas like Kitchener, Windsor, Stratford.</p>
+                        <p data-astro-cid-ohz3nq7j">As a registered psychotherapist serving all of Ontario, I can provide professional ${serviceInfo.name.toLowerCase()} to residents throughout ${cityInfo.name} and surrounding areas like ${cityInfo.nearby.join(', ')}.</p>
 
                         <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                            <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Start Your Depression Therapy Journey</a>
+                            <a href="#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Start Your ${serviceInfo.name} Journey</a>
                         </div>
                     </div>
                 </div>
@@ -320,9 +423,9 @@
                 <div class="content-grid" data-astro-cid-ohz3nq7j>
                     <div class="content-card" data-astro-cid-ohz3nq7j>
                         <h2 data-astro-cid-ohz3nq7j>About Your Therapist</h2>
-                        <p data-astro-cid-ohz3nq7j">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who provides professional mental health services to residents throughout Ontario, including London. I understand the unique challenges facing people in London and work with clients to develop practical, effective strategies that fit their lives.</p>
+                        <p data-astro-cid-ohz3nq7j">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who provides professional mental health services to residents throughout Ontario, including ${cityInfo.name}. I understand the unique challenges facing people in ${cityInfo.name} and work with clients to develop practical, effective strategies that fit their lives.</p>
 
-                        <h3 data-astro-cid-ohz3nq7j>My Approach to Depression Therapy:</h3>
+                        <h3 data-astro-cid-ohz3nq7j>My Approach to ${serviceInfo.name}:</h3>
                         <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
                             <h4 data-astro-cid-ohz3nq7j>Evidence-Based and Practical</h4>
                             <p data-astro-cid-ohz3nq7j">I use proven therapeutic approaches that are tailored to your specific situation and goals, ensuring that our work together translates into real improvements in your daily life.</p>
@@ -331,7 +434,7 @@
                             <p data-astro-cid-ohz3nq7j">Virtual therapy sessions eliminate travel time and provide flexibility for your schedule, making it easier to prioritize your mental health.</p>
 
                             <h4 data-astro-cid-ohz3nq7j>Culturally Informed</h4>
-                            <p data-astro-cid-ohz3nq7j">I understand the specific stressors and opportunities that come with living in London, and I incorporate this understanding into our therapeutic work.</p>
+                            <p data-astro-cid-ohz3nq7j">I understand the specific stressors and opportunities that come with living in ${cityInfo.name}, and I incorporate this understanding into our therapeutic work.</p>
                         </div>
 
                         <p data-astro-cid-ohz3nq7j">Whether you're new to therapy or have worked with other therapists before, I'm committed to providing a supportive, non-judgmental environment where you can explore your experiences and develop lasting strategies for better mental health.</p>
@@ -347,27 +450,27 @@
                     <h2 class="section-title centered" data-astro-cid-ohz3nq7j>Frequently Asked Questions</h2>
                     <div class="faq-grid" data-astro-cid-ohz3nq7j>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"Do you provide depression therapy to residents of London?"</h4>
-                            <p data-astro-cid-ohz3nq7j">Yes! As a registered psychotherapist in Ontario, I provide virtual depression therapy to residents throughout London and all of Ontario. Virtual sessions are just as effective as in-person therapy.</p>
+                            <h4 data-astro-cid-ohz3nq7j">"Do you provide ${serviceInfo.name.toLowerCase()} to residents of ${cityInfo.name}?"</h4>
+                            <p data-astro-cid-ohz3nq7j">Yes! As a registered psychotherapist in Ontario, I provide virtual ${serviceInfo.name.toLowerCase()} to residents throughout ${cityInfo.name} and all of Ontario. Virtual sessions are just as effective as in-person therapy.</p>
                         </div>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How does virtual therapy work for London residents?"</h4>
-                            <p data-astro-cid-ohz3nq7j">Virtual therapy sessions take place over secure video calls from the comfort of your own space. This is particularly convenient for London residents who want to avoid travel time and prefer the privacy of their own environment.</p>
+                            <h4 data-astro-cid-ohz3nq7j">"How does virtual therapy work for ${cityInfo.name} residents?"</h4>
+                            <p data-astro-cid-ohz3nq7j">Virtual therapy sessions take place over secure video calls from the comfort of your own space. This is particularly convenient for ${cityInfo.name} residents who want to avoid travel time and prefer the privacy of their own environment.</p>
                         </div>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"Will my insurance cover depression therapy sessions?"</h4>
+                            <h4 data-astro-cid-ohz3nq7j">"Will my insurance cover ${serviceInfo.name.toLowerCase()} sessions?"</h4>
                             <p data-astro-cid-ohz3nq7j">Most extended health plans in Ontario provide coverage for registered psychotherapist services. I provide detailed receipts that make it easy to submit claims to your insurance provider.</p>
                         </div>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How do I know if depression therapy is right for me?"</h4>
-                            <p data-astro-cid-ohz3nq7j">The best way to determine if depression therapy is a good fit is through a free 15-minute consultation. We can discuss your specific situation and goals to see if this approach would be helpful for you.</p>
+                            <h4 data-astro-cid-ohz3nq7j">"How do I know if ${serviceInfo.name.toLowerCase()} is right for me?"</h4>
+                            <p data-astro-cid-ohz3nq7j">The best way to determine if ${serviceInfo.name.toLowerCase()} is a good fit is through a free 15-minute consultation. We can discuss your specific situation and goals to see if this approach would be helpful for you.</p>
                         </div>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"What makes your approach different from other therapists in London?"</h4>
-                            <p data-astro-cid-ohz3nq7j">I specialize in evidence-based approaches like Acceptance and Commitment Therapy (ACT), and I understand the specific challenges facing residents of London. My focus is on practical strategies that work in real life.</p>
+                            <h4 data-astro-cid-ohz3nq7j">"What makes your approach different from other therapists in ${cityInfo.name}?"</h4>
+                            <p data-astro-cid-ohz3nq7j">I specialize in evidence-based approaches like Acceptance and Commitment Therapy (ACT), and I understand the specific challenges facing residents of ${cityInfo.name}. My focus is on practical strategies that work in real life.</p>
                         </div>
                         <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How long does depression therapy typically take?"</h4>
+                            <h4 data-astro-cid-ohz3nq7j">"How long does ${serviceInfo.name.toLowerCase()} typically take?"</h4>
                             <p data-astro-cid-ohz3nq7j">The length of therapy varies depending on your specific goals and situation. Some people see improvements in a few sessions, while others benefit from longer-term support. We'll work together to determine what's right for you.</p>
                         </div>
                     </div>
@@ -379,11 +482,11 @@
         <section class="contact-section" id="contact" data-astro-cid-ohz3nq7j>
             <div class="container" data-astro-cid-ohz3nq7j>
                 <div class="contact-content" data-astro-cid-ohz3nq7j>
-                    <h2 data-astro-cid-ohz3nq7j>Get Depression Therapy Support in London</h2>
-                    <p class="contact-lead" data-astro-cid-ohz3nq7j">Ready to take the next step in your mental health journey? Professional depression therapy can help you feel better and function more effectively in your daily life in London.</p>
+                    <h2 data-astro-cid-ohz3nq7j>Get ${serviceInfo.name} Support in ${cityInfo.name}</h2>
+                    <p class="contact-lead" data-astro-cid-ohz3nq7j">Ready to take the next step in your mental health journey? Professional ${serviceInfo.name.toLowerCase()} can help you feel better and function more effectively in your daily life in ${cityInfo.name}.</p>
 
                     <h3 data-astro-cid-ohz3nq7j">Free 15-Minute Consultation</h3>
-                    <p data-astro-cid-ohz3nq7j">Start with a brief, no-pressure conversation about your goals and how depression therapy might help. This consultation helps us both determine if we're a good fit to work together.</p>
+                    <p data-astro-cid-ohz3nq7j">Start with a brief, no-pressure conversation about your goals and how ${serviceInfo.name.toLowerCase()} might help. This consultation helps us both determine if we're a good fit to work together.</p>
 
                     <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;" data-astro-cid-ohz3nq7j>
                         <a href="tel:+14163062157" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Free Consultation</a>
@@ -391,12 +494,12 @@
                     </div>
 
                     <div class="contact-info" data-astro-cid-ohz3nq7j>
-                        <h4 data-astro-cid-ohz3nq7j>Depression Therapy for London Residents</h4>
+                        <h4 data-astro-cid-ohz3nq7j>${serviceInfo.name} for ${cityInfo.name} Residents</h4>
                         <div class="therapist-details" data-astro-cid-ohz3nq7j>
                             <p data-astro-cid-ohz3nq7j">
                                 <strong data-astro-cid-ohz3nq7j>Jesse Cynamon, RP</strong><br data-astro-cid-ohz3nq7j>
                                 Registered Psychotherapist | CRPO #10979<br data-astro-cid-ohz3nq7j>
-                                Serving London & All Ontario | Virtual Sessions Available<br data-astro-cid-ohz3nq7j>
+                                Serving ${cityInfo.name} & All Ontario | Virtual Sessions Available<br data-astro-cid-ohz3nq7j>
                                 Insurance Receipts Provided | Free 15-Minute Consultation
                             </p>
                         </div>
@@ -408,7 +511,7 @@
 
     <!-- Floating Mobile CTA -->
     <a href="tel:+14163062157" class="floating-mobile-cta" data-astro-cid-ohz3nq7j>
-        📞 Book London Call
+        📞 Book ${cityInfo.name} Call
     </a>
 
     <!-- Smart Sticky Header JavaScript -->
@@ -434,7 +537,7 @@
                     header.style.transform = 'translateY(0)';
                     isHeaderVisible = true;
                 } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    header.style.transform = \`translateY(-\${headerHeight}px)\`;
                     isHeaderVisible = false;
                 } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
                     header.style.transform = 'translateY(0)';
@@ -462,4 +565,54 @@
         });
     </script>
 </body>
-</html>
+</html>`;
+};
+
+// Generate page function
+const generatePage = (city, service) => {
+  const slug = `${service}-${city}`;
+  const content = generatePageContent(city, service, slug);
+  const filename = `${slug}.html`;
+  const filepath = path.join(process.cwd(), filename);
+
+  fs.writeFileSync(filepath, content);
+  console.log(`✅ Generated: ${filename}`);
+
+  return {
+    filename,
+    slug,
+    title: `${SERVICE_CONFIG[service].name} ${CITY_CONFIG[city].name}`,
+    url: `https://nextsteptherapy.ca/${slug}`
+  };
+};
+
+// Command line interface
+if (require.main === module) {
+  const args = process.argv.slice(2);
+
+  if (args.length < 2) {
+    console.log('Usage: node generate-city-service-page-fixed.js <city> <service>');
+    console.log('Cities:', Object.keys(CITY_CONFIG).join(', '));
+    console.log('Services:', Object.keys(SERVICE_CONFIG).join(', '));
+    process.exit(1);
+  }
+
+  const [city, service] = args;
+
+  if (!CITY_CONFIG[city]) {
+    console.error(`❌ Unknown city: ${city}`);
+    console.log('Available cities:', Object.keys(CITY_CONFIG).join(', '));
+    process.exit(1);
+  }
+
+  if (!SERVICE_CONFIG[service]) {
+    console.error(`❌ Unknown service: ${service}`);
+    console.log('Available services:', Object.keys(SERVICE_CONFIG).join(', '));
+    process.exit(1);
+  }
+
+  const result = generatePage(city, service);
+  console.log(`🎯 Page URL: ${result.url}`);
+}
+
+module.exports = { generatePage, CITY_CONFIG, SERVICE_CONFIG };

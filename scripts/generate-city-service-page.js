@@ -117,7 +117,74 @@ const generatePageContent = (city, service, slug) => {
   const cityInfo = CITY_CONFIG[city];
   const serviceInfo = SERVICE_CONFIG[service];
 
-  return `<!DOCTYPE html><html lang="en" data-astro-cid-ohz3nq7j> <head><meta charset="UTF-8"><!-- Google Analytics 4 + Conversion Tracking --><script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-J8H4YBGSHR', {'allow_enhanced_conversions': true,'send_page_view': true});document.addEventListener('DOMContentLoaded', function() {document.querySelectorAll('a[href^="tel:"]').forEach(link => {link.addEventListener('click', function() {gtag('event', 'phone_call', {'event_category': 'conversion','value': 175,'currency': 'CAD'});});});document.querySelectorAll('form').forEach(form => {form.addEventListener('submit', function() {gtag('event', 'generate_lead', {'event_category': 'conversion','value': 175,'currency': 'CAD'});});});});</script><meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Favicon --><link rel="icon" type="image/png" sizes="32x32" href="/images/asset104.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/asset104.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/asset104-180.png"><!-- SEO Meta Data --><title>${serviceInfo.name} ${cityInfo.name} | Next Step Therapy | CRPO #10979</title><meta name="description" content="Professional ${serviceInfo.name.toLowerCase()} in ${cityInfo.name}. CRPO registered therapist offering virtual sessions for ${cityInfo.localContext}. Book your free consultation today."><!-- Canonical URL --><link rel="canonical" href="https://nextsteptherapy.ca/${slug}"><!-- Open Graph --><meta property="og:title" content="${serviceInfo.name} ${cityInfo.name} | Next Step Therapy"><meta property="og:description" content="Professional ${serviceInfo.name.toLowerCase()} services in ${cityInfo.name}. Virtual therapy for ${cityInfo.localContext}."><meta property="og:type" content="website"><meta property="og:url" content="https://nextsteptherapy.ca/${slug}"><!-- Shared CSS --><link rel="stylesheet" href="/shared.min.css"><!-- Performance Optimizations --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><!-- Schema Markup --><script type="application/ld+json">
+  return `<!DOCTYPE html>
+<html lang="en" data-astro-cid-ohz3nq7j>
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/asset104-180.png">
+
+    <!-- SEO Meta Data -->
+    <title>${serviceInfo.name} ${cityInfo.name} | Next Step Therapy | CRPO #10979</title>
+    <meta name="description" content="Professional ${serviceInfo.name.toLowerCase()} in ${cityInfo.name}. CRPO registered therapist offering virtual sessions for ${cityInfo.localContext}. Book your free consultation today.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/${slug}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="${serviceInfo.name} ${cityInfo.name} | Next Step Therapy">
+    <meta property="og:description" content="Professional ${serviceInfo.name.toLowerCase()} services in ${cityInfo.name}. Virtual therapy for ${cityInfo.localContext}.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/${slug}">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
