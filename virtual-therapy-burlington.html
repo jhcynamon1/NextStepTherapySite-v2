@@ -6,51 +6,29 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        
+
         gtag('config', 'G-J8H4YBGSHR', {
             'allow_enhanced_conversions': true,
             'send_page_view': true
         });
 
-        // Track phone clicks
+        // Track interactions
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track form submissions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function() {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-
             // Track phone clicks
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
                         'event_category': 'conversion',
                         'value': 175,
                         'currency': 'CAD'
@@ -75,10 +53,10 @@
     <meta property="og:title" content="Virtual Therapy Burlington | Next Step Therapy">
     <meta property="og:description" content="Professional online therapy for Burlington, Ontario residents. Confidential, convenient, and covered by most insurance plans.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-burlington.html">
+    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-burlington">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-burlington.html">
+    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-burlington">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -562,6 +540,36 @@
             line-height: 1.6;
         }
         
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin: var(--space-lg) 0;
+        }
+
+        .trust-indicator {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(74, 107, 122, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .trust-indicators {
+                gap: var(--space-sm);
+            }
+
+            .trust-indicator {
+                font-size: 0.8125rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
         /* Floating CTA for Mobile */
         .floating-cta {
             position: fixed;
