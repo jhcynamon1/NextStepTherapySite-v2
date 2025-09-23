@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# SEO Page Creation Command
+# Usage: ./seopage "service" "city" "focus"
+
+cat << 'EOF'
+🚀 SEO PAGE CREATION SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This command triggers the automated page creation process.
+Claude will read the MANUS_PAGE_CREATION_PRD_COMPLETE.md and create your page.
+
+USAGE:
+  ./seopage "service" "city" "focus audience"
+
+EXAMPLE:
+  ./seopage "anxiety therapy" "Burlington" "working professionals"
+
+EOF
+
+if [ $# -lt 3 ]; then
+    echo "❌ Error: Please provide all three arguments"
+    echo ""
+    echo "Usage: ./seopage \"service\" \"city\" \"focus\""
+    echo "Example: ./seopage \"anxiety therapy\" \"Burlington\" \"working professionals\""
+    exit 1
+fi
+
+SERVICE="$1"
+CITY="$2"
+FOCUS="$3"
+
+echo "📋 Creating Page With:"
+echo "  Service: $SERVICE"
+echo "  City: $CITY"
+echo "  Focus: $FOCUS"
+echo ""
+echo "Claude will now:"
+echo "1. Read MANUS_PAGE_CREATION_PRD_COMPLETE.md"
+echo "2. Create ${SERVICE// /-}-${CITY,,}.html"
+echo "3. Apply all Manus standards and SEO optimization"
+echo "4. Update sitemap.xml"
+echo "5. Commit and deploy to Vercel"
+echo ""
+echo "🤖 TRIGGER: CREATE MANUS PAGE: service-city | $SERVICE | $CITY | $FOCUS"
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━"
