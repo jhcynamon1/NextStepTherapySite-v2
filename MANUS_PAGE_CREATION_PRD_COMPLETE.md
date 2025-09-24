@@ -107,8 +107,9 @@ CREATE MANUS PAGE: condition-specific | ADHD therapy | Toronto | Executive funct
 
 **CRITICAL NAVIGATION RULES:**
 - Navigation "Contact" link: MUST use `href="/#contact"` (routes to homepage contact)
-- Main CTA buttons: MUST use `href="#contact"` (scrolls to same-page contact section)
-- This ensures proper user flow: nav goes to homepage, CTAs stay on current page
+- Main CTA buttons: MUST use `href="/#contact"` (routes to homepage contact form)
+- ALL CTAs should redirect to homepage contact form for consistent lead capture
+- This ensures all leads go through the main contact form on the homepage
 
 #### **CTA Button Specifications**
 ```css
@@ -693,7 +694,7 @@ Example:
 - **Font Body**: Inter
 
 ### **CTA Link Destinations**
-- **Main CTA**: `href="#contact"`
+- **Main CTA**: `href="/#contact"` (ALWAYS redirect to homepage contact form)
 - **Phone CTA**: `href="tel:+14163062157"`
 - **Email CTA**: `href="mailto:jesse@nextsteptherapy.ca"`
 
