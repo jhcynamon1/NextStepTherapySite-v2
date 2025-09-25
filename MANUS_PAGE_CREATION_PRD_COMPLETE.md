@@ -180,7 +180,189 @@ CREATE MANUS PAGE: condition-specific | ADHD therapy | Toronto | Executive funct
 
 ## 🔍 COMPLETE SEO OPTIMIZATION SPECIFICATIONS
 
-### **1. Meta Tag Requirements**
+### **1. CONVERSION-FOCUSED TITLE & META OPTIMIZATION FRAMEWORK**
+
+#### **Framework Overview**
+This framework balances high click-through rates with CRPO compliance requirements, ensuring your therapy practice attracts the right clients while maintaining professional standards.
+
+#### **Title Tag Optimization (50-60 characters)**
+
+**Primary Title Structure Formulas:**
+
+**Formula 1: Condition + Location + Credential**
+```
+[Condition] Therapy [City] ON | Registered Psychotherapist
+```
+Example: `Anxiety Therapy Toronto ON | Registered Psychotherapist`
+
+**Formula 2: Audience + Service + Location**
+```
+[Target Audience] [Service] [City] Ontario | [Credential]
+```
+Example: `Professional Stress Therapy Ottawa ON | CRPO Registered`
+
+**Formula 3: Solution-Focused + Geographic**
+```
+[Solution] Support [City] | Virtual Therapy Ontario
+```
+Example: `Career Transition Support Toronto | Virtual Therapy ON`
+
+**Title Optimization by Audience:**
+
+**High-Achieving Professionals:**
+- `Executive Stress Management Toronto | Virtual Therapy`
+- `Performance Anxiety Support Ottawa | Registered Therapist`
+- `Workplace Burnout Therapy Ontario | Evidence-Based Care`
+
+**University Students:**
+- `Student Mental Health Support Ontario | Virtual Therapy`
+- `University Anxiety Help Toronto | Registered Therapist`
+- `College Stress Management ON | Professional Support`
+
+**Geographic Targeting:**
+- `[Service] [Specific City] Ontario | [Credential]`
+- `Virtual Therapy [Region] ON | [Specialization]`
+- `[Condition] Support [City] | Ontario Psychotherapist`
+
+#### **Meta Description Framework (150-160 characters)**
+
+**Core Structure:**
+- Opening Hook (20-30 chars): Relatable problem statement
+- Solution Bridge (40-50 chars): How therapy helps
+- Credibility Marker (30-40 chars): Professional credentials
+- Action Prompt (20-30 chars): Clear next step
+
+**High-Converting Description Templates:**
+
+**Template 1: Problem-Solution-Credential-Action**
+```
+Struggling with [specific challenge]? Professional virtual therapy helps [target audience] manage [condition] with evidence-based approaches. CRPO registered. Book free consultation.
+```
+
+**Template 2: Audience-Benefit-Method-CTA**
+```
+[Target audience] deserve support that fits your schedule. Virtual therapy throughout Ontario using proven CBT & ACT methods. Same-week appointments available. Call today.
+```
+
+**Template 3: Empathy-Solution-Differentiation-Action**
+```
+You don't have to navigate [challenge] alone. Specialized virtual therapy for [audience] with flexible evening & weekend hours. Registered psychotherapist. Free consultation.
+```
+
+**High-Converting Description Examples:**
+
+**For Anxiety:**
+`Anxiety doesn't have to control your life. Professional virtual therapy helps ambitious individuals manage stress using evidence-based CBT & ACT. CRPO registered. Book free consultation.`
+
+**For Professionals:**
+`High-achieving professionals deserve mental health support that gets it. Virtual therapy for workplace stress, burnout & career transitions. Evening appointments available. Call now.`
+
+**For Students:**
+`University stress overwhelming you? Virtual therapy throughout Ontario helps students manage anxiety & academic pressure. Insurance accepted. Same-week appointments available.`
+
+**Location-Specific Examples:**
+
+**Toronto:**
+`Anxiety therapy in Toronto with registered psychotherapist. Virtual sessions, same-week availability, insurance accepted. Free consultation.`
+
+**Ottawa:**
+`Professional therapy support in Ottawa. Specialized in anxiety, stress, workplace challenges. Same-week appointments, evening availability.`
+
+**Burlington:**
+`Virtual therapy serving Burlington professionals and students. Evidence-based treatment for anxiety and stress. Free consultation call.`
+
+#### **Conversion Psychology Integration**
+
+**Emotional Trigger Framework for Titles & Descriptions:**
+
+**Relief Triggers:**
+- "You don't have to navigate this alone"
+- "Professional support that understands"
+- "Evidence-based help is available"
+
+**Empowerment Triggers:**
+- "Take control of your [condition]"
+- "Ready to move beyond coping to thriving?"
+- "Professional support for ambitious individuals"
+
+**Urgency Triggers (Ethical):**
+- "Same-week appointments available"
+- "Free consultation - limited availability"
+- "Evening & weekend hours for busy professionals"
+
+**Trust-Building Elements:**
+
+**Credential Integration:**
+- "CRPO Registered Psychotherapist"
+- "Evidence-based CBT & ACT approaches"
+- "Master's in Psychology (MPsy)"
+
+**Social Proof Indicators:**
+- "Serving professionals across Ontario"
+- "Insurance coverage accepted"
+- "Specialized training in [approach]"
+
+#### **CRPO Compliance for Titles & Descriptions**
+
+**Mandatory Elements Hierarchy:**
+
+**Must Include (Priority 1):**
+- Registered Psychotherapist designation
+- CRPO registration number when space allows
+- Geographic scope (Ontario)
+- Evidence-based approach mentions
+
+**Should Include (Priority 2):**
+- Specific credentials (MPsy)
+- Insurance coverage acceptance
+- Virtual delivery method
+
+**Nice to Have (Priority 3):**
+- Specialized training mentions
+- Response time guarantees
+
+**Approved Therapeutic Claims:**
+- "Evidence-based support for..."
+- "Professional therapy to help manage..."
+- "Specialized treatment approaches for..."
+- "Clinical support for individuals experiencing..."
+
+**Avoid These Phrases:**
+- "Cure" or "fix" language
+- Guaranteed outcomes
+- Medical diagnostic claims
+- Comparison superiority statements
+
+#### **Technical Implementation Guidelines**
+
+**Character Count Optimization:**
+
+**Title Tags:**
+- Target: 50-55 characters for mobile optimization
+- Maximum: 60 characters before truncation
+- Test across devices for display consistency
+
+**Meta Descriptions:**
+- Target: 150-155 characters for full display
+- Maximum: 160 characters before truncation
+- Include primary keyword within first 120 characters
+
+**Keyword Integration Strategy:**
+
+**Primary Keywords (High Priority):**
+- [Condition] + therapy + [location]
+- Virtual therapy + Ontario
+- Registered psychotherapist + [city]
+
+**Secondary Keywords (Medium Priority):**
+- [Audience] + mental health + support
+- Evidence-based + [approach] + therapy
+- [Specific challenge] + professional + help
+
+**Long-tail Keywords (Conversion Focus):**
+- [Specific situation] + therapy + [location]
+- [Professional context] + stress + management
+- [Student context] + anxiety + support
 
 #### **Essential Meta Tags (ALL REQUIRED)**
 ```html
@@ -188,9 +370,9 @@ CREATE MANUS PAGE: condition-specific | ADHD therapy | Toronto | Executive funct
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Title & Description -->
-<title>[Service] [City] | Professional Support - Next Step Therapy</title>
-<meta name="description" content="[Service] in [City]. Virtual sessions, CRPO registered, insurance receipts. Book free consultation. Professional support for [specific issues].">
+<!-- CONVERSION-OPTIMIZED SEO Title & Description -->
+<title>[Use Framework Above - 50-60 characters]</title>
+<meta name="description" content="[Use Template Above - 150-160 characters]">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="https://nextsteptherapy.ca/[page-slug]">
