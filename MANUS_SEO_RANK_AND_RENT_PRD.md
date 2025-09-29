@@ -23,12 +23,13 @@ This PRD outlines a comprehensive SEO strategy and rank-and-rent implementation 
   - **Estimated Effort:** 8 hours
   - **Completion Notes:** Created consolidated online-therapy-burlington.html page (2,400 words) combining content from 3 Burlington pages. Set up 301 redirects in vercel.json from burlington-online-therapy.html and virtual-therapy-burlington.html to primary page. Updated internal links across site. Removed redirected pages from sitemap.xml. Page deployed to production. MANUS design system fully implemented with conversion-optimized content targeting Burlington commuters/professionals.
 
-- [ ] **Action 2: Create "Anxiety Therapy Toronto" Page**
-  - **Status:** Not Started
+- [x] **Action 2: Create "Anxiety Therapy Toronto" Page**
+  - **Status:** Complete
   - **Priority:** High
   - **Description:** High-volume, high-intent keyword needs dedicated long-form service page
   - **Acceptance Criteria:** 1,500+ word page published, optimized for primary keyword
   - **Estimated Effort:** 12 hours
+  - **Completion Notes:** Page already existed and was fully MANUS-compliant. Fixed CTA routing from #contact to /#contact to ensure proper homepage routing. Page features 2,000+ words of Toronto-specific anxiety therapy content, full MANUS design system, proper schema markup, and conversion-optimized content targeting "anxiety therapy toronto" keyword.
 
 - [ ] **Action 3: Optimize "Therapy for Remote Workers" Page**
   - **Status:** Not Started
