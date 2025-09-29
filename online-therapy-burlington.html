@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
     <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
@@ -32,13 +35,13 @@
 
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- SEO Meta Data - CONVERSION-OPTIMIZED -->
-    <title>Online Therapy Burlington ON | Skip The Traffic</title>
-    <meta name="description" content="Tired of sitting in QEW traffic for therapy? Virtual sessions for Burlington professionals. Same-week availability. CRPO registered. Free consultation.">
+    <!-- CONVERSION-OPTIMIZED SEO Meta Data -->
+    <title>Online Therapy Burlington ON | Professional Support</title>
+    <meta name="description" content="Burlington stress weighing you down? Get professional virtual therapy from home. CRPO registered. Evening sessions. Insurance covered. Free consultation.">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Online Therapy Burlington Ontario | Next Step Therapy">
@@ -46,7 +49,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.nextsteptherapy.ca/online-therapy-burlington.html">
 
-    <!-- Canonical URL - CRITICAL FOR SEO -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.nextsteptherapy.ca/online-therapy-burlington.html">
 
     <!-- Schema Markup for Rich Snippets -->
@@ -57,7 +60,7 @@
       "@id": "https://www.nextsteptherapy.ca/online-therapy-burlington.html#webpage",
       "url": "https://www.nextsteptherapy.ca/online-therapy-burlington.html",
       "name": "Online Therapy Burlington - Professional Virtual Counselling",
-      "description": "Professional online therapy services for Burlington, Ontario residents. Licensed therapist providing virtual counselling for anxiety, depression, stress, and life transitions.",
+      "description": "Comprehensive online therapy services for Burlington, Ontario residents. Licensed CRPO therapist providing virtual counselling for anxiety, depression, stress, and life transitions.",
       "isPartOf": {
         "@id": "https://www.nextsteptherapy.ca/#website"
       },
@@ -168,6 +171,40 @@
     }
     </script>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is online therapy as effective as in-person therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research consistently shows online therapy produces equivalent results to in-person treatment for anxiety, depression, and most other concerns. Many clients find they feel more comfortable sharing personal information from their own environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you understand Burlington-specific concerns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I work with many clients from Burlington and the broader Halton region. I understand local pressures like housing costs, commuting stress, seasonal changes by the lake, and the balance between community involvement and privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I typically have availability for new online therapy clients within the same week. Burlington residents often appreciate the convenience of not having to coordinate appointment times with downtown Toronto traffic or GO train schedules."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -176,29 +213,36 @@
         }
 
         :root {
-            --primary-color: #2E5668;
-            --secondary-color: #8FBC8F;
-            --text-dark: #2C3E50;
-            --text-light: #5D6D7E;
-            --bg-light: #F8F9FA;
-            --border-light: #E1E8ED;
+            --manus-green-primary: #6B8E6F;
+            --manus-green-hover: #5A7D5E;
+            --manus-green-light: rgba(107, 142, 111, 0.1);
+            --manus-green-border: rgba(107, 142, 111, 0.2);
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6B7D;
+            --text-white: #FFFFFF;
+            --bg-primary: #FFFFFF;
+            --bg-alternate: #F8F9FA;
+            --bg-card: #F8F9FA;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
-            color: var(--text-dark);
-            background: white;
+            color: var(--text-primary);
+            background: var(--bg-primary);
         }
 
         /* Header & Navigation */
         header {
             background: white;
-            border-bottom: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--manus-green-border);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.1);
         }
 
         nav {
@@ -210,12 +254,32 @@
             align-items: center;
         }
 
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .logo {
-            font-family: 'Playfair Display', serif;
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-weight: 600;
+            color: var(--manus-green-primary);
             text-decoration: none;
+        }
+
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--manus-green-primary), var(--manus-green-hover));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 12px;
+            font-size: 0.8125rem;
+            font-weight: 500;
         }
 
         .nav-links {
@@ -225,35 +289,72 @@
         }
 
         .nav-links a {
-            color: var(--text-dark);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--manus-green-primary);
+        }
+
+        .header-phone {
+            color: var(--manus-green-primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 1.5px solid var(--manus-green-primary);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .header-phone:hover {
+            background: var(--manus-green-primary);
+            color: white;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-alternate) 100%);
             padding: 5rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            font-weight: 600;
         }
 
         .hero-subtitle {
             font-size: 1.25rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-pills {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .trust-pill {
+            background: var(--manus-green-light);
+            color: var(--manus-green-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--manus-green-border);
         }
 
         .cta-buttons {
@@ -263,53 +364,43 @@
             flex-wrap: wrap;
         }
 
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
+        .manus-primary-cta {
+            background: var(--manus-green-primary) !important;
+            color: var(--text-white) !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 2.5rem !important;
+            border-radius: 12px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            display: inline-block !important;
+            min-height: 48px !important;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2) !important;
         }
 
-        .btn-primary {
-            background: white;
-            color: var(--primary-color);
+        .manus-primary-cta:hover {
+            background: var(--manus-green-hover) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3) !important;
+            color: var(--text-white) !important;
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        .manus-secondary-cta {
+            background: transparent !important;
+            color: var(--manus-green-primary) !important;
+            border: 1.5px solid var(--manus-green-primary) !important;
+            font-weight: 600 !important;
+            padding: 1rem 2rem !important;
+            border-radius: 12px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            display: inline-block !important;
+            min-height: 48px !important;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Trust Indicators */
-        .trust-bar {
-            background: var(--bg-light);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .trust-items {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            color: var(--primary-color);
+        .manus-secondary-cta:hover {
+            background: var(--manus-green-primary) !important;
+            color: var(--text-white) !important;
+            transform: translateY(-2px) !important;
         }
 
         /* Main Content Sections */
@@ -320,43 +411,106 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-heading);
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: var(--manus-green-primary);
             margin-bottom: 2rem;
             text-align: center;
+            font-weight: 600;
         }
 
-        .service-grid {
+        .section h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--manus-green-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section h4 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--manus-green-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin: 3rem 0;
         }
 
-        .service-card {
-            background: white;
+        .content-card {
+            background: var(--bg-card);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .service-card:hover {
+        .content-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 16px rgba(107, 142, 111, 0.15);
         }
 
-        .service-card h3 {
-            color: var(--primary-color);
+        .content-card h3 {
+            color: var(--manus-green-primary);
             margin-bottom: 1rem;
         }
 
-        /* Location Section */
-        .locations {
-            background: var(--bg-light);
+        .content-card h4 {
+            color: var(--manus-green-primary);
+            margin-bottom: 0.75rem;
         }
 
+        /* Special Content Sections */
+        .highlight-box {
+            background: var(--manus-green-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--manus-green-primary);
+            margin: 2rem 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--manus-green-primary);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Location Grid */
         .location-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -370,35 +524,50 @@
             border-radius: 8px;
             text-align: center;
             font-weight: 500;
-            color: var(--text-dark);
-            border: 2px solid transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--manus-green-border);
             transition: all 0.3s;
         }
 
         .location-item:hover {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
+            border-color: var(--manus-green-primary);
+            color: var(--manus-green-primary);
+            transform: translateY(-2px);
         }
 
         /* FAQ Section */
         .faq-item {
             margin-bottom: 1.5rem;
             padding: 1.5rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.05);
         }
 
         .faq-question {
             font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            color: var(--manus-green-primary);
+            margin-bottom: 0.75rem;
             font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-alternate);
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            border-radius: 12px;
         }
 
         /* Footer */
         footer {
-            background: var(--primary-color);
+            background: var(--manus-green-primary);
             color: white;
             padding: 3rem 2rem 1rem;
             text-align: center;
@@ -421,6 +590,7 @@
             color: white;
             text-decoration: none;
             opacity: 0.9;
+            transition: opacity 0.3s;
         }
 
         .footer-links a:hover {
@@ -441,9 +611,24 @@
                 padding: 3rem 1rem;
             }
 
-            .trust-items {
+            .trust-pills {
                 flex-direction: column;
                 align-items: center;
+                gap: 0.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -452,181 +637,276 @@
     <!-- Header Navigation -->
     <header>
         <nav>
-            <a href="https://www.nextsteptherapy.ca/" class="logo">Next Step Therapy</a>
+            <div class="logo-section">
+                <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                <a href="https://www.nextsteptherapy.ca/" class="logo-text">Next Step Therapy</a>
+                <span class="credentials-badge-prominent">CRPO #10979</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="https://www.nextsteptherapy.ca/">Home</a></li>
                 <li><a href="https://www.nextsteptherapy.ca/#about">About</a></li>
                 <li><a href="https://www.nextsteptherapy.ca/counselling-services.html">Services</a></li>
                 <li><a href="https://www.nextsteptherapy.ca/#contact">Contact</a></li>
             </ul>
+            <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Online Therapy in Burlington: Convenient Mental Health Support</h1>
-        <p class="hero-subtitle">Skip the QEW traffic and access professional counselling from your Burlington home. Evening sessions available for GO train commuters.</p>
+        <h1>Online Therapy in Burlington: Professional Mental Health Support from Home</h1>
+        <p class="hero-subtitle">Living in Burlington brings unique pressures—from QEW commutes to balancing lakefront living with career demands. Skip the traffic and access professional, CRPO-registered virtual therapy from your Burlington home. Same-week availability with flexible evening sessions.</p>
+
+        <div class="trust-pills">
+            <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+            <span class="trust-pill">✓ Virtual Sessions Available</span>
+            <span class="trust-pill">✓ Insurance Receipts Provided</span>
+            <span class="trust-pill">✓ Free 15-Min Consultation</span>
+        </div>
+
         <div class="cta-buttons">
-            <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book Free Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+            <a href="https://www.nextsteptherapy.ca/#contact" class="manus-primary-cta">Book Free Consultation</a>
+            <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar">
-        <div class="trust-items">
-            <div class="trust-item">
-                <span></span> CRPO Registered #10979
-            </div>
-            <div class="trust-item">
-                <span></span> Serving Burlington
-            </div>
-            <div class="trust-item">
-                <span></span> Insurance Covered
-            </div>
-            <div class="trust-item">
-                <span></span> Same-Week Appointments
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
+    <!-- Introduction Section -->
     <section class="section">
         <div class="container">
-            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-                Living in Burlington offers the best of both worlds – lakefront beauty with urban convenience. But even in this desirable location, life brings challenges that can benefit from professional support. Whether you're dealing with work stress from your Toronto commute, relationship challenges, or simply feeling overwhelmed by daily demands, online therapy provides accessible mental health support right from your Burlington home.
-            </p>
-
-            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 3rem;">
-                As a Registered Psychotherapist (CRPO #10979), I understand the unique pressures facing Burlington residents. From GO train delays affecting your evening routine to the seasonal changes that impact mood during those long winter months by the lake, I provide online therapy that recognizes the realities of your daily life.
+            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem; text-align: center; color: var(--text-primary); max-width: 800px; margin-left: auto; margin-right: auto;">
+                As a Registered Psychotherapist (CRPO #10979), I understand the unique pressures facing Burlington residents. From GO train delays affecting your evening routine to seasonal changes that impact mood during those long winter months by the lake, I provide online therapy that recognizes the realities of your daily life while offering the convenience and privacy you need.
             </p>
 
             <h2>Why Burlington Residents Choose Online Therapy</h2>
 
-            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                <h3 style="margin-bottom: 1rem;">Skip the Commute:</h3>
-                <p>After a long day commuting to Toronto or Hamilton, the last thing you want is another drive for a therapy appointment. Online therapy means you can have your session in your living room, then take a walk along the lakeshore to process what we discussed.</p>
-            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>Skip the QEW Commute</h4>
+                    <p>After a long day commuting to Toronto or Hamilton, the last thing you want is another drive for therapy. Online therapy means you can have your session in your living room, then take a walk along Spencer Smith Park to process what we discussed.</p>
+                </div>
 
-            <div style="background: #e8f5e8; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                <h3 style="margin-bottom: 1rem;">Flexible Scheduling:</h3>
-                <p>Burlington's proximity to major employment centers means irregular schedules. Online therapy accommodates evening sessions after your GO train arrives, lunch hour appointments while working from home, or early morning sessions before your commute begins.</p>
-            </div>
+                <div class="content-card">
+                    <h4>Flexible Scheduling for GO Train Commuters</h4>
+                    <p>Burlington's proximity to major employment centers means irregular schedules. Online therapy accommodates evening sessions after your train arrives at Aldershot or Burlington GO, lunch hour appointments while working from home, or early morning sessions before your commute.</p>
+                </div>
 
-            <div style="background: #f0f8ff; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                <h3 style="margin-bottom: 1rem;">Privacy in Your Own Space:</h3>
-                <p>Many Burlington residents value privacy, especially in a close-knit community where you might run into neighbors at the grocery store. Online therapy ensures confidentiality while allowing you to receive support in the comfort of your own environment.</p>
-            </div>
+                <div class="content-card">
+                    <h4>Privacy in Your Own Space</h4>
+                    <p>Many Burlington residents value privacy, especially in a close-knit community where you might run into neighbors at the grocery store. Online therapy ensures confidentiality while allowing you to receive support in the comfort of your own environment.</p>
+                </div>
 
-            <div style="background: #fff5f5; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                <h3 style="margin-bottom: 1rem;">Weather Independence:</h3>
-                <p>Burlington winters can make driving to appointments challenging, especially during ice storms or heavy snow. Online sessions ensure consistent support regardless of weather conditions.</p>
+                <div class="content-card">
+                    <h4>Weather Independence</h4>
+                    <p>Burlington winters can make driving to appointments challenging, especially during ice storms or heavy snow off Lake Ontario. Online sessions ensure consistent support regardless of weather conditions.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <h2>Therapy That Fits Your Burlington Lifestyle</h2>
-            <p style="margin-bottom: 2rem;">
-                Understanding Burlington means understanding the rhythms of lakefront living, suburban family life, and the reality of being connected to larger urban centers while maintaining a community feel.
+    <!-- Services Overview Section -->
+    <section class="section" style="background: var(--bg-alternate);">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Online Therapy Services for Burlington</h2>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Anxiety & Stress Management</h3>
+                    <p>Professional support for anxiety, panic attacks, and stress-related concerns. Using evidence-based Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural Therapy (CBT) approaches to help you develop practical coping strategies.</p>
+                    <ul class="benefits-list">
+                        <li>Work-related anxiety and performance pressure</li>
+                        <li>Social anxiety in community settings</li>
+                        <li>Panic attacks and worry spirals</li>
+                        <li>Health anxiety and uncertainty</li>
+                        <li>Generalized anxiety and overthinking</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Depression & Mood Support</h3>
+                    <p>Compassionate care for depression, seasonal mood changes, and emotional difficulties. Helping Burlington residents navigate life transitions, relationship challenges, and personal growth.</p>
+                    <ul class="benefits-list">
+                        <li>Persistent sadness and low motivation</li>
+                        <li>Seasonal depression during Burlington winters</li>
+                        <li>Life transitions and major changes</li>
+                        <li>Relationship difficulties and loneliness</li>
+                        <li>Self-esteem and confidence building</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Professional & Career Stress</h3>
+                    <p>Specialized support for high-achieving professionals dealing with workplace stress, burnout, and career transitions. Understanding the pressures of Toronto-Hamilton corridor employment.</p>
+                    <ul class="benefits-list">
+                        <li>Workplace burnout and exhaustion</li>
+                        <li>Career transition anxiety</li>
+                        <li>Work-life balance challenges</li>
+                        <li>Impostor syndrome and perfectionism</li>
+                        <li>Leadership stress and responsibility</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3>Relationship & Family Therapy</h3>
+                    <p>Individual and couples therapy for relationship challenges, family dynamics, and communication issues. Supporting Burlington families through various life stages.</p>
+                    <ul class="benefits-list">
+                        <li>Couples communication and conflict</li>
+                        <li>Family stress and parenting challenges</li>
+                        <li>Relationship anxiety and attachment</li>
+                        <li>Separation and divorce support</li>
+                        <li>Blended family dynamics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burlington-Specific Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Therapy That Understands Burlington Living</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Understanding Burlington means understanding the rhythms of lakefront living, suburban family life, and the reality of being connected to larger urban centers while maintaining a community feel. My approach incorporates the unique aspects of life in Burlington and the broader Halton Region.
             </p>
 
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>For GO Train Commuters</h3>
-                    <p>If your day starts with the 6:47 AM train and ends with evening delays, stress builds differently than for people with predictable schedules. We'll work on managing commute anxiety, setting boundaries around work hours, and creating transition routines that help you shift from work mode to home life.</p>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>For GO Train Commuters</h4>
+                    <p>If your day starts with the early train and ends with evening delays, stress builds differently than for people with predictable schedules. We'll work on managing commute anxiety, setting boundaries around work hours, and creating transition routines that help you shift from work mode to home life along the lakeshore.</p>
                 </div>
-                <div class="service-card">
-                    <h3>For Families in Growing Neighborhoods</h3>
-                    <p>Burlington's family-friendly areas like Aldershot and Roseland bring their own pressures – school choices, activities scheduling, mortgage stress, and maintaining relationships while managing busy family life. Online therapy provides support without adding another item to your already full calendar.</p>
+
+                <div class="content-card">
+                    <h4>For Burlington Families</h4>
+                    <p>Family-friendly neighborhoods like Aldershot, Roseland, and Millcroft bring their own pressures—school choices, activities scheduling, mortgage stress in a competitive market, and maintaining relationships while managing busy family life. Online therapy provides support without adding another item to your calendar.</p>
                 </div>
-                <div class="service-card">
-                    <h3>For Empty Nesters</h3>
+
+                <div class="content-card">
+                    <h4>For Empty Nesters</h4>
                     <p>Many Burlington residents find themselves reassessing life priorities when children leave home. The house feels different, relationships shift, and questions about purpose and meaning arise. Online therapy offers space to explore these transitions without leaving the home where so many memories were made.</p>
                 </div>
-                <div class="service-card">
-                    <h3>For Young Professionals</h3>
+
+                <div class="content-card">
+                    <h4>For Young Professionals</h4>
                     <p>Burlington attracts young professionals seeking affordable housing near major employment centers. Managing student debt, relationship decisions, career pressures, and social connections while building adult life creates unique stressors that benefit from professional support.</p>
                 </div>
             </div>
 
-            <h2>My Approach to Supporting Burlington Clients</h2>
-            <p style="margin-bottom: 1.5rem;">
-                I believe effective therapy meets you where you are – literally and figuratively. For Burlington clients, this often means understanding the tension between small-town community connection and big-city career demands.
-            </p>
-
-            <p style="margin-bottom: 1.5rem;">
-                In our online sessions, we'll explore practical strategies for managing the specific challenges in your life. This might include developing routines that work with GO train schedules, processing the stress of housing costs in Southern Ontario, or working through relationship challenges that arise when both partners are commuting in different directions.
-            </p>
-
-            <p style="margin-bottom: 1.5rem;">
-                <strong>Acceptance and Commitment Therapy (ACT)</strong> helps Burlington clients develop flexibility around the things they can't control – like train delays or traffic – while taking meaningful action toward what matters most to them, whether that's family time, career advancement, or personal wellbeing.
-            </p>
-
-            <p style="margin-bottom: 1.5rem;">
-                <strong>Cognitive Behavioural Therapy (CBT)</strong> techniques can be particularly helpful for managing anxiety about commuting, work performance, or financial pressures common in Burlington's competitive housing market.
-            </p>
-
-            <p style="margin-bottom: 1.5rem;">
-                <strong>Mindfulness approaches</strong> work well with Burlington's natural setting. We might incorporate awareness practices you can use during walks along the lakeshore or while sitting in your backyard garden.
-            </p>
-
-            <p style="margin-bottom: 3rem;">
-                I typically suggest we start with weekly sessions to build momentum and address immediate concerns. As you develop coping strategies and gain insight, we can adjust frequency based on your needs and schedule.
-            </p>
+            <div class="highlight-box">
+                <h3>Local References and Understanding</h3>
+                <p>I work with clients who understand the reality of Burlington living—from the beauty of Confederation Park in summer to the challenges of winter weather off the lake, from the convenience of Mapleview Centre to the stress of rush hour on the QEW. This local understanding informs our therapeutic work together.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Locations Section -->
-    <section class="section locations">
-        <h2 class="section-title">Serving Burlington & Surrounding Communities</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">
-            Online therapy available to residents of Burlington and neighboring Halton Region communities:
-        </p>
-        <div class="location-grid">
-            <div class="location-item">Burlington Downtown</div>
-            <div class="location-item">Aldershot</div>
-            <div class="location-item">Brant Hills</div>
-            <div class="location-item">Freeman</div>
-            <div class="location-item">Millcroft</div>
-            <div class="location-item">Orchard</div>
-            <div class="location-item">Oakville</div>
-            <div class="location-item">Hamilton</div>
-            <div class="location-item">Milton</div>
-            <div class="location-item">Mississauga</div>
-            <div class="location-item">Waterdown</div>
-            <div class="location-item">Dundas</div>
-            <div class="location-item">Georgetown</div>
-            <div class="location-item">Acton</div>
-            <div class="location-item">Grimsby</div>
-            <div class="location-item">Stoney Creek</div>
+    <!-- How Online Therapy Works Section -->
+    <section class="section" style="background: var(--bg-alternate);">
+        <div class="container">
+            <h2 class="section-title">How Virtual Therapy Works</h2>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>Simple Technology Platform</h4>
+                    <p>Our secure, PHIPA-compliant video platform works directly in your web browser—no complicated downloads or software required. If you can video call family, you can do virtual therapy. We'll do a quick tech check during your consultation.</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>Complete Privacy & Security</h4>
+                    <p>Bank-level encryption ensures your conversations remain completely confidential. As a CRPO-registered psychotherapist, all sessions are governed by strict confidentiality standards and Ontario privacy legislation.</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>Flexible Session Options</h4>
+                    <p>50-minute sessions available mornings, afternoons, and evenings to accommodate Burlington work schedules. Weekend appointments also available for busy professionals and families.</p>
+                </div>
+
+                <div class="content-card">
+                    <h4>Reliable Backup Plans</h4>
+                    <p>Technology sometimes fails, but therapy doesn't have to. If video ever has issues, we immediately switch to a secure phone connection so your session continues without interruption.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Getting Started is Simple</h3>
+                <p><strong>1. Free 15-Minute Consultation:</strong> We'll discuss your needs, answer questions, and ensure we're a good fit.</p>
+                <p><strong>2. Schedule Your First Session:</strong> Choose a time that works with your Burlington lifestyle.</p>
+                <p><strong>3. Connect from Your Space:</strong> Join from home, office, or anywhere private and comfortable.</p>
+                <p><strong>4. Begin Your Journey:</strong> Start developing strategies that work for your unique situation.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
+    <!-- Therapist Credentials Section -->
     <section class="section">
-        <h2 class="section-title">Benefits of Online Therapy for Burlington Residents</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>=� No Commute Needed</h3>
-                <p>Skip Burlington traffic and parking concerns. Access therapy from your home without the stress of driving to appointments.</p>
+        <div class="container">
+            <h2>Your Burlington Online Therapist</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start;" class="therapist-section">
+                <div class="content-card">
+                    <h3>Jesse Cynamon, RP</h3>
+                    <p><strong>Registered Psychotherapist</strong><br>
+                    CRPO Registration #10979</p>
+
+                    <h4>Credentials & Training:</h4>
+                    <ul class="benefits-list">
+                        <li>Master of Psychology (MPsy)</li>
+                        <li>Specialized training in ACT & CBT</li>
+                        <li>Anxiety and depression specialization</li>
+                        <li>Professional stress management</li>
+                        <li>Virtual therapy certification</li>
+                    </ul>
+
+                    <h4>Insurance Coverage:</h4>
+                    <p>Services covered by most extended health plans that include "Registered Psychotherapist" benefits. Detailed receipts provided for all insurance claims.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>My Approach to Burlington Clients</h3>
+                    <p>I believe effective therapy meets you where you are—literally and figuratively. For Burlington clients, this often means understanding the tension between small-town community connection and big-city career demands.</p>
+
+                    <p><strong>Acceptance and Commitment Therapy (ACT)</strong> helps Burlington clients develop flexibility around things they can't control—like train delays or traffic—while taking meaningful action toward what matters most, whether that's family time, career advancement, or personal wellbeing.</p>
+
+                    <p><strong>Cognitive Behavioural Therapy (CBT)</strong> techniques can be particularly helpful for managing anxiety about commuting, work performance, or financial pressures common in Burlington's competitive housing market.</p>
+
+                    <p><strong>Mindfulness approaches</strong> work well with Burlington's natural setting. We might incorporate awareness practices you can use during walks along the waterfront trail or while sitting in your backyard garden.</p>
+
+                    <p>I typically suggest we start with weekly sessions to build momentum and address immediate concerns. As you develop coping strategies and gain insight, we can adjust frequency based on your needs and schedule.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>� Flexible Scheduling</h3>
-                <p>Evening and weekend appointments available to work around Burlington work schedules and family commitments.</p>
-            </div>
-            <div class="service-card">
-                <h3><� Home Comfort</h3>
-                <p>Receive therapy in your safe, familiar Burlington home environment where you feel most comfortable and relaxed.</p>
-            </div>
-            <div class="service-card">
-                <h3>= Complete Privacy</h3>
-                <p>Secure, encrypted video platform ensures confidentiality. No concerns about running into someone you know in a waiting room.</p>
-            </div>
-            <div class="service-card">
-                <h3>=� Insurance Coverage</h3>
-                <p>Virtual therapy is covered by most extended health insurance plans. We provide direct billing for your convenience.</p>
-            </div>
-            <div class="service-card">
-                <h3><& Weather-Proof Sessions</h3>
-                <p>Never miss a session due to Burlington weather conditions - snow, rain, or ice won't interfere with your mental health care.</p>
+        </div>
+    </section>
+
+    <!-- Burlington Locations Section -->
+    <section class="section" style="background: var(--bg-alternate);">
+        <div class="container">
+            <h2 class="section-title">Serving All Burlington Neighborhoods</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+                Online therapy available to residents throughout Burlington and neighboring Halton Region communities:
+            </p>
+            <div class="location-grid">
+                <div class="location-item">Burlington Downtown</div>
+                <div class="location-item">Aldershot</div>
+                <div class="location-item">Brant Hills</div>
+                <div class="location-item">Freeman</div>
+                <div class="location-item">Millcroft</div>
+                <div class="location-item">Orchard</div>
+                <div class="location-item">Roseland</div>
+                <div class="location-item">Tyandaga</div>
+                <div class="location-item">Palmer</div>
+                <div class="location-item">Mountainside</div>
+                <div class="location-item">Headon Forest</div>
+                <div class="location-item">Shoreacres</div>
+                <div class="location-item">Burlington Heights</div>
+                <div class="location-item">Kilbride</div>
+                <div class="location-item">Lowville</div>
+                <div class="location-item">Oakville</div>
+                <div class="location-item">Hamilton</div>
+                <div class="location-item">Milton</div>
+                <div class="location-item">Mississauga</div>
+                <div class="location-item">Waterdown</div>
+                <div class="location-item">Dundas</div>
+                <div class="location-item">Georgetown</div>
+                <div class="location-item">Acton</div>
+                <div class="location-item">Grimsby</div>
             </div>
         </div>
     </section>
@@ -638,59 +918,71 @@
 
             <div class="faq-item">
                 <div class="faq-question">Is online therapy as effective as meeting in person?</div>
-                <div class="faq-answer">Research consistently shows online therapy produces equivalent results to in-person treatment for anxiety, depression, and most other concerns. Many clients find they feel more comfortable sharing personal information from their own environment.</div>
+                <div class="faq-answer">Research consistently shows online therapy produces equivalent results to in-person treatment for anxiety, depression, and most other concerns. Many clients find they feel more comfortable sharing personal information from their own environment, leading to deeper therapeutic work.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What if my internet connection is unreliable?</div>
-                <div class="faq-answer">Burlington generally has good internet infrastructure, but technical issues occasionally happen. We'll always have a backup plan, whether that's switching to phone or rescheduling. Stable connection helps, but perfection isn't required.</div>
+                <div class="faq-question">What technology do I need for virtual therapy?</div>
+                <div class="faq-answer">Any device with internet and a camera—computer, tablet, or smartphone. Our platform works through your web browser with no downloads required. We'll do a quick technology check during your free consultation to ensure everything works smoothly.</div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">How do you understand Burlington-specific concerns?</div>
-                <div class="faq-answer">I work with many clients from Burlington and the broader Halton region. I understand local pressures like housing costs, commuting stress, seasonal changes by the lake, and the balance between community involvement and privacy.</div>
+                <div class="faq-answer">I work with many clients from Burlington and the broader Halton region. I understand local pressures like housing costs, commuting stress on the QEW and GO trains, seasonal changes by the lake, and the balance between community involvement and privacy in a smaller city.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What if my internet connection is unreliable?</div>
+                <div class="faq-answer">Burlington generally has good internet infrastructure, but technical issues occasionally happen. We always have backup plans—whether switching to phone, rescheduling, or using mobile data. Stable connection helps, but perfection isn't required.</div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">Can I take sessions while my family is home?</div>
-                <div class="faq-answer">Privacy is essential for effective therapy. We'll discuss strategies for ensuring uninterrupted time, whether that means scheduling during school hours, asking family members to use headphones, or finding other solutions that work for your household.</div>
+                <div class="faq-answer">Privacy is essential for effective therapy. We'll discuss strategies for ensuring uninterrupted time, whether that means scheduling during school hours, using headphones, asking family members to go for a walk, or finding other solutions that work for your Burlington household.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What about emergency situations?</div>
-                <div class="faq-answer">Online therapy works best for individuals who aren't experiencing active crisis. We'll create a safety plan that includes local Burlington resources, emergency contacts, and clear protocols for urgent situations.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How quickly can I start?</div>
+                <div class="faq-question">How quickly can I start online therapy?</div>
                 <div class="faq-answer">I typically have availability for new online therapy clients within the same week. Burlington residents often appreciate the convenience of not having to coordinate appointment times with downtown Toronto traffic or GO train schedules.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Do you work with clients from other Burlington neighborhoods?</div>
-                <div class="faq-answer">Yes, I provide online therapy to residents throughout Burlington, including Downtown, Aldershot, Roseland, Millcroft, and surrounding areas.</div>
+                <div class="faq-question">Is my virtual therapy session confidential?</div>
+                <div class="faq-answer">Absolutely. Our platform uses bank-level encryption and is PHIPA compliant. As a Registered Psychotherapist, all sessions are governed by strict confidentiality standards—the same privacy protections apply whether we meet virtually or in person.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you accept insurance for virtual therapy?</div>
+                <div class="faq-answer">Yes, most extended health insurance plans that cover "Registered Psychotherapist" services will cover virtual therapy sessions. I provide detailed receipts for all insurance claims. Session fee is $175 per 50-minute session.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What happens in an emergency during online therapy?</div>
+                <div class="faq-answer">Online therapy works best for individuals who aren't experiencing active crisis. We'll create a safety plan that includes local Burlington resources, emergency contacts, and clear protocols. For immediate emergencies, always call 911 or go to Burlington's Joseph Brant Hospital emergency department.</div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">Can you accommodate shift workers or irregular schedules?</div>
-                <div class="faq-answer">Absolutely. Many Burlington residents work non-traditional hours or travel for work. I offer flexible scheduling including evenings and weekends.</div>
+                <div class="faq-answer">Absolutely. Many Burlington residents work non-traditional hours, travel for work, or have varying schedules due to GO train commuting. I offer flexible scheduling including early mornings, evenings, and weekends to accommodate your lifestyle.</div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--bg-light); text-align: center;">
-        <h2 class="section-title">Start Your Mental Health Journey in Burlington</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-            Take the first step toward better mental health with convenient, professional online therapy designed for Burlington residents.
-        </p>
-        <div class="cta-buttons">
-            <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary" style="background: var(--primary-color); color: white;">Book Your Free Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">Call 416-306-2157</a>
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Start Your Mental Health Journey from Burlington</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-secondary); max-width: 600px; margin-left: auto; margin-right: auto;">
+                Take the first step toward better mental health with convenient, professional online therapy designed for Burlington residents. Skip the commute, save time, and get the support you deserve from the comfort of your own space.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://www.nextsteptherapy.ca/#contact" class="manus-primary-cta">Book Your Free Consultation</a>
+                <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+                Free 15-minute consultation • Same-week appointments available • Evening sessions for commuters
+            </p>
         </div>
-        <p style="margin-top: 1rem; color: var(--text-light);">
-            Serving all Burlington neighborhoods - flexible scheduling available
-        </p>
     </section>
 
     <!-- Footer -->
@@ -703,8 +995,14 @@
                 <a href="https://www.nextsteptherapy.ca/#contact">Contact</a>
                 <a href="https://www.nextsteptherapy.ca/privacy-policy.html">Privacy Policy</a>
             </div>
-            <p>� 2025 Next Step Therapy | CRPO Registered Psychotherapist #10979</p>
-            <p style="margin-top: 0.5rem; opacity: 0.9;">Professional Online Therapy Serving Burlington, Ontario</p>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; margin-top: 2rem;">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Jesse Cynamon, RP</p>
+                <p style="margin-bottom: 0.5rem;">Registered Psychotherapist | CRPO Registration #10979</p>
+                <p style="margin-bottom: 0.5rem;">Professional Online Therapy Serving Burlington, Ontario</p>
+                <p style="margin-bottom: 1rem;">All services provided in compliance with CRPO standards and guidelines</p>
+                <p style="font-size: 0.9rem; opacity: 0.9;">© 2025 Next Step Therapy | Confidential, Professional Mental Health Support</p>
+            </div>
         </div>
     </footer>
 </body>
