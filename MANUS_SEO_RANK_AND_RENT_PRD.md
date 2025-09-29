@@ -31,12 +31,13 @@ This PRD outlines a comprehensive SEO strategy and rank-and-rent implementation 
   - **Estimated Effort:** 12 hours
   - **Completion Notes:** Page already existed and was fully MANUS-compliant. Fixed CTA routing from #contact to /#contact to ensure proper homepage routing. Page features 2,000+ words of Toronto-specific anxiety therapy content, full MANUS design system, proper schema markup, and conversion-optimized content targeting "anxiety therapy toronto" keyword.
 
-- [ ] **Action 3: Optimize "Therapy for Remote Workers" Page**
-  - **Status:** Not Started
+- [x] **Action 3: Optimize "Therapy for Remote Workers" Page**
+  - **Status:** Complete
   - **Priority:** High
   - **Description:** Currently ranking 6.27 - optimize for top-3 position
   - **Acceptance Criteria:** Improved title, meta description, on-page content, CTR increase
   - **Estimated Effort:** 4 hours
+  - **Completion Notes:** Complete MANUS design system migration from legacy template. Optimized title (58 chars) and meta description (147 chars) using conversion psychology. Migrated 2,500+ words to MANUS structure with proper header, trust pills, info cards, schema markup. All CTAs route to /#contact. CRPO compliant throughout. Targeting 'therapy for remote workers' + 'remote work therapy' keywords. Deployed to production.
 
 - [ ] **Action 4: Create Pages for High-Impression Keywords**
   - **Status:** Not Started
