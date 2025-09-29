@@ -60,7 +60,7 @@ This PRD outlines a comprehensive SEO strategy and rank-and-rent implementation 
   - **Estimated Effort:** 16 hours
 
 - [ ] **Action 5: Improve Titles and Meta Descriptions**
-  - **Status:** In Progress - Batch 2 Complete (10 of 50+ pages optimized)
+  - **Status:** In Progress - Strong Momentum (10 of 50+ pages optimized, full MANUS compliance achieved)
   - **Priority:** Medium
   - **Description:** Rewrite titles/meta descriptions for low CTR pages (CRPO compliant)
   - **Acceptance Criteria:** All low-CTR pages updated, CTR improvement measured
@@ -68,8 +68,10 @@ This PRD outlines a comprehensive SEO strategy and rank-and-rent implementation 
   - **Progress Notes:**
     - **Batch 1 Complete (4 pages):** counselling-ontario, counsellor-ontario, mental-health-therapist-ontario, therapy-near-me-ontario
     - **Batch 2 Complete (6 pages):** depression-therapy-ontario, virtual-therapy-ontario, therapy-hamilton-ontario, therapy-ottawa-ontario, therapy-london-ontario, therapy-mississauga-ontario
+    - **MILESTONE:** All Batch 2 pages migrated to full MANUS design system compliance
     - **Methodology:** MANUS conversion framework - emotional hooks, urgency triggers, character optimization (50-60 title, 150-160 meta)
-    - **Next:** Continue with remaining 40+ pages systematically
+    - **Design Standards:** shared.min.css, proper navigation (/#approach, /#specializations, /#contact), trust pills, info cards
+    - **Next:** Continue with remaining 40+ pages systematically OR pivot to high-impact actions
 
 - [ ] **Action 6: Expand University/Student Content**
   - **Status:** Not Started
