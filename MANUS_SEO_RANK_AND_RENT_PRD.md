@@ -12,8 +12,11 @@
 - **Action 2:** Toronto anxiety therapy page optimized - MANUS-compliant and live
 - **Action 3:** Remote workers page optimization complete - Full MANUS migration deployed
 
-**🎯 IMMEDIATE IMPACT:** 3 high-priority pages optimized for improved rankings (6.27 → top-3 target)
-**📈 NEXT PRIORITY:** Analyze Action 5 vs Action 4 for fastest ROI  
+**🎯 IN PROGRESS:**
+- **Action 5:** Title/Meta optimization - 10 of 50+ pages complete (Batch 1: 4 pages, Batch 2: 6 pages)
+
+**📈 IMMEDIATE IMPACT:** 13 high-priority pages optimized using MANUS conversion framework
+**📊 NEXT PRIORITY:** Continue systematic title/meta optimization for maximum CTR improvement  
 
 ## Executive Summary
 
@@ -57,11 +60,16 @@ This PRD outlines a comprehensive SEO strategy and rank-and-rent implementation 
   - **Estimated Effort:** 16 hours
 
 - [ ] **Action 5: Improve Titles and Meta Descriptions**
-  - **Status:** Not Started
+  - **Status:** In Progress - Batch 2 Complete (10 of 50+ pages optimized)
   - **Priority:** Medium
   - **Description:** Rewrite titles/meta descriptions for low CTR pages (CRPO compliant)
   - **Acceptance Criteria:** All low-CTR pages updated, CTR improvement measured
   - **Estimated Effort:** 6 hours
+  - **Progress Notes:**
+    - **Batch 1 Complete (4 pages):** counselling-ontario, counsellor-ontario, mental-health-therapist-ontario, therapy-near-me-ontario
+    - **Batch 2 Complete (6 pages):** depression-therapy-ontario, virtual-therapy-ontario, therapy-hamilton-ontario, therapy-ottawa-ontario, therapy-london-ontario, therapy-mississauga-ontario
+    - **Methodology:** MANUS conversion framework - emotional hooks, urgency triggers, character optimization (50-60 title, 150-160 meta)
+    - **Next:** Continue with remaining 40+ pages systematically
 
 - [ ] **Action 6: Expand University/Student Content**
   - **Status:** Not Started
