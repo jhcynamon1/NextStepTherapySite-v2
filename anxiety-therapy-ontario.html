@@ -50,6 +50,80 @@
     }
     </script>
 
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does anxiety therapy typically take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clients notice improvements within 8-12 weeks of consistent work, though this varies based on individual circumstances and anxiety severity. Some clients see initial relief within 3-4 sessions, while others may need longer-term support for complex anxiety patterns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens in the first anxiety therapy session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your first session involves a comprehensive assessment of your anxiety symptoms, triggers, and goals. We'll discuss your history, current challenges, and develop an initial treatment plan using evidence-based approaches like CBT or ACT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual anxiety therapy as effective as in-person?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research shows virtual therapy is equally effective for anxiety treatment. Many clients prefer the comfort and convenience of their own space, which can actually reduce anxiety about attending sessions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does anxiety therapy cost in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Session fees are $175 per 50-minute session. Many extended health benefits throughout Ontario cover registered psychotherapist services. Detailed receipts are provided for easy reimbursement with your insurance provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between CBT and ACT for anxiety?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CBT focuses on changing thought patterns and behaviors that maintain anxiety, while ACT emphasizes accepting anxious feelings while pursuing meaningful activities. Both are evidence-based approaches that can be effective for different individuals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can anxiety therapy help with panic attacks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, anxiety therapy is highly effective for panic attacks. Treatment involves understanding panic triggers, developing immediate coping strategies, and gradually reducing the frequency and intensity of panic episodes through exposure and acceptance techniques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral for anxiety therapy in Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No referral is needed to see a registered psychotherapist in Ontario. You can book directly for anxiety therapy. However, some insurance plans may require a referral for coverage, so check with your provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if I need anxiety therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If anxiety is interfering with your work, relationships, sleep, or daily activities, therapy can help. Signs include constant worry, avoidance of situations, physical symptoms like tension or rapid heartbeat, or feeling overwhelmed by everyday tasks."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --primary-green: #6B8E6F;
@@ -329,6 +403,81 @@
             margin: 0.5rem 0;
         }
 
+        /* FAQ Section Styles */
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .faq-answer p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .faq-answer a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Featured Snippet Styles */
+        .snippet-target {
+            background: rgba(107, 142, 111, 0.08);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .snippet-target h3 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .snippet-target p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .snippet-target a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .snippet-target a:hover {
+            text-decoration: underline;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -351,6 +500,10 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1.125rem;
             }
         }
     </style>
@@ -397,6 +550,28 @@
             </div>
         </section>
 
+        <!-- Featured Snippet Blocks -->
+        <section class="section" style="padding: 3rem 0;">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="snippet-target">
+                        <h3>What is anxiety therapy?</h3>
+                        <p>Anxiety therapy is a form of psychotherapy that helps individuals understand and manage anxiety symptoms through evidence-based techniques like <a href="/cbt-therapy-ontario.html">Cognitive Behavioral Therapy (CBT)</a> and Acceptance and Commitment Therapy (ACT), typically showing improvement within 8-12 weeks of consistent treatment with a registered psychotherapist.</p>
+                    </div>
+
+                    <div class="snippet-target">
+                        <h3>How much does therapy cost in Ontario?</h3>
+                        <p>Therapy costs in Ontario typically range from $120-200 per session for registered psychotherapists. Many extended health benefits cover psychotherapy services. At Next Step Therapy, sessions are $175 per 50-minute session with detailed insurance receipts provided for reimbursement.</p>
+                    </div>
+
+                    <div class="snippet-target">
+                        <h3>What happens in your first therapy session?</h3>
+                        <p>Your first therapy session involves a comprehensive assessment of your anxiety symptoms, triggers, and goals lasting 50 minutes. The therapist will discuss your history, current challenges, and develop an initial treatment plan while answering your questions about the therapeutic process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Opening - Empathetic Connection -->
         <section class="section">
             <div class="container">
@@ -405,9 +580,9 @@
                         <h2 class="section-title">Your Mind Rarely Slows Down</h2>
                         <p>That familiar Sunday evening feeling—the one where your chest tightens as you mentally rehearse Monday's challenges. The racing thoughts that turn a simple decision into an exhausting analysis of every possible outcome. The way your brain treats everyday situations like emergency broadcasts, flooding you with "what if" scenarios that feel impossible to turn off.</p>
 
-                        <p>If this resonates, you're experiencing something incredibly common yet deeply personal. Anxiety affects millions of people across Ontario, from Toronto's fast-paced financial districts to Northern Ontario's tight-knit communities. Whether you're a professional juggling demanding responsibilities, a student navigating academic pressures, or someone simply trying to find peace in an overwhelming world—you're not alone in this struggle.</p>
+                        <p>If this resonates, you're experiencing something incredibly common yet deeply personal. Anxiety affects millions of people across Ontario, from Toronto's fast-paced financial districts to Northern Ontario's tight-knit communities. Whether you're a professional juggling demanding responsibilities, a <a href="/university-anxiety-therapy-ontario.html">student navigating academic pressures</a>, or someone simply trying to find peace in an overwhelming world—you're not alone in this struggle.</p>
 
-                        <p>The exhaustion of constant vigilance. The frustration of knowing your worries are often unrealistic yet feeling unable to stop them. The way anxiety can make you feel like you're watching your life through a filter of fear and uncertainty. These experiences are valid, and they deserve professional attention.</p>
+                        <p>The exhaustion of constant vigilance. The frustration of knowing your worries are often unrealistic yet feeling unable to stop them. The way anxiety can make you feel like you're watching your life through a filter of fear and uncertainty. These experiences are valid, and they deserve professional attention. Many people also experience <a href="/depression-therapy-ontario.html">depression alongside anxiety</a>, making comprehensive support even more important.</p>
 
                         <p>I understand that reaching out for support can feel vulnerable, especially when anxiety has convinced you that you should be able to handle everything on your own. But here's what I've learned from working with hundreds of Ontarians dealing with anxiety: seeking help isn't a sign of weakness—it's often the first step toward reclaiming your peace of mind.</p>
                     </div>
@@ -427,14 +602,14 @@
                         <p>Anxiety often affects some of the most capable, thoughtful people—individuals who care deeply about their responsibilities and relationships. What makes this work meaningful to me is witnessing the profound relief that comes when someone learns they don't need to eliminate anxiety to live well; they just need to change their relationship with it.</p>
 
                         <h3>My Approach to Virtual Therapy</h3>
-                        <p>Virtual therapy isn't a compromise—for many people dealing with anxiety, it's actually ideal. You can access professional support from your own safe space, without the additional stress of travel, parking, or sitting in unfamiliar waiting rooms. This can be especially helpful when anxiety makes leaving home feel overwhelming.</p>
+                        <p><a href="/virtual-therapy-ontario.html">Virtual therapy</a> isn't a compromise—for many people dealing with anxiety, it's actually ideal. You can access professional support from your own safe space, without the additional stress of travel, parking, or sitting in unfamiliar waiting rooms. This can be especially helpful when anxiety makes leaving home feel overwhelming.</p>
 
                         <h3>Professional Background</h3>
                         <ul class="feature-list">
                             <li>Master's degree in counseling psychology</li>
-                            <li>Licensed as a Registered Psychotherapist with CRPO (#10979)</li>
+                            <li>Licensed as a <a href="/counselling-ontario.html">Registered Psychotherapist</a> with CRPO (#10979)</li>
                             <li>Specialized training in Acceptance and Commitment Therapy (ACT)</li>
-                            <li>Experience with Cognitive Behavioral Therapy (CBT) for anxiety disorders</li>
+                            <li>Experience with <a href="/cbt-therapy-ontario.html">Cognitive Behavioral Therapy (CBT)</a> for anxiety disorders</li>
                             <li>Ongoing professional development in evidence-based treatments</li>
                         </ul>
                     </div>
@@ -448,7 +623,7 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h2 class="section-title">How We Work Together - A Collaborative Partnership</h2>
-                        <p>Anxiety therapy isn't about me telling you what to do or analyzing your childhood for months. It's about building a collaborative partnership where you develop practical skills for managing anxiety while working toward the life you want to live.</p>
+                        <p>Anxiety therapy isn't about me telling you what to do or analyzing your childhood for months. It's about building a collaborative partnership where you develop practical skills for managing anxiety while working toward the life you want to live. This approach is particularly effective for addressing <a href="/executive-stress-management-therapy.html">professional stress</a> and workplace challenges.</p>
 
                         <h3>Our Initial Sessions</h3>
                         <p>We start by understanding your specific experience of anxiety—how it shows up, what triggers it, and how it's currently affecting your daily life. Rather than diving into your entire life history, we focus on what's happening now and what you want to change. This assessment helps us create a clear direction for our work together.</p>
@@ -584,6 +759,120 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions About Anxiety Therapy in Ontario</h2>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">How long does anxiety therapy typically take?</h3>
+                        <div class="faq-answer">
+                            <p>Most clients notice improvements within 8-12 weeks of consistent work, though this varies based on individual circumstances and anxiety severity. Some clients see initial relief within 3-4 sessions, while others may need longer-term support for complex anxiety patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What happens in the first anxiety therapy session?</h3>
+                        <div class="faq-answer">
+                            <p>Your first session involves a comprehensive assessment of your anxiety symptoms, triggers, and goals. We'll discuss your history, current challenges, and develop an initial treatment plan using evidence-based approaches like <a href="/cbt-therapy-ontario.html">CBT</a> or ACT.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Is virtual anxiety therapy as effective as in-person?</h3>
+                        <div class="faq-answer">
+                            <p>Research shows <a href="/virtual-therapy-ontario.html">virtual therapy</a> is equally effective for anxiety treatment. Many clients prefer the comfort and convenience of their own space, which can actually reduce anxiety about attending sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">How much does anxiety therapy cost in Ontario?</h3>
+                        <div class="faq-answer">
+                            <p>Session fees are $175 per 50-minute session. Many extended health benefits throughout Ontario cover registered psychotherapist services. I provide detailed receipts for easy reimbursement with your insurance provider.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What's the difference between CBT and ACT for anxiety?</h3>
+                        <div class="faq-answer">
+                            <p>CBT focuses on changing thought patterns and behaviors that maintain anxiety, while ACT emphasizes accepting anxious feelings while pursuing meaningful activities. Both are evidence-based approaches that can be effective for different individuals.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can anxiety therapy help with panic attacks?</h3>
+                        <div class="faq-answer">
+                            <p>Yes, anxiety therapy is highly effective for panic attacks. We'll work on understanding your panic triggers, developing immediate coping strategies, and gradually reducing the frequency and intensity of panic episodes through exposure and acceptance techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Do I need a referral for anxiety therapy in Ontario?</h3>
+                        <div class="faq-answer">
+                            <p>No referral is needed to see a registered psychotherapist in Ontario. You can book directly for anxiety therapy. However, some insurance plans may require a referral for coverage, so check with your provider.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What if I'm too anxious to start therapy?</h3>
+                        <div class="faq-answer">
+                            <p>This is a common concern. Starting with a free 15-minute consultation can help ease this anxiety. We can discuss your concerns at your own pace, and there's no pressure to commit to ongoing therapy until you feel ready.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">How do I know if I need anxiety therapy?</h3>
+                        <div class="faq-answer">
+                            <p>If anxiety is interfering with your work, relationships, sleep, or daily activities, therapy can help. Signs include constant worry, avoidance of situations, physical symptoms like tension or rapid heartbeat, or feeling overwhelmed by everyday tasks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can anxiety therapy help with social anxiety?</h3>
+                        <div class="faq-answer">
+                            <p>Yes, therapy is one of the most effective treatments for social anxiety. We'll work on gradual exposure to social situations, challenging anxious thoughts about judgment, and building confidence in social interactions at a pace that feels manageable.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What should I expect from anxiety therapy homework?</h3>
+                        <div class="faq-answer">
+                            <p>Homework typically involves practicing skills between sessions, such as mindfulness exercises, tracking anxiety triggers, or gradually facing feared situations. These assignments take 10-20 minutes and help you apply what we discuss in therapy to real life.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">How often should I attend anxiety therapy sessions?</h3>
+                        <div class="faq-answer">
+                            <p>Most clients benefit from weekly sessions initially, especially when anxiety is significantly impacting daily life. As you develop skills and see improvement, we may reduce frequency to bi-weekly sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can anxiety therapy help with work-related stress?</h3>
+                        <div class="faq-answer">
+                            <p>Absolutely. Many clients seek therapy specifically for <a href="/workplace-stress-therapy-ontario.html">workplace anxiety</a> and stress. We'll address both the anxiety symptoms and develop strategies for managing work pressures, setting boundaries, and improving work-life balance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What if my anxiety gets worse during therapy?</h3>
+                        <div class="faq-answer">
+                            <p>Sometimes anxiety temporarily increases when facing avoided situations or discussing difficult topics. This is normal and often indicates we're working on meaningful issues. We'll always move at a pace you can manage and adjust our approach if needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">How do I prepare for my first anxiety therapy session?</h3>
+                        <div class="faq-answer">
+                            <p>No special preparation is needed. It can be helpful to think about what you'd like to get out of therapy and what anxiety symptoms are most troubling. Arrive in a private, comfortable space for virtual sessions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Getting Started -->
         <section class="section">
             <div class="container">
@@ -604,7 +893,7 @@
                         </ul>
 
                         <h3>Serving All of Ontario</h3>
-                        <p>Whether you're in Toronto's downtown core, Ottawa's government district, Hamilton's diverse neighborhoods, London's university area, or any community across Ontario, professional anxiety support is available. Virtual therapy makes geographical location irrelevant—what matters is your readiness to invest in your mental health.</p>
+                        <p>Whether you're in Toronto's downtown core, Ottawa's government district, Hamilton's diverse neighborhoods, London's university area, or any community across Ontario, professional anxiety support is available. <a href="/virtual-therapy-ontario.html">Virtual therapy</a> makes geographical location irrelevant—what matters is your readiness to invest in your mental health. Learn more about <a href="/therapy-faq-ontario-new.html">frequently asked questions about therapy in Ontario</a>.</p>
 
                         <h3>Confidentiality and Privacy</h3>
                         <p>All therapy sessions are completely confidential in accordance with CRPO standards and Ontario privacy legislation. Your personal information and session content are protected, with information only shared in very limited circumstances related to safety as required by law.</p>
