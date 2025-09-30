@@ -1081,6 +1081,669 @@ Example:
 
 ---
 
+## 🎯 ADVANCED SEO OPTIMIZATION (PHASE 1 & 2 - MANDATORY FOR ALL NEW PAGES)
+
+### **Overview: Proven #1 Ranking Formula**
+
+Based on successful optimization of anxiety-therapy-ontario.html, depression-therapy-ontario.html, and virtual-therapy-ontario.html (Sept 2025), these SEO enhancements are now MANDATORY for all new pages. This formula achieved:
+- 53% word count increase (2,888 → 4,432+ words)
+- 150% internal link increase (8 → 20+ links)
+- Expected 5-10 PAA captures within 3 weeks
+- Expected 3-5 featured snippets within 4 weeks
+- Expected 40-60% traffic increase within 8 weeks
+
+### **Phase 1: FAQ, Schema, Featured Snippets, Internal Links**
+
+#### **1. FAQ Section (15 Questions - MANDATORY)**
+
+Add before closing `</main>` tag:
+
+```html
+<section class="section alternate-bg">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions About [Service] in Ontario</h2>
+        <div class="faq-grid">
+            <!-- 15 FAQ items here - see question bank below -->
+            <div class="faq-item">
+                <h3 class="faq-question">[Question targeting PAA box]</h3>
+                <div class="faq-answer">
+                    <p>[Answer with internal links, 50-100 words, natural language]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+**FAQ CSS (Add to <style> section):**
+```css
+.faq-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+```
+
+#### **2. FAQPage Schema (8 Questions - MANDATORY)**
+
+Add to `<head>` section after existing schema:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "[Question from FAQ section]",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[Same answer as FAQ section, 50-100 words]"
+      }
+    }
+    // ... 7 more questions (total 8)
+  ]
+}
+</script>
+```
+
+#### **3. Featured Snippet Blocks (3 Minimum - MANDATORY)**
+
+Add throughout main content, targeting position 0:
+
+```html
+<div class="snippet-target">
+    <h3>What is [service]?</h3>
+    <p>[Direct answer, 35-50 words, defines service clearly]</p>
+</div>
+
+<div class="snippet-target">
+    <h3>How much does [service] cost in Ontario?</h3>
+    <p>[Direct answer, 35-50 words, mentions insurance, typical range]</p>
+</div>
+
+<div class="snippet-target">
+    <h3>What happens in your first [service] session?</h3>
+    <p>[Direct answer, 35-50 words, describes first session process]</p>
+</div>
+```
+
+**Snippet Target CSS:**
+```css
+.snippet-target {
+    background: rgba(107, 142, 111, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--primary-green);
+}
+
+.snippet-target h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.snippet-target p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+```
+
+#### **4. Internal Linking Strategy (15-20 Links - MANDATORY)**
+
+**Link Distribution Pattern:**
+- 5-7 links to related service pages (anxiety, depression, virtual therapy, counselling)
+- 3-5 links to specific condition pages (university anxiety, workplace stress)
+- 2-4 links to approach/method pages (CBT, ACT, virtual therapy)
+- 2-3 links to location pages (therapy-toronto, therapy-ottawa)
+- 1-2 links to resource pages (FAQ, about)
+
+**Examples:**
+```html
+<!-- Service cross-linking -->
+<p>Many clients find that anxiety and <a href="/depression-therapy-ontario.html">depression</a> occur together.</p>
+
+<!-- Location linking -->
+<p>Whether you're in <a href="/anxiety-therapy-toronto.html">Toronto</a>, <a href="/anxiety-therapy-ottawa.html">Ottawa</a>, or anywhere across Ontario...</p>
+
+<!-- Method linking -->
+<p>Learn more about our <a href="/cbt-therapy-ontario.html">CBT therapy techniques</a> or <a href="/virtual-therapy-ontario.html">virtual therapy</a> options.</p>
+```
+
+**Internal Linking Rules:**
+1. Use descriptive anchor text (keywords, not "click here")
+2. Distribute naturally throughout content
+3. Link in first 25% of content (2-3 links above fold)
+4. Every major section should have 1-2 relevant links
+5. Link to both higher-authority pages and supporting pages
+
+### **Phase 2: Comparison Tables, Location Content, Process Steps**
+
+#### **1. Comparison Table (1 Table - MANDATORY FOR SERVICE PAGES)**
+
+Add before FAQ section:
+
+**For Therapy Approach Pages (Anxiety, Depression, etc.):**
+```html
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Therapy Approaches for [Condition]: CBT vs ACT</h2>
+
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Cognitive Behavioral Therapy (CBT)</th>
+                        <th>Acceptance and Commitment Therapy (ACT)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Focus</strong></td>
+                        <td>[CBT focus for this condition]</td>
+                        <td>[ACT focus for this condition]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Core Philosophy</strong></td>
+                        <td>[CBT philosophy]</td>
+                        <td>[ACT philosophy]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Typical Duration</strong></td>
+                        <td>[CBT duration for condition]</td>
+                        <td>[ACT duration for condition]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Between-Session Work</strong></td>
+                        <td>[CBT homework examples]</td>
+                        <td>[ACT practices]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best Suited For</strong></td>
+                        <td>[Specific CBT applications]</td>
+                        <td>[Specific ACT applications]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evidence Base</strong></td>
+                        <td>[CBT research summary]</td>
+                        <td>[ACT research summary]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">Both approaches are evidence-based and highly effective. We'll collaborate to determine which approach—or combination—best supports your goals.</p>
+    </div>
+</section>
+```
+
+**For Virtual/Format Pages:**
+```html
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Virtual Therapy vs In-Person Therapy</h2>
+
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Virtual Therapy</th>
+                        <th>In-Person Therapy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Convenience</strong></td>
+                        <td>High - from home/office</td>
+                        <td>Medium - travel required</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Privacy</strong></td>
+                        <td>High - your own space</td>
+                        <td>Medium - office setting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Effectiveness</strong></td>
+                        <td>Equal for most conditions per research</td>
+                        <td>Equal for most conditions per research</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technology</strong></td>
+                        <td>Requires stable internet</td>
+                        <td>No technology needed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accessibility</strong></td>
+                        <td>Ontario-wide availability</td>
+                        <td>Limited by geography</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comfort</strong></td>
+                        <td>Familiar environment</td>
+                        <td>Professional therapeutic space</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+```
+
+**Comparison Table CSS:**
+```css
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comparison-table th {
+    background: var(--primary-green);
+    color: white;
+    padding: 1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-align: left;
+}
+
+.comparison-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.comparison-table tr:nth-child(even) {
+    background: var(--bg-alternate);
+}
+
+.comparison-table tr:hover {
+    background: rgba(107, 142, 111, 0.05);
+}
+```
+
+#### **2. Location-Specific Content (4 Regions - MANDATORY)**
+
+Add after comparison table:
+
+```html
+<section class="section alternate-bg">
+    <div class="container">
+        <h2 class="section-title">[Service] Across Ontario</h2>
+
+        <div class="location-grid">
+            <div class="location-card">
+                <h3>Greater Toronto Area</h3>
+                <p>Serving Toronto, Mississauga, Brampton, Markham, Vaughan, and surrounding communities. [Service-specific benefit for GTA residents].</p>
+                <ul>
+                    <li>[GTA-specific population 1]</li>
+                    <li>[GTA-specific population 2]</li>
+                    <li>[University students at U of T, TMU, York]</li>
+                    <li>[GTA-specific population 4]</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <h3>Ottawa & Eastern Ontario</h3>
+                <p>Supporting government workers, university students, and families in the National Capital Region. [Service-specific benefit for Ottawa residents].</p>
+                <ul>
+                    <li>Federal and provincial government employees</li>
+                    <li>University of Ottawa and Carleton students</li>
+                    <li>[Ottawa-specific population 3]</li>
+                    <li>[Ottawa-specific population 4]</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <h3>Hamilton & Golden Horseshoe</h3>
+                <p>Serving Hamilton, Burlington, St. Catharines, Oakville, Niagara, and surrounding areas. [Service-specific benefit for Golden Horseshoe].</p>
+                <ul>
+                    <li>McMaster University students and healthcare workers</li>
+                    <li>Hamilton Health Sciences professionals</li>
+                    <li>[Golden Horseshoe population 3]</li>
+                    <li>[Golden Horseshoe population 4]</li>
+                </ul>
+            </div>
+
+            <div class="location-card">
+                <h3>Southwestern Ontario</h3>
+                <p>Supporting individuals in London, Windsor, Kitchener-Waterloo, Guelph, and throughout southwestern Ontario. [Service benefit].</p>
+                <ul>
+                    <li>University students at Western, Waterloo, Guelph</li>
+                    <li>Tech sector professionals in Waterloo corridor</li>
+                    <li>[SW Ontario population 3]</li>
+                    <li>[SW Ontario population 4]</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">No matter where you are in Ontario, professional [service] is accessible through secure virtual sessions. <a href="/virtual-therapy-ontario.html">Learn more about virtual therapy</a>.</p>
+    </div>
+</section>
+```
+
+**Location Cards CSS:**
+```css
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.location-card {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.location-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.location-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.location-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.location-card li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.location-card li::before {
+    content: "✓";
+    color: var(--primary-green);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+```
+
+#### **3. Process Steps Section (5 Steps - MANDATORY)**
+
+Add after location section:
+
+```html
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">5 Steps to Start [Service] in Ontario</h2>
+
+        <div class="process-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Initial Contact</h3>
+                    <p>[Service-specific first step description, 30-50 words]</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Brief Consultation (15 minutes)</h3>
+                    <p>We'll have a short conversation to understand your concerns, answer questions, and determine if we're a good fit. No pressure, no commitment—just information.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Schedule First Session</h3>
+                    <p>Book your first 50-minute session at a convenient time. Sessions available during business hours and evenings, both virtually and in-person across Ontario.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Comprehensive Assessment</h3>
+                    <p>[Service-specific assessment description, what happens in first session, 30-50 words]</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Begin Your Journey</h3>
+                    <p>[Service-specific journey description, typical timeline, progress expectations, 30-50 words]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box" style="margin-top: 3rem;">
+            <p>Ready to take the first step toward [benefit]?</p>
+            <a href="/#contact" class="manus-primary-cta">Get Started Today</a>
+            <br><br>
+            <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
+        </div>
+    </div>
+</section>
+```
+
+**Process Steps CSS:**
+```css
+.process-steps {
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.step-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background: #e5e7eb;
+}
+
+.step-number {
+    background: var(--primary-green);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.step-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+```
+
+### **Mobile Responsive CSS (REQUIRED FOR ALL SECTIONS)**
+
+Add to end of `<style>` section:
+
+```css
+/* Mobile Responsive - Phase 1 & 2 SEO Sections */
+@media (max-width: 768px) {
+    .comparison-table {
+        font-size: 0.85rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .step-item:not(:last-child)::after {
+        left: 20px;
+    }
+
+    .faq-item {
+        padding: 1rem;
+    }
+
+    .snippet-target {
+        padding: 1rem;
+    }
+}
+```
+
+### **Content Length Requirements**
+
+**Minimum Word Counts (Including All SEO Sections):**
+- Service pages (anxiety, depression, etc.): 4,000+ words
+- Location pages (therapy-toronto, therapy-ottawa): 3,500+ words
+- Condition-specific pages (university anxiety, workplace stress): 3,000+ words
+- Supporting pages (CBT, ACT, virtual therapy): 3,500+ words
+
+**Section Breakdown:**
+- Hero + intro: 200-300 words
+- Main content sections: 1,500-2,000 words
+- FAQ section (15 questions): 1,000-1,200 words
+- Comparison table section: 300-400 words
+- Location section: 400-500 words
+- Process steps section: 300-400 words
+- Additional CTAs and supporting content: 300-400 words
+
+### **SEO Pre-Deployment Checklist**
+
+Before deploying any new page, verify:
+
+**Phase 1 SEO:**
+- [ ] 15-question FAQ section present
+- [ ] FAQPage schema in `<head>` (8 Q&As minimum)
+- [ ] 3-5 featured snippet blocks with proper formatting
+- [ ] 15-20 internal links verified working
+- [ ] All internal links use descriptive anchor text
+
+**Phase 2 SEO:**
+- [ ] 1 comparison table present (CBT vs ACT or Virtual vs In-person)
+- [ ] 4 location cards (GTA, Ottawa, Hamilton, SW Ontario)
+- [ ] 5-step process section with numbered circles
+- [ ] All CSS for tables, location cards, and steps added
+- [ ] Mobile responsive styles included (@768px breakpoint)
+
+**Content Quality:**
+- [ ] 3,000+ word count achieved (4,000+ for major service pages)
+- [ ] Single H1 tag only
+- [ ] Proper heading hierarchy (H1 > H2 > H3)
+- [ ] No superlatives or CRPO-non-compliant language
+- [ ] Ontario-specific geography and institutions mentioned
+- [ ] Internal links distributed naturally throughout
+
+**Technical SEO:**
+- [ ] Meta description under 160 characters
+- [ ] Canonical URL set correctly
+- [ ] All images have alt text
+- [ ] Page loads in under 3 seconds
+- [ ] Mobile responsive verified
+
+### **Expected Results Timeline**
+
+**Week 1-2:**
+- Google indexes new content
+- Begin appearing in PAA boxes (2-3 captures expected)
+- Impressions increase by 15-20%
+
+**Week 3-4:**
+- Featured snippet captures (1-2 expected)
+- PAA appearances increase (5-7 total)
+- Rankings improve by 1-2 positions on average
+- Impressions increase by 25-35%
+
+**Week 5-8:**
+- Multiple #1-3 rankings achieved
+- Featured snippets stabilize (3-5 total)
+- PAA boxes abundant (10-15 total)
+- Traffic increase 40-60% from baseline
+- Improved CTR (+0.5-1.0%)
+
+---
+
 ## 🔄 MAINTENANCE & UPDATES
 
 ### **Monthly Review Checklist**
