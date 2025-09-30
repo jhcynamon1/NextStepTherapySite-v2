@@ -507,6 +507,176 @@
                 font-size: 1.125rem;
             }
         }
+
+        /* Comparison Table Styles */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--bg-alternate);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(107, 142, 111, 0.05);
+        }
+
+        /* Location Cards Styles */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .location-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .location-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .location-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .location-card li {
+            padding: 0.25rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .location-card li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Process Steps Styles */
+        .process-steps {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+
+        .step-number {
+            background: var(--primary-green);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Mobile Responsive for New Sections */
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                margin-right: 1rem;
+            }
+
+            .step-item:not(:last-child)::after {
+                left: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1457,6 +1627,165 @@
                         <br><br>
                         <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table: Virtual vs In-Person Therapy -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Virtual vs In-Person Therapy: Making the Right Choice</h2>
+                <p class="section-intro">Understanding the differences can help you choose the format that best fits your needs and lifestyle.</p>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Virtual Therapy</th>
+                                <th>In-Person Therapy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Convenience</strong></td>
+                                <td>High - attend from anywhere with internet</td>
+                                <td>Medium - travel to office required</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Privacy</strong></td>
+                                <td>High - your own private space</td>
+                                <td>Medium - office waiting room setting</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Effectiveness</strong></td>
+                                <td>Equal for most conditions per research</td>
+                                <td>Equal for most conditions per research</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Technology</strong></td>
+                                <td>Requires stable internet connection</td>
+                                <td>No technology needed</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Accessibility</strong></td>
+                                <td>Ontario-wide availability</td>
+                                <td>Limited by geographic location</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comfort</strong></td>
+                                <td>Familiar home environment</td>
+                                <td>Professional therapeutic space</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">Both formats are equally effective for treating <a href="/anxiety-therapy-ontario.html">anxiety</a>, <a href="/depression-therapy-ontario.html">depression</a>, and most mental health concerns. Your choice depends on your personal preferences, schedule, and circumstances.</p>
+            </div>
+        </section>
+
+        <!-- Location Coverage: Virtual Therapy Across Ontario -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Virtual Therapy Coverage Across Ontario</h2>
+                <p class="section-intro">Professional mental health support is available throughout Ontario, regardless of your location or circumstances.</p>
+
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>Greater Toronto Area</h3>
+                        <p>Serving all of the GTA including Toronto, Mississauga, Brampton, Markham, and surrounding communities. Virtual therapy is especially convenient for busy professionals avoiding commute stress.</p>
+                        <ul>
+                            <li>No downtown traffic or parking hassles</li>
+                            <li>Lunch-hour sessions from your office</li>
+                            <li>Evening appointments from home</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Ottawa & Eastern Ontario</h3>
+                        <p>Accessible mental health support for the National Capital Region and Eastern Ontario, accommodating government schedules and winter weather challenges.</p>
+                        <ul>
+                            <li>Flexible scheduling for government workers</li>
+                            <li>No weather-related cancellations</li>
+                            <li>Support for bilingual communities</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Hamilton & Golden Horseshoe</h3>
+                        <p>Serving Hamilton, Burlington, Oakville, and the entire Golden Horseshoe region. Specialized support for healthcare workers and diverse communities.</p>
+                        <ul>
+                            <li>Convenient for shift workers</li>
+                            <li>Support for healthcare professionals</li>
+                            <li>Access across the entire region</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Rural & Northern Ontario</h3>
+                        <p>Overcoming geography barriers to bring professional <a href="/counselling-ontario.html">psychotherapy</a> to rural and Northern communities where local resources may be limited.</p>
+                        <ul>
+                            <li>No long-distance travel required</li>
+                            <li>Privacy in small-town settings</li>
+                            <li>Specialized expertise not available locally</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps: 5 Steps to Start Virtual Therapy -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">5 Simple Steps to Start Virtual Therapy</h2>
+                <p class="section-intro">Beginning virtual therapy is straightforward and designed to fit your schedule and comfort level.</p>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Initial Contact</h3>
+                            <p>Reach out via phone, email, or the contact form below. Share what's bringing you to therapy and ask any questions you have about the process.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Quick Technology Check (5 minutes)</h3>
+                            <p>Ensure you have a device with internet, camera, and microphone. Find a private space where you can speak freely during sessions. We'll help troubleshoot any concerns.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Schedule Your First Session</h3>
+                            <p>Book your first appointment at a time that works for you—morning, midday, or evening. You'll receive a secure video session link via email.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>First Virtual Session</h3>
+                            <p>Join from your private space at the scheduled time. Your first 50-minute session includes assessment, goal setting, and treatment planning—all from the comfort of your chosen location.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Begin Your Therapy Journey</h3>
+                            <p>Continue with weekly sessions as you build coping skills, work toward your goals, and track your progress. Adjust frequency as needed based on your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 3rem;">
+                    <p>Ready to take the first step? Professional support is just a conversation away.</p>
+                    <a href="/#contact" class="manus-primary-cta">Start Your Free Consultation</a>
                 </div>
             </div>
         </section>

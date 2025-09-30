@@ -388,6 +388,177 @@
             background: var(--bg-alternate) !important;
         }
 
+        /* Comparison Table Styles */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--bg-alternate);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(107, 142, 111, 0.05);
+        }
+
+        /* Location Cards */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .location-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .location-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .location-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .location-card li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .location-card li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+
+        .step-number {
+            background: var(--primary-green);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        .step-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+
+            .step-item:not(:last-child)::after {
+                left: 20px;
+            }
+        }
+
         /* Footer */
         .footer {
             background: var(--text-primary);
@@ -912,6 +1083,170 @@
                         <br><br>
                         <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Therapy Approaches for Depression: CBT vs ACT</h2>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Cognitive Behavioral Therapy (CBT)</th>
+                                <th>Acceptance and Commitment Therapy (ACT)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Focus</strong></td>
+                                <td>Identifying and modifying negative thought patterns and behavioral patterns that maintain depression</td>
+                                <td>Developing psychological flexibility to accept difficult emotions while reconnecting with personal values</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Core Philosophy</strong></td>
+                                <td>Depression stems from cognitive distortions—challenge and replace negative thinking patterns</td>
+                                <td>Pain is inevitable, suffering is optional—learn to experience emotions without being controlled by them</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Typical Duration</strong></td>
+                                <td>12-20 sessions for depression, may be extended for chronic or complex presentations</td>
+                                <td>16-24 sessions, often longer for persistent or treatment-resistant depression</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Between-Session Work</strong></td>
+                                <td>Thought records, activity scheduling, behavioral activation exercises, mood monitoring</td>
+                                <td>Values clarification, mindfulness meditation, defusion exercises, committed action planning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best Suited For</strong></td>
+                                <td>Major depressive episodes, situational depression, cognitive distortions, rumination patterns</td>
+                                <td>Chronic depression, high-functioning depression, existential depression, value conflicts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Evidence Base</strong></td>
+                                <td>Gold standard treatment for depression with 40+ years of research demonstrating effectiveness</td>
+                                <td>Growing evidence for depression, particularly effective when CBT hasn't provided sufficient relief</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">Both approaches have strong research support for treating depression. Many clients benefit from elements of both CBT and ACT integrated into their treatment. We'll collaborate to determine which approach—or combination—best supports your journey toward reconnecting with life and meaning.</p>
+            </div>
+        </section>
+
+        <!-- Location Coverage Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Depression Therapy Across Ontario</h2>
+
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>Greater Toronto Area</h3>
+                        <p>Serving Toronto, Mississauga, Brampton, Markham, Vaughan, and surrounding communities. Support for professionals, students, and families navigating depression while managing busy urban lives.</p>
+                        <ul>
+                            <li>Professionals experiencing burnout and workplace depression</li>
+                            <li>University students managing academic pressure and isolation</li>
+                            <li>New parents navigating postpartum depression</li>
+                            <li>Individuals feeling disconnected despite urban density</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Ottawa & Eastern Ontario</h3>
+                        <p>Supporting government employees, healthcare workers, and families in the National Capital Region dealing with seasonal depression and work-related stress.</p>
+                        <ul>
+                            <li>Government employees managing high-stress environments</li>
+                            <li>Healthcare workers experiencing compassion fatigue</li>
+                            <li>University students navigating academic and social pressures</li>
+                            <li>Families coping with long Ottawa winters and seasonal depression</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Hamilton & Golden Horseshoe</h3>
+                        <p>Serving Hamilton, Burlington, St. Catharines, Oakville, Niagara, and surrounding areas. Support for healthcare workers, students, and individuals experiencing depression in transitional life stages.</p>
+                        <ul>
+                            <li>Healthcare professionals at Hamilton Health Sciences</li>
+                            <li>McMaster University students managing academic stress</li>
+                            <li>Industrial workers navigating career transitions</li>
+                            <li>Young families balancing multiple responsibilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Southwestern Ontario</h3>
+                        <p>Supporting individuals in London, Windsor, Kitchener-Waterloo, Guelph, and throughout southwestern Ontario dealing with depression and life transitions.</p>
+                        <ul>
+                            <li>University students at Western, Waterloo, and Guelph</li>
+                            <li>Tech sector professionals experiencing burnout</li>
+                            <li>Rural and small-town residents seeking accessible support</li>
+                            <li>Early career professionals navigating life changes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">Depression therapy is available throughout Ontario via secure virtual sessions. Geographic location doesn't limit access to support. <a href="/virtual-therapy-ontario.html">Learn more about virtual therapy</a>.</p>
+            </div>
+        </section>
+
+        <!-- Process Steps Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">5 Steps to Start Depression Therapy in Ontario</h2>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Reach Out</h3>
+                            <p>Making the initial contact when depression weighs heavily can feel overwhelming. Send an email, call, or use the contact form—whichever feels most manageable. This first step requires courage, and that courage is already part of your healing.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Brief Consultation (15 minutes)</h3>
+                            <p>We'll have a short, low-pressure conversation about what you're experiencing and how therapy might help. Ask any questions about the process, approaches, or logistics. There's no commitment at this stage—just information and connection.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Schedule First Session</h3>
+                            <p>Book your first 50-minute session at a time that fits your schedule. Sessions are available throughout the week, both virtually and in-person. Choose whatever format feels most comfortable and accessible for you.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Assessment & Understanding</h3>
+                            <p>Your first session focuses on understanding your experience of depression—how long it's been present, what it feels like, how it affects your daily life, and what you've tried before. Together, we'll develop a treatment plan that honors your goals and circumstances.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Begin Reconnecting</h3>
+                            <p>Start the gradual process of reconnecting with life, meaning, and activities that matter. Most clients attend weekly sessions initially, with many noticing shifts in mood and energy within 8-12 weeks. Progress isn't always linear, and that's expected.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 3rem;">
+                    <p>Ready to start reconnecting with life and meaning?</p>
+                    <a href="/#contact" class="manus-primary-cta">Begin Your Journey</a>
+                    <br><br>
+                    <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                 </div>
             </div>
         </section>

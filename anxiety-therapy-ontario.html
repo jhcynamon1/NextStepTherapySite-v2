@@ -388,6 +388,177 @@
             background: var(--bg-alternate) !important;
         }
 
+        /* Comparison Table Styles */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--bg-alternate);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(107, 142, 111, 0.05);
+        }
+
+        /* Location Cards */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .location-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .location-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .location-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .location-card li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .location-card li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 60px;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+
+        .step-number {
+            background: var(--primary-green);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        .step-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+
+            .step-item:not(:last-child)::after {
+                left: 20px;
+            }
+        }
+
         /* Footer */
         .footer {
             background: var(--text-primary);
@@ -906,6 +1077,170 @@
                         <br><br>
                         <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Therapy Approaches for Anxiety: CBT vs ACT</h2>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Cognitive Behavioral Therapy (CBT)</th>
+                                <th>Acceptance and Commitment Therapy (ACT)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Focus</strong></td>
+                                <td>Identifying and changing thought patterns and behaviors that maintain anxiety</td>
+                                <td>Accepting anxious thoughts and feelings while pursuing values-based actions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Core Philosophy</strong></td>
+                                <td>Challenge and replace unhelpful thoughts with more balanced perspectives</td>
+                                <td>Build psychological flexibility to experience discomfort while moving toward meaningful life</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Typical Duration</strong></td>
+                                <td>12-16 sessions for most anxiety conditions</td>
+                                <td>12-20 sessions, often longer for complex patterns</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Between-Session Work</strong></td>
+                                <td>Thought records, behavioral experiments, exposure exercises</td>
+                                <td>Mindfulness practices, values clarification exercises, committed action planning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best Suited For</strong></td>
+                                <td>Specific phobias, panic disorder, health anxiety, performance anxiety</td>
+                                <td>Chronic anxiety, avoidance patterns, existential concerns, value conflicts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Evidence Base</strong></td>
+                                <td>Extensive research over 40+ years, considered gold standard for anxiety</td>
+                                <td>Strong research support, particularly effective for treatment-resistant anxiety</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">Both approaches are evidence-based and highly effective. Many clients benefit from elements of both CBT and ACT integrated into their treatment plan. We'll work together to determine which approach best fits your needs and goals.</p>
+            </div>
+        </section>
+
+        <!-- Location Coverage Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Anxiety Therapy Across Ontario</h2>
+
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>Greater Toronto Area</h3>
+                        <p>Serving Toronto, Mississauga, Brampton, Markham, and surrounding communities. Specialized support for urban professionals dealing with commute stress, workplace anxiety, and the unique pressures of city living.</p>
+                        <ul>
+                            <li>Downtown Toronto professionals navigating high-pressure careers</li>
+                            <li>Suburban families balancing multiple responsibilities</li>
+                            <li>University students at U of T, Toronto Metropolitan, York University</li>
+                            <li>New Canadians adjusting to life in the GTA</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Ottawa & Eastern Ontario</h3>
+                        <p>Supporting government workers, university students, and families in the National Capital Region. Understanding of unique pressures in government, academic, and bilingual environments.</p>
+                        <ul>
+                            <li>Federal and provincial government employees</li>
+                            <li>University of Ottawa and Carleton University students</li>
+                            <li>Healthcare professionals in Ottawa's medical community</li>
+                            <li>Families managing bilingual household pressures</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Hamilton & Golden Horseshoe</h3>
+                        <p>Serving Hamilton, Burlington, St. Catharines, Oakville, and the broader Golden Horseshoe region. Support for diverse communities, healthcare workers, and industrial professionals.</p>
+                        <ul>
+                            <li>McMaster University students and healthcare workers</li>
+                            <li>Manufacturing and industrial professionals</li>
+                            <li>Healthcare workers at Hamilton Health Sciences</li>
+                            <li>Young families in growing suburban communities</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card">
+                        <h3>Southwestern Ontario</h3>
+                        <p>Supporting university students, healthcare professionals, and families in London, Windsor, Kitchener-Waterloo, and surrounding areas.</p>
+                        <ul>
+                            <li>Western University and University of Waterloo students</li>
+                            <li>Healthcare professionals throughout the region</li>
+                            <li>Tech sector workers in Waterloo innovation corridor</li>
+                            <li>Young families and early career professionals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem; text-align: center; color: var(--text-secondary);">No matter where you are in Ontario, professional anxiety therapy is accessible through secure virtual sessions. <a href="/virtual-therapy-ontario.html">Learn more about virtual therapy</a>.</p>
+            </div>
+        </section>
+
+        <!-- Process Steps Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">5 Steps to Start Anxiety Therapy in Ontario</h2>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Initial Contact</h3>
+                            <p>Reach out via phone, email, or the contact form. This first step can feel difficult when anxiety is high—that's completely normal. There's no pressure, just a conversation about how therapy might help.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Brief Consultation (15 minutes)</h3>
+                            <p>We'll have a short conversation to understand your concerns, answer your questions, and determine if we're a good fit. This is your opportunity to ask about approaches, availability, and what to expect.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Schedule First Session</h3>
+                            <p>Book your first 50-minute session at a time that works for your schedule. Sessions are available during business hours and some evenings, both in-person and virtually across Ontario.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Comprehensive Assessment</h3>
+                            <p>Your first session involves understanding your anxiety—when it started, what triggers it, how it affects your life, and what you've tried before. Together, we'll develop a personalized treatment plan aligned with your goals.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Begin Your Journey</h3>
+                            <p>Start building practical tools and strategies for managing anxiety. Most clients attend weekly sessions initially, with progress typically noticed within 8-12 weeks of consistent work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 3rem;">
+                    <p>Ready to take the first step toward calmer, more confident living?</p>
+                    <a href="/#contact" class="manus-primary-cta">Get Started Today</a>
+                    <br><br>
+                    <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                 </div>
             </div>
         </section>
