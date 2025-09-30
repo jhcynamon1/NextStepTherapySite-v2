@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title Test - Check Console</title>
+    <script>
+        setTimeout(() => {
+            // Open new window to depression page
+            const newWindow = window.open('depression-therapy-ontario.html', '_blank');
+
+            // Wait for page to load, then check title
+            setTimeout(() => {
+                if (newWindow && !newWindow.closed) {
+                    const title = newWindow.document.title;
+                    console.log('Depression page title:', title);
+
+                    // Check if it's the optimized title
+                    const expectedTitle = 'Feeling Emotionally Exhausted? Depression Therapy Ontario';
+                    if (title === expectedTitle) {
+                        console.log('✅ SUCCESS: Optimized title displaying correctly!');
+                        document.getElementById('result').innerHTML = '✅ SUCCESS: Optimized title displaying correctly!<br>Title: ' + title;
+                    } else {
+                        console.log('❌ ISSUE: Old title still showing');
+                        console.log('Expected:', expectedTitle);
+                        console.log('Actual:', title);
+                        document.getElementById('result').innerHTML = '❌ ISSUE: Old title still showing<br>Expected: ' + expectedTitle + '<br>Actual: ' + title;
+                    }
+                    newWindow.close();
+                }
+            }, 2000);
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>Browser Title Test for Depression Page</h1>
+    <p>This test will check if the optimized title displays correctly in browser...</p>
+    <div id="result">Testing...</div>
+    <p><strong>Expected Title:</strong> "Feeling Emotionally Exhausted? Depression Therapy Ontario"</p>
+    <p><strong>URL:</strong> <a href="depression-therapy-ontario.html" target="_blank">depression-therapy-ontario.html</a></p>
+</body>
+</html>
