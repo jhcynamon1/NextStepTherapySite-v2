@@ -807,6 +807,243 @@ vercel --prod --force --yes
 
 ---
 
+## 🎯 ADVANCED SEO OPTIMIZATION (PHASE 1 MANDATORY)
+
+### **1. FAQ Section - REQUIRED FOR ALL PAGES**
+
+Every page MUST include a comprehensive FAQ section with 15 questions targeting "People Also Ask" boxes.
+
+#### **Implementation Pattern:**
+```html
+<!-- FAQ Section -->
+<section class="section alternate-bg">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions About [Service] in [Location]</h2>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3 class="faq-question">[Question text]</h3>
+                <div class="faq-answer">
+                    <p>[Answer 40-80 words with internal links where relevant]</p>
+                </div>
+            </div>
+            <!-- Repeat for 15 questions -->
+        </div>
+    </div>
+</section>
+```
+
+#### **FAQ CSS (Required):**
+```css
+/* FAQ Section Styles */
+.faq-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-answer a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+```
+
+#### **Standard FAQ Questions Template:**
+```
+For [Service] Pages:
+1. How long does [service] typically take?
+2. What happens in the first [service] session?
+3. Is virtual [service] as effective as in-person?
+4. How much does [service] cost in [location]?
+5. What's the difference between [approach A] and [approach B]?
+6. Can [service] help with [related issue]?
+7. Do I need a referral for [service] in [location]?
+8. What if I'm too anxious to start [service]?
+9. How do I know if I need [service]?
+10. Can [service] help with [specific symptom]?
+11. What should I expect from [service] homework?
+12. How often should I attend [service] sessions?
+13. Can [service] help with work-related stress?
+14. What if my [condition] gets worse during [service]?
+15. How do I prepare for my first [service] session?
+```
+
+### **2. FAQPage Schema Markup - REQUIRED**
+
+Add structured data in the `<head>` section for Google rich results.
+
+```html
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "[Question text from FAQ]",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[Answer text without HTML]"
+      }
+    }
+    // Include 8-15 questions
+  ]
+}
+</script>
+```
+
+**Rules:**
+- Include 8-15 most important FAQs
+- Remove all HTML from answer text
+- Keep answers under 200 characters for schema
+- Place AFTER MedicalWebPage schema
+
+### **3. Featured Snippet Optimization Blocks - REQUIRED**
+
+Add 3-5 definition blocks near the top of content targeting position 0.
+
+```html
+<!-- Featured Snippet Blocks -->
+<section class="section" style="padding: 3rem 0;">
+    <div class="container">
+        <div class="content-grid">
+            <div class="snippet-target">
+                <h3>What is [service]?</h3>
+                <p>[35-50 word definition with key terms and internal link]</p>
+            </div>
+
+            <div class="snippet-target">
+                <h3>How much does [service] cost in [location]?</h3>
+                <p>[35-50 word answer with pricing and insurance info]</p>
+            </div>
+
+            <div class="snippet-target">
+                <h3>What happens in your first [service] session?</h3>
+                <p>[35-50 word process description]</p>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+#### **Snippet Block CSS (Required):**
+```css
+/* Featured Snippet Styles */
+.snippet-target {
+    background: rgba(107, 142, 111, 0.08);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-green);
+}
+
+.snippet-target h3 {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.snippet-target p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+```
+
+### **4. Internal Linking Strategy - REQUIRED**
+
+Every page MUST include 15-20 contextual internal links.
+
+#### **Link Categories:**
+```
+Service Cross-Links (5-7 links):
+- Related therapy services
+- Related conditions
+- Treatment approaches
+
+Location-Based Links (3-5 links):
+- Other cities/regions
+- University-specific pages
+- Workplace-specific pages
+
+Resource Links (3-5 links):
+- FAQ pages
+- About pages
+- Virtual therapy info
+
+Process Links (2-3 links):
+- How therapy works
+- Getting started
+- Insurance information
+```
+
+#### **Internal Linking Rules:**
+1. Use descriptive anchor text with keywords
+2. Links must be contextually relevant
+3. Spread naturally throughout content
+4. No link clustering (max 2 links per paragraph)
+5. Always link to existing pages only
+6. Use relative paths (`/page.html` not full URLs)
+
+### **5. Content Length Requirements**
+
+**Minimum Word Count:**
+- Service pages: 3,500+ words
+- Location pages: 3,000+ words
+- Condition pages: 3,500+ words
+- Topic pages: 2,500+ words
+
+**Achieve through:**
+- 15-question FAQ section (~1,200 words)
+- 3 featured snippet blocks (~150 words)
+- Original content (~2,000-2,500 words)
+
+### **6. SEO Checklist - Validate Before Deployment**
+
+```markdown
+- [ ] 15-question FAQ section present
+- [ ] FAQPage schema in <head>
+- [ ] 3-5 featured snippet blocks
+- [ ] 15-20 internal links verified working
+- [ ] 3,000+ word count achieved
+- [ ] Single H1 tag only
+- [ ] H2 tags for all major sections
+- [ ] CRPO compliant (no superlatives)
+- [ ] Mobile responsive verified
+- [ ] All links tested and working
+```
+
+---
+
 ## 📊 ANALYTICS & TRACKING SETUP
 
 ### **1. Required Tracking Elements**
