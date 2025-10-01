@@ -399,87 +399,145 @@ You don't have to navigate [challenge] alone. Specialized virtual therapy for [a
 <meta name="copyright" content="Next Step Therapy">
 ```
 
-### **2. Complete JSON-LD Schema Markup**
+### **2. Complete JSON-LD Schema Markup (UPDATED WITH VIRTUOUS CIRCLE LEARNINGS)**
 
-#### **For Service Pages**
+**Note:** Virtuous Circle uses WordPress/Elementor which auto-generates some schema. We'll implement manually for maximum control.
+
+#### **For Service Pages - Complete Schema**
 ```json
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MedicalWebPage",
+      "@type": "WebPage",
       "@id": "https://nextsteptherapy.ca/[page-slug]#webpage",
       "url": "https://nextsteptherapy.ca/[page-slug]",
-      "name": "[Service] [City] | Professional Support",
+      "name": "[Service] [City] | Next Step Therapy",
       "description": "Professional [service] services in [City]. CRPO registered psychotherapist offering evidence-based support.",
       "inLanguage": "en-CA",
+      "isPartOf": {
+        "@id": "https://nextsteptherapy.ca/#website"
+      },
+      "about": {
+        "@type": "MedicalTherapy",
+        "name": "[Service] Therapy"
+      },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://nextsteptherapy.ca/images/therapy-session-warm.jpg"
+        "@id": "https://nextsteptherapy.ca/images/therapy-session-warm.jpg",
+        "url": "https://nextsteptherapy.ca/images/therapy-session-warm.jpg",
+        "width": 800,
+        "height": 534
       },
-      "datePublished": "2025-09-22",
-      "dateModified": "2025-09-22",
-      "provider": {
-        "@type": "Psychologist",
-        "@id": "https://nextsteptherapy.ca/#psychologist"
-      }
+      "datePublished": "2025-10-01",
+      "dateModified": "2025-10-01"
     },
     {
-      "@type": "Psychologist",
-      "@id": "https://nextsteptherapy.ca/#psychologist",
-      "name": "Jesse Cynamon, RP",
-      "identifier": "CRPO #10979",
+      "@type": "WebSite",
+      "@id": "https://nextsteptherapy.ca/#website",
+      "url": "https://nextsteptherapy.ca",
+      "name": "Next Step Therapy",
+      "description": "Professional psychotherapy services throughout Ontario",
+      "publisher": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
+      "inLanguage": "en-CA"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nextsteptherapy.ca/#organization",
+      "name": "Next Step Therapy",
+      "url": "https://nextsteptherapy.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://nextsteptherapy.ca/images/asset104.png",
+        "url": "https://nextsteptherapy.ca/images/asset104.png",
+        "width": 180,
+        "height": 180
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-306-2157",
+        "contactType": "customer service",
+        "email": "jesse@nextsteptherapy.ca",
+        "areaServed": "CA-ON",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.psychologytoday.com/profile/[your-profile]"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#person",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
       "jobTitle": "Registered Psychotherapist",
+      "honorificSuffix": "RP",
+      "worksFor": {
+        "@id": "https://nextsteptherapy.ca/#organization"
+      },
       "telephone": "+14163062157",
       "email": "jesse@nextsteptherapy.ca",
       "url": "https://nextsteptherapy.ca",
-      "image": "https://nextsteptherapy.ca/images/jesse-cynamon.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressRegion": "ON",
         "addressCountry": "CA"
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario",
-        "containsPlace": [
-          {"@type": "City", "name": "[City]"},
-          {"@type": "City", "name": "Toronto"},
-          {"@type": "City", "name": "Ottawa"}
-        ]
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "[Your University]"
       },
       "knowsAbout": [
         "Anxiety Therapy",
         "Depression Treatment",
         "ACT Therapy",
+        "CBT Therapy",
         "Virtual Therapy",
-        "Student Mental Health"
-      ]
+        "Student Mental Health",
+        "Workplace Stress",
+        "Trauma Therapy"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario",
+        "identifier": "CRPO #10979"
+      }
     },
     {
-      "@type": "LocalBusiness",
-      "@id": "https://nextsteptherapy.ca/#business",
-      "name": "Next Step Therapy",
-      "description": "Professional psychotherapy services throughout Ontario",
-      "url": "https://nextsteptherapy.ca",
-      "telephone": "+14163062157",
-      "priceRange": "$$",
-      "paymentAccepted": ["Insurance", "Credit Card", "E-Transfer"],
-      "currenciesAccepted": "CAD",
-      "openingHours": "Mo-Fr 08:00-20:00, Sa 09:00-17:00",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Therapy Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "[Service] Therapy",
-            "description": "Professional [service] therapy sessions",
-            "price": "175.00",
-            "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock"
-          }
+      "@type": "Service",
+      "@id": "https://nextsteptherapy.ca/[page-slug]#service",
+      "serviceType": "[Service] Therapy",
+      "provider": {
+        "@id": "https://nextsteptherapy.ca/#person"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "containsPlace": [
+          {"@type": "City", "name": "[Primary City]"},
+          {"@type": "City", "name": "Toronto"},
+          {"@type": "City", "name": "Ottawa"},
+          {"@type": "City", "name": "Hamilton"},
+          {"@type": "City", "name": "Mississauga"}
         ]
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Virtual Therapy",
+        "serviceLocation": {
+          "@type": "Place",
+          "name": "Ontario, Canada"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "175.00",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nextsteptherapy.ca/#contact"
       }
     },
     {
@@ -498,6 +556,13 @@ You don't have to navigate [challenge] alone. Specialized virtual therapy for [a
   ]
 }
 ```
+
+**Schema Strategy Notes:**
+- Use `@graph` to combine multiple schema types in one block
+- Virtuous Circle focuses on LocalBusiness + Organization + Person
+- We add Service schema for better therapy-specific SEO
+- FAQPage schema is separate (add after main content FAQs)
+- Keep schema updated when page content changes
 
 #### **For Student Pages (Additional Schema)**
 ```json
@@ -705,51 +770,243 @@ curl -I https://nextsteptherapy.ca/[new-page]
 
 ---
 
-## 📝 CONTENT TEMPLATES
+## 📝 CONTENT TEMPLATES (BASED ON VIRTUOUS CIRCLE'S #1 RANKING PAGES)
 
-### **1. Hero Section Template**
-```html
-<h1>[Service] Therapy in [City]</h1>
-<p class="lead-text">
-  [Opening hook - relatable scenario].
-  [Local context reference].
-  [Value proposition].
-  If you're living in [City] and struggling with [condition],
-  you're not alone—and there are evidence-based approaches that can help.
-</p>
+### **PROVEN CONTENT STRUCTURE FROM $1.5M+ CLINIC**
+
+Based on analysis of Virtuous Circle Counselling's top-performing pages (2,700 monthly visitors, DR 27), the following structure is proven to rank and convert:
+
+---
+
+### **UNIVERSAL PAGE STRUCTURE (ALL SERVICE PAGES)**
+
+```
+H1: [Service] Therapy [Location]
+
+H2: [Service] in [Location] [Benefit Hook]
+├─ Opening paragraph (2-3 sentences, empathy + authority)
+├─ Link to team/about page (trust building)
+├─ Educational paragraph (what is this service?)
+├─ Statistics or research mention (credibility)
+├─ Bullet list of therapy approaches available (3-5 items)
+
+H2: We Provide [Service] Treatments That Help You
+├─ 2-3 paragraphs explaining approach
+├─ Link to related therapy method page
+├─ [CTA Button: "Talk With A Therapist"]
+├─ [IMAGE]
+
+H2: What Are The [X] Types of [Condition]?
+├─ Educational intro paragraph
+├─ Bullet list (5-7 types/symptoms)
+├─ Closing paragraph with CTA link
+
+H2: All [Condition] Have Certain Symptoms In Common
+├─ Intro paragraph
+├─ Bullet list (5-7 common symptoms)
+
+H2: Some People May Also Experience Physical Symptoms
+├─ 2-3 paragraphs about physical manifestations
+├─ [IMAGE]
+
+H2: [Service] Questions (FAQ Mini-Section)
+├─ 3 FAQ questions as H3 or bold text
+├─ Short answers (2-3 sentences each)
+
+SIDEBAR (ALWAYS PRESENT):
+├─ Services Section (6 links)
+├─ Specialties Section (7 links)
+├─ Models of Therapy Section (5 links)
+├─ Google Reviews Button
+└─ "Book Your Appointment Online" CTA
 ```
 
-### **2. Problem Recognition Template**
-```html
-<h2>Sound Familiar? You're Not Alone</h2>
-<p>Living with [condition] in [City] brings unique challenges.
-Whether it's [local challenge 1], [local challenge 2], or [local challenge 3],
-[condition] can feel overwhelming.</p>
+**Key learnings:**
+- Word count: 1,800-2,500 words (BEFORE our Phase 1 & 2 SEO additions)
+- Bullet lists everywhere (easier scanning)
+- 2 images minimum
+- FAQ integrated into main content (not just at bottom)
+- "Talk With A Therapist" CTA mid-page
+- Heavy internal linking (18+ sidebar links)
 
-<div class="problem-list">
-  <h3>"Does This Sound Like You?"</h3>
-  <ul>
-    <li><strong>[Symptom Name]:</strong> [Relatable description]</li>
-    <li><strong>[Local Challenge]:</strong> [City-specific struggle]</li>
-    <!-- 8-10 total items -->
+---
+
+### **1. Hero Section Template (UPDATED)**
+
+```html
+<h1>[Service] Therapy [Location]</h1>
+
+<div class="hero-content">
+  <p class="lead-text">
+    [Empathy hook - acknowledge the struggle]. [Service] can be a debilitating
+    [condition/challenge] – which is why it's important that people in [Location]
+    know what their therapy options are when it comes to seeking professional support.
+  </p>
+
+  <p>
+    From a clinical perspective, [condition] refers to [brief definition with
+    authority]. These are just some of the determinants of this [condition].
+    There are specific types and subtypes with respect to its characteristics.
+  </p>
+
+  <p>
+    [Condition] is one of the most common mental health challenges in Ontario.
+    About [statistic] Canadians will experience [condition] at some point in their life.
+  </p>
+
+  <p>
+    There are several therapeutic techniques that have been developed to treat
+    [condition] and have evolved over time. Some of the more effective approaches include:
+  </p>
+
+  <ul class="therapy-approaches">
+    <li><a href="/act-therapy-ontario.html">Acceptance and Commitment Therapy (ACT)</a></li>
+    <li><a href="/cbt-therapy-techniques-ontario.html">Cognitive Behavioral Therapy (CBT)</a></li>
+    <li>Psychodynamic Therapies</li>
+    <li>Mindfulness-Based Approaches</li>
   </ul>
 </div>
 ```
 
-### **3. Solution Section Template**
-```html
-<h2>How Therapy Helps with [Condition]</h2>
-<p>Using evidence-based approaches like Acceptance and Commitment Therapy (ACT),
-we focus on [specific outcomes]. Rather than [common misconception],
-we [actual approach].</p>
+### **2. Treatment Approach Section (UPDATED)**
 
-<div class="benefits-list">
-  <h3>What You'll Learn:</h3>
-  <ul>
-    <li><strong>[Skill 1]:</strong> [Practical application]</li>
-    <li><strong>[Skill 2]:</strong> [Real-world benefit]</li>
-    <!-- 6 total skills -->
-  </ul>
+```html
+<h2>We Provide [Service] That Helps You</h2>
+
+<p>
+  The first thing to understand is that your treatment will consist of evidence-based
+  approaches with your Ontario therapist providing you with strategies and feedback on
+  progress. This may include techniques for [specific benefit 1], [specific benefit 2],
+  as well as learning various behavioral skills specific to your situation.
+</p>
+
+<p>
+  Your therapist at Next Step Therapy will help you understand why you're experiencing
+  [challenge] through their training in <a href="/act-therapy-ontario.html">ACT therapy</a>.
+  They'll help you become aware of the way you think and feel, as well as understand the
+  patterns that may be keeping you stuck. You can use this knowledge to shape your thoughts
+  and actions in a more aligned and values-based direction.
+</p>
+
+<div class="cta-inline">
+  <a href="/#contact" class="manus-primary-cta">Talk With A Therapist</a>
+</div>
+
+<div class="content-image">
+  <img src="/images/therapy-session-warm.jpg" alt="[Service] in [Location]" loading="lazy">
+</div>
+```
+
+### **3. Types/Symptoms Section (UPDATED - Virtuous Circle Pattern)**
+
+```html
+<h2>What Are The [X] Types of [Condition]?</h2>
+
+<p>
+  There are many different types of [condition]. Understanding which one(s) you
+  may be experiencing can help you better manage your symptoms. The [X] major
+  types of [condition] include:
+</p>
+
+<ul class="types-list">
+  <li><strong>[Type 1]:</strong> [Brief description]</li>
+  <li><strong>[Type 2]:</strong> [Brief description]</li>
+  <li><strong>[Type 3]:</strong> [Brief description]</li>
+  <li><strong>[Type 4]:</strong> [Brief description]</li>
+  <li><strong>[Type 5]:</strong> [Brief description]</li>
+</ul>
+
+<p>
+  If your [condition] is affecting your life and you feel it's time to seek support,
+  learning about the therapy options in [Location] and trying evidence-based techniques
+  may be beneficial. <a href="/#contact">Contact a therapist</a> to get started on the
+  path to [positive outcome] today.
+</p>
+```
+
+### **4. Common Symptoms Section (NEW - From Virtuous Circle)**
+
+```html
+<h2>All [Condition] Have Certain Symptoms In Common</h2>
+
+<p>
+  [Condition] is a universal human experience that can be described as [definition].
+  It's understandable this experience can be so broad, as it can lead to some common
+  symptoms including:
+</p>
+
+<ul class="symptoms-list">
+  <li>[Symptom 1]</li>
+  <li>[Symptom 2]</li>
+  <li>[Symptom 3]</li>
+  <li>[Symptom 4]</li>
+  <li>[Symptom 5]</li>
+  <li>[Symptom 6]</li>
+</ul>
+
+<p>
+  These symptoms are often debilitating and affect our ability to function during our
+  daily routines and responsibilities. Despite its challenges, [condition] can be managed
+  with the right support and some effective coping strategies.
+</p>
+```
+
+### **5. Physical Symptoms Section (NEW - From Virtuous Circle)**
+
+```html
+<h2>Some People May Also Experience Physical Symptoms of [Condition]</h2>
+
+<p>
+  [Condition] isn't always obvious, and this can make it confusing for family members,
+  friends, and coworkers to spot the signs that someone they know may be struggling.
+  In fact, [condition] can cause physical symptoms even before people realize they need support.
+</p>
+
+<p>
+  The physical symptoms of [condition] can occur before, during, or after challenging
+  situations. For example, an individual may experience [physical symptom example 1]
+  before [triggering situation]. Or during [difficult moment], they may [physical symptom example 2].
+</p>
+
+<p>
+  These physical symptoms can be unsettling, but once a person learns about why these
+  symptoms are happening, it typically leads to increased understanding and relief.
+</p>
+```
+
+### **6. Mini-FAQ Section (UPDATED - Virtuous Circle Pattern)**
+
+```html
+<h2>[Service] Questions</h2>
+
+<div class="mini-faq">
+  <div class="faq-item">
+    <h3>Will therapy help with my [condition]?</h3>
+    <p>
+      There are many options to consider when it comes to treating [condition].
+      Therapy, such as ACT or CBT, can be an effective option for people experiencing
+      [specific challenges]. Research shows that [evidence-based claim].
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How does [service] work?</h3>
+    <p>
+      Therapy works by helping people understand how their thoughts influence their
+      feelings and behaviors, and teaches them how to [specific skill]. [Therapy approach]
+      can help people develop skills to better manage [specific challenge].
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I find the right therapist in [Location]?</h3>
+    <p>
+      A good way to start is by reaching out for a free consultation. At Next Step Therapy,
+      we offer a <a href="/#contact">free 15-minute consultation</a> to ensure we're a
+      good fit for your needs. Your comfort and connection with your therapist is essential
+      for progress.
+    </p>
+  </div>
 </div>
 ```
 
@@ -1788,6 +2045,170 @@ Before deploying any new page, verify:
 
 ---
 
+## 🏆 VIRTUOUS CIRCLE SIDEBAR STRATEGY (CRITICAL FOR RANKINGS)
+
+### **The Internal Linking Powerhouse**
+
+Virtuous Circle's sidebar appears on EVERY page and contains 18 strategic internal links. This is a core part of their SEO success.
+
+### **Sidebar Structure to Implement:**
+
+```html
+<aside class="sidebar">
+  <!-- Services Section -->
+  <div class="sidebar-section">
+    <h3>Services</h3>
+    <ul>
+      <li><a href="/individual-counselling-ontario.html">Individual Counselling</a></li>
+      <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+      <li><a href="/student-mental-health-ontario.html">Student Support</a></li>
+      <li><a href="/workplace-stress-therapy-ontario.html">Workplace Therapy</a></li>
+      <li><a href="/anxiety-therapy-ontario.html">Anxiety Support</a></li>
+      <li><a href="/depression-therapy-ontario.html">Depression Support</a></li>
+    </ul>
+  </div>
+
+  <!-- Specialties Section -->
+  <div class="sidebar-section">
+    <h3>Specialties</h3>
+    <ul>
+      <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+      <li><a href="/depression-therapy-ontario.html">Depression Counselling</a></li>
+      <li><a href="/trauma-therapy-ontario.html">Trauma Therapy</a></li>
+      <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+      <li><a href="/university-anxiety-therapy-ontario.html">University Anxiety</a></li>
+      <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
+      <li><a href="/impostor-syndrome-therapy-ontario.html">Impostor Syndrome</a></li>
+    </ul>
+  </div>
+
+  <!-- Models of Therapy Section -->
+  <div class="sidebar-section">
+    <h3>Therapy Approaches</h3>
+    <ul>
+      <li><a href="/act-therapy-ontario.html">ACT Therapy</a></li>
+      <li><a href="/cbt-therapy-techniques-ontario.html">CBT Therapy</a></li>
+      <li><a href="/mindfulness-therapy-ontario.html">Mindfulness Therapy</a></li>
+      <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+    </ul>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="sidebar-cta">
+    <h3>Book Your Appointment Online</h3>
+    <p>We're currently accepting new clients. Book a free 15-minute consultation to see if we're a good fit.</p>
+    <a href="/#contact" class="manus-primary-cta">Get Started</a>
+  </div>
+</aside>
+```
+
+### **Sidebar CSS:**
+
+```css
+.sidebar {
+  background: var(--bg-alternate);
+  padding: 2rem;
+  border-radius: 8px;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-section li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-section a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.sidebar-section a:hover {
+  color: var(--primary-green);
+  padding-left: 5px;
+}
+
+.sidebar-cta {
+  background: var(--primary-green);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sidebar-cta h3 {
+  color: white;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.sidebar-cta p {
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 968px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+    margin-top: 3rem;
+  }
+}
+```
+
+---
+
+## 📊 WORD COUNT TARGETS (UPDATED WITH VIRTUOUS CIRCLE DATA)
+
+Based on Virtuous Circle's top pages:
+
+**Before Phase 1 & 2 SEO additions:**
+- Service pages: 1,800-2,500 words (Virtuous Circle baseline)
+
+**After Phase 1 & 2 SEO additions:**
+- Service pages: 4,000-4,500 words (our enhanced version)
+- Location pages: 3,500-4,000 words
+- Condition pages: 3,500-4,000 words
+
+**Section breakdown:**
+- Hero + intro (Virtuous Circle pattern): 400-500 words
+- Treatment approach section: 300-400 words
+- Types/symptoms sections: 400-500 words
+- Physical symptoms section: 200-300 words
+- Mini-FAQ (3 questions): 200-300 words
+- **Subtotal before our SEO additions: ~1,800-2,500 words**
+- FAQ section (15 questions - our addition): 1,000-1,200 words
+- Comparison table section (our addition): 300-400 words
+- Location section (our addition): 400-500 words
+- Process steps section (our addition): 300-400 words
+- **Total with our enhancements: 4,000-4,500 words**
+
+---
+
 *This COMPLETE PRD ensures 100% consistency, compliance, and quality across all page creation efforts. Every aspect from design to deployment is documented and standardized.*
 
-*Version 2.0 - Last Updated: September 2025*
+*Version 3.0 - Last Updated: October 2025*
+*Includes Virtuous Circle Counselling proven patterns (DR 27, 2,700 monthly visitors, $1.5M+ revenue)*
