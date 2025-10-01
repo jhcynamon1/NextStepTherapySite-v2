@@ -1,643 +1,756 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
-    <!-- Google Analytics 4 + Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track phone clicks
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Preload Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-
-    <!-- SEO Meta Data - OPTIMIZED FOR "online therapy burlington" -->
+    <!-- SEO Meta Tags -->
     <title>Online Therapy Burlington | Virtual Counselling Burlington ON</title>
     <meta name="description" content="Online therapy Burlington with CRPO registered psychotherapist. Virtual counselling for Burlington residents. Evening hours, insurance accepted. Free consultation call today.">
+    <link rel="canonical" href="https://nextsteptherapy.ca/burlington-online-therapy">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Burlington Online Therapy | CRPO Registered | Next Step Therapy">
-    <meta property="og:description" content="Professional CRPO registered online therapy for Burlington residents. Convenient virtual counselling with insurance coverage and flexible scheduling.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Online Therapy Burlington | Virtual Counselling Burlington ON">
+    <meta property="og:description" content="Professional online therapy for Burlington residents. CRPO registered. Virtual sessions, insurance accepted.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextsteptherapy.ca/burlington-online-therapy.html">
+    <meta property="og:url" content="https://nextsteptherapy.ca/burlington-online-therapy">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
 
-    <!-- Canonical URL - CRITICAL FOR SEO -->
-    <link rel="canonical" href="https://www.nextsteptherapy.ca/burlington-online-therapy.html">
+    <!-- Additional Meta -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Jesse Cynamon, RP">
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Burlington">
 
-    <!-- Schema Markup for Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://www.nextsteptherapy.ca/burlington-online-therapy.html#webpage",
-      "url": "https://www.nextsteptherapy.ca/burlington-online-therapy.html",
-      "name": "Burlington Online Therapy - CRPO Registered Virtual Counselling",
-      "description": "CRPO registered online therapy services specifically for Burlington residents. Professional virtual counselling with evidence-based treatments and insurance coverage.",
-      "isPartOf": {
-        "@id": "https://www.nextsteptherapy.ca/#website"
-      },
-      "about": {
-        "@type": "MedicalWebPage",
-        "aspect": "Mental Health Services",
-        "audience": {
-          "@type": "PeopleAudience",
-          "geographicArea": {
-            "@type": "Place",
-            "name": "Burlington, Ontario, Canada"
-          }
-        }
-      },
-      "provider": {
-        "@type": "LocalBusiness",
-        "@id": "https://www.nextsteptherapy.ca/#organization",
-        "name": "Next Step Therapy",
-        "priceRange": "$150-$200",
-        "telephone": "+1-416-306-2157",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "ON",
-          "addressCountry": "CA"
-        },
-        "areaServed": [
-          {
-            "@type": "Place",
-            "name": "Burlington, Ontario"
-          }
-        ]
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.nextsteptherapy.ca/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Burlington Online Therapy",
-            "item": "https://www.nextsteptherapy.ca/burlington-online-therapy.html"
-          }
-        ]
-      }
-    }
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/asset104-180.png">
+    <link rel="apple-touch-icon" href="/images/asset104-180.png">
 
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HealthAndBeautyBusiness",
-      "@id": "https://www.nextsteptherapy.ca/#organization",
-      "name": "Next Step Therapy",
-      "description": "CRPO registered online therapy and virtual counselling for Burlington residents",
-      "url": "https://www.nextsteptherapy.ca",
-      "telephone": "+1-416-306-2157",
-      "email": "info@nextsteptherapy.ca",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 43.3255,
-        "longitude": -79.7990
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "20:00"
-        }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Burlington CRPO Online Therapy",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CRPO Virtual Therapy",
-              "description": "Professional online therapy by CRPO registered psychotherapist"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Burlington Couples Therapy",
-              "description": "Virtual relationship counselling for Burlington couples"
-            }
-          }
-        ]
-      }
-    }
-    </script>
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared.min.css">
 
     <style>
+        :root {
+            --primary-green: #6B8E6F;
+            --primary-green-hover: #5A7D5E;
+            --primary-green-light: rgba(107, 142, 111, 0.1);
+            --primary-green-border: rgba(107, 142, 111, 0.2);
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6B7D;
+            --bg-primary: #FFFFFF;
+            --bg-alternate: #F8F9FA;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #2E5668;
-            --secondary-color: #8FBC8F;
-            --text-dark: #2C3E50;
-            --text-light: #5D6D7E;
-            --bg-light: #F8F9FA;
-            --border-light: #E1E8ED;
-        }
-
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: white;
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            background: var(--bg-primary);
         }
 
-        /* Header & Navigation */
-        header {
-            background: white;
-            border-bottom: 1px solid var(--border-light);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
+            height: 50px;
+            width: auto;
         }
 
-        .nav-links {
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .credentials-badge-prominent {
+            background: var(--primary-green-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-green-border);
+        }
+
+        .nav {
             display: flex;
             gap: 2rem;
-            list-style: none;
+            align-items: center;
         }
 
-        .nav-links a {
-            color: var(--text-dark);
+        .nav a {
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
+        .nav a:hover {
+            color: var(--primary-green);
         }
 
-        /* Hero Section */
+        .header-phone {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5rem 2rem;
+            background: linear-gradient(135deg, rgba(107, 142, 111, 0.1), rgba(248, 249, 250, 0.9));
+            padding: 5rem 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-heading);
             font-size: 3rem;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
+        .trust-pills {
             display: flex;
-            gap: 1rem;
+            flex-wrap: wrap;
             justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary-color);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Trust Indicators */
-        .trust-bar {
-            background: var(--bg-light);
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .trust-items {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        /* Main Content Sections */
-        .section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Location Section */
-        .locations {
-            background: var(--bg-light);
-        }
-
-        .location-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
 
-        .location-item {
+        .trust-pill {
             background: white;
-            padding: 1rem;
+            color: var(--primary-green);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--primary-green-border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin: 4rem auto;
+        }
+
+        .main-content {
+            min-width: 0;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .section a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .section a:hover {
+            border-bottom-color: var(--primary-green);
+        }
+
+        /* Lists */
+        .therapy-approaches, .symptoms-list, .goals-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .therapy-approaches li, .symptoms-list li, .goals-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .therapy-approaches li::before, .symptoms-list li::before, .goals-list li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* CTA Buttons */
+        .manus-primary-cta {
+            background: var(--primary-green) !important;
+            color: white !important;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
+            font-size: 1.05rem;
+        }
+
+        .manus-primary-cta:hover {
+            background: var(--primary-green-hover) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
+            color: white !important;
+        }
+
+        .cta-inline {
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+
+        /* Mini FAQ */
+        .mini-faq {
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            background: var(--bg-alternate);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .faq-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-alternate);
+            padding: 2rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .sidebar-section a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+        }
+
+        .sidebar-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 1.5rem;
             border-radius: 8px;
             text-align: center;
-            font-weight: 500;
-            color: var(--text-dark);
-            border: 2px solid transparent;
-            transition: all 0.3s;
         }
 
-        .location-item:hover {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
+        .sidebar-cta h3 {
+            color: white;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            border: none;
+            padding: 0;
         }
 
-        /* FAQ Section */
-        .faq-item {
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .faq-question {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        .sidebar-cta p {
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
         }
 
         /* Footer */
-        footer {
-            background: var(--primary-color);
+        .footer {
+            background: var(--text-primary);
             color: white;
-            padding: 3rem 2rem 1rem;
-            text-align: center;
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
         }
 
         .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
+        .footer p {
+            margin-bottom: 0.5rem;
             color: white;
-            text-decoration: none;
-            opacity: 0.9;
-        }
-
-        .footer-links a:hover {
             opacity: 1;
         }
 
+        .footer p:last-child {
+            opacity: 0.8;
+        }
+
         /* Mobile Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
-            .nav-links {
+            .nav {
                 display: none;
             }
 
-            .section {
-                padding: 3rem 1rem;
-            }
-
-            .trust-items {
-                flex-direction: column;
-                align-items: center;
+            .header-content {
+                flex-wrap: wrap;
+                gap: 1rem;
             }
         }
     </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://nextsteptherapy.ca/burlington-online-therapy#webpage",
+          "url": "https://nextsteptherapy.ca/burlington-online-therapy",
+          "name": "Online Therapy Burlington | Virtual Counselling Burlington ON",
+          "description": "Professional online therapy for Burlington residents with CRPO registered psychotherapist. Virtual counselling, insurance accepted.",
+          "inLanguage": "en-CA",
+          "isPartOf": {
+            "@id": "https://nextsteptherapy.ca/#website"
+          },
+          "about": {
+            "@type": "MedicalTherapy",
+            "name": "Online Therapy"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "@id": "https://nextsteptherapy.ca/images/therapy-session-warm.jpg",
+            "url": "https://nextsteptherapy.ca/images/therapy-session-warm.jpg",
+            "width": 800,
+            "height": 534
+          },
+          "datePublished": "2025-10-01",
+          "dateModified": "2025-10-01"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nextsteptherapy.ca/#website",
+          "url": "https://nextsteptherapy.ca",
+          "name": "Next Step Therapy",
+          "description": "Professional psychotherapy services throughout Ontario",
+          "publisher": {
+            "@id": "https://nextsteptherapy.ca/#organization"
+          },
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://nextsteptherapy.ca/#organization",
+          "name": "Next Step Therapy",
+          "url": "https://nextsteptherapy.ca",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://nextsteptherapy.ca/images/asset104.png",
+            "url": "https://nextsteptherapy.ca/images/asset104.png",
+            "width": 180,
+            "height": 180
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-416-306-2157",
+            "contactType": "customer service",
+            "email": "jesse@nextsteptherapy.ca",
+            "areaServed": "CA-ON",
+            "availableLanguage": "en"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://nextsteptherapy.ca/#person",
+          "name": "Jesse Cynamon",
+          "givenName": "Jesse",
+          "familyName": "Cynamon",
+          "jobTitle": "Registered Psychotherapist",
+          "honorificSuffix": "RP",
+          "worksFor": {
+            "@id": "https://nextsteptherapy.ca/#organization"
+          },
+          "telephone": "+14163062157",
+          "email": "jesse@nextsteptherapy.ca",
+          "url": "https://nextsteptherapy.ca",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Burlington",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          },
+          "knowsAbout": [
+            "Online Therapy",
+            "Virtual Therapy",
+            "ACT Therapy",
+            "CBT Therapy",
+            "Anxiety Treatment",
+            "Depression Treatment"
+          ],
+          "memberOf": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "identifier": "CRPO #10979"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://nextsteptherapy.ca/burlington-online-therapy#service",
+          "serviceType": "Online Therapy",
+          "provider": {
+            "@id": "https://nextsteptherapy.ca/#person"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Burlington",
+            "containsPlace": [
+              {"@type": "Neighborhood", "name": "Downtown Burlington"},
+              {"@type": "Neighborhood", "name": "Aldershot"},
+              {"@type": "Neighborhood", "name": "Appleby"},
+              {"@type": "Neighborhood", "name": "Brant Hills"}
+            ]
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceType": "Virtual Therapy",
+            "serviceLocation": {
+              "@type": "Place",
+              "name": "Burlington, Ontario"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "175.00",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://nextsteptherapy.ca/#contact"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <a href="https://www.nextsteptherapy.ca/" class="logo">Next Step Therapy</a>
-            <ul class="nav-links">
-                <li><a href="https://www.nextsteptherapy.ca/">Home</a></li>
-                <li><a href="https://www.nextsteptherapy.ca/#about">About</a></li>
-                <li><a href="https://www.nextsteptherapy.ca/counselling-services.html">Services</a></li>
-                <li><a href="https://www.nextsteptherapy.ca/#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                <a href="/" class="logo-text">Next Step Therapy</a>
+                <span class="credentials-badge-prominent">CRPO #10979</span>
+            </div>
+            <nav class="nav">
+                <a href="/#approach">Approach</a>
+                <a href="/#specializations">Services</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
         <h1>Online Therapy Burlington</h1>
-        <p class="hero-subtitle">CRPO Registered Virtual Counselling for Burlington Residents</p>
-        <div class="cta-buttons">
-            <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary">Book Free Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+        <div class="trust-pills">
+            <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+            <span class="trust-pill">✓ Serving All of Burlington</span>
+            <span class="trust-pill">✓ Virtual Sessions Available</span>
+            <span class="trust-pill">✓ Free 15-Min Consultation</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Trust Bar -->
-    <section class="trust-bar">
-        <div class="trust-items">
-            <div class="trust-item">
-                <span></span> CRPO Registered #10979
-            </div>
-            <div class="trust-item">
-                <span></span> Burlington Focused
-            </div>
-            <div class="trust-item">
-                <span></span> Professional Standards
-            </div>
-            <div class="trust-item">
-                <span></span> Evidence-Based Care
-            </div>
-        </div>
-    </section>
+<!-- Main Content -->
+<div class="container">
+    <div class="content-wrapper">
+        <main class="main-content">
 
-    <!-- Main Content -->
-    <section class="section">
-        <h2 class="section-title">Burlington Online Therapy Services</h2>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-light); max-width: 800px; margin: 0 auto 3rem;">
-            As a CRPO registered psychotherapist (#10979), I provide professional online therapy specifically designed for Burlington residents.
-            My practice adheres to the highest standards of professional ethics, confidentiality, and evidence-based treatment. Whether you're
-            dealing with anxiety, depression, relationship issues, or life transitions, receive quality mental health care from the comfort of your Burlington home.
-        </p>
+            <!-- Intro Section -->
+            <section class="section">
+                <h2 class="section-title">Online Therapy in Burlington Following Life's Challenges</h2>
 
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>CRPO Ethical Standards</h3>
-                <p>All therapy sessions follow strict CRPO guidelines for professional conduct, confidentiality, and client safety. Your care meets the highest professional standards.</p>
-            </div>
-            <div class="service-card">
-                <h3>Evidence-Based Treatment</h3>
-                <p>Utilizing proven therapeutic approaches including ACT, CBT, and mindfulness-based interventions with demonstrated effectiveness for mental health concerns.</p>
-            </div>
-            <div class="service-card">
-                <h3>Burlington Community Understanding</h3>
-                <p>Familiar with Burlington's unique community dynamics, local stressors, and the specific needs of residents in this vibrant Halton Region city.</p>
-            </div>
-            <div class="service-card">
-                <h3>Professional Accountability</h3>
-                <p>As a CRPO member, I maintain continuing education, supervision, and professional development to ensure you receive the most current and effective care.</p>
-            </div>
-            <div class="service-card">
-                <h3>Comprehensive Assessment</h3>
-                <p>Thorough intake and ongoing assessment process to develop personalized treatment plans that address your specific goals and Burlington lifestyle.</p>
-            </div>
-            <div class="service-card">
-                <h3>Cultural Sensitivity</h3>
-                <p>Culturally informed practice that respects Burlington's diverse community and provides inclusive care for all residents regardless of background.</p>
-            </div>
-        </div>
-    </section>
+                <p>When you're facing mental health challenges in Burlington, accessing professional support should be convenient and accessible. Online therapy offers Burlington residents the same quality care as in-person sessions, with the added benefits of flexibility, privacy, and no commute through downtown traffic or along the QEW.</p>
 
-    <!-- Locations Section -->
-    <section class="section locations">
-        <h2 class="section-title">Virtual Counselling Burlington Coverage</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">
-            Professional CRPO registered therapy available throughout Burlington and surrounding areas:
-        </p>
-        <div class="location-grid">
-            <div class="location-item">Burlington Central</div>
-            <div class="location-item">Aldershot GO</div>
-            <div class="location-item">Appleby</div>
-            <div class="location-item">Brant Hills</div>
-            <div class="location-item">Freeman Station</div>
-            <div class="location-item">Millcroft</div>
-            <div class="location-item">Orchard Community</div>
-            <div class="location-item">Tyandaga</div>
-            <div class="location-item">Palmer</div>
-            <div class="location-item">Roseland</div>
-            <div class="location-item">Mountainside</div>
-            <div class="location-item">Headon Forest</div>
-            <div class="location-item">Shoreacres</div>
-            <div class="location-item">Burlington Heights</div>
-            <div class="location-item">Kilbride</div>
-            <div class="location-item">Lowville</div>
-        </div>
-    </section>
+                <p>From a clinical perspective, online therapy (also called virtual therapy or teletherapy) involves meeting with a registered psychotherapist through secure video conferencing. Whether you're working from home in Aldershot, raising a family near the waterfront, or commuting to Toronto for work, virtual counselling fits into your Burlington lifestyle without adding travel time to your already busy schedule.</p>
 
-    <!-- Benefits Section -->
-    <section class="section">
-        <h2 class="section-title">Why Choose CRPO Registered Burlington Online Therapy</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3><� Professional Regulation</h3>
-                <p>CRPO registration ensures adherence to professional standards, ethical guidelines, and continuous quality assurance for your protection.</p>
+                <p>Research consistently shows that online therapy is as effective as in-person therapy for anxiety, depression, stress, and relationship challenges. For Burlington residents, this means you can access professional support from your own space, whether that's your home near Appleby, your office in downtown Burlington, or even during your lunch break at Spencer Smith Park.</p>
+
+                <p>At <a href="/">Next Step Therapy</a>, I provide evidence-based virtual counselling using several therapeutic approaches that are well-suited for online delivery:</p>
+
+                <ul class="therapy-approaches">
+                    <li><a href="/">Acceptance and Commitment Therapy (ACT)</a></li>
+                    <li><a href="/cbt-therapy-techniques-ontario.html">Cognitive Behavioral Therapy (CBT)</a></li>
+                    <li>Mindfulness-Based Approaches</li>
+                    <li>Emotion-Focused Therapy</li>
+                </ul>
+            </section>
+
+            <!-- Treatment Section -->
+            <section class="section">
+                <h2 class="section-title">We Provide Online Therapy That Helps You</h2>
+
+                <p>The first thing to understand is that your online therapy will consist of evidence-based approaches with your therapist providing you with strategies and feedback on progress. This may include techniques for managing anxiety, processing difficult emotions, improving relationships, and navigating life transitions—all delivered through secure virtual sessions that fit your Burlington schedule.</p>
+
+                <p>Your therapist at Next Step Therapy will help you understand your mental health challenges through training in ACT therapy. They'll help you become aware of the way you think and feel, as well as understand the patterns that may be keeping you stuck. You can use this knowledge to shape your thoughts and actions in a more aligned and values-based direction, whether you're dealing with workplace stress in downtown Burlington or family challenges at home.</p>
+
+                <p>The convenience of <a href="/virtual-therapy-ontario.html">virtual therapy</a> means Burlington residents can access professional support without the barriers that often prevent people from seeking help—no commute, no parking challenges, no waiting rooms, and flexible scheduling that works around your responsibilities.</p>
+
+                <div class="cta-inline">
+                    <a href="/#contact" class="manus-primary-cta">Talk With A Therapist</a>
+                </div>
+            </section>
+
+            <!-- Reasons Section -->
+            <section class="section">
+                <h2 class="section-title">Common Reasons Burlington Residents Seek Online Therapy</h2>
+
+                <p>People in Burlington access virtual therapy for a wide range of mental health concerns. Understanding that others share similar challenges can help reduce the isolation that often comes with struggling. Here are common reasons Burlington residents reach out for online therapy:</p>
+
+                <ul class="symptoms-list">
+                    <li>Work-related stress and burnout from commuting to Toronto or demanding local jobs</li>
+                    <li>Anxiety and panic attacks affecting daily functioning</li>
+                    <li>Depression and low mood that won't lift on its own</li>
+                    <li>Relationship difficulties with partners or family members</li>
+                    <li>Life transitions including career changes, divorce, or becoming a parent</li>
+                    <li>Social isolation and loneliness despite living in a vibrant community</li>
+                    <li>Pandemic-related mental health challenges that persist</li>
+                    <li>Work-life balance struggles in a hybrid or remote work environment</li>
+                    <li>Grief and loss following the death of a loved one</li>
+                    <li>Self-esteem and confidence issues</li>
+                </ul>
+
+                <p>These challenges are common and treatable. Online therapy provides Burlington residents with accessible, professional support to address these concerns from the comfort and privacy of your own space.</p>
+            </section>
+
+            <!-- Physical Benefits Section -->
+            <section class="section">
+                <h2 class="section-title">Physical Benefits of Virtual Therapy Access</h2>
+
+                <p>Beyond the mental health support, online therapy offers Burlington residents practical advantages that make it easier to prioritize your wellbeing. The elimination of commute time alone can reduce stress and make therapy more sustainable in your busy schedule.</p>
+
+                <p>Consider the physical benefits of accessing therapy virtually from your Burlington home or office:</p>
+
+                <ul class="goals-list">
+                    <li>No commute stress through downtown Burlington traffic or along the QEW</li>
+                    <li>Flexible scheduling around work, childcare, and other Burlington commitments</li>
+                    <li>Privacy of your own space without worrying about running into someone in a waiting room</li>
+                    <li>Accessible during work breaks without leaving your Burlington workplace</li>
+                    <li>Weather-independent—no cancelling sessions due to winter storms or summer heat</li>
+                    <li>Reduced anxiety about attending in-person appointments</li>
+                </ul>
+
+                <p>For Burlington residents balancing multiple responsibilities, these practical advantages can make the difference between accessing therapy or continuing to struggle alone. Virtual sessions remove barriers while maintaining the same professional standards and therapeutic effectiveness.</p>
+            </section>
+
+            <!-- Goals Section -->
+            <section class="section">
+                <h2 class="section-title">The Goals and Benefits of Online Therapy for Burlington</h2>
+
+                <p>The goal of online therapy is the same as in-person therapy: to help you develop skills, process difficult experiences, and build a meaningful life aligned with your values. For Burlington residents, virtual therapy offers these benefits with added convenience.</p>
+
+                <p>Important advantages of online therapy for Burlington include:</p>
+
+                <ul class="goals-list">
+                    <li>Same quality as in-person therapy with research-backed effectiveness</li>
+                    <li>Insurance coverage through most extended health plans</li>
+                    <li>CRPO registered therapist ensuring professional standards</li>
+                    <li>Flexible scheduling including evening and weekend appointments</li>
+                    <li>Access from anywhere in Burlington or while traveling</li>
+                    <li>Secure, confidential video platform protecting your privacy</li>
+                </ul>
+
+                <p>Whether you're in downtown Burlington, the Aldershot area, or near Burlington Heights, you can access professional mental health support that fits into your life rather than requiring you to rearrange everything around therapy appointments.</p>
+            </section>
+
+            <!-- Mini FAQ -->
+            <section class="section">
+                <h2 class="section-title">Burlington Online Therapy Questions</h2>
+
+                <div class="mini-faq">
+                    <div class="faq-item">
+                        <h3>Is online therapy as effective as in-person therapy?</h3>
+                        <p>Yes, research consistently demonstrates that online therapy is as effective as in-person therapy for conditions including anxiety, depression, stress, and relationship challenges. For Burlington residents, virtual therapy provides the same evidence-based approaches with added convenience and accessibility.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Does insurance cover online therapy in Burlington?</h3>
+                        <p>Most extended health insurance plans in Ontario cover virtual therapy sessions with a CRPO registered psychotherapist. Online sessions are treated the same as in-person sessions for insurance purposes. I provide detailed receipts that make submitting claims straightforward for Burlington residents.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What areas of Burlington do you serve?</h3>
+                        <p>I provide online therapy to residents throughout Burlington including downtown Burlington, Aldershot, Appleby, Brant Hills, Freeman, Millcroft, Burlington Heights, the waterfront area, and all surrounding neighborhoods. Virtual sessions mean you can access therapy from anywhere in Burlington with an internet connection.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Services Section -->
+            <div class="sidebar-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                    <li><a href="/student-mental-health-ontario.html">Student Support</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Therapy</a></li>
+                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Support</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Support</a></li>
+                    <li><a href="/counselling-ontario.html">Counselling Services</a></li>
+                </ul>
             </div>
-            <div class="service-card">
-                <h3>=� Insurance Recognition</h3>
-                <p>CRPO registration is recognized by all major insurance providers in Ontario, ensuring your virtual therapy sessions are covered.</p>
+
+            <!-- Specialties Section -->
+            <div class="sidebar-section">
+                <h3>Specialties</h3>
+                <ul>
+                    <li><a href="/anxiety-therapy-toronto.html">Anxiety Therapy</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Counselling</a></li>
+                    <li><a href="/trauma-therapy-toronto.html">Trauma Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                    <li><a href="/university-anxiety-therapy-ontario.html">University Anxiety</a></li>
+                    <li><a href="/performance-anxiety-therapy-toronto.html">Performance Anxiety</a></li>
+                    <li><a href="/impostor-syndrome-therapy-ontario.html">Impostor Syndrome</a></li>
+                </ul>
             </div>
-            <div class="service-card">
-                <h3><� Qualified Expertise</h3>
-                <p>CRPO registration requires extensive education, supervised practice, and ongoing professional development to maintain competency.</p>
+
+            <!-- Therapy Approaches Section -->
+            <div class="sidebar-section">
+                <h3>Therapy Approaches</h3>
+                <ul>
+                    <li><a href="/">ACT Therapy</a></li>
+                    <li><a href="/cbt-therapy-techniques-ontario.html">CBT Therapy</a></li>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                </ul>
             </div>
-            <div class="service-card">
-                <h3>= Professional Accountability</h3>
-                <p>CRPO oversight provides an additional layer of professional accountability and client protection for your peace of mind.</p>
+
+            <!-- CTA Section -->
+            <div class="sidebar-cta">
+                <h3>Book Your Appointment Online</h3>
+                <p>We're currently accepting new Burlington clients. Book a free 15-minute consultation to see if we're a good fit.</p>
+                <a href="/#contact" class="manus-primary-cta">Get Started</a>
             </div>
-            <div class="service-card">
-                <h3>=� Local Burlington Focus</h3>
-                <p>Specialized understanding of Burlington-specific challenges while maintaining province-wide professional standards.</p>
-            </div>
-            <div class="service-card">
-                <h3>� Ethical Practice</h3>
-                <p>Strict adherence to CRPO code of ethics ensuring professional boundaries, confidentiality, and client-centered care.</p>
-            </div>
-        </div>
-    </section>
+        </aside>
+    </div>
+</div>
 
-    <!-- FAQ Section -->
-    <section class="section">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <div class="faq-question">What does CRPO registration mean for my therapy?</div>
-            <div class="faq-answer">CRPO (College of Registered Psychotherapists of Ontario) registration means I've met rigorous education, training, and competency standards. It ensures ethical practice, professional accountability, and insurance coverage for your sessions.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Is CRPO registered online therapy covered by insurance?</div>
-            <div class="faq-answer">Yes, all major insurance providers in Ontario recognize CRPO registration. Virtual therapy sessions are covered the same as in-person sessions when provided by a CRPO registered psychotherapist.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">How do I verify your CRPO registration?</div>
-            <div class="faq-answer">You can verify my CRPO registration (#10979) on the official CRPO public register at crpo.ca. This transparency ensures you're working with a qualified, regulated professional.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Do you understand Burlington-specific mental health needs?</div>
-            <div class="faq-answer">Absolutely. While maintaining CRPO professional standards, I understand the unique aspects of Burlington living - from commuting pressures to community dynamics - and tailor treatment accordingly.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">What happens if I have concerns about my online therapy?</div>
-            <div class="faq-answer">As a CRPO registered therapist, I'm bound by professional standards and accountability measures. You can raise concerns directly with me or contact CRPO if needed, ensuring your protection and satisfaction.</div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background: var(--bg-light); text-align: center;">
-        <h2 class="section-title">Professional Burlington Online Therapy</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-            Experience the confidence of CRPO registered professional care with the convenience of online therapy designed for Burlington residents.
-        </p>
-        <div class="cta-buttons">
-            <a href="https://www.nextsteptherapy.ca/#contact" class="btn btn-primary" style="background: var(--primary-color); color: white;">Book Your Free Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary" style="border-color: var(--primary-color); color: var(--primary-color);">Call 416-306-2157</a>
-        </div>
-        <p style="margin-top: 1rem; color: var(--text-light);">
-            CRPO Registered #10979 - Professional standards you can trust
-        </p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
         <div class="footer-content">
-            <div class="footer-links">
-                <a href="https://www.nextsteptherapy.ca/">Home</a>
-                <a href="https://www.nextsteptherapy.ca/#about">About</a>
-                <a href="https://www.nextsteptherapy.ca/counselling-services.html">Services</a>
-                <a href="https://www.nextsteptherapy.ca/#contact">Contact</a>
-                <a href="https://www.nextsteptherapy.ca/privacy-policy.html">Privacy Policy</a>
-            </div>
-            <p>� 2025 Next Step Therapy | CRPO Registered Psychotherapist #10979</p>
-            <p style="margin-top: 0.5rem; opacity: 0.9;">CRPO Registered Burlington Online Therapy</p>
+            <p><strong>Jesse Cynamon, RP</strong></p>
+            <p>Registered Psychotherapist | CRPO Registration #10979</p>
+            <p>Providing professional online therapy throughout Burlington and Ontario</p>
+            <p>All services provided in compliance with CRPO standards and guidelines</p>
+            <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Next Step Therapy. All rights reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>
