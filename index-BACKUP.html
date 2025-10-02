@@ -38,59 +38,47 @@
                     });
                 });
             });
-
-            // Track booking clicks (v4.0 - NEW)
-            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'booking_click', {
-                        'event_category': 'conversion',
-                        'event_label': 'jane_app_booking',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
         });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Ontario Therapist | CRPO Registered | Available This Week</title>
     <meta name="description" content="CRPO registered psychotherapist serving Ontario. Virtual & in-person therapy available this week. Insurance accepted. Book your free 15-minute consultation today.">
-
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.nextsteptherapy.ca/">
-
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Next Step Therapy Ontario | ACT Therapy & Mental Health">
     <meta property="og:description" content="Evidence-based therapy in Ontario using ACT approach. Anxiety, depression, men's mental health & workplace stress.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca">
-
+    
     <!-- Critical Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
     <!-- Optimized Font Loading with font-display: swap -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
-
+    
     <!-- Preload Critical Resources for Mobile with High Priority -->
     <link rel="preload" as="image" href="images/hero-background-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
     <link rel="preload" as="image" href="images/hero-background.webp" media="(min-width: 769px)" fetchpriority="high">
     <link rel="preload" as="image" href="images/asset103.png" fetchpriority="high">
-
+    
     <!-- DNS Prefetch for Third-party Domains -->
     <link rel="dns-prefetch" href="//polyfill.io">
-
+    
     <!-- Enhanced Browser Caching -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
-
+    
     <!-- Mobile Performance Hints -->
     <meta name="theme-color" content="#4a6b7a">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="images/asset104-180.png">
-
+    
     <!-- Comprehensive Schema Markup for Maximum SEO Impact -->
-
+    
     <!-- 1. Person Schema - Jesse Cynamon (Builds E-E-A-T) -->
     <script type="application/ld+json">
     {
@@ -183,7 +171,7 @@
       ],
       "medicalSpecialty": [
         "Psychotherapy",
-        "Mental Health Counseling",
+        "Mental Health Counseling", 
         "Acceptance and Commitment Therapy",
         "Anxiety Disorders Treatment",
         "Depression Therapy",
@@ -211,7 +199,7 @@
       "priceRange": "$175",
       "paymentAccepted": [
         "Insurance",
-        "Credit Card",
+        "Credit Card", 
         "E-transfer"
       ],
       "currenciesAccepted": "CAD",
@@ -289,7 +277,7 @@
           }
         },
         {
-          "@type": "Question",
+          "@type": "Question", 
           "name": "What is Acceptance and Commitment Therapy (ACT)?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -300,7 +288,7 @@
           "@type": "Question",
           "name": "Does insurance cover therapy with a Registered Psychotherapist?",
           "acceptedAnswer": {
-            "@type": "Answer",
+            "@type": "Answer", 
             "text": "Most extended health plans in Ontario cover sessions with Registered Psychotherapists (CRPO). Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement."
           }
         },
@@ -323,198 +311,12 @@
       ]
     }
     </script>
-
+    
     <link rel="stylesheet" href="shared.min.css">
-
-    <!-- v4.0 Conversion Optimization Styles -->
-    <style>
-        /* Mobile Sticky CTA Bar (20% conversion boost for 65% of traffic) */
-        .mobile-cta-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-            padding: 0.75rem;
-            z-index: 999;
-            display: none;
-            gap: 0.5rem;
-            border-top: 2px solid var(--primary-soft-blue);
-        }
-
-        .mobile-cta-bar a {
-            flex: 1;
-            padding: 0.875rem 1rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: var(--radius-md);
-            font-weight: 600;
-            font-size: 0.9375rem;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.375rem;
-            min-height: 48px; /* Touch-friendly */
-        }
-
-        .mobile-cta-book {
-            background: var(--primary-soft-blue);
-            color: white;
-        }
-
-        .mobile-cta-book:hover {
-            background: var(--primary-soft-blue-dark);
-            transform: translateY(-1px);
-        }
-
-        .mobile-cta-phone {
-            background: var(--accent-warm-coral);
-            color: white;
-        }
-
-        .mobile-cta-phone:hover {
-            background: var(--accent-warm-coral-dark);
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 768px) {
-            .mobile-cta-bar {
-                display: flex;
-            }
-
-            /* Add padding to body to prevent content from being hidden behind sticky bar */
-            body {
-                padding-bottom: 70px;
-            }
-        }
-
-        /* Desktop Floating CTA Button */
-        .floating-cta {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--primary-soft-blue);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9375rem;
-            box-shadow: 0 4px 20px rgba(74, 144, 226, 0.4);
-            z-index: 998;
-            display: none;
-            transition: all 0.3s ease;
-        }
-
-        .floating-cta:hover {
-            background: var(--primary-soft-blue-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 30px rgba(74, 144, 226, 0.5);
-        }
-
-        @media (min-width: 769px) {
-            .floating-cta {
-                display: block;
-            }
-        }
-
-        /* Trust Signals Under CTAs (36% conversion improvement) */
-        .cta-trust-wrapper {
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .cta-trust-signals {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            font-size: 0.875rem;
-            color: #5A6B7D;
-        }
-
-        .cta-trust-signals span {
-            display: flex;
-            align-items: center;
-            gap: 0.375rem;
-        }
-
-        .cta-trust-signals span::before {
-            content: "✓";
-            color: var(--primary-soft-blue);
-            font-weight: bold;
-        }
-
-        /* Strategic CTA Sections */
-        .strategic-cta-section {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .strategic-cta-section h3 {
-            color: var(--primary-soft-blue);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .strategic-cta-section .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin: 0.5rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .strategic-cta-section .btn-primary {
-            background: var(--primary-soft-blue);
-            color: white;
-        }
-
-        .strategic-cta-section .btn-primary:hover {
-            background: var(--primary-soft-blue-dark);
-            transform: translateY(-2px);
-        }
-
-        .strategic-cta-section .btn-secondary {
-            background: transparent;
-            color: var(--primary-soft-blue);
-            border: 2px solid var(--primary-soft-blue);
-        }
-
-        .strategic-cta-section .btn-secondary:hover {
-            background: var(--primary-soft-blue);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .strategic-cta-section {
-                padding: 1.5rem 1rem;
-            }
-
-            .strategic-cta-section .btn {
-                display: block;
-                width: 100%;
-                margin: 0.5rem 0;
-            }
-
-            .cta-trust-signals {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
+    
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -524,7 +326,7 @@
                     <a href="#" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge">CRPO #10979</span>
                 </div>
-
+                
                 <nav>
                     <ul class="nav">
                         <li><a href="#approach">Approach</a></li>
@@ -533,14 +335,14 @@
                         <li><a href="#contact">Connect</a></li>
                     </ul>
                 </nav>
-
-                <a href="https://nextsteptherapy.janeapp.com/" class="header-phone">
+                
+                <a href="#contact" class="header-phone">
                     Book Consultation
                 </a>
             </div>
         </div>
     </header>
-
+    
     <!-- Main Content -->
     <main id="main-content">
         <!-- Optimized Hero Section -->
@@ -560,20 +362,20 @@
                     <source media="(max-width: 768px)" srcset="images/hero-background-mobile.webp" type="image/webp">
                     <source media="(max-width: 768px)" srcset="images/hero-background-mobile.jpg">
                     <source srcset="images/hero-background.webp" type="image/webp">
-                    <img src="images/hero-background.jpg"
-                         alt="Peaceful therapy environment background"
+                    <img src="images/hero-background.jpg" 
+                         alt="Peaceful therapy environment background" 
                          style="
                              width: 100%;
                              height: 100%;
                              object-fit: cover;
                              opacity: 0.3;
                              transform: translate3d(0,0,0);
-                         "
+                         " 
                          loading="eager" fetchpriority="high" sizes="100vw"
                          decoding="sync">
                 </picture>
             </div>
-
+            
             <!-- Optimized Texture Background -->
             <div style="
                 position: absolute;
@@ -588,34 +390,24 @@
                 opacity: 0.15;
                 will-change: auto;
             "></div>
-
+            
             <div class="container">
                 <div class="hero-content" style="position: relative; z-index: 1;">
                     <div class="hero-text fade-in-up">
                         <h1>You Don't Have to Navigate This Alone</h1>
                         <p class="lead-text">Professional <a href="/virtual-therapy-ontario">virtual therapy</a> for anxiety, stress, and life's challenging moments. Evidence-based support from a registered psychotherapist who gets it.</p>
-
-                        <!-- v4.0 OPTIMIZED HERO CTA -->
+                        
                         <div class="hero-cta">
-                            <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">
-                                Schedule Free 15-Minute Call
+                            <a href="#contact" class="primary-cta">
+                                Book Your Consultation
                             </a>
                             <div class="secondary-ctas">
-                                <a href="tel:+14163062157" class="secondary-cta phone-cta">Call (416) 306-2157</a>
+                                <a href="#contact" class="secondary-cta phone-cta">Book Consultation</a>
                                 <a href="#contact" class="secondary-cta email-cta">Send Message</a>
                             </div>
                         </div>
-
-                        <!-- Trust Signals (36% improvement) -->
-                        <div class="cta-trust-wrapper">
-                            <div class="cta-trust-signals">
-                                <span>CRPO #10979 Registered</span>
-                                <span>Free 15-Min Consultation</span>
-                                <span>Respond Within 1 Hour</span>
-                            </div>
-                        </div>
                     </div>
-
+                    
                     <div class="therapist-showcase fade-in-up">
                         <div class="therapist-photo">
                             <img src="images/asset103.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
@@ -636,7 +428,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Approach Section -->
         <section class="approach" id="approach">
             <div class="container-narrow">
@@ -645,21 +437,21 @@
                     <h2>Why This Approach Works</h2>
                     <p class="lead-text">Forget the therapy clichés. Using Acceptance and Commitment Therapy (ACT) and proven psychological frameworks, we'll develop practical skills you can actually use. This isn't about endless talking - it's about finding what works for your real life.</p>
                 </div>
-
+                
                 <div class="approach-grid">
                     <div class="approach-content">
                         <h3>Evidence-Based Methods That Make Sense</h3>
                         <p>Forget the therapy clichés. Using Acceptance and Commitment Therapy (ACT) and proven psychological frameworks, we'll develop practical skills you can actually use. This isn't about endless talking - it's about finding what works for your real life.</p>
-
+                        
                         <h4>Your Pace, Your Process</h4>
                         <p>There's no one-size-fits-all timeline for therapy. Some weeks we might make huge breakthroughs, others we'll take it slow. I adapt evidence-based methods to fit your life, not the other way around.</p>
                     </div>
-
+                    
                     <div class="specialization-highlight">
                         <div class="specialization-badge">Collaborative Approach</div>
                         <h4>We're in This Together</h4>
                         <p>You're the expert on your life - I'm just here with the tools and training to help you navigate it better. No judgment, no telling you what to do. Just genuine collaboration toward the changes you want to see.</p>
-
+                        
                         <div class="office-image">
                             <picture>
                                 <source srcset="images/asset34.webp" type="image/webp">
@@ -668,23 +460,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Strategic CTA #2 - After Understanding Approach -->
-                <div class="strategic-cta-section">
-                    <h3>Ready to experience evidence-based therapy?</h3>
-                    <p style="margin-bottom: 1.5rem; color: #5A6B7D;">Book a free 15-minute consultation to see if we're a good fit</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free Call</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-                    <div class="cta-trust-wrapper">
-                        <div class="cta-trust-signals">
-                            <span>No pressure conversation</span>
-                            <span>Same-day response</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-
+        
         <!-- Specializations -->
         <section class="specializations" id="specializations">
             <div class="container">
@@ -693,7 +471,7 @@
                     <h2>Psychotherapy Services by Registered Psychotherapist in Ontario</h2>
                     <p class="lead-text">Whether it's performance anxiety support, work stress management, or burnout support in Toronto or <a href="/burlington-online-therapy.html">Burlington</a> - you deserve professional psychotherapeutic assistance that actually helps. Virtual psychotherapy throughout Ontario for professionals facing real challenges.</p>
                 </div>
-
+                
                 <div class="specializations-grid">
                     <div class="specialization-card">
                         <!-- Service Icon -->
@@ -712,7 +490,7 @@
                         <p class="specialization-desc">When your mind won't stop racing at 3am or before big presentations. Performance anxiety support with practical tools for managing panic and overwhelm. Serving <a href="/anxiety-therapy-toronto.html">Toronto</a>, <a href="/burlington-online-therapy.html">Burlington</a>, and all of Ontario.</p>
                         <a href="anxiety-therapy-ontario" class="specialization-link">Anxiety Therapy Services →</a>
                     </div>
-
+                    
                     <div class="specialization-card">
                         <!-- Service Icon -->
                         <div class="service-icon" style="
@@ -730,7 +508,7 @@
                         <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
                         <a href="mens-mental-health" class="specialization-link">Men's Mental Health Support →</a>
                     </div>
-
+                    
                     <div class="specialization-card">
                         <!-- Service Icon -->
                         <div class="service-icon" style="
@@ -748,7 +526,7 @@
                         <p class="specialization-desc">When Sunday nights fill you with dread. Professional work stress support beyond "just take a vacation" advice. <a href="/perfectionism-and-burnout-therapy-toronto.html">Burnout support in Toronto</a> and specialized <a href="/online-counselling-remote-workers.html">therapy for remote workers</a> dealing with isolation and boundary blur.</p>
                         <a href="workplace-stress-therapy-ontario" class="specialization-link">Work Stress Therapy →</a>
                     </div>
-
+                    
                     <div class="specialization-card">
                         <!-- Service Icon -->
                         <div class="service-icon" style="
@@ -766,7 +544,7 @@
                         <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
                         <a href="life-transitions" class="specialization-link">Life Transitions Support →</a>
                     </div>
-
+                    
                     <div class="specialization-card">
                         <!-- Service Icon -->
                         <div class="service-icon" style="
@@ -784,7 +562,7 @@
                         <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
                         <a href="depression-therapy-ontario" class="specialization-link">Depression Therapy Ontario →</a>
                     </div>
-
+                    
                     <div class="specialization-card">
                         <!-- Service Icon -->
                         <div class="service-icon" style="
@@ -803,23 +581,9 @@
                         <a href="counselling-services" class="specialization-link">Relationship Therapy Help →</a>
                     </div>
                 </div>
-
-                <!-- Strategic CTA #3 - After Seeing Services -->
-                <div class="strategic-cta-section">
-                    <h3>Found what you're looking for?</h3>
-                    <p style="margin-bottom: 1.5rem; color: #5A6B7D;">Schedule your free consultation to discuss your specific needs</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free 15-Minute Call</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-                    <div class="cta-trust-wrapper">
-                        <div class="cta-trust-signals">
-                            <span>Available within 24-48 hours</span>
-                            <span>Evening appointments available</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-
+        
         <!-- Process Section -->
         <section class="process" id="process">
             <div class="container">
@@ -827,7 +591,7 @@
                     <p class="section-subtitle">The Journey</p>
                     <h2>How We'll Work Together</h2>
                     <p class="lead-text">A straightforward process that respects your time and focuses on real progress.</p>
-
+                    
                     <div class="process-image">
                         <picture>
                             <source srcset="images/about-texture.webp" type="image/webp">
@@ -835,49 +599,35 @@
                         </picture>
                     </div>
                 </div>
-
+                
                 <div class="process-timeline">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h3 class="step-title">Initial Connection</h3>
                         <p class="step-desc">We start with a free 15-minute call - just a conversation about what's bringing you to therapy and whether we'd work well together. No pressure, no obligations.</p>
                     </div>
-
+                    
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h3 class="step-title">Getting the Full Picture</h3>
                         <p class="step-desc">Our first few sessions are about understanding your whole story - not just the problem, but what makes you you. We'll identify patterns without pathologizing your entire existence.</p>
                     </div>
-
+                    
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h3 class="step-title">Building Your Toolkit</h3>
                         <p class="step-desc">This is where we get practical. Using proven approaches, we'll develop strategies that actually work when you're in the middle of a panic attack, not just in theory.</p>
                     </div>
-
+                    
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h3 class="step-title">Real Change, Real Time</h3>
                         <p class="step-desc">Change isn't linear - some weeks are breakthroughs, others feel stuck. I'm here for all of it, adjusting our approach as life happens.</p>
                     </div>
                 </div>
-
-                <!-- Strategic CTA #4 - After Understanding Process -->
-                <div class="strategic-cta-section">
-                    <h3>Ready to start your journey?</h3>
-                    <p style="margin-bottom: 1.5rem; color: #5A6B7D;">Begin with a free 15-minute consultation - completely pressure-free</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free Call</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-                    <div class="cta-trust-wrapper">
-                        <div class="cta-trust-signals">
-                            <span>Quick 15-minute conversation</span>
-                            <span>Book online in 2 minutes</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-
+        
         <!-- Why Choose Section -->
         <section class="trust-section" style="
             background-image: linear-gradient(
@@ -911,7 +661,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Insurance & Fees Section -->
         <section class="trust-section">
             <div class="container">
@@ -937,7 +687,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- FAQ Section for AI Optimization -->
         <section class="faq" style="padding: var(--space-section) 0; background: var(--background-primary);">
             <div class="container">
@@ -945,28 +695,28 @@
                     <p class="section-subtitle">Common Questions</p>
                     <h2>Frequently Asked Questions</h2>
                 </div>
-
+                
                 <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: var(--space-lg);">
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">How does virtual therapy Toronto work?</h3>
                         <p><strong>The answer is:</strong> <a href="/virtual-therapy-ontario">Virtual therapy</a> sessions are conducted through secure, PIPEDA-compliant video platforms. You can access professional virtual therapy in Toronto and throughout Ontario with a stable internet connection. Virtual therapy sessions are just as effective as in-person therapy for most concerns.</p>
                     </div>
-
+                    
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">What is Acceptance and Commitment Therapy (ACT)?</h3>
                         <p><strong>In summary,</strong> ACT is an evidence-based therapy approach that helps you develop psychological flexibility. Rather than trying to eliminate difficult thoughts and feelings, ACT teaches you to accept them while taking action aligned with your values.</p>
                     </div>
-
+                    
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Does insurance cover therapy with a Registered Psychotherapist?</h3>
                         <p><strong>The answer is:</strong> Most extended health plans in Ontario cover sessions with Registered Psychotherapists (CRPO). Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement.</p>
                     </div>
-
+                    
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">How quickly can I start therapy?</h3>
                         <p><strong>The answer is:</strong> After your initial contact, we typically schedule a free 15-minute consultation within 2-3 days. If we're a good fit, first sessions are usually available within one week. Evening and weekend appointments available.</p>
                     </div>
-
+                    
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">What makes your approach different from other therapists?</h3>
                         <p><strong>In summary,</strong> our approach combines evidence-based ACT techniques with genuine understanding of modern challenges like workplace stress, relationship patterns, and men's mental health. We focus on practical skills you can use immediately, not endless talking.</p>
@@ -974,7 +724,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Contact -->
         <section class="contact" id="contact">
             <div class="container">
@@ -983,35 +733,21 @@
                     <h2>Ready When You Are</h2>
                     <p class="lead-text">The hardest part is reaching out. Once you do, I make everything else simple. Your free 15-minute consultation is just a conversation - no forms, no commitment, no pressure.</p>
                 </div>
-
-                <!-- Strategic CTA #5 - Final Call to Action -->
-                <div class="strategic-cta-section" style="margin-bottom: 2rem;">
-                    <h3>Let's start with a conversation</h3>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free 15-Minute Call</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-                    <div class="cta-trust-wrapper">
-                        <div class="cta-trust-signals">
-                            <span>No commitment required</span>
-                            <span>Insurance accepted</span>
-                            <span>Evening hours available</span>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>Get in Touch</h3>
-
+                        
                         <ul class="contact-methods">
                             <li>
                                 <span class="contact-icon">📞</span>
                                 <div class="contact-details">
                                     <strong>Direct Line:</strong><br>
-                                    <a href="tel:+14163062157">(416) 306-2157</a><br>
+                                    <a href="#contact">Book Consultation</a><br>
                                     <small>Call or text for immediate response</small>
                                 </div>
                             </li>
-
+                            
                             <li>
                                 <span class="contact-icon">✉️</span>
                                 <div class="contact-details">
@@ -1020,7 +756,7 @@
                                     <small>Response during business hours</small>
                                 </div>
                             </li>
-
+                            
                             <li>
                                 <span class="contact-icon">💻</span>
                                 <div class="contact-details">
@@ -1030,11 +766,11 @@
                                 </div>
                             </li>
                         </ul>
-
+                        
                         <div class="virtual-session-image">
                             <img src="images/homepage-contact-background.jpg" alt="Professional virtual therapy consultation setup" loading="eager" fetchpriority="high" sizes="100vw">
                         </div>
-
+                        
                         <div class="investment-highlight">
                             <h4>Investment & Insurance</h4>
                             <p><strong>$175 per 50-minute session</strong></p>
@@ -1042,7 +778,7 @@
                             Detailed receipts provided for insurance reimbursement</p>
                         </div>
                     </div>
-
+                    
                     <div class="contact-form">
                         <h3>Book Your Free Consultation</h3>
                         <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
@@ -1051,22 +787,22 @@
                             <input type="hidden" name="_subject" value="New Consultation Request - Next Step Therapy">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="box">
-
+                            
                             <div class="form-group">
                                 <label for="name">Your name *</label>
                                 <input type="text" id="name" name="name" required>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="email">Email address *</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="phone">Phone number</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="preferred-contact">Preferred contact method</label>
                                 <select id="preferred-contact" name="preferred-contact">
@@ -1075,7 +811,7 @@
                                     <option value="text">Text message</option>
                                 </select>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="inquiry-type">What brings you here?</label>
                                 <select id="inquiry-type" name="inquiry-type">
@@ -1089,12 +825,12 @@
                                     <option value="other">Other concerns</option>
                                 </select>
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="message">Share what brings you here (optional)</label>
                                 <textarea id="message" name="message" rows="4" placeholder="Please share as much or as little as feels comfortable for you..."></textarea>
                             </div>
-
+                            
                             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send Message</button>
                         </form>
                     </div>
@@ -1102,18 +838,7 @@
             </div>
         </section>
     </main>
-
-    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Free Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-    </div>
-
-    <!-- Floating CTA for Desktop (v4.0) -->
-    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
-        📅 Schedule Free Call
-    </a>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1123,7 +848,7 @@
                     <p>Evidence-based therapy using advanced Acceptance and Commitment Therapy approaches. Serving clients throughout Ontario who value depth, authenticity, and meaningful therapeutic work.</p>
                     <p><strong>CRPO Registration #10979</strong></p>
                 </div>
-
+                
                 <div class="footer-section">
                     <h4>Areas of Focus</h4>
                     <ul>
@@ -1135,7 +860,7 @@
                         <li><a href="workplace-stress-therapy-ontario">Workplace Stress & Burnout</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-section">
                     <h4>Information</h4>
                     <ul>
@@ -1146,7 +871,7 @@
                         <li><a href="#">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-section">
                     <h4>Professional Standards</h4>
                     <ul>
@@ -1157,7 +882,7 @@
                     </ul>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
                 <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
                 Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
@@ -1165,13 +890,13 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Deferred JavaScript for Better Performance -->
     <script>
         // Critical mobile performance optimizations
         (function() {
             'use strict';
-
+            
             // Lazy loading polyfill with improved performance
             if ('loading' in HTMLImageElement.prototype) {
                 // Native lazy loading supported
@@ -1194,18 +919,18 @@
                         isPolyfillLoaded = true;
                     }
                 };
-
+                
                 // Load polyfill on user interaction
                 ['touchstart', 'scroll', 'mouseover'].forEach(event => {
                     document.addEventListener(event, loadPolyfill, { once: true, passive: true });
                 });
             }
         })();
-
+        
         // Optimized smooth scrolling with performance check
         const initSmoothScroll = () => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+            
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -1219,60 +944,60 @@
                 }, { passive: false });
             });
         };
-
+        
         // Initialize after DOM is ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initSmoothScroll);
         } else {
             initSmoothScroll();
         }
-
+        
         // Form handling with proper submission and feedback
         document.querySelector('form').addEventListener('submit', function(e) {
             const submitButton = e.target.querySelector('button[type="submit"]');
             const form = e.target;
-
+            
             // Show loading state
             submitButton.textContent = 'Sending Message...';
             submitButton.disabled = true;
             submitButton.style.opacity = '0.7';
-
+            
             // Create success message div
             const successMessage = document.createElement('div');
             successMessage.innerHTML = `
                 <div style="background: #d4edda; color: #155724; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; border: 1px solid #c3e6cb; text-align: center;">
                     <h4 style="margin: 0 0 0.5rem 0; color: #155724;">✓ Message Sent Successfully!</h4>
                     <p style="margin: 0; font-size: 0.95rem;">Thank you for reaching out. I will respond within 2 hours during business hours with care and confidentiality.</p>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; opacity: 0.8;">You can also call or text: (416) 306-2157</p>
+                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; opacity: 0.8;">You can also call or text: Book Consultation</p>
                 </div>
             `;
-
+            
             // Don't prevent default - let form submit to FormSubmit
             setTimeout(() => {
                 // Show success message after brief delay
                 form.parentNode.insertBefore(successMessage, form.nextSibling);
-
+                
                 // Hide the form
                 form.style.display = 'none';
-
+                
                 // Scroll to success message
                 successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 500);
         });
-
+        
         // Phone click tracking
         document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
             phone.addEventListener('click', function() {
                 console.log('Phone consultation clicked');
             });
         });
-
+        
         // Smooth scroll animations on page load and scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -30px 0px'
         };
-
+        
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1281,7 +1006,7 @@
                 }
             });
         }, observerOptions);
-
+        
         // Initialize animation on scroll with reduced motion support
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.querySelectorAll('.specialization-card, .process-step').forEach(el => {
@@ -1291,13 +1016,13 @@
                 observer.observe(el);
             });
         }
-
+        
         // Web Vitals optimization - async non-critical JavaScript
         window.addEventListener('load', function() {
             // Non-critical JavaScript can be loaded here
             console.log('Page fully loaded - Web Vitals optimized');
         });
-
+        
         // Service Worker for caching (if supported)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
@@ -1305,7 +1030,7 @@
             });
         }
     </script>
-
+    
 </body>
 </html>
 
