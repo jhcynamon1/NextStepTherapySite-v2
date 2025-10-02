@@ -1,5 +1,12 @@
-# 🎯 MANUS PAGE CREATION PRD - COMPLETE VERSION
-*Comprehensive Standardized Process for Creating SEO-Optimized Therapy Landing Pages*
+# 🎯 MANUS PAGE CREATION PRD - COMPLETE VERSION v4.0
+*Comprehensive Standardized Process for Creating SEO-Optimized, High-Converting Therapy Landing Pages*
+
+**VERSION 4.0 UPDATE (October 2025):**
+✅ **Conversion Optimization Framework Added** - Research-backed CTA strategy (15-25% conversion target)
+✅ **Jane App Direct Booking Integration** - Reduces friction, 15% lower no-show rates
+✅ **Mobile Sticky CTA Bar** - 20% conversion boost for 65% of traffic
+✅ **Strategic Trust Signal Placement** - 36% conversion improvement
+✅ **Progressive CTA Flow** - 10-15x better than random placement
 
 ---
 
@@ -105,11 +112,15 @@ CREATE MANUS PAGE: condition-specific | ADHD therapy | Toronto | Executive funct
 </header>
 ```
 
-**CRITICAL NAVIGATION RULES:**
+**CRITICAL NAVIGATION RULES (UPDATED v4.0):**
 - Navigation "Contact" link: MUST use `href="/#contact"` (routes to homepage contact)
-- Main CTA buttons: MUST use `href="/#contact"` (routes to homepage contact form)
-- ALL CTAs should redirect to homepage contact form for consistent lead capture
-- This ensures all leads go through the main contact form on the homepage
+- **Primary CTA buttons**: MUST use `href="https://nextsteptherapy.janeapp.com/"` (DIRECT BOOKING)
+- **Secondary CTA (phone)**: MUST use `href="tel:+14163062157"` (click-to-call)
+- **Tertiary CTA (contact)**: MUST use `href="/#contact"` (homepage contact form)
+- **CONVERSION STRATEGY**: Dual-path approach maximizes conversions (booking + phone)
+  - Jane App = 24/7 instant booking (2.4% conversion, 15% lower no-shows)
+  - Phone = 88% conversion for those who call (but only 1-3% call)
+  - Contact form = fallback for detailed inquiries
 
 #### **CTA Button Specifications**
 ```css
@@ -2032,10 +2043,407 @@ Before deploying any new page, verify:
 - **Font Heading**: Playfair Display
 - **Font Body**: Inter
 
-### **CTA Link Destinations**
-- **Main CTA**: `href="/#contact"` (ALWAYS redirect to homepage contact form)
-- **Phone CTA**: `href="tel:+14163062157"`
-- **Email CTA**: `href="mailto:jesse@nextsteptherapy.ca"`
+### **CTA Link Destinations (UPDATED v4.0 - Conversion Optimized)**
+
+**PRIMARY CTA (Highest Priority):**
+- **Booking Link**: `href="https://nextsteptherapy.janeapp.com/"`
+- **Button Text**: "Schedule Free 15-Minute Call" (NOT "Book Free Consultation")
+- **Why**: Specific time-bound offer = 40% conversion boost
+- **Research**: Free consultation calls convert at 25-60% to paid clients
+
+**SECONDARY CTA (Phone - 88% conversion):**
+- **Phone Link**: `href="tel:+14163062157"`
+- **Button Text**: "Call (416) 306-2157" or "Call Now"
+- **Why**: Phone conversations = 10-15x more revenue than web leads
+- **Critical**: Click-to-call on mobile, always prominent
+
+**TERTIARY CTA (Fallback):**
+- **Contact Form**: `href="/#contact"` (homepage contact form)
+- **Button Text**: "Send Message" or "Email Us"
+- **Why**: For detailed inquiries or those hesitant to book/call
+- **Email Backup**: `href="mailto:jesse@nextsteptherapy.ca"` (rarely used)
+
+---
+
+## 📈 CONVERSION OPTIMIZATION FRAMEWORK (v4.0 - CRITICAL)
+
+**Research Base:** Therapy Website CRO Study - Industry benchmark: 15-25% conversion rate
+**Current Target:** Transform 0% conversion pages into 10-15% converters
+**Expected Impact:** 122-203 consultations/month from high-traffic pages
+
+### **1. STRATEGIC CTA PLACEMENT (10-15x Better Than Random)**
+
+**CRITICAL RULE:** CTAs must appear AFTER decision points, not at random intervals.
+
+**Required CTA Flow (6 CTAs per page):**
+
+**CTA #1 - Hero Section (Soft Entry):**
+```html
+<a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">
+  Schedule Free 15-Minute Call
+</a>
+```
+- **Placement**: Above the fold, immediately after hero text
+- **Psychology**: Low-commitment introduction, specific time (reduces anxiety)
+- **Trust signals below**: "No pressure, just conversation" + "Book online in 2 minutes"
+
+**CTA #2 - After Problem Recognition (~700 words):**
+```html
+<div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px;">
+  <p style="margin-bottom: 1rem; font-weight: 500;">Ready to remove these barriers?</p>
+  <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">
+    Schedule Your Free Call
+  </a>
+  <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #5A6B7D;">
+    ✓ Quick 15-minute conversation &nbsp; ✓ Available within 24-48 hours
+  </div>
+</div>
+```
+- **Placement**: Immediately after user recognizes their pain points
+- **Psychology**: Strike while emotional readiness is high
+- **Research**: Response under 1 hour = 80% higher conversion
+
+**CTA #3 - After Solution Explanation (~1500 words):**
+```html
+<div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(107, 142, 111, 0.05); border-radius: 8px;">
+  <p style="margin-bottom: 1rem; font-weight: 500;">Experience therapy that works around your life, not against it.</p>
+  <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">
+    Book Your Free 15-Minute Call
+  </a>
+  <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #5A6B7D;">
+    ✓ Same-day booking available &nbsp; ✓ Virtual sessions Ontario-wide
+  </div>
+</div>
+```
+- **Placement**: After benefits and advantages explained
+- **Psychology**: They understand the value, ready to commit
+
+**CTA #4 - After Addressing Concerns (~2800 words):**
+```html
+<div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+  <p style="margin-bottom: 1rem; font-weight: 500;">Ready to experience the convenience of virtual therapy?</p>
+  <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">
+    Book Free 15-Minute Call
+  </a>
+  <div style="margin-top: 0.75rem; font-size: 0.875rem; color: #5A6B7D;">
+    ✓ Confidential consultation &nbsp; ✓ No commitment required
+  </div>
+</div>
+```
+- **Placement**: After objections handled (technology, privacy, effectiveness)
+- **Psychology**: Concerns addressed, final push needed
+
+**CTA #5 - After Benefits Section (~3200 words):**
+```html
+<div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(107, 142, 111, 0.05); border-radius: 8px;">
+  <p style="margin-bottom: 1rem; font-weight: 500;">See if virtual therapy is right for you.</p>
+  <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Schedule Free Call</a>
+    <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
+  </div>
+</div>
+```
+- **Placement**: After all value propositions delivered
+- **Psychology**: Dual options (book OR call) captures both audiences
+
+**CTA #6 - Final Contact Section (Bottom):**
+```html
+<section class="contact-highlight" id="contact">
+  <h3>Start Virtual Therapy in [City] Today</h3>
+  <p>Professional support that fits your life...</p>
+  <h4>Free 15-Minute Consultation</h4>
+  <p>Discover if we're a good fit...</p>
+  <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">
+    Schedule Your Free 15-Minute Call
+  </a>
+  <div class="secondary-ctas">
+    <a href="tel:+14163062157" class="manus-secondary-cta">(416) 306-2157</a>
+    <a href="/#contact" class="manus-secondary-cta">Send Message</a>
+  </div>
+  <div style="margin-top: 1rem; font-size: 0.875rem; color: #5A6B7D;">
+    ✓ Book online in 2 minutes &nbsp; ✓ Available 7 days a week &nbsp; ✓ 100% confidential
+  </div>
+</section>
+```
+- **Placement**: Final opportunity, strong action-oriented close
+- **Psychology**: Multiple pathways (book, call, message) = no excuses
+
+---
+
+### **2. TRUST SIGNALS FRAMEWORK (36% Conversion Improvement)**
+
+**CRITICAL RULE:** Trust signals must appear NEAR CTAs, not just in hero section.
+
+**Hero Section Trust Badges (Above Fold):**
+```html
+<div class="trust-indicators">
+  <span class="trust-indicator">CRPO #10979 Licensed</span>
+  <span class="trust-indicator">Free 15-Min Consultation</span>
+  <span class="trust-indicator">Insurance Receipts Provided</span>
+  <span class="trust-indicator">Respond Within 1 Hour</span>
+</div>
+```
+
+**CTA Trust Signals (Under EVERY CTA button):**
+```html
+<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem; font-size: 0.875rem; color: #5A6B7D;">
+  <span>✓ No pressure, just conversation</span>
+  <span>✓ Book online in 2 minutes</span>
+  <span>✓ Evening hours available</span>
+</div>
+```
+
+**Rotate Trust Signals By CTA Location:**
+- **CTA #1 (Hero)**: "No pressure" + "Book in 2 min" + "Evening hours"
+- **CTA #2 (Problem)**: "15-min conversation" + "Available 24-48 hrs" + "CRPO licensed"
+- **CTA #3 (Solution)**: "Same-day booking" + "Virtual Ontario-wide" + "Insurance covered"
+- **CTA #4 (Concerns)**: "Confidential" + "No commitment" + "PHIPA compliant"
+- **CTA #5 (Benefits)**: "Licensed therapist" + "Free consultation" + "Flexible scheduling"
+- **CTA #6 (Final)**: "Book in 2 min" + "7 days a week" + "100% confidential"
+
+**Why This Works:**
+- Addresses specific objections at each decision point
+- Reduces booking anxiety with reassurance
+- Builds credibility through repetition
+- Research: 36% conversion improvement
+
+---
+
+### **3. MOBILE STICKY CTA BAR (20% Conversion Boost)**
+
+**CRITICAL RULE:** Mobile = 65% of traffic. Sticky bar is MANDATORY.
+
+**Implementation:**
+```html
+<!-- Mobile Sticky CTA Bar - Fixed at bottom -->
+<div class="mobile-cta-bar">
+  <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">
+    📅 Book Free Call
+  </a>
+  <a href="tel:+14163062157" class="mobile-cta-phone">
+    📞 Call Now
+  </a>
+</div>
+
+<style>
+/* Mobile Sticky Bar - Always visible on mobile */
+.mobile-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  z-index: 999;
+  display: none;
+  gap: 0.5rem;
+  border-top: 2px solid #6B8E6F;
+}
+
+.mobile-cta-bar a {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  min-height: 48px; /* CRITICAL: 48px minimum for thumb-friendly tapping */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+.mobile-cta-book {
+  background: linear-gradient(135deg, #6B8E6F, #7A9D7E);
+  color: white;
+}
+
+.mobile-cta-phone {
+  background: rgba(107, 142, 111, 0.08);
+  color: #6B8E6F;
+  border: 1.5px solid #6B8E6F;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex; /* Show only on mobile */
+  }
+
+  /* Add padding to body to prevent content overlap */
+  body {
+    padding-bottom: 70px;
+  }
+}
+</style>
+```
+
+**Requirements:**
+- ✅ Fixed position at bottom
+- ✅ 48x48px minimum touch targets (Apple/Google guidelines)
+- ✅ Dual buttons (book + call) for maximum coverage
+- ✅ Always visible while scrolling
+- ✅ Clean design, doesn't obstruct content
+- ✅ Research: 20% conversion improvement on mobile
+
+---
+
+### **4. DESKTOP FLOATING CTA (Persistent Visibility)**
+
+**CRITICAL RULE:** Desktop users need persistent CTA access too.
+
+**Implementation:**
+```html
+<!-- Floating CTA for Desktop - Bottom Right -->
+<a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+  📅 Schedule Free Call
+</a>
+
+<style>
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  background: linear-gradient(135deg, #6B8E6F, #7A9D7E);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  box-shadow: 0 4px 20px rgba(107, 142, 111, 0.3);
+  transition: all 0.3s ease;
+  min-height: 48px;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.floating-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(107, 142, 111, 0.4);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .floating-cta {
+    display: none; /* Hide on mobile, use sticky bar instead */
+  }
+}
+</style>
+```
+
+**Why This Works:**
+- Always visible during scroll (no need to scroll back up)
+- Unobtrusive but accessible
+- Links to booking (highest-converting action)
+- Research: Maintains conversion opportunities throughout page
+
+---
+
+### **5. ANALYTICS TRACKING (CRITICAL FOR OPTIMIZATION)**
+
+**MUST ADD to every page:**
+```javascript
+// Track booking clicks (NEW in v4.0)
+document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+  link.addEventListener('click', function() {
+    gtag('event', 'booking_click', {
+      'event_category': 'conversion',
+      'value': 175,
+      'currency': 'CAD'
+    });
+  });
+});
+
+// Track phone clicks (existing)
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  link.addEventListener('click', function() {
+    gtag('event', 'phone_call', {
+      'event_category': 'conversion',
+      'value': 175,
+      'currency': 'CAD'
+    });
+  });
+});
+```
+
+**Metrics to Monitor:**
+- Booking link clicks (target: 2-5% of visitors)
+- Phone clicks (target: 1-3% of visitors)
+- Mobile vs desktop engagement
+- Best-performing CTA location
+- Consultation → client conversion (target: 65%)
+
+---
+
+### **6. CONVERSION BENCHMARKS & SUCCESS METRICS**
+
+**Industry Standards (Therapy Websites):**
+- Top performers: 15-25% conversion rate
+- Industry median: 3.6%
+- Your target: 10-15% (realistic with optimization)
+
+**Per-Page Revenue Potential:**
+Example: Burlington page (812 impressions/month)
+- At 10% conversion: 81 consultations → 53 clients → $7,950/month
+- At 15% conversion: 122 consultations → 79 clients → $11,850/month
+- At 20% conversion: 162 consultations → 105 clients → $15,750/month
+
+**Success Timeline:**
+- Week 1-2: Validate tracking works, baseline metrics
+- Week 3-4: Expect 5-10% conversion if optimizations working
+- Month 2-3: Target 10-15% conversion with iteration
+- Month 4+: Maintain 15-20% with ongoing optimization
+
+---
+
+### **7. CTA BUTTON TEXT VARIATIONS (A/B Testing)**
+
+**Primary Options (Use "Schedule" not "Book"):**
+1. "Schedule Free 15-Minute Call" ✅ RECOMMENDED
+2. "Book Your Free Consultation"
+3. "Talk With A Therapist - Free 15 Min"
+4. "Schedule Free Consultation Call"
+
+**Why "Schedule" Beats "Book":**
+- More professional, less transactional
+- Implies planned commitment (vs. impulse "booking")
+- "15-Minute" reduces anxiety with specific time
+
+**Secondary CTA (Phone):**
+1. "Call (416) 306-2157" ✅ RECOMMENDED
+2. "Call Now"
+3. "Speak With A Therapist"
+
+**Tertiary CTA (Contact):**
+1. "Send Message"
+2. "Email Us"
+3. "Get In Touch"
+
+---
+
+### **8. MOBILE-SPECIFIC REQUIREMENTS**
+
+**CRITICAL MOBILE OPTIMIZATIONS:**
+
+✅ **Touch Targets**: Minimum 48x48px (Apple) or 48x48dp (Google)
+✅ **Thumb Zone**: CTAs in lower half of screen where thumbs naturally rest
+✅ **Sticky Bar**: Always visible at bottom (20% conversion boost)
+✅ **Click-to-Call**: Primary action on mobile (88% conversion for callers)
+✅ **Fast Loading**: Mobile users abandon >3 seconds
+✅ **No Popups**: Intrusive on small screens
+✅ **Simplified Forms**: Minimize fields (name, phone, concern only)
+
+**Mobile CTA Hierarchy:**
+1. Sticky bar (📅 Book + 📞 Call) - Always visible
+2. In-content CTAs - Touch-friendly, 48px minimum
+3. Floating button - HIDDEN (sticky bar replaces it)
+
+---
 
 ### **File Locations**
 - **Template**: `/anxiety-therapy-toronto.html`
