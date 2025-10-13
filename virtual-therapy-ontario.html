@@ -124,6 +124,38 @@
     }
     </script>
 
+    <!-- Service Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Virtual Therapy Ontario",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Next Step Therapy Ontario",
+        "description": "CRPO registered psychotherapist (#10979) providing virtual therapy throughout Ontario.",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Canada"
+          }
+        },
+        "hasCredential": "CRPO #10979",
+        "priceRange": "$$"
+      },
+      "description": "Evidence-based virtual therapy services across Ontario specializing in anxiety, depression, and workplace stress. Same-week appointments available with CRPO registered psychotherapist. Free consultation offered.",
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.nextsteptherapy.ca/virtual-therapy-ontario.html"
+      }
+    }
+    </script>
+
     <style>
         :root {
             --primary-green: #6B8E6F;

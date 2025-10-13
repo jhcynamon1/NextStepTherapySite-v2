@@ -140,6 +140,42 @@
     }
     </script>
 
+    <!-- Service Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Burlington Therapy Ontario",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Next Step Therapy - Burlington",
+        "description": "CRPO registered psychotherapist (#10979) providing virtual therapy for Burlington, Ontario residents.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Burlington",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Ontario",
+            "containedInPlace": {
+              "@type": "Country",
+              "name": "Canada"
+            }
+          }
+        },
+        "hasCredential": "CRPO #10979",
+        "priceRange": "$$"
+      },
+      "description": "Virtual therapy services for Burlington residents specializing in anxiety, depression, workplace stress, and performance issues. Same-week appointments available with CRPO registered psychotherapist.",
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.nextsteptherapy.ca/burlington-online-therapy.html"
+      }
+    }
+    </script>
+
     <style>
         /* Match homepage design exactly */
         :root {
