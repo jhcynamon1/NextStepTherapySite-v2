@@ -219,6 +219,55 @@ Per user request: **"make things better for google. we want to be optimized for 
 
 ---
 
+### ⚠️ CRITICAL CRPO COMPLIANCE WARNING:
+
+**ISSUE IDENTIFIED:** Problematic advertising language across multiple pages
+
+**What Was Found:**
+- ❌ "therapy that actually works" - Found on 19 pages
+- ❌ "actually makes a difference" - Found on counsellor-ontario.html
+- ❌ "what research shows actually works" - Found on depression pages
+
+**Why This Is Non-Compliant:**
+- Implies other therapists' therapy doesn't work
+- Violates CRPO advertising standards (cannot make comparative claims)
+- Could result in disciplinary action from CRPO
+
+**FIXED on mens-therapy-toronto.html:**
+- Changed: "therapy that actually works" → "professional therapy support"
+
+**STILL NEEDS FIXING (18+ pages):**
+1. executive-stress-management-therapy.html
+2. virtual-therapy-burlington.html
+3. virtual-therapy-ontario.html
+4. counsellor-ontario.html
+5. western-university-student-therapy.html
+6. therapist-mississauga-qa-comprehensive.html
+7. therapist-toronto.html
+8. virtual-therapy-ontario-v4-OPTIMIZED.html
+9. depression-counselling-toronto.html
+10. anxiety-therapy-toronto-rent-rank.html
+11. online-therapy-depression-ontario.html
+12. mens-mental-health.html
+13. depression-therapy-ottawa.html
+14. (Plus 5 backup/temporary files)
+
+**COMPLIANT ALTERNATIVES:**
+- ✅ "evidence-based therapy" (factual claim)
+- ✅ "professional therapy support"
+- ✅ "therapy services"
+- ✅ "research-backed therapy"
+- ✅ "therapy that fits your life" (about scheduling, not outcomes)
+
+**ACTION REQUIRED:**
+- Audit all 18+ pages for non-compliant language
+- Replace with CRPO-compliant alternatives
+- Add compliance check to page creation workflow
+
+**PRIORITY:** HIGH - Address before next content audit
+
+---
+
 ### 📝 DEPLOYMENT CHECKLIST:
 
 **Before Deploy:**
@@ -229,6 +278,7 @@ Per user request: **"make things better for google. we want to be optimized for 
 - ✅ 5 internal links added
 - ✅ 3 image placeholders with alt tags
 - ✅ Schema validated (zero errors)
+- ✅ CRPO compliance issue fixed (removed "therapy that actually works")
 
 **After Deploy:**
 1. Submit to Google Search Console
