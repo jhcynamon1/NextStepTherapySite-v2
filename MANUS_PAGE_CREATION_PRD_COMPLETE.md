@@ -468,7 +468,7 @@ You don't have to navigate [challenge] alone. Specialized virtual therapy for [a
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-416-306-2157",
+        "telephone": "+14163062157",
         "contactType": "customer service",
         "email": "jesse@nextsteptherapy.ca",
         "areaServed": "CA-ON",
@@ -568,12 +568,40 @@ You don't have to navigate [challenge] alone. Specialized virtual therapy for [a
 }
 ```
 
+**🚨 CRITICAL SCHEMA REQUIREMENTS (ZERO TOLERANCE FOR ERRORS):**
+
+**READ `SCHEMA_MARKUP_CRITICAL_CHECKLIST.md` BEFORE CREATING ANY PAGE**
+
+**Non-Negotiable Schema Rules:**
+1. **Phone Number Format:** MUST be `"+14163062157"` (no hyphens, E.164 format)
+   - ❌ WRONG: `"+1-416-306-2157"` (has hyphens)
+   - ✅ CORRECT: `"+14163062157"`
+
+2. **addressLocality:** MUST ALWAYS be `"Toronto"` (Ontario Business Registry BIN 1001072925)
+   - ❌ WRONG: `"Burlington"`, `"Ottawa"`, `"Ontario"`, etc.
+   - ✅ CORRECT: `"Toronto"` (registered business location)
+   - **Use `areaServed` for page-specific cities**
+
+3. **addressRegion:** MUST be `"ON"` (2-letter code, not "Ontario")
+   - ❌ WRONG: `"Ontario"`, `"on"`, `"Ont"`
+   - ✅ CORRECT: `"ON"`
+
+4. **addressCountry:** MUST be `"CA"`
+   - ✅ CORRECT: `"CA"`
+
+5. **Person Schema for Jesse Cynamon:** MUST use `"@type": "Person"`
+   - ❌ WRONG: `"@type": "Physician"` (Jesse is NOT a medical doctor)
+   - ❌ WRONG: `"@type": "Psychologist"` (different credential)
+   - ✅ CORRECT: `"@type": "Person"` (Registered Psychotherapist CRPO #10979)
+
 **Schema Strategy Notes:**
 - Use `@graph` to combine multiple schema types in one block
 - Virtuous Circle focuses on LocalBusiness + Organization + Person
 - We add Service schema for better therapy-specific SEO
 - FAQPage schema is separate (add after main content FAQs)
 - Keep schema updated when page content changes
+- **ALWAYS validate in Google Rich Results Test before deploying**
+- Schema errors cost $2,625-$5,250/month in lost revenue + weeks of ranking recovery
 
 #### **For Student Pages (Additional Schema)**
 ```json

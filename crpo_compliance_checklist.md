@@ -167,4 +167,32 @@ Since you offer virtual therapy:
 
 ---
 
+## 🚨 SCHEMA MARKUP COMPLIANCE (TECHNICAL REQUIREMENTS)
+
+**CRITICAL:** Schema errors directly affect professional representation and cost thousands in revenue.
+
+### Schema Professional Designation Requirements:
+- [ ] Jesse Cynamon uses `"@type": "Person"` (NOT "Physician")
+  - ❌ **WRONG:** `"@type": "Physician"`
+    - **WHY WRONG:** You are a **Registered Psychotherapist (CRPO #10979)**, NOT a medical doctor
+    - This is a professional designation error and could mislead the public
+  - ✅ **CORRECT:** `"@type": "Person"` with `"jobTitle": "Registered Psychotherapist"`
+
+### Other Required Schema Fields:
+- [ ] Phone: `"+14163062157"` (E.164 format, no hyphens)
+- [ ] addressLocality: `"Toronto"` (Ontario Business Registry BIN 1001072925)
+- [ ] addressRegion: `"ON"` (2-letter code)
+- [ ] addressCountry: `"CA"`
+- [ ] Professional identifier: `"CRPO #10979"` in schema
+
+**Why This Matters:**
+- Using "Physician" in schema misrepresents your professional designation
+- Could be seen as claiming to be a medical doctor (CRPO compliance issue)
+- Schema errors cost $2,625-$5,250/month in lost search visibility
+- Takes weeks to months to recover from schema mistakes
+
+**Reference:** See `SCHEMA_MARKUP_CRITICAL_CHECKLIST.md` for complete technical details
+
+---
+
 **Remember:** When in doubt, err on the side of caution. It's better to undersell than to risk non-compliance.

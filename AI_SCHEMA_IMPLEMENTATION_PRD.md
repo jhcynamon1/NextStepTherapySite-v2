@@ -55,43 +55,63 @@ Based on our therapy website, we likely need to audit and enhance:
 
 #### Schema Types to Generate
 
-1. **LocalBusiness Schema Template**
+1. **LocalBusiness Schema Template** ⚠️ UPDATED WITH CORRECT VALUES
 ```json
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "[PRACTICE_NAME]",
+  "name": "Next Step Therapy",
   "description": "[SERVICE_DESCRIPTION]",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "[STREET_ADDRESS]",
-    "addressLocality": "[CITY]",
-    "addressRegion": "[PROVINCE]",
-    "postalCode": "[POSTAL_CODE]",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
     "addressCountry": "CA"
   },
-  "telephone": "[PHONE_NUMBER]",
-  "url": "[WEBSITE_URL]",
-  "openingHours": "[HOURS]",
-  "priceRange": "[PRICE_RANGE]"
+  "telephone": "+14163062157",
+  "email": "jesse@nextsteptherapy.ca",
+  "url": "https://nextsteptherapy.ca",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "State",
+    "name": "Ontario"
+  }
 }
 ```
+**CRITICAL NOTES:**
+- ❌ Do NOT change addressLocality to match page city (always "Toronto")
+- ❌ Do NOT add hyphens to phone number
+- ✅ Use areaServed for page-specific cities (e.g., Burlington, Ottawa)
 
-2. **MedicalBusiness/PsychologicalService Schema**
+2. **MedicalBusiness Schema** ⚠️ UPDATED WITH CORRECT VALUES
 ```json
 {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "[PRACTICE_NAME]",
-  "medicalSpecialty": "Psychology",
-  "serviceType": "[THERAPY_TYPE]",
-  "availableService": {
-    "@type": "MedicalTherapy",
-    "name": "[SPECIFIC_THERAPY]",
-    "description": "[THERAPY_DESCRIPTION]"
+  "name": "Next Step Therapy",
+  "telephone": "+14163062157",
+  "email": "jesse@nextsteptherapy.ca",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Ontario"
+  },
+  "provider": {
+    "@type": "Person",
+    "name": "Jesse Cynamon, RP",
+    "jobTitle": "Registered Psychotherapist",
+    "identifier": "CRPO #10979"
   }
 }
 ```
+**CRITICAL NOTES:**
+- ❌ Do NOT use "@type": "Physician" for Jesse (not a medical doctor)
+- ✅ Use "@type": "Person" with jobTitle "Registered Psychotherapist"
 
 3. **FAQ Schema Template**
 ```json
@@ -173,10 +193,56 @@ Generate FAQ schema for a therapy website that answers common questions about [T
 
 ## Technical Requirements
 
+### 🚨 CRITICAL SCHEMA REQUIREMENTS (ZERO TOLERANCE FOR ERRORS)
+
+**⚠️ READ THIS BEFORE GENERATING ANY SCHEMA - ERRORS COST $2,625-$5,250/MONTH**
+
+**MANDATORY: Read `SCHEMA_MARKUP_CRITICAL_CHECKLIST.md` before starting any schema work**
+
+#### Non-Negotiable Schema Values (Ontario Business Registry BIN 1001072925):
+
+1. **Phone Number Format:**
+   - ❌ **WRONG:** `"+1-416-306-2157"` (has hyphens)
+   - ✅ **CORRECT:** `"+14163062157"` (E.164 format, no hyphens)
+
+2. **addressLocality:**
+   - ❌ **WRONG:** `"Burlington"`, `"Ottawa"`, `"Hamilton"` (page city)
+   - ❌ **WRONG:** `"Ontario"` (province, not city)
+   - ✅ **CORRECT:** `"Toronto"` (ALWAYS - business registered location)
+   - **Use `areaServed` field for page-specific cities**
+
+3. **addressRegion:**
+   - ❌ **WRONG:** `"Ontario"` (full name)
+   - ✅ **CORRECT:** `"ON"` (2-letter code)
+
+4. **addressCountry:**
+   - ✅ **CORRECT:** `"CA"` (2-letter code)
+
+5. **Professional Designation for Jesse Cynamon:**
+   - ❌ **WRONG:** `"@type": "Physician"` (Jesse is NOT a medical doctor)
+   - ❌ **WRONG:** `"@type": "Psychologist"` (different credential)
+   - ❌ **WRONG:** `"@type": "MedicalPractitioner"` (not applicable)
+   - ✅ **CORRECT:** `"@type": "Person"` with `"jobTitle": "Registered Psychotherapist"`
+   - ✅ **CORRECT:** Include `"identifier": "CRPO #10979"`
+
+#### Pre-Deployment Validation (MANDATORY):
+- [ ] Google Rich Results Test shows ZERO critical errors
+- [ ] Phone number has NO hyphens
+- [ ] addressLocality is "Toronto" (never the page city)
+- [ ] Using "Person" NOT "Physician" for Jesse
+- [ ] All business schemas include complete address object
+- [ ] No duplicate "@type" fields in same object
+
+**Impact of Schema Errors:**
+- Lost rich snippets in search results
+- Weeks to months of ranking recovery time
+- $2,625-$5,250/month in lost revenue
+- Possible CRPO compliance issues (Physician vs Person designation)
+
 ### Schema Implementation Standards
 - **Format**: JSON-LD with script tags
 - **Placement**: In `<head>` section of each page
-- **Validation**: All schema must pass schema.org validator
+- **Validation**: All schema must pass schema.org validator AND Google Rich Results Test
 - **Compliance**: Must align with CRPO guidelines for therapy marketing
 
 ### Content Requirements
@@ -184,6 +250,7 @@ Generate FAQ schema for a therapy website that answers common questions about [T
 - **Completeness**: Include all relevant schema properties
 - **Localization**: Use Canadian address formats and terminology
 - **Professional Language**: Avoid prohibited marketing terms
+- **Business Facts**: ALWAYS use values from Ontario Business Registry BIN 1001072925
 
 ## Risk Mitigation
 

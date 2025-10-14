@@ -47,6 +47,28 @@
 - [ ] Schema markup valid (test with Google Rich Results)
 - [ ] Open Graph tags present
 
+### 6a. 🚨 CRITICAL SCHEMA VALIDATION (ZERO TOLERANCE)
+**⚠️ Schema errors cost $2,625-$5,250/month + weeks of ranking recovery**
+
+**BEFORE deploying ANY page, verify:**
+- [ ] Phone number is `"+14163062157"` (NO hyphens)
+  - ❌ WRONG: `"+1-416-306-2157"` (has hyphens)
+  - ✅ CORRECT: `"+14163062157"` (E.164 format)
+- [ ] addressLocality is `"Toronto"` (NOT page city)
+  - ❌ WRONG: `"Burlington"`, `"Ottawa"`, `"Hamilton"`, etc.
+  - ✅ CORRECT: `"Toronto"` (Ontario Business Registry BIN 1001072925)
+- [ ] addressRegion is `"ON"` (NOT "Ontario")
+- [ ] addressCountry is `"CA"`
+- [ ] Jesse Cynamon uses `"@type": "Person"` (NOT "Physician")
+  - ❌ WRONG: `"@type": "Physician"` (Jesse is NOT a medical doctor)
+  - ✅ CORRECT: `"@type": "Person"` (Registered Psychotherapist CRPO #10979)
+- [ ] No duplicate `"@type"` fields in same schema object
+- [ ] areaServed field used for page-specific cities (if needed)
+- [ ] Google Rich Results Test shows ZERO critical errors
+- [ ] All business schemas include complete address object
+
+**Reference:** See `SCHEMA_MARKUP_CRITICAL_CHECKLIST.md` for complete details
+
 ### 7. Performance Metrics
 - [ ] Core Web Vitals passing
 - [ ] Mobile responsive at 375px, 768px, 1024px
