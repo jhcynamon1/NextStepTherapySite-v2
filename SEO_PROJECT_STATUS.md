@@ -690,16 +690,101 @@ me implement the content for this specific page."
 
 ---
 
+## 🚨 CRITICAL: ProfessionalService Schema Requirements (October 14, 2025)
+
+### THE ISSUE DISCOVERED:
+Google Rich Results Test revealed **CRITICAL ERROR** on ProfessionalService schemas site-wide:
+- **Missing field: "address"** (CRITICAL - disqualifies from rich results)
+- **Missing field: "telephone"** (Optional but important for local SEO)
+
+### ROOT CAUSE:
+All ProfessionalService schemas were missing required business location data, causing:
+1. Disqualification from Google rich results/featured snippets
+2. Lost local SEO trust signals
+3. Reduced visibility in "near me" searches
+4. Potential contribution to impression decline
+
+### ACCURATE BUSINESS INFORMATION (Ontario Business Registry BIN 1001072925):
+```json
+"provider": {
+  "@type": "ProfessionalService",
+  "name": "Next Step Therapy Ontario",
+  "description": "[Service-specific description]",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "telephone": "+14163062157",
+  "areaServed": {
+    "@type": "City or AdministrativeArea",
+    "name": "[City or Province specific per page]"
+  },
+  "hasCredential": "CRPO #10979",
+  "priceRange": "$"
+}
+```
+
+### CRITICAL FACTS (DO NOT CHANGE):
+- **Business Name**: NEXT STEP THERAPY
+- **BIN**: 1001072925
+- **Type**: Sole Proprietorship
+- **Principal Place**: Toronto, Ontario, Canada (registered location)
+- **Status**: Active until November 24, 2029
+- **Telephone**: +14163062157
+- **CRPO**: #10979
+- **Virtual-Only**: Yes, no physical customer-facing location
+
+### SCHEMA STRATEGY FOR VIRTUAL BUSINESS:
+✅ **address** = Registered business location (Toronto)
+✅ **areaServed** = Where services are provided (varies by page: Burlington, Ontario, etc.)
+✅ **Virtual business does NOT hurt rankings in other cities** - areaServed handles service area SEO
+
+### PAGES FIXED (October 14, 2025):
+1. ✅ online-counselling-remote-workers.html (Line 338-350)
+2. ✅ burlington-online-therapy.html (Line 213-237)
+3. ✅ anxiety-therapy-burlington.html (Line 62-87)
+4. ✅ virtual-therapy-ontario.html (Line 133-154)
+5. ✅ performance-anxiety-therapy-ontario.html (Line 59-80)
+6. ✅ virtual-therapy-burlington.html (Already had correct schema)
+
+### REQUIREMENTS FOR ALL FUTURE PAGES WITH ProfessionalService SCHEMA:
+**MUST INCLUDE (Required Fields):**
+- `address`: PostalAddress with Toronto, ON, CA
+- `telephone`: +14163062157
+- `hasCredential`: CRPO #10979
+- `priceRange`: "$"
+
+**SHOULD INCLUDE (Recommended Fields):**
+- `areaServed`: City or Province specific to page topic
+- `image`: Professional photo if available
+- `description`: Service-specific description with CRPO mention
+
+**TESTING:**
+- ✅ Test ALL pages with ProfessionalService schema in Google Rich Results Test before deployment
+- ✅ Verify NO CRITICAL errors appear
+- ✅ Address and telephone must pass validation
+
+### WHY THIS MATTERS:
+- **Rich Results Eligibility**: CRITICAL errors disqualify pages from enhanced search results
+- **Local SEO Trust**: Complete NAP (Name, Address, Phone) signals legitimacy
+- **E-E-A-T Signals**: Contact information + credentials = expertise/trustworthiness
+- **Consistency**: Same address across all pages = stronger trust signal
+
+---
+
 ## 🎯 QUICK REFERENCE
 
-**What Phase Are We In?** Phase 1 Technical Recovery Complete
-**What's Next?** Oct 4: Validate fixes → Oct 9: Start content optimization
-**Biggest Opportunity?** Burlington pages (1,046 impressions, 0 clicks)
+**What Phase Are We In?** Phase 1 Technical Recovery Complete + v4.0 Conversion Optimization In Progress
+**What's Next?** Oct 4: Validate fixes → Oct 9: Start content optimization → Complete remaining 6 pages v4.0
+**Biggest Opportunity?** Burlington pages (1,046 impressions, 0 clicks → now optimized for conversion)
 **Expected Recovery Timeline?** 3-6 months to 75-90% of peak
 **Current Traffic?** 85 impressions/day (down from 341 peak)
-**Are Changes Live?** Yes, all deployed Oct 2, 2025, 9:40 PM EST
-**When Do I Need To Check?** October 4, 2025 (error validation)
+**Are Changes Live?** Yes, all deployed Oct 2, 2025, 9:40 PM EST + v4.0 conversions + schema fixes
+**When Do I Need To Check?** October 4, 2025 (error validation) + Monitor v4.0 conversion metrics
 **Expected Traffic Gain (3 months)?** +100-160% (170-220 impressions/day)
+**Schema Fixes?** ✅ COMPLETE - All 6 ProfessionalService pages fixed (Oct 14, 2025)
 
 ---
 
