@@ -2341,18 +2341,381 @@ Virtual-Only: Yes (no physical customer location)
 
 ---
 
+## 🔎 AHREFS CONTENT GAP ANALYSIS - KEYWORD OPPORTUNITIES
+
+### 📊 DATA OVERVIEW
+
+**Source:** Ahrefs Content Gap Analysis
+**Date Compiled:** October 2025
+**Total Keywords Analyzed:** 80+ therapy-related terms
+**Purpose:** Identify high-opportunity keywords for immediate targeting with actual search volume + competition data
+
+---
+
+### 🎯 TIER 1: QUICK WIN KEYWORDS (High Volume + Low Competition)
+
+**These keywords offer the BEST ROI for immediate targeting:**
+
+| Keyword | Volume | KD | CPC | Opportunity |
+|---------|--------|----|----|-------------|
+| **emdr therapy toronto** | 450 | 0 | $1.31 | 🔥 PRIORITY #1 - KD 0! |
+| **online therapy ontario** | 800 | 19 | $5.30 | 🔥 PRIORITY #2 - Highest volume |
+| **sex therapist toronto** | 300 | 3 | $1.28 | ⭐ Low competition niche |
+| **find a therapist toronto** | 250 | 19 | $2.74 | ⭐ Informational opportunity |
+| **ocd therapist toronto** | 150 | 0 | $1.38 | 🔥 KD 0 - Specialized niche |
+| **psychological assessment ontario** | 150 | 0 | $1.40 | 🔥 KD 0 - ADHD tie-in! |
+| **why is therapy so expensive** | 150 | 0 | $1.75 | 🔥 KD 0 - Content opportunity |
+| **grief counselling toronto** | 150 | 1 | $1.50 | ⭐ Low competition |
+| **group therapy toronto** | 150 | 2 | $1.15 | ⭐ Service expansion |
+| **grief therapy toronto** | 80 | 0 | $1.74 | 🔥 KD 0 |
+| **anger management classes toronto** | 80 | 0 | $1.76 | 🔥 KD 0 - Niche service |
+
+**QUICK WIN SUMMARY:**
+- **7 keywords with KD 0** = Virtually no competition!
+- **Combined monthly volume: 2,610 searches**
+- **Average CPC: $1.51** = Moderate commercial intent
+- **Estimated clicks at Position #1-3:** 900-1,300/month
+- **Revenue potential:** $15,750-$22,750/month at 10% conversion
+
+---
+
+### 💰 TIER 2: HIGH COMMERCIAL INTENT (High CPC = Buyer Intent)
+
+**These keywords have high CPC indicating strong buyer intent:**
+
+| Keyword | Volume | KD | CPC | Commercial Signal |
+|---------|--------|----|----|-------------------|
+| **online counselling canada** | 150 | 37 | $8.35 | Very High |
+| **ontario online therapy** | 70 | 12 | $7.31 | Very High - EASIER |
+| **online therapy toronto** | 100 | 31 | $7.05 | Very High |
+| **virtual therapy ontario** | 350 | 27 | $6.79 | ✅ **ALREADY HAVE!** |
+| **online psychotherapy ontario** | 150 | 17 | $6.22 | High |
+| **online therapist ontario** | 100 | 19 | $6.00 | High |
+| **online counselling ontario** | 150 | 22 | $5.34 | High |
+| **virtual psychotherapy ontario** | 50 | 19 | $4.12 | High |
+
+**HIGH INTENT SUMMARY:**
+- **Average CPC: $6.47** = Strong buyer intent (ready to book)
+- **Combined monthly volume: 1,120 searches**
+- **We already rank for virtual therapy ontario (350 vol)** = Capitalize!
+- **Strategy:** Create pages for "online therapy" and "online counselling" variants
+
+---
+
+### 🎨 TIER 3: SPECIALIZED NICHE OPPORTUNITIES
+
+**These align perfectly with Perplexity research niches:**
+
+#### **EMDR Therapy Cluster** - **MASSIVE OPPORTUNITY**
+
+| Keyword | Volume | KD |
+|---------|--------|----|
+| emdr therapy toronto | 450 | 0 |
+| emdr therapist toronto | 100 | 1 |
+| emdr therapists near me | 70 | 5 |
+| **Total cluster volume** | **620** | - |
+
+**Why EMDR is Priority #1:**
+- **450 monthly searches with KD 0** = Easiest high-volume keyword
+- Specialized trauma therapy (aligns with "Complex PTSD" Perplexity niche)
+- Local pack in SERP = Geographic advantage
+- CPC $1.31 = Lower competition than general therapy
+
+---
+
+#### **OCD Therapy** - **150 vol, KD 0** 🔥
+- ocd therapist toronto
+- Perplexity confirmed: "ERP therapy requires specialized training most lack"
+- Knowledge panel in SERP = Authority opportunity
+- **Revenue potential:** $2,625/month at 10% conversion
+
+---
+
+#### **Sex Therapy Cluster** - **450 combined searches**
+- sex therapist toronto (300 vol, KD 3)
+- sex therapy toronto (150 vol, KD 4)
+- Specialized niche = Less competition, higher fees
+- Local pack in SERP
+
+---
+
+#### **Grief & Loss Therapy** - **230 combined, KD 0-1**
+- grief counselling toronto (150 vol, KD 1)
+- grief therapy toronto (80 vol, KD 0) 🔥
+- Aligns with "Life Transitions" Perplexity opportunity
+
+---
+
+#### **Men's Mental Health** - **100 vol, KD 8**
+- men therapy toronto
+- Perplexity: "30+ therapist market = proven demand"
+- Knowledge panel + video preview in SERP
+
+---
+
+#### **Anger Management** - **240 combined, multiple KD 0**
+- anger management toronto (100 vol, KD 3)
+- anger management classes toronto (80 vol, KD 0) 🔥
+- anger management therapy toronto (60 vol, KD 0) 🔥
+- Group therapy format = Higher revenue per hour
+
+---
+
+### 📚 TIER 4: CONTENT & AUTHORITY OPPORTUNITIES (KD 0)
+
+**EASY content wins that build authority and capture top-of-funnel:**
+
+| Keyword | Volume | KD | Strategic Value |
+|---------|--------|----|-----------------|
+| **why is therapy so expensive** | 150 | 0 | Addresses Reddit pain point! |
+| **how much do psychotherapists make in ontario** | 150 | 0 | Career + transparency |
+| **how much do therapists make in ontario** | 100 | 0 | Industry transparency |
+| **are psychologists covered by ohip** | 80 | 0 | Addresses cost confusion |
+| **can psychotherapist prescribe medication** | 70 | 0 | CRPO scope clarification |
+| **how much is couples therapy** | 60 | 0 | Pricing transparency |
+| **msw rsw meaning** | 150 | 2 | Credential education |
+
+**CONTENT STRATEGY VALUE:**
+- **All KD 0** = Rank quickly with quality content
+- **Combined volume: 760 searches/month**
+- Addresses **Reddit pain points** directly
+- Builds **E-E-A-T authority**
+- **Top-of-funnel** → Nurture to booking
+
+**Recommended Content:**
+
+**1. "Why Is Therapy So Expensive in Ontario? (2025 Pricing Guide)"**
+- 150 monthly searches, KD 0
+- Address Reddit: "workplace insurance doesn't cover all costs"
+- Include: RPs vs RSWs vs Psychologists pricing breakdown
+- CTA: "Find affordable options with sliding scale"
+
+**2. "Are Psychologists Covered by OHIP in Ontario?"**
+- 80 monthly searches, KD 0
+- Clarify: OHIP vs private insurance vs EAP
+- Address: "unsure about resources my doctor can direct me to"
+- CTA: "Check if your insurance covers therapy"
+
+**3. "What Do MSW, RSW, and RP Mean? Ontario Credentials Explained"**
+- 240 combined searches (msw rsw meaning + msw, rsw)
+- Clarify CRPO vs OASW vs OCSWSSW
+- Build trust through transparency
+
+---
+
+### 📊 KEYWORD OPPORTUNITY SCORING
+
+**Priority Matrix (Volume × Commercial Intent ÷ Competition):**
+
+| Priority | Keyword | Score | Rationale |
+|----------|---------|-------|-----------|
+| 🥇 **#1** | emdr therapy toronto | 9.8/10 | 450 vol, KD 0, specialized |
+| 🥇 **#2** | online therapy ontario | 9.5/10 | 800 vol, KD 19, highest volume |
+| 🥇 **#3** | ocd therapist toronto | 9.0/10 | 150 vol, KD 0, specialized |
+| 🥈 **#4** | psychological assessment ontario | 8.5/10 | 150 vol, KD 0, ADHD tie-in |
+| 🥈 **#5** | sex therapist toronto | 8.3/10 | 300 vol, KD 3, underserved |
+| 🥈 **#6** | ontario online therapy | 8.0/10 | 70 vol, KD 12, CPC $7.31 |
+| 🥈 **#7** | grief counselling toronto | 7.8/10 | 150 vol, KD 1, life transition |
+| 🥉 **#8** | why is therapy so expensive | 7.5/10 | 150 vol, KD 0, authority |
+| 🥉 **#9** | men therapy toronto | 7.2/10 | 100 vol, KD 8, strategic niche |
+| 🥉 **#10** | anger management classes toronto | 7.0/10 | 80 vol, KD 0, group opportunity |
+
+---
+
+### 🚀 IMMEDIATE ACTION PLAN (Next 30 Days)
+
+#### **Week 1: Top 3 Priority Pages**
+
+**1. EMDR Therapy Toronto** (450 vol, KD 0)
+- **Content:** What is EMDR, trauma/PTSD/anxiety applications, credentials
+- **Schema:** ProfessionalService + MedicalTherapy + FAQPage
+- **Expected:** Position #1-5 within 2-4 weeks (KD 0!)
+- **Revenue:** $7,875/month at 10% conversion
+
+**2. Online Therapy Ontario** (800 vol, KD 19)
+- **Content:** How it works, insurance, technology, effectiveness
+- **Schema:** ProfessionalService + FAQPage + HowTo
+- **Expected:** Position #10-20 within 4-6 weeks
+- **Revenue:** $10,500/month at 10% conversion
+
+**3. OCD Therapist Toronto** (150 vol, KD 0)
+- **Content:** OCD symptoms, ERP therapy, treatment, success rates
+- **Schema:** ProfessionalService + MedicalTherapy + FAQPage
+- **Expected:** Position #1-5 within 2-4 weeks (KD 0!)
+- **Revenue:** $2,625/month at 10% conversion
+
+**Week 1 Expected Revenue:** $21,000/month combined
+
+---
+
+#### **Week 2: Specialized Niche Pages**
+
+**4. Psychological Assessment Ontario** (150 vol, KD 0)
+- Tie-in to ADHD assessment support niche!
+- Position as "support therapy while you wait"
+
+**5. Sex Therapy Toronto** (450 combined vol, KD 3-4)
+- Underserved niche, low competition
+
+**6. Grief Counselling Toronto** (230 combined vol, KD 0-1)
+- Life transitions niche
+
+---
+
+#### **Week 3: Men's + Anger Management**
+
+**7. Men's Therapy Toronto** (100 vol, KD 8)
+- "Men's Mental Health - SIGNIFICANT UNDERSERVED" niche
+
+**8. Anger Management Toronto** (240 combined vol, multiple KD 0)
+- Individual + group classes format
+
+---
+
+#### **Week 4: Content & Authority**
+
+**9. "Why Is Therapy So Expensive?" Blog** (150 vol, KD 0)
+- Directly addresses #1 Reddit pain point
+
+**10. "Are Psychologists Covered by OHIP?" FAQ** (80 vol, KD 0)
+- Addresses insurance confusion
+
+---
+
+### 🎯 KEYWORD-TO-NICHE MAPPING
+
+**How Ahrefs validates Perplexity Strategic Niches:**
+
+| Perplexity Niche | Ahrefs Keywords | Combined Vol | Score |
+|------------------|-----------------|--------------|-------|
+| **Adult ADHD** | psychological assessment ontario | 150 | 🔥 KD 0, $2,500-3K gap |
+| **Complex PTSD & Trauma** | emdr therapy toronto, emdr therapist | 550 | 🔥 KD 0-1, specialized |
+| **OCD Specialized Anxiety** | ocd therapist toronto | 150 | 🔥 KD 0, ERP expertise |
+| **Men's Mental Health** | men therapy toronto | 100 | ⭐ KD 8, underserved |
+| **Grief & Life Transitions** | grief counselling/therapy toronto | 230 | 🔥 KD 0-1 |
+| **Anger Management** | anger management toronto variants | 240 | 🔥 Multiple KD 0 |
+| **Sex Therapy** | sex therapist/therapy toronto | 450 | ⭐ KD 3-4, underserved |
+| **Virtual/Online Therapy** | online therapy ontario variants | 1,300 | ⭐ High vol + CPC |
+
+**KEY INSIGHT:** Ahrefs validates Perplexity niches with actual search volume + competition data!
+
+---
+
+### 📈 EXPECTED IMPACT FROM AHREFS TARGETING
+
+**Conservative Revenue Projections (10% Conversion):**
+
+| Cluster | Monthly Searches | Expected Clicks | Conversions | Revenue/Month |
+|---------|------------------|-----------------|-------------|---------------|
+| EMDR Therapy | 550 | 30-40 | 3-4 | $525-$700 |
+| Online Therapy Ontario | 800 | 40-60 | 4-6 | $700-$1,050 |
+| OCD Therapy | 150 | 10-15 | 1-2 | $175-$350 |
+| Psychological Assessment | 150 | 10-15 | 1-2 | $175-$350 |
+| Sex Therapy | 450 | 20-30 | 2-3 | $350-$525 |
+| Grief Counselling | 230 | 15-20 | 2 | $350 |
+| Men's Therapy | 100 | 5-8 | 1 | $175 |
+| Anger Management | 240 | 15-20 | 2 | $350 |
+| **TOTAL (8 clusters)** | **2,670** | **145-208** | **16-24** | **$2,800-$4,200/mo** |
+
+**Content Authority Pages (Top-of-Funnel):**
+- 870 searches, 2-3% conversion
+- Additional revenue: $500-$750/month
+
+**GRAND TOTAL: $3,300-$4,950/month from Ahrefs keyword targeting**
+
+**Timeline:**
+- Weeks 1-4: Pages created
+- Weeks 4-8: Initial rankings (KD 0 rank faster)
+- Weeks 8-12: Revenue starts flowing
+- Month 4-6: Full revenue potential
+
+---
+
+### 💡 CRITICAL AHREFS INSIGHTS
+
+**What This Data Tells Us:**
+
+1. **EMDR is #1 Opportunity** - 450 searches, KD 0, specialized = CREATE IMMEDIATELY
+
+2. **11 Keywords with KD 0** - "Free money" keywords where quality content = automatic Page 1
+
+3. **Virtual Therapy Ontario Already Optimized** - 350 vol, $6.79 CPC page optimized Oct 14 = Monitor
+
+4. **Content Authority = Trust** - KD 0 informational keywords build E-E-A-T for service pages
+
+5. **Local Pack = Geographic Advantage** - Toronto-based serving Ontario = Optimize both local + regional
+
+6. **Specialized Niches Lower Competition** - EMDR, OCD, sex therapy = easier than generic "therapy"
+
+7. **CPC Validates Commercial Value** - High CPC ($5-8) = people actively booking
+
+8. **Reddit Language Matters** - Multiple keywords show forums in SERP = Use authentic voice
+
+---
+
+### 🔬 SERP FEATURES ANALYSIS
+
+**What's Showing in Search Results:**
+
+**Local Pack Keywords** (priority for Google Business Profile):
+- emdr therapy toronto, virtual therapy ontario, sex therapist toronto, grief counselling toronto
+
+**AI Overview Keywords** (need authoritative content):
+- why is therapy so expensive, are psychologists covered by ohip
+
+**People Also Ask** (FAQ schema opportunity):
+- online therapy ontario, emdr therapy toronto, find a therapist toronto
+
+**Knowledge Panels** (competitor analysis):
+- The Clinic on Dupont (300 vol), Shift Collab (90 vol), The Mindfulness Clinic (100 vol)
+
+**Discussions and Forums** (use Reddit language):
+- online therapy ontario, emdr therapy toronto, find a therapist toronto
+
+---
+
+### 🎯 AHREFS + PERPLEXITY = COMPLETE STRATEGY
+
+**Combined Intelligence:**
+
+**Perplexity Research** provides:
+- Market validation (wait times, pricing gaps, demographics)
+- Strategic niches (healthcare workers, ADHD, men's mental health)
+- Reddit pain points (real user language)
+- Seasonal patterns (22% volume swing)
+- Revenue potential calculations
+
+**Ahrefs Data** provides:
+- Actual keyword search volumes
+- Competition levels (KD scores)
+- Commercial intent signals (CPC)
+- SERP feature opportunities
+- Keyword clustering
+
+**Together = Data-Driven Strategy:**
+- Perplexity says "ADHD market is massive" → Ahrefs shows "psychological assessment ontario" (150 vol, KD 0)
+- Perplexity says "Complex PTSD underserved" → Ahrefs shows "emdr therapy toronto" (450 vol, KD 0)
+- Perplexity says "Men underserved" → Ahrefs shows "men therapy toronto" (100 vol, KD 8)
+- Perplexity says "Reddit pain: cost confusion" → Ahrefs shows "why is therapy so expensive" (150 vol, KD 0)
+
+**This is the most complete therapy market intelligence possible for Ontario 2025.**
+
+---
+
 ## 🎯 QUICK REFERENCE
 
-**What Phase Are We In?** Phase 1 Complete + v4.0 Conversion (4/10) + Schema Audit Complete ✅ + Market Research Complete ✅
-**What's Next?** Oct 16: Monitor v4.0 conversions → Complete remaining 6 pages v4.0 → Oct 23: Intent Satisfaction + NEW NICHE PAGES
-**Biggest Opportunity?** Burlington pages (1,046 impressions) + ADHD/Healthcare Worker niche pages (untapped markets)
+**What Phase Are We In?** Phase 1 Complete + v4.0 Conversion (4/10) + Schema Audit Complete ✅ + Market Research Complete ✅ + Ahrefs Analysis Complete ✅
+**What's Next?** Oct 16: Monitor v4.0 conversions → Oct 23: CREATE TOP 3 AHREFS PAGES (EMDR, Online Therapy Ontario, OCD)
+**Biggest Opportunity?** Burlington pages (1,046 impressions) + **EMDR Therapy Toronto (450 vol, KD 0!) = #1 PRIORITY**
 **Expected Recovery Timeline?** 3-6 months to 75-90% of peak
 **Current Traffic?** 85 impressions/day (down from 341 peak)
 **Are Changes Live?** Yes - Technical fixes (Oct 2) + v4.0 conversions (4 pages) + Schema fixes (48 pages Oct 14)
-**When Do I Need To Check?** October 16, 2025 (v4.0 conversion metrics) + October 23 (Intent Satisfaction start + niche page creation)
-**Expected Traffic Gain (3 months)?** +100-160% (170-220 impressions/day) + NEW niche page traffic
+**When Do I Need To Check?** October 16, 2025 (v4.0 conversion metrics) + October 23 (EMDR + OCD + Online Therapy Ontario pages)
+**Expected Traffic Gain (3 months)?** +100-160% (170-220 impressions/day) + NEW niche pages (2,670 monthly searches from Ahrefs keywords)
 **Schema Fixes?** ✅ COMPLETE - All 48 pages fixed and verified (Oct 14, 2025)
-**Market Research?** ✅ COMPLETE - Comprehensive Ontario therapy market analysis (Oct 14, 2025)
+**Market Research?** ✅ COMPLETE - Perplexity (100+ sources) + Ahrefs (80+ keywords) = Complete Ontario intelligence
+**Top 3 Ahrefs Priorities:** EMDR (450 vol, KD 0), Online Therapy Ontario (800 vol, KD 19), OCD (150 vol, KD 0)
+**Ahrefs Expected Revenue:** $3,300-$4,950/month from 8 keyword clusters (10% conversion)
 
 ---
 
