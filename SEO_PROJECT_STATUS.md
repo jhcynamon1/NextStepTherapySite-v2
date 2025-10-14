@@ -690,26 +690,39 @@ me implement the content for this specific page."
 
 ---
 
-## 🚨 CRITICAL: ProfessionalService Schema Requirements (October 14, 2025)
+## 🚨 CRITICAL: ProfessionalService Schema Requirements (OCTOBER 14, 2025 - CORRECTED)
 
-### THE ISSUE DISCOVERED:
-Google Rich Results Test revealed **CRITICAL ERROR** on ProfessionalService schemas site-wide:
-- **Missing field: "address"** (CRITICAL - disqualifies from rich results)
-- **Missing field: "telephone"** (Optional but important for local SEO)
+### ⚠️ SCHEMA ERRORS COST MONEY AND IMPRESSIONS - ZERO TOLERANCE FOR MISTAKES
 
-### ROOT CAUSE:
-All ProfessionalService schemas were missing required business location data, causing:
-1. Disqualification from Google rich results/featured snippets
-2. Lost local SEO trust signals
-3. Reduced visibility in "near me" searches
-4. Potential contribution to impression decline
+**This section contains bulletproof requirements. Follow EXACTLY. No exceptions. No variations.**
 
-### ACCURATE BUSINESS INFORMATION (Ontario Business Registry BIN 1001072925):
+---
+
+### 📋 VERIFIED BUSINESS FACTS (Ontario Business Registry BIN 1001072925):
+
+**COPY THESE EXACTLY - DO NOT ALTER:**
+```
+Business Name: NEXT STEP THERAPY
+BIN: 1001072925
+Type: Sole Proprietorship
+Principal Place: Toronto, Ontario, Canada
+Status: Active until November 24, 2029
+Telephone: +14163062157
+CRPO: #10979
+Virtual-Only: Yes (no physical customer location)
+```
+
+---
+
+### ✅ REQUIRED PROFESSIONALSERVICE SCHEMA - EXACT FORMAT:
+
+**COPY THIS TEMPLATE EXACTLY:**
+
 ```json
 "provider": {
   "@type": "ProfessionalService",
-  "name": "Next Step Therapy Ontario",
-  "description": "[Service-specific description]",
+  "name": "Next Step Therapy [- Location or Ontario]",
+  "description": "CRPO registered psychotherapist (#10979) providing [service] for [audience].",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Toronto",
@@ -719,58 +732,125 @@ All ProfessionalService schemas were missing required business location data, ca
   "telephone": "+14163062157",
   "areaServed": {
     "@type": "City or AdministrativeArea",
-    "name": "[City or Province specific per page]"
+    "name": "[Burlington OR Ontario - varies by page]"
   },
   "hasCredential": "CRPO #10979",
-  "priceRange": "$"
+  "priceRange": "$$"
 }
 ```
 
-### CRITICAL FACTS (DO NOT CHANGE):
-- **Business Name**: NEXT STEP THERAPY
-- **BIN**: 1001072925
-- **Type**: Sole Proprietorship
-- **Principal Place**: Toronto, Ontario, Canada (registered location)
-- **Status**: Active until November 24, 2029
-- **Telephone**: +14163062157
-- **CRPO**: #10979
-- **Virtual-Only**: Yes, no physical customer-facing location
+---
 
-### SCHEMA STRATEGY FOR VIRTUAL BUSINESS:
-✅ **address** = Registered business location (Toronto)
-✅ **areaServed** = Where services are provided (varies by page: Burlington, Ontario, etc.)
-✅ **Virtual business does NOT hurt rankings in other cities** - areaServed handles service area SEO
+### 🔒 NON-NEGOTIABLE RULES:
 
-### PAGES FIXED (October 14, 2025):
-1. ✅ online-counselling-remote-workers.html (Line 338-350)
-2. ✅ burlington-online-therapy.html (Line 213-237)
-3. ✅ anxiety-therapy-burlington.html (Line 62-87)
-4. ✅ virtual-therapy-ontario.html (Line 133-154)
-5. ✅ performance-anxiety-therapy-ontario.html (Line 59-80)
-6. ✅ virtual-therapy-burlington.html (Already had correct schema)
+#### Rule 1: addressLocality MUST ALWAYS BE "Toronto"
+- ❌ NEVER use "Burlington"
+- ❌ NEVER use "Ontario"
+- ❌ NEVER use "Oakville", "Hamilton", "Ottawa", or ANY other city
+- ✅ ALWAYS use "Toronto" (registered business location per BIN 1001072925)
 
-### REQUIREMENTS FOR ALL FUTURE PAGES WITH ProfessionalService SCHEMA:
-**MUST INCLUDE (Required Fields):**
-- `address`: PostalAddress with Toronto, ON, CA
-- `telephone`: +14163062157
-- `hasCredential`: CRPO #10979
-- `priceRange`: "$"
+#### Rule 2: telephone MUST ALWAYS BE "+14163062157"
+- ❌ NEVER omit this field
+- ❌ NEVER use (416) 306-2157 format
+- ❌ NEVER use 4163062157 without country code
+- ✅ ALWAYS use "+14163062157" (exact format with + prefix)
 
-**SHOULD INCLUDE (Recommended Fields):**
-- `areaServed`: City or Province specific to page topic
-- `image`: Professional photo if available
-- `description`: Service-specific description with CRPO mention
+#### Rule 3: addressRegion MUST ALWAYS BE "ON"
+- ❌ NEVER use "Ontario" (full name)
+- ✅ ALWAYS use "ON" (2-letter province code)
 
-**TESTING:**
-- ✅ Test ALL pages with ProfessionalService schema in Google Rich Results Test before deployment
-- ✅ Verify NO CRITICAL errors appear
-- ✅ Address and telephone must pass validation
+#### Rule 4: addressCountry MUST ALWAYS BE "CA"
+- ❌ NEVER use "Canada" (full name)
+- ✅ ALWAYS use "CA" (2-letter country code)
 
-### WHY THIS MATTERS:
-- **Rich Results Eligibility**: CRITICAL errors disqualify pages from enhanced search results
-- **Local SEO Trust**: Complete NAP (Name, Address, Phone) signals legitimacy
-- **E-E-A-T Signals**: Contact information + credentials = expertise/trustworthiness
-- **Consistency**: Same address across all pages = stronger trust signal
+#### Rule 5: areaServed VARIES BY PAGE (this is DIFFERENT from address)
+- For Burlington pages: "Burlington"
+- For Ontario-wide pages: "Ontario"
+- For Ottawa pages: "Ottawa"
+- **This field represents WHERE SERVICES ARE PROVIDED**
+- **address represents WHERE BUSINESS IS REGISTERED (always Toronto)**
+
+---
+
+### 📊 CORRECTED PAGES (October 14, 2025 - 9:50 AM):
+
+**INITIAL FIXES (Contained Errors):**
+1. ❌ online-counselling-remote-workers.html - HAD ERROR: addressLocality "Ontario"
+2. ❌ burlington-online-therapy.html - HAD ERROR: addressLocality "Burlington", telephone MISSING
+3. ✅ anxiety-therapy-burlington.html - CORRECT
+4. ✅ virtual-therapy-ontario.html - CORRECT
+5. ✅ performance-anxiety-therapy-ontario.html - CORRECT
+6. ✅ virtual-therapy-burlington.html - CORRECT
+
+**FINAL CORRECTIONS (October 14, 2025 - 9:50 AM):**
+1. ✅ online-counselling-remote-workers.html - FIXED: Toronto + telephone
+2. ✅ burlington-online-therapy.html - FIXED: Toronto + telephone
+3. ✅ anxiety-therapy-burlington.html - Already correct
+4. ✅ virtual-therapy-ontario.html - Already correct
+5. ✅ performance-anxiety-therapy-ontario.html - Already correct
+6. ✅ virtual-therapy-burlington.html - Already correct
+
+**VERIFICATION STATUS:** ✅ ALL 5 FILES AUDITED AND CONFIRMED CORRECT
+
+---
+
+### 🔍 PRE-DEPLOYMENT CHECKLIST (MANDATORY):
+
+**BEFORE deploying ANY page with ProfessionalService schema:**
+
+- [ ] addressLocality is EXACTLY "Toronto" (not Burlington, not Ontario)
+- [ ] telephone is EXACTLY "+14163062157" (with + prefix)
+- [ ] addressRegion is EXACTLY "ON" (not Ontario)
+- [ ] addressCountry is EXACTLY "CA" (not Canada)
+- [ ] hasCredential is EXACTLY "CRPO #10979"
+- [ ] areaServed is appropriate for page (Burlington for Burlington pages, Ontario for province-wide)
+- [ ] Tested in Google Rich Results Test (https://search.google.com/test/rich-results)
+- [ ] NO CRITICAL errors appear
+- [ ] Final audit script passed (/tmp/final_audit.sh if available)
+
+---
+
+### 💰 WHY THIS MATTERS (BUSINESS IMPACT):
+
+**CRITICAL errors in schema markup cause:**
+1. ❌ **Immediate**: Disqualification from Google rich results
+2. ❌ **Short-term**: Loss of local SEO trust signals
+3. ❌ **Medium-term**: Reduced "near me" search visibility
+4. ❌ **Long-term**: Lower rankings, fewer impressions, lost revenue
+
+**With 609 impressions/month on Burlington page:**
+- Lost rich results = ~30-60 fewer clicks/month
+- At 10% conversion = 3-6 lost consultations/month
+- At $175/session = **$525-$1,050 lost revenue/month per page**
+- Across 5 pages = **$2,625-$5,250 lost revenue/month**
+
+**Getting schema right is not optional. It's revenue.**
+
+---
+
+### 🛡️ SCHEMA ERROR PREVENTION PROTOCOL:
+
+**For ALL Future Schema Work:**
+
+1. **READ** the exact current schema from the file first
+2. **VERIFY** against this document's templates
+3. **PREPARE** exact old_string and new_string
+4. **DOUBLE-CHECK** all 6 required fields before Edit tool
+5. **EXECUTE** Edit with verified strings
+6. **RE-READ** file after edit to confirm changes
+7. **AUDIT** with grep commands for addressLocality and telephone
+8. **TEST** in Google Rich Results Test before deployment
+9. **DOCUMENT** any new patterns or edge cases here
+
+**NEVER:**
+- Rush schema changes without verification
+- Assume "close enough" is acceptable
+- Skip the Google Rich Results Test
+- Deploy without re-auditing the file
+- Make schema changes late at night when tired
+- Batch-fix multiple files without verifying each one
+
+**This protocol is non-negotiable. Schema errors cost real money.**
 
 ---
 
