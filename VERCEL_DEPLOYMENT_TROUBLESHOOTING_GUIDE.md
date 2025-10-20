@@ -56,7 +56,7 @@ vercel --prod --force --yes
 #### Step 6: Test and Verify
 ```bash
 # Test the page (may take time for DNS propagation)
-curl -I https://www.nextsteptherapy.ca/[page-name]
+curl -I https://nextsteptherapy.ca/[page-name]
 
 # If still 404, wait for DNS propagation and test in browser
 ```
@@ -96,7 +96,7 @@ curl -s [url] | grep "title"
 - `.vercel/project.json` - Project linking configuration
 
 ### 🚀 **Final Result**
-✅ Page successfully deployed at: https://www.nextsteptherapy.ca/perfectionism-and-burnout-therapy-toronto
+✅ Page successfully deployed at: https://nextsteptherapy.ca/perfectionism-and-burnout-therapy-toronto
 ✅ 2,500+ words of optimized content
 ✅ GA4 tracking enabled (G-J8H4YBGSHR)
 ✅ CRPO compliance maintained

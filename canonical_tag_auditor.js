@@ -75,7 +75,7 @@ class CanonicalAuditor {
 }
 
 // Configuration
-const SITEMAP_URL = 'https://www.nextsteptherapy.ca/sitemap.xml'; 
+const SITEMAP_URL = 'https://nextsteptherapy.ca/sitemap.xml'; 
 
 // Run the audit
 (async () => {

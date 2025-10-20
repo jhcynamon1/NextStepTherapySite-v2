@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Finding a Therapist in Toronto: Complete 2025 Guide | CRPO Registered</title>
-    <meta name="description" content="Looking for a therapist in Toronto? Skip the directory overwhelm. CRPO registered psychotherapist specializing in anxiety and workplace stress. Same-week availability.">
+    <title>Therapist Toronto | CRPO-Registered Psychotherapist & Virtual Care</title>
+    <meta name="description" content="Work with a CRPO-registered psychotherapist in Toronto for anxiety, burnout, and career stress. Secure virtual sessions, evening availability, insurance-ready receipts. Book a free 15-minute consultation.">
     <link rel="canonical" href="https://nextsteptherapy.ca/therapist-toronto">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Finding a Therapist in Toronto: Complete 2025 Guide | CRPO Registered">
-    <meta property="og:description" content="Skip the directory overwhelm. CRPO registered psychotherapist specializing in anxiety and workplace stress. Same-week availability.">
+    <meta property="og:title" content="Therapist Toronto | CRPO-Registered Psychotherapist">
+    <meta property="og:description" content="Secure virtual therapy for Toronto professionals, students, and families. CRPO-registered psychotherapist with evening availability and insurance-ready receipts.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/therapist-toronto">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
@@ -146,20 +146,20 @@
             color: var(--text-primary);
         }
 
+        .hero-cta {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
         .hero-subtext {
             font-size: 1.25rem;
             color: var(--text-secondary);
             max-width: 800px;
             margin: 0 auto 2rem;
             line-height: 1.6;
-        }
-
-        .trust-pills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
         }
 
         .trust-pill {
@@ -171,6 +171,20 @@
             font-weight: 500;
             border: 1px solid var(--primary-green-border);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .trust-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .neighborhood-highlight {
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         /* Main Content Layout */
@@ -488,6 +502,14 @@
                 font-size: 2rem;
             }
 
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .neighborhood-highlight {
+                font-size: 0.9rem;
+            }
+
             .nav {
                 display: none;
             }
@@ -519,17 +541,31 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WebPage",
+          "@type": "MedicalWebPage",
           "@id": "https://nextsteptherapy.ca/therapist-toronto#webpage",
           "url": "https://nextsteptherapy.ca/therapist-toronto",
-          "name": "Find a Therapist in Toronto: Your Complete 2025 Guide",
-          "description": "Complete guide to finding the right therapist in Toronto. Skip directory overwhelm with expert guidance and direct connection.",
+          "name": "Therapist Toronto | CRPO-Registered Psychotherapist",
+          "description": "Secure virtual therapy for Toronto professionals, students, and families. CRPO-registered psychotherapist offering evening availability and insurance-ready receipts.",
           "inLanguage": "en-CA",
-          "isPartOf": {
-            "@id": "https://nextsteptherapy.ca/#website"
+          "about": {
+            "@type": "Service",
+            "name": "Therapy Services Toronto",
+            "areaServed": {
+              "@type": "City",
+              "name": "Toronto"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Next Step Therapy",
+            "url": "https://nextsteptherapy.ca",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://nextsteptherapy.ca/images/asset104.png"
+            }
           },
           "datePublished": "2025-10-01",
-          "dateModified": "2025-10-01"
+          "dateModified": "2025-10-20"
         },
         {
           "@type": "FAQPage",
@@ -595,51 +631,41 @@
         {
           "@type": "Service",
           "@id": "https://nextsteptherapy.ca/therapist-toronto#service",
-          "serviceType": "Therapy Services Toronto",
+          "serviceType": "Therapist Toronto",
           "provider": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "givenName": "Jesse",
-            "familyName": "Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "honorificSuffix": "RP",
-            "telephone": "+14163062157",
+            "@type": "ProfessionalService",
+            "name": "Next Step Therapy",
+            "telephone": "+1-416-306-2157",
             "email": "jesse@nextsteptherapy.ca",
-            "identifier": "CRPO #10979",
-            "memberOf": {
-              "@type": "Organization",
-              "name": "College of Registered Psychotherapists of Ontario"
-            }
+            "areaServed": "Toronto, Ontario",
+            "knowsAbout": ["anxiety", "burnout", "career stress"],
+            "hasCredential": "CRPO #10979"
           },
           "areaServed": {
             "@type": "City",
-            "name": "Toronto",
-            "containsPlace": [
-              {"@type": "Neighborhood", "name": "Financial District"},
-              {"@type": "Neighborhood", "name": "King West"},
-              {"@type": "Neighborhood", "name": "Yorkville"},
-              {"@type": "Neighborhood", "name": "Yonge & Eglinton"},
-              {"@type": "Neighborhood", "name": "Leslieville"},
-              {"@type": "Neighborhood", "name": "The Beaches"},
-              {"@type": "Neighborhood", "name": "Junction"},
-              {"@type": "Neighborhood", "name": "High Park"},
-              {"@type": "Neighborhood", "name": "North York"},
-              {"@type": "Neighborhood", "name": "Scarborough"}
-            ]
+            "name": "Toronto"
           },
           "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceType": "Virtual Therapy",
+            "name": "Virtual Therapy",
+            "serviceUrl": "https://nextsteptherapy.ca/virtual-therapy-ontario.html",
             "serviceLocation": {
-              "@type": "Place",
-              "name": "Toronto, Ontario"
+              "@type": "City",
+              "name": "Toronto",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              }
             }
           },
           "offers": {
             "@type": "Offer",
             "price": "175.00",
             "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "url": "https://nextsteptherapy.ca/therapist-toronto"
           }
         }
       ]
@@ -659,10 +685,12 @@
             </div>
             <nav class="nav">
                 <a href="/#approach">Approach</a>
-                <a href="/#specializations">Services</a>
-                <a href="/#contact">Contact</a>
+                <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                <a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a>
+                <a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a>
+                <a href="https://nextsteptherapy.janeapp.com/">Schedule Call</a>
             </nav>
-            <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+            <a href="tel:+14163062157" class="header-phone">Call (416) 306-2157</a>
         </div>
     </div>
 </header>
@@ -670,15 +698,20 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <h1>Find a Therapist in Toronto: Your Complete 2025 Guide</h1>
-        <p class="hero-subtext">Skip the directory overwhelm. Get matched with a CRPO registered psychotherapist specializing in anxiety and workplace stress. Same-week availability.</p>
-        <div style="margin-top: 2rem;">
+        <h1>Therapist in Toronto for Anxiety, Burnout & Career Pressure</h1>
+        <p class="hero-subtext">Work with a CRPO-registered psychotherapist who knows Bay Street pressure, TTC burnout, and the realities of high-performing Toronto careers. Secure virtual sessions with evening availability.</p>
+        <div class="hero-cta">
             <a href="/#contact" class="manus-primary-cta">Book Free 15-Min Consultation</a>
+            <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
         </div>
         <div class="trust-pills">
             <span class="trust-pill">✓ CRPO #10979 Registered</span>
-            <span class="trust-pill">✓ Serving Toronto</span>
-            <span class="trust-pill">✓ Same-Week Available</span>
+            <span class="trust-pill">✓ Virtual Sessions Across Toronto</span>
+            <span class="trust-pill">✓ Insurance-Ready Receipts</span>
+            <span class="trust-pill">✓ Evening & Lunchtime Slots</span>
+        </div>
+        <div class="neighborhood-highlight">
+            <strong>Popular areas:</strong> Bay Street • Leslieville • Midtown • The Beaches • North York
         </div>
     </div>
 </section>

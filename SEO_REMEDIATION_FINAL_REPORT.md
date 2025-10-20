@@ -25,7 +25,7 @@
 
 ```csv
 from_url,to_url,status_code,reason
-https://www.nextsteptherapy.ca/*,https://nextsteptherapy.ca/:splat,301,canonical_host
+https://nextsteptherapy.ca/*,https://nextsteptherapy.ca/:splat,301,canonical_host
 /virtual-therapy-ontario.html,/virtual-therapy-ontario,301,extensionless
 /online-counselling-remote-workers.html,/online-counselling-remote-workers,301,extensionless
 /services.html,/services,301,extensionless

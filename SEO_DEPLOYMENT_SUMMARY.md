@@ -10,7 +10,7 @@
 ### 3 Fully Optimized Pages:
 
 #### 1. Anxiety Therapy Ontario
-- **URL:** https://www.nextsteptherapy.ca/anxiety-therapy-ontario.html
+- **URL:** https://nextsteptherapy.ca/anxiety-therapy-ontario.html
 - **Word Count:** 4,432 words (+53% from 2,888)
 - **Internal Links:** 20 (+150% from 8)
 - **SEO Features:**
@@ -21,7 +21,7 @@
   - ✅ Mobile responsive design
 
 #### 2. Depression Therapy Ontario
-- **URL:** https://www.nextsteptherapy.ca/depression-therapy-ontario.html
+- **URL:** https://nextsteptherapy.ca/depression-therapy-ontario.html
 - **Word Count:** 4,473 words (complete rebuild)
 - **Internal Links:** 20+
 - **SEO Features:**
@@ -32,7 +32,7 @@
   - ✅ Mobile responsive design
 
 #### 3. Virtual Therapy Ontario
-- **URL:** https://www.nextsteptherapy.ca/virtual-therapy-ontario.html
+- **URL:** https://nextsteptherapy.ca/virtual-therapy-ontario.html
 - **Word Count:** 8,547 words (most comprehensive)
 - **Internal Links:** 20+
 - **SEO Features:**

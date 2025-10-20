@@ -211,17 +211,17 @@ All 3 top GSC high-impression, zero-click pages successfully converted to AEO fo
 4. ✅ **Three Live AEO Pages** - Deployed and optimized for AI engine citations:
 
    **Page 1: Virtual Therapy Ontario Q&A**
-   - URL: https://www.nextsteptherapy.ca/virtual-therapy-ontario-qa-comprehensive.html
+   - URL: https://nextsteptherapy.ca/virtual-therapy-ontario-qa-comprehensive.html
    - Target: 762 impressions, 0 clicks → AI citation conversion
    - Status: ✅ LIVE and indexed
 
    **Page 2: Life Transitions Therapy Q&A**
-   - URL: https://www.nextsteptherapy.ca/life-transitions-qa-comprehensive.html
+   - URL: https://nextsteptherapy.ca/life-transitions-qa-comprehensive.html
    - Target: 190 impressions, 0 clicks → AI citation conversion
    - Status: ✅ LIVE and indexed
 
    **Page 3: Therapist Mississauga Q&A**
-   - URL: https://www.nextsteptherapy.ca/therapist-mississauga-qa-comprehensive.html
+   - URL: https://nextsteptherapy.ca/therapist-mississauga-qa-comprehensive.html
    - Target: 144 impressions, 0 clicks → AI citation conversion
    - Status: ✅ LIVE and indexed
 

@@ -12,7 +12,7 @@ const path = require('path'); // Added for path.join
 class EnhancedGSCExtractor {
     constructor() {
         this.searchconsole = null;
-        this.siteUrl = 'https://www.nextsteptherapy.ca/';
+        this.siteUrl = 'https://nextsteptherapy.ca/';
     }
 
     async initialize() {
@@ -143,15 +143,15 @@ class EnhancedGSCExtractor {
 
     getPageTitle(url) {
         const titles = {
-            'https://www.nextsteptherapy.ca/': 'Homepage',
-            'https://www.nextsteptherapy.ca/about.html': 'About',
-            'https://www.nextsteptherapy.ca/services.html': 'Services',
-            'https://www.nextsteptherapy.ca/contact.html': 'Contact',
-            'https://www.nextsteptherapy.ca/anxiety-therapy.html': 'Anxiety Therapy',
-            'https://www.nextsteptherapy.ca/performance-anxiety.html': 'Performance Anxiety',
-            'https://www.nextsteptherapy.ca/work-anxiety-and-stress.html': 'Work Anxiety & Stress',
-            'https://www.nextsteptherapy.ca/mens-mental-health.html': 'Men\'s Mental Health',
-            'https://www.nextsteptherapy.ca/stress-and-burnout.html': 'Stress & Burnout'
+            'https://nextsteptherapy.ca/': 'Homepage',
+            'https://nextsteptherapy.ca/about.html': 'About',
+            'https://nextsteptherapy.ca/services.html': 'Services',
+            'https://nextsteptherapy.ca/contact.html': 'Contact',
+            'https://nextsteptherapy.ca/anxiety-therapy.html': 'Anxiety Therapy',
+            'https://nextsteptherapy.ca/performance-anxiety.html': 'Performance Anxiety',
+            'https://nextsteptherapy.ca/work-anxiety-and-stress.html': 'Work Anxiety & Stress',
+            'https://nextsteptherapy.ca/mens-mental-health.html': 'Men\'s Mental Health',
+            'https://nextsteptherapy.ca/stress-and-burnout.html': 'Stress & Burnout'
         };
         
         // Check for SEO pages
@@ -166,7 +166,7 @@ class EnhancedGSCExtractor {
     }
 
     getPageType(url) {
-        if (url === 'https://www.nextsteptherapy.ca/') return 'Homepage';
+        if (url === 'https://nextsteptherapy.ca/') return 'Homepage';
         if (url.includes('/seo/')) return 'SEO Page';
         if (url.includes('/services/')) return 'Service Page';
         if (url.includes('/virtual/')) return 'Virtual Service';

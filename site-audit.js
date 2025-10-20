@@ -6,7 +6,7 @@ async function auditSite() {
     const page = await browser.newPage();
     const results = [];
     const visited = new Set();
-    const toVisit = ['https://www.nextsteptherapy.ca'];
+    const toVisit = ['https://nextsteptherapy.ca'];
     
     while (toVisit.length > 0) {
         const url = toVisit.shift();

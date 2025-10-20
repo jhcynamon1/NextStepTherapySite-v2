@@ -79,7 +79,7 @@ vercel --prod --force --yes
 
 #### Step 5: Test (Wait 5-10 minutes for DNS)
 ```bash
-curl -I https://www.nextsteptherapy.ca/my-new-page
+curl -I https://nextsteptherapy.ca/my-new-page
 # Should return HTTP/2 200 (not 404)
 ```
 

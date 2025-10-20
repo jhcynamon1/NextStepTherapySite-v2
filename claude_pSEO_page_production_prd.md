@@ -51,7 +51,7 @@ After copying the template and the new body content, you must meticulously updat
     -   Find the first `<script type="application/ld+json">` tag in the `<head>`.
     -   Update the `"name"` field to the new business service title (e.g., "Next Step Therapy - Depression Support Toronto").
     -   Update the `"description"` to a summary of the new page's service.
-    -   Update the `"url"` to the new page's final production URL (e.g., `https://www.nextsteptherapy.ca/therapist-toronto-depression.html`).
+    -   Update the `"url"` to the new page's final production URL (e.g., `https://nextsteptherapy.ca/therapist-toronto-depression.html`).
 -   **[ ] Update FAQ Schema Script:**
     -   Find the second `<script type="application/ld+json">` tag (the `"@type": "FAQPage"`).
     -   Ensure the questions and answers in this schema are relevant to the new page's topic. If the source content in Appendix K has an FAQ section, use that. If not, select the most relevant questions from the Master Template.

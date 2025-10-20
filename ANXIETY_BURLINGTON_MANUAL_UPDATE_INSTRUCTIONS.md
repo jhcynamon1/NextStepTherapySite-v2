@@ -88,7 +88,7 @@ vercel --prod --force --yes
 
 After deploying, verify the changes:
 
-1. **Check HTML FAQs**: Visit https://www.nextsteptherapy.ca/anxiety-therapy-burlington
+1. **Check HTML FAQs**: Visit https://nextsteptherapy.ca/anxiety-therapy-burlington
 2. **Check Schema**: View page source, search for `"@type": "FAQPage"`
 3. **Test Schema**: Use Google's Rich Results Test: https://search.google.com/test/rich-results
 

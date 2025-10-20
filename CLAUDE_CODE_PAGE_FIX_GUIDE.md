@@ -8,12 +8,12 @@
 ### ✅ Pages That Exist and Are Live:
 1. **Toronto Depression Therapy**
    - File: `/public/locations/toronto/depression-therapy.html`
-   - URL: https://www.nextsteptherapy.ca/locations/toronto/depression-therapy
+   - URL: https://nextsteptherapy.ca/locations/toronto/depression-therapy
    - Status: WORKING (CSS fixed, content loading)
 
 2. **Online Depression Therapy**
    - File: `/public/online-therapy-depression.html`
-   - URL: https://www.nextsteptherapy.ca/online-therapy-depression
+   - URL: https://nextsteptherapy.ca/online-therapy-depression
    - Status: WORKING (CSS fixed, content loading)
 
 ---
@@ -134,7 +134,7 @@ git commit -m "fix: [description of fix]"
 vercel --prod --force --yes
 
 # Verify deployment (wait 30 seconds first)
-curl -I "https://www.nextsteptherapy.ca/[page-url]"
+curl -I "https://nextsteptherapy.ca/[page-url]"
 ```
 
 ---
@@ -143,8 +143,8 @@ curl -I "https://www.nextsteptherapy.ca/[page-url]"
 
 Test these to ensure they're working:
 
-1. https://www.nextsteptherapy.ca/locations/toronto/depression-therapy
-2. https://www.nextsteptherapy.ca/online-therapy-depression
+1. https://nextsteptherapy.ca/locations/toronto/depression-therapy
+2. https://nextsteptherapy.ca/online-therapy-depression
 
 Both should:
 - Load with full CSS styling

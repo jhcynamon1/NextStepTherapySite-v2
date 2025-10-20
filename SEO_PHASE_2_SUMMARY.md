@@ -9,9 +9,9 @@
 ## 📦 WHAT WAS DEPLOYED
 
 ### Enhanced Pages (All 3):
-1. **Anxiety Therapy Ontario** - https://www.nextsteptherapy.ca/anxiety-therapy-ontario.html
-2. **Depression Therapy Ontario** - https://www.nextsteptherapy.ca/depression-therapy-ontario.html
-3. **Virtual Therapy Ontario** - https://www.nextsteptherapy.ca/virtual-therapy-ontario.html
+1. **Anxiety Therapy Ontario** - https://nextsteptherapy.ca/anxiety-therapy-ontario.html
+2. **Depression Therapy Ontario** - https://nextsteptherapy.ca/depression-therapy-ontario.html
+3. **Virtual Therapy Ontario** - https://nextsteptherapy.ca/virtual-therapy-ontario.html
 
 ---
 
@@ -340,9 +340,9 @@ According to MANUS_SEO_OPTIMIZATION_PRD_COMPLETE.md, Phase 3 includes:
 **Files Changed:** 3 files
 **Vercel Deployment:** https://nextsteptherapy-fresh-f7e6je2e2-jhcynamon-gmailcoms-projects.vercel.app
 **Production URLs:**
-- https://www.nextsteptherapy.ca/anxiety-therapy-ontario.html
-- https://www.nextsteptherapy.ca/depression-therapy-ontario.html
-- https://www.nextsteptherapy.ca/virtual-therapy-ontario.html
+- https://nextsteptherapy.ca/anxiety-therapy-ontario.html
+- https://nextsteptherapy.ca/depression-therapy-ontario.html
+- https://nextsteptherapy.ca/virtual-therapy-ontario.html
 
 ---
 

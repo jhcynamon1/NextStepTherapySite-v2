@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Online Therapy & Virtual Counselling in Ontario | ACT Therapy</title>
-    <meta name="description" content="Professional online therapy throughout Ontario. CRPO-registered psychotherapist offering virtual counselling for anxiety, depression, and life challenges. Evidence-based ACT therapy. Book free consultation today.">
+    <title>Virtual Therapy Ontario | CRPO-Registered Psychotherapists</title>
+    <meta name="description" content="Access secure, evidence-based virtual therapy anywhere in Ontario. Work with CRPO-registered psychotherapists for anxiety, burnout, and life transitions. Book a free consultation that fits your schedule.">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Virtual Therapy Ontario | Next Step Therapy">
-    <meta property="og:description" content="Professional virtual therapy across Ontario with CRPO registered psychotherapist. Secure video sessions from home, insurance covered.">
+    <meta property="og:title" content="Virtual Therapy Ontario | CRPO-Registered Psychotherapists">
+    <meta property="og:description" content="Secure virtual therapy for anxiety, burnout, and life transitions across Ontario. CRPO-registered psychotherapists with insurance-ready receipts and evening availability.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-ontario">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
@@ -35,17 +35,31 @@
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Virtual Therapy Ontario",
-      "description": "Professional virtual therapy services throughout Ontario with registered psychotherapist",
-      "url": "https://nextsteptherapy.ca/virtual-therapy-ontario",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "identifier": "CRPO #10979"
+      "description": "Secure online therapy across Ontario delivered by CRPO-registered psychotherapists for anxiety, burnout, and life transitions.",
+      "url": "https://nextsteptherapy.ca/virtual-therapy-ontario.html",
+      "about": {
+        "@type": "Service",
+        "name": "Virtual Therapy Ontario",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario"
+        },
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Next Step Therapy",
+          "telephone": "+1-416-306-2157",
+          "areaServed": "Ontario",
+          "url": "https://nextsteptherapy.ca"
+        }
       },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario"
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextsteptherapy.ca/images/asset104.png"
+        }
       }
     }
     </script>
@@ -190,7 +204,7 @@
         "price": "175",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.nextsteptherapy.ca/virtual-therapy-ontario.html"
+        "url": "https://nextsteptherapy.ca/virtual-therapy-ontario.html"
       }
     }
     </script>
@@ -324,6 +338,95 @@
             font-size: 0.875rem;
             font-weight: 500;
             border: 1px solid rgba(107, 142, 111, 0.2);
+        }
+
+        .hero-cta {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .quick-stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: 0 12px 30px rgba(107, 142, 111, 0.12);
+            border: 1px solid rgba(107, 142, 111, 0.15);
+            text-align: left;
+        }
+
+        .quick-stat-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .quick-stat-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .location-links {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(107, 142, 111, 0.08);
+            border: 1px solid rgba(107, 142, 111, 0.15);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .location-links h2 {
+            margin-top: 0;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .location-links-intro {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .location-links ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        .location-links li {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid rgba(107, 142, 111, 0.2);
+            box-shadow: 0 8px 20px rgba(107, 142, 111, 0.12);
+            transition: transform 0.2s ease;
+        }
+
+        .location-links li:hover {
+            transform: translateY(-3px);
+        }
+
+        .location-links a {
+            display: block;
+            padding: 1rem 1.25rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         .manus-primary-cta {
@@ -568,6 +671,22 @@
             .trust-pills {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .quick-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-stat-card {
+                text-align: center;
+            }
+
+            .location-links {
+                padding: 1.5rem;
+            }
+
+            .location-links ul {
+                grid-template-columns: 1fr;
             }
 
             .section-title {
@@ -933,8 +1052,8 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Online Therapy & Virtual Counselling Throughout Ontario</h1>
-                <p class="lead-text">Professional online therapy from the comfort of your own space—secure, evidence-based mental health support accessible across Ontario</p>
+                <h1>Evidence-Based Virtual Therapy for Ontario Residents</h1>
+                <p class="lead-text">Secure video sessions with CRPO-registered psychotherapists for anxiety, burnout, and life transitions—built for busy professionals, students, and families across Ontario.</p>
 
                 <div class="trust-pills">
                     <span class="trust-pill">✓ CRPO #10979 Licensed</span>
@@ -946,6 +1065,41 @@
                 <div class="hero-cta">
                     <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Schedule Free 15-Minute Call</a>
                     <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="quick-stat-card">
+                        <h3>$175 / 50-Min Session</h3>
+                        <p>Same rate as in-person therapy with detailed receipts for Manulife, Sun Life, Canada Life, Greenshield, and other Ontario insurers.</p>
+                    </div>
+                    <div class="quick-stat-card">
+                        <h3>Insurance-Ready Care</h3>
+                        <p>CRPO-registered psychotherapist (#10979). Sessions count toward extended health benefits and most EAP reimbursements.</p>
+                    </div>
+                    <div class="quick-stat-card">
+                        <h3>Evening & Noon Slots</h3>
+                        <p>Flexible scheduling for Bay Street professionals, graduate students, parents, and shift workers across Ontario.</p>
+                    </div>
+                    <div class="quick-stat-card">
+                        <h3>Secure Video Platform</h3>
+                        <p>Encrypted, PIPEDA-compliant sessions via Jane—works on phone, tablet, or laptop with no software install required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container">
+                <div class="location-links">
+                    <h2>Ontario Clients We Help Most</h2>
+                    <p class="location-links-intro">Looking for location-specific guidance? Explore focused virtual therapy resources tailored to your city or needs:</p>
+                    <ul>
+                        <li><a href="/virtual-therapy-ontario-qa-comprehensive.html">Virtual Therapy Ontario FAQ Guide</a></li>
+                        <li><a href="/virtual-therapy-burlington.html">Online Therapy in Burlington</a></li>
+                        <li><a href="/therapist-toronto.html">Find a Therapist in Toronto</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout Support</a></li>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy Across Ontario</a></li>
+                    </ul>
                 </div>
             </div>
         </section>

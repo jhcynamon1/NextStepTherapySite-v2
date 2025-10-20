@@ -24,7 +24,7 @@ Based on research findings:
 
 **OLD:**
 ```html
-<a href="https://www.nextsteptherapy.ca/#contact">Book a Free 'Fit' Call</a>
+<a href="https://nextsteptherapy.ca/#contact">Book a Free 'Fit' Call</a>
 ```
 
 **NEW:**

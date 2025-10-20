@@ -196,7 +196,7 @@ Based on an analysis of high-performing initial pSEO pages and established best 
 **BEFORE DEPLOYING ANY PAGE, VERIFY:**
 
 ✅ **Content Length:** Minimum 1,000+ lines of HTML (reference: virtual-therapy-ontario.html = 1,101 lines)
-✅ **CTA URLs:** ALL primary CTAs MUST link to `https://www.nextsteptherapy.ca/#contact` (NOT #contact or other URLs)
+✅ **CTA URLs:** ALL primary CTAs MUST link to `https://nextsteptherapy.ca/#contact` (NOT #contact or other URLs)
 ✅ **CRPO Compliance:** NO testimonials, reviews, or client quotes anywhere on page
 ✅ **CRPO Professional Standards:** NO disparaging language about other therapists or approaches (avoid "traditional therapy hasn't worked," "other approaches failed," etc.)
 ✅ **Schema Complete:** Both MedicalWebPage AND FAQPage schema implemented
@@ -241,7 +241,7 @@ Based on an analysis of high-performing initial pSEO pages and established best 
 ### C.1.5: CRITICAL CTA REQUIREMENTS
 
 **ALL PRIMARY CTAs MUST USE THESE EXACT URLS:**
-*   **Primary CTA:** `https://www.nextsteptherapy.ca/#contact` (links to homepage contact form)
+*   **Primary CTA:** `https://nextsteptherapy.ca/#contact` (links to homepage contact form)
 *   **Secondary CTA:** `tel:+14163062157` (phone number)
 *   **NEVER USE:** `#contact`, `index.html#contact`, or any other variation
 
@@ -266,7 +266,7 @@ Based on an analysis of high-performing initial pSEO pages and established best 
     *   **`<h1>` Headline:** MUST contain the exact primary keyword (e.g., "Anxiety Therapy Hamilton" NOT "You Don't Have to Navigate This Alone").
     *   **Lead Paragraph:** 1-3 sentences that directly validate the user's problem and introduce the solution, MENTIONING THE KEYWORD.
     *   **Trust Indicators:** A bar/list of 3-4 key trust signals. Examples: `Ontario Licensed`, `CRPO Registered`, `Virtual Sessions`, `Insurance Receipts Provided`.
-    *   **Primary CTAs:** Two distinct, primary calls to action linking to `https://www.nextsteptherapy.ca/#contact`
+    *   **Primary CTAs:** Two distinct, primary calls to action linking to `https://nextsteptherapy.ca/#contact`
 
 2.  **Problem Validation Section (FIRST CONTENT SECTION):**
     *   **CRITICAL:** This comes IMMEDIATELY after hero, NOT therapist bio

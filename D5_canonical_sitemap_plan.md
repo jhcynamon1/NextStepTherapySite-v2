@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://nextsteptherapy.ca/services">
 
 <!-- WRONG - DO NOT USE -->
-<link rel="canonical" href="https://www.nextsteptherapy.ca/services.html">
+<link rel="canonical" href="https://nextsteptherapy.ca/services.html">
 <link rel="canonical" href="https://nextsteptherapy.ca/services/">
 ```
 

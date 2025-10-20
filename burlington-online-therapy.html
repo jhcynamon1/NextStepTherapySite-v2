@@ -57,36 +57,48 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- SEO Meta Data - Conversion-Optimized -->
-    <title>Virtual Therapy Burlington ON | Registered Psychotherapist</title>
-    <meta name="description" content="You don't have to navigate stress alone. Virtual therapy for Burlington professionals with flexible evening hours. CRPO registered. Free consultation available.">
+    <title>Virtual Therapy Burlington | CRPO-Registered Psychotherapist</title>
+    <meta name="description" content="Secure virtual therapy for Burlington professionals, parents, and students. Work with a CRPO-registered psychotherapist offering evening availability, insurance-ready receipts, and free consultations.">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Virtual Therapy Burlington | Next Step Therapy">
-    <meta property="og:description" content="Professional online therapy for Burlington, Ontario residents. Confidential, convenient, and covered by most insurance plans.">
+    <meta property="og:title" content="Virtual Therapy Burlington | CRPO-Registered Psychotherapist">
+    <meta property="og:description" content="Professional virtual therapy for Burlington residents with evening availability, insurance-ready receipts, and secure video sessions.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-burlington">
+    <meta property="og:url" content="https://nextsteptherapy.ca/virtual-therapy-burlington.html">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-burlington">
+    <link rel="canonical" href="https://nextsteptherapy.ca/virtual-therapy-burlington.html">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
-      "name": "Virtual Therapy in Burlington, Ontario",
-      "description": "Professional and confidential online therapy services for residents of Burlington, Ontario, focusing on support for busy professionals and parents.",
-      "provider": {
-        "@type": "Psychologist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
+      "name": "Virtual Therapy Burlington | CRPO-Registered Psychotherapist",
+      "url": "https://nextsteptherapy.ca/virtual-therapy-burlington.html",
+      "description": "Secure virtual therapy for Burlington professionals, parents, and students. CRPO-registered psychotherapist offering evening availability and insurance-ready receipts.",
+      "about": {
+        "@type": "Service",
+        "name": "Virtual Therapy Burlington",
+        "areaServed": {
+          "@type": "City",
+          "name": "Burlington",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Burlington",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          }
+        }
       },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Virtual Psychotherapy",
-        "description": "Online therapy sessions via secure video",
-        "serviceType": "Telehealth"
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextsteptherapy.ca/images/asset104.png"
+        }
       },
       "potentialAction": {
         "@type": "ScheduleAction",
@@ -209,40 +221,41 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Burlington Therapy Ontario",
+      "serviceType": "Virtual Therapy Burlington",
       "provider": {
         "@type": "ProfessionalService",
-        "name": "Next Step Therapy - Burlington",
-        "description": "CRPO registered psychotherapist (#10979) providing virtual therapy for Burlington, Ontario residents.",
+        "name": "Next Step Therapy",
+        "description": "CRPO-registered psychotherapist (#10979) providing virtual therapy for Burlington, Ontario residents.",
+        "telephone": "+1-416-306-2157",
+        "areaServed": "Burlington, Ontario",
+        "hasCredential": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Burlington",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Toronto",
+          "addressLocality": "Burlington",
           "addressRegion": "ON",
           "addressCountry": "CA"
-        },
-        "telephone": "+14163062157",
-        "areaServed": {
-          "@type": "City",
-          "name": "Burlington",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Ontario",
-            "containedInPlace": {
-              "@type": "Country",
-              "name": "Canada"
-            }
-          }
-        },
-        "hasCredential": "CRPO #10979",
-        "priceRange": "$$"
+        }
       },
-      "description": "Virtual therapy services for Burlington residents specializing in anxiety, depression, workplace stress, and performance issues. Same-week appointments available with CRPO registered psychotherapist.",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "name": "Virtual Therapy",
+        "serviceUrl": "https://nextsteptherapy.ca/virtual-therapy-ontario.html",
+        "serviceLocation": {
+          "@type": "City",
+          "name": "Burlington"
+        }
+      },
+      "description": "Virtual therapy services for Burlington residents specializing in anxiety, burnout, and workplace stress with evening availability and insurance-ready receipts.",
       "offers": {
         "@type": "Offer",
         "price": "175",
         "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.nextsteptherapy.ca/burlington-online-therapy.html"
+        "url": "https://nextsteptherapy.ca/burlington-online-therapy.html"
       }
     }
     </script>
@@ -675,6 +688,14 @@
             margin: var(--space-lg) 0;
         }
 
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-lg);
+        }
+
         .trust-indicator {
             background: rgba(74, 107, 122, 0.08);
             color: var(--primary-soft-blue);
@@ -711,6 +732,35 @@
             content: "✓";
             color: var(--accent-warm);
             font-weight: 600;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .quick-stat-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: 0 12px 30px rgba(74, 107, 122, 0.12);
+            border: 1px solid rgba(74, 107, 122, 0.15);
+            text-align: left;
+        }
+
+        .quick-stat-card h3 {
+            margin: 0 0 var(--space-xs) 0;
+            font-family: var(--font-heading);
+            color: var(--primary-soft-blue);
+            font-size: 1.35rem;
+        }
+
+        .quick-stat-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         /* NEW: Mobile Sticky CTA Bar - Research shows 20% conversion boost */
@@ -778,6 +828,14 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 0.5rem;
+            }
+
+            .quick-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-stat-card {
+                text-align: center;
             }
         }
 
@@ -868,7 +926,9 @@
                 </div>
 
                 <nav class="nav">
-                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="/" class="nav-desktop">Home</a>
+                    <a href="/virtual-therapy-ontario.html" class="nav-desktop">Virtual Therapy Ontario</a>
+                    <a href="/workplace-stress-therapy-ontario.html" class="nav-desktop">Workplace Stress</a>
                     <a href="https://nextsteptherapy.janeapp.com/" class="nav-cta">Book Consultation</a>
                     <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
                 </nav>
@@ -897,7 +957,7 @@
                         <span class="trust-indicator">Respond Within 1 Hour</span>
                     </div>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
+                    <div class="hero-cta">
                         <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free 15-Minute Call</a>
                         <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
                     </div>
@@ -909,6 +969,40 @@
                             <span>Book online in 2 minutes</span>
                             <span>Evening hours available</span>
                         </div>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="quick-stat-card">
+                            <h3>$175 / 50-Min Session</h3>
+                            <p>Same rate as in-person therapy with detailed receipts for Manulife, Sun Life, Canada Life, Greenshield, and other Ontario insurers.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Built for Burlington Schedules</h3>
+                            <p>Evening and lunchtime appointments that fit around QEW commutes, hybrid work, and family commitments.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Secure Jane Video Platform</h3>
+                            <p>PIPEDA-compliant sessions that work on phone, tablet, or laptop—no extra software, no travel, no parking stress.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Local Insight</h3>
+                            <p>Support for Burlington professionals in Aldershot, Millcroft, Downtown, and Lakeshore who juggle career goals, family life, and community responsibilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container-narrow">
+                <div class="content-card" style="text-align: center;">
+                    <h2>Need Specialized Support?</h2>
+                    <p style="margin-bottom: var(--space-md); color: var(--text-secondary);">Explore related resources tailored to Ontario clients:</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
+                        <a href="/virtual-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Virtual Therapy Ontario</a>
+                        <a href="/workplace-stress-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Workplace Stress & Burnout</a>
+                        <a href="/anxiety-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Anxiety Therapy Support</a>
+                        <a href="/virtual-therapy-ontario-qa-comprehensive.html" class="btn btn-secondary" style="text-decoration: none;">Virtual Therapy FAQ Guide</a>
                     </div>
                 </div>
             </div>
@@ -1282,7 +1376,7 @@
                     <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Schedule Your Free 15-Minute Call</a>
                     <div class="secondary-ctas">
                         <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
-                        <a href="https://www.nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
+                        <a href="https://nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
                     </div>
 
                     <!-- Trust signals near final CTA -->
