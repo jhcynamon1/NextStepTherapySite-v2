@@ -143,109 +143,73 @@
     }
     </script>
 
-    <!-- 2. HealthBusiness Schema - Next Step Therapy Practice -->
+    <!-- 2. ProfessionalService Schema - Next Step Therapy Practice (CRPO Compliant) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "@id": "https://nextsteptherapy.ca/#organization",
+      "@type": "ProfessionalService",
+      "@id": "https://nextsteptherapy.ca/#professionalservice",
       "name": "Next Step Therapy",
-      "alternateName": "Next Step Therapy Ontario",
-      "description": "Evidence-based therapy practice in Ontario using Acceptance and Commitment Therapy (ACT) approach. Specializing in anxiety, depression, men's mental health, and workplace stress. CRPO registered therapist offering virtual sessions throughout Ontario.",
-      "url": "https://nextsteptherapy.ca",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://nextsteptherapy.ca/images/asset104.png"
+      "url": "https://nextsteptherapy.ca/",
+      "description": "Virtual psychotherapy practice providing evidence-based counselling for anxiety, depression, workplace stress and men's mental health across Ontario.",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
       },
-      "image": "https://nextsteptherapy.ca/images/asset104.png",
       "telephone": "+14163062157",
-      "email": "jesse@nextsteptherapy.ca",
-      "founder": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-      },
-      "employee": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-      },
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Registered virtual practice (service-area business)",
         "addressLocality": "Toronto",
         "addressRegion": "ON",
         "addressCountry": "CA"
       },
-      "areaServed": [
-        {
-          "@type": "State",
-          "name": "Ontario",
-          "containedInPlace": {
-            "@type": "Country",
-            "name": "Canada"
-          }
+      "provider": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "CRPO Number",
+          "value": "10979"
+        },
+        "url": "https://nextsteptherapy.ca/",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "College of Registered Psychotherapists of Ontario"
         }
-      ],
-      "medicalSpecialty": [
-        "Psychotherapy",
-        "Mental Health Counseling",
-        "Acceptance and Commitment Therapy",
-        "Anxiety Disorders Treatment",
-        "Depression Therapy",
-        "Men's Mental Health",
-        "Workplace Stress Management",
-        "Virtual Psychotherapy"
-      ],
-      "healthcareProvider": {
-        "@id": "https://nextsteptherapy.ca/#jessecynamon"
-      },
-      "license": "CRPO #10979",
-      "accreditation": {
-        "@type": "Organization",
-        "name": "College of Registered Psychotherapists of Ontario",
-        "url": "https://crpo.ca"
       },
       "serviceType": [
-        "Individual Psychotherapy",
-        "Virtual Therapy Sessions",
-        "Mental Health Counseling",
+        "Virtual Therapy",
+        "Online Counselling",
         "Anxiety Therapy",
-        "Depression Treatment",
-        "Stress Management"
+        "Men's Mental Health",
+        "Workplace Stress Therapy"
       ],
-      "priceRange": "$175",
-      "paymentAccepted": [
-        "Insurance",
-        "Credit Card",
-        "E-transfer"
-      ],
-      "currenciesAccepted": "CAD",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Therapy Services",
-        "itemListElement": [
+      "hasFAQPage": {
+        "@type": "FAQPage",
+        "@id": "https://nextsteptherapy.ca/#faq",
+        "mainEntity": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalTherapy",
-              "name": "Individual Therapy Session",
-              "description": "50-minute evidence-based therapy session using ACT approach",
-              "provider": {
-                "@id": "https://nextsteptherapy.ca/#jessecynamon"
-              }
-            },
-            "price": "175",
-            "priceCurrency": "CAD",
-            "availability": "InStock",
-            "validFrom": "2024-01-01"
+            "@type": "Question",
+            "name": "Is virtual therapy as effective as in-person therapy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Multiple studies show virtual therapy yields equivalent outcomes to in-person sessions for most conditions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Next Step Therapy covered by insurance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many Ontario insurers reimburse psychotherapy sessions provided by a Registered Psychotherapist (CRPO #10979)."
+            }
           }
         ]
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "Book Consultation",
-          "contactType": "Appointments",
-          "availableLanguage": "English",
-          "areaServed": "Ontario"
-        }
-      ]
+      }
     }
     </script>
 
@@ -329,6 +293,194 @@
 
     <!-- v4.0 Conversion Optimization Styles -->
     <style>
+        .related-services {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .related-services .service-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-services article {
+            background: #fff;
+            border: 1px solid rgba(107, 142, 111, 0.14);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+
+        .related-services h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+
+        .related-services a {
+            text-decoration: none;
+            color: #4a6b7a;
+            font-weight: 600;
+        }
+
+        .helpful-resources {
+            padding: 40px 0;
+        }
+
+        .helpful-resources ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .helpful-resources li {
+            background: #fff;
+            border: 1px solid rgba(107,142,111,0.16);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .helpful-resources a {
+            text-decoration: none;
+            color: #34566b;
+            font-weight: 600;
+        }
+
+        .related-cta, .related-posts {
+            background: #f8f9fa;
+            border: 1px solid rgba(107, 142, 111, 0.18);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+        }
+
+        .related-posts ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        .related-posts li + li {
+            margin-top: 0.5rem;
+        }
+
+        .related-posts a {
+            text-decoration: none;
+            color: #4a6b7a;
+            font-weight: 600;
+        }
+
+        .related-cta .btn-primary, .related-cta .btn-secondary {
+            display: inline-block;
+            margin-right: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .related-services .service-links {
+                grid-template-columns: 1fr;
+            }
+            .helpful-resources ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .popular-locations {
+            background: #f4f7f5;
+            padding: 60px 0;
+        }
+
+        .popular-locations .section-header {
+            text-align: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .location-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .location-nav a {
+            background: white;
+            color: #4a6b7a;
+            border: 1px solid rgba(107, 142, 111, 0.25);
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 18px rgba(68, 96, 109, 0.08);
+        }
+
+        .location-nav a:hover {
+            background: #6B8E6F;
+            color: #fff;
+            box-shadow: 0 10px 20px rgba(107, 142, 111, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .featured-resources {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .featured-resources .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-grid article {
+            background: #f9fbfa;
+            border: 1px solid rgba(107, 142, 111, 0.18);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 100%;
+        }
+
+        .resource-grid article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .resource-grid h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .resource-grid a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .resource-grid a:hover {
+            color: #6B8E6F;
+        }
+
+        @media (max-width: 768px) {
+            .popular-locations {
+                padding: 40px 0;
+            }
+
+            .featured-resources {
+                padding: 40px 0;
+            }
+        }
+
         /* Mobile Sticky CTA Bar (20% conversion boost for 65% of traffic) */
         .mobile-cta-bar {
             position: fixed;
@@ -711,7 +863,7 @@
                         </div>
                         <h3 class="specialization-title">Performance Anxiety Therapy & Stress Management</h3>
                         <p class="specialization-desc">When your mind won't stop racing at 3am or before big presentations. Performance anxiety support with practical tools for managing panic and overwhelm. Serving <a href="/anxiety-therapy-toronto.html">Toronto</a>, <a href="/burlington-online-therapy.html">Burlington</a>, and all of Ontario.</p>
-                        <a href="anxiety-therapy-ontario" class="specialization-link">Anxiety Therapy Services →</a>
+                        <a href="/anxiety-therapy-ontario.html" class="specialization-link">Anxiety Therapy Services →</a>
                     </div>
 
                     <div class="specialization-card">
@@ -729,7 +881,7 @@
                         </div>
                         <h3 class="specialization-title">Men's Mental Health</h3>
                         <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
-                        <a href="mens-mental-health" class="specialization-link">Men's Mental Health Support →</a>
+                        <a href="/mens-mental-health" class="specialization-link">Men's Mental Health Support →</a>
                     </div>
 
                     <div class="specialization-card">
@@ -747,7 +899,7 @@
                         </div>
                         <h3 class="specialization-title">Work Stress Therapy & Burnout Therapy Toronto</h3>
                         <p class="specialization-desc">When Sunday nights fill you with dread. Professional work stress support beyond "just take a vacation" advice. <a href="/perfectionism-and-burnout-therapy-toronto.html">Burnout support in Toronto</a> and specialized <a href="/online-counselling-remote-workers.html">therapy for remote workers</a> dealing with isolation and boundary blur.</p>
-                        <a href="workplace-stress-therapy-ontario" class="specialization-link">Work Stress Therapy →</a>
+                        <a href="/workplace-stress-therapy-ontario.html" class="specialization-link">Work Stress Therapy →</a>
                     </div>
 
                     <div class="specialization-card">
@@ -765,7 +917,7 @@
                         </div>
                         <h3 class="specialization-title">Life Transitions & Change</h3>
                         <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
-                        <a href="life-transitions" class="specialization-link">Life Transitions Support →</a>
+                        <a href="/life-transitions.html" class="specialization-link">Life Transitions Support →</a>
                     </div>
 
                     <div class="specialization-card">
@@ -783,7 +935,7 @@
                         </div>
                         <h3 class="specialization-title">Depression & Mood Support</h3>
                         <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
-                        <a href="depression-therapy-ontario" class="specialization-link">Depression Therapy Ontario →</a>
+                        <a href="/depression-therapy-ontario.html" class="specialization-link">Depression Therapy Ontario →</a>
                     </div>
 
                     <div class="specialization-card">
@@ -801,7 +953,7 @@
                         </div>
                         <h3 class="specialization-title">Relationship & Communication</h3>
                         <p class="specialization-desc">When the same arguments keep happening. Understanding your patterns in relationships. Actually being heard (and hearing others).</p>
-                        <a href="counselling-services" class="specialization-link">Relationship Therapy Help →</a>
+                        <a href="/counselling-services" class="specialization-link">Relationship Therapy Help →</a>
                     </div>
                 </div>
 
@@ -912,6 +1064,50 @@
                 </div>
             </div>
         </section>
+<section class="popular-locations">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-subtitle">Across Ontario</p>
+            <h2>Virtual Therapy for Your City</h2>
+        </div>
+        <nav class="location-nav">
+            <a href="/therapist-toronto.html">Toronto</a>
+            <a href="/burlington-online-therapy.html">Burlington</a>
+            <a href="/therapy-ottawa-ontario.html">Ottawa</a>
+            <a href="/therapy-london-ontario.html">London</a>
+            <a href="/therapy-hamilton-ontario.html">Hamilton</a>
+            <a href="/therapy-mississauga-ontario.html">Mississauga</a>
+        </nav>
+    </div>
+</section>
+
+<section class="featured-resources">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-subtitle">Resources</p>
+            <h2>Explore Mental Health Guides</h2>
+        </div>
+        <div class="resource-grid">
+            <article>
+                <h3><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy? Signs It's Time</a></h3>
+                <p>Understand when professional support is the right choice.</p>
+            </article>
+            <article>
+                <h3><a href="/blog/workplace/imposter-syndrome-at-work.html">Imposter Syndrome at Work</a></h3>
+                <p>A therapist's guide for Ontario professionals.</p>
+            </article>
+            <article>
+                <h3><a href="/virtual-therapy-effectiveness-research.html">Is Virtual Therapy Effective?</a></h3>
+                <p>What research shows about online therapy outcomes.</p>
+            </article>
+            <article>
+                <h3><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></h3>
+                <p>Step-by-step plan for Ontario professionals to reset.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
 
         <!-- Insurance & Fees Section -->
         <section class="trust-section">
@@ -1128,12 +1324,12 @@
                 <div class="footer-section">
                     <h4>Areas of Focus</h4>
                     <ul>
-                        <li><a href="anxiety-therapy-ontario">Anxiety & Stress Management</a></li>
-                        <li><a href="life-transitions">Life Transitions & Change</a></li>
-                        <li><a href="depression-therapy-ontario">Depression & Mood Support</a></li>
-                        <li><a href="mens-mental-health">Men's Mental Health</a></li>
-                        <li><a href="counselling-services">Relationship & Communication</a></li>
-                        <li><a href="workplace-stress-therapy-ontario">Workplace Stress & Burnout</a></li>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety & Stress Management</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions & Change</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression & Mood Support</a></li>
+                        <li><a href="/mens-mental-health">Men's Mental Health</a></li>
+                        <li><a href="/counselling-services">Relationship & Communication</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
                     </ul>
                 </div>
 
