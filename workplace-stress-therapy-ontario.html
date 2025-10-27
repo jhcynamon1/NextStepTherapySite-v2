@@ -95,6 +95,51 @@
     </script>
 
     <style>
+        .related-services {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        .related-services .service-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-services article {
+            background: #fff;
+            border: 1px solid rgba(107, 142, 111, 0.14);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .helpful-resources {
+            padding: 40px 0;
+        }
+        .helpful-resources ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .helpful-resources li {
+            background: #fff;
+            border: 1px solid rgba(107,142,111,0.16);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .breadcrumb {
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+        }
+        .breadcrumb a {
+            color: #4a6b7a;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
         :root {
             --primary-green: #6B8E6F;
             --green-hover: #5A7D5E;
@@ -551,6 +596,9 @@
         <section class="hero">
             <div class="container">
                 <h1>Workplace Stress Therapy for Ontario Leaders & High Performers</h1>
+                <nav class="breadcrumb">
+                    <a href="/">Home</a> → <a href="/#specializations">Services</a> → Workplace Stress Therapy Ontario
+                </nav>
                 <p class="lead-text">Work with a CRPO-registered psychotherapist who understands Bay Street deadlines, hybrid schedules, remote leadership, and the pressure to deliver when burnout is already at 90% capacity.</p>
 
                 <div class="trust-pills">
@@ -755,7 +803,7 @@
                         <p>Professional therapy is an investment in your career sustainability and success:</p>
 
                         <ul class="feature-list">
-                            <li><strong>Session fee:</strong> $175 per 50-minute session with detailed receipts for insurance reimbursement</li>
+                            <li><strong>Session fee:</strong> $175 per 50-minute session with detailed receipts for insurance reimbursement. <a href="/blog/mental-health-guides/is-therapy-free-in-canada.html">Learn about insurance coverage and therapy costs in Ontario</a>.</li>
                             <li><strong>Executive health plans:</strong> Most professional health plans cover Registered Psychotherapist services</li>
                             <li><strong>ROI on well-being:</strong> Better stress management often leads to improved performance and career satisfaction</li>
                             <li><strong>Preventive approach:</strong> Addressing stress before it affects professional performance or health</li>
@@ -887,7 +935,38 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    
+        <section class="section related-services">
+            <div class="container">
+                <h2>Related Services</h2>
+                <div class="service-links">
+                    <article>
+                        <h3><a href="/executive-stress-management-therapy.html">Executive Stress Management</a></h3>
+                        <p>Targeted support for leaders balancing responsibility, visibility, and constant decision-making.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/anxiety-therapy-ontario.html">Anxiety Therapy Ontario</a></h3>
+                        <p>Address the underlying anxiety driving workplace stress responses.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/online-counselling-remote-workers.html">Online Therapy for Remote Professionals</a></h3>
+                        <p>Combat isolation and blurred boundaries when working from home.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section helpful-resources">
+            <div class="container">
+                <h2>Helpful Resources</h2>
+                <ul>
+                    <li><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></li>
+                    <li><a href="/blog/workplace/imposter-syndrome-at-work.html">Imposter Syndrome at Work</a></li>
+                    <li><a href="/perfectionism-and-burnout-therapy-toronto.html">Perfectionism and Burnout</a></li>
+                </ul>
+            </div>
+        </section>
+<footer class="footer">
         <div class="container">
             <div class="professional-disclosure">
                 <p><strong>Jesse Cynamon, RP</strong></p>
