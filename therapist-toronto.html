@@ -30,6 +30,51 @@
     <link rel="stylesheet" href="/shared.min.css">
 
     <style>
+        .related-services {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        .related-services .service-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-services article {
+            background: #fff;
+            border: 1px solid rgba(107, 142, 111, 0.14);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .helpful-resources {
+            padding: 40px 0;
+        }
+        .helpful-resources ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .helpful-resources li {
+            background: #fff;
+            border: 1px solid rgba(107,142,111,0.16);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .breadcrumb {
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+        }
+        .breadcrumb a {
+            color: #4a6b7a;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
         :root {
             --primary-green: #6B8E6F;
             --primary-green-hover: #5A7D5E;
@@ -699,6 +744,9 @@
 <section class="hero">
     <div class="container">
         <h1>Therapist in Toronto for Anxiety, Burnout & Career Pressure</h1>
+                <nav class="breadcrumb">
+                    <a href="/">Home</a> → <a href="/#specializations">Services</a> → Therapist Toronto
+                </nav>
         <p class="hero-subtext">Work with a CRPO-registered psychotherapist who knows Bay Street pressure, TTC burnout, and the realities of high-performing Toronto careers. Secure virtual sessions with evening availability.</p>
         <div class="hero-cta">
             <a href="/#contact" class="manus-primary-cta">Book Free 15-Min Consultation</a>
@@ -951,7 +999,7 @@
                     <li><a href="/workplace-stress-therapy-ontario.html">Workplace Therapy</a></li>
                     <li><a href="/anxiety-therapy-ontario.html">Anxiety Support</a></li>
                     <li><a href="/depression-therapy-ontario.html">Depression Support</a></li>
-                    <li><a href="/counselling-ontario.html">Counselling Services</a></li>
+                    <li><a href="/how-to-find-therapist-ontario.html">Counselling Services</a></li>
                 </ul>
             </div>
 
@@ -991,6 +1039,37 @@
 </div>
 
 <!-- Footer -->
+
+        <section class="section related-services">
+            <div class="container">
+                <h2>Related Services</h2>
+                <div class="service-links">
+                    <article>
+                        <h3><a href="/anxiety-therapy-toronto.html">Anxiety Therapy Toronto</a></h3>
+                        <p>Specialized anxiety support for Toronto professionals balancing intense workloads.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/therapy-brampton-ontario.html">Therapy Brampton Ontario</a></h3>
+                        <p>Virtual support for Peel Region residents managing family and corporate demands.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/burlington-online-therapy.html">Burlington Online Therapy</a></h3>
+                        <p>Video sessions for Halton professionals commuting into the GTA.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section helpful-resources">
+            <div class="container">
+                <h2>Helpful Resources</h2>
+                <ul>
+                    <li><a href="/how-to-find-therapist-ontario.html">How to Find a Therapist in Ontario</a></li>
+                    <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                    <li><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></li>
+                </ul>
+            </div>
+        </section>
 <footer class="footer">
     <div class="container">
         <div class="footer-content">

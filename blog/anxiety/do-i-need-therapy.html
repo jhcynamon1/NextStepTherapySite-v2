@@ -8,6 +8,39 @@
     <link rel="icon" type="image/png" href="../../images/asset104.png">
     <link rel="stylesheet" href="../../shared.min.css">
     <style>
+    
+        .related-cta, .related-posts {
+            background: #f8f9fa;
+            border: 1px solid rgba(107, 142, 111, 0.18);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .related-cta .btn-primary, .related-cta .btn-secondary {
+            display: inline-block;
+            margin-right: 0.75rem;
+            margin-top: 0.75rem;
+            text-decoration: none;
+        }
+        .related-posts ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+        .related-posts li + li {
+            margin-top: 0.5rem;
+        }
+        .related-posts a {
+            color: #4a6b7a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .related-posts a:hover {
+            text-decoration: underline;
+        }
+    
+
         :root {
             --primary-green: #6B8E6F;
             --green-hover: #5A7D5E;
@@ -309,6 +342,23 @@
             </div>
         </div>
     </section>
+
+        <aside class="related-cta">
+            <h3>Need Support?</h3>
+            <p>Thinking about therapy? Learn how Ontario anxiety counselling works and what to expect from your first session.</p>
+            <a href="/anxiety-therapy-ontario.html" class="btn-primary">Learn About Therapy Options</a>
+            <a href="https://nextsteptherapy.janeapp.com/" class="btn-secondary">Book Free Consultation</a>
+        </aside>
+
+        <nav class="related-posts">
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="/blog/workplace/imposter-syndrome-at-work.html">Imposter Syndrome at Work</a></li>
+                <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                <li><a href="/first-year-university-anxiety.html">First Year University Anxiety</a></li>
+
+            </ul>
+        </nav>
 </article>
 
 <script type="application/ld+json">
