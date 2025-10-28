@@ -262,6 +262,53 @@
     }
     </script>
 
+    <!-- 5. MedicalWebPage Schema (YMYL Content Signal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "@id": "https://nextsteptherapy.ca/#medicalwebpage",
+      "name": "Ontario Therapist | CRPO Registered | Available This Week",
+      "description": "CRPO registered psychotherapist serving Ontario. Virtual & in-person therapy available this week. Insurance accepted. Book your free 15-minute consultation today.",
+      "url": "https://nextsteptherapy.ca/",
+      "lastReviewed": "2025-10-28",
+      "about": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Acceptance and Commitment Therapy",
+          "alternateName": "ACT"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Anxiety Disorders"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Depression"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Workplace Stress"
+        }
+      ],
+      "audience": {
+        "@type": "PeopleAudience",
+        "geographicArea": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "ProfessionalService",
+        "@id": "https://nextsteptherapy.ca/#professionalservice"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="shared.min.css">
 
     <!-- v4.0 Conversion Optimization Styles -->
@@ -1028,7 +1075,7 @@
                     <div class="trust-item">
                         <div class="trust-icon">🎓</div>
                         <h4>Legitimate Expertise</h4>
-                        <p>CRPO registered (the real deal, #10979). Advanced ACT certification (not just a weekend course). Methods backed by actual research. I keep learning so you get better support.</p>
+                        <p><a href="https://www.crpo.ca/find-a-therapist/" target="_blank" rel="noopener">CRPO registered</a> (the real deal, #10979). Advanced ACT certification (not just a weekend course). Methods backed by actual research. I keep learning so you get better support.</p>
                     </div>
                     <div class="trust-item">
                         <div class="trust-icon">🤝</div>
@@ -1120,7 +1167,7 @@
                 <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: var(--space-lg);">
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">How does virtual therapy Toronto work?</h3>
-                        <p><strong>The answer is:</strong> <a href="/virtual-therapy-ontario">Virtual therapy</a> sessions are conducted through secure, PIPEDA-compliant video platforms. You can access professional virtual therapy in Toronto and throughout Ontario with a stable internet connection. Virtual therapy sessions are just as effective as in-person therapy for most concerns.</p>
+                        <p><strong>The answer is:</strong> <a href="/virtual-therapy-ontario">Virtual therapy</a> sessions are conducted through secure, PIPEDA-compliant video platforms. You can access professional virtual therapy in Toronto and throughout Ontario with a stable internet connection. <a href="/virtual-therapy-effectiveness-research.html">Research shows virtual therapy sessions are just as effective</a> as in-person therapy for most concerns.</p>
                     </div>
 
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
@@ -1130,7 +1177,7 @@
 
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
                         <h3 style="color: var(--primary-soft-blue); margin-bottom: var(--space-sm);">Does insurance cover therapy with a Registered Psychotherapist?</h3>
-                        <p><strong>The answer is:</strong> Most extended health plans in Ontario cover sessions with Registered Psychotherapists (CRPO). Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement. <a href="/blog/mental-health-guides/is-therapy-free-in-canada.html">Read our complete guide to therapy costs and insurance in Ontario</a>.</p>
+                        <p><strong>The answer is:</strong> Most extended health plans in Ontario cover sessions with <a href="https://www.crpo.ca" target="_blank" rel="noopener">Registered Psychotherapists (CRPO)</a>. Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement. <a href="/blog/mental-health-guides/is-therapy-free-in-canada.html">Read our complete guide to therapy costs and insurance in Ontario</a>.</p>
                     </div>
 
                     <div class="faq-item" style="background: var(--neutral-soft); padding: var(--space-lg); border-radius: var(--radius-md);">
@@ -1342,7 +1389,8 @@
             <div class="footer-bottom">
                 <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
                 Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
-                Ontario, Canada</p>
+                Ontario, Canada<br>
+                <strong>Last Updated:</strong> October 28, 2025</p>
             </div>
         </div>
     </footer>
