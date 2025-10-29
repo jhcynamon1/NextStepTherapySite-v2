@@ -207,12 +207,21 @@ During the 30-day stability period:
 - [ ] Site still returning 200 OK for .html URLs
 - [ ] Redirects still working for non-.html URLs
 
-### Step 2: Implement Manus Tier 1 (5 Test Pages)
-- [ ] Select 5 pages for CTR optimization
-- [ ] Implement emotional titles (Manus recommendations)
-- [ ] Add power words to meta descriptions
+### Step 2: Implement CTR Optimization Phase 2 (5 Test Pages)
+- [ ] **Review PRD_CTR_OPTIMIZATION_DEC_1_2025.md** (Complete implementation guide)
+- [ ] Choose Option A/B/C for each of the 5 pages:
+  - [ ] virtual-therapy-ontario.html
+  - [ ] anxiety-therapy-burlington.html
+  - [ ] therapist-toronto.html
+  - [ ] anxiety-therapy-ontario.html
+  - [ ] workplace-stress-therapy-ontario.html
+- [ ] Update title tags with emotional hooks
+- [ ] Update meta descriptions
+- [ ] Keep H1 tags unchanged (keyword focus)
+- [ ] Update Open Graph tags to match
 - [ ] Deploy changes
-- [ ] Verify changes live
+- [ ] Verify changes live (view-source check)
+- [ ] Record baseline metrics from GSC (Nov 1-30)
 
 ### Step 3: GSC Resubmission
 - [ ] Resubmit sitemap to GSC
@@ -285,6 +294,7 @@ During the 30-day stability period:
 - `PHASE1_DISCOVERY_CANONICAL_NOT_THE_PROBLEM.md` - Technical analysis
 - `TRAFFIC_DROP_ANALYSIS_SEPT_2025.md` - Sept 30 root cause
 - `MANUS_FOLLOWUP_CLEANURLS_DISCOVERY.md` - Questions asked to Manus
+- `PRD_CTR_OPTIMIZATION_DEC_1_2025.md` - **Complete CTR optimization guide for Dec 1 deployment**
 - `vercel.json` - Current configuration (lines 3, 6-254)
 
 ---
