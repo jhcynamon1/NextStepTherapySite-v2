@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/asset104-180.png">
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+
+                if (currentScrollY <= headerHeight) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Data -->
+    <title>FAQ Ontario Therapy | Virtual Counselling Questions Answered | CRPO #10979</title>
+    <meta name="description" content="Get answers about virtual therapy in Ontario. CRPO regulations, insurance coverage, treatment approaches, and scheduling information for mental health services.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="FAQ Ontario Therapy | Virtual Counselling Questions Answered">
+    <meta property="og:description" content="Comprehensive answers about virtual therapy services, CRPO regulations, insurance coverage, and treatment approaches across Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/faq">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/faq">
+
+    <!-- Import shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- FAQPage Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "Frequently Asked Questions | Ontario Therapy & Virtual Counselling",
+      "description": "Comprehensive answers about virtual therapy services, CRPO regulations, insurance coverage, and treatment approaches across Ontario",
+      "url": "https://nextsteptherapy.ca/faq",
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist",
+        "identifier": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if I need therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you're experiencing persistent anxiety, depression, relationship challenges, workplace stress, or life transitions that are affecting your daily functioning, therapy can be helpful. You don't need to wait for a crisis - many people benefit from therapy as a proactive approach to mental health maintenance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is virtual therapy as effective as in-person sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research consistently shows that virtual therapy is as effective as in-person therapy for most mental health concerns, including anxiety, depression, and relationship issues. Many clients prefer the convenience and comfort of receiving therapy from their own space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does insurance cover virtual therapy sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. Coverage typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement submission to your benefits provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does CRPO #10979 mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CRPO stands for College of Registered Psychotherapists of Ontario. This registration number indicates that Jesse Cynamon is licensed to practice psychotherapy in Ontario and adheres to professional standards, ethical guidelines, and continuing education requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What therapy approaches do you use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primary approaches include Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). These evidence-based methods are particularly effective for anxiety, depression, workplace stress, and relationship challenges common among Ontario residents."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- WebPage Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "FAQ Ontario Therapy | Virtual Counselling Questions Answered",
+      "description": "Comprehensive answers about virtual therapy services, CRPO regulations, insurance coverage, and treatment approaches across Ontario",
+      "url": "https://nextsteptherapy.ca/faq",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "WebPage",
+              "name": "Home",
+              "@id": "https://nextsteptherapy.ca"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "WebPage",
+              "name": "FAQ",
+              "@id": "https://nextsteptherapy.ca/faq"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Manus CTA Styling Override -->
+    <style>
+        .manus-primary-cta {
+            background: #6B8E6F !important;
+            color: white !important;
+            font-weight: 600 !important;
+            padding: 1.25rem 2.5rem !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: none !important;
+            cursor: pointer !important;
+            font-size: 1.1rem !important;
+            min-height: 48px !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .manus-primary-cta:hover {
+            background: #5A7D5E !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3) !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%238FA68E;stop-opacity:0.3" /><stop offset="100%" style="stop-color:%234A6B7A;stop-opacity:0.3" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad)"/></svg>') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-attachment: fixed !important;
+        }
+
+        .hero::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            background: rgba(255, 255, 255, 0.3) !important;
+            z-index: 1 !important;
+        }
+
+        .hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        .trust-indicators {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 0.75rem !important;
+            justify-content: center !important;
+            margin: 1.5rem 0 !important;
+        }
+
+        .trust-indicator {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #4A6B7A !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 20px !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            border: 2px solid #8FA68E !important;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #6B8E6F;
+        }
+
+        .faq-item h4 {
+            color: #4A6B7A;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        .faq-item p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .emergency-disclaimer {
+            background: #FFF3CD;
+            border: 2px solid #F0AD4E;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .emergency-disclaimer h4 {
+            color: #8A6D3B;
+            margin-bottom: 1rem;
+        }
+
+        .emergency-disclaimer p {
+            color: #8A6D3B;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="index.html" class="nav-desktop">Home</a>
+                    <a href="index.html#contact" class="nav-cta">Get Help Today</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Frequently Asked Questions | Ontario Therapy & Virtual Counselling</h1>
+                    <p class="lead-text">Clear answers to common questions about virtual therapy services across Ontario. From understanding CRPO regulations to navigating insurance coverage, find the information you need to make informed decisions about your mental health care.</p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">CRPO #10979 Licensed</span>
+                        <span class="trust-indicator">Virtual Sessions Province-Wide</span>
+                        <span class="trust-indicator">Evidence-Based Approaches</span>
+                        <span class="trust-indicator">Insurance Receipts Provided</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="index.html#contact" class="manus-primary-cta">Book Free Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Getting Started with Therapy</h2>
+                    <p class="section-intro">Common questions about beginning your mental health journey and understanding when professional support can be beneficial.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>How do I know if I need therapy?</h4>
+                            <p>If you're experiencing persistent anxiety, depression, relationship challenges, workplace stress, or life transitions that are affecting your daily functioning, therapy can be helpful. You don't need to wait for a crisis - many people benefit from therapy as a proactive approach to mental health maintenance.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What is a free consultation, and what happens during it?</h4>
+                            <p>A free 15-minute consultation is a brief phone conversation where we discuss your current challenges, answer questions about the therapeutic process, and determine if we're a good fit. There's no pressure to commit, and it helps both of us understand if virtual therapy would be beneficial for your situation.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How quickly can I start therapy?</h4>
+                            <p>Most clients can schedule their first session within 1-2 weeks of initial contact. Emergency appointments may be available for urgent (but non-crisis) situations. For immediate crisis support, please contact 911 or your local crisis line.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Therapy Process Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Virtual Therapy Process</h2>
+                    <p class="section-intro">Understanding how online counselling works and what to expect from virtual sessions across Ontario.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>Is virtual therapy as effective as in-person sessions?</h4>
+                            <p>Research consistently shows that <a href="/virtual-therapy-ontario">virtual therapy</a> is as effective as in-person therapy for most mental health concerns, including anxiety, depression, and relationship issues. Many clients prefer the convenience and comfort of receiving therapy from their own space.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What technology do I need for virtual sessions?</h4>
+                            <p>You'll need a device with internet access, camera, and microphone - this can be a computer, tablet, or smartphone. We use a secure, PIPEDA-compliant platform that's simple to access and doesn't require special software downloads.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How do you ensure privacy in virtual sessions?</h4>
+                            <p>All sessions are conducted through encrypted, secure platforms that meet healthcare privacy standards. We recommend using a private space with headphones or earbuds to ensure confidentiality during your session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Credentials Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Professional Credentials & Regulation</h2>
+                    <p class="section-intro">Understanding CRPO registration, professional standards, and what these credentials mean for your care.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>What does CRPO #10979 mean?</h4>
+                            <p>CRPO stands for College of Registered Psychotherapists of Ontario. This registration number indicates that Jesse Cynamon is licensed to practice psychotherapy in Ontario and adheres to professional standards, ethical guidelines, and continuing education requirements.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What is the difference between a psychotherapist and a psychologist?</h4>
+                            <p>Both are regulated mental health professionals in Ontario. Registered Psychotherapists focus on talk therapy and counselling interventions. Psychologists may also provide therapy but can additionally conduct psychological testing and assessments. Both can effectively treat anxiety, depression, and relationship concerns.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How do I verify professional credentials?</h4>
+                            <p>You can verify any Ontario psychotherapist's registration through the CRPO website's public register. Simply search for the practitioner's name or registration number to confirm their current status and any disciplinary actions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance & Financial Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Insurance & Financial Information</h2>
+                    <p class="section-intro">Understanding costs, insurance coverage, and payment options for virtual therapy services in Ontario.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>Does insurance cover virtual therapy sessions?</h4>
+                            <p>Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. Coverage typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement submission to your benefits provider.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What if I don't have insurance coverage?</h4>
+                            <p>Individual therapy sessions are $150. Many clients find this investment worthwhile given the convenience of virtual sessions and the ability to access specialized care. Some employers offer Employee Assistance Programs (EAP) that may cover initial sessions.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Do you offer sliding scale or reduced fees?</h4>
+                            <p>Currently, we maintain consistent pricing to ensure service sustainability. However, we encourage you to explore your extended health benefits, as many plans provide substantial coverage for psychotherapy services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Approaches Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Treatment Approaches & Specializations</h2>
+                    <p class="section-intro">Information about therapeutic methods, treatment duration, and specialized approaches for different mental health concerns.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>What therapy approaches do you use?</h4>
+                            <p>Primary approaches include Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). These evidence-based methods are particularly effective for <a href="/anxiety-therapy-ontario">anxiety</a>, <a href="/depression-therapy-ontario">depression</a>, workplace stress, and relationship challenges common among Ontario residents.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How long does therapy typically take?</h4>
+                            <p>This varies based on individual goals and concerns. Many clients notice improvements within 4-6 sessions, with significant progress typically occurring within 8-12 weeks of regular sessions. We regularly review progress and adjust treatment plans accordingly.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Can you prescribe medication?</h4>
+                            <p>Registered Psychotherapists cannot prescribe medication. If medication consultation is needed, we can discuss referral options to psychiatrists or encourage discussion with your family physician about your mental health concerns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scheduling & Logistics Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Scheduling & Logistics</h2>
+                    <p class="section-intro">Practical information about appointment scheduling, session frequency, and cancellation policies.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>What are your hours of operation?</h4>
+                            <p>Virtual sessions are available Monday through Friday, with some evening and weekend appointments. This flexibility accommodates various work schedules and family responsibilities across Ontario's diverse communities.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What if I need to cancel or reschedule?</h4>
+                            <p>We require 24 hours notice for cancellations or rescheduling. This allows us to offer the time slot to other clients. Last-minute cancellations may be subject to a cancellation fee.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How often should I attend therapy sessions?</h4>
+                            <p>Most clients benefit from weekly sessions initially, with some transitioning to bi-weekly sessions as progress is made. Session frequency is collaboratively determined based on your needs, goals, and availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ontario-Specific Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Ontario-Specific Questions</h2>
+                    <p class="section-intro">Information about accessing virtual therapy services across different regions of Ontario and understanding local context.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>Can I access services from anywhere in Ontario?</h4>
+                            <p>Yes, as long as you're physically located in Ontario during sessions, you can access virtual therapy services regardless of your specific city or region. This includes rural and remote communities throughout the province.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>How do you understand different regional pressures across Ontario?</h4>
+                            <p>Having worked with clients from Toronto's urban environment to Northern Ontario's rural communities, there's awareness of how regional factors - housing costs, employment markets, social resources - impact mental health. Treatment approaches consider these contextual factors.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What about language or cultural considerations?</h4>
+                            <p>Sessions are conducted in English. While cultural sensitivity is prioritized in all therapeutic work, for specific cultural or linguistic needs, referrals to appropriate specialized practitioners may be recommended.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency & Crisis Information -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Emergency & Crisis Information</h2>
+
+                    <div class="emergency-disclaimer">
+                        <h4>Important: Emergency Services Information</h4>
+                        <p><strong>These services are not appropriate for mental health emergencies.</strong> If you're experiencing thoughts of self-harm, suicide, or other psychiatric emergencies, please contact 911, visit your nearest emergency department, or call the Ontario Crisis Line at 1-877-377-7775.</p>
+                    </div>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>What if I have a mental health emergency?</h4>
+                            <p>Virtual therapy services are not appropriate for mental health emergencies. If you're experiencing thoughts of self-harm or suicide, please contact:</p>
+                            <ul>
+                                <li>911 for immediate emergency services</li>
+                                <li>Ontario Crisis Line: 1-877-377-7775</li>
+                                <li>Kids Help Phone: 1-800-668-6868</li>
+                                <li>Your local hospital emergency department</li>
+                            </ul>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What happens if I experience a crisis between sessions?</h4>
+                            <p>While ongoing support between sessions isn't available, crisis resources are provided during treatment. We work together to develop safety plans and identify appropriate resources for various levels of mental health concerns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Still Have Questions About Virtual Therapy?</h2>
+                    <p class="contact-lead">Professional mental health support is available throughout Ontario. Start with a free 15-minute consultation to get personalized answers about virtual therapy and determine if our approach is right for your needs.</p>
+
+                    <div class="hero-cta">
+                        <a href="tel:+14163062157" class="manus-primary-cta">Book Free 15-Minute Consultation</a>
+                        <div class="secondary-ctas">
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call 416-306-2157</a>
+                            <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>Professional Mental Health Support for All of Ontario</h4>
+                        <div class="therapist-details">
+                            <strong>Jesse Cynamon, RP</strong><br>
+                            Registered Psychotherapist | CRPO #10979<br>
+                            Virtual sessions throughout Ontario<br>
+                            Insurance receipts provided
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA for Mobile -->
+    <a href="tel:+14163062157" class="floating-cta">
