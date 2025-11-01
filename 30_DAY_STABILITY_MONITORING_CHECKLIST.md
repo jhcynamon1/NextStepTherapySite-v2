@@ -36,14 +36,35 @@ The 706 GSC "Not Indexed" errors are **historical duplicates** from before the c
 
 | Date | Not Indexed Count | Change | Notes |
 |------|------------------|--------|-------|
-| Oct 29 | 706 | baseline | Starting point |
-| Oct 30 | | | |
-| Oct 31 | | | |
-| Nov 1 | | | |
+| Oct 29 | 706 | baseline | Starting point - "Crawled - currently not indexed" |
+| Oct 30 | - | - | (No data recorded) |
+| Oct 31 | - | - | (No data recorded) |
+| Nov 1 | **811 total** | +105 | ✅ GOOD! Google recategorized errors into specific types. Breakdown: 342 canonical duplicates, 300 redirects, 94 404s, 54 crawled not indexed. Validation working! |
 | Nov 2 | | | |
 | Nov 3 | | | |
 | Nov 4 | | | |
-| Nov 5 | | | First expected drop |
+| Nov 5 | | | Expected: 700-750 total as duplicates clear |
+
+#### Nov 1 Detailed Breakdown:
+
+| Error Type | Count | Validation Status | What It Means | Expected Outcome |
+|------------|-------|------------------|---------------|------------------|
+| Alternate page with proper canonical tag | 342 | Started | Duplicate URLs with correct canonical tags pointing to .html versions | Should clear in 7-14 days as Google removes from index |
+| Page with redirect | 300 | Started | Non-.html URLs that redirect to .html versions | Should clear in 7-14 days as Google stops indexing redirects |
+| Not found (404) | 94 | Started | Broken URLs or old pages that don't exist | Need to investigate after Dec 1 - may be old backup files |
+| Crawled - currently not indexed | 54 | Failed | Pages Google crawled but decided not to index | Need to review content quality after Dec 1 |
+| Discovered - currently not indexed | 8 | Started | Low-priority pages Google found but hasn't crawled yet | Normal for new/low-value pages |
+| Redirect error | 8 | Started | Redirects with issues (chains, loops, etc.) | Need to check redirect configuration |
+| Duplicate, Google chose different canonical | 3 | Started | Google picked different canonical than we specified | Minor issue, monitor |
+| Excluded by 'noindex' tag | 2 | Started | Pages with noindex meta tag (intentional?) | Check if these should be indexed |
+| **Duplicate without user-selected canonical** | **0** | **✅ Passed** | **All fixed!** | **Success! First validation win!** |
+
+**Key Insight:** The 706 "Crawled - currently not indexed" errors were actually a mix of different issues. Google's validation recategorized them into specific types, which is GOOD because now we know exactly what's wrong with each page.
+
+**Expected Timeline:**
+- **Nov 5-12:** "Alternate page" and "Page with redirect" should start dropping (expect -100 to -200)
+- **Nov 12-19:** Major cleanup as duplicates clear (expect -200 to -300)
+- **Nov 19-28:** Stabilize at ~200-300 remaining errors (mostly 404s and low-quality pages to fix later)
 
 ---
 
