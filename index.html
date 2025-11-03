@@ -1336,15 +1336,18 @@
 
                         <p style="text-align: center; color: #5A6B7D; margin: 1.5rem 0; font-size: 0.95rem;">Or send me a message below:</p>
 
-                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST">
+                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST" id="contactForm">
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
                             <input type="hidden" name="_subject" value="New Consultation Request - Next Step Therapy">
-                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="box">
 
                             <!-- Honeypot anti-spam field (bots will fill this, humans won't see it) -->
-                            <input type="text" name="_honey" style="display:none">
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                            <!-- Time-based validation (hidden field set by JS) -->
+                            <input type="hidden" name="form_timestamp" id="formTimestamp" value="">
 
                             <div class="form-group">
                                 <label for="name">Your name *</label>
@@ -1522,38 +1525,82 @@
             initSmoothScroll();
         }
 
-        // Form handling with proper submission and feedback
-        document.querySelector('form').addEventListener('submit', function(e) {
-            const submitButton = e.target.querySelector('button[type="submit"]');
-            const form = e.target;
+        // INVISIBLE BOT PROTECTION - No user friction
+        (function() {
+            const formLoadTime = Date.now();
+            const disposableEmailDomains = ['tempmail.com', 'guerrillamail.com', 'mailinator.com', '10minutemail.com', 'throwaway.email', 'temp-mail.org', 'sharklasers.com', 'guerrillamail.net'];
 
-            // Show loading state
-            submitButton.textContent = 'Sending Message...';
-            submitButton.disabled = true;
-            submitButton.style.opacity = '0.7';
+            // Set form load timestamp
+            const timestampField = document.getElementById('formTimestamp');
+            if (timestampField) {
+                timestampField.value = formLoadTime;
+            }
 
-            // Create success message div
-            const successMessage = document.createElement('div');
-            successMessage.innerHTML = `
-                <div style="background: #d4edda; color: #155724; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; border: 1px solid #c3e6cb; text-align: center;">
-                    <h4 style="margin: 0 0 0.5rem 0; color: #155724;">✓ Message Sent Successfully!</h4>
-                    <p style="margin: 0; font-size: 0.95rem;">Thank you for reaching out. I will respond within 2 hours during business hours with care and confidentiality.</p>
-                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; opacity: 0.8;">You can also call or text: (416) 306-2157</p>
-                </div>
-            `;
+            // Form handling with invisible bot validation
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const submitButton = e.target.querySelector('button[type="submit"]');
+                    const form = e.target;
+                    const emailField = form.querySelector('#email');
+                    const honeypotField = form.querySelector('[name="_gotcha"]');
 
-            // Don't prevent default - let form submit to FormSubmit
-            setTimeout(() => {
-                // Show success message after brief delay
-                form.parentNode.insertBefore(successMessage, form.nextSibling);
+                    // BOT CHECK 1: Honeypot field filled (bot trap)
+                    if (honeypotField && honeypotField.value !== '') {
+                        console.log('Bot detected: Honeypot filled');
+                        e.preventDefault();
+                        return false;
+                    }
 
-                // Hide the form
-                form.style.display = 'none';
+                    // BOT CHECK 2: Form submitted too fast (less than 3 seconds = bot)
+                    const timeTaken = Date.now() - formLoadTime;
+                    if (timeTaken < 3000) {
+                        console.log('Bot detected: Form submitted too fast');
+                        e.preventDefault();
+                        alert('Please wait a moment before submitting.');
+                        return false;
+                    }
 
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 500);
-        });
+                    // BOT CHECK 3: Disposable email address
+                    if (emailField) {
+                        const emailDomain = emailField.value.split('@')[1];
+                        if (emailDomain && disposableEmailDomains.includes(emailDomain.toLowerCase())) {
+                            console.log('Bot detected: Disposable email');
+                            e.preventDefault();
+                            alert('Please use a permanent email address.');
+                            return false;
+                        }
+                    }
+
+                    // All checks passed - show loading state
+                    submitButton.textContent = 'Sending Message...';
+                    submitButton.disabled = true;
+                    submitButton.style.opacity = '0.7';
+
+                    // Create success message div
+                    const successMessage = document.createElement('div');
+                    successMessage.innerHTML = `
+                        <div style="background: #d4edda; color: #155724; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; border: 1px solid #c3e6cb; text-align: center;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #155724;">✓ Message Sent Successfully!</h4>
+                            <p style="margin: 0; font-size: 0.95rem;">Thank you for reaching out. I will respond within 2 hours during business hours with care and confidentiality.</p>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; opacity: 0.8;">You can also call or text: (416) 306-2157</p>
+                        </div>
+                    `;
+
+                    // Don't prevent default - let form submit to FormSubmit
+                    setTimeout(() => {
+                        // Show success message after brief delay
+                        form.parentNode.insertBefore(successMessage, form.nextSibling);
+
+                        // Hide the form
+                        form.style.display = 'none';
+
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 500);
+                });
+            }
+        })();
 
         // Phone click tracking
         document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
