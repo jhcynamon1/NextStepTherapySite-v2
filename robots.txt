@@ -35,3 +35,25 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
+
+# Limit aggressive crawlers (reduces Singapore bot traffic)
+User-agent: AhrefsBot
+Crawl-delay: 30
+
+User-agent: SemrushBot
+Crawl-delay: 30
+
+User-agent: MJ12bot
+Crawl-delay: 30
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Crawl-delay: 30
