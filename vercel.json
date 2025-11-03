@@ -4,253 +4,1097 @@
   "trailingSlash": false,
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/(.*)", "has": [{"type": "host", "value": "www.nextsteptherapy.ca"}], "destination": "https://nextsteptherapy.ca/$1", "permanent": true },
-
-    { "source": "/anxiety-therapy-ontario", "destination": "/anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/anxiety-therapy-oshawa", "destination": "/anxiety-therapy-oshawa.html", "permanent": true },
-    { "source": "/depression-therapy-hamilton", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/depression-therapy-ontario", "destination": "/depression-therapy-ontario.html", "permanent": true },
-    { "source": "/grief-counselling-toronto", "destination": "/grief-counselling-toronto.html", "permanent": true },
-    { "source": "/homesick-university", "destination": "/homesick-university.html", "permanent": true },
-    { "source": "/how-to-find-therapist-ontario", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/life-transitions", "destination": "/life-transitions.html", "permanent": true },
-    { "source": "/mens-mental-health-therapy-london-ontario", "destination": "/mens-mental-health-therapy-london-ontario.html", "permanent": true },
-    { "source": "/perfectionism-and-burnout-therapy-toronto", "destination": "/perfectionism-and-burnout-therapy-toronto.html", "permanent": true },
-    { "source": "/performance-anxiety-therapy-ontario", "destination": "/performance-anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/performance-anxiety", "destination": "/performance-anxiety.html", "permanent": true },
-    { "source": "/student-mental-health-ontario", "destination": "/student-mental-health-ontario.html", "permanent": true },
-    { "source": "/therapy-brampton-ontario", "destination": "/therapy-brampton-ontario.html", "permanent": true },
-    { "source": "/therapy-hamilton-ontario", "destination": "/therapy-hamilton-ontario.html", "permanent": true },
-    { "source": "/therapy-london-ontario", "destination": "/therapy-london-ontario.html", "permanent": true },
-    { "source": "/therapy-mississauga-ontario", "destination": "/therapy-mississauga-ontario.html", "permanent": true },
-    { "source": "/therapy-ottawa-ontario", "destination": "/therapy-ottawa-ontario.html", "permanent": true },
-    { "source": "/trauma-counselling-toronto", "destination": "/trauma-counselling-toronto.html", "permanent": true },
-    { "source": "/university-anxiety-therapy-ontario", "destination": "/university-anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/virtual-therapy-ontario", "destination": "/virtual-therapy-ontario.html", "permanent": true },
-    { "source": "/work-anxiety-and-stress", "destination": "/work-anxiety-and-stress.html", "permanent": true },
-    { "source": "/workplace-stress-therapy-ontario", "destination": "/workplace-stress-therapy-ontario.html", "permanent": true },
-    { "source": "/workplace-stress-therapy-ottawa", "destination": "/workplace-stress-therapy-ottawa.html", "permanent": true },
-    { "source": "/blog/mental-health-guides/how-to-find-therapist-toronto", "destination": "/blog/mental-health-guides/how-to-find-therapist-toronto.html", "permanent": true },
-    { "source": "/blog/mental-health-guides/why-therapy-costs-ontario", "destination": "/blog/mental-health-guides/why-therapy-costs-ontario.html", "permanent": true },
-    { "source": "/blog/workplace/how-to-recover-from-burnout", "destination": "/blog/workplace/how-to-recover-from-burnout.html", "permanent": true },
-    { "source": "/blog/mental-health-guides/do-i-need-therapy-quiz", "destination": "/blog/mental-health-guides/do-i-need-therapy-quiz.html", "permanent": true },
-    { "source": "/blog/mental-health-guides/therapy-quiz-interactive", "destination": "/blog/mental-health-guides/therapy-quiz-interactive.html", "permanent": true },
-    { "source": "/blog/mental-health-guides/is-therapy-free-in-canada", "destination": "/blog/mental-health-guides/is-therapy-free-in-canada.html", "permanent": true },
-
-    { "source": "/services/public/services/:path*", "destination": "/services/$1", "permanent": true },
-    { "source": "/locations/:city/public/services/:path*", "destination": "/$1", "permanent": true },
-    { "source": "/dmPageNotFound", "destination": "/", "permanent": true },
-    { "source": "/cart", "destination": "/", "permanent": true },
-    { "source": "/404", "destination": "/", "permanent": true },
-    { "source": "/links", "destination": "/", "permanent": true },
-    { "source": "/good-faith-estimate", "destination": "/", "permanent": true },
-    { "source": "/legal", "destination": "/", "permanent": true },
-    { "source": "/service-template", "destination": "/", "permanent": true },
-    { "source": "/our-team", "destination": "/", "permanent": true },
-    { "source": "/our-team/:path*", "destination": "/", "permanent": true },
-    { "source": "/services", "destination": "/", "permanent": true },
-    { "source": "/contact", "destination": "/#contact", "permanent": true },
-    { "source": "/about", "destination": "/#contact", "permanent": true },
-    { "source": "/about.html", "destination": "/#contact", "permanent": true },
-    { "source": "/approach", "destination": "/", "permanent": true },
-    { "source": "/approach.html", "destination": "/", "permanent": true },
-    { "source": "/fees", "destination": "/", "permanent": true },
-    { "source": "/fees.html", "destination": "/", "permanent": true },
-
-    { "source": "/counselling-ontario", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/counselling-ontario.html", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/counsellor-ontario", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/counsellor-ontario.html", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/mental-health-therapist-ontario", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/mental-health-therapist-ontario.html", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/therapy-near-me-ontario", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-    { "source": "/therapy-near-me-ontario.html", "destination": "/how-to-find-therapist-ontario.html", "permanent": true },
-
-    { "source": "/virtual-therapy.html", "destination": "/virtual-therapy-ontario.html", "permanent": true },
-    { "source": "/anxiety-therapy.html", "destination": "/anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/depression-support.html", "destination": "/depression-therapy-ontario.html", "permanent": true },
-    { "source": "/depression-support", "destination": "/depression-therapy-ontario.html", "permanent": true },
-    { "source": "/workplace-stress-burnout", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/workplace-stress-burnout.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/workplace-stress-burnout-therapy", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/life-transitions", "destination": "/life-transitions.html", "permanent": true },
-    { "source": "/academic-stress.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/academic-stress", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/panic-attacks-university", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/college-anxiety", "destination": "/students/college-anxiety.html", "permanent": true },
-    { "source": "/college-stress", "destination": "/students/college-anxiety.html", "permanent": true },
-
-    { "source": "/services/anxiety-therapy.html", "destination": "/anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/services/depression-support.html", "destination": "/depression-therapy-ontario.html", "permanent": true },
-    { "source": "/services/workplace-stress-burnout.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/services/relationship-communication.html", "destination": "/", "permanent": true },
-    { "source": "/services/academic-stress.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/services/anxiety-treatment.html", "destination": "/anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/services/family-therapy.html", "destination": "/", "permanent": true },
-    { "source": "/services/parent-guidance.html", "destination": "/", "permanent": true },
-    { "source": "/services/university-transitions.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/services/index.html", "destination": "/", "permanent": true },
-
-    { "source": "/virtual", "destination": "/virtual-therapy-ontario.html", "permanent": true },
-    { "source": "/virtual/:path*", "destination": "/virtual-therapy-ontario.html", "permanent": true },
-    { "source": "/seo", "destination": "/", "permanent": true },
-    { "source": "/seo/:path*", "destination": "/", "permanent": true },
-    { "source": "/resources/:path*", "destination": "/", "permanent": true },
-
-    { "source": "/university-anxiety-therapy.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/layoff-anxiety-therapy.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/homesickness-therapy.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/academic-anxiety.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/academic-stress-therapy.html", "destination": "/students/university-anxiety.html", "permanent": true },
-    { "source": "/personal-growth-confidence-building.html", "destination": "/", "permanent": true },
-    { "source": "/grief-counseling-ontario", "destination": "/", "permanent": true },
-    { "source": "/therapy-near-me-ontario", "destination": "/therapy-near-me-ontario.html", "permanent": true },
-
-    { "source": "/work-stress-assessment.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/work-stress-assessment-understand-your-professional-wellbeing.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/stress-and-burnout.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/stress-and-burnout", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/performance-anxiety-therapy-services.html", "destination": "/performance-anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/executive-professional-performance-enhancement.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/insights_performance-anxiety.html", "destination": "/performance-anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/confronting-impostor-syndrome-how-depth-oriented-therapy-transforms-professional-confidence.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/mindfulness-therapy-enhancing-your-mind-improving-your-life.html", "destination": "/", "permanent": true },
-    { "source": "/performance-mindfulness-science-backed-practices-for-high-pressure-work-environments.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/start-up-stress-to-peak-performance-a-mental-health-guide-for-tech-entrepreneurs.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/how-core-values-shape-peak-performance-and-professional-fulfillment.html", "destination": "/", "permanent": true },
-    { "source": "/the-high-performer-s-guide-to-emotional-intelligence-making-better-decisions-when-stakes-are-high.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/the-tricky-nature-of-anxiety-and-stress.html", "destination": "/anxiety-therapy-ontario.html", "permanent": true },
-    { "source": "/guide-to-work-stress-management.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/professional-growth-through-therapy-a-toronto-guide", "destination": "/", "permanent": true },
-    { "source": "/services.html", "destination": "/", "permanent": true },
-    { "source": "/services.html", "destination": "/services", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true },
-    { "source": "/therapist-mississauga.html", "destination": "/therapist-mississauga", "permanent": true },
-
-    { "source": "/services/life-transitions.html", "destination": "/life-transitions", "permanent": true },
-    { "source": "/services/mens-mental-health.html", "destination": "/mens-mental-health", "permanent": true },
-    { "source": "/services/anxiety-therapy", "destination": "/anxiety-therapy-ontario", "permanent": true },
-    { "source": "/therapy-goals-depression", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/online-therapy-depression", "destination": "/depression-therapy-ontario", "permanent": true },
-
-    { "source": "/virtual-therapy-ontario-qa-comprehensive.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/life-transitions-qa-comprehensive.html", "destination": "/life-transitions", "permanent": true },
-    { "source": "/therapist-mississauga-qa-comprehensive.html", "destination": "/therapist-mississauga", "permanent": true },
-
-    { "source": "/online-therapy-burlington.html", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/online-therapy-burlington", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/virtual-therapy-burlington.html", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/virtual-therapy-burlington", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/burlington-online-therapy", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/anxiety-therapy-burlington.html", "destination": "/burlington-online-therapy.html", "permanent": true },
-    { "source": "/anxiety-therapy-burlington", "destination": "/burlington-online-therapy.html", "permanent": true },
-
-    { "source": "/student-mental-health-hamilton.html", "destination": "/students/student-mental-health-hamilton", "permanent": true },
-    { "source": "/student-mental-health-london.html", "destination": "/students/student-mental-health-london", "permanent": true },
-    { "source": "/student-mental-health-kingston.html", "destination": "/students/student-mental-health-kingston", "permanent": true },
-    { "source": "/student-mental-health-ottawa.html", "destination": "/students/student-mental-health-ottawa", "permanent": true },
-    { "source": "/student-mental-health-waterloo.html", "destination": "/students/student-mental-health-waterloo", "permanent": true },
-    { "source": "/university-exam-anxiety.html", "destination": "/students/university-exam-anxiety", "permanent": true },
-    { "source": "/university-anxiety.html", "destination": "/students/university-anxiety", "permanent": true },
-    { "source": "/student-mental-health.html", "destination": "/students/student-mental-health", "permanent": true },
-    { "source": "/university-depression.html", "destination": "/students/university-depression", "permanent": true },
-    { "source": "/students-with-anxiety.html", "destination": "/students/anxiety-support", "permanent": true },
-    { "source": "/college-anxiety.html", "destination": "/students/college-anxiety", "permanent": true },
-    { "source": "/college-stress.html", "destination": "/students/college-stress", "permanent": true },
-    { "source": "/college-student-counseling.html", "destination": "/students/college-counselling", "permanent": true },
-    { "source": "/study-anxiety.html", "destination": "/students/study-anxiety", "permanent": true },
-    { "source": "/academic-stress-university.html", "destination": "/students/academic-stress", "permanent": true },
-    { "source": "/first-year-university-anxiety.html", "destination": "/students/first-year-anxiety", "permanent": true },
-    { "source": "/failing-university-anxiety.html", "destination": "/students/failing-university-anxiety", "permanent": true },
-    { "source": "/university-counseling.html", "destination": "/students/university-counselling", "permanent": true },
-    { "source": "/university-student-struggling.html", "destination": "/students/university-student-struggling", "permanent": true },
-    { "source": "/university-student-therapy.html", "destination": "/students/university-therapy", "permanent": true },
-    { "source": "/child-anxious-about-university.html", "destination": "/students/child-anxiety", "permanent": true },
-    { "source": "/help-university-student-depression.html", "destination": "/students/student-depression-help", "permanent": true },
-    { "source": "/social-anxiety-university.html", "destination": "/students/social-anxiety", "permanent": true },
-    { "source": "/panic-attacks-university.html", "destination": "/students/panic-attacks", "permanent": true },
-
-    { "source": "/same-day-virtual-therapy-ontario.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/online-mental-health-support-ontario.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/virtual-therapy-thunder-bay.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/mental-health-northern-ontario.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/virtual-therapy-busy-parents.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-
-    { "source": "/therapy-cost-without-insurance.html", "destination": "/resources/therapy-cost-without-insurance", "permanent": true },
-    { "source": "/therapy-covered-insurance-ontario.html", "destination": "/resources/therapy-covered-by-insurance", "permanent": true },
-    { "source": "/why-feel-anxious-all-time.html", "destination": "/resources/why-feel-anxious-all-the-time", "permanent": true },
-    { "source": "/cant-sleep-anxiety.html", "destination": "/resources/cant-sleep-due-to-anxiety", "permanent": true },
-    { "source": "/panic-attacks-driving-ontario.html", "destination": "/resources/panic-attacks-driving", "permanent": true },
-    { "source": "/therapy-goals-depression.html", "destination": "/resources/therapy-goals-depression", "permanent": true },
-
-    { "source": "/therapist-available-today-ontario.html", "destination": "/services/therapist-available-today", "permanent": true },
-    { "source": "/same-week-therapy-appointment.html", "destination": "/services/same-week-therapy", "permanent": true },
-    { "source": "/acceptance-commitment-therapy-act.html", "destination": "/services/acceptance-commitment-therapy", "permanent": true },
-    { "source": "/online-therapy-depression.html", "destination": "/services/online-therapy-depression", "permanent": true },
-
-    { "source": "/performance-anxiety.html", "destination": "/professionals/performance-anxiety", "permanent": true },
-    { "source": "/performance-anxiety-therapy-services.html", "destination": "/professionals/performance-anxiety", "permanent": true },
-    { "source": "/work-anxiety-and-stress.html", "destination": "/professionals/workplace-stress", "permanent": true },
-
-    { "source": "/virtual-therapy.html", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/university-anxiety-therapy.html", "destination": "/students/university-anxiety", "permanent": true },
-    { "source": "/academic-anxiety.html", "destination": "/students/university-anxiety", "permanent": true },
-    { "source": "/academic-stress.html", "destination": "/students/university-anxiety", "permanent": true },
-    { "source": "/academic-stress-therapy.html", "destination": "/students/university-anxiety", "permanent": true },
-
-    { "source": "/public/failing-university-anxiety.html", "destination": "/", "permanent": true },
-    { "source": "/public/therapy-covered-insurance-ontario.html", "destination": "/", "permanent": true },
-    { "source": "/public/child-anxious-about-university.html", "destination": "/", "permanent": true },
-    { "source": "/public/first-year-university-anxiety.html", "destination": "/first-year-university-anxiety", "permanent": true },
-    { "source": "/public/homesick-university.html", "destination": "/homesick-university", "permanent": true },
-
-    { "source": "/insights", "destination": "/blog", "permanent": true },
-    { "source": "/insights/:path*", "destination": "/blog", "permanent": true },
-    { "source": "/book-today", "destination": "/", "permanent": true },
-
-    { "source": "/teen-eating-disorder-help.html", "destination": "/students/teen-eating-disorder-help", "permanent": true },
-
-    { "source": "/anger-management-kitchener.html", "destination": "/anger-management-therapy", "permanent": true },
-    { "source": "/therapist-toronto-depression.html", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/workplace-stress-counselling-hamilton.html", "destination": "/workplace-stress-therapy-ontario", "permanent": true },
-    { "source": "/mens-mental-health-therapy-london-ontario.html", "destination": "/mens-mental-health", "permanent": true },
-    { "source": "/depression-therapy-ottawa.html", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/anxiety-counseling-ontario.html", "destination": "/anxiety-therapy-ontario", "permanent": true },
-    { "source": "/toronto-depression-therapy.html", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/psychotherapy-counselling-depression.html", "destination": "/depression-therapy-ontario", "permanent": true },
-
-    { "source": "/anxiety-therapy-london-ontario.html", "destination": "/anxiety-therapy-ontario", "permanent": true },
-    { "source": "/anxiety-therapy-toronto.html", "destination": "/anxiety-therapy-ontario", "permanent": true },
-    { "source": "/depression-therapy-hamilton.html", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/depression-therapy-london-ontario.html", "destination": "/depression-therapy-ontario", "permanent": true },
-    { "source": "/performance-anxiety-therapy-toronto.html", "destination": "/performance-anxiety-therapy-toronto", "permanent": true },
-
-    { "source": "/depression-therapy-mississauga", "destination": "/depression-therapy-mississauga.html", "permanent": true },
-    { "source": "/anxiety-therapy-mississauga", "destination": "/anxiety-therapy-mississauga.html", "permanent": true },
-    { "source": "/depression-therapy-london.html", "destination": "/depression-therapy-london", "permanent": true },
-    { "source": "/anxiety-therapy-ottawa.html", "destination": "/anxiety-therapy-ottawa", "permanent": true },
-    { "source": "/counselling-kitchener.html", "destination": "/counselling-kitchener", "permanent": true },
-
-    { "source": "/impostor-syndrome-therapy-ontario.html", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-    { "source": "/impostor-syndrome-therapy-ontario", "destination": "/workplace-stress-burnout-therapy.html", "permanent": true },
-
-    { "source": "/professional-growth-through-therapy-a-toronto-guide", "destination": "/", "permanent": true },
-    { "source": "/services/public/services/:path*", "destination": "/", "permanent": true },
-    { "source": "/virtual/:path*", "destination": "/virtual-therapy-ontario", "permanent": true },
-    { "source": "/seo/:path*", "destination": "/", "permanent": true },
-    { "source": "/insights/:path*", "destination": "/", "permanent": true },
-    { "source": "/our-team/:path*", "destination": "/", "permanent": true },
-    { "source": "/dmPageNotFound", "destination": "/", "permanent": true },
-    { "source": "/service-template", "destination": "/", "permanent": true },
-    { "source": "/cart", "destination": "/", "permanent": true },
-    { "source": "/404", "destination": "/", "permanent": true },
-    { "source": "/links", "destination": "/", "permanent": true },
-    { "source": "/good-faith-estimate", "destination": "/", "permanent": true },
-    { "source": "/legal", "destination": "/", "permanent": true },
-    { "source": "/anxiety-therapy", "destination": "/anxiety-therapy-ontario", "permanent": true },
-    { "source": "/grief-counseling-ontario", "destination": "/", "permanent": true },
-    { "source": "/therapy-near-me-ontario", "destination": "/therapy-near-me-ontario.html", "permanent": true },
-    { "source": "/insights", "destination": "/", "permanent": true }
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.nextsteptherapy.ca"
+        }
+      ],
+      "destination": "https://nextsteptherapy.ca/$1",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-ontario",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-oshawa",
+      "destination": "/anxiety-therapy-oshawa.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-hamilton",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-ontario",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/grief-counselling-toronto",
+      "destination": "/grief-counselling-toronto.html",
+      "permanent": true
+    },
+    {
+      "source": "/homesick-university",
+      "destination": "/homesick-university.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-find-therapist-ontario",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/life-transitions",
+      "destination": "/life-transitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/mens-mental-health-therapy-london-ontario",
+      "destination": "/mens-mental-health",
+      "permanent": true
+    },
+    {
+      "source": "/perfectionism-and-burnout-therapy-toronto",
+      "destination": "/perfectionism-and-burnout-therapy-toronto.html",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety-therapy-ontario",
+      "destination": "/performance-anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety",
+      "destination": "/professionals/performance-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-ontario",
+      "destination": "/student-mental-health-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-brampton-ontario",
+      "destination": "/therapy-brampton-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-hamilton-ontario",
+      "destination": "/therapy-hamilton-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-london-ontario",
+      "destination": "/therapy-london-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-mississauga-ontario",
+      "destination": "/therapy-mississauga-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-ottawa-ontario",
+      "destination": "/therapy-ottawa-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/trauma-counselling-toronto",
+      "destination": "/trauma-counselling-toronto.html",
+      "permanent": true
+    },
+    {
+      "source": "/university-anxiety-therapy-ontario",
+      "destination": "/university-anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-ontario",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/work-anxiety-and-stress",
+      "destination": "/professionals/workplace-stress",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-therapy-ontario",
+      "destination": "/workplace-stress-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-therapy-ottawa",
+      "destination": "/workplace-stress-therapy-ottawa.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mental-health-guides/how-to-find-therapist-toronto",
+      "destination": "/blog/mental-health-guides/how-to-find-therapist-toronto.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mental-health-guides/why-therapy-costs-ontario",
+      "destination": "/blog/mental-health-guides/why-therapy-costs-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/workplace/how-to-recover-from-burnout",
+      "destination": "/blog/workplace/how-to-recover-from-burnout.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mental-health-guides/do-i-need-therapy-quiz",
+      "destination": "/blog/mental-health-guides/do-i-need-therapy-quiz.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mental-health-guides/therapy-quiz-interactive",
+      "destination": "/blog/mental-health-guides/therapy-quiz-interactive.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mental-health-guides/is-therapy-free-in-canada",
+      "destination": "/blog/mental-health-guides/is-therapy-free-in-canada.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/public/services/:path*",
+      "destination": "/services/$1",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:city/public/services/:path*",
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/dmPageNotFound",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/404",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/links",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/good-faith-estimate",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/service-template",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/approach",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/approach.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fees",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fees.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/counselling-ontario",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/counselling-ontario.html",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/counsellor-ontario",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/counsellor-ontario.html",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/mental-health-therapist-ontario",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/mental-health-therapist-ontario.html",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-near-me-ontario",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-near-me-ontario.html",
+      "destination": "/how-to-find-therapist-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-support.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-support",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-burnout",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-burnout.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-burnout-therapy",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/life-transitions",
+      "destination": "/life-transitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/panic-attacks-university",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/college-anxiety",
+      "destination": "/students/college-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/college-stress",
+      "destination": "/students/college-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/anxiety-therapy.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/depression-support.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/workplace-stress-burnout.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/relationship-communication.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/academic-stress.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/anxiety-treatment.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/family-therapy.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/parent-guidance.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/university-transitions.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/virtual",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual/:path*",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/seo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/university-anxiety-therapy.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/layoff-anxiety-therapy.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/homesickness-therapy.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/academic-anxiety.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress-therapy.html",
+      "destination": "/students/university-anxiety.html",
+      "permanent": true
+    },
+    {
+      "source": "/personal-growth-confidence-building.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/grief-counseling-ontario",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/work-stress-assessment.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/work-stress-assessment-understand-your-professional-wellbeing.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/stress-and-burnout.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/stress-and-burnout",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety-therapy-services.html",
+      "destination": "/performance-anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/executive-professional-performance-enhancement.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/insights_performance-anxiety.html",
+      "destination": "/performance-anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/confronting-impostor-syndrome-how-depth-oriented-therapy-transforms-professional-confidence.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/mindfulness-therapy-enhancing-your-mind-improving-your-life.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/performance-mindfulness-science-backed-practices-for-high-pressure-work-environments.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/start-up-stress-to-peak-performance-a-mental-health-guide-for-tech-entrepreneurs.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-core-values-shape-peak-performance-and-professional-fulfillment.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/the-high-performer-s-guide-to-emotional-intelligence-making-better-decisions-when-stakes-are-high.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-tricky-nature-of-anxiety-and-stress.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/guide-to-work-stress-management.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/professional-growth-through-therapy-a-toronto-guide",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/therapist-mississauga.html",
+      "destination": "/therapist-mississauga",
+      "permanent": true
+    },
+    {
+      "source": "/services/life-transitions.html",
+      "destination": "/life-transitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/mens-mental-health.html",
+      "destination": "/mens-mental-health",
+      "permanent": true
+    },
+    {
+      "source": "/services/anxiety-therapy",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-goals-depression",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/online-therapy-depression",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-ontario-qa-comprehensive.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/life-transitions-qa-comprehensive.html",
+      "destination": "/life-transitions.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapist-mississauga-qa-comprehensive.html",
+      "destination": "/therapist-mississauga",
+      "permanent": true
+    },
+    {
+      "source": "/online-therapy-burlington.html",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/online-therapy-burlington",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-burlington.html",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-burlington",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/burlington-online-therapy",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-burlington.html",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-burlington",
+      "destination": "/burlington-online-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-hamilton.html",
+      "destination": "/students/student-mental-health-hamilton",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-london.html",
+      "destination": "/students/student-mental-health-london",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-kingston.html",
+      "destination": "/students/student-mental-health-kingston",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-ottawa.html",
+      "destination": "/students/student-mental-health-ottawa",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health-waterloo.html",
+      "destination": "/students/student-mental-health-waterloo",
+      "permanent": true
+    },
+    {
+      "source": "/university-exam-anxiety.html",
+      "destination": "/students/university-exam-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/university-anxiety.html",
+      "destination": "/students/university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/student-mental-health.html",
+      "destination": "/students/student-mental-health",
+      "permanent": true
+    },
+    {
+      "source": "/university-depression.html",
+      "destination": "/students/university-depression",
+      "permanent": true
+    },
+    {
+      "source": "/students-with-anxiety.html",
+      "destination": "/students/anxiety-support",
+      "permanent": true
+    },
+    {
+      "source": "/college-anxiety.html",
+      "destination": "/students/college-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/college-stress.html",
+      "destination": "/students/college-stress",
+      "permanent": true
+    },
+    {
+      "source": "/college-student-counseling.html",
+      "destination": "/students/college-counselling",
+      "permanent": true
+    },
+    {
+      "source": "/study-anxiety.html",
+      "destination": "/students/study-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress-university.html",
+      "destination": "/students/academic-stress",
+      "permanent": true
+    },
+    {
+      "source": "/first-year-university-anxiety.html",
+      "destination": "/students/first-year-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/failing-university-anxiety.html",
+      "destination": "/students/failing-university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/university-counseling.html",
+      "destination": "/students/university-counselling",
+      "permanent": true
+    },
+    {
+      "source": "/university-student-struggling.html",
+      "destination": "/students/university-student-struggling",
+      "permanent": true
+    },
+    {
+      "source": "/university-student-therapy.html",
+      "destination": "/students/university-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/child-anxious-about-university.html",
+      "destination": "/students/child-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/help-university-student-depression.html",
+      "destination": "/students/student-depression-help",
+      "permanent": true
+    },
+    {
+      "source": "/social-anxiety-university.html",
+      "destination": "/students/social-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/panic-attacks-university.html",
+      "destination": "/students/panic-attacks",
+      "permanent": true
+    },
+    {
+      "source": "/same-day-virtual-therapy-ontario.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/online-mental-health-support-ontario.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-thunder-bay.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/mental-health-northern-ontario.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-therapy-busy-parents.html",
+      "destination": "/virtual-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-cost-without-insurance.html",
+      "destination": "/resources/therapy-cost-without-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-covered-insurance-ontario.html",
+      "destination": "/resources/therapy-covered-by-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/why-feel-anxious-all-time.html",
+      "destination": "/resources/why-feel-anxious-all-the-time",
+      "permanent": true
+    },
+    {
+      "source": "/cant-sleep-anxiety.html",
+      "destination": "/resources/cant-sleep-due-to-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/panic-attacks-driving-ontario.html",
+      "destination": "/resources/panic-attacks-driving",
+      "permanent": true
+    },
+    {
+      "source": "/therapy-goals-depression.html",
+      "destination": "/resources/therapy-goals-depression",
+      "permanent": true
+    },
+    {
+      "source": "/therapist-available-today-ontario.html",
+      "destination": "/services/therapist-available-today",
+      "permanent": true
+    },
+    {
+      "source": "/same-week-therapy-appointment.html",
+      "destination": "/services/same-week-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/acceptance-commitment-therapy-act.html",
+      "destination": "/services/acceptance-commitment-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/online-therapy-depression.html",
+      "destination": "/services/online-therapy-depression",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety.html",
+      "destination": "/professionals/performance-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety-therapy-services.html",
+      "destination": "/professionals/performance-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/work-anxiety-and-stress.html",
+      "destination": "/professionals/workplace-stress",
+      "permanent": true
+    },
+    {
+      "source": "/university-anxiety-therapy.html",
+      "destination": "/students/university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/academic-anxiety.html",
+      "destination": "/students/university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress.html",
+      "destination": "/students/university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/academic-stress-therapy.html",
+      "destination": "/students/university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/public/failing-university-anxiety.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public/therapy-covered-insurance-ontario.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public/child-anxious-about-university.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public/first-year-university-anxiety.html",
+      "destination": "/first-year-university-anxiety",
+      "permanent": true
+    },
+    {
+      "source": "/public/homesick-university.html",
+      "destination": "/homesick-university.html",
+      "permanent": true
+    },
+    {
+      "source": "/insights",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/insights/:path*",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/book-today",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/teen-eating-disorder-help.html",
+      "destination": "/students/teen-eating-disorder-help",
+      "permanent": true
+    },
+    {
+      "source": "/anger-management-kitchener.html",
+      "destination": "/anger-management-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/therapist-toronto-depression.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/workplace-stress-counselling-hamilton.html",
+      "destination": "/workplace-stress-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/mens-mental-health-therapy-london-ontario.html",
+      "destination": "/mens-mental-health",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-ottawa.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-counseling-ontario.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/toronto-depression-therapy.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/psychotherapy-counselling-depression.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-london-ontario.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-toronto.html",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-hamilton.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-london-ontario.html",
+      "destination": "/depression-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/performance-anxiety-therapy-toronto.html",
+      "destination": "/performance-anxiety-therapy-toronto",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-mississauga",
+      "destination": "/depression-therapy-mississauga.html",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-mississauga",
+      "destination": "/anxiety-therapy-mississauga.html",
+      "permanent": true
+    },
+    {
+      "source": "/depression-therapy-london.html",
+      "destination": "/depression-therapy-london",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy-ottawa.html",
+      "destination": "/anxiety-therapy-ottawa",
+      "permanent": true
+    },
+    {
+      "source": "/counselling-kitchener.html",
+      "destination": "/counselling-kitchener",
+      "permanent": true
+    },
+    {
+      "source": "/impostor-syndrome-therapy-ontario.html",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/impostor-syndrome-therapy-ontario",
+      "destination": "/workplace-stress-burnout-therapy.html",
+      "permanent": true
+    },
+    {
+      "source": "/professional-growth-through-therapy-a-toronto-guide",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/public/services/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/seo/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-team/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/dmPageNotFound",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/service-template",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/404",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/links",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/good-faith-estimate",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/anxiety-therapy",
+      "destination": "/anxiety-therapy-ontario.html",
+      "permanent": true
+    },
+    {
+      "source": "/grief-counseling-ontario",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/insights",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
