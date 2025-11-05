@@ -504,36 +504,50 @@ healthcare professional for personalized treatment recommendations.
 
 ---
 
-### WEEK 1: CTR Emergency Fix (Top 3 Pages)
+### WEEK 1: CTR Emergency Fix (Top 3 Pages) ✅ COMPLETED NOV 5, 2025
 
 **Goal:** Fix the 3 highest-traffic pages to increase clicks by 50+/month
 
-**Pages to Fix:**
+**Pages Fixed:**
 1. **virtual-therapy-ontario.html** (1,330 impressions, 2 clicks, 0.15% CTR)
+   - ✅ **DEPLOYED:** "Virtual Therapy Ontario | CRPO Therapist Available This Week"
    - Target CTR: 2%
    - Expected gain: +25 clicks/month
    
 2. **burlington-online-therapy.html** (920 impressions, 0 clicks, 0% CTR)
+   - ✅ **DEPLOYED:** "Online Therapy Burlington | CRPO Therapist Available This Week"
    - Target CTR: 2%
    - Expected gain: +18 clicks/month
    
 3. **anxiety-therapy-burlington.html** (739 impressions, 1 click, 0.14% CTR)
+   - ✅ **DEPLOYED:** "Anxiety Therapy Burlington | CRPO Therapist Available This Week"
    - Target CTR: 2%
    - Expected gain: +14 clicks/month
 
+**Changes Made:**
+- ✅ Removed keyword stuffing & bullet points (looked spammy)
+- ✅ Added "Available This Week" urgency signal (proven on homepage at 1.7% CTR)
+- ✅ Removed "Expert" and CRPO numbers (less salesy)
+- ✅ Kept exact keyword matches for SEO preservation
+- ✅ Simplified titles from 74-95 chars → 57-61 chars
+- ✅ All changes CRPO compliant (qualified language, no guarantees)
+
 **Tasks:**
-- [ ] Read and analyze each page's current title/meta
-- [ ] Rewrite titles using homepage's winning formula (simple, benefit-driven, urgency)
-- [ ] Rewrite meta descriptions with clear value proposition
-- [ ] Deploy changes
-- [ ] Monitor GSC for CTR improvement (check after 7-10 days)
+- [X] Read and analyze each page's current title/meta
+- [X] Rewrite titles using homepage's winning formula (simple, benefit-driven, urgency)
+- [X] Rewrite meta descriptions with clear value proposition
+- [X] Deploy changes
+- [ ] Monitor GSC for CTR improvement (check after 7-10 days starting Nov 12)
 
 **Success Metrics:**
 - [ ] +57 clicks/month added (91% increase from baseline)
 - [ ] CTR improves from 0.5% average to 1.5-2%
 - [ ] GSC shows improvement trend within 2 weeks
 
-**Week 1 Total Impact: +57 clicks/month**
+**Week 1 Total Impact: +57 clicks/month (EXPECTED)**
+
+**Deployment:** Committed 5d9c176, pushed to production Nov 5, 2025
+**Next Check-in:** Nov 12-15 (7-10 days) to validate CTR improvement in GSC
 
 ---
 
