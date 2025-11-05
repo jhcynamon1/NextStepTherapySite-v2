@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Client Source Tracking Script
+CSV_FILE="data/client_source_tracking.csv"
+
+echo "=== Client Source Tracking ==="
+echo ""
+
+# Get today's date
+DATE=$(date +%Y-%m-%d)
+
+# Prompt for information
+read -p "Source Type (e.g., Organic Search, Referral, Directory, Social): " SOURCE_TYPE
+read -p "Search Query/Details: " QUERY_DETAILS
+read -p "Landing Page (if known, or leave blank): " LANDING_PAGE
+read -p "Status (e.g., New Consultation, Booked, No-show): " STATUS
+read -p "Additional Notes (optional): " NOTES
+
+# Escape commas and quotes in the input
+SOURCE_TYPE=$(echo "$SOURCE_TYPE" | sed 's/"/\\"/g')
+QUERY_DETAILS=$(echo "$QUERY_DETAILS" | sed 's/"/\\"/g')
+LANDING_PAGE=$(echo "$LANDING_PAGE" | sed 's/"/\\"/g')
+STATUS=$(echo "$STATUS" | sed 's/"/\\"/g')
+NOTES=$(echo "$NOTES" | sed 's/"/\\"/g')
+
+# Append to CSV
+echo "$DATE,\"$SOURCE_TYPE\",\"$QUERY_DETAILS\",\"$LANDING_PAGE\",\"$STATUS\",\"$NOTES\"" >> "$CSV_FILE"
+
+echo ""
+echo "✓ Client source tracked successfully!"
+echo "Entry added to $CSV_FILE"
+

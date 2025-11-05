@@ -1,0 +1,34 @@
+{
+  "name": "nextstep-gsc-extractor",
+  "version": "1.0.0",
+  "description": "Automated Google Search Console keyword data extractor for Next Step Therapy",
+  "main": "gsc_automated_extractor.js",
+  "scripts": {
+    "extract": "node gsc_automated_extractor.js",
+    "setup": "npm install && echo 'Setup complete! Run: npm run extract'",
+    "schedule-daily": "echo '0 9 * * * cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -",
+    "schedule-weekly": "echo '0 9 * * 1 cd /Users/jessecynamon/NextStepTherapy && npm run extract' | crontab -",
+    "astro:dev": "npm run dev --prefix nextstep-therapy-astro",
+    "astro:build": "npm run build --prefix nextstep-therapy-astro",
+    "astro:preview": "npm run preview --prefix nextstep-therapy-astro"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "csv-parser": "^3.2.0",
+    "express": "^5.1.0",
+    "googleapis": "^128.0.0",
+    "playwright": "^1.55.0",
+    "xml2js": "^0.6.2"
+  },
+  "keywords": [
+    "google-search-console",
+    "seo",
+    "keyword-research",
+    "automation",
+    "therapy",
+    "ontario"
+  ],
+  "author": "Next Step Therapy",
+  "license": "MIT"
+}

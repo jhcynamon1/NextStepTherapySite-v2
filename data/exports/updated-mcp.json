@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "firecrawl-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firecrawl-mcp"
+      ],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-987720ec30054c8fac1c5262dc271af3"
+      }
+    },
+    "perplexity-ask": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "server-perplexity-ask"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "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"
+      }
+    },
+    "dataforseo-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "dataforseo-mcp-server"
+      ],
+      "env": {
+        "DATAFORSEO_LOGIN": "jesse@nextsteptherapy.ca",
+        "DATAFORSEO_PASSWORD": "1d54adc9ada19782"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ]
+    },
+    "manus-ai": {
+      "command": "node",
+      "args": [
+        "manus-mcp-server.js"
+      ],
+      "cwd": "/Users/jessecynamon/NextStepTherapy",
+      "env": {
+        "MANUS_API_KEY": "sk-fyoHotVGf3lQ_r1ocKBhE7qwJrmyP3O2bqP0tjJkpxRd7y-qYDaQCBJCjT0SOitmPuL5D4Y8kRHnass"
+      }
+    }
+  }
+}
