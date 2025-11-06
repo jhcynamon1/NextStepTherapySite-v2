@@ -33,17 +33,53 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: var(--text-primary);
-            background: var(--bg-cream);
-            max-width: 800px;
+            background: linear-gradient(135deg, #f8faf9 0%, #f0f4f1 100%);
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(107, 142, 111, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(74, 107, 122, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .page-wrapper {
+            background: white;
+            margin: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 50px 40px;
         }
         
         .header-brand {
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 2px solid var(--primary-green);
-            margin-bottom: 40px;
+            padding: 40px 30px 30px;
+            background: linear-gradient(135deg, rgba(107, 142, 111, 0.08) 0%, rgba(248, 250, 249, 0.5) 100%);
+            border-radius: 12px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-brand::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-blue) 100%);
         }
         
         .logo-text {
@@ -62,11 +98,15 @@
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--text-primary);
             margin-bottom: 20px;
             line-height: 1.2;
             text-align: center;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .subtitle {
@@ -99,12 +139,30 @@
         }
         
         .technique {
-            background: white;
-            border: 2px solid var(--primary-green);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: linear-gradient(135deg, #ffffff 0%, #fafbfa 100%);
+            border: 2px solid rgba(107, 142, 111, 0.2);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .technique:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(107, 142, 111, 0.15);
+        }
+        
+        .technique::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-blue) 100%);
+            border-radius: 16px 16px 0 0;
         }
         
         .technique-number {
@@ -152,10 +210,12 @@
         }
         
         .steps {
-            background: var(--bg-light);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
+            background: linear-gradient(135deg, rgba(107, 142, 111, 0.04) 0%, rgba(248, 250, 249, 0.8) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-green);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
         }
         
         .steps ol {
@@ -194,12 +254,28 @@
         }
         
         .footer-cta {
-            background: linear-gradient(135deg, var(--primary-green), var(--green-dark));
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--green-dark) 100%);
             color: white;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 50px 40px;
+            border-radius: 16px;
             text-align: center;
             margin-top: 50px;
+            box-shadow: 0 12px 40px rgba(107, 142, 111, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            pointer-events: none;
         }
         
         .footer-cta h2 {
@@ -219,17 +295,21 @@
             display: inline-block;
             background: white;
             color: var(--primary-green);
-            padding: 15px 35px;
-            border-radius: 8px;
+            padding: 16px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.05rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
         }
         
         .footer-cta a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            background: #f8faf9;
         }
         
         .print-footer {
@@ -241,19 +321,65 @@
             color: var(--text-secondary);
         }
         
+        /* Sticky Download Button */
+        .sticky-download {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--green-dark) 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 6px 24px rgba(107, 142, 111, 0.4);
+            cursor: pointer;
+            border: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .sticky-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(107, 142, 111, 0.5);
+        }
+        
+        /* Visual Icons for Each Technique */
+        .technique-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
         @media print {
             body {
                 background: white;
                 max-width: 100%;
                 padding: 20px;
             }
-            .footer-cta {
+            body::before {
+                display: none;
+            }
+            .page-wrapper {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+            }
+            .footer-cta, .sticky-download {
                 display: none;
             }
             .technique {
                 page-break-inside: avoid;
                 box-shadow: none;
                 border: 1px solid #ddd;
+                background: white;
+            }
+            .technique:hover {
+                transform: none;
             }
         }
         
@@ -261,16 +387,27 @@
             h1 {
                 font-size: 2rem;
             }
+            .page-wrapper {
+                margin: 10px;
+                padding: 30px 20px;
+            }
             .technique {
-                padding: 20px;
+                padding: 25px 20px;
             }
             .technique h2 {
                 font-size: 1.5rem;
+            }
+            .sticky-download {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <div class="page-wrapper">
     <div class="header-brand">
         <div class="logo-text">Next Step Therapy</div>
         <div class="credentials">Jesse Cynamon, RP (CRPO #10979) | MPsy | Ontario</div>
@@ -291,6 +428,7 @@
 
     <!-- Technique 1: 5-4-3-2-1 -->
     <div class="technique">
+        <div class="technique-icon">👁️</div>
         <span class="technique-number">1</span>
         <h2>The 5-4-3-2-1 Sensory Method</h2>
         <div class="technique-meta">
@@ -321,6 +459,7 @@
 
     <!-- Technique 2: Box Breathing -->
     <div class="technique">
+        <div class="technique-icon">🌬️</div>
         <span class="technique-number">2</span>
         <h2>Box Breathing (4-4-4-4)</h2>
         <div class="technique-meta">
@@ -351,6 +490,7 @@
 
     <!-- Technique 3: 3-3-3 -->
     <div class="technique">
+        <div class="technique-icon">⚡</div>
         <span class="technique-number">3</span>
         <h2>The 3-3-3 Rapid Reset</h2>
         <div class="technique-meta">
@@ -379,6 +519,7 @@
 
     <!-- Technique 4: Tactical Grounding -->
     <div class="technique">
+        <div class="technique-icon">🤲</div>
         <span class="technique-number">4</span>
         <h2>Tactile Grounding (Touch Focus)</h2>
         <div class="technique-meta">
@@ -408,6 +549,7 @@
 
     <!-- Technique 5: The Categories Game -->
     <div class="technique">
+        <div class="technique-icon">🧠</div>
         <span class="technique-number">5</span>
         <h2>The Categories Game (Cognitive Redirect)</h2>
         <div class="technique-meta">
@@ -436,7 +578,7 @@
     </div>
 
     <!-- When to Use Which -->
-    <div style="background: var(--bg-light); padding: 30px; border-radius: 12px; margin: 40px 0;">
+    <div style="background: linear-gradient(135deg, rgba(74, 107, 122, 0.06) 0%, rgba(248, 250, 249, 0.8) 100%); padding: 35px; border-radius: 16px; margin: 40px 0; border: 2px solid rgba(74, 107, 122, 0.1); box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 20px; color: var(--text-primary);">Which Technique Should You Use?</h2>
         
         <p style="margin-bottom: 15px;"><strong>🏢 In a meeting or public setting:</strong> Box Breathing or Categories Game (completely silent)</p>
@@ -451,7 +593,7 @@
     </div>
 
     <!-- Practice Recommendation -->
-    <div style="background: white; border: 2px solid var(--accent-blue); padding: 30px; border-radius: 12px; margin: 30px 0;">
+    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8faf9 100%); border: 2px solid var(--accent-blue); padding: 35px; border-radius: 16px; margin: 40px 0; box-shadow: 0 6px 20px rgba(74, 107, 122, 0.1);">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 15px; color: var(--accent-blue);">The Practice Principle</h2>
         <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px;">
             <strong>Here's what most people don't realize:</strong> These techniques work best when you practice them BEFORE you're in panic mode. Your brain learns the pattern when you're calm, making it easier to access when you're anxious.
@@ -487,12 +629,13 @@
         </p>
     </div>
 
-    <!-- Print Button (Hidden on Print) -->
-    <div style="text-align: center; margin-top: 30px;">
-        <button onclick="window.print()" style="background: var(--primary-green); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer;">
-            🖨️ Print or Save as PDF
-        </button>
-    </div>
+    </div><!-- Close page-wrapper -->
+
+    <!-- Sticky Download/Print Button -->
+    <button onclick="window.print()" class="sticky-download">
+        <span>🖨️</span>
+        <span>Save as PDF</span>
+    </button>
 
 </body>
 </html>
