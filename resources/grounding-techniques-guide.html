@@ -634,8 +634,46 @@
 
     </div><!-- Close page-wrapper -->
 
+    <!-- Google Analytics 4 Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR');
+        
+        // Track guide view
+        gtag('event', 'resource_view', {
+            'event_category': 'engagement',
+            'event_label': 'grounding_techniques_guide'
+        });
+        
+        // Track print/download
+        function trackDownload() {
+            gtag('event', 'guide_download', {
+                'event_category': 'conversion',
+                'event_label': 'grounding_techniques_pdf',
+                'value': 1
+            });
+            window.print();
+        }
+        
+        // Track booking clicks from guide
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href*="janeapp"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'booking_click_from_guide', {
+                        'event_category': 'conversion',
+                        'event_label': 'grounding_guide',
+                        'value': 175
+                    });
+                });
+            });
+        });
+    </script>
+
     <!-- Sticky Download/Print Button -->
-    <button onclick="window.print()" class="sticky-download">
+    <button onclick="trackDownload()" class="sticky-download">
         <span>🖨️</span>
         <span>Save as PDF</span>
     </button>
