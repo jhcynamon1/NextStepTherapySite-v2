@@ -736,9 +736,7 @@
                 width: 100%;
                 margin: 0.5rem 0 !important;
             }
-        }
 
-        @media (max-width: 768px) {
             .strategic-cta-section {
                 padding: 1.5rem 1rem;
             }
@@ -1193,12 +1191,12 @@
         <!-- Why Choose Section -->
         <section class="trust-section" style="
             background-image: linear-gradient(
-                rgba(255, 255, 255, 0.95),
-                rgba(255, 255, 255, 0.95)
-            ), url('images/trust-background.jpg');
+                rgba(255, 255, 255, 0.97),
+                rgba(255, 255, 255, 0.97)
+            ), url('images/about-texture.webp');
             background-size: cover;
             background-position: center;
-            padding: 60px 20px;
+            padding: var(--space-section) var(--space-md);
         ">
             <div class="container">
                 <div class="section-header">
@@ -1438,7 +1436,15 @@
                         </ul>
 
                         <div class="virtual-session-image">
-                            <img src="images/homepage-contact-background.jpg" alt="Professional virtual therapy consultation setup" loading="eager" fetchpriority="high" sizes="100vw">
+                            <picture>
+                                <source srcset="images/homepage-contact-background.webp" type="image/webp">
+                                <img src="images/homepage-contact-background.jpg"
+                                     alt="Professional virtual therapy consultation setup"
+                                     width="1024"
+                                     height="768"
+                                     loading="lazy"
+                                     sizes="(max-width: 768px) 100vw, 600px">
+                            </picture>
                         </div>
 
                         <div class="investment-highlight">
