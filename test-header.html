@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .header { background: white; padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #4a6b7a; }
+        .header-cta-wrapper { display: flex; align-items: center; gap: 1rem; }
+        .header-book-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #4a6b7a;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .header-phone {
+            padding: 0.75rem 1rem;
+            border: 2px solid #4a6b7a;
+            color: #4a6b7a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Next Step Therapy</div>
+                <div class="header-cta-wrapper">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="header-book-btn">
+                        Book Consultation
+                    </a>
+                    <a href="tel:+14163062157" class="header-phone">
+                        (416) 306-2157
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="padding: 2rem;">
+        <h1>If you see BOTH buttons above, the code works fine.</h1>
+        <p>Blue "Book Consultation" button + bordered phone number button</p>
+    </div>
+</body>
+</html>
