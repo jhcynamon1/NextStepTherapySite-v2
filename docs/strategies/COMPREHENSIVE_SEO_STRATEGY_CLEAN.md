@@ -896,8 +896,574 @@ NEW PAGE ESSENTIALS:
 
 ---
 
+---
+
+## 📅 UPCOMING TO-DOS (Week 3-4 and Beyond)
+
+### **Phase 1: Complete Long-Tail Niche Pages** (Week 3-4)
+
+**STATUS:** 1 of 4 complete ✅
+
+#### **Page 1: Compassion Fatigue Therapy** ✅ DEPLOYED
+- **URL:** compassion-fatigue-therapy.html
+- **Target Keywords:** compassion fatigue (1,700 vol, KD 30), compassion fatigue vs burnout (150 vol, KD 10)
+- **Status:** Live, targeting ~2,000 monthly searches
+- **Deployed:** November 11, 2025
+
+#### **Page 2: Distress Tolerance Therapy** ⏳ TO BUILD
+- **URL:** distress-tolerance-therapy.html
+- **Target Keywords:** 
+  - distress tolerance (500 vol, KD 35)
+  - distress tolerance skills (400 vol, KD 33)
+  - dbt distress tolerance skills (200 vol, KD 22)
+  - what is distress tolerance (40 vol, KD 19)
+- **Total Opportunity:** ~1,200 monthly searches
+- **Angle:** DBT skills for intense emotions, can't handle overwhelming feelings
+- **Template:** Use compassion-fatigue-therapy.html as base
+- **Time:** 25-30 minutes
+- **Key Sections:**
+  - Problem: "Can't Handle Intense Emotions?"
+  - Comparison table: "Distress Tolerance vs Emotional Regulation"
+  - FAQ: "What is distress tolerance?" (targets KD 19!)
+  - Audience: People with BPD, intense emotions, trauma survivors
+- **Content Notes:** 
+  - Focus on DBT skills training
+  - NO em dashes
+  - CRPO compliant (process-focused, no outcome guarantees)
+
+#### **Page 3: Sleep Anxiety Therapy** ⏳ TO BUILD
+- **URL:** sleep-anxiety-therapy.html or racing-thoughts-cant-sleep.html
+- **Target Keywords:**
+  - sleep anxiety (600 vol, KD 45)
+  - mind racing can't sleep anxiety (150 vol, KD 23)
+  - can't sleep anxiety (70 vol, KD 58)
+  - anxiety when trying to sleep (10 vol, KD 40)
+- **Total Opportunity:** ~800 monthly searches
+- **Angle:** Racing thoughts at night, 3am anxiety, insomnia-anxiety connection
+- **Template:** Use compassion-fatigue-therapy.html as base
+- **Time:** 25-30 minutes
+- **Key Sections:**
+  - Problem: "Mind Racing at 3am? Can't Shut Off Your Brain?"
+  - Comparison table: "Sleep Anxiety vs Insomnia"
+  - FAQ: "What is sleep anxiety?", "How to sleep with anxiety?"
+  - Audience: Professionals, students, anyone with racing thoughts at night
+- **Content Notes:**
+  - Focus on CBT for insomnia + anxiety management
+  - NO magnesium/supplements (stay in therapy lane!)
+  - NO em dashes
+  - CRPO compliant
+
+#### **Page 4: Digital Wellness Therapy** ⏳ TO BUILD
+- **URL:** digital-wellness-therapy.html
+- **Target Keywords:**
+  - digital wellness (150 vol, KD 12)
+  - what is digital wellness (20 vol, KD 3)
+  - digital health and wellness (30 vol, KD 6)
+- **Total Opportunity:** ~200 monthly searches (but GROWING trend + super low KD!)
+- **Angle:** Phone addiction, doomscrolling, screen time anxiety, digital boundaries
+- **Template:** Use compassion-fatigue-therapy.html as base
+- **Time:** 20-25 minutes
+- **Key Sections:**
+  - Problem: "Addicted to Your Phone? Can't Stop Scrolling?"
+  - Target: Remote workers, professionals, anyone with screen overload
+  - FAQ: "What is digital wellness?", "Can therapy help with phone addiction?"
+  - Content focus: Work-from-home boundaries, screen fatigue, tech burnout
+- **Content Notes:**
+  - Modern/trending topic (post-COVID relevance)
+  - NO em dashes
+  - CRPO compliant
+  - Stay in therapy scope (no digital detox programs, just therapeutic support)
+
+---
+
+### **Phase 2: Student-Focused Seasonal Content** (November-December)
+
+**STRATEGY:** Leverage exam season, holiday stress, and seasonal depression for student traffic
+
+**Target Timing:** Publish Week 3-4 (before December exam period)
+
+#### **Blog Post 1: Exam Anxiety Guide** ⏳ TO CREATE
+- **Title:** "How to Manage Exam Anxiety During Finals: Evidence-Based Strategies for Ontario Students"
+- **Target Keywords:**
+  - exam anxiety (~800 searches/mo in Nov-Dec spike)
+  - test anxiety
+  - finals stress
+  - exam stress coping strategies
+- **Word Count:** 1,500-2,000 words
+- **Structure:**
+  - What is exam anxiety (symptoms, causes)
+  - 5 evidence-based coping techniques (breathing, grounding, cognitive reframing, time management, sleep hygiene)
+  - When to seek professional help
+  - Link to university-anxiety-therapy-ontario.html
+  - FAQ schema: "Is exam anxiety normal?", "How to calm down before an exam?"
+- **Publishing Date:** Week 3 (before December exams)
+- **SEO Notes:** No em dashes, CRPO compliant (educational, not treatment promises)
+
+#### **Blog Post 2: Academic Burnout Prevention** ⏳ TO CREATE
+- **Title:** "Academic Burnout in University Students: Signs, Causes & What Actually Helps"
+- **Target Keywords:**
+  - academic burnout
+  - student burnout
+  - burned out college student
+  - university stress overwhelming
+- **Word Count:** 1,500-2,000 words
+- **Structure:**
+  - Burnout vs normal stress
+  - Warning signs specific to students
+  - Recovery strategies (process-focused, not prescriptive)
+  - When therapy can help
+  - Link to workplace-stress-therapy-ontario.html and university-anxiety-therapy-ontario.html
+- **Publishing Date:** Week 3
+- **SEO Notes:** No em dashes
+
+#### **Blog Post 3: Imposter Syndrome for Students** ⏳ TO CREATE
+- **Title:** "Imposter Syndrome in University: When Good Grades Still Feel Like You're Faking It"
+- **Target Keywords:**
+  - imposter syndrome university
+  - feel like a fraud student
+  - don't belong at university
+- **Word Count:** 1,500 words
+- **Structure:**
+  - What is imposter syndrome
+  - Why high-achieving students experience it
+  - Thought patterns to recognize
+  - Building genuine confidence
+  - Link to imposter-syndrome-therapy-professionals-toronto.html and university-anxiety-therapy-ontario.html
+- **Publishing Date:** Week 3-4
+
+#### **Service Page Updates** ⏳ QUICK WINS
+- **Update:** university-anxiety-therapy-ontario.html
+  - Add paragraph: "Now offering targeted support for exam stress, seasonal depression, and academic burnout for Ontario university students this November"
+  - Add FAQ: "How can therapy help with exam anxiety?"
+  - Time: 10 minutes
+
+- **Update:** first-year-university-anxiety.html
+  - Add seasonal content about homesickness during holidays
+  - Winter break transition stress
+  - Time: 10 minutes
+
+---
+
+### **Phase 3: Holiday/Seasonal Content** (December-January)
+
+**STRATEGY:** Capture holiday stress, New Year anxiety, seasonal depression searches
+
+**Target Timing:** Publish early December (before holiday peak)
+
+#### **Blog Post 4: Holiday Stress & Anxiety** ⏳ TO CREATE
+- **Title:** "Holiday Anxiety & Stress: When the 'Most Wonderful Time' Feels Overwhelming"
+- **Target Keywords:**
+  - holiday anxiety
+  - christmas stress
+  - family gathering anxiety
+  - holiday depression
+- **Word Count:** 1,500 words
+- **Publishing Date:** Early December
+- **Structure:**
+  - Why holidays trigger anxiety (expectations, family dynamics, financial pressure)
+  - Managing social anxiety during gatherings
+  - Setting boundaries with family
+  - Coping with grief during holidays
+  - When to seek support
+  - Link to anxiety-therapy-ontario.html and family-therapy-toronto.html (if you keep it)
+
+#### **Blog Post 5: Seasonal Depression (SAD)** ⏳ TO CREATE
+- **Title:** "Seasonal Depression in Ontario: Why You Feel Worse in Winter (And What Helps)"
+- **Target Keywords:**
+  - seasonal depression
+  - seasonal affective disorder
+  - SAD ontario
+  - winter depression canada
+- **Word Count:** 1,800-2,000 words
+- **Publishing Date:** Late November/Early December
+- **Structure:**
+  - What is seasonal depression (clinical info)
+  - Why Ontario winters are particularly difficult (short days, -20°C, February darkness)
+  - Evidence-based strategies (light therapy, therapy, routine, exercise)
+  - Difference between winter blues and clinical SAD
+  - When to seek professional help
+  - Link to depression-therapy-ontario.html
+- **SEO Notes:** High search volume in Ontario Oct-Feb
+
+#### **Blog Post 6: New Year Anxiety** ⏳ TO CREATE
+- **Title:** "New Year Anxiety: When Fresh Starts Feel Like Pressure Instead of Possibility"
+- **Target Keywords:**
+  - new year anxiety
+  - scared of new year
+  - new year's resolution anxiety
+  - pressure to change
+- **Word Count:** 1,200-1,500 words
+- **Publishing Date:** Late December
+- **Structure:**
+  - Why New Year triggers anxiety (expectation pressure, reflection anxiety, fear of failure)
+  - Alternative to resolutions (values-based goals, ACT approach)
+  - Managing comparison (social media, "new year new you" culture)
+  - Link to anxiety-therapy-ontario.html and life-transitions.html
+
+#### **Service Page: Seasonal Depression** ⏳ NEW PAGE
+- **URL:** seasonal-depression-therapy-ontario.html
+- **Target Keywords:**
+  - seasonal depression therapy
+  - SAD treatment ontario
+  - winter depression help
+- **Word Count:** 2,000 words
+- **Publishing Date:** Late November
+- **Use Template:** compassion-fatigue-therapy.html
+- **Key Sections:**
+  - Problem: "Feel Worse Every Winter? Dread Fall?"
+  - Ontario-specific challenges (6 months of winter, February darkness)
+  - Evidence-based approaches (therapy + lifestyle, NOT just light therapy)
+  - "Near me" section
+  - Comparison table: "Seasonal Depression vs Depression"
+  - Time: 30 minutes
+
+---
+
+### **Phase 4: Ongoing Optimization** (Continuous)
+
+#### **Content Style Guide - IMPORTANT** ⚠️
+
+**ALWAYS:**
+- ✅ Use periods instead of em dashes (—)
+- ✅ Natural, conversational language
+- ✅ CRPO compliant (process-focused, no outcomes)
+- ✅ Follow template structure exactly
+- ✅ Include "near me" section (4 mentions)
+- ✅ Add 45-link expanded footer
+- ✅ 10+ FAQs targeting search queries
+- ✅ Comparison tables where relevant
+- ✅ 2,000+ words (service pages) or 1,500+ (blog posts)
+
+**NEVER:**
+- ❌ Em dashes (AI tell)
+- ❌ "Cure", "fix", "eliminate", "guarantee"
+- ❌ Outcome promises ("will feel better", "will recover")
+- ❌ Superlatives ("best", "top", "leading")
+- ❌ Generic AI phrases ("it's important to note", "dive deeper", "it's worth noting")
+
+---
+
+## 📋 MASTER TO-DO LIST (Organized by Priority)
+
+### **IMMEDIATE (Week 3-4)**
+
+**New Pages:**
+- [ ] distress-tolerance-therapy.html (25 mins, 1,200 searches/mo)
+- [ ] sleep-anxiety-therapy.html (25 mins, 800 searches/mo)
+- [ ] digital-wellness-therapy.html (20 mins, 200 searches/mo but KD 7!)
+
+**Student Seasonal Content:**
+- [ ] Blog: "How to Manage Exam Anxiety During Finals" (1,500 words, 2 hours)
+- [ ] Blog: "Academic Burnout in University Students" (1,500 words, 2 hours)
+- [ ] Blog: "Imposter Syndrome in University" (1,200 words, 1.5 hours)
+- [ ] Update: university-anxiety-therapy-ontario.html with seasonal paragraph (10 mins)
+- [ ] Update: first-year-university-anxiety.html with holiday stress content (10 mins)
+
+**Total Time:** ~10 hours spread over 2-3 weeks
+
+---
+
+### **DECEMBER (Holiday Content)**
+
+**Blog Posts:**
+- [ ] "Holiday Anxiety & Stress: When Celebrations Feel Overwhelming" (1,500 words, 2 hours)
+- [ ] "Seasonal Depression in Ontario: Winter Survival Guide" (1,800 words, 2.5 hours)
+- [ ] "New Year Anxiety: When Fresh Starts Feel Like Pressure" (1,200 words, 1.5 hours)
+
+**New Service Page:**
+- [ ] seasonal-depression-therapy-ontario.html (30 mins using template)
+
+**Publishing Schedule:**
+- Late Nov: Seasonal depression blog + service page
+- Early Dec: Holiday anxiety blog
+- Late Dec: New Year anxiety blog
+
+**Total Time:** ~7 hours
+
+---
+
+### **JANUARY (Post-Holiday)**
+
+**Content Refresh:**
+- [ ] Update seasonal depression page with "getting through February" content
+- [ ] Blog: "Post-Holiday Blues vs Depression: How to Tell the Difference"
+- [ ] Blog: "Failed Resolutions? Here's Why (And What To Do Instead)"
+
+---
+
+### **ONGOING (Monthly)**
+
+**Technical:**
+- [ ] Roll out expanded footer to remaining ~30 pages (60 mins)
+- [ ] Add desktop floating CTA to all service pages (30 mins)
+- [ ] Test and fix any remaining schema issues (30 mins)
+
+**Content:**
+- [ ] Create 2-3 new location pages per month (Brampton, Markham, Vaughan, Oshawa, Barrie)
+- [ ] Write 1-2 SEO blog posts per month targeting info keywords
+- [ ] Update existing pages based on GSC performance data
+
+**Measurement:**
+- [ ] Check Google Search Console weekly
+- [ ] Track "near me" keyword progress
+- [ ] Monitor compassion fatigue page performance
+- [ ] Review traffic monthly, iterate based on winners
+
+---
+
+## 🗓️ DETAILED PUBLISHING CALENDAR
+
+### **WEEK 3 (Nov 25-Dec 1)**
+
+**Monday-Tuesday:**
+- [ ] Build distress-tolerance-therapy.html (25 mins)
+- [ ] Build sleep-anxiety-therapy.html (25 mins)
+- [ ] Deploy both pages
+
+**Wednesday-Thursday:**
+- [ ] Build digital-wellness-therapy.html (20 mins)
+- [ ] Write "Exam Anxiety" blog post (2 hours)
+- [ ] Deploy both
+
+**Friday:**
+- [ ] Write "Academic Burnout" blog post (2 hours)
+- [ ] Update 2 student pages with seasonal content (20 mins)
+
+---
+
+### **WEEK 4 (Dec 2-8)**
+
+**Monday-Tuesday:**
+- [ ] Write "Imposter Syndrome University" blog (1.5 hours)
+- [ ] Build seasonal-depression-therapy-ontario.html page (30 mins)
+
+**Wednesday-Thursday:**
+- [ ] Write "Seasonal Depression Ontario" blog (2.5 hours)
+- [ ] Interlink all seasonal content
+
+**Friday:**
+- [ ] Test all new pages on mobile
+- [ ] Submit URLs to Google Search Console
+- [ ] Check schema validation
+
+---
+
+### **EARLY DECEMBER (Dec 9-15)**
+
+**Week 5:**
+- [ ] Write "Holiday Anxiety" blog (2 hours)
+- [ ] Update homepage with seasonal messaging (15 mins)
+- [ ] Create holiday-specific FAQ content
+
+---
+
+### **LATE DECEMBER (Dec 23-29)**
+
+**Week 6:**
+- [ ] Write "New Year Anxiety" blog (1.5 hours)
+- [ ] Plan January content calendar
+- [ ] Review November-December performance data
+
+---
+
+## 📊 EXPECTED CUMULATIVE IMPACT
+
+### **By End of Week 4:**
+
+**New Pages Created:** 7 total
+- compassion-fatigue-therapy.html ✅
+- distress-tolerance-therapy.html ⏳
+- sleep-anxiety-therapy.html ⏳
+- digital-wellness-therapy.html ⏳
+- seasonal-depression-therapy-ontario.html ⏳
+
+**New Blog Posts:** 6 total
+- Exam anxiety guide ⏳
+- Academic burnout ⏳
+- Imposter syndrome university ⏳
+- Holiday anxiety ⏳
+- Seasonal depression ⏳
+- New Year anxiety ⏳
+
+**Total New Search Opportunities:** +6,000 monthly searches
+
+**Expected Traffic Lift (60 days):** +250-350 monthly organic visits
+
+---
+
+### **By End of December:**
+
+**Total Optimized Pages:** 28 (current 22 + 6 new)
+**Total Blog Posts:** 10+ (current ~4 + 6 new)
+**Total Monthly Search Opportunities:** +10,000
+**Expected Rankings:** 150-200 keywords total
+**Expected Traffic:** 600-800 monthly organic visits
+
+---
+
+## 🎯 CONTENT PRODUCTION WORKFLOW
+
+### **For Each New Page (Use Template):**
+
+**Step 1: Research (5 mins)**
+- Confirm keywords in Ahrefs (real volumes, not estimates)
+- Check current top-ranking pages
+- Note question keywords for FAQs
+
+**Step 2: Build from Template (20 mins)**
+- Copy compassion-fatigue-therapy.html
+- Replace all instances of "compassion fatigue" with new topic
+- Customize problem recognition section
+- Update comparison table
+- Adjust FAQs to target search queries
+
+**Step 3: Quality Check (5 mins)**
+- [ ] No em dashes
+- [ ] CRPO compliant language
+- [ ] All internal links work
+- [ ] Schema validates
+- [ ] Mobile responsive
+- [ ] 2,000+ words
+
+**Step 4: Deploy (2 mins)**
+- Commit with descriptive message
+- Push to main
+- Add to sitemap
+- Track in GSC
+
+**Total Time Per Page:** 30-35 minutes
+
+---
+
+### **For Each Blog Post:**
+
+**Step 1: Outline (10 mins)**
+- Research top-ranking pages for keyword
+- Extract "People Also Ask" questions
+- Create H2/H3 structure
+
+**Step 2: Write (90-120 mins)**
+- 1,500-2,000 words
+- Natural, helpful tone
+- NO em dashes
+- Internal links to relevant service pages (5-8 links)
+- FAQ schema (5-10 questions)
+
+**Step 3: Optimize (10 mins)**
+- Add schema markup
+- Optimize meta description
+- Add images with alt text
+- Internal linking
+
+**Step 4: Deploy**
+- Publish
+- Share on social (optional)
+- Track performance
+
+**Total Time Per Blog Post:** 2-2.5 hours
+
+---
+
+## 📝 CONTENT BRIEF TEMPLATE (Use for Each Blog/Page)
+
+```
+TITLE: [Exact title]
+
+PRIMARY KEYWORD: [Main keyword]
+SECONDARY KEYWORDS: [2-3 supporting keywords]
+SEARCH VOLUME: [From Ahrefs]
+KEYWORD DIFFICULTY: [From Ahrefs]
+
+TARGET AUDIENCE: [Who this is for]
+USER INTENT: [What they're looking for]
+
+WORD COUNT TARGET: [1,500 for blog, 2,000 for service page]
+
+MUST INCLUDE:
+☑ FAQ schema (5-10 questions)
+☑ Internal links (5-8 to service pages)
+☑ "Near me" section (if service page)
+☑ Comparison table (if relevant)
+☑ Process-focused language (CRPO compliant)
+☑ NO em dashes
+☑ Natural, conversational tone
+
+PUBLISHING DATE: [Target date]
+LINKS TO: [Which service pages benefit]
+```
+
+---
+
+## 🎁 SEASONAL KEYWORD OPPORTUNITIES (Bookmark for Next Year)
+
+### **FALL (September-November)**
+- Back to school anxiety
+- First year university stress
+- Academic pressure
+- Exam anxiety (November spike!)
+
+### **WINTER (December-February)**
+- Holiday stress/anxiety
+- Seasonal depression
+- New Year pressure
+- Winter blues Ontario
+- February darkness (SAD peak!)
+
+### **SPRING (March-May)**
+- Spring anxiety
+- End of year stress students
+- Graduation anxiety
+- Job search stress
+
+### **SUMMER (June-August)**
+- Transition anxiety
+- Life changes
+- Relationship stress (wedding season)
+- Burnout recovery
+
+**Strategy:** Publish seasonal content 2-3 weeks BEFORE search spike for maximum impact
+
+---
+
+## ✅ MASTER CHECKLIST SUMMARY
+
+**Before Publishing ANY Content:**
+
+```
+CONTENT QUALITY:
+□ No em dashes (AI tell)
+□ No "cure", "fix", "eliminate", "guarantee"
+□ No outcome promises
+□ Process-focused language
+□ Natural, conversational tone
+□ Factually accurate
+□ Evidence-based where applicable
+
+SEO ELEMENTS:
+□ Primary keyword in title, H1, meta
+□ "Near me" section (if service page)
+□ 45-link footer
+□ 5-10 internal links in body
+□ FAQ schema targeting search queries
+□ 2,000+ words (service) or 1,500+ (blog)
+□ Comparison table (if relevant)
+
+TECHNICAL:
+□ Schema validated (0 errors in Google test)
+□ Meta description under 155 chars
+□ All links work (no 404s)
+□ Mobile responsive
+□ Images optimized
+□ Deployed to live site
+□ Added to sitemap
+□ Tracked in GSC
+```
+
+---
+
 **END OF DOCUMENT**
 
-*For detailed analysis, see /docs/SEO_GAP_ANALYSIS_DIESEL_DUDES_VS_NEXTSTEP.md*  
-*For implementation help, see /docs/COPY_PASTE_FIXES_TOP_3_PAGES.md*
+*All templates ready. Execute when ready. Track results weekly.*  
+*Updated: November 11, 2025*  
+*Next Review: November 25, 2025*
 
