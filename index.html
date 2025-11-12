@@ -901,6 +901,758 @@
             </div>
         </section>
 
+        <!-- Interactive Quiz Widget (Embedded After Hero) -->
+        <section class="quiz-widget-section" style="background: linear-gradient(135deg, rgba(107,142,111,0.08), rgba(248,249,250,0.95)); padding: 60px 20px;">
+            <div class="container" style="max-width: 900px;">
+                <div class="quiz-widget-container" style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden;">
+                    <!-- Quiz Header -->
+                    <div class="quiz-header" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 40px 30px; text-align: center;">
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; font-weight: 600;">Is Therapy Right for Me?</h2>
+                        <p style="font-size: 1.1rem; opacity: 0.95; line-height: 1.5; margin-bottom: 0;">A 5-minute self-assessment to help you understand where you're at. Completely private, no email required.</p>
+                    </div>
+
+                    <!-- Quiz Disclaimer -->
+                    <div class="quiz-disclaimer" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 0; font-size: 14px; color: #856404;">
+                        <strong>Important:</strong> This quiz is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #856404; font-weight: 600;">988</a> or your local emergency services.
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="quiz-progress-container" style="padding: 25px 30px; background: #f8f9fa;">
+                        <div class="quiz-progress-bar" style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: linear-gradient(90deg, #6B8E6F 0%, #5A7D5E 100%); transition: width 0.3s ease; border-radius: 5px; width: 0%;"></div>
+                        </div>
+                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 10px; font-size: 14px; color: #6c757d; font-weight: 500;">Question 1 of 15</div>
+                    </div>
+
+                    <!-- Quiz Content Area -->
+                    <div class="quiz-content-area" id="quizContentArea" style="padding: 40px 30px; min-height: 400px;">
+                        <!-- Questions will be inserted here by JavaScript -->
+                    </div>
+
+                    <!-- Results Container -->
+                    <div class="quiz-results-container" id="quizResultsContainer" style="display: none; padding: 40px 30px;">
+                        <!-- Results will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Quiz Widget Styles */
+            .quiz-question-card {
+                animation: quizFadeIn 0.3s ease;
+            }
+
+            @keyframes quizFadeIn {
+                from { opacity: 0; transform: translateY(15px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .quiz-question-number {
+                color: #6B8E6F;
+                font-weight: 600;
+                font-size: 15px;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .quiz-question-text {
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 30px;
+                color: #2c3e50;
+                line-height: 1.4;
+            }
+
+            .quiz-options {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .quiz-option {
+                background: #f8f9fa;
+                border: 2px solid #e9ecef;
+                border-radius: 10px;
+                padding: 18px 24px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 1.05rem;
+                font-weight: 400;
+                color: #2c3e50;
+            }
+
+            .quiz-option:hover {
+                background: #e9ecef;
+                border-color: #6B8E6F;
+                transform: translateX(6px);
+            }
+
+            .quiz-option.selected {
+                background: rgba(107,142,111,0.1);
+                border-color: #6B8E6F;
+                font-weight: 500;
+                color: #2c3e50;
+            }
+
+            .quiz-navigation {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 35px;
+                gap: 15px;
+            }
+
+            .quiz-btn {
+                padding: 14px 28px;
+                border: none;
+                border-radius: 10px;
+                font-size: 1.05rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .quiz-btn-secondary {
+                background: #e9ecef;
+                color: #495057;
+            }
+
+            .quiz-btn-secondary:hover {
+                background: #dee2e6;
+            }
+
+            .quiz-btn-primary {
+                background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%);
+                color: white;
+                flex: 1;
+            }
+
+            .quiz-btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 16px rgba(107, 142, 111, 0.4);
+            }
+
+            .quiz-btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                transform: none !important;
+            }
+
+            /* Quiz Results Styles */
+            .quiz-score-display {
+                text-align: center;
+                padding: 50px 30px;
+                background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%);
+                color: white;
+                border-radius: 14px;
+                margin-bottom: 35px;
+            }
+
+            .quiz-score-number {
+                font-size: 72px;
+                font-weight: 700;
+                margin-bottom: 12px;
+                line-height: 1;
+            }
+
+            .quiz-score-label {
+                font-size: 1.2rem;
+                opacity: 0.95;
+            }
+
+            .quiz-result-section {
+                margin-bottom: 35px;
+                padding: 28px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                border-left: 4px solid #6B8E6F;
+            }
+
+            .quiz-result-section h3 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #2c3e50;
+                font-weight: 600;
+            }
+
+            .quiz-result-section p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                color: #495057;
+                margin-bottom: 15px;
+            }
+
+            .quiz-result-section ul {
+                margin: 18px 0;
+                padding-left: 24px;
+            }
+
+            .quiz-result-section li {
+                margin-bottom: 10px;
+                color: #495057;
+                line-height: 1.7;
+            }
+
+            .quiz-cta-box {
+                background: white;
+                border: 2px solid #6B8E6F;
+                border-radius: 14px;
+                padding: 35px;
+                text-align: center;
+                margin-top: 35px;
+            }
+
+            .quiz-cta-box h3 {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                color: #2c3e50;
+                font-weight: 600;
+            }
+
+            .quiz-cta-box p {
+                font-size: 1.05rem;
+                color: #6c757d;
+                margin-bottom: 25px;
+                line-height: 1.7;
+            }
+
+            .quiz-cta-buttons {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .quiz-crisis-box {
+                background: #fff3cd;
+                border-left: 4px solid #ffc107;
+                padding: 25px;
+                border-radius: 10px;
+                margin-top: 35px;
+            }
+
+            .quiz-crisis-box h3 {
+                color: #856404;
+                font-size: 1.3rem;
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+
+            .quiz-crisis-box p {
+                color: #856404;
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 10px;
+            }
+
+            .quiz-crisis-box a {
+                color: #856404;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            .quiz-tier-green { border-left-color: #28a745; }
+            .quiz-tier-amber { border-left-color: #ffc107; }
+            .quiz-tier-red { border-left-color: #dc3545; }
+
+            .quiz-score-tier-green {
+                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            }
+
+            .quiz-score-tier-amber {
+                background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+            }
+
+            .quiz-score-tier-red {
+                background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+            }
+
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                .quiz-widget-container {
+                    border-radius: 12px !important;
+                }
+
+                .quiz-header {
+                    padding: 30px 20px !important;
+                }
+
+                .quiz-header h2 {
+                    font-size: 1.6rem !important;
+                }
+
+                .quiz-content-area {
+                    padding: 30px 20px !important;
+                }
+
+                .quiz-question-text {
+                    font-size: 1.2rem !important;
+                }
+
+                .quiz-option {
+                    padding: 16px 20px !important;
+                    font-size: 1rem !important;
+                }
+
+                .quiz-score-number {
+                    font-size: 56px !important;
+                }
+
+                .quiz-cta-buttons {
+                    flex-direction: column;
+                }
+
+                .quiz-btn {
+                    width: 100%;
+                }
+
+                .quiz-navigation {
+                    flex-direction: column;
+                }
+
+                .quiz-btn-primary {
+                    order: -1;
+                }
+            }
+        </style>
+
+        <script>
+            // Quiz Questions Data
+            const quizQuestions = [
+                {
+                    number: 1,
+                    text: "How often do you feel overwhelmed by daily tasks or responsibilities?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "Sometimes", value: 1 },
+                        { text: "Often", value: 2 },
+                        { text: "Most of the time", value: 3 }
+                    ]
+                },
+                {
+                    number: 2,
+                    text: "How much are you enjoying activities you used to love?",
+                    options: [
+                        { text: "Just as much as before", value: 0 },
+                        { text: "A little less enjoyment", value: 1 },
+                        { text: "Significantly less", value: 2 },
+                        { text: "No enjoyment at all", value: 3 }
+                    ]
+                },
+                {
+                    number: 3,
+                    text: "How often do you have trouble sleeping (falling asleep, staying asleep, or sleeping too much)?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "A few nights per week", value: 1 },
+                        { text: "Most nights", value: 2 },
+                        { text: "Every night", value: 3 }
+                    ]
+                },
+                {
+                    number: 4,
+                    text: "How frequently do you feel anxious or worried?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes, but manageable", value: 1 },
+                        { text: "Often and it interferes", value: 2 },
+                        { text: "Almost constantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 5,
+                    text: "How much do past experiences still affect your daily life?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Occasionally cross my mind", value: 1 },
+                        { text: "Frequently impact my mood", value: 2 },
+                        { text: "Significantly affect daily functioning", value: 3 }
+                    ]
+                },
+                {
+                    number: 6,
+                    text: "How connected do you feel to the people around you?",
+                    options: [
+                        { text: "Very connected", value: 0 },
+                        { text: "Somewhat connected", value: 1 },
+                        { text: "Often feel disconnected", value: 2 },
+                        { text: "Very isolated", value: 3 }
+                    ]
+                },
+                {
+                    number: 7,
+                    text: "How well are you managing your emotions (anger, sadness, frustration)?",
+                    options: [
+                        { text: "Very well", value: 0 },
+                        { text: "Usually okay, occasional struggles", value: 1 },
+                        { text: "Often struggle", value: 2 },
+                        { text: "Feel out of control", value: 3 }
+                    ]
+                },
+                {
+                    number: 8,
+                    text: "How often do you use substances (alcohol, cannabis, etc.) to cope with stress?",
+                    options: [
+                        { text: "Never or rarely", value: 0 },
+                        { text: "Occasionally", value: 1 },
+                        { text: "Frequently", value: 2 },
+                        { text: "Most days", value: 3 }
+                    ]
+                },
+                {
+                    number: 9,
+                    text: "How would you describe your work performance or productivity recently?",
+                    options: [
+                        { text: "Normal or better", value: 0 },
+                        { text: "Slightly decreased", value: 1 },
+                        { text: "Noticeably declined", value: 2 },
+                        { text: "Significantly impaired", value: 3 }
+                    ]
+                },
+                {
+                    number: 10,
+                    text: "How often do you feel stuck in patterns you can't break (relationships, habits, thinking)?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes notice patterns", value: 1 },
+                        { text: "Often feel stuck", value: 2 },
+                        { text: "Constantly trapped in cycles", value: 3 }
+                    ]
+                },
+                {
+                    number: 11,
+                    text: "How frequently do physical symptoms (headaches, stomach issues, tension) appear without clear medical cause?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "Occasionally", value: 1 },
+                        { text: "Several times per week", value: 2 },
+                        { text: "Daily or almost daily", value: 3 }
+                    ]
+                },
+                {
+                    number: 12,
+                    text: "How much do you avoid situations, people, or places because of fear or discomfort?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Occasionally avoid some things", value: 1 },
+                        { text: "Frequently avoid situations", value: 2 },
+                        { text: "Avoidance limits my life significantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 13,
+                    text: "How often do racing thoughts make it hard to focus?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes", value: 1 },
+                        { text: "Often", value: 2 },
+                        { text: "Almost constantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 14,
+                    text: "How easy is it to see a path forward or feel hopeful about the future?",
+                    options: [
+                        { text: "I feel optimistic", value: 0 },
+                        { text: "Somewhat uncertain", value: 1 },
+                        { text: "Difficult to feel hopeful", value: 2 },
+                        { text: "Can't see a way forward", value: 3 }
+                    ]
+                },
+                {
+                    number: 15,
+                    text: "How often have friends or family expressed concern about your well-being?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Once or twice", value: 1 },
+                        { text: "Several times recently", value: 2 },
+                        { text: "Frequently", value: 3 }
+                    ]
+                }
+            ];
+
+            // Quiz State
+            let quizCurrentQuestion = 0;
+            let quizAnswers = [];
+            let quizTotalScore = 0;
+
+            // Initialize Quiz
+            function initHomePageQuiz() {
+                renderQuizQuestion(quizCurrentQuestion);
+            }
+
+            // Render Question
+            function renderQuizQuestion(index) {
+                const question = quizQuestions[index];
+                const quizContentArea = document.getElementById('quizContentArea');
+                const selectedAnswer = quizAnswers[index];
+
+                quizContentArea.innerHTML = `
+                    <div class="quiz-question-card">
+                        <div class="quiz-question-number">Question ${question.number} of ${quizQuestions.length}</div>
+                        <div class="quiz-question-text">${question.text}</div>
+                        <div class="quiz-options">
+                            ${question.options.map((option, optIndex) => `
+                                <div class="quiz-option ${selectedAnswer === option.value ? 'selected' : ''}"
+                                     onclick="selectQuizOption(${index}, ${option.value}, this)">
+                                    ${option.text}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="quiz-navigation">
+                            ${index > 0 ? '<button class="quiz-btn quiz-btn-secondary" onclick="previousQuizQuestion()">← Previous</button>' : '<div></div>'}
+                            <button class="quiz-btn quiz-btn-primary" id="quizNextBtn" ${selectedAnswer === undefined ? 'disabled' : ''}
+                                    onclick="${index === quizQuestions.length - 1 ? 'showQuizResults()' : 'nextQuizQuestion()'}">
+                                ${index === quizQuestions.length - 1 ? 'See Your Results →' : 'Next →'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                updateQuizProgress();
+            }
+
+            // Select Option
+            function selectQuizOption(questionIndex, value, element) {
+                quizAnswers[questionIndex] = value;
+
+                // Update UI
+                document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+                element.classList.add('selected');
+
+                // Enable next button
+                document.getElementById('quizNextBtn').disabled = false;
+            }
+
+            // Next Question
+            function nextQuizQuestion() {
+                if (quizCurrentQuestion < quizQuestions.length - 1) {
+                    quizCurrentQuestion++;
+                    renderQuizQuestion(quizCurrentQuestion);
+                }
+            }
+
+            // Previous Question
+            function previousQuizQuestion() {
+                if (quizCurrentQuestion > 0) {
+                    quizCurrentQuestion--;
+                    renderQuizQuestion(quizCurrentQuestion);
+                }
+            }
+
+            // Update Progress
+            function updateQuizProgress() {
+                const progress = ((quizCurrentQuestion + 1) / quizQuestions.length) * 100;
+                document.getElementById('quizProgressFill').style.width = progress + '%';
+                document.getElementById('quizProgressText').textContent = `Question ${quizCurrentQuestion + 1} of ${quizQuestions.length}`;
+            }
+
+            // Calculate Score
+            function calculateQuizScore() {
+                quizTotalScore = quizAnswers.reduce((sum, answer) => sum + answer, 0);
+                return quizTotalScore;
+            }
+
+            // Show Results
+            function showQuizResults() {
+                calculateQuizScore();
+
+                document.getElementById('quizContentArea').style.display = 'none';
+                document.querySelector('.quiz-progress-container').style.display = 'none';
+
+                const resultsContainer = document.getElementById('quizResultsContainer');
+                resultsContainer.style.display = 'block';
+
+                // Track quiz completion in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'quiz_complete', {
+                        'event_category': 'engagement',
+                        'event_label': 'homepage_therapy_assessment',
+                        'value': quizTotalScore
+                    });
+                }
+
+                let tier, tierClass, tierColor, heading, interpretation, recommendations, ctaHeading, ctaText, ctaButtons;
+
+                if (quizTotalScore <= 10) {
+                    // Tier: Doing Okay (Green)
+                    tier = 'green';
+                    tierClass = 'quiz-tier-green';
+                    tierColor = 'quiz-score-tier-green';
+                    heading = "You're Managing Well Right Now";
+                    interpretation = `Your responses suggest you're coping with life's everyday stresses in a healthy way. That's great! You're not experiencing significant distress at this time, and your daily functioning appears to be on track.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>While therapy isn't urgent for you right now, here's what can help maintain your well-being:</p>
+                        <ul>
+                            <li><strong>Keep up your current coping strategies</strong> – whatever you're doing is working</li>
+                            <li><strong>Build your mental health toolkit now</strong> – it's easier to learn coping skills when you're not in crisis</li>
+                            <li><strong>Stay connected</strong> – maintain relationships and social support</li>
+                            <li><strong>Monitor changes</strong> – retake this quiz if you notice shifts in mood or stress levels</li>
+                        </ul>
+                        <h3>When to Revisit</h3>
+                        <p>Consider therapy if major life changes occur (job loss, relationship issues, health concerns) or if your score increases significantly when you retake this quiz.</p>
+                    `;
+                    ctaHeading = "Want to Build Resilience?";
+                    ctaText = "Even when things are going well, therapy can help you prepare for future challenges and deepen self-awareness.";
+                    ctaButtons = `
+                        <a href="/blog/mental-health-guides/how-to-find-therapist-toronto.html" class="quiz-btn quiz-btn-secondary">Learn About Therapy</a>
+                        <a href="#resources" class="quiz-btn quiz-btn-secondary">Free Self-Care Resources</a>
+                    `;
+                } else if (quizTotalScore <= 20) {
+                    // Tier: Could Benefit (Amber)
+                    tier = 'amber';
+                    tierClass = 'quiz-tier-amber';
+                    tierColor = 'quiz-score-tier-amber';
+                    heading = "Therapy Could Be Helpful (But It's Not Urgent)";
+                    interpretation = `Your responses suggest you're experiencing some manageable challenges that are affecting your quality of life. You're not in crisis, but you might benefit from professional support to work through what you're facing.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>This is actually an ideal time to start therapy—<strong>before</strong> things escalate. Many people wait until they're in crisis, but therapy is most effective as a preventive tool.</p>
+                        <ul>
+                            <li><strong>Therapy isn't just for crises</strong> – think of it like going to the gym for your mental health</li>
+                            <li><strong>Early intervention works better</strong> – it's easier to develop coping skills now than during a crisis</li>
+                            <li><strong>You deserve support</strong> – you don't need to be "bad enough" to ask for help</li>
+                            <li><strong>Try it for 4-6 sessions</strong> – that's often enough to see if it's helpful for you</li>
+                        </ul>
+                        <h3>Other Options</h3>
+                        <p>If you're not ready for therapy, consider: self-help books (like "Feeling Good" by David Burns), mental health apps (MindShift, Calm), peer support groups, or structured online programs.</p>
+                    `;
+                    ctaHeading = "Ready to Talk It Through?";
+                    ctaText = "Book a free 15-minute consultation. We'll discuss what you're experiencing and whether therapy feels right for you—no pressure, no sales pitch.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Free Consultation</a>
+                        <a href="/blog/mental-health-guides/how-to-find-therapist-toronto.html" class="quiz-btn quiz-btn-secondary">How to Find a Therapist</a>
+                    `;
+                } else if (quizTotalScore <= 30) {
+                    // Tier: Would Make a Difference (Red)
+                    tier = 'red';
+                    tierClass = 'quiz-tier-red';
+                    tierColor = 'quiz-score-tier-red';
+                    heading = "Therapy Would Likely Make a Real Difference";
+                    interpretation = `Your responses indicate you're experiencing significant distress that's impacting your daily functioning. This is a clear signal that professional support could help you feel better and develop more effective coping strategies.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>You're dealing with more than typical life stress right now. The good news? This is exactly what therapy is designed to help with, and you're likely to see meaningful improvement within 6-12 sessions.</p>
+                        <ul>
+                            <li><strong>You don't have to feel this way</strong> – therapy can help reduce the intensity of what you're experiencing</li>
+                            <li><strong>It's not weakness</strong> – reaching out is actually a sign of strength and self-awareness</li>
+                            <li><strong>The earlier, the better</strong> – symptoms tend to respond faster when addressed sooner</li>
+                            <li><strong>Treatment works</strong> – research shows therapy (especially CBT and ACT) is highly effective for anxiety, depression, and stress</li>
+                        </ul>
+                        <h3>Next Steps</h3>
+                        <p>I recommend booking a consultation with a therapist within the next 2-4 weeks. Many therapists (including me) offer free 15-minute consultations so you can get a feel for whether it's a good fit.</p>
+                    `;
+                    ctaHeading = "Let's Get You Support";
+                    ctaText = "You've taken the important step of recognizing you need help. The next step is reaching out. I offer ACT therapy for anxiety, workplace stress, and related issues—and I have immediate availability.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Free Consultation Today</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
+                    `;
+                } else {
+                    // Tier: Reach Out Soon (Dark Red)
+                    tier = 'red';
+                    tierClass = 'quiz-tier-red';
+                    tierColor = 'quiz-score-tier-red';
+                    heading = "Please Reach Out to a Therapist Soon";
+                    interpretation = `Your responses suggest you're experiencing high levels of distress that are significantly affecting your daily life. This isn't something you should try to manage alone—professional support can make a real, meaningful difference.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>You're going through a really difficult time right now, and that's valid. Many people feel this way at some point, and therapy is designed to help you through exactly this kind of struggle.</p>
+                        <ul>
+                            <li><strong>This isn't permanent</strong> – with the right support, you can feel significantly better</li>
+                            <li><strong>You deserve help</strong> – you don't need to white-knuckle through this alone</li>
+                            <li><strong>Therapy works</strong> – especially when you're motivated to feel better (which you clearly are, since you took this quiz)</li>
+                            <li><strong>Sooner is better</strong> – the faster you get support, the faster you'll start feeling relief</li>
+                        </ul>
+                        <h3>Important: If You're in Crisis</h3>
+                        <p>If you're having thoughts of self-harm or suicide, please reach out immediately:</p>
+                        <ul>
+                            <li><strong>Call or text 988</strong> – free, confidential crisis support 24/7</li>
+                            <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
+                            <li><strong>ConnexOntario Mental Health:</strong> 1-866-531-2600</li>
+                            <li><strong>Or go to your nearest hospital emergency department</strong></li>
+                        </ul>
+                        <h3>Next Steps</h3>
+                        <p>I recommend booking a consultation with a therapist within the next 7 days. If cost is a barrier, there are free and low-cost options in Ontario.</p>
+                    `;
+                    ctaHeading = "You Don't Have to Do This Alone";
+                    ctaText = "I have immediate availability and offer a free 15-minute consultation. Let's talk about what you're going through and create a plan to help you feel better.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Urgent Consultation</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-primary" style="background: #dc3545;">Call Now: (416) 306-2157</a>
+                    `;
+                }
+
+                resultsContainer.innerHTML = `
+                    <div class="quiz-score-display ${tierColor}">
+                        <div class="quiz-score-number">${quizTotalScore}</div>
+                        <div class="quiz-score-label">out of 45 points</div>
+                    </div>
+
+                    <div class="quiz-result-section ${tierClass}">
+                        <h3>${heading}</h3>
+                        <p>${interpretation}</p>
+                    </div>
+
+                    <div class="quiz-result-section ${tierClass}">
+                        ${recommendations}
+                    </div>
+
+                    <div class="quiz-cta-box">
+                        <h3>${ctaHeading}</h3>
+                        <p>${ctaText}</p>
+                        <div class="quiz-cta-buttons">
+                            ${ctaButtons}
+                        </div>
+                    </div>
+
+                    ${quizTotalScore > 30 ? `
+                        <div class="quiz-crisis-box">
+                            <h3>⚠️ In Crisis? Get Immediate Help</h3>
+                            <p>If you're experiencing thoughts of self-harm or suicide, please reach out now:</p>
+                            <p><strong>Call or Text 988</strong> (Canada Suicide Prevention Service) – 24/7 support<br>
+                            <strong>Crisis Text Line:</strong> Text HOME to 686868<br>
+                            <strong>ConnexOntario Mental Health Helpline:</strong> <a href="tel:+18665312600">1-866-531-2600</a></p>
+                        </div>
+                    ` : ''}
+
+                    <div style="text-align: center; margin-top: 35px; padding: 25px; background: #f8f9fa; border-radius: 10px;">
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 15px; font-weight: 500;">Want to retake the quiz or share with someone?</p>
+                        <div class="quiz-cta-buttons">
+                            <button class="quiz-btn quiz-btn-secondary" onclick="window.location.reload()">Retake Quiz</button>
+                            <button class="quiz-btn quiz-btn-secondary" onclick="shareHomeQuiz()">Share This Quiz</button>
+                        </div>
+                    </div>
+                `;
+
+                // Scroll to results
+                document.querySelector('.quiz-widget-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Share Quiz Function
+            function shareHomeQuiz() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Do I Need Therapy? Free Assessment',
+                        text: 'I just took this helpful mental health quiz. Check it out!',
+                        url: window.location.href
+                    });
+                } else {
+                    // Fallback: Copy to clipboard
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            }
+
+            // Initialize quiz when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                // Small delay to ensure page is fully rendered
+                setTimeout(initHomePageQuiz, 500);
+            });
+        </script>
+
         <!-- Problem Recognition Section (Conversion Optimization) -->
         <section class="trust-section" style="padding: 50px 20px; background: #fff;">
             <div class="container">
