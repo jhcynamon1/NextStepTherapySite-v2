@@ -1314,14 +1314,14 @@
 
                 .quiz-btn {
                     width: 100%;
-                    padding: 14px 24px !important;
-                    font-size: 1rem !important;
+                    padding: 12px 20px !important;
+                    font-size: 0.95rem !important;
                 }
 
                 .quiz-navigation {
                     flex-direction: column;
-                    margin-top: 28px !important;
-                    gap: 12px !important;
+                    margin-top: 20px !important;
+                    gap: 10px !important;
                 }
 
                 .quiz-btn-primary {
@@ -2895,13 +2895,20 @@
                     timestamp: new Date().toISOString()
                 })
             })
-            .then(response => response.json())
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.json();
+            })
             .then(data => {
-                console.log('Quiz report sent successfully:', data);
+                console.log('Quiz report response:', data);
+                if (!data.success) {
+                    console.error('Email failed to send:', data.error);
+                    alert('Note: Email sending is not configured yet. You saw your results on screen. To enable emails, add RESEND_API_KEY to Netlify.');
+                }
             })
             .catch(error => {
                 console.error('Error sending quiz report:', error);
-                // Still show success message to user
+                alert('Note: Email sending encountered an error. You saw your results on screen. Check browser console for details.');
             });
 
             // Show success message
