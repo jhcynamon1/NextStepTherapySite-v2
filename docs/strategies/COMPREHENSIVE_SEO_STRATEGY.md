@@ -40,9 +40,9 @@
 
 ---
 
-### **NEW CONVERSION-OPTIMIZED STRUCTURE**
+### **NEW CONVERSION-OPTIMIZED STRUCTURE (CORRECTED)**
 
-**Research-Backed Order (Based on 2025 Best Practices):**
+**Research-Backed Order (Based on 2025 User Behavior):**
 
 ```
 1. HERO SECTION (Above Fold)
@@ -52,17 +52,18 @@
    ├── PRIMARY CTA (call + book buttons)
    └── Quick stats (4 cards with benefits/process)
 
-2. THERAPIST INTRO (Position #2 - MOVED UP!)
+2. SERVICE INFO + BRIEF PROBLEM VALIDATION
+   ├── "Is This You?" or "Does this sound familiar?" (50-100 words)
+   ├── What this service offers (100-150 words)
+   ├── How it works (3-5 bullet points)
+   ├── Why it's right for [location/situation]
+   └── Focus: Answer "Does this solve MY problem?"
+
+3. THERAPIST INTRO (Position #3 - After Service Value!)
    ├── Photo/name + credentials
    ├── "Why I focus on [topic]" (100-150 words)
    ├── Professional background (4-5 bullets)
    └── Personal, authentic tone
-
-3. WHAT YOU'LL LEARN (Simplified "How We Work")
-   ├── Brief intro (50-70 words)
-   ├── Core skills/approach (5-6 bullets)
-   ├── Timeline expectation (8-12 weeks typical)
-   └── Process-focused, educational
 
 4. SECONDARY CTA BOX (NEW!)
    ├── "Ready to [action]?" headline
@@ -70,25 +71,34 @@
    ├── Call + Book buttons
    └── High-contrast styling
 
-5. BRIEF PROBLEM RECOGNITION (≤100 words, MOVED DOWN)
-   ├── "Is This You?" headline
-   ├── 2-3 sentences max
-   ├── Common struggles (one paragraph)
-   └── If this resonates → link to action
+5. WHO THIS HELPS
+   ├── Specific populations/situations
+   ├── Common presenting issues
+   └── Helps users self-identify
 
-6. WHO THIS HELPS
-   └── (Stays as is)
+6. FINDING SUPPORT NEAR YOU (for location pages)
+   └── "Near me" optimization section
 
-7. FINDING SUPPORT NEAR YOU
-   └── (Stays as is)
-
-8. REST OF CONTENT
+7. REST OF CONTENT
    ├── Comparison tables
    ├── Evidence-based approaches  
    ├── FAQs
    ├── Process steps
    └── Related services
 ```
+
+**CRITICAL CORRECTION (Nov 11):**
+
+**Users searching therapy keywords want SERVICE INFO before credentials.**
+
+Research shows: "Anxious visitors scan for 'Does this offer what I need?' **BEFORE they care about who the provider is**" ([Source](https://kopplamarketing.com/blog/convert-website-visitors-into-therapy-clients))
+
+**Order:**
+1. Hero ✅
+2. **Service value + brief problem validation** ← What they're searching for!
+3. **THEN therapist intro** ← Now they want to know WHO
+4. CTA box
+5. Rest of content
 
 ---
 

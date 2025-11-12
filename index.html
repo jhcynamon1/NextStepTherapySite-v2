@@ -2811,12 +2811,25 @@
                 });
             }
 
-            // TODO: Send to your email service (Mailchimp, ConvertKit, etc.)
-            // For now, log to console
-            console.log('Quiz Lead Captured:', {
-                email: email,
-                score: score,
-                timestamp: new Date().toISOString()
+            // Send to Resend API for personalized report email
+            fetch('/.netlify/functions/send-quiz-report', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    score: score,
+                    timestamp: new Date().toISOString()
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Quiz report sent successfully:', data);
+            })
+            .catch(error => {
+                console.error('Error sending quiz report:', error);
+                // Still show success message to user
             });
 
             // Show success message
