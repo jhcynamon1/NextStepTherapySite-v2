@@ -26,6 +26,125 @@
 
 ---
 
+## 🔥 CONVERSION OPTIMIZATION: NEW PAGE STRUCTURE (NOV 11, 2025)
+
+### **CRITICAL FINDING: We Were Hurting Conversions**
+
+**Research:** [Therapy landing page optimization study](https://alwaysopen.design/therapy-practices-cro-wins/) shows **long problem descriptions DECREASE conversion by 55%**.
+
+**Our Problem:**
+- Had 300-400 word problem sections BEFORE showing value
+- Therapist intro was position #4 (should be #2)
+- Only 1 CTA in hero (should have multiple at scroll points)
+- Users had to scroll through problems to see WHO helps and HOW
+
+---
+
+### **NEW CONVERSION-OPTIMIZED STRUCTURE**
+
+**Research-Backed Order (Based on 2025 Best Practices):**
+
+```
+1. HERO SECTION (Above Fold)
+   ├── H1 (emotional, outcome-focused)
+   ├── Value proposition (40-70 words max)
+   ├── Trust pills (CRPO #, key benefits)
+   ├── PRIMARY CTA (call + book buttons)
+   └── Quick stats (4 cards with benefits/process)
+
+2. THERAPIST INTRO (Position #2 - MOVED UP!)
+   ├── Photo/name + credentials
+   ├── "Why I focus on [topic]" (100-150 words)
+   ├── Professional background (4-5 bullets)
+   └── Personal, authentic tone
+
+3. WHAT YOU'LL LEARN (Simplified "How We Work")
+   ├── Brief intro (50-70 words)
+   ├── Core skills/approach (5-6 bullets)
+   ├── Timeline expectation (8-12 weeks typical)
+   └── Process-focused, educational
+
+4. SECONDARY CTA BOX (NEW!)
+   ├── "Ready to [action]?" headline
+   ├── One-sentence value prop
+   ├── Call + Book buttons
+   └── High-contrast styling
+
+5. BRIEF PROBLEM RECOGNITION (≤100 words, MOVED DOWN)
+   ├── "Is This You?" headline
+   ├── 2-3 sentences max
+   ├── Common struggles (one paragraph)
+   └── If this resonates → link to action
+
+6. WHO THIS HELPS
+   └── (Stays as is)
+
+7. FINDING SUPPORT NEAR YOU
+   └── (Stays as is)
+
+8. REST OF CONTENT
+   ├── Comparison tables
+   ├── Evidence-based approaches  
+   ├── FAQs
+   ├── Process steps
+   └── Related services
+```
+
+---
+
+### **KEY CHANGES FROM OLD STRUCTURE**
+
+| Element | OLD Position | NEW Position | Why |
+|---|---|---|---|
+| Therapist Intro | #4 (after problem) | **#2** | Users need to see WHO before problems |
+| Problem Section | #2 (300-400 words) | **#5 (100 words)** | Long problems kill conversion |
+| How We Work | #5 | **#3** | Show HOW early, builds trust |
+| Secondary CTA | None | **#4** | Multiple CTAs at scroll points |
+| Value Delivery | After 600+ words | **Within 200 words** | Max 40-70 words before value |
+
+---
+
+### **RESEARCH-BACKED PRINCIPLES**
+
+1. **Max 40-70 Words Before First Value Statement** ([Source](https://kopplamarketing.com/blog/convert-website-visitors-into-therapy-clients))
+   - OLD: 400+ words (problem section first)
+   - NEW: 50 words (quick value + CTA)
+
+2. **Therapist Intro at Position #2-3** ([Source](https://landingi.com/landing-page/healthcare-best-practices/))
+   - People choose therapists based on connection
+   - Show WHO before diving into problems
+
+3. **Problem Recognition ≤100 Words** ([Source](https://alwaysopen.design/therapy-practices-cro-wins/))
+   - Long problem descriptions create anxiety
+   - Brief recognition → immediate path to solution
+
+4. **Multiple CTAs at Scroll Points** ([Source](https://www.sprypt.com/blog/best-physical-therapy-website-design))
+   - After therapist intro
+   - After "what you'll learn"
+   - After testimonials/trust signals
+   - End of page
+
+5. **Value First, Problems Second**
+   - Anxious visitors need hope, not more problems
+   - Show solution pathway immediately
+
+---
+
+### **TEMPLATE UPDATED**
+
+**Reference Page:** `distress-tolerance-therapy.html` (fully restructured Nov 11)
+
+**Use This Structure For:**
+- ✅ All NEW service pages going forward
+- ⏳ Gradual updates to existing high-traffic pages
+- ⏳ A/B test on anxiety-therapy-ontario.html first
+
+**Do NOT Update Yet:**
+- Pages with good conversion rates (if we have data)
+- Pages that just launched (let them establish baseline)
+
+---
+
 ## 🚀 NOVEMBER 11: DIESEL DUDES COMPETITIVE ANALYSIS & QUICK WIN IMPLEMENTATION
 
 ### **Competitive Reverse-Engineering Completed**
