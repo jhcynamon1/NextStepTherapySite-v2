@@ -2884,7 +2884,7 @@
             }
 
             // Send to Resend API for personalized report email
-            fetch('/.netlify/functions/send-quiz-report', {
+            fetch('/api/send-quiz-report', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
