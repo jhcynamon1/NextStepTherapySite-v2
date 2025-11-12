@@ -56,13 +56,13 @@ exports.handler = async (event) => {
           <li><strong>You don't have to feel this way</strong> - therapy can help reduce the intensity of what you're experiencing</li>
           <li><strong>It's not weakness</strong> - reaching out is actually a sign of strength and self-awareness</li>
           <li><strong>The earlier, the better</strong> - symptoms tend to respond faster when addressed sooner</li>
-          <li><strong>Treatment works</strong> - research shows therapy (especially CBT and ACT) is highly effective for anxiety, depression, and stress</li>
+          <li><strong>Evidence-based approaches help</strong> - research supports therapy (especially CBT and ACT) for anxiety, depression, and stress</li>
         </ul>
       `;
       nextSteps = `
-        <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;">You're dealing with more than typical life stress right now. The good news? This is exactly what therapy is designed to help with, and you're likely to see meaningful improvement within 6-12 sessions.</p>
+        <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;">You're dealing with more than typical life stress right now. The good news? This is exactly what therapy is designed to help with.</p>
         <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;"><strong>Recommended: Book a consultation within the next 2-4 weeks.</strong></p>
-        <a href="https://nextsteptherapy.janeapp.com/" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #EF6F6F 0%, #F28B8B 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Your Free Consultation Today</a>
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=email&utm_campaign=quiz_report_red" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #EF6F6F 0%, #F28B8B 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Your Free Consultation Today</a>
       `;
     } else {
       tier = 'urgent';
@@ -87,7 +87,7 @@ exports.handler = async (event) => {
       nextSteps = `
         <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;">You're going through a really difficult time right now, and that's valid. Many people feel this way at some point, and therapy is designed to help you through exactly this kind of struggle.</p>
         <p style="color: #DC3545; line-height: 1.8; margin-bottom: 16px; font-weight: 600;"><strong>Recommended: Book a consultation within the next 7 days.</strong></p>
-        <a href="https://nextsteptherapy.janeapp.com/" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #DC3545 0%, #EF6F6F 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Urgent Consultation</a>
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=email&utm_campaign=quiz_report_urgent" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #DC3545 0%, #EF6F6F 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Urgent Consultation</a>
       `;
     }
 
