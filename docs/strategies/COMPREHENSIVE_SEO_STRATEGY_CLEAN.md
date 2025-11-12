@@ -602,6 +602,146 @@ Build high-ranking SEO pages for Ontario therapy using proven local service SEO 
 
 ---
 
+## 🔧 TECHNICAL CLEANUP (Nov 11, 2025 - Post-Deployment)
+
+### **Ahrefs Issues Resolved**
+
+**After deploying quick wins, ran Ahrefs crawl and fixed critical issues:**
+
+#### **Fix #1: Links to Redirects (44 pages)**
+**Problem:** Footer links missing `.html` extensions causing 308 redirects
+**Solution:** Updated footer template to add `.html` to all internal links
+- `/counselling-services` → `/counselling-services.html` ✓
+- `/faq` → `/faq.html` ✓
+- Applied across all 19 pages with expanded footer
+
+**Impact:** Eliminates 44 redirect issues, cleaner crawling
+
+---
+
+#### **Fix #2: Orphan Pages (3 pages)**
+**Problem:** Pages with no incoming internal links
+**Pages:**
+- mens-therapy-hamilton.html
+- online-therapy-ottawa.html
+- online-therapy-mississauga.html
+
+**Solution:** Added all 3 to footer "Specialized Support" column
+**Impact:** All pages now have internal links, Google can discover them
+
+---
+
+#### **Fix #3: Broken Internal Links**
+**Problem:** Links to non-existent pages or missing `.html`
+**Fixed:**
+- `/anxiety-therapy-burlington` → `/anxiety-therapy-burlington.html` ✓
+- `/marriage-counselling-toronto` → `/marriage-counselling-toronto.html` ✓
+- `/student-mental-health-ontario` → `/student-mental-health-ontario.html` ✓
+- `/workplace-stress-therapy-ontario` → `/workplace-stress-therapy-ontario.html` ✓
+
+**Impact:** Reduced broken links from 6 to ~2 (remaining are external 403s)
+
+---
+
+#### **Remaining Issues (Address in Week 2-3)**
+
+**Schema Validation Errors (55 pages):**
+- Most pages have schema warnings/errors
+- Not critical for rankings, may affect rich results
+- **Action:** Test pages with Google Rich Results Test
+- **Priority:** Medium (after measuring SEO impact)
+
+**External 403s:**
+- janeapp.com returning 403 (but works for users - likely blocking crawler)
+- ocswssw.org 404 (external site)
+- **Action:** Can remove or ignore (external, not our fault)
+- **Priority:** Low
+
+**Meta Descriptions/Titles Too Long:**
+- 3 new pages flagged (from our urgent rewrites)
+- Acceptable if under 160 chars and convey full message
+- **Action:** Monitor, trim only if truncation hurts CTR
+- **Priority:** Low
+
+---
+
+### **Cleanup Results Summary**
+
+| Issue | Before | After | Status |
+|---|---|---|---|
+| Links to redirects | 44 | ~0 | ✅ FIXED |
+| Orphan pages | 3 | 0 | ✅ FIXED |
+| Broken internal links | 6 | ~2 | ✅ IMPROVED |
+| Schema errors | 55 | 55 | ⏳ Test in Week 2 |
+| External issues | N/A | N/A | ℹ️ Ignore (external) |
+
+**Site Health:** Significantly improved, ready for Google crawl
+
+---
+
+## 🧪 SCHEMA TESTING GUIDE (For Week 2-3)
+
+### **When You're Ready to Test Schema Issues**
+
+**Tool to Use:** https://search.google.com/test/rich-results
+
+**Process:**
+1. Test each page showing schema errors
+2. Copy error messages
+3. Fix one page as template
+4. Apply same fix to similar pages
+5. Re-test to verify
+
+**Common Schema Errors (And How to Fix):**
+
+#### **Error: Missing Required Field**
+```json
+// Add the missing field to your schema
+"@type": "MedicalWebPage",
+"about": {  // If this is missing
+    "@type": "MedicalCondition",
+    "name": "Anxiety Disorders"
+}
+```
+
+#### **Error: Invalid Property**
+```json
+// Remove or rename invalid properties
+// Check schema.org documentation for correct field names
+```
+
+#### **Error: Incorrect @type**
+```json
+// Ensure @type matches content
+// Service pages = "Service" or "MedicalWebPage"
+// Location pages = "MedicalWebPage"  
+// Person pages = "Person"
+```
+
+**Priority Pages to Test First:**
+1. anxiety-therapy-ontario.html (highest traffic)
+2. depression-therapy-ontario.html
+3. therapist-toronto.html
+4. virtual-therapy-ontario.html
+
+**If You Need Help:**
+- Export error messages from Rich Results Test
+- Share with me when ready
+- I'll fix template and apply to all pages
+
+---
+
+**Schema Testing Checklist:**
+- [ ] Test top 5 pages in Google Rich Results Test
+- [ ] Document error messages
+- [ ] Fix one page as template
+- [ ] Apply to similar pages
+- [ ] Re-test to verify
+- [ ] Deploy fixes
+- [ ] Wait 7 days for Google to re-crawl
+
+---
+
 ## 📚 REFERENCE DOCUMENTS
 
 **For Immediate Use:**
