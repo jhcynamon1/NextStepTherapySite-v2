@@ -1617,9 +1617,6 @@
                     });
                 }
 
-                // Trigger exit-intent popup eligibility
-                window.dispatchEvent(new Event('quiz_completed'));
-
                 let tier, tierClass, tierColor, heading, interpretation, recommendations, ctaHeading, ctaText, ctaButtons;
 
                 if (quizTotalScore <= 10) {
@@ -1641,11 +1638,11 @@
                         <h3>When to Revisit</h3>
                         <p>Consider therapy if major life changes occur (job loss, relationship issues, health concerns) or if your score increases significantly when you retake this quiz.</p>
                     `;
-                    ctaHeading = "Want to Build Resilience?";
-                    ctaText = "Even when things are going well, therapy can help you prepare for future challenges and deepen self-awareness.";
+                    ctaHeading = "Want to Stay Ahead?";
+                    ctaText = "You're in a great position to build mental health skills before challenges arise. Preventive therapy is like preventive medicine—it works best before you need it.";
                     ctaButtons = `
-                        <a href="/blog/mental-health-guides/how-to-find-therapist-toronto.html" class="quiz-btn quiz-btn-secondary">Learn About Therapy</a>
-                        <a href="#resources" class="quiz-btn quiz-btn-secondary">Free Self-Care Resources</a>
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=green_tier" class="quiz-btn quiz-btn-primary">Book Free 15-Min Consultation</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
                     `;
                 } else if (quizTotalScore <= 20) {
                     // Tier: Could Benefit (Amber)
@@ -1666,11 +1663,11 @@
                         <h3>Other Options</h3>
                         <p>If you're not ready for therapy, consider: self-help books (like "Feeling Good" by David Burns), mental health apps (MindShift, Calm), peer support groups, or structured online programs.</p>
                     `;
-                    ctaHeading = "Ready to Talk It Through?";
-                    ctaText = "Book a free 15-minute consultation. We'll discuss what you're experiencing and whether therapy feels right for you—no pressure, no sales pitch.";
+                    ctaHeading = "Let's Talk - No Pressure, No Commitment";
+                    ctaText = "Free 15-minute consultation to discuss what you're experiencing. See if therapy feels right for you—zero sales pitch, I promise.";
                     ctaButtons = `
-                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Free Consultation</a>
-                        <a href="/blog/mental-health-guides/how-to-find-therapist-toronto.html" class="quiz-btn quiz-btn-secondary">How to Find a Therapist</a>
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=amber_tier" class="quiz-btn quiz-btn-primary">Book Free 15-Min Consultation</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
                     `;
                 } else if (quizTotalScore <= 30) {
                     // Tier: Would Make a Difference (Red)
@@ -1691,11 +1688,11 @@
                         <h3>Next Steps</h3>
                         <p>I recommend booking a consultation with a therapist within the next 2-4 weeks. Many therapists (including me) offer free 15-minute consultations so you can get a feel for whether it's a good fit.</p>
                     `;
-                    ctaHeading = "Let's Get You Support";
-                    ctaText = "You've taken the important step of recognizing you need help. The next step is reaching out. I offer ACT therapy for anxiety, workplace stress, and related issues—and I have immediate availability.";
+                    ctaHeading = "Let's Get You Some Relief";
+                    ctaText = "You've recognized you need support—that's the hardest part. I have immediate availability for a free consultation. Virtual sessions start as soon as this week.";
                     ctaButtons = `
-                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Free Consultation Today</a>
-                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=red_tier" class="quiz-btn quiz-btn-primary">Book Free Consultation Today</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call Now: (416) 306-2157</a>
                     `;
                 } else {
                     // Tier: Reach Out Soon (Dark Red)
@@ -1725,10 +1722,10 @@
                         <p>I recommend booking a consultation with a therapist within the next 7 days. If cost is a barrier, there are free and low-cost options in Ontario.</p>
                     `;
                     ctaHeading = "You Don't Have to Do This Alone";
-                    ctaText = "I have immediate availability and offer a free 15-minute consultation. Let's talk about what you're going through and create a plan to help you feel better.";
+                    ctaText = "I have immediate availability for a free consultation. Let's talk about what you're going through and create a plan to help you feel better. Available this week.";
                     ctaButtons = `
-                        <a href="https://nextsteptherapy.janeapp.com/" class="quiz-btn quiz-btn-primary">Book Urgent Consultation</a>
-                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-primary" style="background: #dc3545;">Call Now: (416) 306-2157</a>
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=urgent_tier" class="quiz-btn quiz-btn-primary" style="background: linear-gradient(135deg, #DC3545 0%, #EF6F6F 100%);">Book Urgent Consultation</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-primary">Call Now: (416) 306-2157</a>
                     `;
                 }
 
@@ -2734,208 +2731,4 @@
         }
     </script>
 
-    <!-- Exit-Intent Popup for Quiz Lead Capture -->
-    <div id="exitIntentPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 10000; backdrop-filter: blur(5px); animation: fadeInPopup 0.3s ease;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FFFFFF; border-radius: 24px; max-width: 560px; width: 90%; box-shadow: 0 24px 60px rgba(0,0,0,0.3); animation: slideUpPopup 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
-            <!-- Close Button -->
-            <button onclick="closeExitPopup()" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 28px; color: #8A9BA8; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.2s ease;" onmouseover="this.style.background='#F7F9FA'" onmouseout="this.style.background='transparent'">×</button>
-
-            <!-- Popup Content -->
-            <div style="padding: 50px 40px 40px;">
-                <!-- Icon -->
-                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #6B8E6F 0%, #8CB390 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; box-shadow: 0 8px 24px rgba(107,142,111,0.3);">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                <!-- Heading -->
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.9rem; color: #2C3E50; text-align: center; margin: 0 0 16px 0; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3;">Get Your Personalized Therapy Readiness Report</h3>
-
-                <!-- Subtext -->
-                <p style="text-align: center; color: #5A6B7D; font-size: 1.05rem; line-height: 1.7; margin: 0 0 32px 0;">Receive a detailed PDF with personalized insights based on your quiz results, plus specific recommendations tailored to your score.</p>
-
-                <!-- Email Form -->
-                <form id="exitIntentForm" onsubmit="submitExitIntentForm(event)" style="margin-bottom: 20px;">
-                    <input type="email" id="exitEmailInput" placeholder="Enter your email address" required style="width: 100%; padding: 16px 20px; border: 2px solid #E8F4F1; border-radius: 12px; font-size: 1.05rem; margin-bottom: 16px; font-family: 'Inter', sans-serif; transition: all 0.2s ease; box-sizing: border-box;" onfocus="this.style.borderColor='#6B8E6F'" onblur="this.style.borderColor='#E8F4F1'">
-
-                    <button type="submit" style="width: 100%; padding: 18px; background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 16px rgba(107,142,111,0.3); font-family: 'Inter', sans-serif;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(107,142,111,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 16px rgba(107,142,111,0.3)'">
-                        Send My Personalized Report
-                    </button>
-                </form>
-
-                <!-- Privacy Note -->
-                <p style="text-align: center; font-size: 0.875rem; color: #8A9BA8; line-height: 1.6; margin: 0;">🔒 Your privacy matters. We'll never spam you or share your email. Unsubscribe anytime.</p>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        @keyframes fadeInPopup {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUpPopup {
-            from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        /* Mobile responsive for popup */
-        @media (max-width: 768px) {
-            #exitIntentPopup > div {
-                width: 95% !important;
-                max-width: none !important;
-            }
-
-            #exitIntentPopup > div > div {
-                padding: 40px 28px 32px !important;
-            }
-
-            #exitIntentPopup h3 {
-                font-size: 1.6rem !important;
-            }
-
-            #exitIntentPopup p {
-                font-size: 1rem !important;
-            }
-        }
-    </style>
-
-    <script>
-        // Exit-Intent Popup Logic
-        let exitPopupShown = false;
-        let quizCompletedWithoutEmail = false;
-
-        // Track if quiz was completed
-        window.addEventListener('quiz_completed', function() {
-            quizCompletedWithoutEmail = true;
-        });
-
-        // Exit-intent detection
-        document.addEventListener('mouseleave', function(e) {
-            // Only trigger if mouse leaves from the top of the page
-            if (e.clientY < 10 && !exitPopupShown && quizCompletedWithoutEmail) {
-                showExitPopup();
-            }
-        });
-
-        // Mobile: trigger on scroll up after quiz completion
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', function() {
-            if (quizCompletedWithoutEmail && !exitPopupShown) {
-                if (window.scrollY < lastScrollY - 50) {
-                    // User scrolled up significantly
-                    showExitPopup();
-                }
-            }
-            lastScrollY = window.scrollY;
-        });
-
-        function showExitPopup() {
-            if (!exitPopupShown) {
-                document.getElementById('exitIntentPopup').style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                exitPopupShown = true;
-
-                // Track popup display
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'exit_intent_popup_shown', {
-                        'event_category': 'engagement',
-                        'event_label': 'quiz_results_lead_capture'
-                    });
-                }
-            }
-        }
-
-        function closeExitPopup() {
-            document.getElementById('exitIntentPopup').style.display = 'none';
-            document.body.style.overflow = 'auto';
-
-            // Track popup close
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'exit_intent_popup_closed', {
-                    'event_category': 'engagement',
-                    'event_label': 'quiz_results_dismissed'
-                });
-            }
-        }
-
-        function submitExitIntentForm(e) {
-            e.preventDefault();
-
-            const email = document.getElementById('exitEmailInput').value;
-            const score = quizTotalScore; // From quiz script
-
-            // Track email submission
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'generate_lead', {
-                    'event_category': 'conversion',
-                    'event_label': 'quiz_personalized_report',
-                    'value': 175,
-                    'currency': 'CAD'
-                });
-            }
-
-            // Send to Resend API for personalized report email
-            fetch('/api/send-quiz-report', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email: email,
-                    score: score,
-                    timestamp: new Date().toISOString()
-                })
-            })
-            .then(response => {
-                console.log('Response status:', response.status);
-                return response.json();
-            })
-            .then(data => {
-                console.log('Quiz report response:', data);
-                if (!data.success) {
-                    console.error('Email failed to send:', data.error);
-                    alert('Note: Email sending is not configured yet. You saw your results on screen. To enable emails, add RESEND_API_KEY to Netlify.');
-                }
-            })
-            .catch(error => {
-                console.error('Error sending quiz report:', error);
-                alert('Note: Email sending encountered an error. You saw your results on screen. Check browser console for details.');
-            });
-
-            // Show success message
-            document.querySelector('#exitIntentForm').innerHTML = `
-                <div style="text-align: center; padding: 20px 0;">
-                    <div style="width: 60px; height: 60px; background: #52C584; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 4px 16px rgba(82,197,132,0.3);">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 6L9 17L4 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #2C3E50; margin: 0 0 12px 0; font-weight: 600;">Check Your Inbox!</h4>
-                    <p style="color: #5A6B7D; font-size: 1rem; line-height: 1.6; margin: 0 0 24px 0;">Your personalized therapy readiness report has been sent to <strong>${email}</strong></p>
-                    <button onclick="closeExitPopup()" style="padding: 14px 32px; background: #52C584; color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(82,197,132,0.3);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Close</button>
-                </div>
-            `;
-
-            // Auto-close after 5 seconds
-            setTimeout(closeExitPopup, 5000);
-        }
-
-        // Close popup when clicking outside
-        document.getElementById('exitIntentPopup')?.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeExitPopup();
-            }
-        });
-    </script>
-
-</body>
 </html>
