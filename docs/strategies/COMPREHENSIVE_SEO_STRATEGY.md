@@ -22,7 +22,76 @@
 
 ## ⚡ NOVEMBER 2025 STRATEGIC UPDATES
 
-**Last Updated:** November 11, 2025
+**Last Updated:** November 12, 2025
+
+### 📋 **CONVERSION OPTIMIZATION PROGRESS (NOV 12)**
+
+**STATUS:** 10 high-priority pages fully optimized with research-backed conversion structure
+
+**COMPLETED TODAY:**
+
+✅ **Main Service Pages (Ontario-wide):**
+1. `anxiety-therapy-ontario.html` - Therapist moved to position #3, secondary CTA added
+2. `depression-therapy-ontario.html` - Therapist moved to position #3, secondary CTA added
+3. `workplace-stress-therapy-ontario.html` - Therapist moved to position #3, secondary CTA added
+4. `online-therapy-ontario.html` - Therapist moved from line 619 to position #3, secondary CTA added
+5. `virtual-therapy-ontario.html` - CTR meta optimized + structure fixed
+
+✅ **City-Specific Pages (High impressions, low clicks):**
+6. `therapist-toronto.html` - Main Toronto page, therapist moved from line 1200 to position #3
+7. `burlington-online-therapy.html` - 1,008 impressions → 0 clicks fixed with urgent meta + structure
+8. `anxiety-therapy-burlington.html` - 304 impressions → 0 clicks fixed with urgent meta + structure
+
+✅ **Specialized Pages:**
+9. `distress-tolerance-therapy.html` - NEW page targeting 1,200 monthly searches
+10. `university-anxiety-therapy-ontario.html` - Main student page, therapist section ADDED (was missing!)
+
+**STRUCTURE APPLIED TO ALL 10 PAGES:**
+- Position #1: Hero with quick stats
+- Position #2: Service info + brief problem validation (200 words max)
+- Position #3: Therapist credentials (MOVED UP from 400-600 lines down)
+- Position #4: Secondary CTA box (NEW - catches users after credentials)
+- Position #5+: Rest of content (Near me, FAQ, etc.)
+
+**META TAG OPTIMIZATION (CTR Focus):**
+- **BEFORE:** "Burlington online therapy - CRPO psychotherapist available..."
+- **AFTER:** "Stressed in Burlington? CRPO #10979 - book TODAY, session THIS WEEK. Call (416) 306-2157."
+
+**RESEARCH BACKING:**
+- [Therapy practice CRO study](https://alwaysopen.design/therapy-practices-cro-wins/): Long problem sections decrease conversion 55%
+- [Perplexity research](Nov 11, 2025): Users want value + credentials BEFORE lengthy problem descriptions
+- Multiple studies show therapist intro at position #3 (after brief service info) converts better than position #8+
+
+---
+
+### 🎯 **REMAINING PAGES TO OPTIMIZE:**
+
+**NEXT PRIORITY (High Traffic):**
+- [ ] `anxiety-therapy-toronto.html` - City-level anxiety page
+- [ ] `depression-therapy-toronto.html` - City-level depression page
+- [ ] `anxiety-therapy-mississauga.html` - 2nd largest city
+- [ ] `depression-therapy-mississauga.html` - 2nd largest city
+- [ ] `therapy-ottawa-ontario.html` - Capital city main page
+- [ ] `therapy-hamilton-ontario.html` - Hamilton main page
+
+**SPECIALIZED SERVICE PAGES:**
+- [ ] `cbt-therapy-toronto.html` - CBT specialty
+- [ ] `performance-anxiety-therapy-ontario.html` - Performance anxiety
+- [ ] `grief-counselling-toronto.html` - Grief support
+- [ ] `trauma-therapy-toronto.html` - Trauma work
+- [ ] `mens-mental-health.html` - Men's therapy
+
+**STUDENT PAGES (Seasonal Priority):**
+- [ ] `mcmaster-university-student-therapy.html`
+- [ ] `university-of-toronto-student-therapy.html`
+- [ ] `western-university-student-therapy.html`
+- [ ] `queens-university-student-therapy.html`
+
+**ESTIMATED IMPACT:**
+- Current 10 pages: ~15,000 monthly impressions
+- If optimized 20 more pages: ~35,000 additional monthly impressions
+- CTR improvement: 3-5% increase = +500-700 monthly clicks
+- Conversion improvement: 10-15% from better structure = +50-100 leads/month
 
 ---
 
