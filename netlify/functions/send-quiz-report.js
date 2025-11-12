@@ -29,7 +29,9 @@ exports.handler = async (event) => {
         </ul>
       `;
       nextSteps = `
-        <p style="color: #5A6B7D; line-height: 1.8;">While therapy isn't urgent for you right now, consider it if major life changes occur or if your score increases significantly in the future.</p>
+        <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 20px;">While therapy isn't urgent for you right now, consider it if major life changes occur or if your score increases significantly in the future.</p>
+        <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;"><strong>Want to stay proactive?</strong> Book a free 15-minute consultation to discuss building your mental health toolkit before challenges arise.</p>
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=email&utm_campaign=quiz_report_green" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Free Consultation</a>
       `;
     } else if (score <= 20) {
       tier = 'amber';
@@ -44,7 +46,7 @@ exports.handler = async (event) => {
       `;
       nextSteps = `
         <p style="color: #5A6B7D; line-height: 1.8; margin-bottom: 16px;">This is actually an ideal time to start therapy—<strong>before</strong> things escalate. Many people wait until they're in crisis, but therapy is most effective as a preventive tool.</p>
-        <a href="https://nextsteptherapy.janeapp.com/" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Your Free 15-Minute Consultation</a>
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=email&utm_campaign=quiz_report_amber" style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; margin-top: 8px;">Book Your Free 15-Minute Consultation</a>
       `;
     } else if (score <= 30) {
       tier = 'red';
