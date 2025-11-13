@@ -3,28 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
+
+    <!-- SEO Meta Tags -->
     <title>Bay Street Burnout: For Professionals Who Can't Afford to "Just Quit"</title>
-    <meta name="description" content="You worked hard to get here. But 80-hour weeks and constant pressure are unsustainable. Real support for financial professionals managing burnout without the pressure to leave. Call (416) 306-2157.">
-    <meta name="keywords" content="Bay Street burnout, financial sector stress, investment banking burnout, executive burnout, workplace burnout professionals">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bay Street Burnout: For Professionals Who Can't Afford to "Just Quit"">
-    <meta property="og:description" content="You worked hard to get here. But 80-hour weeks and constant pressure are unsustainable. Real support for financial professionals managing burnout without the pressure to leave.">
-    <meta property="og:url" content="https://nextsteptherapy.ca/bay-street-burnout.html">
-    
-    <!-- Canonical Tag -->
+    <meta name="description" content="You worked hard to get here. But somewhere between 80-hour weeks and toxic cultural norms, you started wondering if this is sustainable. Therapy for Bay Street professionals.">
     <link rel="canonical" href="https://nextsteptherapy.ca/bay-street-burnout.html">
-    
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bay Street Burnout: For Professionals Who Can't Afford to "Just Quit"">
+    <meta property="og:description" content="You worked hard to get here. But somewhere between 80-hour weeks and toxic cultural norms, you started wondering if this is sustainable. Therapy for Bay Street professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/bay-street-burnout.html">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
+
+    <!-- Additional Meta -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Jesse Cynamon, RP">
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
-    
+    <link rel="icon" type="image/png" href="/images/asset104-180.png">
+    <link rel="apple-touch-icon" href="/images/asset104-180.png">
+
     <!-- Shared Styles -->
     <link rel="stylesheet" href="/shared.min.css">
-    
+
     <style>
+        .related-services {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        .related-services .service-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-services article {
+            background: #fff;
+            border: 1px solid rgba(107, 142, 111, 0.14);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .helpful-resources {
+            padding: 40px 0;
+        }
+        .helpful-resources ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .helpful-resources li {
+            background: #fff;
+            border: 1px solid rgba(107,142,111,0.16);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .breadcrumb {
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+        }
+        .breadcrumb a {
+            color: #4a6b7a;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
         :root {
             --primary-green: #6B8E6F;
             --primary-green-hover: #5A7D5E;
@@ -73,12 +123,33 @@
             padding: 1.5rem 0;
         }
 
-        .logo a {
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
             font-family: var(--font-heading);
             font-size: 1.5rem;
             color: var(--text-primary);
             text-decoration: none;
             font-weight: 600;
+        }
+
+        .credentials-badge-prominent {
+            background: var(--primary-green-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-green-border);
         }
 
         .nav {
@@ -98,56 +169,11 @@
             color: var(--primary-green);
         }
 
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--primary-green);
-            color: white !important;
-            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-green) !important;
-            border: 2px solid var(--primary-green);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-green-light);
-        }
-
-        .btn-large {
-            padding: 1.25rem 2.5rem;
-            font-size: 1.05rem;
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            margin: 1.25rem 0;
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-        }
-
-        .breadcrumb a {
+        .header-phone {
             color: var(--primary-green);
             text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         /* Hero */
@@ -163,34 +189,22 @@
             margin-bottom: 1.5rem;
             font-weight: 700;
             color: var(--text-primary);
-            line-height: 1.2;
         }
 
-        .lead-text {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .lead-text a {
-            color: var(--primary-green);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        .lead-text a:hover {
-            border-bottom-color: var(--primary-green);
-        }
-
-        .trust-pills {
+        .hero-cta {
+            margin-top: 2rem;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
         }
 
         .trust-pill {
@@ -204,69 +218,42 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .cta-buttons {
+        .trust-pills {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 1rem;
-            flex-wrap: wrap;
-            margin: 2rem 0;
+            margin-top: 2rem;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            max-width: 900px;
-            margin: 3rem auto 0;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-green);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
+        .neighborhood-highlight {
+            margin-top: 1.5rem;
             color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
-        /* Section */
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin: 4rem auto;
+        }
+
+        .main-content {
+            min-width: 0;
+        }
+
+        /* Section Styles */
         .section {
-            padding: 4rem 0;
-        }
-
-        .content-grid {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .content-card {
-            background: white;
+            margin-bottom: 3rem;
         }
 
         .section-title {
             font-family: var(--font-heading);
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--text-primary);
             margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .section h3 {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            color: var(--text-primary);
-            margin: 2rem 0 1rem;
             font-weight: 600;
         }
 
@@ -274,7 +261,6 @@
             margin-bottom: 1.5rem;
             color: var(--text-secondary);
             font-size: 1.05rem;
-            line-height: 1.8;
         }
 
         .section a {
@@ -289,84 +275,112 @@
             border-bottom-color: var(--primary-green);
         }
 
-        .feature-list {
+        /* Numbered Lists */
+        .stages-list {
             list-style: none;
             padding: 0;
             margin: 1.5rem 0;
+            counter-reset: stage-counter;
         }
 
-        .feature-list li {
-            padding: 1rem 1rem 1rem 3rem;
+        .stages-list li {
+            padding: 1.25rem;
             margin-bottom: 1rem;
             background: var(--bg-alternate);
             border-left: 4px solid var(--primary-green);
             border-radius: 4px;
+            counter-increment: stage-counter;
             position: relative;
+            padding-left: 3.5rem;
         }
 
-        .feature-list li::before {
-            content: "✓";
+        .stages-list li::before {
+            content: counter(stage-counter);
             position: absolute;
             left: 1rem;
-            color: var(--primary-green);
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-green);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
-        /* Therapist Card */
-        .therapist-card {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 2rem;
-            align-items: start;
+        .stages-list li strong {
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        .therapist-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 12px;
-            object-fit: cover;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .credentials-list {
+        /* Criteria List */
+        .criteria-list {
             list-style: none;
             padding: 0;
             margin: 1.5rem 0;
         }
 
-        .credentials-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--primary-green-border);
-            color: var(--text-secondary);
+        .criteria-list li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: var(--bg-alternate);
+            border-left: 4px solid var(--primary-green);
+            border-radius: 4px;
         }
 
-        .credentials-list li:last-child {
-            border-bottom: none;
+        .criteria-list li strong {
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 0.25rem;
         }
 
-        /* CTA Box */
-        .cta-box {
+        /* CTA Buttons */
+        .manus-primary-cta {
             background: var(--primary-green);
-            color: white;
-            padding: 2.5rem;
+            color: white !important;
+            padding: 1.25rem 2.5rem;
             border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
+            font-size: 1.05rem;
+        }
+
+        .manus-primary-cta:hover {
+            background: var(--primary-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
+            color: white !important;
+        }
+
+        .cta-inline {
             text-align: center;
-            margin: 3rem 0;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: var(--primary-green-light);
+            border-radius: 12px;
         }
 
-        .cta-box h2,
-        .cta-box h3 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta-box p {
-            color: rgba(255,255,255,0.95);
+        .cta-inline p {
             margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        /* FAQ */
+        /* FAQ Section */
+        .mini-faq {
+            margin: 2rem 0;
+        }
+
         .faq-item {
             background: var(--bg-alternate);
             padding: 1.5rem;
@@ -376,14 +390,124 @@
         }
 
         .faq-item h3 {
+            font-family: var(--font-heading);
             font-size: 1.25rem;
+            color: var(--text-primary);
             margin-bottom: 0.75rem;
-            margin-top: 0;
         }
 
         .faq-item p {
             margin-bottom: 0;
             font-size: 1rem;
+        }
+
+        /* Neighborhoods Grid */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .neighborhoods-grid li {
+            background: var(--bg-alternate);
+            padding: 1rem;
+            border-radius: 8px;
+            list-style: none;
+            text-align: center;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        /* Alternatives List */
+        .alternatives-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .alternatives-list li {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: var(--bg-alternate);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .alternatives-list li strong {
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-alternate);
+            padding: 2rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .sidebar-section a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+        }
+
+        .sidebar-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .sidebar-cta h3 {
+            color: white;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            border: none;
+            padding: 0;
+        }
+
+        .sidebar-cta p {
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
         }
 
         /* Footer */
@@ -394,618 +518,953 @@
             margin-top: 5rem;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: white;
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--primary-green);
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: rgba(255,255,255,0.85);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            text-decoration: none;
-            display: block;
-        }
-
-        .footer-section a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-bottom {
+        .footer-content {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.15);
         }
 
-        .footer-bottom p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.9rem;
+        .footer p {
             margin-bottom: 0.5rem;
+            color: white;
+            opacity: 1;
+        }
+
+        .footer p:last-child {
+            opacity: 0.8;
         }
 
         /* Mobile Responsive */
         @media (max-width: 968px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero-cta {
+                flex-direction: column;
             }
 
-            .therapist-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .therapist-image {
-                margin: 0 auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .neighborhood-highlight {
+                font-size: 0.9rem;
             }
 
             .nav {
                 display: none;
             }
 
-            .container {
-                padding: 0 1rem;
+            .header-content {
+                flex-wrap: wrap;
+                gap: 1rem;
             }
-        }
 
-        @media (max-width: 600px) {
-            .stats-grid {
+            .neighborhoods-grid {
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
+            .stages-list li {
+                padding-left: 3rem;
             }
 
-            .hero {
-                padding: 3rem 0;
-            }
-
-            .section {
-                padding: 2rem 0;
+            .stages-list li::before {
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
             }
         }
     </style>
-    
-    <!-- Schema Markup - Article -->
+
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Bay Street Burnout Therapy for Toronto Financial Professionals",
-        "description": "Professional support for managing burnout, stress, and mental health in Toronto's demanding financial sector workplace culture.",
-        "author": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "affiliation": {
-                "@type": "Organization",
-                "name": "College of Registered Psychotherapists of Ontario"
-            },
-            "identifier": "CRPO #10979"
-        },
-        "publisher": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://nextsteptherapy.ca/therapist-toronto#webpage",
+          "url": "https://nextsteptherapy.ca/therapist-toronto",
+          "name": "Therapist Toronto | CRPO-Registered Psychotherapist",
+          "description": "Secure virtual therapy for Toronto professionals, students, and families. CRPO-registered psychotherapist offering evening availability and insurance-ready receipts.",
+          "inLanguage": "en-CA",
+          "about": {
+            "@type": "Service",
+            "name": "Therapy Services Toronto",
+            "areaServed": {
+              "@type": "City",
+              "name": "Toronto"
+            }
+          },
+          "publisher": {
             "@type": "Organization",
             "name": "Next Step Therapy",
+            "url": "https://nextsteptherapy.ca",
             "logo": {
-                "@type": "ImageObject",
-                "url": "https://nextsteptherapy.ca/images/logo.svg"
+              "@type": "ImageObject",
+              "url": "https://nextsteptherapy.ca/images/asset104.png"
             }
+          },
+          "datePublished": "2025-10-01",
+          "dateModified": "2025-10-20"
         },
-        "datePublished": "2025-11-12",
-        "dateModified": "2025-11-12"
-    }
-    </script>
-    
-    <!-- Schema Markup - LocalBusiness -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Next Step Therapy - Bay Street Burnout Support",
-        "image": "https://nextsteptherapy.ca/images/jesse-cynamon-therapist.jpg",
-        "@id": "https://nextsteptherapy.ca",
-        "url": "https://nextsteptherapy.ca/bay-street-burnout.html",
-        "telephone": "+14163062157",
-        "priceRange": "$160-$180",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Toronto",
-            "addressRegion": "Ontario",
-            "addressCountry": "CA"
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does a therapist cost in Toronto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Therapist fees in Toronto typically range from $150-$225 per session. At Next Step Therapy, sessions are $175. Most extended health plans cover 80-100% of psychotherapy fees when provided by a CRPO registered psychotherapist like myself."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is therapy covered by OHIP in Ontario?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Psychotherapy is not covered by OHIP. However, approximately 80% of employer health plans include coverage for registered psychotherapists (CRPO members). Check your benefits under 'psychotherapy' or 'mental health practitioners.'"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I know if a therapist is legitimate in Ontario?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Ontario, legitimate therapists are registered with regulatory colleges. For psychotherapists, verify their CRPO registration number on the official CRPO public register. I'm registered as CRPO #10979."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's the difference between a psychologist and psychotherapist in Toronto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Psychologists (CPO) have doctoral degrees and can do psychological testing. Psychotherapists (CRPO) have Master's degrees focused on therapy. Both provide talk therapy, but psychotherapists often have more affordable rates and better availability."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to find a therapist in Toronto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Using directories like Psychology Today, it can take 2-4 weeks due to waitlists and finding the right fit. At Next Step Therapy, I typically offer appointments within 48 hours and provide a free 15-minute consultation to ensure we're a good match."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is virtual therapy as effective as in-person in Toronto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Research shows virtual therapy is equally effective for most concerns including anxiety, depression, and workplace stress. Virtual sessions eliminate commute time and TTC delays, making therapy more accessible for busy Toronto professionals."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I know if therapy is working?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most clients notice improvements within 4-6 sessions. Signs therapy is working include: better understanding of your patterns, new coping strategies, reduced symptom intensity, and progress toward your values-based goals."
+              }
+            }
+          ]
         },
-        "areaServed": {
+        {
+          "@type": "Service",
+          "@id": "https://nextsteptherapy.ca/therapist-toronto#service",
+          "serviceType": "Therapist Toronto",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Next Step Therapy",
+            "telephone": "+1-416-306-2157",
+            "email": "jesse@nextsteptherapy.ca",
+            "areaServed": "Toronto, Ontario",
+            "knowsAbout": ["anxiety", "burnout", "career stress"],
+            "hasCredential": "CRPO #10979"
+          },
+          "areaServed": {
             "@type": "City",
             "name": "Toronto"
-        },
-        "serviceType": "Bay Street Burnout Therapy",
-        "provider": {
-            "@type": "Person",
-            "name": "Jesse Cynamon",
-            "jobTitle": "Registered Psychotherapist",
-            "identifier": "CRPO #10979"
-        }
-    }
-    </script>
-    
-    <!-- Schema Markup - FAQPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is burnout therapy confidential from my Bay Street employer?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. Therapy is completely confidential under CRPO regulations and Ontario privacy law (PIPEDA). Your employer will never know you're seeking support. I provide insurance receipts under 'Registered Psychotherapist' without specifying treatment details. Many Bay Street professionals use personal credit to avoid any employer connection."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Will therapy help or just make me feel weak in a competitive environment?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The most successful Bay Street professionals I work with view therapy as performance optimization—like working with a high-performance coach. Managing stress strategically is a competitive advantage, not a weakness. The goal isn't changing careers; it's thriving in the one you chose without sacrificing your health."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How quickly can I get an appointment?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Same-week appointments are typically available. Virtual therapy means you can meet during your lunch hour or after markets close without leaving downtown Toronto. Early morning sessions (7am) and evening sessions accommodate financial sector schedules."
-                }
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "name": "Virtual Therapy",
+            "serviceUrl": "https://nextsteptherapy.ca/virtual-therapy-ontario.html",
+            "serviceLocation": {
+              "@type": "City",
+              "name": "Toronto",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "addressCountry": "CA"
+              }
             }
-        ]
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "175.00",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://nextsteptherapy.ca/therapist-toronto"
+          }
+        }
+      ]
     }
     </script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-48SGBFBECT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-48SGBFBECT');
-    </script>
+    <!-- Ahrefs Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
 <body>
 
-    <!-- Minimal Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="/">Next Step Therapy</a>
-                </div>
-                <nav class="nav">
-                    <a href="/#services">Services</a>
-                    <a href="/jesse-cynamon-psychotherapist-ontario.html">About</a>
-                    <a href="/contact.html">Contact</a>
-                    <a href="tel:+14163062157" class="btn btn-primary">(416) 306-2157</a>
-                </nav>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                <a href="/" class="logo-text">Next Step Therapy</a>
+                <span class="credentials-badge-prominent">CRPO #10979</span>
             </div>
+            <nav class="nav">
+                <a href="/#approach">Approach</a>
+                <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                <a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a>
+                <a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a>
+                <a href="https://nextsteptherapy.janeapp.com/">Schedule Call</a>
+            </nav>
+            <a href="tel:+14163062157" class="header-phone">Call (416) 306-2157</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1>Bay Street Burnout: For Professionals Who Can't Afford to "Just Quit"</h1>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Bay Street Burnout: For Professionals Who Can't Afford to "Just Quit"</h1>
                 <nav class="breadcrumb">
-                    <a href="/">Home</a> → <a href="/#services">Services</a> → Bay Street Burnout Therapy
+                    <a href="/">Home</a> → <a href="/#specializations">Services</a> → Bay Street Burnout Therapy
                 </nav>
-                <p class="hero-subtext">You worked incredibly hard to get here. But somewhere between 80-hour weeks and toxic cultural norms, you started wondering if this is sustainable. Therapy for Bay Street professionals who need support without the pressure to "just leave."</p>
-                <div class="hero-cta">
+        <p class="hero-subtext">You worked incredibly hard to get here. But somewhere between 80-hour weeks and toxic cultural norms, you started wondering if this is sustainable. Therapy for Bay Street professionals who need support without the pressure to "just leave."</p>
+        <div class="hero-cta">
+            <a href="/#contact" class="manus-primary-cta">Book Free 15-Min Consultation</a>
+            <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
+        </div>
+        <div class="trust-pills">
+            <span class="trust-pill">✓ CRPO #10979 Registered</span>
+            <span class="trust-pill">✓ Complete Confidentiality</span>
+            <span class="trust-pill">✓ Insurance-Ready Receipts</span>
+            <span class="trust-pill">✓ Early Morning & Evening Sessions</span>
+        </div>
+        <div class="neighborhood-highlight">
+            <strong>Serving Toronto's Financial District:</strong> Bay Street • King West • Financial District • Downtown Core
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="content-wrapper">
+        <main class="main-content">
+
+            <!-- Section 1: Is This You? -->
+            <section class="section">
+                <h2 class="section-title">Is This You?</h2>
+
+                <p>You're good at what you do. Really good. That's how you ended up on Bay Street. But the same drive that got you here is now keeping you stuck in:</p>
+
+                <ul class="criteria-list">
+                    <li>
+                        <strong>80+ hour weeks</strong>
+                        that aren't optional if you want to stay competitive
+                    </li>
+                    <li>
+                        <strong>Sunday night dread</strong>
+                        that starts Friday evening
+                    </li>
+                    <li>
+                        <strong>Performance anxiety</strong>
+                        even when you're objectively succeeding
+                    </li>
+                    <li>
+                        <strong>Relationship strain</strong>
+                        because you're too exhausted for anything outside work
+                    </li>
+                    <li>
+                        <strong>Feeling trapped</strong>
+                        between golden handcuffs and genuine ambition
+                    </li>
+                    <li>
+                        <strong>Physical symptoms</strong>
+                        (headaches, insomnia, digestive issues) that doctors say are "stress-related"
+                    </li>
+                    <li>
+                        <strong>Identity crisis</strong>
+                        questioning if this is what you actually want
+                    </li>
+                </ul>
+
+                <p>Bay Street burnout therapy helps you process the unique pressures of high-stakes financial work without judgment about whether you should stay or leave.</p>
+            </section>
+
+            <!-- Why Work With Me Section (MOVED UP FOR CONVERSION) -->
+            <section class="section">
+                <h2 class="section-title">Why Work With Me?</h2>
+
+                <p>I'm Jesse Cynamon, a CRPO registered psychotherapist (#10979) working with Toronto professionals in high-pressure careers who can't just "take a mental health day" without career consequences.</p>
+
+                <p>Using <a href="/cbt-therapy-toronto.html">CBT</a> and Acceptance and Commitment Therapy (ACT), I focus on strategies that fit within your actual career constraints—not idealistic advice that ignores the reality of Bay Street. Here's what makes working with me different:</p>
+
+                <ul class="criteria-list">
+                    <li>
+                        <strong>Managing performance anxiety</strong>
+                        without compromising your competitive edge
+                    </li>
+
+                    <li>
+                        <strong>Processing chronic stress</strong>
+                        when you can't just "leave it at the office"
+                    </li>
+
+                    <li>
+                        <strong>Navigating career decisions</strong>
+                        when burnout makes you question everything
+                    </li>
+
+                    <li>
+                        <strong>Same-Week Virtual Appointments</strong>
+                        Evening sessions (7-9 PM) and early morning slots (7 AM) fit Bay Street schedules. No commute, no office visits—therapy from your Financial District condo or home office.
+                    </li>
+                </ul>
+
+                <p>I don't do therapy that requires you to fundamentally change your ambition or career goals. The work is about thriving in a demanding environment, not escaping it—unless that's what you genuinely want.</p>
+            </section>
+
+            <!-- Secondary CTA (ADDED FOR CONVERSION) -->
+            <div class="cta-box" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+                <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Burnout Doesn't Mean You Failed</h3>
+                <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Same-week appointments. Virtual therapy fits your Bay Street schedule.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/#contact" class="btn" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700;">📅 Book Free Consultation</a>
+                    <a href="tel:+14163062157" class="btn" style="display: inline-block; padding: 1.25rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; text-decoration: none; border-radius: 8px; font-weight: 600;">📞 Call (416) 306-2157</a>
+                </div>
+                <p style="font-size: 0.95rem; margin-top: 1.5rem; color: rgba(255,255,255,0.9);"><small>✓ Complete confidentiality  |  ✓ Insurance accepted  |  ✓ Early morning & evening sessions</small></p>
+            </div>
+
+            <!-- Section 2: How to Find the Right Therapist -->
+            <section class="section">
+                <h2 class="section-title">How to Find the Right Therapist in Toronto</h2>
+
+                <p>Finding the right therapist doesn't have to be complicated. Here's a practical three-stage approach that actually works:</p>
+
+                <ol class="stages-list">
+                    <li>
+                        <strong>Stage 1: Know What You're Looking For</strong>
+                        <p>Get clear on your primary concern. Is it anxiety that's keeping you up at night? Depression that's making everything feel heavy? Workplace stress that's affecting your performance? Or relationship issues that need attention? The clearer you are about what you need help with, the easier it is to find someone who specializes in that area.</p>
+                    </li>
+
+                    <li>
+                        <strong>Stage 2: Evaluate Credentials and Approach</strong>
+                        <p>In Ontario, look for registered professionals: CRPO for psychotherapists, CPO for psychologists, or OCSWSSW for social workers. Check their registration number on the public register. Then consider their therapeutic approach—<a href="/">ACT therapy</a> for values-based living, <a href="/cbt-therapy-techniques-ontario.html">CBT</a> for thought patterns, or trauma-focused approaches for past experiences. Make sure their specialization matches your needs.</p>
+                    </li>
+
+                    <li>
+                        <strong>Stage 3: Book a Consultation and Trust Your Gut</strong>
+                        <p>Most therapists (including myself) offer free consultations. This isn't just for them to assess you—it's for you to assess them. Do you feel heard? Can they explain their approach clearly? Do they understand your specific situation? Trust your instincts. The therapeutic relationship is the strongest predictor of success, so feeling comfortable with your therapist matters more than any credential.</p>
+                    </li>
+                </ol>
+
+                <div class="cta-inline">
+                    <p>Ready to skip the search and talk directly to a therapist?</p>
+                    <a href="/#contact" class="manus-primary-cta">Book Your Free Consultation</a>
+                </div>
+            </section>
+
+            <!-- Section 3: What Makes a Good Therapist -->
+            <section class="section">
+                <h2 class="section-title">What Makes a Good Therapist in Toronto?</h2>
+
+                <p>Not all therapists are created equal, and credentials alone don't guarantee a good fit. Here's what actually matters when evaluating a therapist:</p>
+
+                <ul class="criteria-list">
+                    <li>
+                        <strong>Proper Credentials and Registration</strong>
+                        In Ontario, therapists should be registered with a regulatory college. I'm registered with CRPO (College of Registered Psychotherapists of Ontario) as #10979, which you can verify on their public register. This ensures I meet educational standards, follow ethical guidelines, and maintain professional accountability.
+                    </li>
+
+                    <li>
+                        <strong>Clear Therapeutic Approach</strong>
+                        A good therapist can explain their approach in plain language. I use Acceptance and Commitment Therapy (ACT), which helps clients clarify their values, accept difficult emotions, and take action aligned with what matters to them. It's particularly effective for <a href="/anxiety-therapy-ontario.html">anxiety</a> and <a href="/workplace-stress-therapy-ontario.html">workplace stress</a>—common concerns for Toronto professionals.
+                    </li>
+
+                    <li>
+                        <strong>Personal Fit and Connection</strong>
+                        Research consistently shows the therapeutic relationship is more important than the specific technique used. You should feel heard, understood, and respected—not judged. I maintain a non-judgmental, values-driven approach that focuses on your goals, not my agenda.
+                    </li>
+
+                    <li>
+                        <strong>Practical Matters That Actually Work</strong>
+                        Same-week availability (not 4-week waitlists). Insurance acceptance (I'm CRPO registered so most plans cover 80-100%). Virtual options (because commuting across Toronto for a 6pm appointment is stressful enough). Evening hours (because 9-5 doesn't work for most people). These logistics matter as much as clinical skills.
+                    </li>
+                </ul>
+
+                <p>At <a href="/">Next Step Therapy</a>, I focus on making therapy accessible and effective for Toronto professionals who are dealing with anxiety, workplace burnout, or life transitions—without the typical barriers that make getting help harder than it needs to be.</p>
+            </section>
+
+            <!-- Section 4: Understanding Therapy Credentials in Ontario -->
+            <section class="section">
+                <h2 class="section-title">Understanding Therapy Credentials in Ontario</h2>
+
+                <p>Ontario has multiple regulated mental health professions, and the differences matter—not just for legitimacy, but for cost, availability, and insurance coverage. Here's what you need to know.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">What is CRPO?</h3>
+
+                <p>The <a href="https://www.crpo.ca" target="_blank" rel="noopener">College of Registered Psychotherapists of Ontario (CRPO)</a> is the regulatory body for psychotherapists in Ontario. Established in 2015, CRPO regulates thousands of practitioners across the province. Registration means a therapist has met specific educational requirements (typically a Master's degree), passed competency exams, maintains professional liability insurance, and follows a code of ethics.</p>
+
+                <p>When you work with a CRPO-registered psychotherapist, you have recourse if something goes wrong. The college investigates complaints and can discipline members. This matters more than most people realize—anyone can call themselves a "therapist" or "counsellor" in Ontario, but only CRPO members can use the title "Registered Psychotherapist."</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">RP vs RSW vs Psychologist: What's the Difference?</h3>
+
+                <p>Toronto has three main types of regulated therapists. Here's a practical comparison:</p>
+
+                <div style="overflow-x: auto; margin: 2rem 0;">
+                    <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background: var(--primary-green); color: white;">
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #ddd;">Credential</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #ddd;">Regulatory Body</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #ddd;">Education</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #ddd;">Typical Rate</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #ddd;">Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 1rem;"><strong>Registered Psychotherapist (RP)</strong></td>
+                                <td style="padding: 1rem;">CRPO</td>
+                                <td style="padding: 1rem;">Master's in counselling psychology or psychotherapy</td>
+                                <td style="padding: 1rem;">$150-$200</td>
+                                <td style="padding: 1rem;">Usually 1-2 week wait</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 1rem;"><strong>Registered Social Worker (RSW)</strong></td>
+                                <td style="padding: 1rem;">OCSWSSW</td>
+                                <td style="padding: 1rem;">Master's in social work (MSW)</td>
+                                <td style="padding: 1rem;">$120-$180</td>
+                                <td style="padding: 1rem;">Usually 2-4 week wait</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem;"><strong>Psychologist (C.Psych)</strong></td>
+                                <td style="padding: 1rem;">CPO</td>
+                                <td style="padding: 1rem;">Doctoral degree (PhD or PsyD)</td>
+                                <td style="padding: 1rem;">$200-$275</td>
+                                <td style="padding: 1rem;">Usually 4-8 week wait</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><strong>What's the practical difference?</strong> All three provide talk therapy for mental health concerns. Psychologists can conduct psychological testing and assessments (IQ tests, ADHD evaluations, etc.)—the other two cannot. Social workers often have training in systemic issues and community resources. Psychotherapists specialize in therapeutic approaches and interventions.</p>
+
+                <p>For most people seeking therapy for anxiety, depression, or workplace stress, the credential matters less than the therapeutic relationship and the therapist's approach. I'm a CRPO-registered psychotherapist (#10979), which means my focus is exclusively on providing therapy—not assessments, not case management, just the therapeutic work.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">How to Verify a Therapist's Registration</h3>
+
+                <p>Before booking with any therapist in Ontario, verify their registration:</p>
+
+                <ul class="criteria-list">
+                    <li><strong>For Psychotherapists:</strong> Visit <a href="https://www.crpo.ca/find-a-therapist/" target="_blank" rel="noopener">CRPO's public register</a> and search by name or registration number</li>
+                    <li><strong>For Social Workers:</strong> Check the <a href="https://www.ocswssw.org/public-register/" target="_blank" rel="noopener">OCSWSSW public register</a></li>
+                    <li><strong>For Psychologists:</strong> Search the <a href="https://cpo.on.ca/public-register/" target="_blank" rel="noopener">CPO public register</a></li>
+                </ul>
+
+                <p>This takes 30 seconds and ensures you're working with someone who's accountable to a regulatory body. My registration (CRPO #10979) is public and verifiable—as it should be.</p>
+            </section>
+
+            <!-- Section 5: Therapy Approaches Explained -->
+            <section class="section">
+                <h2 class="section-title">Therapy Approaches Explained: ACT vs CBT</h2>
+
+                <p>Therapists use different approaches, and understanding the basics helps you choose someone whose methods align with what you're looking for. Here's a practical overview of the two most common evidence-based approaches in Toronto.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Cognitive Behavioral Therapy (CBT): The Industry Standard</h3>
+
+                <p>CBT is the most widely practiced therapy approach in Canada. It focuses on the connection between thoughts, feelings, and behaviors. The core idea: your thoughts influence your emotions, which influence your actions. By changing unhelpful thought patterns, you can change how you feel and what you do.</p>
+
+                <p><strong>What CBT looks like in practice:</strong></p>
+
+                <ul class="criteria-list">
+                    <li>Identifying negative thought patterns ("cognitive distortions")</li>
+                    <li>Challenging and reframing those thoughts</li>
+                    <li>Behavioral experiments to test new ways of thinking</li>
+                    <li>Homework between sessions (thought records, exposure exercises)</li>
+                </ul>
+
+                <p>CBT works well for specific problems with clear triggers—panic attacks, social anxiety, specific phobias. It's structured, goal-oriented, and typically shorter-term (12-20 sessions). Most therapists in Toronto offer some form of CBT because it's well-researched and insurance companies like it.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Acceptance and Commitment Therapy (ACT): A Values-Based Approach</h3>
+
+                <p>ACT (pronounced as the word "act") is a newer evidence-based approach that takes a different angle. Instead of trying to change your thoughts, ACT focuses on changing your relationship with your thoughts. The goal isn't to eliminate anxiety or discomfort—it's to live a meaningful life even when those feelings show up.</p>
+
+                <p><strong>What ACT looks like in practice:</strong></p>
+
+                <ul class="criteria-list">
+                    <li>Clarifying your core values (what matters to you, not what society says should matter)</li>
+                    <li>Learning to accept difficult thoughts and emotions without being controlled by them</li>
+                    <li>Practicing psychological flexibility—being present and taking action aligned with your values</li>
+                    <li>Building awareness of how avoiding discomfort creates more problems than it solves</li>
+                </ul>
+
+                <p>ACT works particularly well for workplace stress, perfectionism, career anxiety, and situations where the problem isn't a specific symptom but a pattern of living disconnected from what matters to you. It's less about "fixing" yourself and more about building the life you want while accepting that discomfort is part of being human.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Which Approach is Right for You?</h3>
+
+                <p>Both CBT and ACT are evidence-based and effective. The difference comes down to fit:</p>
+
+                <p><strong>Consider CBT if:</strong> You have a specific problem you want to solve (panic attacks, specific phobia, clear negative thought patterns). You want structured, goal-oriented therapy with homework. You prefer a more directive approach where the therapist guides you through specific techniques.</p>
+
+                <p><strong>Consider ACT if:</strong> You're dealing with workplace burnout, career anxiety, or feeling stuck despite "having it all together." You're tired of fighting your thoughts and want a different relationship with them. You want therapy focused on living according to your values, not just symptom reduction.</p>
+
+                <p>At <a href="/">Next Step Therapy</a>, I use ACT because I work primarily with Toronto professionals who are dealing with workplace stress, <a href="/anxiety-therapy-ontario.html">anxiety</a>, and the pressure of high-performing careers. These aren't problems you "fix"—they're challenges you navigate while building a life that matters to you. That's where ACT shines.</p>
+
+                <p>During our free 15-minute consultation, I can explain how ACT would work for your specific situation. No commitment required—just a conversation about whether this approach makes sense for what you're dealing with.</p>
+            </section>
+
+            <!-- Section 6: Insurance Coverage Guide for Ontario -->
+            <section class="section">
+                <h2 class="section-title">Insurance Coverage Guide for Therapy in Ontario</h2>
+
+                <p>Let's address the most common question upfront: therapy isn't covered by OHIP, but most people in Ontario have some form of private coverage they don't know about or don't know how to use. Here's everything you need to know.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Why OHIP Doesn't Cover Therapy</h3>
+
+                <p>OHIP (Ontario Health Insurance Plan) covers medically necessary services provided by physicians. Psychotherapy provided by registered psychotherapists, social workers, or psychologists isn't covered because these aren't physician services. The only therapy covered by OHIP is through psychiatrists (medical doctors), and waitlists for psychiatric services in Toronto are typically 6-12 months.</p>
+
+                <p>This isn't ideal, but it's the reality of Ontario's healthcare system. The good news: most people have extended health benefits that cover therapy.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Extended Health Benefits: What's Covered</h3>
+
+                <p>Approximately 80% of full-time employees in Ontario have extended health benefits through their employer. These plans typically cover registered psychotherapists (CRPO), registered social workers (OCSWSSW), and psychologists (CPO).</p>
+
+                <p><strong>Common coverage amounts by provider:</strong></p>
+
+                <ul class="criteria-list">
+                    <li><strong>Manulife:</strong> $500-$1,000 per year most typical, some plans up to $2,000. Most plans cover 80% per session up to the annual maximum. Check your benefits portal or call 1-800-268-6195.</li>
+                    <li><strong>Sun Life:</strong> $500-$1,500 per year for mental health practitioners. Some plans combine psychotherapists with other practitioners. Login to MySunLife or call 1-877-786-5433.</li>
+                    <li><strong>Canada Life (formerly Great-West Life):</strong> $500-$1,000 most typical, some plans up to $2,000. Coverage varies by employer plan. Check GroupNet or call 1-800-957-9777.</li>
+                    <li><strong>Blue Cross:</strong> $500-$1,000 per year for psychotherapists. Some plans require a physician referral. Check your member portal or call 1-866-732-2583.</li>
+                    <li><strong>Green Shield Canada:</strong> $500-$1,500 per year. Most plans cover 80% per session. Login to GSC online or call 1-888-711-1119.</li>
+                </ul>
+
+                <p>Most plans reset annually (usually January 1st or on your company's benefit year). If you're not sure what you have, check your benefits package or call your HR department—they can tell you exactly what's covered.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">How to Submit Claims for Reimbursement</h3>
+
+                <p>Here's the step-by-step process for getting reimbursed:</p>
+
+                <ol class="stages-list">
+                    <li>
+                        <strong>Step 1: Attend Your Session and Pay</strong>
+                        <p>Pay for your session at the time of service (e-transfer, credit card, or debit). I provide a detailed receipt immediately after each session with all required information: my name, CRPO registration number, date of service, fee paid, and my professional designation.</p>
+                    </li>
+                    <li>
+                        <strong>Step 2: Submit Your Receipt</strong>
+                        <p>Most insurance companies now have mobile apps where you can submit claims by taking a photo of your receipt. Alternatively, you can submit through their website or mail in a paper claim form. The process takes about 2 minutes once you've done it the first time.</p>
+                    </li>
+                    <li>
+                        <strong>Step 3: Get Reimbursed</strong>
+                        <p>Reimbursement typically takes 3-7 business days via direct deposit. Most plans reimburse 80% per session—check your specific plan details for your exact coverage. You'll receive an Explanation of Benefits (EOB) showing how much was covered and how much of your annual maximum remains.</p>
+                    </li>
+                </ol>
+
+                <p><strong>Important notes:</strong></p>
+
+                <ul class="criteria-list">
+                    <li>Some plans require a physician referral. Check before your first session—I can provide a template letter if needed.</li>
+                    <li>Keep copies of all receipts. Some insurers require a summary at year-end for tax purposes.</li>
+                    <li>If you're seeing multiple practitioners (therapist + massage therapist, for example), some plans have combined maximums. Check your plan details.</li>
+                </ul>
+
+                <p>At Next Step Therapy, I make this process as simple as possible. You get a detailed receipt after every session with everything your insurance company needs. No complex billing codes, no back-and-forth—just straightforward documentation that insurance companies accept without question.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">What If You Don't Have Insurance?</h3>
+
+                <p>If you don't have extended health benefits, therapy is still accessible:</p>
+
+                <ul class="criteria-list">
+                    <li><strong>Out-of-pocket investment:</strong> Sessions are $175 for 50 minutes. Many people budget for bi-weekly or monthly sessions rather than weekly.</li>
+                    <li><strong>Tax deduction:</strong> Therapy fees are tax-deductible as medical expenses if you itemize on your return. Keep your receipts for tax season.</li>
+                    <li><strong>Workplace assistance programs:</strong> Some employers offer Employee Assistance Programs (EAP) with 3-8 free sessions. Check with HR—these are separate from extended health benefits.</li>
+                    <li><strong>Free options:</strong> ConnexOntario (1-866-531-2600) connects you with community mental health services. Waitlists vary but it's a no-cost alternative.</li>
+                </ul>
+
+                <p>During our free consultation, I can help you figure out what options make sense for your situation. No judgment, just practical information.</p>
+            </section>
+
+            <!-- Section 7: What to Expect in Your First Therapy Session -->
+            <section class="section">
+                <h2 class="section-title">What to Expect in Your First Therapy Session</h2>
+
+                <p>If you've never been to therapy before (or if it's been a while), the first session can feel intimidating. Here's exactly what happens so you know what to expect.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Before the Session: Paperwork and Logistics</h3>
+
+                <p>Before we meet, you'll receive a few documents via email:</p>
+
+                <ul class="criteria-list">
+                    <li><strong>Informed consent form:</strong> This outlines confidentiality, limits to confidentiality (child abuse, threat to harm someone, etc.), how sessions work, and your rights as a client. It's not exciting reading, but it's important.</li>
+                    <li><strong>Privacy policy:</strong> How your information is stored and protected. All session notes are encrypted and stored securely in compliance with Ontario privacy laws.</li>
+                    <li><strong>Payment information:</strong> Session fees, cancellation policy (24 hours notice required), and how to submit receipts to insurance.</li>
+                </ul>
+
+                <p>Fill these out before our first session so we can spend our time talking instead of doing paperwork. If you have questions about anything in the forms, we'll address them at the start of our session.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">First 15 Minutes: Getting Started</h3>
+
+                <p>The session starts with me explaining how things work: confidentiality, how often we'll meet, what to expect from the process. I'll ask what brought you to therapy and what you're hoping to get from it.</p>
+
+                <p>This isn't an interrogation—it's a conversation. Some people come prepared with a clear goal ("I need help with panic attacks"). Others aren't sure exactly what they need but know something isn't working. Both are fine. There's no wrong answer to "what brings you here?"</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Middle 25 Minutes: Understanding Your Situation</h3>
+
+                <p>I'll ask about your current situation, what's been going on, and how it's affecting your life. This isn't a diagnostic interview—I'm not running down a checklist of symptoms. I'm trying to understand your experience:</p>
+
+                <ul class="criteria-list">
+                    <li>What's happening in your life right now?</li>
+                    <li>When did you first notice this becoming a problem?</li>
+                    <li>What have you already tried?</li>
+                    <li>What matters to you? (Your values, what you want your life to be about)</li>
+                </ul>
+
+                <p>You won't cover everything in the first session. That's normal. We're building a foundation for the work ahead, not solving everything in 50 minutes.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">Final 10 Minutes: Next Steps</h3>
+
+                <p>Toward the end, I'll summarize what I heard, give you my initial thoughts on how we might work together, and answer any questions you have. We'll discuss:</p>
+
+                <ul class="criteria-list">
+                    <li><strong>Frequency:</strong> How often should we meet? (Weekly, bi-weekly, or monthly depending on your needs and budget)</li>
+                    <li><strong>Approach:</strong> How ACT would work for your specific situation</li>
+                    <li><strong>Timeline:</strong> Rough sense of how long therapy might take (though this is always flexible)</li>
+                    <li><strong>Logistics:</strong> Scheduling, payment, insurance receipts</li>
+                </ul>
+
+                <p>If we're a good fit, we'll book our next session. If you're not sure, you can think about it—no pressure. The free consultation before this first session exists specifically so we can both decide if this is the right fit before committing to the full therapeutic process.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">What You Don't Have to Do</h3>
+
+                <p>First sessions can feel vulnerable, so here's what you're NOT expected to do:</p>
+
+                <ul class="criteria-list">
+                    <li>Share your entire life story in one hour</li>
+                    <li>Have everything figured out before you start</li>
+                    <li>Know exactly what you want from therapy</li>
+                    <li>Answer every question I ask (if something feels too personal, you can say so)</li>
+                    <li>Commit to long-term therapy after one session</li>
+                </ul>
+
+                <p>Therapy works best when you feel comfortable, and that takes time. The first session is as much about you assessing me as it is about me understanding your situation. Trust your instincts—if something doesn't feel right, that's important information.</p>
+
+                <h3 style="color: var(--primary-green); margin: 2rem 0 1rem;">After the First Session</h3>
+
+                <p>Most people leave the first session feeling a mix of relief ("okay, that wasn't as scary as I thought") and uncertainty ("will this actually help?"). That's normal. Therapy isn't linear—you won't feel dramatically better after one session, and that's not the goal.</p>
+
+                <p>The goal of the first session is connection: do you feel heard? Can I explain things in a way that makes sense? Do you feel like we can work together? If the answer is yes, we'll build from there. If it's no, I'll help you figure out what might be a better fit.</p>
+
+                <p>At <a href="/">Next Step Therapy</a>, the first session is about starting a conversation, not conducting an assessment. You're not a diagnosis—you're a person navigating challenges in a demanding city. That's where we begin.</p>
+            </section>
+
+            <!-- Section 8: FAQ -->
+            <section class="section">
+                <h2 class="section-title">Common Questions About Finding a Therapist in Toronto</h2>
+
+                <div class="mini-faq">
+                    <div class="faq-item">
+                        <h3>How much does a therapist cost in Toronto?</h3>
+                        <p>Therapist fees in Toronto typically range from $150-$225 per session. At Next Step Therapy, sessions are $175. Most extended health plans cover 80-100% of psychotherapy fees when provided by a CRPO registered psychotherapist like myself. Check your benefits under "psychotherapy" or "mental health practitioners."</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is therapy covered by OHIP in Ontario?</h3>
+                        <p>No, psychotherapy is not covered by OHIP. However, approximately 80% of employer health plans include coverage for registered psychotherapists (CRPO members). Some plans require a physician referral, while others allow direct billing. It's worth checking your benefits—many people have coverage they don't know about.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I know if a therapist is legitimate in Ontario?</h3>
+                        <p>In Ontario, legitimate therapists are registered with regulatory colleges. For psychotherapists, verify their CRPO registration number on the <a href="https://www.crpo.ca/find-a-therapist/" target="_blank" rel="noopener">official CRPO public register</a>. For psychologists, check the College of Psychologists of Ontario (CPO). I'm registered as CRPO #10979, which you can verify anytime.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What's the difference between a psychologist and psychotherapist in Toronto?</h3>
+                        <p>Psychologists (CPO) have doctoral degrees (PhD or PsyD) and can conduct psychological testing and assessments. Psychotherapists (CRPO) have Master's degrees focused on providing therapy. Both provide talk therapy for mental health concerns, but psychotherapists often have more affordable rates ($150-$175 vs $200-$250) and better availability.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How long does it take to find a therapist in Toronto?</h3>
+                        <p>Using directories like Psychology Today, it can take 2-4 weeks—browsing profiles, sending inquiries, waiting for responses, and dealing with waitlists. At Next Step Therapy, I typically offer appointments within 48 hours and provide a free 15-minute consultation to ensure we're a good match. No waitlists, no delays.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is virtual therapy as effective as in-person in Toronto?</h3>
+                        <p>Research shows <a href="/virtual-therapy-ontario.html">virtual therapy</a> is equally effective for most concerns including anxiety, depression, and workplace stress. Virtual sessions eliminate commute time (no sitting on the TTC for 45 minutes), offer more scheduling flexibility, and provide the same therapeutic benefits—especially important for busy Toronto professionals.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How do I know if therapy is working?</h3>
+                        <p>Most clients notice improvements within 4-6 sessions. Signs therapy is working include: better understanding of your patterns, new coping strategies you actually use, reduced symptom intensity, improved relationships, and progress toward your values-based goals. We'll track progress together so you're not guessing whether it's helping.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Serving All of Toronto -->
+            <section class="section">
+                <h2 class="section-title">Serving All of Toronto</h2>
+
+                <p>I provide virtual therapy services to clients throughout Toronto and the GTA. Because my sessions are virtual, you don't have to deal with traffic, TTC delays, or finding parking—you can attend from anywhere that's private and comfortable.</p>
+
+                <p>I regularly work with clients from these Toronto neighborhoods:</p>
+
+                <ul class="neighborhoods-grid">
+                    <li>Downtown (Financial District, King West)</li>
+                    <li>Midtown (Yonge & Eglinton, Yorkville)</li>
+                    <li>East End (Leslieville, The Beaches)</li>
+                    <li>West End (Junction, High Park, Roncesvalles)</li>
+                    <li>North York</li>
+                    <li>Scarborough</li>
+                </ul>
+
+                <p><strong>Why virtual therapy makes sense for Toronto:</strong> The average Toronto commute is 34 minutes each way. That's over an hour of travel time for a 50-minute session. Virtual therapy gives you that time back. You can attend during a lunch break, right after work, or from home in the evening—without the stress of rushing across the city.</p>
+
+                <p>Research consistently shows that <a href="/online-therapy-ontario.html">online therapy</a> is just as effective as in-person for most concerns, including <a href="/anxiety-therapy-toronto.html">anxiety</a>, <a href="/depression-therapy-ontario.html">depression</a>, and <a href="/workplace-stress-therapy-ontario.html">workplace stress</a>. You get the same quality care, just without the logistical headaches. Learn more about <a href="/virtual-therapy-ontario.html">how virtual therapy works in Ontario</a>.</p>
+            </section>
+
+            <!-- Section 7: Alternatives to Consider -->
+            <section class="section">
+                <h2 class="section-title">Other Options to Consider</h2>
+
+                <p>I believe in transparency, so here are other legitimate options for finding therapy in Toronto—along with honest pros and cons:</p>
+
+                <ul class="alternatives-list">
+                    <li>
+                        <strong>Psychology Today Directory</strong>
+                        <p><strong>Good for:</strong> Browsing many therapist profiles and filtering by specialty, insurance, and approach.</p>
+                        <p><strong>Challenge:</strong> Over 1,000 therapists in Toronto creates choice paralysis. Most have waitlists, and you'll spend hours browsing and emailing before finding someone available.</p>
+                    </li>
+
+                    <li>
+                        <strong>Inkblot or Layla Care (Therapy Platforms)</strong>
+                        <p><strong>Good for:</strong> Hand-holding through the matching process and user-friendly booking.</p>
+                        <p><strong>Challenge:</strong> You're matched by algorithm, not by direct connection. Less personal, and you don't get to speak with the therapist before committing to sessions.</p>
+                    </li>
+
+                    <li>
+                        <strong>CAMH (Centre for Addiction and Mental Health)</strong>
+                        <p><strong>Good for:</strong> Complex mental health needs, specialized programs, and those who can't afford private therapy.</p>
+                        <p><strong>Challenge:</strong> Long waitlists (often months), and services are typically for more severe/complex cases rather than general anxiety or workplace stress.</p>
+                    </li>
+
+                    <li>
+                        <strong>CRPO Directory</strong>
+                        <p><strong>Good for:</strong> Finding registered psychotherapists and verifying credentials.</p>
+                        <p><strong>Challenge:</strong> Basic directory with no filtering by specialty, availability, or approach. You'll still need to contact therapists individually to find availability.</p>
+                    </li>
+                </ul>
+
+                <p>These are all legitimate options. But if you want to skip the overwhelm, talk directly to a therapist who specializes in anxiety and workplace stress, and get started this week rather than next month—that's what I offer.</p>
+
+                <div class="cta-inline">
+                    <p>Or skip the search and book directly with me.</p>
                     <a href="/#contact" class="manus-primary-cta">Book Free 15-Min Consultation</a>
-                    <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                 </div>
-                
-                <div class="trust-pills">
-                    <span class="trust-pill">✓ CRPO #10979 Registered</span>
-                    <span class="trust-pill">✓ Complete Confidentiality</span>
-                    <span class="trust-pill">✓ Insurance-Ready Receipts</span>
-                    <span class="trust-pill">✓ Early Morning & Evening Sessions</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Service Info Section -->
-        <section class="section">
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Services Section -->
+            <div class="sidebar-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                    <li><a href="/student-mental-health-ontario.html">Student Support</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Therapy</a></li>
+                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Support</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Support</a></li>
+                    <li><a href="/how-to-find-therapist-ontario.html">Counselling Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Specialties Section -->
+            <div class="sidebar-section">
+                <h3>Specialties</h3>
+                <ul>
+                    <li><a href="/anxiety-therapy-toronto.html">Anxiety Therapy Toronto</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Counselling</a></li>
+                    <li><a href="/trauma-therapy-toronto.html">Trauma Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                    <li><a href="/university-anxiety-therapy-ontario.html">University Anxiety</a></li>
+                    <li><a href="/performance-anxiety-therapy-toronto.html">Performance Anxiety</a></li>
+                    <li><a href="/workplace-stress-burnout-therapy">Impostor Syndrome</a></li>
+                    <li><a href="/burnout-therapy-toronto.html">Burnout Therapy</a></li>
+                </ul>
+            </div>
+
+            <!-- Therapy Approaches Section -->
+            <div class="sidebar-section">
+                <h3>Therapy Approaches</h3>
+                <ul>
+                    <li><a href="/">ACT Therapy</a></li>
+                    <li><a href="/cbt-therapy-techniques-ontario.html">CBT Therapy</a></li>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                </ul>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="sidebar-cta">
+                <h3>Book Your Appointment Online</h3>
+                <p>I'm currently accepting new clients. Book a free 15-minute consultation to see if we're a good fit.</p>
+                <a href="/#contact" class="manus-primary-cta">Get Started</a>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<!-- Footer -->
+
+        <section class="section related-services">
             <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title">Is This You?</h2>
-                        
-                        <p>You're successful by every external metric, but internally you're:</p>
-                        
-                        <ul class="feature-list">
-                            <li><strong>Exhausted despite sleeping</strong> (when you can sleep)</li>
-                            <li><strong>Irritable with colleagues</strong> you used to respect</li>
-                            <li><strong>Checking your phone constantly</strong>, even on weekends and vacations</li>
-                            <li><strong>Feeling nothing</strong> when you close a deal that used to excite you</li>
-                            <li><strong>Using alcohol, substances, or work itself</strong> to manage stress</li>
-                            <li><strong>Experiencing physical symptoms</strong>—headaches, chest tightness, digestive issues</li>
-                            <li><strong>Questioning if this is worth it</strong> but too invested to leave</li>
-                            <li><strong>Isolated from friends and family</strong> who don't understand Bay Street culture</li>
-                        </ul>
-                        
-                        <p>Bay Street burnout therapy helps you navigate this without the simplistic advice to "just quit" or "find balance" (as if that's possible in investment banking).</p>
-                        
-                        <h3>How Bay Street Burnout Therapy Works</h3>
-                        
-                        <p>This isn't generic stress management. We focus on three things specific to financial sector culture:</p>
-                        
-                        <ul class="feature-list">
-                            <li><strong>Sustainable performance strategies</strong> that work in high-pressure environments</li>
-                            <li><strong>Managing the identity crisis</strong> that comes with questioning a career you've invested everything in</li>
-                            <li><strong>Processing the specific stressors</strong> of Bay Street culture—the hours, the competition, the financial stakes</li>
-                        </ul>
-                        
-                        <p>Using <a href="/cbt-therapy-toronto.html">CBT</a> and Acceptance and Commitment Therapy (ACT), we develop strategies that acknowledge the reality of your work environment. No toxic positivity. No judgment. Just practical support for managing one of Toronto's most demanding careers.</p>
-                    </div>
+                <h2>Related Services</h2>
+                <div class="service-links">
+                    <article>
+                        <h3><a href="/anxiety-therapy-toronto.html">Anxiety Therapy Toronto</a></h3>
+                        <p>Specialized anxiety support for Toronto professionals balancing intense workloads.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/therapy-brampton-ontario.html">Therapy Brampton Ontario</a></h3>
+                        <p>Virtual support for Peel Region residents managing family and corporate demands.</p>
+                    </article>
+                    <article>
+                        <h3><a href="/burlington-online-therapy.html">Burlington Online Therapy</a></h3>
+                        <p>Video sessions for Halton professionals commuting into the GTA.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Why Work With Me Section -->
-        <section class="section">
-            <h2 class="section-title">Why Work With Me?</h2>
-
-            <p>I'm Jesse Cynamon, a CRPO registered psychotherapist (#10979) working with Toronto professionals in high-pressure careers who can't just "take a mental health day" without career consequences.</p>
-
-            <p>Using <a href="/cbt-therapy-toronto.html">CBT</a> and Acceptance and Commitment Therapy (ACT), I focus on strategies that fit within your actual career constraints—not idealistic advice that ignores the reality of Bay Street. Here's what makes working with me different:</p>
-
-            <ul class="criteria-list">
-                <li>
-                    <strong>Managing performance anxiety</strong>
-                    without compromising your competitive edge
-                </li>
-
-                <li>
-                    <strong>Processing chronic stress</strong>
-                    when you can't just "leave it at the office"
-                </li>
-
-                <li>
-                    <strong>Navigating career decisions</strong>
-                    when burnout makes you question everything
-                </li>
-
-                <li>
-                    <strong>Same-Week Virtual Appointments</strong>
-                    Evening sessions (7-9 PM) and early morning slots (7 AM) fit Bay Street schedules. No commute, no office visits—therapy from your Financial District condo or home office.
-                </li>
-            </ul>
-
-            <p>I don't do therapy that requires you to fundamentally change your ambition or career goals. The work is about thriving in a demanding environment, not escaping it—unless that's what you genuinely want.</p>
-        </section>
-
-        <!-- Secondary CTA Box -->
-        <section class="section">
+        <section class="section helpful-resources">
             <div class="container">
-                <div class="cta-box" style="background: #6B8E6F; color: white; padding: 2.5rem; border-radius: 12px; text-align: center;">
-                    <h2 style="color: white; margin-top: 0;">Burnout Doesn't Mean You Failed</h2>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 2rem;">Same-week appointments. Virtual therapy fits your Bay Street schedule.</p>
-                    <a href="tel:+14163062157" class="btn btn-primary" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700; margin: 0.5rem;">📞 Call (416) 306-2157 Now</a>
-                    <a href="https://nextsteptherapy.janeapp.com" class="btn btn-secondary" style="display: inline-block; padding: 1.25rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">📅 Book Free Consultation Online</a>
-                    <p style="font-size: 0.9rem; margin-top: 1rem; color: rgba(255,255,255,0.9);"><small>✓ Completely confidential  |  ✓ Insurance accepted  |  ✓ No commitment required</small></p>
-                </div>
+                <h2>Helpful Resources</h2>
+                <ul>
+                    <li><a href="/how-to-find-therapist-ontario.html">How to Find a Therapist in Ontario</a></li>
+                    <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                    <li><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></li>
+                </ul>
             </div>
         </section>
-
-        <!-- What This Helps With -->
-        <section class="section" style="background: #F8F9FA;">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title">Who This Helps</h2>
-                        
-                        <h3>Toronto Financial Sector Professionals:</h3>
-                        
-                        <ul class="feature-list">
-                            <li><strong>Investment bankers</strong> managing deal flow, analyst expectations, and client demands</li>
-                            <li><strong>Private equity professionals</strong> navigating fundraising pressures and portfolio stress</li>
-                            <li><strong>Traders and portfolio managers</strong> dealing with market volatility and performance anxiety</li>
-                            <li><strong>Financial analysts and associates</strong> in the early career grind</li>
-                            <li><strong>Wealth management advisors</strong> managing client relationships and sales targets</li>
-                            <li><strong>Corporate finance professionals</strong> in high-growth companies or large institutions</li>
-                            <li><strong>Consulting professionals</strong> in Toronto's financial services sector</li>
-                        </ul>
-                        
-                        <h3>Common Presenting Concerns:</h3>
-                        
-                        <ul class="feature-list">
-                            <li><a href="/executive-stress-management-therapy.html">Executive stress</a> and performance pressure</li>
-                            <li><a href="/perfectionism-and-burnout-therapy-toronto.html">Perfectionism and burnout</a> from impossible standards</li>
-                            <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter syndrome</a> despite objective success</li>
-                            <li><a href="/performance-anxiety-therapy-ontario.html">Performance anxiety</a> about deals, presentations, or client interactions</li>
-                            <li>Relationship strain from work demands and long hours</li>
-                            <li>Substance use patterns that started as stress management</li>
-                            <li>Identity crisis about career path and life choices</li>
-                            <li>Physical health impacts from chronic stress</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Understanding Bay Street Culture -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title">Why Bay Street Burnout Is Different</h2>
-                        
-                        <p>Toronto's financial district has a specific culture that makes burnout both more likely and harder to address:</p>
-                        
-                        <h3>The Unique Stressors of Bay Street</h3>
-                        
-                        <ul class="feature-list">
-                            <li><strong>Face time culture:</strong> Hours worked are a badge of honor, not a concern</li>
-                            <li><strong>Always-on expectations:</strong> Deals don't wait for work-life balance</li>
-                            <li><strong>Up-or-out pressure:</strong> Constant performance evaluation and ranking</li>
-                            <li><strong>Golden handcuffs:</strong> Compensation makes leaving feel financially impossible</li>
-                            <li><strong>Prestige trap:</strong> Your identity becomes tied to your firm and title</li>
-                            <li><strong>Isolation from "normal" stress:</strong> Friends and family can't relate to your experience</li>
-                            <li><strong>Mental health stigma:</strong> Showing vulnerability feels like career suicide</li>
-                        </ul>
-                        
-                        <p>Generic <a href="/workplace-stress-therapy-ontario.html">workplace stress therapy</a> often suggests boundaries and self-care that simply aren't compatible with the demands of Toronto's financial sector. Bay Street burnout therapy acknowledges these realities while helping you find sustainable strategies within them.</p>
-                        
-                        <h3>What "Sustainable" Actually Means in Financial Services</h3>
-                        
-                        <p>We're not talking about working 9-5 or "perfect work-life balance." Sustainable in Bay Street context means:</p>
-                        
-                        <ul class="feature-list">
-                            <li>Managing stress in ways that don't destroy your health or relationships</li>
-                            <li>Making intentional choices about what you sacrifice and why</li>
-                            <li>Developing resilience that lets you recover from intense periods</li>
-                            <li>Maintaining your sense of self beyond your job title</li>
-                            <li>Creating exit strategies if and when you decide this isn't sustainable long-term</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Near Me Section (CRITICAL FOR SEO) -->
-        <section class="section" style="padding: 4rem 0; background: #F8F9FA;">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title" id="burnout-therapy-near-me">Finding Burnout Therapy Near Bay Street in Toronto</h2>
-                        
-                        <p>Searching for "<strong>burnout therapy near me</strong>" or "<strong>executive burnout therapist near me</strong>" in Toronto's financial district? You need support that doesn't add another downtown commute to your already-impossible schedule.</p>
-                        
-                        <p>Many Bay Street professionals begin their search typing "therapist near me Toronto" or "executive burnout counselling near me", not realizing that <a href="/virtual-therapy-ontario.html">virtual therapy</a> eliminates the logistical barrier while providing complete confidentiality.</p>
-                        
-                        <h3>Why "Near Me" Matters Less for Virtual Burnout Therapy</h3>
-                        
-                        <p>Traditional "<strong>burnout therapy near me</strong>" searches assume you need to physically visit an office. However, virtual therapy means your <strong>burnout therapist near you</strong> can provide support during your lunch hour, early morning before markets open, or evening after you finish work.</p>
-                        
-                        <p>For Bay Street professionals, this flexibility is essential.</p>
-                        
-                        <p>Whether you're working from:</p>
-                        <ul class="feature-list">
-                            <li><strong>Financial District Core:</strong> <a href="/therapist-toronto.html">Downtown Toronto</a>, King Street, Bay Street, Adelaide</li>
-                            <li><strong>Greater Toronto Area:</strong> <a href="/therapy-mississauga-ontario.html">Mississauga</a>, Brampton, Markham, Vaughan</li>
-                            <li><strong>Toronto Suburbs:</strong> Etobicoke, North York, Scarborough, East York</li>
-                            <li><strong>Commuter Communities:</strong> Oakville, Burlington, Pickering, Ajax</li>
-                            <li><strong>Remote in Ontario:</strong> <a href="/therapy-ottawa-ontario.html">Ottawa</a>, <a href="/therapy-hamilton-ontario.html">Hamilton</a>, <a href="/therapy-london-ontario.html">London</a>, <a href="/therapy-kingston-ontario.html">Kingston</a></li>
-                        </ul>
-                        
-                        <p>Professional <strong>burnout therapy near you in Toronto</strong> is available with same-week appointments, complete confidentiality, and the flexibility to meet around your unpredictable schedule.</p>
-                        
-                        <!-- CTA Box -->
-                        <div class="cta-box" style="background: #6B8E6F; color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem;">
-                            <h3 style="color: white; margin-top: 0;">Ready to Address Burnout?</h3>
-                            <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem;">Book your free 15-minute consultation with a CRPO registered therapist</p>
-                            <a href="tel:+14163062157" class="btn btn-primary" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700; margin: 0.5rem;">📞 Call (416) 306-2157 Now</a>
-                            <a href="https://nextsteptherapy.janeapp.com" class="btn btn-secondary" style="display: inline-block; padding: 1.25rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">📅 Book Free Consultation Online</a>
-                            <p style="font-size: 0.9rem; margin-top: 1rem; color: rgba(255,255,255,0.9);"><small>✓ Completely confidential  |  ✓ Insurance accepted  |  ✓ No commitment required</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title">Frequently Asked Questions</h2>
-                        
-                        <div class="faq-item">
-                            <h3>Is burnout therapy confidential from my Bay Street employer?</h3>
-                            <p>Yes. Therapy is completely confidential under CRPO regulations and Ontario privacy law (PIPEDA). Your employer will never know you're seeking support. I provide insurance receipts under "Registered Psychotherapist" without specifying treatment details. Many Bay Street professionals use personal credit to avoid any employer connection.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Will therapy help or just make me feel weak in a competitive environment?</h3>
-                            <p>The most successful Bay Street professionals I work with view therapy as performance optimization—like working with a high-performance coach. Managing stress strategically is a competitive advantage, not a weakness. The goal isn't changing careers; it's thriving in the one you chose without sacrificing your health.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>How quickly can I get an appointment?</h3>
-                            <p>Same-week appointments are typically available. Virtual therapy means you can meet during your lunch hour or after markets close without leaving downtown Toronto. Early morning sessions (7am) and evening sessions accommodate financial sector schedules.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>What if I can't commit to regular weekly sessions during busy deal cycles?</h3>
-                            <p>We work with the reality of Bay Street schedules. Some clients meet bi-weekly or schedule around their busiest periods. Others schedule strategically during less intense times. The goal is support that fits your capacity, not another obligation that creates stress.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Will you just tell me to quit or "find balance"?</h3>
-                            <p>No. I don't offer simplistic solutions that ignore Bay Street realities. We work on sustainable strategies within your current role—unless you decide you want to explore exit options. The therapy follows your goals, not generic advice about work-life balance that doesn't apply to investment banking.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>How is this different from executive coaching?</h3>
-                            <p>Executive coaching focuses on performance optimization. Burnout therapy addresses the mental health impacts of chronic stress—<a href="/anxiety-therapy-toronto.html">anxiety</a>, <a href="/depression-therapy-ontario.html">depression</a>, physical symptoms, relationship strain. If you're already past "optimization" and into genuine burnout, therapy provides clinical support coaching can't offer.</p>
-                        </div>
-                        
-                        <div class="faq-item">
-                            <h3>Is this covered by insurance?</h3>
-                            <p>Most employer health plans cover therapy with a Registered Psychotherapist. Bay Street firms typically offer robust mental health benefits. I provide insurance-ready receipts. Many clients also have Health Spending Accounts (HSAs) that cover the full cost.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="section" style="background: #F8F9FA;">
-            <div class="container">
-                <div class="cta-box" style="background: #6B8E6F; color: white; padding: 3rem; border-radius: 12px; text-align: center;">
-                    <h2 style="color: white; margin-top: 0;">You Don't Have to Manage Burnout Alone</h2>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.1rem; margin-bottom: 2rem;">Same-week virtual appointments. Complete confidentiality. Schedule around Bay Street demands.</p>
-                    <a href="https://nextsteptherapy.janeapp.com" class="btn btn-primary" style="display: inline-block; padding: 1.5rem 3rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.1rem; margin: 0.5rem;">📅 Book Free 15-Minute Consultation</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary" style="display: inline-block; padding: 1.5rem 3rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.1rem; margin: 0.5rem;">📞 Call (416) 306-2157</a>
-                    <p style="font-size: 0.95rem; margin-top: 1.5rem; color: rgba(255,255,255,0.9);"><small>✓ CRPO #10979 Registered  |  ✓ Insurance receipts provided  |  ✓ Virtual therapy across Toronto & Ontario</small></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Column 1: About & Contact -->
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Toronto professionals since 2022.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
-                </div>
-
-                <!-- Column 2: Therapy Services -->
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">Student Mental Health</a></li>
-                        <li><a href="/grief-counselling-toronto.html">Grief Counselling</a></li>
-                        <li><a href="/trauma-therapy-toronto.html">Trauma Therapy</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Ontario Service Areas -->
-                <div class="footer-section">
-                    <h4>Ontario Locations</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapy</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/online-therapy-ontario.html">Online Therapy Ontario</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Specialized Support -->
-                <div class="footer-section">
-                    <h4>Specialized Support</h4>
-                    <ul>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-                        <li><a href="/perfectionism-and-burnout-therapy-toronto.html">Perfectionism & Burnout</a></li>
-                        <li><a href="/career-anxiety-therapy-toronto.html">Career Anxiety</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/compassion-fatigue-therapy.html">Compassion Fatigue</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 5: Resources & Guides -->
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="/how-to-find-therapist-ontario.html">Finding a Therapist</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
-                        <li><a href="/blog/">Mental Health Blog</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                        <li><a href="/services.html">All Services</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 6: Professional Standards -->
-                <div class="footer-section">
-                    <h4>Professional Info</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><strong>CRPO Registration:</strong> #10979</li>
-                        <li><strong>Education:</strong> Master's in Counselling Psychology</li>
-                        <li><a href="https://www.crpo.ca" target="_blank" rel="noopener">CRPO Website</a></li>
-                    </ul>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; font-style: italic;">Bay Street burnout therapy and financial sector mental health support across Toronto and Ontario</p>
-                </div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Column 1: About & Contact -->
+            <div class="footer-section">
+                <h4>Jesse Cynamon, RP</h4>
+                <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                <p><strong>CRPO #10979 | MPsy</strong></p>
+                <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
             </div>
 
-            <!-- Crisis Resources -->
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
-                </p>
+            <!-- Column 2: Therapy Services -->
+            <div class="footer-section">
+                <h4>Therapy Services</h4>
+                <ul>
+                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
+                    <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
+                    <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                    <li><a href="/life-transitions.html">Life Transitions</a></li>
+                    <li><a href="/counselling-services.html">Relationship Support</a></li>
+                    <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                </ul>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> November 12, 2025</p>
+            <!-- Column 3: Ontario Service Areas -->
+            <div class="footer-section">
+                <h4>Ontario Service Areas</h4>
+                <ul>
+                    <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                    <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                    <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                    <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
+                    <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
+                    <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                    <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
+                    <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
+                    <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Specialized Support -->
+            <div class="footer-section">
+                <h4>Specialized Support</h4>
+                <ul>
+                    <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
+                    <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
+                    <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
+                    <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
+                    <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
+                    <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
+                    <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Resources & Guides -->
+            <div class="footer-section">
+                <h4>Resources & Guides</h4>
+                <ul>
+                    <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                    <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
+                    <li><a href="/blog/mental-health-guides/is-therapy-free-in-canada.html">Therapy Costs Ontario</a></li>
+                    <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                    <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 6: Professional Info -->
+            <div class="footer-section">
+                <h4>Professional Standards</h4>
+                <ul>
+                    <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+                <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Toronto therapy services and province-wide virtual support</p>
             </div>
         </div>
-    </footer>
+
+        <!-- Crisis Resources (CRPO Compliance) -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+            </p>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
+            Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
+            <strong>Last Updated:</strong> October 28, 2025</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
-
