@@ -289,16 +289,16 @@
         /* Hero Section - Two Column Layout */
         .hero-ppc {
             background: #ffffff;
-            padding: 4rem 0 5rem;
-            min-height: 650px;
+            padding: 6rem 0 7rem;
+            min-height: 700px;
             display: flex;
             align-items: center;
         }
         
         .hero-grid {
             display: grid;
-            grid-template-columns: 58% 42%;
-            gap: 4rem;
+            grid-template-columns: 55% 45%;
+            gap: 5rem;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -306,15 +306,21 @@
         
         .hero-content {
             text-align: left;
+            padding-right: 2rem;
+        }
+        
+        .hero-ppc h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         
         .hero-ppc .subheadline {
-            font-size: 1.2rem;
-            line-height: 1.7;
+            font-size: 1.3rem;
+            line-height: 1.8;
             color: #4a5568;
-            margin-bottom: 2.5rem;
             font-weight: 400;
-            max-width: 540px;
+            max-width: 600px;
         }
         
         .hero-ppc .subheadline strong {
@@ -324,23 +330,27 @@
         
         .hero-trust-section {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .hero-photo {
-            width: 160px;
-            height: 160px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            margin: 0 auto 2rem;
             object-fit: cover;
             border: 5px solid #ffffff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         
         .trust-signals {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.25rem;
             align-items: stretch;
+            width: 100%;
+            max-width: 280px;
         }
         
         .social-proof-text {
@@ -660,15 +670,17 @@
                 <div class="hero-grid">
                     <!-- Left: Main Content -->
                     <div class="hero-content">
-                        <h1>Stop Overthinking Everything<br>ACT Therapy for Anxiety</h1>
-                        <p class="subheadline"><strong>You've tried traditional therapy.</strong> It didn't stick. ACT therapy is different: practical skills you can use this week—not years of analysis. Virtual across Ontario.</p>
+                        <h1 style="margin-bottom: 2rem;">Anxiety Therapy in Toronto<br><span style="font-weight: 600; color: #5A7D5E;">Evidence-Based ACT Therapy</span></h1>
+                        
+                        <p class="subheadline" style="margin-bottom: 3rem;">Practical skills for managing anxiety—so you can make decisions based on your values, not your fears. Virtual sessions across Ontario.</p>
                         
                         <!-- Primary CTAs -->
-                        <div class="cta-buttons">
+                        <div class="cta-buttons" style="margin-bottom: 2rem;">
                             <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" onclick="gtag('event', 'begin_checkout', {'currency': 'CAD', 'value': 50, 'items': [{'item_name': 'Free Consultation', 'item_category': 'Anxiety Therapy'}]});">Book Your Free 15-Minute Call</a>
                             <a href="tel:+14163062157" class="manus-secondary-cta" onclick="gtag('event', 'generate_lead', {'currency': 'CAD', 'value': 60, 'lead_source': 'phone_click'});">Call (416) 306-2157</a>
                         </div>
-                        <p class="social-proof-text" style="font-size: 0.95rem; color: #5A7D5E; font-weight: 500; margin-top: 1.25rem;">⚡ <strong>No Waitlist:</strong> Unlike most Toronto therapists with 2-4 week waitlists, I have openings this week. Book now while spots are available.</p>
+                        
+                        <p class="social-proof-text" style="font-size: 0.95rem; color: #5A7D5E; font-weight: 500; font-style: italic;">Most new clients book within 2-3 days</p>
                     </div>
                     
                     <!-- Right: Photo + Trust Signals -->
@@ -678,11 +690,12 @@
                             srcset="/images/optimized/jesse-hero-300.webp 1x, /images/optimized/jesse-hero-600.webp 2x"
                             alt="Jesse Cynamon, Registered Psychotherapist" 
                             class="hero-photo" 
-                            width="180" 
-                            height="180" 
-                            loading="eager">
+                            width="200" 
+                            height="200" 
+                            loading="eager"
+                            style="margin-bottom: 2.5rem;">
                         
-                        <div class="trust-signals">
+                        <div class="trust-signals" style="gap: 1.25rem;">
                             <div class="trust-signal">
                                 <span class="trust-signal-icon">💰</span>
                                 <div><strong>$175</strong> per session</div>
@@ -696,8 +709,8 @@
                                 <div><strong>CRPO</strong> Registered #10979</div>
                             </div>
                             <div class="trust-signal">
-                                <span class="trust-signal-icon">⚡</span>
-                                <div><strong>No Waitlist</strong></div>
+                                <span class="trust-signal-icon">📅</span>
+                                <div><strong>Same-Week</strong> Appointments</div>
                             </div>
                         </div>
                     </div>
@@ -994,26 +1007,28 @@
         </section>
 
         <!-- Final CTA Section -->
-        <section class="section" id="contact-form">
+        <section class="section" id="contact-form" style="padding: 5rem 0;">
             <div class="container">
-                <div class="cta-box">
-                    <h2>Take the First Step Today</h2>
-                    <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);">If you're tired of anxiety controlling your choices and ready to develop a different relationship with worry and stress, professional support can help.</p>
+                <div class="cta-box" style="padding: 4rem; max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Take the First Step Today</h2>
                     
-                    <h3>Book Your Free 15-Minute Consultation</h3>
-                    <p>Start with a no-pressure conversation about what you're experiencing and how therapy might help. This brief call helps us both determine if we're a good fit.</p>
+                    <p style="font-size: 1.125rem; margin-bottom: 3rem; text-align: center; line-height: 1.8;">If you're tired of anxiety controlling your choices and ready to develop a different relationship with worry and stress, professional support can help.</p>
+                    
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; text-align: center; color: #5A7D5E;">Book Your Free 15-Minute Consultation</h3>
+                    
+                    <p style="margin-bottom: 2.5rem; text-align: center; font-size: 1.05rem; line-height: 1.7;">Start with a no-pressure conversation about what you're experiencing and how therapy might help. This brief call helps us both determine if we're a good fit.</p>
                     
                     <!-- Primary CTAs -->
-                    <div class="cta-buttons" style="margin-top: var(--space-lg);">
+                    <div class="cta-buttons" style="margin-top: 2.5rem; margin-bottom: 3rem; justify-content: center;">
                         <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" onclick="gtag('event', 'begin_checkout', {'currency': 'CAD', 'value': 50, 'items': [{'item_name': 'Free Consultation', 'item_category': 'Anxiety Therapy'}]});">📅 Book Free Consultation</a>
                         <a href="tel:+14163062157" class="manus-secondary-cta" onclick="gtag('event', 'generate_lead', {'currency': 'CAD', 'value': 60, 'lead_source': 'phone_click'});">📞 Call (416) 306-2157</a>
                     </div>
                     
-                    <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 2px solid rgba(107,142,111,0.2);">
-                        <p style="font-weight: 600; color: #4a6b7a; margin-bottom: 0.5rem;">Jesse Cynamon, RP</p>
-                        <p style="margin: 0;">Registered Psychotherapist | CRPO #10979</p>
-                        <p style="margin: 0;">Virtual Anxiety Therapy | Toronto & All Ontario</p>
-                        <p style="margin: 0;">Insurance Receipts Provided | Same-Week Appointments</p>
+                    <div style="margin-top: 3.5rem; padding-top: 3rem; border-top: 2px solid rgba(107,142,111,0.2); text-align: center;">
+                        <p style="font-weight: 700; color: #4a6b7a; margin-bottom: 1rem; font-size: 1.1rem;">Jesse Cynamon, RP</p>
+                        <p style="margin: 0.5rem 0; font-size: 1rem;">Registered Psychotherapist | CRPO #10979</p>
+                        <p style="margin: 0.5rem 0; font-size: 1rem;">Virtual Anxiety Therapy | Toronto & All Ontario</p>
+                        <p style="margin: 0.5rem 0; font-size: 1rem;">Insurance Receipts Provided | Same-Week Appointments</p>
                     </div>
                 </div>
             </div>
