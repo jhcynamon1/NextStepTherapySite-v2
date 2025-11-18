@@ -5,44 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Sunday Night Anxiety Support | Weekend Work Worry Therapy Ontario | CRPO #10979</title>
-    <meta name="description" content="Dreading Monday? Professional therapy for Sunday night anxiety (Sunday Scaries). Reclaim your weekend from work stress. CRPO Registered. Virtual sessions across Ontario.">
+    <title>Sunday Night Anxiety Support | "Sunday Scaries" Therapy Ontario</title>
+    <meta name="description" content="Dread going back to work? Evidence-based therapy for Sunday night anxiety and the 'Sunday Scaries'. Reclaim your weekends. CRPO Registered. Evening sessions available.">
     <link rel="canonical" href="https://nextsteptherapy.ca/sunday-night-anxiety.html">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Sunday Night Anxiety Support | Next Step Therapy">
-    <meta property="og:description" content="Professional help for Sunday scaries and work dread. Virtual therapy throughout Ontario for weekend stress and work-related anxiety.">
+    <meta property="og:description" content="Stop letting work dread ruin your weekend. Professional support for Sunday anxiety.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/sunday-night-anxiety.html">
-    
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/asset104.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/asset104.png">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTSJ4XH9W1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RTSJ4XH9W1');
+    </script>
+
     <style>
-        /* Custom Styles for Sunday Night Anxiety Page */
+        /* Core Variables - Matching High-Functioning & Imposter Pages */
         :root {
+            --primary-navy: #2C3E50;
             --primary-green: #6B8E6F;
             --primary-green-hover: #5A7D5E;
-            --primary-navy: #2C3E50;
-            --text-dark: #2D3748;
             --bg-light: #F8F9FA;
+            --text-dark: #2D3748;
+            --text-muted: #4A5568;
+            --white: #FFFFFF;
         }
 
-        /* Standard Header */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* Header Styles */
         .header {
-            background: #FFFFFF;
+            background: var(--white);
             padding: 1rem 0;
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 100;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .header-content {
@@ -75,20 +104,20 @@
             color: white;
             padding: 0.25rem 0.75rem;
             border-radius: 50px;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            display: inline-block;
         }
 
         .nav {
             display: flex;
-            gap: 2rem;
             align-items: center;
+            gap: 2rem;
         }
 
         .nav a {
-            color: var(--text-dark);
             text-decoration: none;
+            color: var(--primary-navy);
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.2s;
@@ -99,8 +128,8 @@
         }
 
         .header-phone {
-            color: var(--primary-navy);
-            font-weight: 600;
+            color: var(--primary-green);
+            font-weight: 700;
             text-decoration: none;
         }
 
@@ -108,7 +137,7 @@
         .hero {
             background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
             color: white;
-            padding: 6rem 0 8rem;
+            padding: 80px 20px 100px;
             text-align: center;
             position: relative;
         }
@@ -116,43 +145,29 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
             line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
             color: white !important;
         }
 
-        .lead-text {
+        .hero-lead {
             font-size: 1.25rem;
-            opacity: 0.95;
             max-width: 800px;
             margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
             color: white !important;
         }
 
-        .trust-indicators {
+        .hero-cta-group {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
-        .trust-indicator {
-            background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: white !important;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .primary-cta {
+        .primary-btn {
             background: var(--primary-green);
             color: white !important;
             padding: 1rem 2.5rem;
@@ -160,60 +175,98 @@
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             border: 2px solid var(--primary-green);
         }
 
-        .primary-cta:hover {
+        .primary-btn:hover {
             background: var(--primary-green-hover);
+            border-color: var(--primary-green-hover);
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .secondary-cta {
+        .secondary-btn {
             background: transparent;
             color: white !important;
             padding: 1rem 2.5rem;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            border: 2px solid rgba(255,255,255,0.3);
             transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
-        .secondary-cta:hover {
+        .secondary-btn:hover {
             background: rgba(255,255,255,0.1);
             border-color: white;
         }
 
-        /* Card Grids */
-        .card-grid {
+        /* Features / Symptoms */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .content-card {
+        .card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-green);
+            border: 1px solid #eee;
             transition: transform 0.3s ease;
         }
 
-        .content-card:hover {
+        .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
         }
 
-        .content-card h4 {
-            color: var(--primary-navy);
-            font-size: 1.25rem;
+        .card h3 {
+            color: var(--primary-green);
             margin-bottom: 1rem;
             font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
         }
 
-        /* Mobile Sticky CTA */
+        /* CTA Band */
+        .cta-band {
+            background: var(--primary-navy);
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-band h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: white !important;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-band p {
+            color: rgba(255,255,255,0.9) !important;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
+        }
+
+        /* Mobile Sticky Bar */
         .mobile-cta-bar {
             display: none;
             position: fixed;
@@ -250,90 +303,27 @@
             font-weight: 700;
         }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .nav {
-                display: none; /* Hide nav on mobile for simplicity, rely on CTA */
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero-cta {
-                flex-direction: column;
-            }
-            .mobile-cta-bar {
-                display: flex;
-            }
-            .logo-section {
-                justify-content: center;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .nav, .header-phone { display: none; }
+            .header-content { justify-content: center; }
+            .mobile-cta-bar { display: flex; }
+            .hero { padding: 60px 20px; }
         }
     </style>
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTSJ4XH9W1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RTSJ4XH9W1');
-    </script>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": ["Service", "MedicalWebPage"],
-      "name": "Sunday Night Anxiety Support",
-      "description": "Professional therapy support for Sunday scaries, work dread, and weekend anxiety about the upcoming work week throughout Ontario",
-      "url": "https://nextsteptherapy.ca/sunday-night-anxiety.html",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "identifier": "CRPO #10979"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario"
-      },
-      "audience": {
-        "@type": "Audience",
-        "name": "Working professionals",
-        "audienceType": "Adults experiencing work-related anxiety"
-      },
-      "mainEntity": {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Sunday night anxiety common?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Extremely common. Studies show that up to 80% of working adults experience some form of Sunday night anxiety or 'Sunday scaries.' This anticipatory anxiety about the upcoming work week is a normal response to work stress, but it doesn't have to control your weekends."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can therapy help with work-related anxiety?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, therapy can be very effective for work-related anxiety. We focus on practical strategies for managing workplace stress, setting boundaries, improving work-life balance, and developing coping skills that help you approach Monday with confidence rather than dread."
-            }
-          }
-        ]
-      }
-    }
-    </script>
 </head>
 <body>
 
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Free Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call</a>
+    </div>
+
     <!-- Header -->
     <header class="header">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="container">
             <div class="header-content">
                 <div class="logo-section">
                     <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
@@ -342,7 +332,7 @@
                 </div>
                 <nav class="nav">
                     <a href="/#approach">Approach</a>
-                    <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                    <a href="/anxiety-therapy-ontario.html">Anxiety</a>
                     <a href="/workplace-stress-therapy-ontario.html">Work Stress</a>
                     <a href="https://nextsteptherapy.janeapp.com/">Schedule Call</a>
                 </nav>
@@ -353,129 +343,128 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <h1>Sunday Night Anxiety Support</h1>
-            <p class="lead-text">That sinking feeling at 3 PM on Sunday. The "Sunday Scaries" that steal your weekend. You don't have to live for Friday and dread Monday.</p>
-            
-            <div class="trust-indicators">
-                <span class="trust-indicator">✓ CRPO Registered</span>
-                <span class="trust-indicator">✓ Evening Appointments</span>
-                <span class="trust-indicator">✓ Insurance Accepted</span>
+        <div class="container">
+            <h1>Sunday Night Anxiety?</h1>
+            <p class="hero-lead">The "Sunday Scaries" aren't just in your head. They're a sign your nervous system is stuck in overdrive. Reclaim your weekends with evidence-based therapy for professionals.</p>
+            <div class="hero-cta-group">
+                <a href="https://nextsteptherapy.janeapp.com/" class="primary-btn">Book Free 15-Min Consult</a>
+                <a href="#symptoms" class="secondary-btn">Learn More</a>
             </div>
-
-            <div class="hero-cta">
-                <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Book Free Consultation</a>
-                <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
+            <div style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem; color: white;">
+                <span style="margin: 0 10px;">✓ CRPO Registered</span>
+                <span style="margin: 0 10px;">✓ Evening & Weekend Slots</span>
+                <span style="margin: 0 10px;">✓ Insurance Accepted</span>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section style="padding: 5rem 0; background: white;">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 1rem;">When Sunday Becomes Your Least Favorite Day</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem; color: #4A5568;">It's not just "hating your job." It's a physiological stress response that ruins your recovery time.</p>
-
-            <div class="card-grid">
-                <div class="content-card">
-                    <h4>The 3 PM Spiral</h4>
-                    <p>That familiar knot in your stomach starts forming in the afternoon. Your brain begins cataloging tomorrow's to-do list before the weekend is even over.</p>
+    <!-- Symptoms Section -->
+    <section class="section" id="symptoms">
+        <div class="container">
+            <h2 class="section-title">Does Your Sunday Look Like This?</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--text-muted);">It starts around 3 PM. The shadow of Monday morning creeps in, stealing the last hours of your weekend.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h3>The 4 PM Pit</h3>
+                    <p>You feel a physical drop in your stomach as the afternoon fades. The relaxation of Saturday feels like a distant memory.</p>
                 </div>
-                <div class="content-card">
-                    <h4>The Insomnia</h4>
-                    <p>You're exhausted, but you can't sleep. You lie in bed replaying conversations or worrying about emails you haven't even received yet.</p>
+                <div class="card">
+                    <h3>The Mental Rehearsal</h3>
+                    <p>You can't stop running through tomorrow's to-do list, emails, and meetings. You're "at work" before you've even left your couch.</p>
                 </div>
-                <div class="content-card">
-                    <h4>The "Monday Dread"</h4>
-                    <p>You can't be present with your family or friends because a part of your brain is already at the office, bracing for impact.</p>
+                <div class="card">
+                    <h3>The Sleep Sabotage</h3>
+                    <p>You're exhausted, but you can't sleep. You stare at the ceiling, calculating how many hours of rest you'll get if you fall asleep <em>right now</em>.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
-    <section style="padding: 5rem 0; background: #F8F9FA;">
-        <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 3rem;">How We Fix It (Without Quitting Your Job)</h2>
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">It's Not Just "Hating Your Job"</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Even people who love their careers get the Sunday Scaries. It's often a symptom of <strong>High-Functioning Anxiety</strong> and <strong>Burnout</strong>.</p>
             
-            <div class="card-grid">
-                <div class="content-card" style="border-top-color: #2C3E50;">
-                    <h4>Boundary Setting</h4>
-                    <p>Learn specific psychological tools to "close the door" on work Friday at 5 PM and keep it closed until Monday morning.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Disconnect to Reconnect</h3>
+                    <p>We use boundary-setting techniques to help you truly unplug. You can't recharge a battery that's constantly being drained.</p>
                 </div>
-                <div class="content-card" style="border-top-color: #2C3E50;">
-                    <h4>Process, Don't Suppress</h4>
-                    <p>We use ACT (Acceptance and Commitment Therapy) to help you handle work stress in real-time so it doesn't stockpile for the weekend.</p>
+                <div class="card">
+                    <h3>Cognitive Strategies</h3>
+                    <p>Learn to catch the "Catastrophic Monday" thoughts and replace them with realistic, grounded preparation.</p>
                 </div>
-                <div class="content-card" style="border-top-color: #2C3E50;">
-                    <h4>The "Ramp Up" Routine</h4>
-                    <p>Create a Sunday evening routine that signals safety to your nervous system, rather than panic.</p>
-                </div>
-            </div>
-
-            <!-- Free Resource CTA -->
-            <div style="background: white; border: 2px solid #6B8E6F; border-radius: 16px; padding: 3rem; margin-top: 4rem; text-align: center;">
-                <h3 style="font-family: 'Playfair Display', serif; color: #2C3E50; margin-bottom: 1rem;">Need Relief Right Now?</h3>
-                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Try this: <strong>The "Brain Dump" Protocol.</strong> Before bed, write down every work worry for exactly 5 minutes. Then close the notebook and put it in another room. It signals to your brain: "It's handled."</p>
-                <a href="https://nextsteptherapy.janeapp.com/" style="background: #6B8E6F; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block;">Get Professional Support →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section style="padding: 5rem 0; background: white;">
-        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-            <div style="background: #F8F9FA; border-radius: 16px; padding: 3rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2 style="font-family: 'Playfair Display', serif; color: #2C3E50; margin-bottom: 1rem;">About Jesse Cynamon, RP</h2>
-                    <p style="margin-bottom: 1.5rem;">I specialize in High-Functioning Anxiety for professionals. I know that "just relax" isn't helpful advice when you have a mortgage and a career to manage.</p>
-                    <p style="margin-bottom: 1.5rem;">We work on practical, evidence-based strategies that fit into a busy professional life. No fluff, just tools that work.</p>
-                    <a href="/jesse-cynamon-psychotherapist-ontario.html" style="color: #6B8E6F; font-weight: 700; text-decoration: none;">Read Full Bio →</a>
-                </div>
-                <div style="flex: 0 0 200px; text-align: center;">
-                    <div style="width: 150px; height: 150px; background: #ddd; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden;">
-                        <!-- Placeholder for headshot -->
-                         <img src="images/jesse-cynamon-headshot.jpg" alt="Jesse Cynamon" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='images/asset34.webp'">
-                    </div>
-                    <div style="font-weight: 700; color: #2C3E50;">CRPO #10979</div>
-                    <div style="font-size: 0.9rem; color: #666;">Registered Psychotherapist</div>
+                <div class="card">
+                    <h3>Nervous System Regulation</h3>
+                    <p>Practical tools to calm the physical "fight or flight" response that kicks in when you think about your inbox.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (CRPO Compliant) -->
-    <footer style="background: #2C3E50; color: white; padding: 4rem 0 2rem;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+    <!-- Therapist Bio -->
+    <section class="section">
+        <div class="container" style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 1rem;">Meet Jesse Cynamon, RP</h2>
+                <h4 style="color: var(--primary-green); margin-bottom: 1rem; font-size: 1.2rem;">Registered Psychotherapist (CRPO #10979)</h4>
+                <p style="margin-bottom: 1rem;">I specialize in helping high-performing professionals who look successful on the outside but feel exhausted on the inside.</p>
+                <p style="margin-bottom: 1.5rem;">Sunday anxiety is often the canary in the coal mine—a sign that your work-life balance has tipped too far. We'll work together to rebuild that boundary, so you can enjoy your success without sacrificing your peace of mind.</p>
+                <a href="https://nextsteptherapy.janeapp.com/" class="primary-btn" style="display: inline-block;">Book a Free Chat</a>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="images/jesse-cynamon.jpg" alt="Jesse Cynamon Psychotherapist" style="width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Reclaim Your Sunday Evenings</h2>
+            <p>You don't have to live for the weekend only to lose it to worry. Let's get you back to feeling like yourself.</p>
+            <a href="https://nextsteptherapy.janeapp.com/" class="primary-btn" style="background: white; color: var(--primary-navy) !important; border-color: white;">Schedule Free Consult</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Common Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Is this covered by insurance?</h3>
+                    <p>Yes. As a Registered Psychotherapist (CRPO), my services are covered by most major Ontario insurance plans (Sun Life, Manulife, Canada Life, etc.).</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Do you offer evening appointments?</h3>
+                    <p>Absolutely. I know professionals have busy days. I offer evening slots specifically to accommodate your work schedule.</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 0.5rem;">Is it virtual?</h3>
+                    <p>Yes, all sessions are secure video calls. You can join from the comfort of your home—no commute required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--primary-navy); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
             <div style="margin-bottom: 2rem;">
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem;">Next Step Therapy</h4>
-                <p>Evidence-based support for Ontario professionals.</p>
+                <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Next Step Therapy</h4>
+                <p>Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</p>
+                <p>Serving Professionals Across Ontario</p>
             </div>
             
-            <div style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                <a href="/anxiety-therapy-ontario.html" style="color: white; text-decoration: none; opacity: 0.8;">Anxiety Therapy</a>
-                <a href="/depression-therapy-ontario.html" style="color: white; text-decoration: none; opacity: 0.8;">Depression</a>
-                <a href="/workplace-stress-therapy-ontario.html" style="color: white; text-decoration: none; opacity: 0.8;">Burnout</a>
-                <a href="/contact.html" style="color: white; text-decoration: none; opacity: 0.8;">Contact</a>
-            </div>
-
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-                <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.5rem;">
-                    <strong>Crisis Resources:</strong> If you are in immediate danger, please call 911 or visit your nearest emergency room.<br>
-                    Canada Suicide Prevention Service: Call 988 (24/7)
-                </p>
-                <p style="font-size: 0.9rem; opacity: 0.7;">
-                    &copy; 2025 Next Step Therapy. Jesse Cynamon, Registered Psychotherapist (CRPO #10979).
-                </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem;">
+                <p style="font-size: 0.9rem; opacity: 0.8;"><strong>Crisis Support:</strong> If you are in immediate danger, please call 911 or visit your nearest emergency room. <br>For 24/7 support, call 988 (Suicide Crisis Helpline).</p>
+                <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.6;">&copy; 2025 Next Step Therapy. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Mobile Sticky CTA Bar -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Free Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-    </div>
 
 </body>
 </html>
