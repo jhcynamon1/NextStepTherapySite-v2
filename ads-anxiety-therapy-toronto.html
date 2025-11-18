@@ -66,55 +66,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Schema Markup - Medical Web Page -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Anxiety Therapy Toronto",
-      "description": "Professional anxiety therapy services in Toronto. CRPO registered psychotherapist offering evidence-based ACT therapy for anxiety, worry, and panic.",
-      "url": "https://nextsteptherapy.ca/ads-anxiety-therapy-toronto",
-      "provider": {
-        "@type": "Person",
-        "additionalType": "Psychotherapist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Toronto",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      }
-    }
-    </script>
-    
-    <!-- Schema Markup - Psychotherapist -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Jesse Cynamon",
-      "image": "https://nextsteptherapy.ca/images/optimized/jesse-about-600.webp",
-      "jobTitle": "Registered Psychotherapist",
-      "description": "CRPO registered psychotherapist specializing in anxiety therapy, workplace stress, and men's mental health. Former sports operations professional.",
-      "memberOf": {
-        "@type": "Organization",
-        "name": "College of Registered Psychotherapists of Ontario"
-      },
-      "priceRange": "$175 per session",
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario",
-        "addressCountry": "CA"
-      },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Psychotherapy",
-        "description": "Evidence-based ACT and CBT therapy for anxiety, workplace stress, and related concerns"
-      },
-      "url": "https://nextsteptherapy.ca/jesse-cynamon-psychotherapist-ontario.html"
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "@id": "https://nextsteptherapy.ca/ads-anxiety-therapy-toronto#webpage",
+          "url": "https://nextsteptherapy.ca/ads-anxiety-therapy-toronto",
+          "name": "Anxiety Therapy Toronto | ACT Therapy for Anxiety",
+          "description": "Professional anxiety therapy in Toronto using ACT (Acceptance and Commitment Therapy). CRPO Registered Psychotherapist. Virtual sessions across Ontario.",
+          "inLanguage": "en-CA",
+          "about": {
+            "@type": "Service",
+            "name": "Anxiety Therapy Services Toronto",
+            "areaServed": {
+              "@type": "City",
+              "name": "Toronto"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Next Step Therapy",
+            "url": "https://nextsteptherapy.ca",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://nextsteptherapy.ca/images/asset104.png"
+            }
+          },
+          "datePublished": "2025-11-18",
+          "dateModified": "2025-11-18"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you take insurance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Most extended health plans in Ontario cover services provided by a Registered Psychotherapist. I provide detailed receipts that make it easy to submit to your insurance company."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is ACT therapy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ACT (Acceptance and Commitment Therapy) is an evidence-based approach that helps you develop a different relationship with anxiety. Rather than trying to eliminate anxious thoughts, ACT helps you learn to notice anxiety without letting it control your behavior."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long is each session?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sessions are 50 minutes. We typically meet weekly at the start, then move to bi-weekly as you build skills and confidence in managing anxiety independently."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is online therapy as effective as in-person?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Research consistently shows that virtual therapy is equally effective for anxiety and depression. You get the same therapeutic relationship and evidence-based techniques—just without the commute."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly can I get started?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most clients can book within 48 hours. I maintain availability specifically to eliminate waitlist barriers. Your first step is a free 15-minute consultation to ensure we're a good fit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my information be kept confidential?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. What we discuss stays between us, with very limited exceptions related to safety."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     
