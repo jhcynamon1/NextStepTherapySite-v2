@@ -1,46 +1,508 @@
 <!DOCTYPE html>
-<html lang="en" data-astro-cid-ohz3nq7j>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/asset104.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/asset104.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/asset104-180.png">
-
-    <!-- SEO Meta Data -->
-    <title>Anxiety Therapy Burlington | Book This Week | CRPO #10979 Registered</title>
-    <meta name="description" content="Anxiety therapy for Burlington professionals managing QEW commute stress, lakefront lifestyle pressure, and split-life demands. CRPO psychotherapist (#10979). Aldershot to downtown. Virtual sessions. Same-week appointments.">
-
-    <!-- Canonical URL -->
+    <!-- SEO Meta Tags -->
+    <title>Anxiety Therapy Burlington | Book This Week | CRPO #10979</title>
+    <meta name="description" content="Anxiety therapy for Burlington residents managing commute stress, family pressure, and high-functioning anxiety. CRPO Registered. Virtual sessions available.">
     <link rel="canonical" href="https://nextsteptherapy.ca/anxiety-therapy-burlington.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Anxiety Therapy Burlington | Next Step Therapy">
-    <meta property="og:description" content="Professional anxiety support in Burlington with CRPO registered psychotherapist. Virtual sessions available throughout Ontario.">
+    <meta property="og:description" content="Specialized anxiety support for Burlington professionals. Manage QEW commute stress and work-life balance. CRPO Registered.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/anxiety-therapy-burlington">
-
-    <!-- Shared CSS -->
+    <meta property="og:url" content="https://nextsteptherapy.ca/anxiety-therapy-burlington.html">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/asset104-180.png">
+    <link rel="apple-touch-icon" href="/images/asset104-180.png">
+    
+    <!-- Shared Styles -->
     <link rel="stylesheet" href="/shared.min.css">
 
-    <!-- Performance Optimizations -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #6B8E6F;
+            --primary-green-hover: #5A7D5E;
+            --primary-green-light: rgba(107, 142, 111, 0.1);
+            --primary-green-border: rgba(107, 142, 111, 0.2);
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6B7D;
+            --bg-primary: #FFFFFF;
+            --bg-alternate: #F8F9FA;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            background: var(--bg-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .credentials-badge-prominent {
+            background: var(--primary-green-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-green-border);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .header-phone {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(107, 142, 111, 0.1), rgba(248, 249, 250, 0.9));
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        .hero-cta {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+
+        .trust-pill {
+            background: white;
+            color: var(--primary-green);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--primary-green-border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .trust-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin: 4rem auto;
+        }
+
+        .main-content {
+            min-width: 0;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .section a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .section a:hover {
+            border-bottom-color: var(--primary-green);
+        }
+
+        /* Lists */
+        .criteria-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .criteria-list li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: var(--bg-alternate);
+            border-left: 4px solid var(--primary-green);
+            border-radius: 4px;
+        }
+
+        .criteria-list li strong {
+            color: var(--primary-green);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* CTA Buttons */
+        .manus-primary-cta {
+            background: var(--primary-green);
+            color: white !important;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
+            font-size: 1.05rem;
+        }
+
+        .manus-primary-cta:hover {
+            background: var(--primary-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
+            color: white !important;
+        }
+
+        .secondary-cta {
+            background: transparent;
+            color: var(--primary-green) !important;
+            border: 2px solid var(--primary-green);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .secondary-cta:hover {
+            background: var(--primary-green-light);
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-alternate);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .faq-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--bg-alternate);
+            padding: 2rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .sidebar-section a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+        }
+
+        .sidebar-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .sidebar-cta h3 {
+            color: white;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+            border: none;
+            padding: 0;
+        }
+
+        .sidebar-cta p {
+            color: white;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Mobile Sticky CTA */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            padding: 12px 16px;
+            display: none;
+            z-index: 9999;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .mobile-cta-book {
+            flex: 2;
+            background: #2e5c55;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .mobile-cta-phone {
+            flex: 1;
+            background: #f3f4f6;
+            color: #2e5c55;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: 1px solid #e5e7eb;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: flex;
+            }
+            .footer {
+                padding-bottom: 80px; /* Make room for sticky bar */
+            }
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none; /* Hide sidebar on mobile to reduce clutter */
+            }
+            .nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-cta {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTSJ4XH9W1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RTSJ4XH9W1');
+    </script>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
-      "name": "Anxiety Therapy Burlington",
-      "description": "Professional anxiety therapy services in Burlington. CRPO registered psychotherapist offering evidence-based support for anxiety, worry, and panic.",
-      "url": "https://nextsteptherapy.ca/anxiety-therapy-burlington",
+      "name": "Anxiety Therapy Burlington Ontario",
+      "description": "Professional anxiety therapy services in Burlington. CRPO registered psychotherapist offering evidence-based support.",
       "provider": {
         "@type": "Person",
-        "additionalType": "Psychotherapist",
         "name": "Jesse Cynamon, RP",
         "identifier": "CRPO #10979",
         "jobTitle": "Registered Psychotherapist"
@@ -51,664 +513,218 @@
         "addressRegion": "ON",
         "addressCountry": "CA"
       },
-      "about": [
-        {
+      "about": {
           "@type": "MedicalCondition",
           "name": "Generalized Anxiety Disorder",
-          "alternateName": ["GAD", "chronic anxiety", "excessive worry"],
-          "signOrSymptom": [
-            "excessive worry",
-            "restlessness",
-            "difficulty concentrating",
-            "sleep disturbance",
-            "muscle tension",
-            "fatigue",
-            "irritability"
-          ],
-          "riskFactor": "Stress, trauma, family history, major life changes",
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Acceptance and Commitment Therapy",
-            "alternateName": "ACT"
-          }
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Panic Disorder",
-          "alternateName": ["panic attacks", "panic anxiety"],
-          "signOrSymptom": [
-            "sudden intense fear",
-            "rapid heartbeat",
-            "shortness of breath",
-            "chest pain",
-            "dizziness",
-            "fear of losing control"
-          ],
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Cognitive Behavioral Therapy",
-            "alternateName": "CBT"
-          }
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Social Anxiety Disorder",
-          "alternateName": ["social phobia", "social anxiety"],
-          "signOrSymptom": [
-            "fear of social situations",
-            "fear of judgment",
-            "avoidance of social interactions",
-            "physical symptoms in social settings"
-          ],
           "possibleTreatment": {
             "@type": "MedicalTherapy",
             "name": "Acceptance and Commitment Therapy"
           }
         }
-      ]
     }
     </script>
-
-    <!-- Standalone Service Schema for Rich Results (Diesel Dudes Pattern) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Anxiety Therapy Burlington Ontario",
-      "provider": {
-        "@type": "ProfessionalService",
-        "name": "Next Step Therapy - Burlington",
-        "description": "CRPO registered psychotherapist (#10979) providing anxiety therapy for Burlington, Ontario residents.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Toronto",
-          "addressRegion": "ON",
-          "addressCountry": "CA"
-        },
-        "telephone": "+14163062157",
-        "areaServed": {
-          "@type": "City",
-          "name": "Burlington",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Ontario",
-            "containedInPlace": {
-              "@type": "Country",
-              "name": "Canada"
-            }
-          }
-        },
-        "hasCredential": "CRPO #10979",
-        "priceRange": "$$"
-      },
-      "description": "Professional anxiety therapy in Burlington. CRPO registered psychotherapist offering evidence-based support for anxiety, worry, and panic. Virtual and in-person sessions available. Same-week appointments.",
-      "offers": {
-        "@type": "Offer",
-        "price": "175",
-        "priceCurrency": "CAD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nextsteptherapy.ca/anxiety-therapy-burlington.html"
-      }
-    }
-    </script>
-
-    <!-- FAQPage Schema for Featured Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What types of anxiety can therapy help with in Burlington?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Therapy can help with various anxiety types including generalized anxiety (constant worry), panic attacks, social anxiety, health anxiety, and work-related stress. Whether you're dealing with racing thoughts during your commute, avoiding social situations, or experiencing physical anxiety symptoms, evidence-based therapy approaches like ACT can provide practical relief."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know if my anxiety is 'serious enough' for therapy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If anxiety is affecting your daily life, relationships, work, or overall well-being, it's worth exploring therapy. You don't need to wait for a crisis—early support often prevents bigger problems later."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I don't know what to talk about in therapy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "That's completely normal and something I help with. I'll ask questions that help you explore your experiences, and we'll follow what feels most relevant and helpful for you in each session."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long will I need therapy for anxiety?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This varies by person and situation. Some people feel significantly better after a few sessions, while others prefer longer-term support. We'll regularly check in about your progress and adjust as needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will my therapy information be kept confidential?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. What we discuss stays between us, with very limited exceptions related to safety."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I need support between therapy sessions?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can email me between sessions with questions or observations. While I can't provide therapy via email, I can offer brief support and clarification about techniques we've discussed."
-          }
-        }
-      ]
-    }
-    </script>
-
-</script><style>.manus-primary-cta[data-astro-cid-ohz3nq7j]{background:#6b8e6f!important;color:#fff!important;font-weight:600!important;padding:1.25rem 2.5rem!important;border-radius:var(--radius-lg)!important;text-decoration:none!important;transition:all .3s ease!important;display:inline-block!important;min-height:48px!important;box-shadow:var(--shadow-soft)!important}.manus-primary-cta[data-astro-cid-ohz3nq7j]:hover{background:#5a7d5e!important;transform:translateY(-2px)!important;box-shadow:var(--shadow-medium)!important;color:#fff!important}.manus-secondary-cta[data-astro-cid-ohz3nq7j]{background:transparent!important;color:#6b8e6f!important;border:1.5px solid #6B8E6F!important;font-weight:600!important;padding:1rem 2rem!important;border-radius:var(--radius-lg)!important;text-decoration:none!important;transition:all .3s ease!important;display:inline-block!important;min-height:48px!important;min-height:48px!important}.manus-secondary-cta[data-astro-cid-ohz3nq7j]:hover{background:#6b8e6f!important;color:#fff!important;transform:translateY(-2px)!important}.hero-with-bg[data-astro-cid-ohz3nq7j]{position:relative;background:var(--background-primary);padding:var(--space-section) 0;overflow:hidden}.hero-with-bg[data-astro-cid-ohz3nq7j]:before{content:"";position:absolute;inset:0;background-image:url(/images/therapy-session-warm.jpg);background-size:cover;background-position:center;opacity:.3;z-index:1}.hero-content[data-astro-cid-ohz3nq7j]{position:relative;z-index:2;text-align:center;max-width:700px;margin:0 auto}.hero-content[data-astro-cid-ohz3nq7j] h1[data-astro-cid-ohz3nq7j]{text-shadow:0 2px 4px rgba(0,0,0,.1)}.hero-content[data-astro-cid-ohz3nq7j] .lead-text[data-astro-cid-ohz3nq7j]{text-shadow:0 1px 2px rgba(0,0,0,.1)}.trust-pills[data-astro-cid-ohz3nq7j]{display:flex;justify-content:center;gap:var(--space-sm);flex-wrap:wrap;margin:var(--space-lg) 0}.trust-pill[data-astro-cid-ohz3nq7j]{background:#6b8e6f1a;color:#6b8e6f;padding:.5rem 1rem;border-radius:50px;font-size:.875rem;font-weight:500;border:1px solid rgba(107,142,111,.2)}.info-cards[data-astro-cid-ohz3nq7j]{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-md);max-width:800px;margin:0 auto}.info-card[data-astro-cid-ohz3nq7j]{background:#f8f9fa;padding:var(--space-lg);border-radius:var(--radius-md);text-align:center}.floating-mobile-cta[data-astro-cid-ohz3nq7j]{position:fixed;bottom:20px;right:20px;z-index:1000;background:#6b8e6f;color:#fff;padding:1rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 4px 20px #6b8e6f4d;display:none}@media (max-width: 768px){.floating-mobile-cta[data-astro-cid-ohz3nq7j]{display:block}}
-</style>
-      <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
+<body>
 
-  <body data-astro-cid-ohz3nq7j>
     <!-- Header -->
-    <header class="header smart-sticky" data-astro-cid-ohz3nq7j>
-      <div class="container" data-astro-cid-ohz3nq7j>
-        <div class="header-content" data-astro-cid-ohz3nq7j>
-          <div class="logo-section" data-astro-cid-ohz3nq7j>
-            <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'" data-astro-cid-ohz3nq7j>
-            <a href="/" class="logo-text" data-astro-cid-ohz3nq7j>Next Step Therapy</a>
-            <span class="credentials-badge-prominent" data-astro-cid-ohz3nq7j>CRPO #10979</span>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                <a href="/" class="logo-text">Next Step Therapy</a>
+                <span class="credentials-badge-prominent">CRPO #10979</span>
           </div>
-          <nav class="nav" data-astro-cid-ohz3nq7j>
-            <a href="/#approach" data-astro-cid-ohz3nq7j>Approach</a>
-            <a href="/#specializations" data-astro-cid-ohz3nq7j>Services</a>
-            <a href="/#contact" data-astro-cid-ohz3nq7j>Contact</a>
+            <nav class="nav">
+                <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                <a href="/anxiety-therapy-ontario.html">Anxiety</a>
+                <a href="/workplace-stress-therapy-ontario.html">Work Stress</a>
+                <a href="/jesse-cynamon-psychotherapist-ontario.html">About</a>
+                <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Book Free Consult</a>
           </nav>
-          <a href="tel:+14163062157" class="header-phone" data-astro-cid-ohz3nq7j>(416) 306-2157</a>
+            <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
         </div>
       </div>
     </header>
 
-    <main data-astro-cid-ohz3nq7j>
-      <!-- Hero Section with Background Image -->
-      <section class="hero-with-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="hero-content" data-astro-cid-ohz3nq7j>
-            <h1 data-astro-cid-ohz3nq7j>Anxiety Therapy Burlington | Panic, Worry & Social Anxiety Treatment</h1>
-            <p class="lead-text" data-astro-cid-ohz3nq7j>Struggling with panic attacks during your QEW commute? Racing thoughts that won't stop at 3am? Avoiding social situations because the anxiety feels unbearable? If you're living in Burlington and dealing with anxiety, panic disorder, or constant worry, specialized anxiety therapy can help you regain control. CRPO-registered treatment using evidence-based ACT approaches.</p>
-
-            <!-- Trust Pills -->
-            <div class="trust-pills" data-astro-cid-ohz3nq7j>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j>✓ CRPO #10979 Licensed</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j>✓ Virtual Sessions Available</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j>✓ Insurance Receipts Provided</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j>✓ Free 15-Min Consultation</span>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Anxiety Therapy Burlington: Calm the Commuter Stress</h1>
+        <p class="hero-subtext">Stuck on the QEW? Racing thoughts at 3am? Feeling the pressure of maintaining the "perfect" Burlington life? Get professional anxiety support without adding another commute to your day.</p>
+        <div class="hero-cta">
+            <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Book Free 15-Min Consultation</a>
+            <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
             </div>
-
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-              <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Free Consultation</a>
-              <a href="tel:+14163062157" class="manus-secondary-cta" data-astro-cid-ohz3nq7j>Call (416) 306-2157</a>
-            </div>
-          </div>
+        <div class="trust-pills">
+            <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+            <span class="trust-pill">✓ Virtual Sessions Available</span>
+            <span class="trust-pill">✓ Insurance Receipts Provided</span>
+            <span class="trust-pill">✓ Serving Halton Region</span>
+        </div>
         </div>
       </section>
 
-      <!-- Problem Recognition Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Anxiety Therapy in Burlington: Addressing Your Specific Struggles</h2>
-              <p data-astro-cid-ohz3nq7j>If you're searching for anxiety therapy in Burlington, you're likely experiencing challenges that go beyond general stress. Living in Burlington while managing anxiety brings unique pressures: long commutes to Toronto workplaces, balancing suburban family expectations with career demands, financial pressures of the housing market, and the isolation that comes from appearing successful while struggling internally. Many Burlington residents I work with describe experiences that might resonate with you:</p>
+<!-- Main Content -->
+<div class="container">
+    <div class="content-wrapper">
+        <main class="main-content">
 
-              <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h3 data-astro-cid-ohz3nq7j>"Does This Sound Like You?"</h3>
-                <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Sunday Night Dread:</strong> That sinking feeling as the weekend ends and another week of commuting begins</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Commuter Anxiety:</strong> Your heart races on packed GO trains or while stuck in QEW traffic</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Work-Life Balance Pressure:</strong> Feeling like you're failing at both professional and family responsibilities</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Decision Paralysis:</strong> Even simple choices feel overwhelming when you're already stretched thin</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>The 3am Mind Race:</strong> Your brain won't stop analyzing everything you need to do tomorrow</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Social Exhaustion:</strong> Community events or school functions feel like performance art</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Physical Tension:</strong> Your shoulders live somewhere near your ears, and headaches are routine</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Constant Rushing:</strong> Always feeling behind, even when you're technically on time</li>
+            <!-- Section 1: The Burlington Context -->
+            <section class="section">
+                <h2 class="section-title">Why Anxiety Hits Harder in Burlington</h2>
+                <p>Living in Burlington comes with a unique set of pressures. You have the "Best Mid-Sized City" expectations, the lakefront lifestyle to maintain, and often, a grueling commute to Toronto that drains your energy before the workday even starts.</p>
+                
+                <div style="background: var(--bg-alternate); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-green);">
+                    <h3 style="margin-top: 0; color: var(--text-primary);">Common Burlington Stressors We Treat:</h3>
+                    <ul class="criteria-list" style="margin-bottom: 0;">
+                        <li><strong>The QEW/GO Train Trap:</strong> Commuting anxiety that starts the night before.</li>
+                        <li><strong>"Split Life" Syndrome:</strong> Working in Toronto, sleeping in Burlington, feeling present in neither.</li>
+                        <li><strong>High-Functioning Anxiety:</strong> Looking successful on the outside while panicking internally.</li>
+                        <li><strong>Family Pressure:</strong> Balancing competitive careers with suburban family expectations.</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1.5rem;">You don't have to white-knuckle through it. Anxiety therapy can help you reclaim your mental space, even if you can't change your commute.</p>
+            </section>
+
+            <!-- Section 2: Therapist Intro (Position #3) -->
+            <section class="section">
+                <h2 class="section-title">Meet Your Therapist</h2>
+                <p>I'm <strong>Jesse Cynamon</strong>, a Registered Psychotherapist (CRPO #10979). I specialize in helping professionals navigate high-pressure environments without losing themselves.</p>
+                <p>My approach is practical and evidence-based. We use <strong>Acceptance and Commitment Therapy (ACT)</strong> to help you unhook from anxious thoughts and focus on what actually matters to you. We don't just "talk about feelings"—we build skills.</p>
+                <ul class="criteria-list">
+                    <li><strong>Virtual Convenience:</strong> Sessions from your home office or parked car. No travel time.</li>
+                    <li><strong>Flexible Hours:</strong> Evening and lunch appointments available.</li>
+                    <li><strong>Direct Billing:</strong> Receipts provided for all major insurance plans.</li>
                 </ul>
-              </div>
+            </section>
 
-              <p data-astro-cid-ohz3nq7j>If several of these experiences resonate with you, you're not broken—you're human. Anxiety therapy can help you develop practical skills to manage worry, reduce panic symptoms, and build confidence in handling life's uncertainties. For Burlington residents balancing suburban family life with demanding careers, specialized anxiety treatment can make a significant difference in your daily well-being.</p>
-              
-              <p data-astro-cid-ohz3nq7j>Looking for broader anxiety support across Ontario? Learn more about our <a href="/anxiety-therapy-ontario.html">anxiety therapy services throughout Ontario</a>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Understanding Anxiety Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Understanding Anxiety in the Burlington Context</h2>
-              <p data-astro-cid-ohz3nq7j>Anxiety isn't just "being stressed"—it's your brain's alarm system working overtime. When you're living in Burlington, there are unique triggers that can keep this system activated: long commutes, work-family balance pressures, community expectations, financial responsibilities of suburban life, and the constant transition between home and work environments.</p>
-
-              <p data-astro-cid-ohz3nq7j>Your anxiety probably developed for good reasons. Maybe it helped you succeed in your career, manage multiple responsibilities effectively, or stay on top of family obligations. But when anxiety starts controlling your choices instead of informing them, it's time to develop a different relationship with it.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Common Anxiety Patterns in Burlington Residents:</h3>
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Panic Attacks</h4>
-                  <p data-astro-cid-ohz3nq7j>Sudden intense fear with physical symptoms like racing heart, shortness of breath, or dizziness—often striking during commutes or high-pressure moments.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Generalized Anxiety</h4>
-                  <p data-astro-cid-ohz3nq7j>Constant worry about multiple areas of life—work deadlines, family responsibilities, finances, health—that feels impossible to control.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Social Anxiety</h4>
-                  <p data-astro-cid-ohz3nq7j>Intense fear of judgment in social situations, whether at Burlington community events, networking functions, or even casual interactions.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Health Anxiety</h4>
-                  <p data-astro-cid-ohz3nq7j>Persistent worry about physical symptoms or illness, leading to frequent doctor visits or constant self-monitoring.</p>
-                </div>
-              </div>
-
-              <p data-astro-cid-ohz3nq7j>Understanding your specific anxiety pattern is the first step toward effective treatment. Anxiety therapy in Burlington addresses these different manifestations with targeted, evidence-based approaches. You don't need to eliminate anxiety entirely—instead, you can learn to reduce its intensity and prevent it from controlling your decisions.</p>
-              
-              <h3 data-astro-cid-ohz3nq7j>Burlington-Specific Anxiety Triggers We Address:</h3>
-              <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>QEW & GO Transit Commute Anxiety:</strong> Developing coping strategies for daily travel stress to Toronto workplaces</li>
-                <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Work-Life Balance Pressure:</strong> Managing anxiety from juggling career demands with family responsibilities in Aldershot, Millcroft, or downtown Burlington neighborhoods</li>
-                <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Financial & Housing Stress:</strong> Addressing anxiety related to Burlington's competitive housing market and cost of living</li>
-                <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Professional Performance Anxiety:</strong> Managing worry about meeting expectations at Toronto-based firms while maintaining Burlington family life</li>
-                <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Social & Community Anxiety:</strong> Reducing fear of judgment at Burlington schools, sports events, or neighborhood gatherings</li>
-              </ul>
-
-              <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Start Understanding Your Anxiety</a>
+            <!-- Section 3: Secondary CTA -->
+            <div class="cta-box" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+                <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Stop Managing Anxiety Alone</h3>
+                <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Get a personalized plan to reduce worry and stress. Free 15-minute consultation.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="background: white; color: #2e5c55 !important;">📅 Book Free Call</a>
+                    <a href="tel:+14163062157" class="secondary-cta" style="color: white !important; border-color: white;">📞 (416) 306-2157</a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- How Therapy Helps Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>How Anxiety Therapy in Burlington Works</h2>
-              <p data-astro-cid-ohz3nq7j">Anxiety therapy in Burlington focuses on practical, evidence-based approaches that fit into your real life. Whether you're dealing with panic attacks, constant worry, social anxiety, or generalized anxiety disorder, therapy provides concrete skills to manage symptoms and reduce their impact on your work, relationships, and daily functioning. This isn't about trying to convince you that your worries are irrational—it's about developing practical strategies to handle anxiety when it shows up.</p>
-
-              <p data-astro-cid-ohz3nq7j>The approach we use is called Acceptance and Commitment Therapy (ACT), which has extensive research support for anxiety disorders. Rather than trying to eliminate anxious thoughts and feelings, ACT helps you change your relationship with them so they don't control your behavior.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>What This Looks Like in Practice:</h3>
-              <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>Instead of Fighting Anxiety, You Learn to:</h4>
-                <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Notice Without Judgment:</strong> Recognize anxiety as information rather than truth</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Choose Your Response:</strong> Develop the space between feeling anxious and acting anxiously</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Take Valued Action:</strong> Move toward what matters to you, even when anxiety is present</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Build Tolerance:</strong> Increase your capacity to handle uncertainty and discomfort</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Stay Present:</strong> Ground yourself in the current moment rather than future worries</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Practice Self-Compassion:</strong> Treat yourself with the same kindness you'd show a good friend</li>
+            <!-- Section 4: Local Resources -->
+            <section class="section">
+                <h2 class="section-title">Mental Health Resources in Halton</h2>
+                <p>While I provide ongoing therapy, immediate crisis support is available locally:</p>
+                <ul class="criteria-list">
+                    <li><strong>COAST Halton:</strong> 1-877-825-9011 (Crisis Outreach and Support Team)</li>
+                    <li><strong>Joseph Brant Hospital:</strong> Emergency mental health services (1245 North Shore Blvd E).</li>
+                    <li><strong>Distress Centre Halton:</strong> 905-681-1488 (Supportive listening).</li>
                 </ul>
-              </div>
+      </section>
 
-              <p data-astro-cid-ohz3nq7j>This isn't about positive thinking or pretending problems don't exist. It's about developing psychological flexibility—the ability to stay present with whatever you're experiencing while still making choices based on your values rather than your fears.</p>
-
-              <p data-astro-cid-ohz3nq7j>Many clients find that as they develop these skills, their relationship with anxiety fundamentally changes. Instead of seeing anxiety as something wrong with them, they begin to understand it as one part of their experience that doesn't have to dictate their choices.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Anxiety Therapy Designed for Burlington Life</h3>
-              <p data-astro-cid-ohz3nq7j>Living in Burlington while managing anxiety means dealing with specific challenges: the pressure of long commutes to Toronto workplaces, balancing suburban family life with career demands, and the isolation that can come from appearing successful while struggling internally. Whether you're experiencing general anxiety, panic attacks, social anxiety, or constant worry, therapy can provide practical tools that fit into your actual Burlington routine.</p>
-
-              <p data-astro-cid-ohz3nq7j>Sessions are available both virtually and in-person to accommodate your schedule—early morning before your QEW commute, lunch hour from your home office, or evenings after family responsibilities. The goal is making anxiety support accessible without adding more stress to your day.</p>
-            </div>
-          </div>
+            <!-- Section 5: FAQ -->
+            <section class="section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Is virtual therapy effective?</h3>
+                    <p>Yes. Research shows it is just as effective as in-person therapy for anxiety. Plus, for Burlington residents, it removes the stress of driving to an appointment.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you take insurance?</h3>
+                    <p>Yes. As a Registered Psychotherapist, my services are covered by most major insurance plans (SunLife, Manulife, Canada Life, etc.). You will receive a receipt to submit for reimbursement.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where are you located?</h3>
+                    <p>My practice is 100% virtual, serving clients in Burlington, Oakville, Hamilton, and across Ontario.</p>
         </div>
       </section>
 
-      <!-- THERAPIST INTRO - Position #3 (After service value) -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Jesse Cynamon, RP - Your Burlington Anxiety Therapist</h2>
-              
-              <p data-astro-cid-ohz3nq7j>I'm Jesse Cynamon, a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I work with Burlington residents and professionals across Ontario who are dealing with anxiety, panic attacks, constant worry, and stress.</p>
+        </main>
 
-              <h3 data-astro-cid-ohz3nq7j>Why I Focus on Anxiety</h3>
-              
-              <p data-astro-cid-ohz3nq7j>As someone who understands what it's like to be a thoughtful, driven person whose mind sometimes works too hard, I focus on practical, evidence-based approaches that fit into real life. not theoretical exercises but strategies you can use while navigating the QEW, managing work deadlines, or handling family responsibilities in Burlington.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Professional Background</h3>
-              
-              <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                <li data-astro-cid-ohz3nq7j>Registered Psychotherapist with CRPO (#10979)</li>
-                <li data-astro-cid-ohz3nq7j>Master's degree in counseling psychology</li>
-                <li data-astro-cid-ohz3nq7j>Specialized training in Acceptance and Commitment Therapy (ACT)</li>
-                <li data-astro-cid-ohz3nq7j>Experience with anxiety disorders, panic, and stress-related concerns</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECONDARY CTA BOX - Position #4 (After therapist intro) -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="cta-box" style="background: #6B8E6F; color: white; padding: 2rem; border-radius: 12px; text-align: center; max-width: 700px; margin: 0 auto;" data-astro-cid-ohz3nq7j>
-            <h3 style="color: white; margin-top: 0; font-size: 1.5rem;" data-astro-cid-ohz3nq7j>Ready to Address Your Anxiety?</h3>
-            <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin-bottom: 1.5rem;" data-astro-cid-ohz3nq7j>Book a free 15-minute consultation to discuss how therapy can help with anxiety in Burlington.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" data-astro-cid-ohz3nq7j>
-              <a href="tel:+14163062157" style="display: inline-block; padding: 1rem 2rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700;" data-astro-cid-ohz3nq7j>📞 Call (416) 306-2157</a>
-              <a href="https://nextsteptherapy.janeapp.com" style="display: inline-block; padding: 1rem 2rem; background: transparent; border: 2px solid white; color: white; text-decoration: none; border-radius: 8px; font-weight: 700;" data-astro-cid-ohz3nq7j>📅 Book Online</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- What to Expect Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>What to Expect from Anxiety Therapy</h2>
-              <p data-astro-cid-ohz3nq7j>Many people have never been to therapy before, and that's completely normal. Here's what the process typically looks like when we work together on anxiety concerns:</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Your First Session: The Foundation</h3>
-              <p data-astro-cid-ohz3nq7j>We'll start with a free 15-minute consultation to see if we're a good fit. This isn't therapy—it's a conversation about what you're experiencing and how I might be able to help. No pressure, no commitment beyond that initial conversation.</p>
-
-              <p data-astro-cid-ohz3nq7j>If we decide to work together, your first full session (usually 50 minutes) focuses on understanding your specific anxiety pattern. What triggers it? How does it show up in your body? What thoughts tend to accompany it? How has it been affecting your daily life, relationships, and work?</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Building Your Toolkit: Sessions 2-6</h3>
-              <p data-astro-cid-ohz3nq7j>This is where we develop practical strategies you can use immediately. You'll learn specific techniques for managing anxiety when it arises, but more importantly, you'll start to understand the deeper patterns that keep anxiety stuck.</p>
-
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Mindfulness Skills</h4>
-                  <p data-astro-cid-ohz3nq7j>Not meditation on a cushion, but practical ways to stay grounded during stressful moments throughout your Burlington day.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Cognitive Flexibility</h4>
-                  <p data-astro-cid-ohz3nq7j>Learning to notice anxious thoughts without automatically believing them or being controlled by them.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Behavioral Experiments</h4>
-                  <p data-astro-cid-ohz3nq7j>Gradually testing out new behaviors in low-stakes situations to build confidence and tolerance.</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Values Clarification</h4>
-                  <p data-astro-cid-ohz3nq7j">Identifying what truly matters to you so you can make choices based on values rather than fears.</p>
-                </div>
-              </div>
-
-              <h3 data-astro-cid-ohz3nq7j>Integration and Growth: Ongoing Sessions</h3>
-              <p data-astro-cid-ohz3nq7j>As you practice these new approaches, we'll refine them based on what works best for your lifestyle and personality. Some clients prefer weekly sessions for several months, while others prefer biweekly sessions over a longer period. We'll find a rhythm that supports your growth without adding stress to your schedule.</p>
-
-              <p data-astro-cid-ohz3nq7j>The goal isn't to need therapy forever—it's to develop skills you can use independently. Many clients find that after developing these foundations, they can manage their anxiety much more effectively on their own, checking in occasionally for tune-ups or during particularly stressful periods.</p>
-
-              <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Your Free Consultation</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Getting Started Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Getting Started with Anxiety Therapy in Burlington</h2>
-              <p data-astro-cid-ohz3nq7j">Taking the first step toward therapy can feel vulnerable, especially when you're already dealing with anxiety. Here's what the process looks like, designed to be as comfortable and straightforward as possible:</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Free 15-Minute Consultation</h3>
-              <p data-astro-cid-ohz3nq7j>We'll start with a brief phone call where you can ask questions and get a sense of whether we might work well together. This is completely free and there's no obligation to continue. You can share as much or as little as feels comfortable about what you're experiencing.</p>
-
-              <p data-astro-cid-ohz3nq7j>During this call, I'll also explain how virtual therapy works and help with any technical setup questions. If you can make a video call with family or friends, you can do virtual therapy—it's that simple.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Insurance and Investment</h3>
-              <p data-astro-cid-ohz3nq7j>Most extended health plans in Ontario cover services provided by a Registered Psychotherapist. I provide detailed receipts that make it easy to submit to your insurance company. Sessions are the same cost whether virtual or in-person, and most insurance companies don't distinguish between the two.</p>
-
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Session Fee</h4>
-                  <p data-astro-cid-ohz3nq7j>$175 per 50-minute session</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Insurance Coverage</h4>
-                  <p data-astro-cid-ohz3nq7j>Most plans cover 80-100% of the session fee</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Flexible Scheduling</h4>
-                  <p data-astro-cid-ohz3nq7j>Early morning, lunch hour, evening, and weekend options</p>
-                </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>No Long-Term Commitment</h4>
-                  <p data-astro-cid-ohz3nq7j>We'll work together as long as it's helpful, whether that's a few sessions or several months</p>
-                </div>
-              </div>
-
-              <h3 data-astro-cid-ohz3nq7j>Scheduling That Works for Burlington Life</h3>
-              <p data-astro-cid-ohz3nq7j>I understand that your schedule is probably already full between work, commuting, and family responsibilities. Virtual therapy makes it possible to access support without adding more travel time to your day. I offer sessions early in the morning (before your commute starts), during lunch hours, evenings, and some weekend slots.</p>
-
-              <p data-astro-cid-ohz3nq7j>Many clients appreciate that they can have a session and immediately return to their normal environment rather than having to transition from a therapist's office back to their daily life. This can make the insights and strategies from therapy easier to integrate into your actual routine.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>What Happens Next</h3>
-              <p data-astro-cid-ohz3nq7j>After our consultation, if we decide to work together, we'll schedule your first full session. Between sessions, you're welcome to email with questions or observations—supporting your growth between sessions is part of the process.</p>
-
-              <p data-astro-cid-ohz3nq7j">Most people start to notice some shifts within the first few sessions, though meaningful change typically happens over a period of weeks to months. We'll check in regularly about how things are going and adjust our approach based on what's working best for you.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Serving All Burlington Neighborhoods</h3>
-              <p data-astro-cid-ohz3nq7j>Anxiety therapy services available to Burlington residents in all areas including Aldershot, downtown Burlington, Millcroft, Orchard, Palmer, Roseland, Shoreacres, and surrounding Halton Region communities. Virtual sessions mean no travel required—connect from your Burlington home, office, or any private space.</p>
-
-              <p data-astro-cid-ohz3nq7j>Also serving nearby areas: <a href="/burlington-online-therapy.html">general therapy services in Burlington</a>, <a href="/anxiety-therapy-ontario.html">anxiety therapy throughout Ontario</a>, and specialized support for <a href="/workplace-stress-therapy-ontario.html">workplace stress and burnout</a>.</p>
-
-              <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(107, 142, 111, 0.05); border-radius: var(--radius-md);" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>Ready to Address Your Anxiety?</h4>
-                <p style="margin-bottom: var(--space-md);" data-astro-cid-ohz3nq7j>Your free consultation is just a phone call away. No pressure, no commitment—just a conversation about how anxiety therapy might help with what you're experiencing.</p>
-                <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Your Free Consultation</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Understanding Burlington Professional Anxiety -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 class="section-title" data-astro-cid-ohz3nq7j>Understanding Burlington Professional Anxiety</h2>
-              
-              <p data-astro-cid-ohz3nq7j>Working and living in Burlington creates unique anxiety pressures that professionals in other cities don't face. Whether you're commuting to downtown Toronto from Aldershot, managing the costs of lakefront living in downtown Burlington, or balancing family life in Millcroft with Bay Street demands, the anxiety compounds in specific ways.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Burlington-Specific Anxiety Patterns:</h3>
-              
-              <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                <li data-astro-cid-ohz3nq7j><strong>The QEW/GO Train Commute Trap:</strong> 60-90 minutes each way, anxiety building as you sit in traffic or packed trains, rehearsing work scenarios before you even arrive</li>
-                <li data-astro-cid-ohz3nq7j><strong>"Keeping Up with Burlington" Pressure:</strong> The silent comparison game in affluent neighborhoods (Roseland, Shoreacres, Palmer) where everyone appears to have it together</li>
-                <li data-astro-cid-ohz3nq7j><strong>Split-Life Anxiety:</strong> Trying to be present for Burlington family life (school pickups, sports, community events) while your mind is still on Toronto work deadlines</li>
-                <li data-astro-cid-ohz3nq7j><strong>Housing Cost Stress:</strong> The anxiety of maintaining a Burlington mortgage, property taxes, and lifestyle on dual-income pressure</li>
-                <li data-astro-cid-ohz3nq7j><strong>The Hamilton Proximity Effect:</strong> Feeling caught between Burlington's suburban polish and Hamilton's grittier reality, wondering where you really fit</li>
-                <li data-astro-cid-ohz3nq7j><strong>Lakefront Performance Anxiety:</strong> The pressure to project success while walking Spencers, dining at waterfront restaurants, or engaging in Burlington's active social scene</li>
-                <li data-astro-cid-ohz3nq7j><strong>Professional Identity Crisis:</strong> Commuting to Toronto for work but living in Burlington - feeling disconnected from both workplace networking and suburban community</li>
-              </ul>
-
-              <p data-astro-cid-ohz3nq7j>Virtual therapy means you can work on these pressures from your Burlington home - whether that's a condo downtown near City Hall, a house in Orchard, or anywhere in Halton. No adding more commute stress to address your commute anxiety.</p>
-
-              <h3 data-astro-cid-ohz3nq7j>Why Burlington Professionals Develop Anxiety:</h3>
-              
-              <p data-astro-cid-ohz3nq7j>You're managing multiple demanding identities: Toronto professional, Burlington resident, parent/partner, community member. The geographic split between where you work and where you live creates constant context-switching that exhausts your nervous system.</p>
-
-              <p data-astro-cid-ohz3nq7j>Add in Burlington's housing costs, the pressure to maintain a certain lifestyle, and the isolation that comes from commuting solo for hours each day - it's no wonder anxiety becomes overwhelming. You're not weak for struggling with this. You're trying to manage a genuinely difficult situation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Burlington Mental Health Resources -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 class="section-title" data-astro-cid-ohz3nq7j>Burlington & Halton Mental Health Resources</h2>
-              
-              <p data-astro-cid-ohz3nq7j>While I provide ongoing anxiety therapy support, sometimes you need immediate resources. Here are trusted Burlington and Halton Region mental health services:</p>
-
-              <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h3 data-astro-cid-ohz3nq7j>Crisis Support in Burlington:</h3>
-                <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                  <li data-astro-cid-ohz3nq7j><strong>Halton Crisis Line (ConnexOntario):</strong> 1-866-531-2600 (24/7 mental health crisis support)</li>
-                  <li data-astro-cid-ohz3nq7j><strong>Good2Talk (Ontario Students):</strong> 1-866-925-5454 (24/7 student mental health)</li>
-                  <li data-astro-cid-ohz3nq7j><strong>Crisis Text Line:</strong> Text HOME to 686868 (24/7)</li>
-                  <li data-astro-cid-ohz3nq7j><strong>Emergency Services:</strong> 911</li>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                    <li><a href="/burnout-therapy-toronto.html">Burnout Recovery</a></li>
+                    <li><a href="/high-functioning-anxiety-ontario.html">High-Functioning Anxiety</a></li>
                 </ul>
-              </div>
+            </div>
 
-              <h3 data-astro-cid-ohz3nq7j>Additional Burlington & Halton Resources:</h3>
-              <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                <li data-astro-cid-ohz3nq7j><strong>Joseph Brant Hospital Mental Health:</strong> Emergency mental health services in Burlington</li>
-                <li data-astro-cid-ohz3nq7j><strong>Halton Healthcare Mental Health Services:</strong> Outpatient mental health programs</li>
-                <li data-astro-cid-ohz3nq7j><strong>Community Care Halton:</strong> Mental health support and community programs across Burlington</li>
-                <li data-astro-cid-ohz3nq7j><strong>Ontario 211:</strong> Dial 2-1-1 for community resources and social services across Halton</li>
-                <li data-astro-cid-ohz3nq7j><strong>Halton Women's Place:</strong> Support for women and families in crisis</li>
+            <div class="sidebar-section">
+                <h3>Free Resources</h3>
+                <ul>
+                    <li><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy Quiz?</a></li>
+                    <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                    <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
               </ul>
-
-              <p data-astro-cid-ohz3nq7j>For non-emergency ongoing anxiety support, I'm available for virtual therapy sessions throughout the week, including evenings. Professional therapy provides structured, long-term strategies for managing Burlington's unique professional pressures alongside these community resources.</p>
             </div>
+
+            <div class="sidebar-cta">
+                <h3>Start Feeling Better</h3>
+                <p>Book a free 15-minute consultation with Jesse Cynamon, RP.</p>
+                <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="width: 100%;">Book Now</a>
+            </div>
+        </aside>
+                </div>
+              </div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Jesse Cynamon, RP</h4>
+                <p>Evidence-based therapy for high-performers. CRPO #10979.</p>
+                <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                    <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="/therapist-toronto.html">Toronto</a></li>
+                    <li><a href="/therapy-ottawa-ontario.html">Ottawa</a></li>
+                    <li><a href="/burlington-online-therapy.html">Burlington</a></li>
+                    <li><a href="/therapy-hamilton-ontario.html">Hamilton</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                </ul>
           </div>
         </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <h2 class="section-title centered" data-astro-cid-ohz3nq7j>Frequently Asked Questions</h2>
-            <div class="faq-grid" data-astro-cid-ohz3nq7j>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"Is virtual therapy as effective as in-person?"</h4>
-                <p data-astro-cid-ohz3nq7j">Research consistently shows that virtual therapy is just as effective as in-person therapy for anxiety disorders. Many clients actually prefer it because they're in their own comfortable space and don't have to add commute stress to their day.</p>
-              </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"How do I know if my anxiety is 'serious enough' for therapy?"</h4>
-                <p data-astro-cid-ohz3nq7j">If anxiety is affecting your daily life, relationships, work, or overall well-being, it's worth exploring therapy. You don't need to wait for a crisis—early support often prevents bigger problems later.</p>
-              </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"What if I don't know what to talk about?"</h4>
-                <p data-astro-cid-ohz3nq7j">That's completely normal and something I help with. I'll ask questions that help you explore your experiences, and we'll follow what feels most relevant and helpful for you in each session.</p>
-              </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"How long will I need therapy?"</h4>
-                <p data-astro-cid-ohz3nq7j">This varies by person and situation. Some people feel significantly better after a few sessions, while others prefer longer-term support. We'll regularly check in about your progress and adjust as needed.</p>
-              </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"Will my information be kept confidential?"</h4>
-                <p data-astro-cid-ohz3nq7j">Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. What we discuss stays between us, with very limited exceptions related to safety.</p>
-              </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"What if I need support between sessions?"</h4>
-                <p data-astro-cid-ohz3nq7j">You can email me between sessions with questions or observations. While I can't provide therapy via email, I can offer brief support and clarification about techniques we've discussed.</p>
-              </div>
-            </div>
-          </div>
+        
+        <!-- Crisis Resources -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+            </p>
         </div>
-      </section>
 
-      <!-- Final CTA Section -->
-      <section class="contact-section" id="contact" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="contact-content" data-astro-cid-ohz3nq7j>
-            <h2 data-astro-cid-ohz3nq7j>Start Anxiety Therapy in Burlington Today</h2>
-            <p class="contact-lead" data-astro-cid-ohz3nq7j">If anxiety is affecting your work performance, relationships, or daily life in Burlington, specialized anxiety therapy can provide the relief you're looking for. Whether you're experiencing panic attacks, constant worry, social anxiety, or generalized anxiety disorder, evidence-based treatment can help you regain control.</p>
-
-            <h3 data-astro-cid-ohz3nq7j>Free 15-Minute Anxiety Consultation</h3>
-            <p data-astro-cid-ohz3nq7j">Start with a no-pressure conversation about your anxiety symptoms and how therapy might help. This brief call helps us both determine if anxiety-focused treatment is right for your situation.</p>
-
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;" data-astro-cid-ohz3nq7j>
-              <a href="/#contact" class="manus-primary-cta" data-astro-cid-ohz3nq7j>Book Free Consultation</a>
-              <a href="mailto:jesse@nextsteptherapy.ca" class="manus-secondary-cta" data-astro-cid-ohz3nq7j>Send Message</a>
-            </div>
-
-            <div class="contact-info" data-astro-cid-ohz3nq7j>
-              <h4 data-astro-cid-ohz3nq7j>Anxiety Therapy Specialist Serving Burlington</h4>
-              <div class="therapist-details" data-astro-cid-ohz3nq7j>
-                <p data-astro-cid-ohz3nq7j>
-                  <strong data-astro-cid-ohz3nq7j>Jesse Cynamon, RP</strong><br data-astro-cid-ohz3nq7j>
-                  Registered Psychotherapist | CRPO #10979<br data-astro-cid-ohz3nq7j>
-                  Anxiety Therapy Burlington | Panic, Worry, Social Anxiety<br data-astro-cid-ohz3nq7j>
-                  Insurance Receipts Provided | Virtual & In-Person Sessions
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Next Step Therapy. All rights reserved. | CRPO #10979 | Ontario, Canada</p>
         </div>
-      </section>
-    </main>
+    </div>
+</footer>
 
-    <!-- Floating Mobile CTA -->
-    <a href="tel:+14163062157" class="floating-mobile-cta" data-astro-cid-ohz3nq7j>
-      📞 Book Free Call
-    </a>
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-cta-bar">
+    <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Free Call</a>
+    <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+</div>
 
-    <!-- Smart Sticky Header JavaScript -->
-    <script type="module">
-      document.addEventListener("DOMContentLoaded", function() {
-        const header = document.querySelector(".header.smart-sticky");
-        if (!header) return;
-
-        let lastScrollY = window.scrollY;
-        let isVisible = true;
-        const headerHeight = header.offsetHeight;
-        const scrollThreshold = 10;
-
-        function updateHeader() {
-          const currentScrollY = window.scrollY;
-
-          if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
-            return;
-          }
-
-          if (currentScrollY <= headerHeight) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          } else if (currentScrollY > lastScrollY && isVisible) {
-            header.style.transform = `translateY(-${headerHeight}px)`;
-            isVisible = false;
-          } else if (currentScrollY < lastScrollY && !isVisible) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          }
-
-          lastScrollY = currentScrollY;
-        }
-
-        let ticking = false;
-        function requestTick() {
-          if (!ticking) {
-            requestAnimationFrame(updateHeader);
-            ticking = true;
-          }
-        }
-
-        window.addEventListener("scroll", function() {
-          requestTick();
-          ticking = false;
-        }, { passive: true });
-
-        header.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
-        header.style.transform = "translateY(0)";
-      });
-    </script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imposter Syndrome Therapy Toronto | Professional Confidence Counselling Ontario</title>
-    <meta name="description" content="Imposter syndrome therapy for young professionals in Toronto & Ontario. Feel like a fraud despite your success? ACT therapy helps you build genuine confidence. Virtual sessions, OHIP+ & insurance accepted. CRPO #10979">
+    <meta name="description" content="Feel like a fraud despite your success? Evidence-based therapy for Toronto professionals to overcome imposter syndrome and build genuine confidence. CRPO Registered. Book a free consult.">
     <meta name="keywords" content="imposter syndrome therapy Toronto, therapist for imposter syndrome, professional confidence therapy, imposter syndrome counselling Ontario, career confidence therapy, perfectionism therapy Toronto">
 
     <!-- Open Graph / Social Media -->
@@ -115,6 +115,81 @@
     </script>
 
     <style>
+        /* Mobile Sticky CTA Bar */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 10px;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+        }
+
+        .mobile-cta-book, .mobile-cta-phone {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0 5px;
+        }
+
+        .mobile-cta-book {
+            background: #6B8E6F; /* Brand Green */
+            color: white;
+        }
+
+        .mobile-cta-phone {
+            background: #2C3E50; /* Brand Navy */
+            color: white;
+        }
+
+        /* Desktop Floating CTA */
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #6B8E6F;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-decoration: none;
+            z-index: 999;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: flex;
+            }
+            .floating-cta {
+                display: none;
+            }
+            .footer {
+                padding-bottom: 70px; /* Space for mobile bar */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .floating-cta {
+                display: block;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -474,6 +549,17 @@
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
 <body>
+
+    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Free Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
+
+    <!-- Floating CTA for Desktop (v4.0) -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+        📅 Schedule Free Call
+    </a>
 
     <!-- Hero Section -->
     <header class="hero">
@@ -994,11 +1080,14 @@
                     <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
                     <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+                    All services provided in compliance with College of Registered Psychotherapists of Ontario (CRPO) standards.
+                </p>
             </div>
             <div class="footer-bottom">
                 <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
                 Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> October 28, 2025</p>
+                <strong>Last Updated:</strong> November 18, 2025</p>
             </div>
         </div>
     </footer>
