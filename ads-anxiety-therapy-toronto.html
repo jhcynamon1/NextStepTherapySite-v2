@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/asset104.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/asset104.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/asset104-180.png">
+    
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+        
+        // Track Jane booking clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'begin_checkout', {
+                        'currency': 'CAD',
+                        'value': 50,
+                        'items': [{
+                            'item_name': 'Free Consultation',
+                            'item_category': 'Anxiety Therapy'
+                        }]
+                    });
+                });
+            });
+            
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'generate_lead', {
+                        'currency': 'CAD',
+                        'value': 60,
+                        'lead_source': 'phone_click'
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- SEO Meta Data -->
+    <title>Anxiety Therapy Toronto | Start This Week | CRPO Registered</title>
+    <meta name="description" content="Stop feeling overwhelmed by anxiety. Evidence-based ACT therapy for Toronto professionals. $175/session | Insurance accepted | Free 15-min consultation | Start this week.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/ads-anxiety-therapy-toronto.html">
+    
+    <!-- Robots (optional - noindex for PPC-only pages) -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup - Medical Web Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Anxiety Therapy Toronto",
+      "description": "Professional anxiety therapy services in Toronto. CRPO registered psychotherapist offering evidence-based ACT therapy for anxiety, worry, and panic.",
+      "url": "https://nextsteptherapy.ca/ads-anxiety-therapy-toronto",
+      "provider": {
+        "@type": "Person",
+        "additionalType": "Psychotherapist",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      }
+    }
+    </script>
+    
+    <!-- Schema Markup - Psychotherapist -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Jesse Cynamon",
+      "image": "https://nextsteptherapy.ca/images/optimized/jesse-about-600.webp",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "CRPO registered psychotherapist specializing in anxiety therapy, workplace stress, and men's mental health. Former sports operations professional.",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario"
+      },
+      "priceRange": "$175 per session",
+      "areaServed": {
+        "@type": "State",
+        "name": "Ontario",
+        "addressCountry": "CA"
+      },
+      "availableService": {
+        "@type": "MedicalTherapy",
+        "name": "Psychotherapy",
+        "description": "Evidence-based ACT and CBT therapy for anxiety, workplace stress, and related concerns"
+      },
+      "url": "https://nextsteptherapy.ca/jesse-cynamon-psychotherapist-ontario.html"
+    }
+    </script>
+    
+    <style>
+        /* Base Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section.alternate-bg {
+            background: #f8f9fa;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6B8E6F;
+            font-weight: bold;
+        }
+        
+        /* Typography */
+        .hero-ppc h1 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            font-size: 3rem !important;
+            line-height: 1.1 !important;
+            color: #2d3748 !important;
+            margin-bottom: 1rem !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            line-height: 1.3;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            line-height: 1.4;
+            color: #2d3748;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: #6B8E6F;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* PPC-Specific Styles */
+        .ppc-header {
+            background: var(--background-primary);
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .ppc-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ppc-logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .ppc-logo {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .ppc-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .ppc-badge {
+            background: #6B8E6F;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .ppc-phone {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #6B8E6F;
+            text-decoration: none;
+        }
+        
+        .ppc-phone:hover {
+            color: #5a7d5e;
+        }
+        
+        /* Hero Section - Two Column Layout */
+        .hero-ppc {
+            background: linear-gradient(135deg, rgba(107,142,111,0.05) 0%, rgba(248,250,249,0.8) 100%);
+            padding: var(--space-section) 0;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: var(--space-xl);
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-content {
+            text-align: left;
+        }
+        
+        .hero-ppc h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .hero-ppc .subheadline {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        .hero-ppc .subheadline strong {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .hero-trust-section {
+            text-align: center;
+        }
+        
+        .hero-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            border: 4px solid #6B8E6F;
+            box-shadow: 0 4px 16px rgba(107,142,111,0.2);
+        }
+        
+        .trust-signals {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: stretch;
+        }
+        
+        .social-proof-text {
+            font-size: 0.9rem;
+            color: #718096;
+            font-style: italic;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .trust-signal {
+            background: white;
+            border: 2px solid #6B8E6F;
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #2d3748;
+            width: 100%;
+            max-width: 280px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 2px 8px rgba(107,142,111,0.15);
+        }
+        
+        .trust-signal-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .trust-signal strong {
+            color: #6B8E6F;
+            font-size: 1.125rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin-top: var(--space-xl);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .hero-ppc h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-photo {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .trust-signal {
+                font-size: 0.95rem;
+            }
+        }
+        
+        .manus-primary-cta {
+            background: #6B8E6F;
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 16px rgba(107,142,111,0.3);
+        }
+        
+        .manus-primary-cta:hover {
+            background: #5a7d5e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107,142,111,0.4);
+        }
+        
+        .manus-secondary-cta {
+            background: white;
+            color: #6B8E6F;
+            border: 2px solid #6B8E6F;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .manus-secondary-cta:hover {
+            background: #6B8E6F;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Floating Mobile CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #6B8E6F;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(107,142,111,0.5);
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: block;
+            }
+            
+            .hero-ppc h1 {
+                font-size: 1.75rem;
+            }
+            
+            .ppc-phone-desktop {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .ppc-phone-mobile {
+                display: none;
+            }
+        }
+        
+        /* Problem Box */
+        .problem-box {
+            background: rgba(107, 142, 111, 0.05);
+            border: 2px solid rgba(107,142,111,0.2);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .problem-box h3 {
+            color: #6B8E6F;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .problem-box ul {
+            margin-top: 1rem;
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+        
+        .info-card {
+            background: #F8F9FA;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        
+        .info-card h4 {
+            color: #6B8E6F;
+            margin-top: 0;
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, rgba(107,142,111,0.08) 0%, rgba(248,250,249,0.5) 100%);
+            border: 2px solid rgba(107,142,111,0.2);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            margin: var(--space-xl) 0;
+        }
+        
+        .cta-box h3 {
+            color: #4a6b7a;
+            margin-top: 0;
+            font-size: 1.75rem;
+        }
+        
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: #6B8E6F;
+            box-shadow: 0 4px 12px rgba(107,142,111,0.1);
+        }
+        
+        .faq-item h4 {
+            color: #6B8E6F;
+            margin-top: 0;
+            font-size: 1.125rem;
+        }
+        
+        .faq-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        /* Therapist Section */
+        .therapist-highlight {
+            background: white;
+            border: 2px solid rgba(107,142,111,0.2);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--space-lg) 0;
+        }
+        
+        .therapist-highlight h3 {
+            color: #6B8E6F;
+            margin-top: 0;
+        }
+    </style>
+    
+    <!-- Ahrefs Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+</head>
+
+<body>
+    <!-- PPC Header (Logo Only - No Navigation) -->
+    <header class="ppc-header">
+        <div class="container">
+            <div class="ppc-logo-section">
+                <img src="/images/asset104.png" alt="Next Step Therapy" class="ppc-logo">
+                <a href="/" class="ppc-logo-text">Next Step Therapy</a>
+            </div>
+            <a href="tel:+14163062157" class="ppc-phone ppc-phone-desktop">(416) 306-2157</a>
+            <a href="tel:+14163062157" class="ppc-phone ppc-phone-mobile">📞 Call</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-ppc">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left: Main Content -->
+                    <div class="hero-content">
+                        <h1>Stop Overthinking Everything<br>ACT Therapy for Anxiety</h1>
+                        <p class="subheadline"><strong>You've tried traditional therapy.</strong> It didn't stick. ACT therapy is different: practical skills you can use this week—not years of analysis. Virtual across Ontario.</p>
+                        
+                        <!-- Primary CTAs -->
+                        <div class="cta-buttons">
+                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=google_ads&utm_medium=ppc&utm_campaign=anxiety_toronto" class="manus-primary-cta">Book Your Free 15-Minute Call</a>
+                            <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
+                        </div>
+                        <p class="social-proof-text">Most clients notice progress within 6-8 sessions</p>
+                    </div>
+                    
+                    <!-- Right: Photo + Trust Signals -->
+                    <div class="hero-trust-section">
+                        <img 
+                            src="/images/optimized/jesse-hero-300.webp" 
+                            srcset="/images/optimized/jesse-hero-300.webp 1x, /images/optimized/jesse-hero-600.webp 2x"
+                            alt="Jesse Cynamon, Registered Psychotherapist" 
+                            class="hero-photo" 
+                            width="180" 
+                            height="180" 
+                            loading="eager">
+                        
+                        <div class="trust-signals">
+                            <div class="trust-signal">
+                                <span class="trust-signal-icon">💰</span>
+                                <div><strong>$175</strong> per session</div>
+                            </div>
+                            <div class="trust-signal">
+                                <span class="trust-signal-icon">✓</span>
+                                <div><strong>Insurance</strong> Accepted</div>
+                            </div>
+                            <div class="trust-signal">
+                                <span class="trust-signal-icon">🎓</span>
+                                <div><strong>CRPO</strong> Registered #10979</div>
+                            </div>
+                            <div class="trust-signal">
+                                <span class="trust-signal-icon">⚡</span>
+                                <div><strong>No Waitlist</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Anxiety Section -->
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2>Does This Sound Like You?</h2>
+                    <p>Many professionals in Toronto describe anxiety that shows up in predictable patterns. You might recognize yourself in these experiences:</p>
+                    
+                    <div class="problem-box">
+                        <h3>Common Signs of Anxiety:</h3>
+                        <ul class="feature-list">
+                            <li><strong>Sunday Night Dread:</strong> That sinking feeling as the weekend ends and Monday approaches</li>
+                            <li><strong>TTC Anxiety:</strong> Your heart races on crowded trains or during rush hour commutes</li>
+                            <li><strong>Work Performance Pressure:</strong> Constant worry about making mistakes or not being good enough</li>
+                            <li><strong>The 3am Mind Race:</strong> Your brain won't stop replaying every conversation from the day</li>
+                            <li><strong>Social Exhaustion:</strong> Networking events or after-work drinks feel like performance art</li>
+                            <li><strong>Physical Symptoms:</strong> Tension headaches, tight chest, or stomach issues when stressed</li>
+                            <li><strong>Decision Paralysis:</strong> Even simple choices feel overwhelming</li>
+                            <li><strong>Avoidance Patterns:</strong> Finding reasons to skip social situations or postpone important tasks</li>
+                        </ul>
+                    </div>
+                    
+                    <p>If several of these resonate with you, you're not broken—you're human. Anxiety is incredibly common, especially among driven, thoughtful people living in demanding environments like Toronto.</p>
+                    
+                    <p><strong>The good news?</strong> You don't have to accept this as your normal. Evidence-based therapy can help you develop a different relationship with anxiety.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How ACT Therapy Helps -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2>How ACT Therapy Helps with Anxiety</h2>
+                    <p>Therapy for anxiety isn't about trying to convince you that your worries are irrational—often they're not. Instead, it's about developing practical skills to manage anxiety when it shows up.</p>
+                    
+                    <p>We use Acceptance and Commitment Therapy (ACT), which has extensive research support for anxiety disorders. Rather than trying to eliminate anxious thoughts and feelings, ACT helps you change your relationship with them so they don't control your behavior.</p>
+                    
+                    <h3>What This Looks Like in Practice:</h3>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h4>Notice Without Judgment</h4>
+                            <p>Recognize anxiety as information rather than truth. Learn to observe anxious thoughts without automatically believing them.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Choose Your Response</h4>
+                            <p>Develop space between feeling anxious and acting anxiously. Anxiety can be present without controlling your decisions.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Take Valued Action</h4>
+                            <p>Move toward what matters to you, even when anxiety is present. Values guide you better than fears.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Build Tolerance</h4>
+                            <p>Increase your capacity to handle uncertainty and discomfort without immediately trying to escape it.</p>
+                        </div>
+                    </div>
+                    
+                    <p><strong>This isn't about positive thinking or pretending problems don't exist.</strong> It's about developing psychological flexibility—the ability to stay present with whatever you're experiencing while still making choices based on your values rather than your fears.</p>
+                    
+                    <p>Many clients find that as they develop these skills, their relationship with anxiety fundamentally changes. Instead of seeing anxiety as something wrong with them, they begin to understand it as one part of their experience that doesn't have to dictate their choices.</p>
+                    
+                    <!-- Secondary CTA -->
+                    <div class="cta-box" style="margin-top: var(--space-xl);">
+                        <h3>Ready to Start?</h3>
+                        <p style="font-size: 1.125rem; margin-bottom: var(--space-md);">Free 15-minute consultation. No pressure, no commitment. Just a conversation about whether therapy might help.</p>
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=google_ads&utm_medium=ppc&utm_campaign=anxiety_toronto" class="manus-primary-cta">Book Your Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Jesse Cynamon, RP -->
+        <section class="section">
+            <div class="container">
+                <div class="therapist-highlight">
+                    <div style="display: grid; grid-template-columns: 300px 1fr; gap: var(--space-xl); align-items: start;" class="therapist-grid">
+                        <div>
+                            <img 
+                                src="/images/optimized/jesse-about-600.webp" 
+                                alt="Jesse Cynamon, Registered Psychotherapist" 
+                                style="width: 100%; border-radius: var(--radius-md); border: 3px solid #6B8E6F;" 
+                                loading="lazy"
+                                width="300"
+                                height="300">
+                        </div>
+                        <div>
+                            <h2>About Your Therapist</h2>
+                            <h3>Jesse Cynamon, RP | CRPO #10979</h3>
+                            <p><strong>Registered Psychotherapist</strong> providing anxiety therapy across Ontario</p>
+                            
+                            <p>I'm Jesse Cynamon, and I understand what it's like to be a thoughtful, driven person whose mind sometimes works a little too hard for their own good. I've been providing anxiety therapy in Ontario for several years, working with professionals, students, and creative individuals who appear successful on the outside while struggling with persistent worry internally.</p>
+                            
+                            <p><strong>Before becoming a therapist, I spent 10 years in professional sports operations</strong>, working with high-performing athletes and teams under intense pressure. This background gives me unique insight into the mental demands faced by driven professionals—the performance anxiety, the fear of failure, the constant self-criticism that comes with operating at a high level. I bring the same practical, results-oriented approach from sports psychology into evidence-based therapy.</p>
+                            
+                            <p>I understand the unique pressures of living in Toronto—the career competition, the social expectations, the constant stimulation, and the way city life can amplify anxiety for sensitive people.</p>
+                            
+                            <h4>My Approach:</h4>
+                            <ul class="feature-list">
+                                <li><strong>Evidence-Based:</strong> ACT and CBT approaches with extensive research support</li>
+                                <li><strong>Practical:</strong> Tools and strategies that fit into your real life and schedule</li>
+                                <li><strong>Collaborative:</strong> You're the expert on your experience. I offer perspective and evidence-based tools.</li>
+                                <li><strong>Strength-Based:</strong> The same qualities that make you susceptible to anxiety are also tremendous strengths</li>
+                            </ul>
+                            
+                            <p><strong>Virtual therapy across Ontario</strong> means you can access support without adding commute stress to your day. Many clients prefer virtual sessions—there's something about being in your own space that makes it easier to relax and be authentic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            @media (max-width: 768px) {
+                .therapist-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+        </style>
+
+        <!-- What to Expect -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2>What to Expect from Therapy</h2>
+                    
+                    <h3>Your First Session: The Foundation</h3>
+                    <p>We'll start with a <strong>free 15-minute consultation</strong> to see if we're a good fit. This isn't therapy—it's a conversation about what you're experiencing and how I might be able to help. No pressure, no commitment.</p>
+                    
+                    <p>If we decide to work together, your first full session (50 minutes) focuses on understanding your specific anxiety pattern. What triggers it? How does it show up? How has it been affecting your life?</p>
+                    
+                    <h3>Building Your Toolkit: Sessions 2-8</h3>
+                    <p>This is where we develop practical strategies you can use immediately:</p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h4>Mindfulness Skills</h4>
+                            <p>Not meditation on a cushion, but practical ways to stay grounded during stressful moments.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Cognitive Flexibility</h4>
+                            <p>Learning to notice anxious thoughts without automatically believing them.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Values Clarification</h4>
+                            <p>Identifying what truly matters to you so you can make choices based on values rather than fears.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Stress Response</h4>
+                            <p>Practical tools for managing anxiety in real situations—meetings, social events, challenging conversations.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Integration: Ongoing Sessions</h3>
+                    <p>As you practice these approaches, we'll refine them based on what works best for your lifestyle. Some clients prefer weekly sessions, others biweekly. We'll find a rhythm that supports your growth without adding stress.</p>
+                    
+                    <p><strong>The goal isn't to need therapy forever</strong>—it's to develop skills you can use independently. Many clients find that after 8-12 sessions, they can manage their anxiety much more effectively on their own.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Do you take insurance?</h4>
+                        <p>Yes. Most extended health plans in Ontario cover services provided by a Registered Psychotherapist. I provide detailed receipts that make it easy to submit to your insurance company.</p>
+                        <p><strong>Common providers:</strong> Manulife, Sun Life, Canada Life, Green Shield, Equitable Life</p>
+                        <p><strong>What to check:</strong> Look for "paramedical services" or "psychotherapy" coverage in your benefits. Typical coverage: $500-$3,000 annually</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>Is virtual therapy as effective as in-person?</h4>
+                        <p>Research consistently shows that virtual therapy is just as effective as in-person therapy for anxiety disorders. Many clients actually prefer it because they're in their own comfortable space and don't have to add commute stress to their day.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>How long will I need therapy?</h4>
+                        <p>This varies by person and situation. Some people feel significantly better after a few sessions, while others prefer longer-term support. We'll regularly check in about your progress and adjust as needed. Most clients work with me for 8-12 sessions.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>What if I'm not sure therapy is right for me?</h4>
+                        <p>That's exactly why we start with a free 15-minute consultation. This gives you a chance to ask questions, get a sense of my approach, and see if we might work well together—with zero pressure or commitment.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>How quickly can I get started?</h4>
+                        <p>Most clients can schedule their first appointment within the same week. I offer flexible scheduling including early morning, lunch hour, evening, and some weekend slots to fit with Toronto's demanding professional schedules.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>Will my information be kept confidential?</h4>
+                        <p>Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. What we discuss stays between us, with very limited exceptions related to safety.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance & Pricing -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2>Session Investment & Insurance</h2>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h4>Session Fee</h4>
+                            <p><strong>$175</strong> per 50-minute session</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Insurance Coverage</h4>
+                            <p>Most plans cover <strong>80-100%</strong> of the session fee</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Flexible Scheduling</h4>
+                            <p>Early morning, lunch hour, evening, and weekend options</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>No Long Commitment</h4>
+                            <p>Work together as long as it's helpful—weeks or months, your choice</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Extended Health Insurance Details</h3>
+                    <ul class="feature-list">
+                        <li>✓ CRPO Registered - covered by most plans</li>
+                        <li>✓ Detailed receipts provided for easy submission</li>
+                        <li>✓ Common providers: Manulife, Sun Life, Canada Life, Green Shield</li>
+                        <li>✓ Check "paramedical services" or "psychotherapy" coverage</li>
+                        <li>✓ Typical coverage: $500-$3,000 annually</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Practice Serving Ontario -->
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2 style="text-align: center;">Virtual Practice Serving All of Ontario</h2>
+                    <p style="text-align: center; max-width: 800px; margin: 0 auto var(--space-lg);">While based in Toronto, I provide virtual therapy to clients throughout Ontario. Distance is no barrier to quality mental health support.</p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h4>Greater Toronto Area</h4>
+                            <p>Toronto, Mississauga, Brampton, Markham, Vaughan, Richmond Hill</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Major Cities</h4>
+                            <p>Ottawa, Hamilton, London, Kitchener, Windsor, Oshawa, Barrie</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>All Ontario</h4>
+                            <p>Serving clients in every region across the province</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Emergency Resources -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2>Crisis Support Resources</h2>
+                    <p>If you're experiencing a mental health crisis or emergency, please reach out to these resources immediately:</p>
+                    
+                    <div style="background: rgba(107, 142, 111, 0.05); border: 2px solid rgba(107,142,111,0.2); padding: var(--space-lg); border-radius: var(--radius-md); margin-top: var(--space-md);">
+                        <ul class="feature-list">
+                            <li><strong>Emergency:</strong> Call 911 or visit your nearest hospital emergency department</li>
+                            <li><strong>Crisis Services Canada:</strong> 1-833-456-4566 (24/7)</li>
+                            <li><strong>ConnexOntario Mental Health Helpline:</strong> 1-866-531-2600 (24/7)</li>
+                            <li><strong>Distress Centre Toronto:</strong> (416) 408-4357 or text 45645 (24/7)</li>
+                            <li><strong>Good2Talk (Post-Secondary Students):</strong> 1-866-925-5454 (24/7)</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: var(--space-md);"><em>These services provide immediate support. For ongoing therapy, book your consultation below.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="section" id="contact-form">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Take the First Step Today</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: var(--space-lg);">If you're tired of anxiety controlling your choices and ready to develop a different relationship with worry and stress, professional support can help.</p>
+                    
+                    <h3>Book Your Free 15-Minute Consultation</h3>
+                    <p>Start with a no-pressure conversation about what you're experiencing and how therapy might help. This brief call helps us both determine if we're a good fit.</p>
+                    
+                    <!-- Primary CTAs -->
+                    <div class="cta-buttons" style="margin-top: var(--space-lg);">
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=google_ads&utm_medium=ppc&utm_campaign=anxiety_toronto" class="manus-primary-cta">📅 Book Free Consultation</a>
+                        <a href="tel:+14163062157" class="manus-secondary-cta">📞 Call (416) 306-2157</a>
+                    </div>
+                    
+                    <div style="margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 2px solid rgba(107,142,111,0.2);">
+                        <p style="font-weight: 600; color: #4a6b7a; margin-bottom: 0.5rem;">Jesse Cynamon, RP</p>
+                        <p style="margin: 0;">Registered Psychotherapist | CRPO #10979</p>
+                        <p style="margin: 0;">Virtual Anxiety Therapy | Toronto & All Ontario</p>
+                        <p style="margin: 0;">Insurance Receipts Provided | Same-Week Appointments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Mobile CTA -->
+    <a href="https://nextsteptherapy.janeapp.com/?utm_source=google_ads&utm_medium=ppc&utm_campaign=anxiety_toronto" class="floating-cta">📅 Book Free Call</a>
+</body>
+</html>
+
