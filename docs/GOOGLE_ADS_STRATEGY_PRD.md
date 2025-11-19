@@ -747,6 +747,8 @@ Extended Health Insurance:
 - [ ] Write landing page content (3 services)
 - [ ] Take professional photos
 - [ ] Write "About Jesse" bio
+- [ ] Create FAQ content
+- [ ] Insurance information section
 
 **Days 6-7: Planning**
 - [ ] Choose landing page builder
@@ -922,5 +924,9 @@ Extended Health Insurance:
 
 ### Audit Findings (Nov 19):
 - **False Positive Conversions:** 6 "conversions" were recorded, but 0 bookings occurred. This is because the conversion pixel fires on *button click* (initiate checkout) rather than *booking completion*.
-- **Recommendation:** Implement a "Thank You" page redirect in Jane App and move the conversion pixel there for accurate ROI tracking.
+- **Revised Solution (Jane App Limitation):** Jane App does **NOT** support redirecting users to a custom "Thank You" page after booking. Therefore, we cannot track conversions via a redirect URL.
+- **New Tracking Strategy:**
+    1.  **Native GA4 Integration:** Added GA4 Measurement ID (`G-J8H4YBGSHR`) directly to Jane App "Integrations" settings.
+    2.  **GA4 Custom Event:** We will configure GA4 to detect the `appointment_booked` event (or specific URL pattern `/appointments`) on the Jane App domain.
+    3.  **Import to Google Ads:** This verified booking event will be imported into Google Ads as a primary conversion action.
 - **Budget Note:** Google's "Limited by Budget" warning is expected and can be ignored. We are prioritizing high-quality clicks over volume.
