@@ -207,6 +207,48 @@
             .therapist-bio { flex-direction: column; text-align: center; }
             .hero { padding: 4rem 1rem; }
             .hero h1 { font-size: 2.2rem; }
+            
+            /* Roadmap Mobile Stack */
+            .roadmap-step { flex-direction: column; align-items: center; text-align: center; }
+            .roadmap-number { margin-bottom: 1rem; }
+            
+            /* Full Footer Styles */
+            .footer {
+                background: var(--text-primary);
+                color: white;
+                padding: 3rem 0 2rem;
+                margin-top: 5rem;
+            }
+            .footer-content { text-align: center; }
+            .footer-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+                margin-bottom: 3rem;
+                text-align: left;
+            }
+            .footer-section h4 {
+                color: white;
+                font-family: var(--font-heading);
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+            .footer-section ul { list-style: none; padding: 0; }
+            .footer-section li { margin-bottom: 0.8rem; }
+            .footer-section a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            .footer-section a:hover { color: white; }
+            .footer-bottom {
+                text-align: center;
+                padding-top: 2rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            @media (max-width: 768px) {
+                .footer { padding-bottom: 80px; }
+            }
         }
     </style>
 
@@ -293,7 +335,7 @@
                 <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Book Free 15-Min Consultation</a>
                 <a href="#signs" style="padding: 1rem 2rem; border: 1px solid #6B8E6F; color: #6B8E6F; border-radius: 8px; text-decoration: none; font-weight: 600;">Do I Have This?</a>
             </div>
-            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Serving Professionals Across Ontario | CRPO Registered</p>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8; text-align: center !important; width: 100%; display: block;">Serving Professionals Across Ontario | CRPO Registered</p>
         </div>
     </section>
 
@@ -340,24 +382,24 @@
         <p>Therapy isn't just venting. We use a structured, evidence-based approach to rewire your relationship with anxiety.</p>
         
         <div style="margin: 3rem 0;">
-            <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
-                <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+            <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+                <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
                 <div>
                     <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Unhooking from Thoughts</h3>
                     <p style="margin-bottom: 0.5rem;">We use cognitive defusion techniques to create space between you and your inner critic. You'll learn to notice the thought <em>"I'm going to fail"</em> without automatically believing it or acting on it.</p>
                 </div>
             </div>
             
-            <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
-                <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+            <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+                <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
                 <div>
                     <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Regulating the Nervous System</h3>
                     <p style="margin-bottom: 0.5rem;">You cannot think your way out of a survival response. We practice somatic tools to signal safety to your body, allowing you to actually rest when you're off the clock.</p>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
-                <div style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+            <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+                <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
                 <div>
                     <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Redefining Your "Why"</h3>
                     <p style="margin-bottom: 0.5rem;">High-functioning anxiety often stems from chasing other people's version of success. We clarify your true values so you can set boundaries without guilt and work with intention, not just panic.</p>
@@ -402,13 +444,52 @@
     </div>
 
     <!-- Footer -->
-    <footer style="background: #2C3E50; color: white; padding: 3rem 0; text-align: center; margin-top: 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-            <p style="color: rgba(255,255,255,0.8);"><strong>Next Step Therapy</strong> | Jesse Cynamon, RP</p>
-            <p style="font-size: 0.9rem; opacity: 0.6;">Serving clients in Toronto, Ottawa, Burlington, and Ontario-wide.</p>
-            <div style="margin-top: 1.5rem;">
-                <a href="/privacy-policy.html" style="color: white; margin: 0 10px; font-size: 0.9rem;">Privacy Policy</a>
-                <a href="/anxiety-therapy-ontario.html" style="color: white; margin: 0 10px; font-size: 0.9rem;">Anxiety Therapy</a>
+    <footer class="footer">
+        <div class="content-wrapper" style="padding: 0 1.5rem;"> <!-- Reusing container for width -->
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy for high-performers. CRPO #10979.</p>
+                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Crisis Resources -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Step Therapy. All rights reserved. | CRPO #10979 | Ontario, Canada</p>
             </div>
         </div>
     </footer>
