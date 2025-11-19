@@ -77,7 +77,7 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 ### 6.1 Immediate Content Gaps (Week 1-2)
 *   **"High-Functioning Anxiety" Landing Page:** ✅ **Completed (Nov 18)** - Launched with hybrid "Canada/Ontario" keyword strategy, neuroscience deep dive, and 3-phase roadmap.
 *   **"Adult ADHD vs. Anxiety" Blog Post:** Capture informational queries and funnel to booking.
-*   **"Therapy Costs & Insurance Guide 2025":** High-trust, high-intent transaction page.
+*   **"Therapy Costs & Insurance Guide 2025":** ✅ **Completed (Nov 19)** - Upgraded from blog post to core "Money Page" (`therapy-costs-ontario.html`) with 2025 pricing data, insurance grid, and clear CTA. Old blog URL redirected.
 
 ### 6.2 Niche Dominance (Week 3-4)
 *   **"Sunday Night Anxiety" Expansion:** Update existing page with stronger CTA and internal links.
