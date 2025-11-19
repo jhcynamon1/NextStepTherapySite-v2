@@ -911,10 +911,16 @@ Extended Health Insurance:
 
 *Strategy prepared November 2025. Based on competitive analysis of 8+ Ontario therapy practices, Canadian healthcare PPC benchmarks ($3.74 avg CPC, 3-5% conversion rates, $100-200 CAC), CRPO regulatory framework, and Alex Hormozi conversion principles adapted for professional services compliance. Ready to implement immediately.*
 
+## UPDATES & FIXES (Nov 19, 2025)
 
+### Campaign Correction:
+- **Switch from Performance Max to Search Only:** Performance Max was driving low-quality traffic ($0.22 CPC) from the Display Network. The new campaign is strictly "Search Network" to target high-intent users.
+- **Correct Landing Page:** Pointing ads to `ads-anxiety-therapy-toronto.html` instead of the homepage or generic service pages. This page is optimized for conversion with no navigation menu.
+- **Keyword Strategy:** Using exact phrase match keywords (e.g., "anxiety therapist toronto") instead of broad terms to avoid wasted spend.
+- **Policy Compliance:** Changed ad copy to focus on "Services" rather than "You" to avoid "Personalized Health" policy violations. (e.g., "Anxiety Therapy Available" instead of "Treat Your Anxiety").
+- **Sitelinks:** Updated sitelinks to point to specific, relevant pages (`virtual-therapy-ontario.html`, `faq.html`) instead of homepage anchors to satisfy Google's unique URL requirement.
 
-
-
-
-
-
+### Audit Findings (Nov 19):
+- **False Positive Conversions:** 6 "conversions" were recorded, but 0 bookings occurred. This is because the conversion pixel fires on *button click* (initiate checkout) rather than *booking completion*.
+- **Recommendation:** Implement a "Thank You" page redirect in Jane App and move the conversion pixel there for accurate ROI tracking.
+- **Budget Note:** Google's "Limited by Budget" warning is expected and can be ignored. We are prioritizing high-quality clicks over volume.

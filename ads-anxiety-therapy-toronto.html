@@ -58,9 +58,6 @@
     <!-- Robots (optional - noindex for PPC-only pages) -->
     <meta name="robots" content="noindex, nofollow">
     
-    <!-- Shared CSS -->
-    <link rel="stylesheet" href="/shared.min.css">
-    
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,32 +153,51 @@
     </script>
     
     <style>
-        /* Base Section Styles */
-        .section {
-            padding: 4rem 0;
+        :root {
+            --primary-soft-blue: #4a6b7a;
+            --primary-deep: #36525f;
+            --primary-light: #6b8a98;
+            --accent-warm: #c4a191;
+            --accent-gold: #b19976;
+            --neutral-cream: #faf8f5;
+            --neutral-soft: #f5f3ef;
+            --neutral-warm: #ede9e3;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --background-primary: #fefefe;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            --space-xs: 0.5rem;   
+            --space-sm: 1rem;     
+            --space-md: 1.5rem;   
+            --space-lg: 2rem;     
+            --space-xl: 3rem;     
+            --space-xxl: 4rem;    
+            --space-section: 6rem;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-soft: 0 4px 20px rgba(74,107,122,0.06);
+            --shadow-medium: 0 8px 30px rgba(74,107,122,0.08);
+            --shadow-strong: 0 12px 40px rgba(74,107,122,0.12);
         }
-        
-        .section.alternate-bg {
-            background: #f8f9fa;
-        }
-        
-        .feature-list {
-            list-style: none;
+        * {
+            margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        
-        .feature-list li {
-            padding: 0.75rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #6B8E6F;
-            font-weight: bold;
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--background-primary);
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 0.002em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
         
         /* Typography */
@@ -229,12 +245,46 @@
             color: #4a5568;
             margin-bottom: 1.25rem;
         }
+
+        /* Base Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section.alternate-bg {
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6B8E6F;
+            font-weight: bold;
+        }
         
         /* PPC-Specific Styles */
         .ppc-header {
             background: var(--background-primary);
             padding: var(--space-md) 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(74,107,122,0.08);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -652,6 +702,12 @@
             color: #6B8E6F;
             margin-top: 0;
         }
+        
+        @media (max-width: 768px) {
+            .therapist-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
     
     <!-- Ahrefs Analytics -->
@@ -839,14 +895,6 @@
             </div>
         </section>
         
-        <style>
-            @media (max-width: 768px) {
-                .therapist-grid {
-                    grid-template-columns: 1fr !important;
-                }
-            }
-        </style>
-
         <!-- What to Expect -->
         <section class="section alternate-bg">
             <div class="container">
@@ -1048,4 +1096,3 @@
     <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta" onclick="gtag('event', 'booking_click', {'event_category': 'PPC', 'event_label': 'Anxiety Campaign - Mobile Floating', 'value': 50});">📅 Book Free Call</a>
 </body>
 </html>
-

@@ -2,7 +2,7 @@
 **Date:** November 2025
 **Project:** Next Step Therapy - Organic Growth Acceleration
 **Owner:** Jesse Cynamon (CRPO #10979)
-**Status:** Draft
+**Status:** In Progress (Updated: Nov 18, 2025)
 
 ## 1. Executive Summary
 Next Step Therapy (nextsteptherapy.ca) is currently underperforming in organic search with a **0.9% CTR** despite ~14,500 monthly impressions. High-intent keywords like "virtual therapy ontario" and "online therapy burlington" are generating thousands of impressions but zero clicks due to "invisible" titles and meta descriptions that fail to connect with the target audience.
@@ -33,6 +33,7 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 ## 4. Critical Feature Requirements (The "Fixes")
 
 ### 4.1 Title & Meta Overhaul (The "Click" Engine)
+**Status:** ✅ Completed (Nov 18)
 **Problem:** Current titles are logistical ("Available This Week") rather than emotional.
 **Solution:** Rewrite top 10 pages with high-conversion copy.
 *   **Formula:** `[Primary Keyword] | [Emotional Benefit/Specific Condition] | [Trust Signal]`
@@ -40,12 +41,14 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 *   **Scope:** Homepage, Virtual Therapy Ontario, Burlington, Anxiety, Depression pages.
 
 ### 4.2 "Near Me" Localization Blocks
+**Status:** 🚧 Partial (Footer updated)
 **Problem:** Missing out on "Therapist near [City]" traffic without 50 spammy pages.
 **Solution:** Inject "Service Area" content blocks into main service pages.
 *   **Content:** "Finding Anxiety Therapy Near You in Ontario" section listing key cities (Toronto, Burlington, Ottawa, etc.) with internal links.
 *   **Benefit:** Captures local intent signals while maintaining a clean site structure.
 
 ### 4.3 Conversion Optimization (UX)
+**Status:** ✅ Sticky CTA Implemented
 **Problem:** Users land but don't book (Conversion Rate unknown but likely low).
 **Solution:**
 *   **Sticky Mobile CTA:** "Book Free Call" button fixed to bottom of mobile viewport.
@@ -84,8 +87,8 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 
 | Phase | Focus | Key Deliverables |
 | :--- | :--- | :--- |
-| **Week 1** | **The Click Fix** | Update Titles/Metas (Top 10 pages), Add "Near Me" Blocks, Fix Footer. |
-| **Week 2** | **Burlington Push** | Optimize Burlington page, Sticky Mobile CTA, Insurance Badges. |
+| **Week 1** | **The Click Fix** | ✅ Title/Meta Overhaul, ✅ Sticky CTA, 🚧 GBP Updates. |
+| **Week 2** | **Burlington Push** | ✅ Consolidated Pages, Optimize Content, Insurance Badges. |
 | **Week 3** | **Content Engine** | Publish "High Functioning Anxiety" & "Cost Guide" pages. Schema implementation. |
 | **Week 4** | **Authority & UX** | Speed optimization, Internal link audit, Conversion tracking setup (GA4). |
 
