@@ -3,94 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4A90E2">
 
-    <title>York University Student Therapy | YorkU Mental Health Support | CRPO Registered</title>
-    <meta name="description" content="Specialized therapy for York University students. Navigate academic stress, commuter isolation, and student life challenges. Virtual sessions across Ontario. CRPO registered psychotherapist who understands YorkU culture.">
-
-    <!-- Canonical URL -->
+    <!-- SEO Meta Tags -->
+    <title>York University Student Therapy | YorkU Mental Health Support | Next Step</title>
+    <meta name="description" content="Professional therapy for York University students. Navigate academic stress, commuter isolation, and student life challenges. CRPO registered. YFS insurance accepted.">
     <link rel="canonical" href="https://nextsteptherapy.ca/york-university-student-therapy.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="York University Student Therapy | Mental Health Support for YorkU Students">
-    <meta property="og:description" content="Specialized therapy for York University students facing academic pressure, commuter isolation, and life transitions. Virtual sessions with a therapist who gets student life.">
+    <meta property="og:description" content="Professional therapy for York University students facing academic pressure, commuter isolation, and life transitions. Virtual sessions with a therapist who gets student life.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/york-university-student-therapy">
+    <meta property="og:url" content="https://nextsteptherapy.ca/york-university-student-therapy.html">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
 
-    <!-- Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/asset104-180.png">
+    <link rel="apple-touch-icon" href="/images/asset104-180.png">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Analytics 4 -->
+    <style>
+        :root {
+            --primary-green: #6B8E6F;
+            --primary-green-hover: #5A7D5E;
+            --primary-green-light: rgba(107, 142, 111, 0.1);
+            --primary-green-border: rgba(107, 142, 111, 0.2);
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6B7D;
+            --bg-primary: #FFFFFF;
+            --bg-alternate: #F8F9FA;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            /* York Red Accent - Subtle */
+            --york-red: #E31837;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--text-primary); line-height: 1.7; background: var(--bg-primary); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        .header { background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+        .logo-section { display: flex; align-items: center; gap: 1rem; }
+        .logo { height: 50px; width: auto; }
+        .logo-text { font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary); text-decoration: none; font-weight: 600; }
+        .credentials-badge-prominent { background: var(--primary-green-light); color: var(--primary-green); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; border: 1px solid var(--primary-green-border); }
+        .nav { display: flex; gap: 2rem; align-items: center; }
+        .nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .nav a:hover { color: var(--primary-green); }
+        .header-phone { color: var(--primary-green); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+
+        /* Hero - York Themed */
+        .hero { background: linear-gradient(135deg, rgba(227, 24, 55, 0.05), rgba(248, 249, 250, 0.9)); padding: 5rem 0; text-align: center; }
+        .hero h1 { font-family: var(--font-heading); font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.2; }
+        .hero-subtext { font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2rem; line-height: 1.6; }
+        .hero-cta { margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        
+        .trust-pill { background: white; color: var(--primary-green); padding: 0.75rem 1.5rem; border-radius: 50px; font-size: 0.95rem; font-weight: 500; border: 1px solid var(--primary-green-border); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .trust-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .stat-card { background: white; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid var(--primary-green-border); }
+        .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: var(--york-red); font-family: var(--font-heading); margin-bottom: 0.5rem; }
+        .stat-label { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; }
+
+        /* Content Layout */
+        .content-wrapper { display: grid; grid-template-columns: 1fr 350px; gap: 3rem; margin: 4rem auto; }
+        .main-content { min-width: 0; }
+        .section { margin-bottom: 3rem; }
+        .section-title { font-family: var(--font-heading); font-size: 2rem; color: var(--text-primary); margin-bottom: 1.5rem; font-weight: 600; }
+        .section p { margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.05rem; }
+        
+        /* Lists */
+        .criteria-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .criteria-list li { padding: 1rem; margin-bottom: 0.75rem; background: var(--bg-alternate); border-left: 4px solid var(--primary-green); border-radius: 4px; }
+        .criteria-list li strong { color: var(--primary-green); display: block; margin-bottom: 0.25rem; }
+
+        /* Buttons */
+        .manus-primary-cta { background: var(--primary-green); color: white !important; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2); font-size: 1.05rem; }
+        .manus-primary-cta:hover { background: var(--primary-green-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3); }
+        .secondary-cta { background: transparent; color: var(--primary-green) !important; border: 2px solid var(--primary-green); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; font-size: 1.05rem; }
+        .secondary-cta:hover { background: var(--primary-green-light); transform: translateY(-2px); }
+
+        /* Sidebar & Footer */
+        .sidebar { background: var(--bg-alternate); padding: 2rem; border-radius: 8px; position: sticky; top: 100px; height: fit-content; }
+        .sidebar-section { margin-bottom: 2rem; }
+        .sidebar-section h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1rem; border-bottom: 2px solid var(--primary-green); padding-bottom: 0.5rem; }
+        .sidebar-section ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-section li { margin-bottom: 0.75rem; }
+        .sidebar-section a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: block; }
+        .sidebar-section a:hover { color: var(--primary-green); padding-left: 5px; }
+        .sidebar-cta { background: var(--primary-green); color: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
+        .sidebar-cta h3 { color: white; margin-bottom: 0.75rem; font-size: 1.125rem; border: none; padding: 0; }
+        .sidebar-cta p { color: white; font-size: 0.9rem; margin-bottom: 1rem; opacity: 0.95; }
+        
+        .footer { background: var(--text-primary); color: white; padding: 3rem 0 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .footer-section h4 { color: white; font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 0.8rem; }
+        .footer-section a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* Mobile Sticky */
+        .mobile-cta-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); padding: 12px 16px; display: none; z-index: 9999; justify-content: space-between; gap: 12px; }
+        .mobile-cta-book { flex: 2; background: #2e5c55; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; }
+        .mobile-cta-phone { flex: 1; background: #f3f4f6; color: #2e5c55; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; border: 1px solid #e5e7eb; }
+
+        /* FAQ */
+        .faq-item { background: var(--bg-alternate); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-green); }
+        .faq-item h3 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.75rem; }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar { display: flex; }
+            .footer { padding-bottom: 80px; }
+            .content-wrapper { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+            .nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .hero-cta { flex-direction: column; }
+        }
+    </style>
+
+    <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-J8H4YBGSHR');
+        gtag('config', 'G-J8H4YBGSHR', {'allow_enhanced_conversions': true, 'send_page_view': true});
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() { gtag('event', 'phone_call', {'event_category': 'conversion', 'value': 175, 'currency': 'CAD'}); });
+            });
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() { gtag('event', 'booking_click', {'event_category': 'conversion', 'value': 175, 'currency': 'CAD'}); });
+            });
+        });
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
     </script>
 
-    <!-- Schema Markup - MedicalWebPage for York University Student Mental Health -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "York University Student Therapy",
       "description": "Comprehensive mental health support for York University students, including therapy for academic stress, anxiety, depression, commuter isolation, and life transitions",
-      "url": "https://nextsteptherapy.ca/york-university-student-therapy",
-      "mainEntity": {
-        "@type": "MedicalTherapy",
-        "name": "Student Mental Health Therapy",
-        "relevantSpecialty": {
-          "@type": "MedicalSpecialty",
-          "name": "Clinical Psychology"
-        }
+      "provider": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
       },
+      "about": [
+        { "@type": "MedicalCondition", "name": "Academic Stress" },
+        { "@type": "MedicalCondition", "name": "Social Anxiety Disorder" },
+        { "@type": "MedicalCondition", "name": "Depression" }
+      ],
       "audience": {
         "@type": "PeopleAudience",
         "audienceType": "University Students",
-        "geographicArea": {
-          "@type": "City",
-          "name": "Toronto"
-        }
-      },
-      "provider": {
-        "@type": "Person",
-        "@id": "https://nextsteptherapy.ca/#jessecynamon",
-        "name": "Jesse Cynamon, RP",
-        "hasCredential": {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Professional License",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "College of Registered Psychotherapists of Ontario"
-          },
-          "identifier": "10979"
-        }
-      },
-      "about": [
-        {
-          "@type": "MedicalCondition",
-          "name": "Academic Stress"
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Social Anxiety Disorder"
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Depression"
-        },
-        {
-          "@type": "MedicalCondition",
-          "name": "Adjustment Disorder"
-        }
-      ]
+        "geographicArea": { "@type": "City", "name": "Toronto" }
+      }
     }
     </script>
-
-    <!-- FAQ Schema for York Student Questions -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,475 +224,235 @@
       ]
     }
     </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            background: #fff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            color: #8B0000;
-            font-size: 2em;
-            margin: 50px 0 20px;
-            line-height: 1.3;
-        }
-
-        h3 {
-            font-family: 'Playfair Display', serif;
-            color: #DC143C;
-            font-size: 1.5em;
-            margin: 35px 0 15px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-
-        strong {
-            color: #8B0000;
-            font-weight: 600;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-            border-left: 5px solid #DC143C;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 8px;
-        }
-
-        .cta-box h3 {
-            margin-top: 0;
-            color: #8B0000;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #DC143C;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            margin: 10px 10px 10px 0;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #8B0000;
-        }
-
-        .btn-secondary {
-            background: #34c759;
-        }
-
-        .btn-secondary:hover {
-            background: #28a745;
-        }
-
-        ul, ol {
-            margin: 20px 0 20px 40px;
-        }
-
-        li {
-            margin-bottom: 12px;
-            font-size: 1.05em;
-        }
-
-        .highlight-box {
-            background: #fff9e6;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .stat-box {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5em;
-            color: #DC143C;
-            font-weight: 700;
-            display: block;
-        }
-
-        .stat-label {
-            color: #5a6b7d;
-            margin-top: 10px;
-            font-size: 0.95em;
-        }
-
-        .crisis-box {
-            background-color: #fff3f3;
-            border-left: 4px solid #d32f2f;
-            padding: 24px;
-            margin: 40px 0;
-            border-radius: 8px;
-        }
-
-        .crisis-box h3 {
-            color: #d32f2f;
-            margin-top: 0;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .container {
-                padding: 15px;
-            }
-        }
-    </style>
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
 <body>
-    <header>
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <h1>Therapy for York University Students</h1>
-            <p class="subtitle">Support for Academic Stress, Commuter Isolation & Student Life Challenges<br>CRPO Registered Psychotherapist | Virtual Sessions | YFS Insurance Accepted</p>
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="/" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                <nav class="nav">
+                    <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                    <a href="/anxiety-therapy-ontario.html">Anxiety</a>
+                    <a href="/workplace-stress-therapy-ontario.html">Work Stress</a>
+                    <a href="/jesse-cynamon-psychotherapist-ontario.html">About</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Book Free Consult</a>
+                </nav>
+                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <div class="cta-box">
-            <h3>Free 15-Minute Consultation for York Students</h3>
-            <p>Struggling with the long commute, feeling isolated on campus, or overwhelmed by academic pressure? Let's talk about how therapy can help you thrive at York.</p>
-            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=york_page" class="btn" target="_blank">Schedule Free Call</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-        </div>
-
-        <h2>The Reality of Being a York University Student</h2>
-
-        <p>York University has 62,000+ students spread across 457 acres in North York. It's Canada's third-largest university, with incredible academic programs and diverse communities. But if you're a York student feeling overwhelmed, isolated, or struggling with your mental health—you're not alone.</p>
-
-        <p><strong>The York experience comes with unique challenges:</strong> The massive campus can feel anonymous and isolating. The majority of students commute (often 60-90+ minutes each way from Scarborough, Markham, Brampton, or beyond). You're juggling classes, part-time work, family obligations, and the pressure to maintain competitive grades—all while feeling like you're barely staying afloat.</p>
-
-        <div class="stats">
-            <div class="stat-box">
-                <span class="stat-number">62,000+</span>
-                <span class="stat-label">York Students</span>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Therapy for York University Students</h1>
+            <p class="hero-subtext">Navigate academic pressure, commuter isolation, and student life balance. Professional support for York students from a CRPO Registered Psychotherapist.</p>
+            <div class="hero-cta">
+                <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=york_page" class="manus-primary-cta">Book Free 15-Min Consultation</a>
+                <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
             </div>
-            <div class="stat-box">
-                <span class="stat-number">70%</span>
-                <span class="stat-label">Commuter Students</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-number">4-8 weeks</span>
-                <span class="stat-label">Waitlist at York Counselling</span>
+            <div class="trust-pills">
+                <span class="trust-pill">✓ YFS Insurance Accepted</span>
+                <span class="trust-pill">✓ Virtual Sessions</span>
+                <span class="trust-pill">✓ No Waitlist</span>
             </div>
         </div>
+    </section>
 
-        <h2>The Commuter Student Mental Health Crisis</h2>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content-wrapper">
+            <main class="main-content">
+                
+                <!-- Stats Section -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">62,000+</span>
+                        <span class="stat-label">York Students</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">70%</span>
+                        <span class="stat-label">Commute Daily</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4-8 wks</span>
+                        <span class="stat-label">Waitlist on Campus</span>
+                    </div>
+                </div>
 
-        <p>York has one of the highest percentages of commuter students in Ontario. <strong>If you're spending 2-3 hours a day on the TTC, GO Train, or driving from the suburbs, you know the toll it takes.</strong></p>
+                <!-- Intro Section -->
+                <section class="section">
+                    <h2 class="section-title">The York University Reality</h2>
+                    <p>York University has 62,000+ students on a massive campus in North York. But if you're feeling overwhelmed, isolated, or struggling with your mental health—you're not alone. The combination of a large commuter population and intense academic programs creates a unique kind of pressure.</p>
+                </section>
 
-        <h3>The Commuter Experience:</h3>
-        <ul>
-            <li><strong>Social isolation:</strong> You arrive for class, sit alone, leave immediately after. No time for clubs, study groups, or campus life. Everyone else seems to have friend groups, but you're always rushing to catch your bus.</li>
-            <li><strong>Exhaustion:</strong> Wake up at 6am for an 8:30am class. Three hours of lectures. Rush home. Study until midnight. Repeat. When are you supposed to have time for self-care or therapy?</li>
-            <li><strong>FOMO (fear of missing out):</strong> Your classmates are grabbing coffee after class, going to campus events, forming study groups. You're on the 196 bus watching Instagram stories of the social life you can't participate in.</li>
-            <li><strong>Family pressure + cultural expectations:</strong> Living at home means family obligations, cultural expectations about grades and career paths, and zero privacy. Your parents don't understand why you're stressed—"We're paying for your education, just focus on school!"</li>
-        </ul>
+                <!-- Commuter Crisis -->
+                <section class="section">
+                    <h2 class="section-title">The Commuter Student Mental Health Crisis</h2>
+                    <p>If you're spending 2-3 hours a day on the TTC or driving from the suburbs, you know the toll it takes. It's not just travel time—it's exhaustion and isolation.</p>
+                    
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">The Commuter Experience</h3>
+                    <ul class="criteria-list">
+                        <li><strong>Isolation:</strong> Sitting alone in Vari Hall, attending class, leaving immediately. No time for clubs or connection.</li>
+                        <li><strong>Exhaustion:</strong> Waking up at 6am, commuting, classes, commuting back, studying until midnight. Repeat.</li>
+                        <li><strong>FOMO:</strong> Watching others have a "campus life" while you're rushing to catch the bus.</li>
+                        <li><strong>Family Pressure:</strong> Living at home often means juggling family obligations alongside university workload.</li>
+                    </ul>
+                </section>
 
-        <p><strong>The hidden cost of commuting:</strong> Research shows commuter students have significantly higher rates of anxiety, depression, and academic stress compared to students living on or near campus. It's not a character flaw—it's a structural problem.</p>
+                <!-- Why Private Therapy -->
+                <section class="section">
+                    <h2 class="section-title">Why York Students Choose Private Therapy</h2>
+                    <p>York's Counselling & Disability Services is a valuable resource, but many students choose private therapy for:</p>
+                    
+                    <ul class="criteria-list">
+                        <li><strong>Faster Access:</strong> Get support within days, not weeks. Critical during midterms or crises.</li>
+                        <li><strong>Ongoing Support:</strong> Beyond the 6-8 session limit on campus, private therapy supports you throughout your degree.</li>
+                        <li><strong>Virtual Flexibility:</strong> The biggest benefit for York students. No need to travel to campus for appointments. Fit therapy around your commute and work.</li>
+                        <li><strong>Privacy:</strong> Complete separation from the university environment.</li>
+                    </ul>
+                    
+                    <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; border: 1px solid #c8e6c9;">
+                        <p style="margin-bottom: 0; color: #2e7d32; font-weight: 500;"><strong>Cost Reality:</strong> YFS Health Insurance covers registered psychotherapists (CRPO) up to $750-1,000/year. That's typically 4-5 sessions fully covered.</p>
+                    </div>
+                </section>
 
-        <h2>Why York Students Choose Private Therapy Over Campus Counselling</h2>
+                <!-- CTA Section -->
+                <div class="cta-box" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+                    <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Ready to Feel Better?</h3>
+                    <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Let's talk about what's going on and whether therapy is the right fit. No pressure, just a real conversation.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=york_page" class="manus-primary-cta" style="background: white; color: #2e5c55 !important;">Book Free Consultation</a>
+                        <a href="tel:+14163062157" class="secondary-cta" style="color: white !important; border-color: white;">Call (416) 306-2157</a>
+                    </div>
+                </div>
 
-        <p>York's Counselling & Disability Services is a valuable resource. But many students supplement or replace campus counselling with private therapy for practical reasons:</p>
+                <!-- Insurance Info -->
+                <section class="section">
+                    <h2 class="section-title">Insurance & Cost for York Students</h2>
+                    <p>Most full-time York undergraduates are automatically enrolled in the York Federation of Students (YFS) health insurance plan through Studentcare.</p>
+                    
+                    <ul class="criteria-list">
+                        <li><strong>Undergraduates:</strong> $750-1,000 per academic year coverage</li>
+                        <li><strong>Graduate students (GSA):</strong> Up to $1,200 per year coverage</li>
+                        <li><strong>Direct Billing:</strong> Available for many plans, or easy pay-and-claim</li>
+                    </ul>
+                </section>
 
-        <h3>1. Waitlists Are Brutal (4-8 Weeks During Peak Times)</h3>
-        <p>When you're in crisis during midterms or struggling with a mental health emergency, <strong>waiting two months isn't realistic</strong>. Private therapy typically offers appointments within 3-5 days. Virtual therapy removes even more barriers—no need to get to campus between classes or after a long commute.</p>
+                <!-- FAQ Section -->
+                <section class="section">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <h3>How do I know if I need therapy?</h3>
+                        <p>If stress interferes with your daily life (missing classes, withdrawing socially, anxiety, sleep issues), that's beyond "normal" stress. Therapy helps you build a university experience that works for you.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can therapy help if I work part-time?</h3>
+                        <p>Yes. Virtual sessions and evening/weekend availability make it possible to fit therapy around work shifts and classes without adding more commute stress.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Will my family find out?</h3>
+                        <p>Not unless you tell them. Therapy is 100% confidential. Even if using parental insurance, they see a claim for "psychological services" but never session content.</p>
+                    </div>
+                </section>
 
-        <h3>2. You Get More Than 6-8 Sessions</h3>
-        <p>Campus counselling is short-term (6-8 sessions maximum). If you're dealing with ongoing anxiety, depression that's been building for years, or complex life circumstances, <strong>two months of support isn't enough</strong>. Private therapy provides continuous care throughout your entire degree—from first-year adjustment through graduation and career transitions.</p>
+                <!-- Crisis Box -->
+                <div style="background: #fff5f5; border-left: 4px solid #ef5350; padding: 1.5rem; border-radius: 8px; margin-top: 3rem;">
+                    <h3 style="color: #c62828; margin-top: 0; margin-bottom: 1rem;">In Crisis?</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>York Counselling & Disability Services:</strong> 416-736-5297 (9am-4pm)</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Good2Talk:</strong> 1-866-925-5454</p>
+                    <p style="margin-bottom: 0;"><strong>Suicide Crisis Helpline:</strong> Call or text 988</p>
+                </div>
 
-        <h3>3. Virtual Sessions Fit Commuter Life</h3>
-        <p>This is the big one for York students. <strong>You don't have to travel to campus or downtown Toronto for therapy.</strong> Virtual sessions mean you can:</p>
-        <ul>
-            <li>Attend from home (no extra commute time)</li>
-            <li>Schedule appointments on days you're not on campus</li>
-            <li>Fit therapy around your part-time job, family obligations, and class schedule</li>
-            <li>Access support during reading weeks, holidays, or co-op terms without interruption</li>
-        </ul>
+            </main>
 
-        <h3>4. Complete Privacy Separate from Your Academic Life</h3>
-        <p>Some students prefer mental health care completely separate from their university. No risk of running into classmates in the waiting room, no concerns about any potential connection to academic records (even though counselling is confidential). <strong>Off-campus therapy provides total separation.</strong></p>
-
-        <h3>5. Specialized Expertise in Student Mental Health</h3>
-        <p>Private therapists who specialize in student mental health understand the unique pressures of York culture: the commuter isolation, balancing work and school, family expectations (especially for first-generation university students), and the competitive academic environment in programs like Schulich, Osgoode, and health sciences.</p>
-
-        <div class="highlight-box">
-            <p><strong>Cost Reality:</strong> "But private therapy is expensive!" Most York students are covered by YFS (York Federation of Students) health insurance, which covers registered psychotherapists (CRPO) up to $750-1,000 per academic year. At $175/session, that's 4-5 sessions fully covered. Many students pay $0-50 out of pocket per session after insurance.</p>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">Student Anxiety</a></li>
+                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Student Resources</h3>
+                    <ul>
+                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy Quiz?</a></li>
+                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-cta">
+                    <h3>Start Feeling Better</h3>
+                    <p>Book a free 15-minute consultation with Jesse Cynamon, RP.</p>
+                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sidebar&utm_campaign=york_page" class="manus-primary-cta" style="width: 100%;">Book Now</a>
+                </div>
+            </aside>
         </div>
+    </div>
 
-        <h2>Common Mental Health Challenges for York Students</h2>
-
-        <h3>Commuter Isolation & Loneliness</h3>
-        <p>The biggest issue I see with York students: <strong>You're surrounded by 62,000 people but feel completely alone.</strong></p>
-
-        <p><strong>What commuter isolation looks like:</strong></p>
-        <ul>
-            <li>Eating lunch alone in Vari Hall or your car because you don't know anyone</li>
-            <li>Skipping class because you can't face another day of feeling invisible</li>
-            <li>Watching everyone else have university experiences you're excluded from</li>
-            <li>Feeling guilty for wanting a social life when you "should be focused on grades"</li>
-            <li>Withdrawing from campus life entirely and just going through the motions</li>
-        </ul>
-
-        <h3>Academic Pressure & "I'm Not Good Enough"</h3>
-        <p>York has rigorous programs, especially in Schulich Business School, Osgoode Law, health sciences, and engineering. You're competing with brilliant students for limited spots in graduate programs, professional schools, and competitive jobs.</p>
-
-        <p><strong>Academic stress manifests as:</strong></p>
-        <ul>
-            <li>Perfectionism: "If I don't get an A+, I've failed"</li>
-            <li>All-nighters before every exam despite preparing for weeks</li>
-            <li>Severe test anxiety that makes you blank during exams</li>
-            <li>Comparing yourself to classmates who seem to effortlessly excel</li>
-            <li>Catastrophizing a single bad grade as "my entire future is ruined"</li>
-            <li>Burnout by second semester because you've been running on empty since September</li>
-        </ul>
-
-        <h3>Balancing Work, School & Family Obligations</h3>
-        <p>Many York students work 15-30 hours per week to afford tuition, living expenses, or to support their families. Add in family obligations (childcare for siblings, helping at the family business, cultural/religious commitments), and there's no time left for yourself.</p>
-
-        <p><strong>The juggling act looks like:</strong></p>
-        <ul>
-            <li>Working evening shifts after a full day of classes, getting home at 11pm, trying to study</li>
-            <li>Missing social events because you have to work or help family</li>
-            <li>Choosing between studying for an exam or working a shift you need to pay rent</li>
-            <li>Feeling guilty for wanting time for yourself when your family needs you</li>
-            <li>Constant exhaustion and no idea how you'll make it through the semester</li>
-        </ul>
-
-        <h3>First-Generation University Student Struggles</h3>
-        <p>If you're the first in your family to attend university, you're navigating everything alone. Your parents can't help with course selection, don't understand the workload, and may have unrealistic expectations about grades and career paths.</p>
-
-        <p><strong>First-gen challenges include:</strong></p>
-        <ul>
-            <li><strong>Imposter syndrome:</strong> "I don't belong here. Everyone else knows what they're doing."</li>
-            <li><strong>Family pressure:</strong> "We sacrificed everything for you to go to university—you must become a doctor/lawyer/engineer."</li>
-            <li><strong>Cultural conflicts:</strong> Western individualism at university vs. collectivist family values at home</li>
-            <li><strong>No roadmap:</strong> Nobody taught you how to choose a major, apply for internships, or network for career opportunities</li>
-            <li><strong>Financial stress:</strong> OSAP doesn't cover everything, and you feel guilty asking your parents for money</li>
-        </ul>
-
-        <h3>Depression & Loss of Motivation</h3>
-        <p>Sometimes the stress builds so high that you stop functioning entirely. You stop going to lectures. Assignments pile up. You can't remember why you even wanted to go to university.</p>
-
-        <p><strong>Depression in York students looks like:</strong></p>
-        <ul>
-            <li>Sleeping through alarms and missing classes repeatedly</li>
-            <li>Inability to focus even on subjects you used to enjoy</li>
-            <li>Questioning whether your degree matters or if you should just drop out</li>
-            <li>Withdrawing from the few friends you had</li>
-            <li>Feeling numb, empty, or disconnected from your own life</li>
-            <li>The long commute feels unbearable—you sit on the bus and just want to disappear</li>
-        </ul>
-
-        <h3>Anxiety About the Future</h3>
-        <p>You're in third or fourth year and everyone's asking: "What are you doing after graduation?" And you're thinking: <em>"I have no idea, and that terrifies me."</em></p>
-
-        <p><strong>Career anxiety includes:</strong></p>
-        <ul>
-            <li>Pressure to choose between passion vs. practical/lucrative career paths</li>
-            <li>Parental expectations (especially common: "You must become a doctor/lawyer/engineer")</li>
-            <li>Comparing your internship/job search to peers who have everything lined up</li>
-            <li>Fear of graduating with OSAP debt and no clear career path</li>
-            <li>Questioning if your York degree was the "right" choice</li>
-        </ul>
-
-        <h2>How Therapy Actually Helps York Students</h2>
-
-        <p>Therapy isn't about lying on a couch talking about your childhood (that's outdated movie therapy). Modern therapy for students is practical, goal-focused, and designed to help you function better <strong>right now</strong>.</p>
-
-        <h3>What We Actually Do in Sessions</h3>
-
-        <p><strong>Acceptance and Commitment Therapy (ACT) for Students:</strong></p>
-        <ul>
-            <li><strong>Clarify your values:</strong> Why are you at York? What matters beyond grades and parental approval? When you reconnect with your deeper "why," the stress becomes more manageable.</li>
-            <li><strong>Acceptance skills:</strong> You can't eliminate commuter isolation or family pressure, but you can learn to navigate these challenges without being paralyzed by them.</li>
-            <li><strong>Defusion techniques:</strong> Your brain says "I'm a failure" when you get a B. We teach you to recognize that thought as just a thought, not a fact.</li>
-            <li><strong>Committed action:</strong> Small, concrete steps toward what matters (joining one club even though it's scary, setting boundaries with family about study time, reaching out to one classmate).</li>
-        </ul>
-
-        <p><strong>Practical Strategies for York Student Life:</strong></p>
-        <ul>
-            <li><strong>Combat commuter isolation:</strong> Strategies to build community despite limited campus time</li>
-            <li><strong>Time management for work-school balance:</strong> When you have 16 waking hours and 14 hours of obligations</li>
-            <li><strong>Family boundary-setting:</strong> How to communicate with parents about mental health and academic pressure</li>
-            <li><strong>Test anxiety management:</strong> Evidence-based techniques to reduce panic before/during exams</li>
-            <li><strong>Career decision-making:</strong> Navigate career choices when every option feels overwhelming</li>
-        </ul>
-
-        <div class="cta-box">
-            <h3>Ready to Feel Better? Start with a Free 15-Minute Call</h3>
-            <p>Let's talk about what's going on and whether therapy is the right fit. No pressure, no commitment—just a real conversation about how I can help.</p>
-            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=york_page" class="btn" target="_blank">Book Free Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy for students and professionals. CRPO #10979.</p>
+                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">Student Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html">Mississauga</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency)
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Step Therapy. All rights reserved. | CRPO #10979 | Ontario, Canada</p>
+            </div>
         </div>
+    </footer>
 
-        <h2>Insurance & Cost for York Students</h2>
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sticky_bar&utm_campaign=york_page" class="mobile-cta-book">📅 Book Free Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
 
-        <h3>YFS Health Insurance Coverage</h3>
-        <p>Most full-time York undergraduates are automatically enrolled in the York Federation of Students (YFS) health insurance plan through Studentcare. This plan covers registered psychotherapists (CRPO).</p>
-
-        <p><strong>Typical coverage:</strong></p>
-        <ul>
-            <li><strong>Undergraduates:</strong> $750-1,000 per academic year for psychotherapy</li>
-            <li><strong>Graduate students (GSA):</strong> Up to $1,200 per year depending on plan</li>
-            <li><strong>International students:</strong> Coverage varies by plan (check your Studentcare portal)</li>
-        </ul>
-
-        <p><strong>What this means in real terms:</strong> At $175 per session, most students get 4-5 sessions fully covered, then pay $0-75 out of pocket for additional sessions depending on their plan.</p>
-
-        <h3>How Billing Works</h3>
-        <ol>
-            <li><strong>Direct billing:</strong> I submit claims directly to your insurance, you pay any remaining balance</li>
-            <li><strong>Pay-and-claim:</strong> You pay $175, I provide a detailed receipt, you submit to Studentcare and get reimbursed within 2-4 weeks</li>
-        </ol>
-
-        <h3>No Insurance? Other Options</h3>
-        <ul>
-            <li><strong>Parent/guardian insurance:</strong> If you're under 25 and living at home, you may be covered by a parent's workplace benefits</li>
-            <li><strong>Sliding scale:</strong> Limited spots available for students with genuine financial hardship</li>
-            <li><strong>York counselling + private combo:</strong> Use campus services for your allotted sessions, then continue with private therapy</li>
-        </ul>
-
-        <h2>Virtual Therapy: Perfect for Commuter Students</h2>
-
-        <p>If you're commuting 60-90 minutes each way to York, the last thing you want is to add another trip to your schedule. <strong>Virtual therapy removes the logistical barriers.</strong></p>
-
-        <h3>How Virtual Sessions Work</h3>
-        <ul>
-            <li><strong>50-minute video calls</strong> via secure, PHIPA-compliant platform (same privacy standards as in-person)</li>
-            <li><strong>Attend from anywhere private:</strong> Your bedroom at home, an empty campus space, even audio-only during your commute if needed</li>
-            <li><strong>No extra travel time:</strong> On days you're not on campus, you don't have to make a special trip</li>
-            <li><strong>Evening and weekend availability:</strong> Schedule around your classes, work shifts, and family obligations</li>
-            <li><strong>Continuity of care:</strong> Keep therapy going during reading weeks, holidays, or co-op terms outside Toronto</li>
-        </ul>
-
-        <h3>Is Virtual Therapy as Effective?</h3>
-        <p>Yes. Research shows virtual therapy is equally effective for anxiety, depression, and stress. Many commuter students actually prefer virtual because:</p>
-        <ul>
-            <li>More comfortable opening up from their own space</li>
-            <li>No commute stress before/after sessions</li>
-            <li>Easier to fit into chaotic schedules with work, school, and family</li>
-            <li>Complete privacy (no family members seeing you go to an "appointment")</li>
-        </ul>
-
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>How do I know if I actually need therapy, or if I'm just stressed like every other York student?</h3>
-        <p>If your stress is interfering with your ability to function (missing classes, can't concentrate, withdrawing from people, sleep problems, constant anxiety or sadness), that's beyond "normal" student stress. The fact that lots of students struggle doesn't mean you should just tough it out. <strong>Therapy helps you not just survive York, but actually thrive.</strong></p>
-
-        <h3>Will my family find out I'm in therapy?</h3>
-        <p>Not unless you tell them. Therapy is 100% confidential. Even if you're using their insurance, they see a claim for "psychological services" but not session notes or what we discuss. If you're over 18, you have complete medical privacy.</p>
-
-        <h3>What if I can't make it to campus for counselling?</h3>
-        <p>That's exactly why virtual therapy exists. You don't need to go to campus or anywhere else—sessions are wherever you have internet and privacy.</p>
-
-        <h3>How long does therapy take?</h3>
-        <p>Depends on your goals. Some students come for 6-8 sessions to get through a specific crisis (exam anxiety, breakup, family conflict). Others prefer ongoing support throughout their degree. There's no requirement to attend for months or years—we work at your pace.</p>
-
-        <h3>Can I do therapy while working part-time?</h3>
-        <p>Yes. Virtual sessions and flexible scheduling (evenings/weekends available) make it possible to fit therapy around work shifts and classes.</p>
-
-        <h3>What if my parents don't "believe" in therapy?</h3>
-        <p>This is common, especially in cultures where mental health stigma is strong. You're an adult—you don't need parental permission for therapy. If you want to tell them, we can work on communication strategies. If you prefer to keep it private, that's completely valid too.</p>
-
-        <div class="crisis-box">
-            <h3>In Crisis? Get Immediate Help</h3>
-            <p style="margin-bottom: 12px; font-size: 1.05em;"><strong style="font-size: 1.2em; color: #d32f2f;">Call 988</strong> - Suicide Crisis Helpline (24/7, free, confidential)</p>
-            <p style="margin-bottom: 12px;"><strong>Call 911</strong> - Life-threatening emergencies</p>
-            <p style="margin-bottom: 12px;"><strong>York Good2Talk:</strong> <a href="tel:+18669255454" style="color: #1976d2; text-decoration: none;">1-866-925-5454</a> (24/7 crisis support for Ontario students)</p>
-            <p style="margin-bottom: 12px;"><strong>Ontario Mental Health Crisis Line:</strong> <a href="tel:+18665312600" style="color: #1976d2; text-decoration: none;">1-866-531-2600</a></p>
-            <p style="margin-bottom: 12px;"><strong>Gerstein Crisis Centre (Toronto):</strong> <a href="tel:+14169295200" style="color: #1976d2; text-decoration: none;">416-929-5200</a></p>
-            <p style="margin-bottom: 0;"><strong>York Counselling & Disability Services:</strong> 416-736-5297 (walk-in crisis support available)</p>
-        </div>
-
-        <h2>Take the Next Step</h2>
-
-        <p>You don't have to navigate York alone. Whether you're struggling with commuter isolation, academic pressure, family expectations, or just feeling overwhelmed—therapy provides support so you can handle university life without sacrificing your mental health.</p>
-
-        <p><strong>The students who succeed at York aren't the ones who pretend everything's fine.</strong> They're the ones who recognize when they need support and actually get it.</p>
-
-        <div class="cta-box">
-            <h3>Free 15-Minute Consultation</h3>
-            <p>Let's have a pressure-free conversation about what you're dealing with and how therapy might help. You can ask questions, get a feel for how I work, and decide if it's the right fit—no commitment required.</p>
-            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=york_page" class="btn" target="_blank">Schedule Free Call</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-            <p style="margin-top: 20px; color: #5a6b7d; font-size: 0.95em;">Jesse Cynamon, RP (CRPO #10979)<br>
-            Registered Psychotherapist | Virtual Therapy Across Ontario<br>
-            YFS Insurance Accepted | Direct Billing Available</p>
-        </div>
-
-        <h2>Other University Student Mental Health Resources</h2>
-        <p>Looking for information about therapy at other universities? I also work with students from:</p>
-        <ul>
-            <li><a href="/university-of-toronto-student-therapy.html" style="color: #DC143C; text-decoration: underline;">University of Toronto Student Therapy</a> - Support for UofT students and academic pressure</li>
-            <li><a href="/toronto-metropolitan-university-student-therapy.html" style="color: #DC143C; text-decoration: underline;">Toronto Metropolitan University Student Therapy</a> - Career-focused support for TMU students</li>
-        </ul>
-
-        <p style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #ddd; color: #666; font-size: 0.9em;">
-            <strong>About Next Step Therapy:</strong> I'm Jesse Cynamon, a CRPO-registered psychotherapist specializing in student mental health, anxiety, and life transitions. I work with university students navigating the stress of academic life, especially commuter students facing isolation and overwhelm. My approach combines Acceptance and Commitment Therapy (ACT) with practical, evidence-based strategies tailored to the realities of student life in Ontario.
-        </p>
-    </main>
-<script src="/js/security-check.js"></script>
+    <script src="/js/security-check.js"></script>
 </body>
 </html>
