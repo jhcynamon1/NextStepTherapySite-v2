@@ -79,6 +79,17 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 *   **"Adult ADHD vs. Anxiety" Blog Post:** Capture informational queries and funnel to booking.
 *   **"Therapy Costs & Insurance Guide 2025":** ✅ **Completed (Nov 19)** - Upgraded from blog post to core "Money Page" (`therapy-costs-ontario.html`) with 2025 pricing data, insurance grid, and clear CTA. Old blog URL redirected.
 
+### 6.3 Traffic Analysis (Nov 20)
+*   **Dominant Traffic Source:** Paid Ads (`ads-anxiety-therapy-toronto.html` - 184 visitors).
+*   **Top Organic Page:** `workplace-stress-burnout-therapy.html` (47 visitors) - Validates the "Burnout/Professionals" niche strategy.
+*   **Problem Area:** `anxiety-therapy-burlington.html` (4 visitors) - Confirms "Ghost Traffic" issue (Impressions but no clicks).
+*   **Emerging Channel:** ChatGPT (4 visitors) - Confirms AEO (Answer Engine Optimization) potential.
+
+### 6.4 Keyword Research (Nov 20)
+*   **Status:** ✅ **Completed**. Generated 40 high-value keywords across 4 pillars (High Functioning Anxiety, Burnout, Burlington, Costs).
+*   **Action:** Data saved to `data/keyword_research_nov_2025.csv`. This list powers the content strategy for Weeks 3-4.
+
+
 ### 6.2 Niche Dominance (Week 3-4)
 *   **"Sunday Night Anxiety" Expansion:** Update existing page with stronger CTA and internal links.
 *   **"University Student Support":** Create specific pages for UofT, McMaster, Western (already exists? Optimize them).
@@ -90,7 +101,7 @@ This PRD outlines a 30-day aggressive turnaround plan to fix these critical leak
 | **Week 1** | **The Click Fix** | ✅ Title/Meta Overhaul, ✅ Sticky CTA, 🚧 GBP Updates. |
 | **Week 2** | **Burlington Push** | ✅ Consolidated Pages, Optimize Content, Insurance Badges. |
 | **Week 3** | **Content Engine** | Publish "High Functioning Anxiety" & "Cost Guide" pages. Schema implementation. |
-| **Week 4** | **Authority & UX** | Speed optimization, Internal link audit, Conversion tracking setup (GA4). |
+| **Week 4** | **Authority & UX** | Speed optimization, Internal link audit, Conversion tracking setup (GA4), ✅ Heatmap Setup (Clarity). |
 
 ## 8. Success Metrics
 *   **Lagging Indicators:** Monthly Organic Bookings, Revenue.
