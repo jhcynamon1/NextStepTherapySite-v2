@@ -151,6 +151,9 @@ Create high-converting, SEO-optimized therapy landing pages using validated dema
 - ❌ NO testimonials or client stories
 - ❌ NO superlatives ("best," "top," "leading")
 - ❌ NO fake research claims or statistics
+- ❌ NO comparative language ("better than," "unlike other therapists," "superior")
+- ❌ NO disparaging language ("generic," "cookie-cutter," "quick fix," "band-aid")
+- ❌ NO informal/unprofessional credentials claims ("real deal," "weekend course")
 
 ### **CONSERVATIVE RESEARCH LANGUAGE**
 - ✅ "has been shown to be effective"
