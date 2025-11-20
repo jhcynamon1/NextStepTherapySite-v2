@@ -68,6 +68,26 @@
 - "psychotherapist for professionals ontario"
 - "stress management for demanding roles"
 
+### Query #2: "experts in therapy focusing on men's health adhd trt and burnout"
+
+**Date:** November 19, 2025
+**Source:** Client Consultation (Referral from ChatGPT)
+**Result:** ✅ BOOKED CONSULTATION
+
+**Client Quote:**
+> "I asked chat gpt for experts in therapy focusing on men's health adhd trt and burnout... It suggested you... and another one who I looked at... but your profile in particularly looked more focused on professionals burnout which kind of hit the two of the key triggers... The other one was more generic."
+
+**Analysis:**
+
+**What This Tells Us:**
+1.  ✅ **AI Search (AEO) is Real:** Clients are using ChatGPT to filter therapists before Google.
+2.  ✅ **Niche Wins:** The client explicitly rejected the "generic" competitor.
+3.  ✅ **"Professionals Burnout" is the Winning Hook:** Even though they searched for ADHD/TRT, the "Professional Burnout" positioning is what sold them.
+4.  ⚠️ **ADHD Overlap:** Clients searching for ADHD are finding us. We don't treat ADHD, but "High Functioning Anxiety" overlaps significantly with Adult ADHD symptoms (executive dysfunction, burnout). This confirms our "High Functioning" page strategy is correct.
+
+**Strategic Takeaway:**
+Double down on **"Therapy for Professionals"** and **"Burnout"**. This is your unique value proposition (UVP) that beats generalist clinics in the AI era.
+
 ---
 
 ## 🎯 Key Insights for Content Strategy
