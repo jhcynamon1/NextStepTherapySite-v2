@@ -1,0 +1,157 @@
+/* 
+   ==========================================================================
+   NEXT STEP THERAPY - REDESIGN THEME (Navy/Bronze/Sage)
+   Overrides existing styles to apply "Clinical Executive" aesthetic
+   ========================================================================== 
+*/
+
+/* 1. FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700;900&display=swap');
+
+:root {
+    /* NEW COLOR PALETTE */
+    --color-navy: #1B2A41;
+    --color-charcoal: #2C3E50;
+    --color-sage: #708D81;
+    --color-bronze: #C19A6B;
+    --color-bronze-hover: #A07A50;
+    --color-warm-grey: #F4F4F4;
+    --color-white: #FFFFFF;
+
+    /* Overriding Existing Variables (Assuming standard variable names, or forcing overrides) */
+    --primary-color: var(--color-navy);
+    --accent-color: var(--color-bronze);
+    --text-color: var(--color-charcoal);
+    --bg-color: var(--color-warm-grey);
+    
+    /* Font Variables */
+    --font-serif: 'Merriweather', serif;
+    --font-sans: 'Lato', sans-serif;
+}
+
+/* 2. GLOBAL TYPOGRAPHY OVERRIDES */
+body {
+    font-family: var(--font-sans);
+    color: var(--color-charcoal);
+    background-color: var(--color-warm-grey);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-navy);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+p {
+    line-height: 1.7;
+    color: rgba(44, 62, 80, 0.9); /* Charcoal with slight transparency */
+}
+
+/* 3. HEADER & NAVIGATION */
+header, .site-header {
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Logo Text (If text based) */
+.logo-text, .brand-name {
+    font-family: var(--font-serif) !important;
+    color: var(--color-navy) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation Links */
+nav a, .nav-link {
+    font-family: var(--font-sans) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: var(--color-navy) !important;
+}
+
+nav a:hover, .nav-link:hover {
+    color: var(--color-bronze) !important;
+}
+
+/* 4. BUTTONS (The Bronze Standard) */
+button, .btn, .button, a.button {
+    border-radius: 4px !important; /* Square/Sharp corners from design */
+    font-family: var(--font-sans) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+/* Primary CTA */
+.btn-primary, .button-primary, .cta-button {
+    background-color: var(--color-bronze) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-primary:hover, .button-primary:hover {
+    background-color: var(--color-bronze-hover) !important;
+    transform: translateY(-2px);
+}
+
+/* Secondary/Outline CTA */
+.btn-secondary, .button-outline {
+    background-color: transparent !important;
+    border: 2px solid var(--color-navy) !important;
+    color: var(--color-navy) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-navy) !important;
+    color: white !important;
+}
+
+/* 5. HERO SECTION */
+.hero, .hero-section {
+    background-color: var(--color-warm-grey) !important;
+}
+
+.hero h1 {
+    color: var(--color-navy) !important;
+}
+
+.hero p.lead {
+    color: var(--color-charcoal) !important;
+    font-size: 1.25rem !important;
+}
+
+/* 6. CARDS & SECTIONS (Services/Features) */
+.card, .service-card, .feature-box {
+    background-color: white !important;
+    border-radius: 2px !important; /* Sharp corners */
+    border: 1px solid rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(27, 42, 65, 0.1) !important; /* Navy shadow */
+    border-top: 4px solid var(--color-sage) !important; /* Sage accent on hover */
+}
+
+/* 7. FOOTER */
+footer, .site-footer {
+    background-color: var(--color-navy) !important;
+    color: white !important;
+}
+
+footer h3, footer h4, footer a {
+    color: white !important;
+}
+
+footer .text-muted {
+    color: #A0AEC0 !important; /* Light grey for secondary text */
+}
+
