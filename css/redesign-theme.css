@@ -33,7 +33,63 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700 !important;
 }
 
-/* 3. HERO SECTION SPECIFICS */
+/* 3. SPACING & LAYOUT (The Luxury Feel) */
+section {
+    padding: 5rem 0 !important; /* More breathing room globally */
+}
+
+/* 4. HEADER & NAVIGATION FIXES */
+header, .header {
+    background-color: white !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    height: auto !important;
+    padding: 1.5rem 0 !important;
+}
+
+.header-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+}
+
+.logo-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.logo-text {
+    font-family: 'Merriweather', serif !important;
+    color: var(--color-navy) !important;
+    font-weight: 900 !important;
+    font-size: 1.5rem !important;
+    white-space: nowrap !important;
+}
+
+.credentials-badge {
+    font-size: 0.7rem !important;
+    background: var(--color-warm-grey) !important;
+    color: var(--color-sage) !important;
+    padding: 4px 8px !important;
+    border-radius: 999px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    white-space: nowrap !important;
+    border: 1px solid rgba(112, 141, 129, 0.2) !important;
+}
+
+.nav a, .nav-link {
+    font-family: 'Lato', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    color: var(--color-navy) !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
+    margin: 0 1rem !important;
+}
+
+/* 5. HERO SECTION SPECIFICS */
 .hero h1, .hero-text h1 {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
@@ -53,22 +109,21 @@ h1, h2, h3, h4, h5, h6 {
     color: rgba(44, 62, 80, 0.9) !important;
 }
 
-/* 4. BUTTONS (The "Bronze" Upgrade) */
-/* Targeting specific classes found in index.html */
+/* 6. BUTTONS (The "Bronze" Upgrade) */
 .header-book-btn, 
 .primary-cta, 
 .btn, 
 button[type="submit"],
 a.button {
     background: var(--color-bronze) !important;
-    background-color: var(--color-bronze) !important; /* Double tap */
+    background-color: var(--color-bronze) !important; 
     color: white !important;
-    border-radius: 4px !important; /* Square look */
+    border-radius: 4px !important; 
     font-family: 'Lato', sans-serif !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.1em !important;
-    padding: 12px 24px !important;
+    padding: 14px 28px !important; /* Bigger click targets */
     border: none !important;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
     transition: all 0.3s ease !important;
@@ -100,28 +155,7 @@ a.button {
     color: white !important;
 }
 
-/* 5. HEADER & NAVIGATION */
-header, .header {
-    background-color: white !important;
-    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
-}
-
-.nav a, .nav-link {
-    font-family: 'Lato', sans-serif !important;
-    text-transform: uppercase !important;
-    font-weight: 700 !important;
-    color: var(--color-navy) !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 0.1em !important;
-}
-
-.logo-text {
-    font-family: 'Merriweather', serif !important;
-    color: var(--color-navy) !important;
-    font-weight: 900 !important;
-}
-
-/* 6. FOOTER */
+/* 7. FOOTER */
 footer, .site-footer {
     background-color: var(--color-navy) !important;
     color: white !important;
@@ -134,4 +168,3 @@ footer a {
 footer h3, footer h4 {
     color: white !important;
 }
-
