@@ -1,83 +1,137 @@
 /* 
    ==========================================================================
-   NEXT STEP THERAPY - REDESIGN THEME (Variable Hijack)
-   Overrides existing CSS variables to force new design schema
+   NEXT STEP THERAPY - REDESIGN THEME (Navy/Bronze/Sage)
+   Overrides existing styles to apply "Clinical Executive" aesthetic
+   FORCE MODE: Uses !important to override legacy inline styles and shared.min.css
    ========================================================================== 
 */
 
+/* 1. FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700;900&display=swap');
 
 :root {
-    /* 1. HIJACKING EXISTING VARIABLES */
-    /* We map the old variable names to the NEW design values */
-    
-    /* Primary Brand Colors (Was Soft Blue -> Now NAVY) */
-    --primary-soft-blue: #1B2A41 !important; 
-    --primary-deep: #1B2A41 !important;
-    --primary-light: #2C3E50 !important; /* Charcoal for lighter variants */
-
-    /* Accent Colors (Was Gold/Warm -> Now BRONZE) */
-    --accent-warm: #C19A6B !important;
-    --accent-gold: #C19A6B !important;
-
-    /* Backgrounds (Was Cream -> Now WARM GREY/WHITE) */
-    --neutral-cream: #F4F4F4 !important;
-    --neutral-soft: #F4F4F4 !important;
-    --neutral-warm: #E8E8E8 !important;
-    --background-primary: #FFFFFF !important;
-
-    /* Text Colors */
-    --text-primary: #2C3E50 !important; /* Charcoal */
-    --text-secondary: #4A5568 !important;
-
-    /* Fonts (Was Playfair/Source Sans -> Now MERRIWEATHER/LATO) */
-    --font-display: 'Merriweather', serif !important;
-    --font-body: 'Lato', sans-serif !important;
-
-    /* Shapes (Was Rounded -> Now SQUARE/SHARP) */
-    --radius-sm: 2px !important;
-    --radius-md: 2px !important;
-    --radius-lg: 2px !important;
+    /* NEW COLOR PALETTE */
+    --color-navy: #1B2A41;
+    --color-charcoal: #2C3E50;
+    --color-sage: #708D81;
+    --color-bronze: #C19A6B;
+    --color-bronze-hover: #A07A50;
+    --color-warm-grey: #F4F4F4;
+    --color-white: #FFFFFF;
 }
 
-/* 2. FORCE BUTTON STYLES */
-/* Even if variables are used, some specific button styles might need nuclear overrides */
+/* 2. GLOBAL TYPOGRAPHY OVERRIDES */
+body {
+    font-family: 'Lato', sans-serif !important;
+    color: var(--color-charcoal) !important;
+    background-color: var(--color-warm-grey) !important;
+}
 
-.btn, .button, a[class*="btn"], a[class*="button"] {
-    border-radius: 2px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif !important;
+    color: var(--color-navy) !important;
     font-weight: 700 !important;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
 }
 
-/* Primary Buttons */
-.btn-primary, .button-primary {
-    background-color: #C19A6B !important; /* Bronze */
+/* 3. HERO SECTION SPECIFICS */
+.hero h1, .hero-text h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+    color: var(--color-navy) !important;
+}
+
+@media (min-width: 768px) {
+    .hero h1, .hero-text h1 {
+        font-size: 3.5rem !important;
+    }
+}
+
+.lead-text, .hero p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.125rem !important;
+    color: rgba(44, 62, 80, 0.9) !important;
+}
+
+/* 4. BUTTONS (The "Bronze" Upgrade) */
+/* Targeting specific classes found in index.html */
+.header-book-btn, 
+.primary-cta, 
+.btn, 
+button[type="submit"],
+a.button {
+    background: var(--color-bronze) !important;
+    background-color: var(--color-bronze) !important; /* Double tap */
     color: white !important;
+    border-radius: 4px !important; /* Square look */
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding: 12px 24px !important;
     border: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
 }
 
-.btn-primary:hover, .button-primary:hover {
-    background-color: #A07A50 !important; /* Bronze Dark */
+.header-book-btn:hover, 
+.primary-cta:hover, 
+.btn:hover {
+    background: var(--color-bronze-hover) !important;
+    background-color: var(--color-bronze-hover) !important;
     transform: translateY(-2px) !important;
 }
 
-/* 3. HEADER OVERRIDES */
-header, .site-header {
-    background-color: #FFFFFF !important;
-    border-bottom: 1px solid #E2E8F0 !important;
+/* Secondary CTA (Outline) */
+.secondary-cta, .phone-cta {
+    background: transparent !important;
+    border: 2px solid var(--color-navy) !important;
+    color: var(--color-navy) !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
 }
 
-/* Navigation Links */
-nav a {
+.secondary-cta:hover {
+    background: var(--color-navy) !important;
+    color: white !important;
+}
+
+/* 5. HEADER & NAVIGATION */
+header, .header {
+    background-color: white !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.nav a, .nav-link {
     font-family: 'Lato', sans-serif !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
-    color: #1B2A41 !important;
+    color: var(--color-navy) !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.1em !important;
 }
 
-/* 4. HERO TEXT */
-h1, h2, h3 {
-    color: #1B2A41 !important; /* Navy */
+.logo-text {
+    font-family: 'Merriweather', serif !important;
+    color: var(--color-navy) !important;
+    font-weight: 900 !important;
 }
+
+/* 6. FOOTER */
+footer, .site-footer {
+    background-color: var(--color-navy) !important;
+    color: white !important;
+}
+
+footer a {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+footer h3, footer h4 {
+    color: white !important;
+}
+
