@@ -61,6 +61,14 @@
             });
         });
     </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Preload Critical Resources -->
@@ -71,7 +79,7 @@
 
     <!-- SEO Meta Data - Exact Keyword Match -->
     <title>Men's Mental Health Therapy London Ontario | Male Counsellor CRPO #10979</title>
-    <meta name="description" content="Specialized men's mental health therapy in London, Ontario. Male-friendly approach to anxiety, depression, work stress. Book confidential consultation today.">
+    <meta name="description" content="Men's mental health therapy in London, Ontario. Male-friendly approach to anxiety, depression, work stress. Book confidential consultation today.">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Men's Mental Health Therapy London Ontario | Next Step Therapy">
@@ -88,7 +96,7 @@
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Men's Mental Health Therapy in London, Ontario",
-      "description": "Specialized mental health therapy services for men in London, Ontario, addressing workplace stress, relationship challenges, and emotional wellbeing.",
+      "description": "Mental health therapy services for men in London, Ontario, addressing workplace stress, relationship challenges, and emotional wellbeing.",
       "provider": {
         "@type": "Person",
         "additionalType": "Psychotherapist",
@@ -99,7 +107,7 @@
       "availableService": {
         "@type": "MedicalTherapy",
         "name": "Men's Mental Health Therapy",
-        "description": "Specialized therapy approach for male clients",
+        "description": "Therapy approach for male clients",
         "serviceType": "Psychotherapy"
       },
       "addressLocality": "Toronto", "addressRegion": "ON",
@@ -138,7 +146,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Men's Mental Health Therapy",
-            "description": "Specialized therapy services for men addressing workplace stress and emotional wellbeing"
+            "description": "Therapy services for men addressing workplace stress and emotional wellbeing"
           }
         }]
       }
@@ -402,24 +410,13 @@
 
         /* Footer */
         .footer {
-            background: #2D3748;
+            background: #333;
             color: white;
             text-align: center;
-            padding: 3rem 0;
+            padding: 2rem 0;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer-info {
-            margin-bottom: 2rem;
-        }
-
-        .footer-info h3 {
-            font-family: 'Playfair Display', serif;
+        .footer p {
             margin-bottom: 1rem;
         }
 
@@ -427,18 +424,57 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
 
         .footer-links a {
-            color: #CBD5E0;
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
+        .footer-section ul li a:hover {
             color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
         }
 
         /* Responsive Design */
@@ -463,6 +499,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
         }
     </style>
     <!-- Ahrefs Analytics -->
@@ -475,11 +516,10 @@
         <nav class="nav-container">
             <a href="/" class="logo">Next Step Therapy</a>
             <ul class="nav-links">
-                <li><a href="/about-jesse-cynamon">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
-                <li><a href="/anxiety-therapy-toronto">Anxiety</a></li>
-                <li><a href="/depression-therapy-toronto">Depression</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <a href="tel:416-306-2157" class="cta-button">Call Now</a>
         </nav>
@@ -491,7 +531,7 @@
             <h1>Men's Mental Health Therapy in London, Ontario</h1>
             <p>"I don't know why I'm here. I've never done this therapy thing before." That's how most of my male clients in London start our first session. There's something about being a man in Southwestern Ontario—whether you're working at the hospital, trying to make it in tech, or dealing with layoffs in traditional industries—that makes asking for help feel like failure. But here's what I've learned: the strongest thing you can do is recognize when you need support.</p>
             <div class="cta-buttons">
-                <a href="tel:416-306-2157" class="btn-primary">Book Free Consultation</a>
+                <a href="tel:416-306-2157" class="btn-primary">Schedule 15-Min Consultation</a>
                 <a href="#services" class="btn-secondary">Learn More</a>
             </div>
         </div>
@@ -525,7 +565,7 @@
     <!-- Services Section -->
     <section class="section" id="services">
         <div class="container">
-            <h2 class="section-title">Specialized Men's Mental Health Services</h2>
+            <h2 class="section-title">Men's Mental Health Services</h2>
             <p class="section-subtitle">Men in London face unique pressures—from job insecurity in a changing economy to the expectation that you should handle everything alone. I use practical, straightforward approaches that work with how you actually think and process emotions, not against it.</p>
 
             <div class="features-grid">
@@ -601,7 +641,7 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>London Professionals</h3>
-                    <p>Specialized support for London's business community, including those in healthcare, education, technology, and finance sectors.</p>
+                    <p>Focused support for London's business community, including those in healthcare, education, technology, and finance sectors.</p>
                 </div>
 
                 <div class="feature-card">
@@ -633,28 +673,89 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Jesse Cynamon, RP</h3>
-                <p>Registered Psychotherapist (CRPO #10979)</p>
-                <p>Specialized Men's Mental Health Therapy | London, Ontario</p>
-                <p>Phone: <a href="tel:416-306-2157" style="color: #CBD5E0;">(416) 306-2157</a></p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Therapy Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
+                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
+                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions</a></li>
+                        <li><a href="/counselling-services.html">Relationship Support</a></li>
+                        <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ontario Service Areas</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
+                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
+                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Focused Support</h4>
+                    <ul>
+                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
+                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
+                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
+                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
+                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
+                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources & Guides</h4>
+                    <ul>
+                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
+                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
+                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Professional Standards</h4>
+                    <ul>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">London men's therapy services</p>
+                </div>
             </div>
-
-            <div class="footer-links">
-                <a href="/privacy-policy">Privacy Policy</a>
-                <a href="/terms-of-service">Terms of Service</a>
-                <a href="/about-jesse-cynamon">About Jesse</a>
-                <a href="/anxiety-therapy-toronto">Anxiety Therapy</a>
-                <a href="/depression-therapy-toronto">Depression Therapy</a>
-                <a href="/#contact">Contact</a>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+                </p>
             </div>
-
-            <p style="margin-top: 2rem; color: #CBD5E0; font-size: 0.9rem;">
-                &copy; 2024 Next Step Therapy. All rights reserved. |
-                Virtual therapy for Ontario residents |
-                Insurance accepted
-            </p>
+            <div class="footer-bottom">
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
+                <strong>Last Updated:</strong> October 28, 2025</p>
+            </div>
         </div>
     </footer>
 
