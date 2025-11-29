@@ -190,7 +190,7 @@ header .container {
     color: var(--navy) !important;
 }
 
-/* Header CTA Button */
+/* Header CTA Button - Professional with clear hover state */
 .header-book-btn,
 .header .btn-primary,
 .nav .btn-primary {
@@ -200,17 +200,21 @@ header .container {
     border-radius: var(--radius-md) !important;
     font-size: 0.875rem !important;
     font-weight: 600 !important;
-    border: none !important;
+    border: 2px solid var(--navy) !important;
     text-decoration: none !important;
     white-space: nowrap !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 79, 0.15) !important;
 }
 
 .header-book-btn:hover,
 .header .btn-primary:hover,
 .nav .btn-primary:hover {
-    background: var(--navy-dark) !important;
-    transform: translateY(-1px) !important;
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border-color: var(--navy) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 79, 0.2) !important;
 }
 
 /* Header Phone - Simple text link, NO border box */
@@ -318,20 +322,21 @@ a.manus-primary-cta {
     font-size: 0.9375rem !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-    border: none !important;
+    border: 2px solid var(--navy) !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    box-shadow: var(--shadow-sm) !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 2px 8px rgba(30, 58, 79, 0.15) !important;
 }
 
 .btn-primary:hover,
 .primary-cta:hover,
 .manus-primary-cta:hover,
 a.manus-primary-cta:hover {
-    background: var(--navy-dark) !important;
-    color: var(--white) !important;
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border-color: var(--navy) !important;
     transform: translateY(-2px) !important;
-    box-shadow: var(--shadow-md) !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 79, 0.2) !important;
 }
 
 .btn-secondary,
@@ -682,19 +687,22 @@ section.alternate-bg {
     color: var(--white);
     padding: 1rem 1.5rem;
     border-radius: var(--radius-full);
+    border: 2px solid var(--navy);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9375rem;
     box-shadow: var(--shadow-lg);
     z-index: 998;
     display: none;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 .floating-cta:hover {
-    background: var(--navy-dark);
+    background: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--navy);
     transform: translateY(-3px);
-    color: var(--white);
+    box-shadow: 0 6px 20px rgba(30, 58, 79, 0.25);
 }
 
 @media (min-width: 769px) {
