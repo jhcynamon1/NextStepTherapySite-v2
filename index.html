@@ -2098,6 +2098,67 @@
         [style*="color: var(--primary-soft-blue)"] {
             color: #1e3a4f !important;
         }
+
+        /* --- FIXES FOR HOMEPAGE CONTRAST ISSUES --- */
+        
+        /* 1. Fix Strategic CTA Section (Cream Background) */
+        /* Overrides the generic .contact * white text rules */
+        .strategic-cta-section h3,
+        .strategic-cta-section h2 {
+            color: #1e3a4f !important; /* Navy */
+        }
+        
+        .strategic-cta-section p, 
+        .strategic-cta-section span,
+        .strategic-cta-section div {
+            color: #4a5a6a !important; /* Text Secondary */
+        }
+        
+        .strategic-cta-section .cta-trust-signals span {
+            color: #1e3a4f !important; /* Navy for trust signals */
+        }
+
+        .strategic-cta-section .btn-secondary {
+            color: #1e3a4f !important;
+            border-color: #1e3a4f !important;
+        }
+
+        .strategic-cta-section .btn-secondary:hover {
+            background-color: #1e3a4f !important;
+            color: #ffffff !important;
+        }
+
+        /* 2. Fix Contact Info Cards (White Background) */
+        /* Overrides the aggressive .contact-grid * { color: white } rule */
+        .contact-info li {
+            background: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .contact-info li strong,
+        .contact-info li b {
+            color: #1e3a4f !important; /* Navy */
+        }
+
+        .contact-info li a {
+            color: #4a7c59 !important; /* Sage */
+        }
+
+        .contact-info li small,
+        .contact-info li p,
+        .contact-info li span,
+        .contact-info li div {
+            color: #4a5a6a !important; /* Text Secondary */
+        }
+        
+        /* Ensure icons are visible */
+        .contact-info .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            filter: none !important; /* Prevent opacity fade if any */
+            opacity: 1 !important;
+        }
+
     </style>
 </head>
 <body>
