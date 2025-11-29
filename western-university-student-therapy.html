@@ -17,31 +17,40 @@
     <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/asset104-180.png">
-    <link rel="apple-touch-icon" href="/images/asset104-180.png">
+    <link rel="icon" type="image/png" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="/shared.min.css">
+    <!-- V4 Design System -->
+    <link rel="stylesheet" href="/v4-design-system.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-green: #6B8E6F;
-            --primary-green-hover: #5A7D5E;
-            --primary-green-light: rgba(107, 142, 111, 0.1);
-            --primary-green-border: rgba(107, 142, 111, 0.2);
-            --text-primary: #2C3E50;
-            --text-secondary: #5A6B7D;
-            --bg-primary: #FFFFFF;
-            --bg-alternate: #F8F9FA;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-            /* Western Purple Accent - Subtle */
-            --western-purple: #4F2683;
+            /* V4 Navy Palette */
+            --navy: #1e3a4f;
+            --navy-dark: #152a3a;
+            --navy-light: #2d4a5e;
+            --sage: #4a7c59;
+            --sage-light: #5f9970;
+            --cream: #f8f6f3;
+            --linen: #f2efe9;
+            --white: #ffffff;
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --text-muted: #6b7a8a;
+            /* Legacy compatibility */
+            --primary-green: #1e3a4f;
+            --green-hover: #152a3a;
+            --bg-primary: #ffffff;
+            --bg-alternate: #f8f6f3;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -88,8 +97,8 @@
         .criteria-list li strong { color: var(--primary-green); display: block; margin-bottom: 0.25rem; }
 
         /* Buttons */
-        .manus-primary-cta { background: var(--primary-green); color: white !important; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2); font-size: 1.05rem; }
-        .manus-primary-cta:hover { background: var(--primary-green-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3); }
+        .manus-primary-cta { background: var(--primary-green); color: white !important; padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(30, 58, 79, 0.2); font-size: 1.05rem; }
+        .manus-primary-cta:hover { background: var(--primary-green-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(30, 58, 79, 0.3); }
         .secondary-cta { background: transparent; color: var(--primary-green) !important; border: 2px solid var(--primary-green); padding: 1.25rem 2.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease; font-size: 1.05rem; }
         .secondary-cta:hover { background: var(--primary-green-light); transform: translateY(-2px); }
 
@@ -232,7 +241,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <img src="/images/favicon-32x32.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="/" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
@@ -338,7 +347,7 @@
                 </section>
 
                 <!-- CTA Section -->
-                <div class="cta-box" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+                <div class="cta-box" style="background: linear-gradient(135deg, #1e3a4f 0%, #152a3a 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
                     <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Ready to Feel Better?</h3>
                     <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Let's talk about what's going on and whether therapy is the right fit. No pressure, just a real conversation.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -422,7 +431,7 @@
                     <h4>Jesse Cynamon, RP</h4>
                     <p>Evidence-based therapy for students and professionals. CRPO #10979.</p>
                     <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                    <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>

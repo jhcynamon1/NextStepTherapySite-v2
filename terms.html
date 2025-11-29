@@ -6,56 +6,216 @@
     <title>Terms of Service | Next Step Therapy</title>
     <meta name="description" content="Terms of service and policies for Next Step Therapy. Information about cancellations, privacy, and practice policies.">
     <link rel="canonical" href="https://nextsteptherapy.ca/terms.html" />
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="shared.min.css">
+
+    <!-- V4 Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Import shared CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+
+    <!-- V4 Design System -->
+    <link rel="stylesheet" href="/v4-design-system.css">
+
     <style>
-        .policy-content {
-            max-width: 800px;
-            margin: 4rem auto;
+        :root {
+            --navy: #1e3a4f;
+            --navy-dark: #152a3a;
+            --sage: #4a7c59;
+            --cream: #f8f6f3;
+            --white: #ffffff;
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+        }
+
+        /* V4 Header */
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(30, 58, 79, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .policy-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-deep);
-        }
-        .policy-content h2 {
+
+        .logo {
+            font-family: var(--font-heading);
             font-size: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-deep);
+            font-weight: 600;
+            color: var(--navy);
+            text-decoration: none;
         }
-        .policy-content p, .policy-content li {
-            font-size: 1.1rem;
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.9375rem;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-dark);
+        }
+
+        /* Policy Content */
+        .policy-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .policy-content h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .policy-intro {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .policy-content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy);
+        }
+
+        .policy-content p {
+            font-size: 1rem;
             line-height: 1.7;
             color: var(--text-secondary);
             margin-bottom: 1rem;
         }
+
         .policy-content ul {
             margin-left: 1.5rem;
             margin-bottom: 1.5rem;
+        }
+
+        .policy-content li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-content a {
+            color: var(--sage);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .policy-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-dark);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer p {
+            margin: 0.25rem 0;
+            font-size: 0.9375rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .policy-content {
+                padding: 2.5rem 1.25rem;
+            }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">
-                Next Step Therapy
-            </a>
+            <a href="/" class="logo">Next Step Therapy</a>
             <nav class="nav">
                 <a href="/#about">About</a>
-                <a href="/#services">Services</a>
+                <a href="/#specializations">Services</a>
                 <a href="/faq.html">FAQ</a>
-                <a href="/#contact" class="btn btn-primary">Book Consultation</a>
+                <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Consultation</a>
             </nav>
         </div>
     </header>
 
     <main class="policy-content">
         <h1>Terms of Service & Practice Policies</h1>
-        
-        <p>Welcome to Next Step Therapy. These terms outline the policies and agreements that govern our therapeutic relationship. By using our services, you agree to these terms.</p>
+        <p class="policy-intro">Welcome to Next Step Therapy. These terms outline the policies and agreements that govern our therapeutic relationship. By using our services, you agree to these terms.</p>
 
         <h2>Appointment Cancellations</h2>
         <p>We require 24 hours notice for appointment cancellations. Missed appointments or cancellations with less than 24 hours notice will be charged the full session fee. This policy ensures we can offer the time slot to another client who may be waiting for support.</p>
@@ -73,15 +233,13 @@
         <p>All sessions are conducted via a secure, PHIPA-compliant video platform. You must be physically located in Ontario at the time of your session due to licensing regulations.</p>
 
         <h2>Contact</h2>
-        <p>If you have questions about these terms, please contact us at info@nextsteptherapy.ca.</p>
+        <p>If you have questions about these terms, please contact us at <a href="mailto:info@nextsteptherapy.ca">info@nextsteptherapy.ca</a>.</p>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Next Step Therapy. All rights reserved.</p>
-                <p>Jesse Cynamon, RP (CRPO #10979)</p>
-            </div>
+            <p>&copy; 2025 Next Step Therapy. All rights reserved.</p>
+            <p>Jesse Cynamon, RP (CRPO #10979)</p>
         </div>
     </footer>
 </body>

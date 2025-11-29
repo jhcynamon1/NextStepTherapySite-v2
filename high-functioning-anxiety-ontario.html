@@ -45,23 +45,36 @@
     
     <!-- Shared Styles -->
     <link rel="stylesheet" href="/shared.min.css">
+    <!-- V4 Design System -->
+    <link rel="stylesheet" href="/v4-design-system.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
         /* Page-Specific Styles */
         :root {
-            --primary-green: #6B8E6F;
-            --primary-green-hover: #5A7D5E;
-            --primary-green-light: rgba(107, 142, 111, 0.1);
-            --text-primary: #2C3E50;
-            --text-secondary: #5A6B7D;
-            --bg-alternate: #F8F9FA;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            /* V4 Navy Palette */
+            --navy: #1e3a4f;
+            --navy-dark: #152a3a;
+            --navy-light: #2d4a5e;
+            --sage: #4a7c59;
+            --sage-light: #5f9970;
+            --cream: #f8f6f3;
+            --linen: #f2efe9;
+            --white: #ffffff;
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --text-muted: #6b7a8a;
+            /* Legacy compatibility */
+            --primary-green: #1e3a4f;
+            --green-hover: #152a3a;
+            --bg-primary: #ffffff;
+            --bg-alternate: #f8f6f3;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
@@ -71,7 +84,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(107, 142, 111, 0.08), rgba(248, 249, 250, 0.95));
+            background: linear-gradient(135deg, rgba(30, 58, 79, 0.08), rgba(248, 249, 250, 0.95));
             padding: 6rem 0 5rem;
             text-align: center;
         }
@@ -341,7 +354,7 @@
     <!-- Header -->
     <header style="position: sticky; top: 0; background: white; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
         <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-            <a href="/" style="font-family: 'Playfair Display'; font-size: 1.5rem; color: #2C3E50; text-decoration: none; font-weight: 700;">Next Step Therapy</a>
+            <a href="/" style="font-family: 'Cormorant Garamond'; font-size: 1.5rem; color: #2C3E50; text-decoration: none; font-weight: 700;">Next Step Therapy</a>
             <nav style="display: flex; gap: 1.5rem; align-items: center;">
                 <a href="/anxiety-therapy-ontario.html" style="color: #5A6B7D; text-decoration: none; display: none; @media(min-width:768px){display:block;}">Anxiety</a>
                 <a href="/virtual-therapy-ontario.html" style="color: #5A6B7D; text-decoration: none; display: none; @media(min-width:768px){display:block;}">Virtual Therapy</a>
@@ -357,7 +370,7 @@
             <p class="hero-subtext">You look calm, successful, and put-together. Inside, you're running a marathon that never ends. It's time to stop white-knuckling through your success.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Schedule 15-Min Consultation</a>
-                <a href="#signs" style="padding: 1rem 2rem; border: 1px solid #6B8E6F; color: #6B8E6F; border-radius: 8px; text-decoration: none; font-weight: 600;">Do I Have This?</a>
+                <a href="#signs" style="padding: 1rem 2rem; border: 1px solid #1e3a4f; color: #1e3a4f; border-radius: 8px; text-decoration: none; font-weight: 600;">Do I Have This?</a>
                 </div>
             <div style="display: flex; justify-content: center; width: 100%; margin-top: 1.5rem;">
                 <div style="font-size: 0.9rem; opacity: 0.8;">Serving Professionals Across Ontario | CRPO Registered</div>
@@ -373,7 +386,7 @@
         <p>Because you are successful, people assume you are fine. You might even doubt yourself, thinking, <em>"I have a good job and a nice life. Why can't I just enjoy it?"</em></p>
 
         <div class="checklist-box">
-            <h3 style="font-family: 'Playfair Display'; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem;">Does this sound like you?</h3>
+            <h3 style="font-family: 'Cormorant Garamond'; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem;">Does this sound like you?</h3>
             <div class="checklist-item">
                 <span class="checklist-icon">✓</span>
                 <span><strong>The Sunday Scaries:</strong> A sense of dread starts creeping in at 2pm on Sunday, ruining the end of your weekend.</span>
@@ -411,7 +424,7 @@
             <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
                 <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
                 <div>
-                    <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Unhooking from Thoughts</h3>
+                    <h3 style="margin-top: 0; font-family: 'Cormorant Garamond'; font-size: 1.3rem;">Unhooking from Thoughts</h3>
                     <p style="margin-bottom: 0.5rem;">We use cognitive defusion techniques to create space between you and your inner critic. You'll learn to notice the thought <em>"I'm going to fail"</em> without automatically believing it or acting on it.</p>
                 </div>
             </div>
@@ -419,7 +432,7 @@
             <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
                 <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
                 <div>
-                    <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Regulating the Nervous System</h3>
+                    <h3 style="margin-top: 0; font-family: 'Cormorant Garamond'; font-size: 1.3rem;">Regulating the Nervous System</h3>
                     <p style="margin-bottom: 0.5rem;">You cannot think your way out of a survival response. We practice somatic tools to signal safety to your body, allowing you to actually rest when you're off the clock.</p>
                         </div>
                     </div>
@@ -427,7 +440,7 @@
             <div class="roadmap-step" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
                 <div class="roadmap-number" style="background: var(--primary-green); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
                 <div>
-                    <h3 style="margin-top: 0; font-family: 'Playfair Display'; font-size: 1.3rem;">Redefining Your "Why"</h3>
+                    <h3 style="margin-top: 0; font-family: 'Cormorant Garamond'; font-size: 1.3rem;">Redefining Your "Why"</h3>
                     <p style="margin-bottom: 0.5rem;">High-functioning anxiety often stems from chasing other people's version of success. We clarify your true values so you can set boundaries without guilt and work with intention, not just panic.</p>
                 </div>
             </div>
@@ -437,7 +450,7 @@
         <div class="therapist-bio">
             <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon RP" class="therapist-img">
             <div>
-                <h3 style="font-family: 'Playfair Display'; margin-top: 0; font-size: 1.4rem;">Meet Jesse Cynamon, RP</h3>
+                <h3 style="font-family: 'Cormorant Garamond'; margin-top: 0; font-size: 1.4rem;">Meet Jesse Cynamon, RP</h3>
                 <p style="margin-bottom: 1rem; font-size: 1rem;">My practice focuses on working with high-functioning professionals who feel like they're barely holding it together. As a Registered Psychotherapist, I offer a space where you can drop the mask and stop performing.</p>
                 <p style="margin-bottom: 0; font-size: 0.95rem;"><strong>Credentials:</strong> CRPO #10979 | MA in Counselling Psychology</p>
             </div>
@@ -488,7 +501,7 @@
                     <h4>Jesse Cynamon, RP</h4>
                     <p>Evidence-based therapy for high-performers. CRPO #10979.</p>
                     <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                    <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>

@@ -21,26 +21,37 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/asset104.png">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
 
     <!-- Import shared CSS -->
     <link rel="stylesheet" href="/shared.min.css">
+    <!-- V4 Design System -->
+    <link rel="stylesheet" href="/v4-design-system.css">
 
     <style>
         :root {
-            --primary-green: #6B8E6F;
-            --primary-green-hover: #5A7D5E;
-            --primary-green-light: rgba(107, 142, 111, 0.1);
-            --primary-green-border: rgba(107, 142, 111, 0.2);
-            --text-primary: #2C3E50;
-            --text-secondary: #5A6B7D;
-            --bg-primary: #FFFFFF;
-            --bg-alternate: #F8F9FA;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            /* V4 Navy Palette */
+            --navy: #1e3a4f;
+            --navy-dark: #152a3a;
+            --navy-light: #2d4a5e;
+            --sage: #4a7c59;
+            --sage-light: #5f9970;
+            --cream: #f8f6f3;
+            --linen: #f2efe9;
+            --white: #ffffff;
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --text-muted: #6b7a8a;
+            /* Legacy compatibility */
+            --primary-green: #1e3a4f;
+            --green-hover: #152a3a;
+            --bg-primary: #ffffff;
+            --bg-alternate: #f8f6f3;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
@@ -112,7 +123,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(107, 142, 111, 0.1), rgba(248, 249, 250, 0.9));
+            background: linear-gradient(135deg, rgba(30, 58, 79, 0.1), rgba(248, 249, 250, 0.9));
             padding: 5rem 0;
             text-align: center;
         }
@@ -174,8 +185,8 @@
             background: white;
             border-radius: 12px;
             padding: 1.75rem;
-            box-shadow: 0 4px 12px rgba(107,142,111,0.15);
-            border: 1px solid rgba(107,142,111,0.2);
+            box-shadow: 0 4px 12px rgba(30, 58, 79,0.15);
+            border: 1px solid rgba(30, 58, 79,0.2);
         }
 
         .quick-stat-card h3 {
@@ -281,14 +292,14 @@
             font-weight: 600;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
+            box-shadow: 0 2px 8px rgba(30, 58, 79, 0.2);
             font-size: 1.05rem;
         }
 
         .manus-primary-cta:hover {
             background: var(--primary-green-hover);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
+            box-shadow: 0 4px 12px rgba(30, 58, 79, 0.3);
         }
 
         .secondary-cta {
@@ -441,7 +452,7 @@
 
         .related-services article {
             background: #fff;
-            border: 1px solid rgba(107, 142, 111, 0.14);
+            border: 1px solid rgba(30, 58, 79, 0.14);
             border-radius: 14px;
             padding: 1.5rem;
             box-shadow: 0 12px 24px rgba(0,0,0,0.05);
@@ -474,7 +485,7 @@
         }
 
         .footer-section h4 {
-            color: #6B8E6F;
+            color: #1e3a4f;
             margin-bottom: 1rem;
         }
 
@@ -767,7 +778,7 @@
         <!-- SECONDARY CTA BOX - Position #4 (After therapist intro) -->
         <section class="section">
             <div class="container">
-                <div class="cta-box" style="background: #6B8E6F; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
+                <div class="cta-box" style="background: #1e3a4f; color: white; padding: 2rem; border-radius: 12px; text-align: center;">
                     <h3 style="color: white; margin-top: 0; font-size: 1.5rem;">Ready to Build Distress Tolerance Skills?</h3>
                     <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin-bottom: 1.5rem;">Schedule a 15-minute consultation to discuss how DBT skills can help you manage intense emotions.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
@@ -852,7 +863,7 @@
                         
                         <p>Professional <strong>distress tolerance therapy near you</strong> with flexible scheduling including early morning, evening, and weekend appointments to accommodate healthcare shifts and caregiving responsibilities.</p>
                         
-                        <div class="cta-box" style="background: #6B8E6F; color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem;">
+                        <div class="cta-box" style="background: #1e3a4f; color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem;">
                             <h3 style="color: white; margin-top: 0;">Ready to Address Distress Tolerance?</h3>
                             <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem;">Book your free 15-minute consultation with a CRPO registered therapist</p>
                             <a href="tel:+14163062157" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700; margin: 0.5rem;">📞 Call (416) 306-2157 Now</a>
@@ -1165,7 +1176,7 @@
                     <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
                     <p><strong>CRPO #10979 | MPsy</strong></p>
                     <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                    <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Therapy Services</h4>
@@ -1178,7 +1189,7 @@
                         <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
                         <li><a href="/life-transitions.html">Life Transitions</a></li>
                         <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                        <li><a href="/#specializations" style="color: #1e3a4f;">All Services →</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -1193,7 +1204,7 @@
                         <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
                         <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
                         <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" style="color: #1e3a4f;">All Ontario →</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
