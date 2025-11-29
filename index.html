@@ -69,9 +69,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Optimized Font Loading with font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"></noscript>
+    <!-- V4 Premium Typography - Cormorant Garamond + DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"></noscript>
 
     <!-- Preload Only LCP Image for Mobile Performance -->
     <link rel="preload" as="image" href="images/hero-background-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
@@ -84,7 +84,7 @@
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
 
     <!-- Mobile Performance Hints -->
-    <meta name="theme-color" content="#4a6b7a">
+    <meta name="theme-color" content="#1e3a4f">
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Comprehensive Schema Markup for Maximum SEO Impact -->
@@ -363,25 +363,582 @@
 
     <link rel="stylesheet" href="shared.min.css">
 
+    <!-- V4 Premium Clinical Executive Design System -->
+    <style>
+        /* ============================================
+           V4 PREMIUM CLINICAL EXECUTIVE
+           Refined, warm, professional aesthetic
+        ============================================ */
+
+        :root {
+            /* Refined Color System - Navy + Sage */
+            --navy: #1e3a4f;
+            --navy-deep: #152a3a;
+            --navy-light: #2d4a5e;
+            --charcoal: #3d4f5f;
+
+            /* Sage - Prominent Accent */
+            --sage: #4a7c59;
+            --sage-light: #5f9970;
+            --sage-soft: rgba(74, 124, 89, 0.08);
+            --sage-medium: rgba(74, 124, 89, 0.15);
+            --sage-glow: rgba(74, 124, 89, 0.25);
+
+            /* Warm Luxe Neutrals */
+            --ivory: #fdfcfa;
+            --cream: #f8f6f3;
+            --linen: #f2efe9;
+            --sand: #e5e0d8;
+            --stone: #c9c3b8;
+            --taupe: #9a9287;
+
+            /* Text Hierarchy */
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --text-tertiary: #6b7a8a;
+            --text-muted: #8a939d;
+            --text-inverse: #fdfcfa;
+
+            /* Typography */
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* V4 Spacing Scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+
+            /* Radius */
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-2xl: 32px;
+            --radius-full: 9999px;
+
+            /* Premium Shadows */
+            --shadow-xs: 0 1px 2px rgba(30, 58, 79, 0.04);
+            --shadow-sm: 0 2px 8px rgba(30, 58, 79, 0.06);
+            --shadow-md: 0 4px 16px rgba(30, 58, 79, 0.08);
+            --shadow-lg: 0 8px 32px rgba(30, 58, 79, 0.1);
+            --shadow-xl: 0 16px 48px rgba(30, 58, 79, 0.12);
+            --shadow-glow: 0 0 40px rgba(74, 124, 89, 0.15);
+
+            /* Transitions */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+            --duration-fast: 150ms;
+            --duration-normal: 300ms;
+            --duration-slow: 500ms;
+        }
+
+        /* Base Overrides */
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--ivory);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.875rem, 4vw, 2.5rem);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        }
+
+        /* V4 Button System */
+        .btn, .primary-cta, .secondary-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-out);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary, .primary-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--text-inverse) !important;
+            box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .btn-primary:hover, .primary-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .btn-secondary, .secondary-cta {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--sand);
+        }
+
+        .btn-secondary:hover, .secondary-cta:hover {
+            border-color: var(--navy);
+            background: rgba(30, 58, 79, 0.03);
+        }
+
+        .btn-sage {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+            color: white !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-sage:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+        }
+
+        /* V4 Section Styling */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--sage);
+            margin-bottom: var(--space-4);
+        }
+
+        /* V4 Card System */
+        .specialization-card, .process-step {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--linen);
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .specialization-card:hover, .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--sage-medium);
+        }
+
+        /* V4 Header Styling */
+        .header {
+            background: rgba(253, 252, 250, 0.92) !important;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--sand) !important;
+        }
+
+        .header-book-btn {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%) !important;
+            border-radius: var(--radius-sm) !important;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-book-btn:hover {
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%) !important;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* V4 Hero Styling */
+        .hero {
+            background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 50%, var(--linen) 100%) !important;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 20% 80%, var(--sage-soft) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 85% 15%, rgba(30, 58, 79, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero h1 {
+            color: var(--text-primary);
+        }
+
+        .hero h1 em, .hero h1 i {
+            color: var(--sage);
+            font-style: italic;
+        }
+
+        .lead-text {
+            color: var(--text-secondary);
+            font-size: 1.0625rem;
+            line-height: 1.85;
+        }
+
+        /* V4 Trust Badges */
+        .credentials-badge {
+            background: var(--sage-soft) !important;
+            color: var(--sage) !important;
+            border: 1px solid var(--sage-medium);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* V4 Approach Section */
+        .approach {
+            background: var(--navy) !important;
+            color: var(--text-inverse);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .approach::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse 60% 50% at 70% 30%, rgba(74, 124, 89, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .approach h2, .approach h3 {
+            color: white !important;
+        }
+
+        .approach p {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* V4 Specializations/Services */
+        .specializations {
+            background: var(--cream);
+        }
+
+        .specialization-card h3 {
+            color: var(--navy);
+        }
+
+        .specialization-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--sage) 0%, var(--sage-light) 100%);
+            opacity: 0;
+            transition: opacity var(--duration-normal);
+        }
+
+        .specialization-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specialization-card:hover::before {
+            opacity: 1;
+        }
+
+        /* V4 Process Section */
+        .process {
+            background: white;
+        }
+
+        .process-step {
+            background: var(--cream);
+            border: 1px solid var(--linen);
+        }
+
+        .process-step:hover {
+            background: white;
+        }
+
+        /* V4 FAQ Styling */
+        .faq {
+            background: var(--linen);
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-3);
+            overflow: hidden;
+            border: 1px solid var(--sand);
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .faq-item:hover {
+            border-color: var(--sage-medium);
+        }
+
+        .faq-question {
+            padding: var(--space-5) var(--space-6);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 var(--space-6) var(--space-5);
+            color: var(--text-secondary);
+        }
+
+        /* V4 Contact Section */
+        .contact {
+            background: var(--navy);
+            color: var(--text-inverse);
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact input, .contact textarea, .contact select {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            padding: var(--space-4);
+            color: white;
+            font-family: var(--font-body);
+            transition: all var(--duration-fast);
+        }
+
+        .contact input:focus, .contact textarea:focus, .contact select:focus {
+            outline: none;
+            border-color: var(--sage);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .contact input::placeholder, .contact textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: var(--space-2);
+            display: block;
+        }
+
+        /* V4 Footer Styling */
+        .footer {
+            background: var(--navy-deep) !important;
+            color: var(--text-inverse);
+        }
+
+        .footer h4 {
+            color: white;
+            font-family: var(--font-body);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color var(--duration-fast);
+        }
+
+        .footer a:hover {
+            color: var(--sage-light);
+        }
+
+        /* V4 Mobile Sticky CTA */
+        .mobile-cta-bar {
+            background: white !important;
+            box-shadow: 0 -4px 20px rgba(30, 58, 79, 0.15) !important;
+            border-top: 2px solid var(--sage) !important;
+        }
+
+        .mobile-cta-book {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%) !important;
+            color: white !important;
+        }
+
+        .mobile-cta-phone {
+            background: var(--sage) !important;
+            color: white !important;
+        }
+
+        /* V4 Floating CTA */
+        .floating-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%) !important;
+            box-shadow: var(--shadow-lg), var(--shadow-glow) !important;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow) !important;
+        }
+
+        /* V4 Trust Section */
+        .trust-section {
+            background: white;
+            border-bottom: 1px solid var(--linen);
+        }
+
+        /* V4 Location Pills */
+        .location-nav a {
+            background: white;
+            color: var(--navy);
+            border: 1px solid var(--sand);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .location-nav a:hover {
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md), var(--shadow-glow);
+        }
+
+        /* V4 Resource Cards */
+        .resource-grid article {
+            background: white;
+            border: 1px solid var(--linen);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .resource-grid article:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--sage-medium);
+        }
+
+        /* V4 Therapist Showcase */
+        .therapist-showcase {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--linen);
+        }
+
+        .therapist-photo img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .therapist-name {
+            color: var(--navy);
+        }
+
+        .expertise-list li {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            padding: var(--space-1) 0;
+        }
+
+        /* V4 Animations */
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 var(--sage-glow);
+            }
+            50% {
+                opacity: 0.8;
+                box-shadow: 0 0 0 6px transparent;
+            }
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--sage);
+            border-radius: 50%;
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
     <!-- v4.0 Conversion Optimization Styles -->
     <style>
         /* Header Book Consultation Button */
         .header-book-btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
-            background: #4a6b7a;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             color: white !important;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: var(--radius-sm);
             font-weight: 600;
             white-space: nowrap;
-            transition: all 0.3s ease;
+            transition: all var(--duration-normal) var(--ease-out);
             font-size: 0.9375rem;
+            box-shadow: var(--shadow-sm);
         }
         .header-book-btn:hover {
-            background: #36525f;
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74, 107, 122, 0.3);
+            box-shadow: var(--shadow-md);
         }
         .header-cta-wrapper {
             display: flex;
@@ -440,7 +997,7 @@
 
         .related-services a {
             text-decoration: none;
-            color: #4a6b7a;
+            color: var(--navy);
             font-weight: 600;
         }
 
@@ -491,7 +1048,7 @@
 
         .related-posts a {
             text-decoration: none;
-            color: #4a6b7a;
+            color: var(--navy);
             font-weight: 600;
         }
 
@@ -529,20 +1086,21 @@
 
         .location-nav a {
             background: white;
-            color: #4a6b7a;
-            border: 1px solid rgba(107, 142, 111, 0.25);
-            padding: 0.65rem 1.4rem;
-            border-radius: 999px;
+            color: var(--navy);
+            border: 1px solid var(--sand);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-full);
             font-weight: 600;
             text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 8px 18px rgba(68, 96, 109, 0.08);
+            transition: all var(--duration-normal) var(--ease-out);
+            box-shadow: var(--shadow-sm);
         }
 
         .location-nav a:hover {
-            background: #6B8E6F;
-            color: #fff;
-            box-shadow: 0 10px 20px rgba(107, 142, 111, 0.18);
+            background: var(--sage);
+            color: white;
+            border-color: var(--sage);
+            box-shadow: var(--shadow-md), var(--shadow-glow);
             transform: translateY(-2px);
         }
 
@@ -589,7 +1147,7 @@
         }
 
         .resource-grid a:hover {
-            color: #6B8E6F;
+            color: var(--sage);
         }
 
         @media (max-width: 768px) {
@@ -847,7 +1405,7 @@
                 </nav>
 
                 <div class="header-cta-wrapper" style="display: flex !important; align-items: center; gap: 1rem;">
-                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=header&utm_campaign=homepage" class="header-book-btn" style="display: inline-block !important; padding: 0.75rem 1.5rem; background: #4a6b7a !important; color: white !important; text-decoration: none; border-radius: 8px; font-weight: 600; visibility: visible !important; opacity: 1 !important;">
+                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=header&utm_campaign=homepage" class="header-book-btn">
                         Schedule 15-Min Consultation
                     </a>
                     <a href="tel:+14163062157" class="header-phone">
@@ -956,33 +1514,33 @@
         </section>
 
         <!-- Interactive Quiz Widget (Modern Redesign - Calm/Typeform Inspired) -->
-        <section class="quiz-widget-section" style="background: linear-gradient(180deg, #F7F9FA 0%, #E8F4F1 100%); padding: 30px 20px; position: relative;">
+        <section class="quiz-widget-section" style="background: linear-gradient(180deg, var(--cream) 0%, var(--linen) 100%); padding: 30px 20px; position: relative;">
             <!-- Decorative Background Elements -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; opacity: 0.03; pointer-events: none;">
-                <div style="position: absolute; top: 10%; left: 5%; width: 400px; height: 400px; border-radius: 50%; background: #6B8E6F;"></div>
-                <div style="position: absolute; bottom: 10%; right: 5%; width: 300px; height: 300px; border-radius: 50%; background: #5A7D5E;"></div>
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; opacity: 0.04; pointer-events: none;">
+                <div style="position: absolute; top: 10%; left: 5%; width: 400px; height: 400px; border-radius: 50%; background: var(--sage);"></div>
+                <div style="position: absolute; bottom: 10%; right: 5%; width: 300px; height: 300px; border-radius: 50%; background: var(--navy);"></div>
             </div>
 
             <div class="container" style="max-width: 900px; position: relative; z-index: 1;">
-                <div class="quiz-widget-container" style="background: #FFFFFF; border-radius: 20px; box-shadow: 0 20px 60px rgba(107,142,111,0.12), 0 8px 20px rgba(0,0,0,0.04); overflow: hidden; backdrop-filter: blur(10px);">
+                <div class="quiz-widget-container" style="background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); overflow: hidden; border: 1px solid var(--linen);">
 
-                    <!-- Quiz Header (Calm-Inspired) -->
-                    <div class="quiz-header" style="background: linear-gradient(135deg, #E8F4F1 0%, #D4E8E3 100%); padding: 20px 30px 16px; text-align: center; border-bottom: 1px solid rgba(107,142,111,0.1);">
-                        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; margin: 0 0 6px 0; font-weight: 600; color: #2C3E50; letter-spacing: -0.02em; line-height: 1.2;">Is Therapy Right for You?</h2>
-                        <p style="font-size: 0.95rem; color: #5A6B7D; line-height: 1.4; margin: 0; max-width: 600px; margin: 0 auto; font-weight: 400;">A thoughtful 5-minute self-assessment. Completely private—no email required.</p>
+                    <!-- Quiz Header -->
+                    <div class="quiz-header" style="background: linear-gradient(135deg, var(--sage-soft) 0%, rgba(74, 124, 89, 0.12) 100%); padding: 24px 30px 20px; text-align: center; border-bottom: 1px solid var(--sage-medium);">
+                        <h2 style="font-family: var(--font-display); font-size: 1.75rem; margin: 0 0 8px 0; font-weight: 500; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2;">Is Therapy Right for You?</h2>
+                        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; margin: 0; max-width: 600px; margin: 0 auto; font-weight: 400;">A thoughtful 5-minute self-assessment. Completely private—no email required.</p>
                     </div>
 
-                    <!-- Quiz Disclaimer (Softer Design) -->
-                    <div class="quiz-disclaimer" style="background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%); border-left: 3px solid #F5C563; padding: 10px 20px; margin: 0; font-size: 12.5px; color: #8B6914; line-height: 1.4;">
-                        <strong style="font-weight: 600;">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #8B6914; font-weight: 600; text-decoration: underline;">988</a> or your local emergency services.
+                    <!-- Quiz Disclaimer -->
+                    <div class="quiz-disclaimer" style="background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%); border-left: 3px solid #d4a853; padding: 12px 20px; margin: 0; font-size: 0.8125rem; color: #7a5c12; line-height: 1.5;">
+                        <strong style="font-weight: 600;">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #7a5c12; font-weight: 600; text-decoration: underline;">988</a> or your local emergency services.
                     </div>
 
-                    <!-- Progress Bar (Minimal Design) -->
-                    <div class="quiz-progress-container" style="padding: 16px 30px 12px; background: transparent;">
-                        <div class="quiz-progress-bar" style="height: 5px; background: #E8F4F1; border-radius: 10px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
-                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: linear-gradient(90deg, #6B8E6F 0%, #8CB390 100%); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 10px; width: 0%; box-shadow: 0 0 10px rgba(107,142,111,0.3);"></div>
+                    <!-- Progress Bar -->
+                    <div class="quiz-progress-container" style="padding: 20px 30px 16px; background: transparent;">
+                        <div class="quiz-progress-bar" style="height: 6px; background: var(--linen); border-radius: var(--radius-full); overflow: hidden;">
+                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: linear-gradient(90deg, var(--sage) 0%, var(--sage-light) 100%); transition: width 0.4s var(--ease-out); border-radius: var(--radius-full); width: 0%; box-shadow: var(--shadow-glow);"></div>
                         </div>
-                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 8px; font-size: 12px; color: #8A9BA8; font-weight: 500; letter-spacing: 0.3px; text-transform: uppercase;">Question 1 of 15</div>
+                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Question 1 of 15</div>
                     </div>
 
                     <!-- Quiz Content Area -->
@@ -1020,25 +1578,25 @@
             /* Question Number Badge */
             .quiz-question-number {
                 display: inline-block;
-                background: linear-gradient(135deg, #E8F4F1 0%, #D4E8E3 100%);
-                color: #6B8E6F;
+                background: var(--sage-soft);
+                color: var(--sage);
                 padding: 6px 14px;
-                border-radius: 16px;
-                font-weight: 600;
-                font-size: 11px;
-                margin-bottom: 14px;
+                border-radius: var(--radius-full);
+                font-weight: 700;
+                font-size: 0.6875rem;
+                margin-bottom: 16px;
                 text-transform: uppercase;
-                letter-spacing: 1px;
-                box-shadow: 0 2px 8px rgba(107,142,111,0.08);
+                letter-spacing: 0.1em;
+                border: 1px solid var(--sage-medium);
             }
 
             /* Question Text - Larger, More Readable */
             .quiz-question-text {
-                font-family: 'Playfair Display', serif;
-                font-size: 1.4rem;
+                font-family: var(--font-display);
+                font-size: 1.5rem;
                 font-weight: 500;
-                margin-bottom: 20px;
-                color: #2C3E50;
+                margin-bottom: 24px;
+                color: var(--navy);
                 line-height: 1.3;
                 letter-spacing: -0.01em;
             }
@@ -1047,37 +1605,37 @@
             .quiz-options {
                 display: flex;
                 flex-direction: column;
-                gap: 8px;
+                gap: 10px;
             }
 
             /* Individual Option - Clean, Minimal Design */
             .quiz-option {
-                background: #FFFFFF;
-                border: 2px solid #E8F4F1;
-                border-radius: 12px;
-                padding: 16px 20px;
+                background: white;
+                border: 1.5px solid var(--sand);
+                border-radius: var(--radius-md);
+                padding: 18px 22px;
                 cursor: pointer;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: all var(--duration-normal) var(--ease-out);
                 font-size: 1rem;
                 font-weight: 400;
-                color: #2C3E50;
+                color: var(--text-primary);
                 position: relative;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+                box-shadow: var(--shadow-xs);
             }
 
             .quiz-option:hover {
-                background: #F7F9FA;
-                border-color: #6B8E6F;
+                background: var(--cream);
+                border-color: var(--sage);
                 transform: translateX(4px);
-                box-shadow: 0 4px 16px rgba(107,142,111,0.12);
+                box-shadow: var(--shadow-md);
             }
 
             .quiz-option.selected {
-                background: linear-gradient(135deg, #E8F4F1 0%, #D4E8E3 100%);
-                border-color: #6B8E6F;
+                background: var(--sage-soft);
+                border-color: var(--sage);
                 font-weight: 500;
-                color: #2C3E50;
-                box-shadow: 0 4px 20px rgba(107,142,111,0.15);
+                color: var(--navy);
+                box-shadow: var(--shadow-md), var(--shadow-glow);
             }
 
             .quiz-option.selected::before {
@@ -1086,53 +1644,53 @@
                 right: 20px;
                 top: 50%;
                 transform: translateY(-50%);
-                color: #6B8E6F;
+                color: var(--sage);
                 font-weight: 700;
-                font-size: 1.4rem;
+                font-size: 1.25rem;
             }
 
             /* Navigation Buttons */
             .quiz-navigation {
                 display: flex;
                 justify-content: space-between;
-                margin-top: 24px;
-                gap: 12px;
+                margin-top: 28px;
+                gap: 14px;
             }
 
             .quiz-btn {
-                padding: 14px 28px;
+                padding: var(--space-4) var(--space-8);
                 border: none;
-                border-radius: 10px;
-                font-size: 1rem;
+                border-radius: var(--radius-sm);
+                font-size: 0.9375rem;
                 font-weight: 600;
                 cursor: pointer;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                font-family: 'Inter', sans-serif;
-                letter-spacing: 0.3px;
+                transition: all var(--duration-normal) var(--ease-out);
+                font-family: var(--font-body);
+                letter-spacing: 0.02em;
             }
 
             .quiz-btn-secondary {
-                background: #F7F9FA;
-                color: #5A6B7D;
-                border: 2px solid #E8F4F1;
+                background: var(--cream);
+                color: var(--text-secondary);
+                border: 1.5px solid var(--sand);
             }
 
             .quiz-btn-secondary:hover {
-                background: #E8F4F1;
-                border-color: #D4E8E3;
+                background: var(--linen);
+                border-color: var(--navy);
                 transform: translateY(-1px);
             }
 
             .quiz-btn-primary {
-                background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%);
+                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
                 color: white;
                 flex: 1;
-                box-shadow: 0 4px 12px rgba(107,142,111,0.25);
+                box-shadow: var(--shadow-md);
             }
 
             .quiz-btn-primary:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(107,142,111,0.35);
+                box-shadow: var(--shadow-lg);
             }
 
             .quiz-btn:disabled {
@@ -1145,17 +1703,17 @@
             .quiz-score-display {
                 text-align: center;
                 padding: 60px 40px;
-                background: linear-gradient(135deg, #6B8E6F 0%, #8CB390 100%);
+                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
                 color: white;
-                border-radius: 20px;
+                border-radius: var(--radius-xl);
                 margin-bottom: 40px;
-                box-shadow: 0 12px 40px rgba(107,142,111,0.25);
+                box-shadow: var(--shadow-xl);
             }
 
             .quiz-score-number {
-                font-family: 'Playfair Display', serif;
+                font-family: var(--font-display);
                 font-size: 84px;
-                font-weight: 700;
+                font-weight: 600;
                 margin-bottom: 12px;
                 line-height: 1;
                 text-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -1171,25 +1729,25 @@
             .quiz-result-section {
                 margin-bottom: 32px;
                 padding: 32px;
-                background: #F7F9FA;
-                border-radius: 16px;
-                border-left: 4px solid #6B8E6F;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+                background: var(--cream);
+                border-radius: var(--radius-lg);
+                border-left: 4px solid var(--sage);
+                box-shadow: var(--shadow-sm);
             }
 
             .quiz-result-section h3 {
-                font-family: 'Playfair Display', serif;
-                font-size: 1.7rem;
+                font-family: var(--font-display);
+                font-size: 1.625rem;
                 margin-bottom: 16px;
-                color: #2C3E50;
-                font-weight: 600;
+                color: var(--navy);
+                font-weight: 500;
                 letter-spacing: -0.01em;
             }
 
             .quiz-result-section p {
-                font-size: 1.05rem;
+                font-size: 1rem;
                 line-height: 1.8;
-                color: #5A6B7D;
+                color: var(--text-secondary);
                 margin-bottom: 16px;
             }
 
@@ -1200,62 +1758,62 @@
 
             .quiz-result-section li {
                 margin-bottom: 12px;
-                color: #5A6B7D;
+                color: var(--text-secondary);
                 line-height: 1.8;
             }
 
             .quiz-cta-box {
-                background: linear-gradient(135deg, #FFFFFF 0%, #F7F9FA 100%);
-                border: 2px solid #E8F4F1;
-                border-radius: 18px;
+                background: white;
+                border: 1.5px solid var(--sage-medium);
+                border-radius: var(--radius-xl);
                 padding: 40px;
                 text-align: center;
                 margin-top: 40px;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+                box-shadow: var(--shadow-md), var(--shadow-glow);
             }
 
             .quiz-cta-box h3 {
-                font-family: 'Playfair Display', serif;
-                font-size: 1.7rem;
+                font-family: var(--font-display);
+                font-size: 1.625rem;
                 margin-bottom: 16px;
-                color: #2C3E50;
-                font-weight: 600;
+                color: var(--navy);
+                font-weight: 500;
                 letter-spacing: -0.01em;
             }
 
             .quiz-cta-box p {
-                font-size: 1.05rem;
-                color: #5A6B7D;
+                font-size: 1rem;
+                color: var(--text-secondary);
                 margin-bottom: 28px;
                 line-height: 1.8;
             }
 
             .quiz-cta-buttons {
                 display: flex;
-                gap: 16px;
+                gap: var(--space-4);
                 justify-content: center;
                 flex-wrap: wrap;
             }
 
             .quiz-crisis-box {
                 background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%);
-                border-left: 4px solid #F5C563;
+                border-left: 4px solid #d4a853;
                 padding: 28px;
-                border-radius: 14px;
+                border-radius: var(--radius-lg);
                 margin-top: 32px;
-                box-shadow: 0 2px 12px rgba(245,197,99,0.1);
+                box-shadow: var(--shadow-sm);
             }
 
             .quiz-crisis-box h3 {
-                color: #8B6914;
-                font-size: 1.4rem;
+                color: #7a5c12;
+                font-size: 1.375rem;
                 margin-bottom: 14px;
                 font-weight: 600;
-                font-family: 'Playfair Display', serif;
+                font-family: var(--font-display);
             }
 
             .quiz-crisis-box p {
-                color: #8B6914;
+                color: #7a5c12;
                 font-size: 1rem;
                 line-height: 1.8;
                 margin-bottom: 12px;
@@ -1844,51 +2402,52 @@
         </script>
 
         <!-- Problem Recognition Section (Conversion Optimization) -->
-        <section class="trust-section" style="padding: 50px 20px; background: #fff;">
+        <section class="trust-section" style="padding: var(--space-16) var(--space-6); background: white;">
             <div class="container">
                 <div class="section-header">
+                    <span class="section-eyebrow">Recognition</span>
                     <h2>Does This Sound Familiar?</h2>
                     <p class="lead-text">You're not alone in what you're experiencing. Many clients describe similar patterns before starting therapy.</p>
                 </div>
                 <div class="trust-grid" style="text-align: left;">
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">The Sunday Night Feeling</h4>
-                        <p style="margin-bottom: 0;">Your chest gets tight thinking about Monday. That sense of dread that won't go away.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The Sunday Night Feeling</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Your chest gets tight thinking about Monday. That sense of dread that won't go away.</p>
                     </div>
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">The 3am Mind Race</h4>
-                        <p style="margin-bottom: 0;">Lying awake replaying conversations, worrying about things you can't control right now.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The 3am Mind Race</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Lying awake replaying conversations, worrying about things you can't control right now.</p>
                     </div>
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">Nothing Feels Enjoyable</h4>
-                        <p style="margin-bottom: 0;">Things you used to love don't bring joy anymore. Everything feels flat or grey.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Nothing Feels Enjoyable</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Things you used to love don't bring joy anymore. Everything feels flat or grey.</p>
                     </div>
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">Snapping at People You Love</h4>
-                        <p style="margin-bottom: 0;">Small frustrations trigger big reactions. You're apologizing more than usual.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Snapping at People You Love</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Small frustrations trigger big reactions. You're apologizing more than usual.</p>
                     </div>
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">The Same Patterns Repeating</h4>
-                        <p style="margin-bottom: 0;">Same relationship issues with different people. Same work conflicts at every job.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The Same Patterns Repeating</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Same relationship issues with different people. Same work conflicts at every job.</p>
                     </div>
-                    <div class="trust-item" style="border-left: 3px solid #6B8E6F; padding-left: 1rem;">
-                        <h4 style="margin-top: 0; color: #4a6b7a;">Decision Paralysis</h4>
-                        <p style="margin-bottom: 0;">Even simple choices feel overwhelming. Analysis paralysis on basic decisions.</p>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Decision Paralysis</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Even simple choices feel overwhelming. Analysis paralysis on basic decisions.</p>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 2.5rem; padding: 2rem; background: rgba(107,142,111,0.05); border-radius: 12px;">
-                    <p style="font-size: 1.1rem; margin: 0 auto 1.5rem auto; color: #4a6b7a; max-width: 700px; line-height: 1.6;">
+                <div style="text-align: center; margin-top: var(--space-10); padding: var(--space-8); background: var(--sage-soft); border-radius: var(--radius-xl); border: 1px solid var(--sage-medium);">
+                    <p style="font-size: 1.0625rem; margin: 0 auto var(--space-6) auto; color: var(--navy); max-width: 700px; line-height: 1.7;">
                         <strong>If 3 or more of these resonate, therapy can help you develop skills to manage these patterns.</strong>
                     </p>
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="btn btn-primary" style="display: inline-block; padding: 1rem 2rem; background: #6B8E6F; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
-                            📋 Take the Assessment
+                    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                        <a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="btn btn-primary">
+                            Take the Assessment
                         </a>
-                        <a href="/resources/grounding-techniques-guide.html" class="btn btn-secondary" style="display: inline-block; padding: 1rem 2rem; background: white; color: #6B8E6F; border: 2px solid #6B8E6F; text-decoration: none; border-radius: 8px; font-weight: 600;">
-                            📥 Free Guide: 5 Grounding Techniques
+                        <a href="/resources/grounding-techniques-guide.html" class="btn btn-secondary">
+                            Free Guide: 5 Grounding Techniques
                         </a>
                     </div>
-                    <p style="font-size: 0.9rem; margin: 1rem auto 0 auto; color: #5A6B7D; max-width: 600px; line-height: 1.5;">Evidence-based techniques you can use in 60 seconds when panic or overwhelm hits</p>
+                    <p style="font-size: 0.875rem; margin: var(--space-4) auto 0 auto; color: var(--text-tertiary); max-width: 600px; line-height: 1.6;">Evidence-based techniques you can use in 60 seconds when panic or overwhelm hits</p>
                 </div>
             </div>
         </section>
@@ -2488,7 +3047,7 @@
                     <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
                     <p><strong>CRPO #10979 | MPsy</strong></p>
                     <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                    <a href="tel:+14163062157" style="color: var(--sage-light); font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
                 </div>
 
                 <!-- Column 2: Therapy Services (Expanded) -->
@@ -2503,7 +3062,7 @@
                         <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
                         <li><a href="/life-transitions.html">Life Transitions</a></li>
                         <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                        <li><a href="/#specializations" style="color: var(--sage-light);">All Services →</a></li>
                     </ul>
                 </div>
 
@@ -2520,7 +3079,7 @@
                         <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
                         <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
                         <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" style="color: var(--sage-light);">All Ontario →</a></li>
                     </ul>
                 </div>
 
@@ -2528,7 +3087,7 @@
                 <div class="footer-section">
                     <h4>Specialized Support</h4>
                     <ul>
-                        <li><a href="/high-functioning-anxiety-ontario.html" style="font-weight: 700; color: #6B8E6F;">High Functioning Anxiety</a></li>
+                        <li><a href="/high-functioning-anxiety-ontario.html" style="font-weight: 700; color: var(--sage-light);">High Functioning Anxiety</a></li>
                         <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
                         <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
                         <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
