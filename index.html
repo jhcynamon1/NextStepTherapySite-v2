@@ -583,22 +583,13 @@
 
         /* V4 Hero Styling */
         .hero {
-            background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 50%, var(--linen) 100%) !important;
+            background: #fdfcfa !important; /* Flat Ivory - No Gradient */
             position: relative;
+            border-bottom: 1px solid #e5e0d8;
         }
 
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background:
-                radial-gradient(ellipse 80% 50% at 20% 80%, var(--sage-soft) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 85% 15%, rgba(30, 58, 79, 0.04) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
+            display: none !important; /* Kill background gradients/blobs */
         }
 
         .hero h1 {
@@ -616,15 +607,17 @@
             line-height: 1.85;
         }
 
-        /* V4 Trust Badges */
+        /* V4 Trust Badges - REFINED FLAT STYLE */
         .credentials-badge {
-            background: var(--sage-soft) !important;
-            color: var(--sage) !important;
-            border: 1px solid var(--sage-medium);
+            background: #f2efe9 !important; /* Flat Linen */
+            color: #1e3a4f !important; /* Flat Navy */
+            border: 1px solid #e5e0d8 !important; /* Flat Sand */
             padding: var(--space-2) var(--space-3);
-            border-radius: var(--radius-full);
+            border-radius: 4px !important; /* Squarer professional look */
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
+            box-shadow: none !important;
+            background-image: none !important;
         }
 
         /* V4 Approach Section */
@@ -949,23 +942,29 @@
         }
 
         .header .credentials-badge {
-            display: inline-block !important;
-            background-color: #f2efe9 !important; /* Linen - light warm neutral */
-            color: #1e3a4f !important; /* Navy - high contrast */
-            border: 1px solid #e5e0d8 !important; /* Sand border */
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            background: #1e3a4f !important; /* Solid Navy */
+            color: #ffffff !important; /* Pure White */
+            border: none !important;
             padding: 4px 12px !important;
-            border-radius: 20px !important;
-            font-size: 0.75rem !important;
+            border-radius: 4px !important;
+            font-size: 0.7rem !important;
             font-weight: 700 !important;
             letter-spacing: 0.05em !important;
             text-transform: uppercase !important;
             margin-left: 12px !important;
-            vertical-align: middle !important;
+            box-shadow: none !important;
+            background-image: none !important;
         }
 
         .header-book-btn {
-            background: #1e3a4f !important;
+            background: #1e3a4f !important; /* Solid Navy */
             color: white !important;
+            background-image: none !important; /* Kill gradients */
+            box-shadow: none !important;
+            border: none !important;
         }
 
         .header-phone {
@@ -975,9 +974,9 @@
             padding: 0.75rem 1.5rem !important;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - FLAT OVERRIDE */
         .hero {
-            background: linear-gradient(180deg, #fdfcfa 0%, #f8f6f3 100%) !important;
+            background: #fdfcfa !important;
             padding: 6rem 0 !important;
         }
 
@@ -2399,7 +2398,7 @@
                         </div>
 
                         <!-- Credentials (Below CTAs for Conversion) -->
-                        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(107,142,111,0.15);">
+                        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem;">
                             <p style="font-size: 0.95rem; color: #1e3a4f; margin-bottom: 0.5rem;">
                                 <strong>CRPO #10979</strong> | MPsy | ACT & CBT Training | Serving Ontario Since 2022
                             </p>
