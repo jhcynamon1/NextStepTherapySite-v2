@@ -919,322 +919,533 @@
         }
 
         /* ============================================
-           V4 CRITICAL FIXES - Header, Spacing, Contrast
+           NUCLEAR CSS OVERRIDE - FORCE ALL VISIBILITY
+           This overrides EVERYTHING to ensure text is readable
         ============================================ */
 
-        /* FIX: Header Layout */
+        /* GLOBAL TEXT VISIBILITY - Light backgrounds */
+        body, main, section, div, article {
+            color: #1e3a4f !important;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e3a4f !important;
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+        }
+
+        p, span, li, label, a {
+            color: #4a5a6a !important;
+        }
+
+        /* HEADER - Clean professional look */
         .header {
-            padding: var(--space-4) 0 !important;
+            background: white !important;
+            border-bottom: 1px solid #e5e0d8 !important;
+            padding: 1rem 0 !important;
         }
 
-        .header .container {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            gap: var(--space-6);
+        .header * {
+            color: #1e3a4f !important;
         }
 
-        .logo {
-            display: flex !important;
-            align-items: center !important;
-            gap: var(--space-3) !important;
-            flex-shrink: 0;
+        .header .credentials-badge {
+            display: none !important;
         }
 
-        .logo-text {
-            display: flex !important;
-            flex-direction: column !important;
-            line-height: 1.1 !important;
-        }
-
-        .logo-text span {
-            display: block !important;
-        }
-
-        .header nav {
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .header nav ul {
-            display: flex !important;
-            align-items: center !important;
-            gap: var(--space-6) !important;
-            list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        .header nav a {
-            color: var(--text-secondary) !important;
-            font-weight: 500 !important;
-            text-decoration: none !important;
-            transition: color var(--duration-fast) !important;
-        }
-
-        .header nav a:hover {
-            color: var(--navy) !important;
-        }
-
-        .credentials-badge {
-            display: none !important; /* Hide badge from header nav - too cramped */
-        }
-
-        .header-cta-wrapper {
-            display: flex !important;
-            align-items: center !important;
-            gap: var(--space-4) !important;
+        .header-book-btn {
+            background: #1e3a4f !important;
+            color: white !important;
         }
 
         .header-phone {
-            color: var(--navy) !important;
-            font-weight: 600 !important;
-            text-decoration: none !important;
-            white-space: nowrap !important;
+            color: #1e3a4f !important;
+            border: 2px solid #1e3a4f !important;
+            border-radius: 6px !important;
+            padding: 0.75rem 1.5rem !important;
         }
 
-        /* FIX: Specialization Highlight - "We're in This Together" */
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(180deg, #fdfcfa 0%, #f8f6f3 100%) !important;
+            padding: 6rem 0 !important;
+        }
+
+        .hero h1 {
+            color: #1e3a4f !important;
+            font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .hero h1 em, .hero h1 i {
+            color: #4a7c59 !important;
+        }
+
+        .hero p {
+            color: #4a5a6a !important;
+            font-size: 1.125rem !important;
+            line-height: 1.8 !important;
+        }
+
+        /* TRUST/PROBLEMS SECTION */
+        .trust-section, .trust-section * {
+            background: white !important;
+        }
+
+        .trust-section h2, .trust-section h3, .trust-section h4 {
+            color: #1e3a4f !important;
+        }
+
+        .trust-section p {
+            color: #4a5a6a !important;
+        }
+
+        .trust-item {
+            border-left: 3px solid #4a7c59 !important;
+            padding: 1rem 1.5rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        /* APPROACH SECTION - Dark background */
+        .approach {
+            background: #1e3a4f !important;
+            padding: 5rem 0 !important;
+        }
+
+        .approach *, .approach h2, .approach h3, .approach h4, .approach p, .approach span {
+            color: white !important;
+        }
+
+        .approach p {
+            color: rgba(255,255,255,0.85) !important;
+        }
+
+        /* SPECIALIZATION HIGHLIGHT - The "We're in This Together" box */
         .specialization-highlight {
             background: white !important;
-            border-radius: var(--radius-xl) !important;
-            padding: var(--space-8) !important;
-            margin-top: var(--space-8) !important;
-            box-shadow: var(--shadow-lg) !important;
-            border: 1px solid var(--sand) !important;
+            border-radius: 20px !important;
+            padding: 2.5rem !important;
+            margin-top: 2rem !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+        }
+
+        .specialization-highlight * {
+            color: #1e3a4f !important;
         }
 
         .specialization-highlight .specialization-badge {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+            background: #4a7c59 !important;
             color: white !important;
-            padding: var(--space-3) var(--space-5) !important;
-            border-radius: var(--radius-full) !important;
-            font-size: 0.8125rem !important;
+            padding: 0.75rem 1.5rem !important;
+            border-radius: 50px !important;
             font-weight: 600 !important;
             display: inline-block !important;
-            margin-bottom: var(--space-4) !important;
+            margin-bottom: 1rem !important;
         }
 
         .specialization-highlight h4 {
-            color: var(--navy) !important;
-            font-family: var(--font-display) !important;
-            font-size: 1.5rem !important;
-            margin-bottom: var(--space-4) !important;
+            color: #1e3a4f !important;
+            font-size: 1.75rem !important;
+            margin-bottom: 1rem !important;
         }
 
         .specialization-highlight p {
-            color: var(--text-secondary) !important;
+            color: #4a5a6a !important;
             font-size: 1.0625rem !important;
-            line-height: 1.75 !important;
-            margin: 0 !important;
+            line-height: 1.8 !important;
         }
 
-        /* FIX: Contact Section & Form */
-        .contact {
-            background: var(--navy) !important;
-            padding: var(--space-24) 0 !important;
+        /* SPECIALIZATIONS/SERVICES SECTION */
+        .specializations {
+            background: #f8f6f3 !important;
+            padding: 5rem 0 !important;
         }
 
-        .contact h2 {
+        .specialization-card {
+            background: white !important;
+            border-radius: 16px !important;
+            padding: 2rem !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+            border: 1px solid #e5e0d8 !important;
+        }
+
+        .specialization-card * {
+            color: #1e3a4f !important;
+        }
+
+        .specialization-card h3 {
+            color: #1e3a4f !important;
+            margin-bottom: 0.75rem !important;
+        }
+
+        .specialization-card p {
+            color: #4a5a6a !important;
+        }
+
+        /* PROCESS SECTION - Hide broken marble image */
+        .process {
+            background: white !important;
+            padding: 5rem 0 !important;
+        }
+
+        .process * {
+            color: #1e3a4f !important;
+        }
+
+        .process p {
+            color: #4a5a6a !important;
+        }
+
+        .process img[src*="marble"],
+        .process [style*="marble"],
+        .process-image,
+        .process .decorative-image {
+            display: none !important;
+        }
+
+        .process-step, .process-steps > div {
+            background: #f8f6f3 !important;
+            border-radius: 16px !important;
+            padding: 2rem !important;
+            margin-bottom: 1rem !important;
+            border-left: 4px solid #4a7c59 !important;
+        }
+
+        .process-step *, .process-steps > div * {
+            color: #1e3a4f !important;
+        }
+
+        .process-step p, .process-steps > div p {
+            color: #4a5a6a !important;
+        }
+
+        /* FAQ SECTION */
+        .faq {
+            background: #f2efe9 !important;
+            padding: 5rem 0 !important;
+        }
+
+        .faq * {
+            color: #1e3a4f !important;
+        }
+
+        .faq-item {
+            background: white !important;
+            border-radius: 12px !important;
+            margin-bottom: 1rem !important;
+            overflow: hidden !important;
+            border: 1px solid #e5e0d8 !important;
+        }
+
+        .faq-question {
+            padding: 1.5rem !important;
+            cursor: pointer !important;
+            font-weight: 600 !important;
+            color: #1e3a4f !important;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem !important;
+            color: #4a5a6a !important;
+        }
+
+        /* CONTACT SECTION - Dark background */
+        .contact, #contact {
+            background: #1e3a4f !important;
+            padding: 5rem 0 !important;
+        }
+
+        .contact h2, .contact h3, #contact h2, #contact h3 {
             color: white !important;
-            margin-bottom: var(--space-4) !important;
         }
 
-        .contact .lead-text,
-        .contact > .container > p {
-            color: rgba(255, 255, 255, 0.8) !important;
+        .contact p, .contact span, .contact label,
+        #contact p, #contact span, #contact label {
+            color: rgba(255,255,255,0.9) !important;
         }
 
+        .contact a:not(.btn), #contact a:not(.btn) {
+            color: #8cb390 !important;
+        }
+
+        /* CONTACT FORM */
         .contact-form {
-            background: rgba(255, 255, 255, 0.08) !important;
-            border-radius: var(--radius-xl) !important;
-            padding: var(--space-8) !important;
-            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            background: rgba(255,255,255,0.1) !important;
+            border-radius: 20px !important;
+            padding: 2.5rem !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
         }
 
         .contact-form h3 {
             color: white !important;
-            font-family: var(--font-display) !important;
-            font-size: 1.5rem !important;
-            margin-bottom: var(--space-4) !important;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: var(--space-5) !important;
+            margin-bottom: 1.5rem !important;
         }
 
         .contact-form label {
+            color: white !important;
             display: block !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-size: 0.9375rem !important;
+            margin-bottom: 0.5rem !important;
             font-weight: 500 !important;
-            margin-bottom: var(--space-2) !important;
         }
 
         .contact-form input,
         .contact-form textarea,
         .contact-form select {
             width: 100% !important;
-            background: rgba(255, 255, 255, 0.1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            border-radius: var(--radius-sm) !important;
-            padding: var(--space-4) !important;
+            background: rgba(255,255,255,0.15) !important;
+            border: 1px solid rgba(255,255,255,0.3) !important;
+            border-radius: 8px !important;
+            padding: 1rem !important;
             color: white !important;
-            font-family: var(--font-body) !important;
             font-size: 1rem !important;
-            transition: all var(--duration-fast) !important;
+            margin-bottom: 1rem !important;
         }
 
         .contact-form input::placeholder,
         .contact-form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5) !important;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none !important;
-            border-color: var(--sage) !important;
-            background: rgba(255, 255, 255, 0.15) !important;
-            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.3) !important;
+            color: rgba(255,255,255,0.6) !important;
         }
 
         .contact-form select option {
-            background: var(--navy) !important;
+            background: #1e3a4f !important;
             color: white !important;
         }
 
-        .contact-form .btn-primary {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+        .contact-form .btn,
+        .contact-form button {
+            background: #4a7c59 !important;
             color: white !important;
             border: none !important;
-            padding: var(--space-4) var(--space-8) !important;
-            font-size: 1rem !important;
+            padding: 1rem 2rem !important;
+            border-radius: 8px !important;
             font-weight: 600 !important;
-            border-radius: var(--radius-sm) !important;
             cursor: pointer !important;
-            transition: all var(--duration-normal) var(--ease-out) !important;
-        }
-
-        .contact-form .btn-primary:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: var(--shadow-lg), var(--shadow-glow) !important;
+            width: 100% !important;
         }
 
         .booking-cta-buttons .btn-primary {
-            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+            background: #4a7c59 !important;
+            color: white !important;
         }
 
         .booking-cta-buttons .btn-secondary {
             background: transparent !important;
             color: white !important;
-            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+            border: 2px solid rgba(255,255,255,0.5) !important;
         }
 
-        .booking-cta-buttons .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1) !important;
-            border-color: rgba(255, 255, 255, 0.5) !important;
-        }
-
-        /* FIX: Overall Spacing */
-        section {
-            padding: var(--space-20) 0 !important;
-        }
-
-        .section-header {
-            margin-bottom: var(--space-12) !important;
-        }
-
-        .section-header h2 {
-            margin-bottom: var(--space-4) !important;
-        }
-
-        .section-header .lead-text {
-            max-width: 720px !important;
-            margin: 0 auto !important;
-        }
-
-        /* FIX: Approach Section */
-        .approach {
-            padding: var(--space-24) 0 !important;
-        }
-
-        .approach h2, .approach h3, .approach h4 {
+        /* Contact info grid */
+        .contact-grid, .contact-info {
             color: white !important;
         }
 
-        .approach p {
-            color: rgba(255, 255, 255, 0.8) !important;
-            line-height: 1.8 !important;
+        .contact-grid *, .contact-info * {
+            color: rgba(255,255,255,0.9) !important;
         }
 
-        .approach-content {
-            margin-bottom: var(--space-8) !important;
+        .contact-grid h3, .contact-info h3,
+        .contact-grid h4, .contact-info h4 {
+            color: white !important;
         }
 
-        .approach-content h3 {
-            margin-top: var(--space-8) !important;
-            margin-bottom: var(--space-4) !important;
+        /* FOOTER */
+        .footer {
+            background: #152a3a !important;
+            padding: 4rem 0 2rem !important;
         }
 
-        .approach-content h4 {
-            margin-top: var(--space-6) !important;
-            margin-bottom: var(--space-3) !important;
+        .footer * {
+            color: rgba(255,255,255,0.8) !important;
         }
 
-        /* FIX: Cards Spacing */
-        .specializations-grid {
-            gap: var(--space-6) !important;
+        .footer h4 {
+            color: white !important;
+            margin-bottom: 1rem !important;
         }
 
-        .specialization-card {
-            padding: var(--space-8) !important;
+        .footer a {
+            color: rgba(255,255,255,0.7) !important;
         }
 
-        /* FIX: Trust Grid Spacing */
-        .trust-grid {
-            gap: var(--space-5) !important;
+        .footer a:hover {
+            color: #8cb390 !important;
         }
 
-        .trust-item {
-            padding: var(--space-4) !important;
-            padding-left: var(--space-5) !important;
-        }
-
-        /* FIX: Process Steps Spacing */
-        .process-steps {
-            gap: var(--space-6) !important;
-        }
-
-        .process-step {
-            padding: var(--space-6) !important;
-        }
-
-        /* FIX: FAQ Spacing */
-        .faq-item {
-            margin-bottom: var(--space-4) !important;
-        }
-
-        /* FIX: Strategic CTA Sections */
+        /* STRATEGIC CTA SECTIONS */
         .strategic-cta-section {
-            background: var(--cream) !important;
-            border-radius: var(--radius-xl) !important;
-            padding: var(--space-10) !important;
-            margin-top: var(--space-10) !important;
+            background: #f8f6f3 !important;
+            border-radius: 20px !important;
+            padding: 3rem !important;
+            margin: 2rem 0 !important;
             text-align: center !important;
-            border: 1px solid var(--sand) !important;
+            border: 1px solid #e5e0d8 !important;
         }
 
-        .strategic-cta-section h3 {
-            color: var(--navy) !important;
-            margin-bottom: var(--space-3) !important;
+        .strategic-cta-section * {
+            color: #1e3a4f !important;
         }
 
         .strategic-cta-section p {
-            color: var(--text-secondary) !important;
+            color: #4a5a6a !important;
         }
 
-        .strategic-cta-section .btn {
-            margin: var(--space-2) !important;
+        .strategic-cta-section .btn-primary {
+            background: #1e3a4f !important;
+            color: white !important;
+        }
+
+        .strategic-cta-section .btn-secondary {
+            background: transparent !important;
+            color: #1e3a4f !important;
+            border: 2px solid #1e3a4f !important;
+        }
+
+        /* BUTTONS - Global */
+        .btn-primary, .primary-cta {
+            background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5e 100%) !important;
+            color: white !important;
+            padding: 1rem 2rem !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: none !important;
+        }
+
+        .btn-secondary, .secondary-cta {
+            background: transparent !important;
+            color: #1e3a4f !important;
+            padding: 1rem 2rem !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            border: 2px solid #1e3a4f !important;
+        }
+
+        .btn-sage {
+            background: linear-gradient(135deg, #4a7c59 0%, #5f9970 100%) !important;
+            color: white !important;
+        }
+
+        /* SECTION SPACING */
+        section {
+            padding: 5rem 0 !important;
+        }
+
+        .section-header {
+            text-align: center !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .section-header h2 {
+            color: #1e3a4f !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .section-header p, .lead-text {
+            color: #4a5a6a !important;
+            max-width: 700px !important;
+            margin: 0 auto !important;
+        }
+
+        .section-eyebrow, .section-subtitle {
+            color: #4a7c59 !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            font-size: 0.875rem !important;
+        }
+
+        /* LOCATION PILLS */
+        .location-nav a {
+            background: white !important;
+            color: #1e3a4f !important;
+            border: 1px solid #e5e0d8 !important;
+            padding: 0.75rem 1.5rem !important;
+            border-radius: 50px !important;
+        }
+
+        .location-nav a:hover {
+            background: #4a7c59 !important;
+            color: white !important;
+            border-color: #4a7c59 !important;
+        }
+
+        /* MOBILE CTA BAR */
+        .mobile-cta-bar {
+            background: white !important;
+            border-top: 2px solid #4a7c59 !important;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        .mobile-cta-bar * {
+            color: #1e3a4f !important;
+        }
+
+        .mobile-cta-book {
+            background: #1e3a4f !important;
+            color: white !important;
+        }
+
+        .mobile-cta-phone {
+            background: #4a7c59 !important;
+            color: white !important;
+        }
+
+        /* FLOATING CTA */
+        .floating-cta {
+            background: #1e3a4f !important;
+            color: white !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+        }
+
+        /* QUIZ WIDGET */
+        .quiz-widget-section {
+            background: #f8f6f3 !important;
+        }
+
+        .quiz-widget-container {
+            background: white !important;
+            border-radius: 20px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+        }
+
+        .quiz-header {
+            background: linear-gradient(135deg, rgba(74,124,89,0.1) 0%, rgba(74,124,89,0.05) 100%) !important;
+        }
+
+        .quiz-header h2 {
+            color: #1e3a4f !important;
+        }
+
+        .quiz-header p {
+            color: #4a5a6a !important;
+        }
+
+        .quiz-question-text {
+            color: #1e3a4f !important;
+        }
+
+        .quiz-option {
+            background: white !important;
+            border: 2px solid #e5e0d8 !important;
+            color: #1e3a4f !important;
+        }
+
+        .quiz-option:hover, .quiz-option.selected {
+            border-color: #4a7c59 !important;
+            background: rgba(74,124,89,0.05) !important;
+        }
+
+        .quiz-btn-primary {
+            background: #1e3a4f !important;
+            color: white !important;
+        }
+
+        .quiz-btn-secondary {
+            background: #f8f6f3 !important;
+            color: #1e3a4f !important;
+            border: 2px solid #e5e0d8 !important;
         }
     </style>
 
