@@ -949,7 +949,18 @@
         }
 
         .header .credentials-badge {
-            display: none !important;
+            display: inline-block !important;
+            background-color: #f2efe9 !important; /* Linen - light warm neutral */
+            color: #1e3a4f !important; /* Navy - high contrast */
+            border: 1px solid #e5e0d8 !important; /* Sand border */
+            padding: 4px 12px !important;
+            border-radius: 20px !important;
+            font-size: 0.75rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.05em !important;
+            text-transform: uppercase !important;
+            margin-left: 12px !important;
+            vertical-align: middle !important;
         }
 
         .header-book-btn {
@@ -2159,6 +2170,91 @@
             opacity: 1 !important;
         }
 
+    </style>
+    <style>
+        /* ========================================
+           CRO & FRONT-END POLISH - Expert Review
+           ======================================== */
+
+        /* 1. HERO HIERARCHY & READABILITY */
+        .hero h1 {
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Subtle lift against background */
+            font-weight: 500 !important; /* Refined weight */
+        }
+        
+        .hero .lead-text {
+            font-weight: 450 !important; /* Slightly heavier for readability */
+            max-width: 600px;
+            margin-bottom: 2rem !important;
+        }
+
+        /* 2. PRIMARY CTA OPTIMIZATION ("Schedule 15-Min Consultation") */
+        /* Make it pop with a professional gradient and shadow */
+        .header-book-btn, 
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5e 100%) !important;
+            box-shadow: 0 4px 14px rgba(30, 58, 79, 0.25) !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+        }
+
+        .header-book-btn:hover,
+        .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(30, 58, 79, 0.35) !important;
+            background: linear-gradient(135deg, #152a3a 0%, #1e3a4f 100%) !important;
+        }
+
+        /* 3. FORM INPUT UX POLISH */
+        /* Clear focus states for accessibility and conversion */
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none !important;
+            border-color: #ffffff !important;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+            background: rgba(255,255,255,0.2) !important;
+        }
+
+        /* 4. SECTION SPACING & RHYTHM */
+        /* Ensure adequate breathing room */
+        section {
+            position: relative;
+        }
+        
+        .section-subtitle {
+            letter-spacing: 0.15em !important;
+            text-transform: uppercase !important;
+            font-size: 0.75rem !important;
+            font-weight: 700 !important;
+            color: #4a7c59 !important; /* Sage Green for consistency */
+            margin-bottom: 1rem !important;
+            display: inline-block;
+        }
+
+        /* 5. NAV LINKS HOVER EFFECT */
+        .nav a {
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #4a7c59;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
     </style>
 </head>
 <body>
