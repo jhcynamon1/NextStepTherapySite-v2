@@ -917,6 +917,325 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ============================================
+           V4 CRITICAL FIXES - Header, Spacing, Contrast
+        ============================================ */
+
+        /* FIX: Header Layout */
+        .header {
+            padding: var(--space-4) 0 !important;
+        }
+
+        .header .container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: var(--space-6);
+        }
+
+        .logo {
+            display: flex !important;
+            align-items: center !important;
+            gap: var(--space-3) !important;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            display: flex !important;
+            flex-direction: column !important;
+            line-height: 1.1 !important;
+        }
+
+        .logo-text span {
+            display: block !important;
+        }
+
+        .header nav {
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .header nav ul {
+            display: flex !important;
+            align-items: center !important;
+            gap: var(--space-6) !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .header nav a {
+            color: var(--text-secondary) !important;
+            font-weight: 500 !important;
+            text-decoration: none !important;
+            transition: color var(--duration-fast) !important;
+        }
+
+        .header nav a:hover {
+            color: var(--navy) !important;
+        }
+
+        .credentials-badge {
+            display: none !important; /* Hide badge from header nav - too cramped */
+        }
+
+        .header-cta-wrapper {
+            display: flex !important;
+            align-items: center !important;
+            gap: var(--space-4) !important;
+        }
+
+        .header-phone {
+            color: var(--navy) !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            white-space: nowrap !important;
+        }
+
+        /* FIX: Specialization Highlight - "We're in This Together" */
+        .specialization-highlight {
+            background: white !important;
+            border-radius: var(--radius-xl) !important;
+            padding: var(--space-8) !important;
+            margin-top: var(--space-8) !important;
+            box-shadow: var(--shadow-lg) !important;
+            border: 1px solid var(--sand) !important;
+        }
+
+        .specialization-highlight .specialization-badge {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+            color: white !important;
+            padding: var(--space-3) var(--space-5) !important;
+            border-radius: var(--radius-full) !important;
+            font-size: 0.8125rem !important;
+            font-weight: 600 !important;
+            display: inline-block !important;
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .specialization-highlight h4 {
+            color: var(--navy) !important;
+            font-family: var(--font-display) !important;
+            font-size: 1.5rem !important;
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .specialization-highlight p {
+            color: var(--text-secondary) !important;
+            font-size: 1.0625rem !important;
+            line-height: 1.75 !important;
+            margin: 0 !important;
+        }
+
+        /* FIX: Contact Section & Form */
+        .contact {
+            background: var(--navy) !important;
+            padding: var(--space-24) 0 !important;
+        }
+
+        .contact h2 {
+            color: white !important;
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .contact .lead-text,
+        .contact > .container > p {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-radius: var(--radius-xl) !important;
+            padding: var(--space-8) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        }
+
+        .contact-form h3 {
+            color: white !important;
+            font-family: var(--font-display) !important;
+            font-size: 1.5rem !important;
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: var(--space-5) !important;
+        }
+
+        .contact-form label {
+            display: block !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 0.9375rem !important;
+            font-weight: 500 !important;
+            margin-bottom: var(--space-2) !important;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100% !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: var(--radius-sm) !important;
+            padding: var(--space-4) !important;
+            color: white !important;
+            font-family: var(--font-body) !important;
+            font-size: 1rem !important;
+            transition: all var(--duration-fast) !important;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none !important;
+            border-color: var(--sage) !important;
+            background: rgba(255, 255, 255, 0.15) !important;
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.3) !important;
+        }
+
+        .contact-form select option {
+            background: var(--navy) !important;
+            color: white !important;
+        }
+
+        .contact-form .btn-primary {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+            color: white !important;
+            border: none !important;
+            padding: var(--space-4) var(--space-8) !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            border-radius: var(--radius-sm) !important;
+            cursor: pointer !important;
+            transition: all var(--duration-normal) var(--ease-out) !important;
+        }
+
+        .contact-form .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: var(--shadow-lg), var(--shadow-glow) !important;
+        }
+
+        .booking-cta-buttons .btn-primary {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%) !important;
+        }
+
+        .booking-cta-buttons .btn-secondary {
+            background: transparent !important;
+            color: white !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .booking-cta-buttons .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        /* FIX: Overall Spacing */
+        section {
+            padding: var(--space-20) 0 !important;
+        }
+
+        .section-header {
+            margin-bottom: var(--space-12) !important;
+        }
+
+        .section-header h2 {
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .section-header .lead-text {
+            max-width: 720px !important;
+            margin: 0 auto !important;
+        }
+
+        /* FIX: Approach Section */
+        .approach {
+            padding: var(--space-24) 0 !important;
+        }
+
+        .approach h2, .approach h3, .approach h4 {
+            color: white !important;
+        }
+
+        .approach p {
+            color: rgba(255, 255, 255, 0.8) !important;
+            line-height: 1.8 !important;
+        }
+
+        .approach-content {
+            margin-bottom: var(--space-8) !important;
+        }
+
+        .approach-content h3 {
+            margin-top: var(--space-8) !important;
+            margin-bottom: var(--space-4) !important;
+        }
+
+        .approach-content h4 {
+            margin-top: var(--space-6) !important;
+            margin-bottom: var(--space-3) !important;
+        }
+
+        /* FIX: Cards Spacing */
+        .specializations-grid {
+            gap: var(--space-6) !important;
+        }
+
+        .specialization-card {
+            padding: var(--space-8) !important;
+        }
+
+        /* FIX: Trust Grid Spacing */
+        .trust-grid {
+            gap: var(--space-5) !important;
+        }
+
+        .trust-item {
+            padding: var(--space-4) !important;
+            padding-left: var(--space-5) !important;
+        }
+
+        /* FIX: Process Steps Spacing */
+        .process-steps {
+            gap: var(--space-6) !important;
+        }
+
+        .process-step {
+            padding: var(--space-6) !important;
+        }
+
+        /* FIX: FAQ Spacing */
+        .faq-item {
+            margin-bottom: var(--space-4) !important;
+        }
+
+        /* FIX: Strategic CTA Sections */
+        .strategic-cta-section {
+            background: var(--cream) !important;
+            border-radius: var(--radius-xl) !important;
+            padding: var(--space-10) !important;
+            margin-top: var(--space-10) !important;
+            text-align: center !important;
+            border: 1px solid var(--sand) !important;
+        }
+
+        .strategic-cta-section h3 {
+            color: var(--navy) !important;
+            margin-bottom: var(--space-3) !important;
+        }
+
+        .strategic-cta-section p {
+            color: var(--text-secondary) !important;
+        }
+
+        .strategic-cta-section .btn {
+            margin: var(--space-2) !important;
+        }
     </style>
 
     <!-- v4.0 Conversion Optimization Styles -->
