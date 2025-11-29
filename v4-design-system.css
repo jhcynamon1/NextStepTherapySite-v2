@@ -1,697 +1,913 @@
-/* V4 Premium Clinical Executive Design System
-   Next Step Therapy - November 2025
-   Navy-Dominant | Sage Accent Only
-   ========================================== */
+/* ============================================
+   V4 Design System - Next Step Therapy
+   Refined Clinical Elegance
+   ============================================ */
 
-/* ==========================================
-   1. CSS VARIABLES (Design Tokens)
-   ========================================== */
+/* ============================================
+   1. CSS CUSTOM PROPERTIES
+   ============================================ */
 :root {
-    /* Primary Colors - NAVY DOMINANT */
+    /* Primary Palette - Navy Dominant */
     --navy: #1e3a4f;
     --navy-dark: #152a3a;
     --navy-light: #2d4a5e;
     --navy-muted: #3d5a6f;
 
-    /* Accent Colors - SAGE SPARINGLY */
+    /* Accent - Sage (Use Sparingly) */
     --sage: #4a7c59;
     --sage-light: #5f9970;
-    --sage-soft: rgba(74, 124, 89, 0.08);
 
-    /* Neutral Colors */
+    /* Neutrals */
     --cream: #f8f6f3;
     --linen: #f5f2ed;
     --white: #ffffff;
-    --sand: #e5e0d8;
+    --sand: #e8e4de;
 
-    /* Text Colors */
+    /* Text */
     --text-primary: #1e3a4f;
     --text-secondary: #4a5a6a;
     --text-muted: #6b7a8a;
-    --text-inverse: #ffffff;
+    --text-light: rgba(255, 255, 255, 0.9);
 
-    /* Override old variable */
-    --primary-soft-blue: #1e3a4f;
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(30, 58, 79, 0.06);
+    --shadow-md: 0 4px 12px rgba(30, 58, 79, 0.08);
+    --shadow-lg: 0 8px 30px rgba(30, 58, 79, 0.12);
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 100px;
 }
 
-/* ==========================================
-   2. TYPOGRAPHY
-   ========================================== */
+/* ============================================
+   2. BASE TYPOGRAPHY
+   ============================================ */
 body {
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, .logo-text {
-    font-family: 'Cormorant Garamond', Georgia, serif !important;
-    color: var(--navy) !important;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display) !important;
+    color: var(--navy);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
 }
 
-p, li, a, span, label, input, textarea, select, button {
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+h4 { font-size: 1.125rem; }
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 0 1rem;
 }
 
-/* ==========================================
-   3. HEADER & NAVIGATION
-   ========================================== */
-.header {
-    background: rgba(255, 255, 255, 0.98) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+a {
+    color: var(--sage);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--sage-light);
+}
+
+/* ============================================
+   3. HEADER - Clean Professional Layout
+   ============================================ */
+.header,
+header.header {
+    background: var(--white) !important;
     border-bottom: 1px solid rgba(30, 58, 79, 0.08) !important;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.03) !important;
+    padding: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: none !important;
 }
 
-.logo-text {
+.header .container,
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem !important;
+}
+
+.header-content,
+.header .header-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Logo Section */
+.logo-section,
+.header .logo-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    flex-shrink: 0 !important;
+}
+
+.logo,
+.header .logo {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+}
+
+.logo-text,
+.header .logo-text {
+    font-family: var(--font-display) !important;
+    font-size: 1.375rem !important;
+    font-weight: 500 !important;
     color: var(--navy) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
 }
 
-/* CRPO Badge - Cream background, navy text */
-.credentials-badge {
-    background: var(--cream) !important;
-    color: var(--navy) !important;
-    border: 1px solid var(--navy) !important;
-    padding: 0.375rem 0.875rem !important;
-    border-radius: 4px !important;
-    font-size: 0.75rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-}
-
+/* CRPO Badge */
+.credentials-badge,
+.credentials-badge-prominent,
 .therapist-credentials {
-    background: var(--cream) !important;
-    color: var(--navy) !important;
-    border: 1px solid var(--navy) !important;
-}
-
-.nav a {
-    color: var(--text-secondary) !important;
-}
-
-.nav a:hover {
-    color: var(--navy) !important;
-}
-
-/* ==========================================
-   4. BUTTONS - Navy Primary, Flat Design
-   ========================================== */
-.btn-primary,
-.primary-cta,
-.header-book-btn {
-    background: var(--navy) !important;
-    background-image: none !important;
-    color: var(--white) !important;
-    border: none !important;
-    box-shadow: 0 4px 6px rgba(30, 58, 79, 0.12) !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
-    transition: all 0.2s ease !important;
-}
-
-.btn-primary:hover,
-.primary-cta:hover,
-.header-book-btn:hover {
-    background: var(--navy-dark) !important;
-    background-image: none !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 16px rgba(30, 58, 79, 0.18) !important;
-}
-
-.btn-secondary,
-.header-phone {
     background: transparent !important;
+    color: var(--text-muted) !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+}
+
+/* Navigation */
+.nav,
+.header .nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2rem !important;
+}
+
+.nav a,
+.header .nav a {
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    padding: 0.5rem 0 !important;
+    border: none !important;
+    background: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.nav a:hover,
+.header .nav a:hover {
     color: var(--navy) !important;
-    border: 2px solid var(--navy) !important;
+}
+
+/* Header CTA Button */
+.header-book-btn,
+.header .btn-primary,
+.nav .btn-primary {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 0.625rem 1.25rem !important;
+    border-radius: var(--radius-md) !important;
+    font-size: 0.875rem !important;
     font-weight: 600 !important;
-    border-radius: 8px !important;
+    border: none !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
     transition: all 0.2s ease !important;
 }
 
-.btn-secondary:hover,
-.header-phone:hover {
-    background: var(--navy) !important;
-    color: var(--white) !important;
+.header-book-btn:hover,
+.header .btn-primary:hover,
+.nav .btn-primary:hover {
+    background: var(--navy-dark) !important;
+    transform: translateY(-1px) !important;
 }
 
-/* ==========================================
-   5. HERO SECTION
-   ========================================== */
-.hero {
+/* Header Phone - Simple text link, NO border box */
+.header-phone,
+.header .header-phone {
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    color: var(--navy) !important;
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+}
+
+.header-phone:hover,
+.header .header-phone:hover {
+    color: var(--sage) !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Mobile Header */
+@media (max-width: 768px) {
+    .header-content,
+    .header .header-content {
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+        justify-content: center !important;
+    }
+
+    .nav,
+    .header .nav {
+        gap: 1rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .credentials-badge,
+    .credentials-badge-prominent {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   4. HERO SECTION
+   ============================================ */
+.hero,
+section.hero {
     background: var(--cream) !important;
-    background-image: none !important;
+    padding: var(--space-3xl) 0 !important;
+    text-align: center;
 }
 
 .hero h1 {
     color: var(--navy) !important;
-}
-
-/* Italic emphasis in headlines - subtle navy-light, NOT green */
-.hero h1 em,
-.hero h1 i {
-    color: var(--navy-muted) !important;
-    font-style: italic !important;
+    margin-bottom: var(--space-lg) !important;
 }
 
 .hero p,
 .hero .lead-text {
     color: var(--text-secondary) !important;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.7;
 }
 
-/* ==========================================
-   6. SECTION SUBTITLES - Navy, not green
-   ========================================== */
-.section-subtitle {
-    color: var(--navy-muted) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
-    font-size: 0.875rem !important;
-    font-weight: 600 !important;
+/* Trust Pills */
+.trust-pills,
+.hero .trust-pills {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 0.625rem !important;
+    flex-wrap: wrap !important;
+    margin: var(--space-lg) 0 !important;
 }
 
-/* ==========================================
-   7. APPROACH/PHILOSOPHY SECTION (Dark Navy)
-   ========================================== */
-.approach {
-    background: var(--navy) !important;
-}
-
-.approach .section-subtitle {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.approach h2,
-.approach h3,
-.approach h4 {
-    color: var(--white) !important;
-}
-
-.approach p,
-.approach .lead-text {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* White card within approach section */
-.approach .specialization-highlight {
+.trust-pill {
     background: var(--white) !important;
-    border-radius: 12px !important;
-}
-
-.approach .specialization-highlight h4,
-.approach .specialization-highlight p {
-    color: var(--navy) !important;
-}
-
-/* Badge - Navy, not green */
-.approach .specialization-highlight .specialization-badge {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-/* ==========================================
-   8. CARDS & SECTIONS
-   ========================================== */
-.specializations {
-    background: var(--cream) !important;
-}
-
-.specialization-card {
-    background: var(--white) !important;
-    border-top: 3px solid var(--navy) !important;
-    box-shadow: 0 4px 20px rgba(30, 58, 79, 0.06) !important;
-    transition: all 0.3s ease !important;
-}
-
-.specialization-card:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 12px 32px rgba(30, 58, 79, 0.12) !important;
-}
-
-.specialization-card h3,
-.specialization-title {
-    color: var(--navy) !important;
-}
-
-.specialization-card p,
-.specialization-desc {
     color: var(--text-secondary) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-full) !important;
+    font-size: 0.8125rem !important;
+    font-weight: 500 !important;
+    border: 1px solid rgba(30, 58, 79, 0.1) !important;
 }
 
-/* Links - Sage accent for clickable differentiation */
-.specialization-link {
-    color: var(--navy) !important;
+/* ============================================
+   5. BUTTONS
+   ============================================ */
+.btn-primary,
+.primary-cta,
+.manus-primary-cta,
+a.manus-primary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
     font-weight: 600 !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-shadow: var(--shadow-sm) !important;
 }
 
-.specialization-link:hover {
-    color: var(--sage) !important;
+.btn-primary:hover,
+.primary-cta:hover,
+.manus-primary-cta:hover,
+a.manus-primary-cta:hover {
+    background: var(--navy-dark) !important;
+    color: var(--white) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
 }
 
-/* Trust Section */
-.trust-section {
-    background: var(--white) !important;
-}
-
-.trust-item {
-    background: var(--cream) !important;
-    border-left: 3px solid var(--navy) !important;
+.btn-secondary,
+.secondary-cta,
+.manus-secondary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: var(--navy) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid var(--navy) !important;
+    cursor: pointer !important;
     transition: all 0.2s ease !important;
 }
 
-.trust-item:hover {
-    border-left-color: var(--sage) !important;
+.btn-secondary:hover,
+.secondary-cta:hover,
+.manus-secondary-cta:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
 }
 
-.trust-item h4 {
+/* ============================================
+   6. SECTIONS
+   ============================================ */
+.section,
+section.section {
+    padding: var(--space-3xl) 0;
+}
+
+.section.alternate-bg,
+section.alternate-bg {
+    background: var(--cream);
+}
+
+.section-title {
+    font-family: var(--font-display) !important;
+    color: var(--navy) !important;
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.section-intro {
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-2xl);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ============================================
+   7. CARDS
+   ============================================ */
+.content-card,
+.specialization-card,
+.info-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.content-card:hover,
+.specialization-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.specialization-card {
+    border-top: 3px solid var(--navy);
+}
+
+.content-card h2,
+.content-card h3 {
+    color: var(--navy) !important;
+    margin-bottom: var(--space-md);
+}
+
+.content-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Quick Stat Cards */
+.quick-stat-card {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border-top: 3px solid var(--navy);
+    box-shadow: var(--shadow-sm);
+}
+
+.quick-stat-card h3 {
+    font-family: var(--font-display) !important;
+    font-size: 1.25rem;
+    color: var(--navy) !important;
+    margin-bottom: 0.5rem;
+}
+
+.quick-stat-card p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* ============================================
+   8. CTA BOXES (Navy Background)
+   ============================================ */
+.cta-box {
+    background: var(--navy) !important;
+    padding: var(--space-2xl) !important;
+    border-radius: var(--radius-lg) !important;
+    text-align: center !important;
+}
+
+.cta-box * {
+    color: var(--white) !important;
+}
+
+.cta-box h2,
+.cta-box h3 {
+    font-family: var(--font-display) !important;
+    color: var(--white) !important;
+    margin-bottom: var(--space-md) !important;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: var(--space-lg) !important;
+}
+
+.cta-box .btn-primary,
+.cta-box .manus-primary-cta {
+    background: var(--white) !important;
     color: var(--navy) !important;
 }
 
-.trust-item p {
-    color: var(--text-secondary) !important;
-}
-
-/* Process Section */
-.process {
-    background: var(--white) !important;
-}
-
-.process-step {
+.cta-box .btn-primary:hover,
+.cta-box .manus-primary-cta:hover {
     background: var(--cream) !important;
+    color: var(--navy) !important;
+}
+
+/* ============================================
+   9. LISTS
+   ============================================ */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* ============================================
+   10. FAQ SECTION
+   ============================================ */
+.faq-grid {
+    display: grid;
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--navy);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    font-family: var(--font-display) !important;
+    font-size: 1.125rem;
+    color: var(--navy) !important;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ============================================
+   11. TABLES
+   ============================================ */
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin: var(--space-xl) 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.comparison-table th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: left;
+}
+
+.comparison-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(30, 58, 79, 0.1);
+    color: var(--text-secondary);
+}
+
+.comparison-table tr:nth-child(even) {
+    background: var(--cream);
+}
+
+/* ============================================
+   12. PROCESS STEPS
+   ============================================ */
+.process-steps {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: var(--space-xl);
+    position: relative;
 }
 
 .step-number {
-    background: var(--navy) !important;
-    background-image: none !important;
-    color: var(--white) !important;
+    background: var(--navy);
+    color: var(--white);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-right: var(--space-lg);
+    flex-shrink: 0;
 }
 
-.step-title {
+.step-content h3 {
+    font-family: var(--font-display) !important;
     color: var(--navy) !important;
+    margin-bottom: 0.5rem;
 }
 
-.step-desc {
-    color: var(--text-secondary) !important;
+.step-content p {
+    color: var(--text-secondary);
+    margin: 0;
 }
 
-/* ==========================================
-   9. STRATEGIC CTA SECTIONS
-   ========================================== */
-.strategic-cta-section {
-    background: var(--cream) !important;
-    border-radius: 16px !important;
+/* ============================================
+   13. MOBILE STICKY CTA
+   ============================================ */
+.mobile-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 -4px 20px rgba(30, 58, 79, 0.12);
+    padding: 0.75rem;
+    z-index: 999;
+    display: none;
+    gap: 0.5rem;
+    border-top: 1px solid rgba(30, 58, 79, 0.1);
 }
 
-.strategic-cta-section h3 {
-    color: var(--navy) !important;
-    font-weight: 600 !important;
+.mobile-cta-bar a {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.strategic-cta-section p {
-    color: var(--text-secondary) !important;
+.mobile-cta-book {
+    background: var(--navy);
+    color: var(--white);
 }
 
-/* Trust signals - Navy checkmarks */
-.cta-trust-signals,
-.cta-trust-signals span {
-    color: var(--navy) !important;
-    font-weight: 600 !important;
-    opacity: 1 !important;
+.mobile-cta-phone {
+    background: var(--sage);
+    color: var(--white);
 }
 
-.cta-trust-signals span::before {
-    color: var(--navy) !important;
+@media (max-width: 768px) {
+    .mobile-cta-bar {
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 70px;
+    }
 }
 
-/* ==========================================
-   10. CONTACT SECTION (Dark Navy)
-   ========================================== */
-.contact,
-#contact {
-    background: var(--navy) !important;
+/* Floating CTA - Desktop */
+.floating-cta {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 998;
+    display: none;
+    transition: all 0.2s ease;
 }
 
-.contact h2 {
-    color: var(--white) !important;
+.floating-cta:hover {
+    background: var(--navy-dark);
+    transform: translateY(-3px);
+    color: var(--white);
 }
 
-.contact .lead-text {
-    color: rgba(255, 255, 255, 0.9) !important;
+@media (min-width: 769px) {
+    .floating-cta {
+        display: block;
+    }
 }
 
-/* Contact Info Card (Light) */
-.contact-info {
-    background: var(--cream) !important;
-    border-radius: 16px !important;
-}
-
-.contact-info h3 {
-    color: var(--navy) !important;
-}
-
-.contact-methods li {
-    background: var(--white) !important;
-    border-radius: 12px !important;
-}
-
-.contact-methods strong,
-.contact-details strong {
-    color: var(--navy) !important;
-}
-
-/* Links - Sage accent ONLY here for clickable differentiation */
-.contact-methods a,
-.contact-details a {
-    color: var(--sage) !important;
-    font-weight: 500 !important;
-}
-
-.contact-methods a:hover,
-.contact-details a:hover {
-    color: var(--sage-light) !important;
-}
-
-.contact-methods small,
-.contact-details small {
-    color: var(--text-secondary) !important;
-}
-
-/* Contact Form (Dark background) */
-.contact-form {
-    background: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 16px !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.contact-form h3 {
-    color: var(--white) !important;
-}
-
-.contact-form label {
-    color: var(--white) !important;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: var(--white) !important;
-    border-radius: 8px !important;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    outline: none !important;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* ==========================================
-   11. FAQ SECTION
-   ========================================== */
-.faq-item {
-    background: var(--white) !important;
-    border-left: 3px solid var(--navy) !important;
-}
-
-.faq-item h3 {
-    color: var(--navy) !important;
-}
-
-.faq-item p {
-    color: var(--text-secondary) !important;
-}
-
-/* ==========================================
-   12. FOOTER (Dark Navy)
-   ========================================== */
-.footer {
+/* ============================================
+   14. FOOTER
+   ============================================ */
+.footer,
+footer.footer {
     background: var(--navy-dark) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: var(--space-2xl) 0 var(--space-lg) !important;
 }
 
 .footer h4 {
+    font-family: var(--font-body) !important;
     color: var(--white) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--space-md) !important;
 }
 
 .footer p,
 .footer a,
 .footer li {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9375rem !important;
 }
 
-/* Footer links - subtle sage on hover */
 .footer a:hover {
     color: var(--white) !important;
 }
 
-.footer-bottom {
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom,
+.footer .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-    color: rgba(255, 255, 255, 0.7) !important;
+    padding-top: var(--space-lg) !important;
+    margin-top: var(--space-xl) !important;
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* ==========================================
-   13. THERAPIST SHOWCASE
-   ========================================== */
-.therapist-showcase {
-    background: var(--white) !important;
-    border: 1px solid rgba(30, 58, 79, 0.08) !important;
-    box-shadow: 0 8px 32px rgba(30, 58, 79, 0.08) !important;
-}
-
-/* Remove gradient line */
-.therapist-showcase::before {
-    display: none !important;
-}
-
-.therapist-name {
-    color: var(--navy) !important;
-}
-
-.therapist-title {
-    color: var(--text-muted) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-}
-
-/* ==========================================
-   14. INVESTMENT/PRICING - Navy, not green
-   ========================================== */
-.investment-highlight {
-    background: var(--navy) !important;
-    background-image: none !important;
-    color: var(--white) !important;
-    border-radius: 12px !important;
-}
-
-/* ==========================================
-   15. BADGES & TAGS - Navy primary
-   ========================================== */
-.specialization-badge {
-    background: var(--navy) !important;
-    background-image: none !important;
-    color: var(--white) !important;
-    border-radius: 4px !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    font-size: 0.75rem !important;
-}
-
-/* ==========================================
-   16. QUIZ WIDGET - Navy dominant
-   ========================================== */
-.quiz-widget-section {
-    background: var(--cream) !important;
-}
-
-.quiz-header {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-.quiz-header h3,
-.quiz-header p {
-    color: var(--white) !important;
-}
-
-.quiz-progress-fill {
-    background: var(--navy) !important;
-    background-image: none !important;
-}
-
-/* Quiz buttons */
-.quiz-btn-primary {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-/* ==========================================
-   17. UTILITY OVERRIDES
-   ========================================== */
-/* Kill any remaining gradients */
-[style*="linear-gradient"],
-[style*="radial-gradient"] {
-    background-image: none !important;
-}
-
-/* Fix any gray text issues */
-[style*="color: #5A6B7D"],
-[style*="color:#5A6B7D"] {
-    color: var(--navy) !important;
-}
-
-/* ==========================================
-   18. MICRO-INTERACTIONS & POLISH
-   ========================================== */
-/* Smooth transitions on interactive elements */
-a, button, .btn, .specialization-card, .trust-item {
-    transition: all 0.2s ease !important;
-}
-
-/* Focus states - navy outline */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-    outline: 2px solid var(--navy) !important;
-    outline-offset: 2px !important;
-}
-
-/* Selection color */
-::selection {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-::-moz-selection {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-/* ==========================================
-   19. DARK SECTION TEXT CONTRAST FIXES
-   Ensure white text on ALL dark backgrounds
-   ========================================== */
-
-/* Any element with navy/dark background should have white text */
-[style*="background: #1e3a4f"],
-[style*="background:#1e3a4f"],
-[style*="background: var(--navy)"],
-[style*="background: var(--primary-green)"],
-.cta-box,
+/* ============================================
+   15. DARK SECTION OVERRIDES
+   ============================================ */
+.approach,
 .contact,
 #contact,
-.approach,
-[class*="dark"],
-[class*="navy-bg"] {
-    color: #ffffff !important;
+[style*="background: var(--navy)"],
+[style*="background:#1e3a4f"],
+[style*="background: #1e3a4f"] {
+    background: var(--navy) !important;
 }
 
-[style*="background: #1e3a4f"] h1,
-[style*="background: #1e3a4f"] h2,
-[style*="background: #1e3a4f"] h3,
-[style*="background: #1e3a4f"] h4,
-[style*="background: #1e3a4f"] p,
-[style*="background: #1e3a4f"] li,
-[style*="background: #1e3a4f"] span,
-[style*="background:#1e3a4f"] h1,
-[style*="background:#1e3a4f"] h2,
-[style*="background:#1e3a4f"] h3,
-[style*="background:#1e3a4f"] h4,
-[style*="background:#1e3a4f"] p,
-[style*="background:#1e3a4f"] li,
-[style*="background:#1e3a4f"] span,
-.cta-box h1,
-.cta-box h2,
-.cta-box h3,
-.cta-box h4,
-.cta-box p,
-.cta-box li,
-.cta-box span,
-.cta-box a {
-    color: #ffffff !important;
+.approach *,
+.contact *,
+#contact * {
+    color: var(--white) !important;
 }
 
-/* CTA boxes - ensure all text is white */
-.cta-box {
-    background: #1e3a4f !important;
+.approach h2,
+.approach h3,
+.contact h2,
+.contact h3,
+#contact h2,
+#contact h3 {
+    color: var(--white) !important;
 }
 
-.cta-box * {
-    color: #ffffff !important;
-}
-
-.cta-box a.btn,
-.cta-box a.manus-primary-cta,
-.cta-box a[class*="primary"] {
-    background: #ffffff !important;
-    color: #1e3a4f !important;
-}
-
-/* Footer - all text white */
-.footer,
-.footer * {
+.approach p,
+.contact p,
+#contact p {
     color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.footer h1,
-.footer h2,
-.footer h3,
-.footer h4 {
-    color: #ffffff !important;
-}
-
-/* Contact section on dark background */
-.contact h1,
-.contact h2,
-.contact h3,
-.contact p,
-#contact h1,
-#contact h2,
-#contact h3,
-#contact p {
-    color: #ffffff !important;
-}
-
-/* Light cards on dark backgrounds should have navy text */
+/* Light cards within dark sections */
+.approach .specialization-highlight,
 .contact .contact-info,
+#contact .contact-info {
+    background: var(--white) !important;
+    border-radius: var(--radius-lg);
+}
+
+.approach .specialization-highlight *,
 .contact .contact-info *,
-#contact .contact-info,
 #contact .contact-info * {
-    color: #1e3a4f !important;
+    color: var(--navy) !important;
 }
 
 .contact .contact-info a,
 #contact .contact-info a {
-    color: #4a7c59 !important;
+    color: var(--sage) !important;
 }
 
-/* Section title fixes */
-.section-title {
-    color: #1e3a4f !important;
+/* ============================================
+   16. FORM ELEMENTS
+   ============================================ */
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(30, 58, 79, 0.2);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
 }
 
-/* Body text should be readable */
-p {
-    color: #4a5a6a !important;
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(30, 58, 79, 0.1);
 }
 
-/* But headings should be navy */
-h1, h2, h3, h4 {
-    color: #1e3a4f !important;
+/* ============================================
+   17. UTILITY CLASSES
+   ============================================ */
+.text-navy { color: var(--navy) !important; }
+.text-sage { color: var(--sage) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-white { color: var(--white) !important; }
+
+.bg-navy { background: var(--navy) !important; }
+.bg-cream { background: var(--cream) !important; }
+.bg-white { background: var(--white) !important; }
+
+/* ============================================
+   18. ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Override for dark sections */
-.approach h1,
-.approach h2,
-.approach h3,
-.approach h4,
-.approach p {
-    color: #ffffff !important;
+.animate-fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Smooth transitions */
+a, button, .btn,
+.specialization-card,
+.trust-item,
+.content-card {
+    transition: all 0.2s ease;
+}
+
+/* Focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* ============================================
+   19. RESPONSIVE TYPOGRAPHY
+   ============================================ */
+@media (max-width: 768px) {
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero {
+        padding: var(--space-2xl) 0 !important;
+    }
+}
+
+/* ============================================
+   20. PRINT STYLES
+   ============================================ */
+@media print {
+    .header,
+    .footer,
+    .mobile-cta-bar,
+    .floating-cta {
+        display: none !important;
+    }
+
+    body {
+        padding: 0 !important;
+    }
 }
