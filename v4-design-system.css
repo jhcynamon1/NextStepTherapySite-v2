@@ -1,20 +1,22 @@
 /* V4 Premium Clinical Executive Design System
    Next Step Therapy - November 2025
+   Navy-Dominant | Sage Accent Only
    ========================================== */
 
 /* ==========================================
    1. CSS VARIABLES (Design Tokens)
    ========================================== */
 :root {
-    /* Primary Colors */
+    /* Primary Colors - NAVY DOMINANT */
     --navy: #1e3a4f;
     --navy-dark: #152a3a;
     --navy-light: #2d4a5e;
+    --navy-muted: #3d5a6f;
 
-    /* Accent Colors */
+    /* Accent Colors - SAGE SPARINGLY */
     --sage: #4a7c59;
     --sage-light: #5f9970;
-    --sage-soft: rgba(74, 124, 89, 0.1);
+    --sage-soft: rgba(74, 124, 89, 0.08);
 
     /* Neutral Colors */
     --cream: #f8f6f3;
@@ -37,10 +39,12 @@
    ========================================== */
 body {
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: var(--text-primary) !important;
 }
 
 h1, h2, h3, h4, .logo-text {
     font-family: 'Cormorant Garamond', Georgia, serif !important;
+    color: var(--navy) !important;
 }
 
 p, li, a, span, label, input, textarea, select, button {
@@ -90,7 +94,7 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   4. BUTTONS - Flat, No Gradients
+   4. BUTTONS - Navy Primary, Flat Design
    ========================================== */
 .btn-primary,
 .primary-cta,
@@ -99,9 +103,10 @@ p, li, a, span, label, input, textarea, select, button {
     background-image: none !important;
     color: var(--white) !important;
     border: none !important;
-    box-shadow: 0 4px 6px rgba(30, 58, 79, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(30, 58, 79, 0.12) !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
+    transition: all 0.2s ease !important;
 }
 
 .btn-primary:hover,
@@ -109,33 +114,24 @@ p, li, a, span, label, input, textarea, select, button {
 .header-book-btn:hover {
     background: var(--navy-dark) !important;
     background-image: none !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 6px 12px rgba(30, 58, 79, 0.15) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(30, 58, 79, 0.18) !important;
 }
 
 .btn-secondary,
 .header-phone {
     background: transparent !important;
     color: var(--navy) !important;
-    border: 1.5px solid var(--navy) !important;
+    border: 2px solid var(--navy) !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
+    transition: all 0.2s ease !important;
 }
 
 .btn-secondary:hover,
 .header-phone:hover {
-    background: var(--cream) !important;
-    color: var(--navy) !important;
-}
-
-/* Sage green buttons (for special CTAs) */
-.btn-sage {
-    background: var(--sage) !important;
+    background: var(--navy) !important;
     color: var(--white) !important;
-}
-
-.btn-sage:hover {
-    background: var(--sage-light) !important;
 }
 
 /* ==========================================
@@ -150,9 +146,11 @@ p, li, a, span, label, input, textarea, select, button {
     color: var(--navy) !important;
 }
 
+/* Italic emphasis in headlines - subtle navy-light, NOT green */
 .hero h1 em,
 .hero h1 i {
-    color: var(--sage) !important;
+    color: var(--navy-muted) !important;
+    font-style: italic !important;
 }
 
 .hero p,
@@ -161,14 +159,25 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   6. APPROACH/PHILOSOPHY SECTION (Dark)
+   6. SECTION SUBTITLES - Navy, not green
+   ========================================== */
+.section-subtitle {
+    color: var(--navy-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+}
+
+/* ==========================================
+   7. APPROACH/PHILOSOPHY SECTION (Dark Navy)
    ========================================== */
 .approach {
     background: var(--navy) !important;
 }
 
 .approach .section-subtitle {
-    color: #8cb390 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .approach h2,
@@ -185,6 +194,7 @@ p, li, a, span, label, input, textarea, select, button {
 /* White card within approach section */
 .approach .specialization-highlight {
     background: var(--white) !important;
+    border-radius: 12px !important;
 }
 
 .approach .specialization-highlight h4,
@@ -192,13 +202,14 @@ p, li, a, span, label, input, textarea, select, button {
     color: var(--navy) !important;
 }
 
+/* Badge - Navy, not green */
 .approach .specialization-highlight .specialization-badge {
-    background: var(--sage) !important;
+    background: var(--navy) !important;
     color: var(--white) !important;
 }
 
 /* ==========================================
-   7. CARDS & SECTIONS
+   8. CARDS & SECTIONS
    ========================================== */
 .specializations {
     background: var(--cream) !important;
@@ -206,7 +217,14 @@ p, li, a, span, label, input, textarea, select, button {
 
 .specialization-card {
     background: var(--white) !important;
-    border-top: 2px solid var(--navy) !important;
+    border-top: 3px solid var(--navy) !important;
+    box-shadow: 0 4px 20px rgba(30, 58, 79, 0.06) !important;
+    transition: all 0.3s ease !important;
+}
+
+.specialization-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 32px rgba(30, 58, 79, 0.12) !important;
 }
 
 .specialization-card h3,
@@ -219,8 +237,10 @@ p, li, a, span, label, input, textarea, select, button {
     color: var(--text-secondary) !important;
 }
 
+/* Links - Sage accent for clickable differentiation */
 .specialization-link {
     color: var(--navy) !important;
+    font-weight: 600 !important;
 }
 
 .specialization-link:hover {
@@ -234,7 +254,12 @@ p, li, a, span, label, input, textarea, select, button {
 
 .trust-item {
     background: var(--cream) !important;
-    border-left: 3px solid var(--sage) !important;
+    border-left: 3px solid var(--navy) !important;
+    transition: all 0.2s ease !important;
+}
+
+.trust-item:hover {
+    border-left-color: var(--sage) !important;
 }
 
 .trust-item h4 {
@@ -269,7 +294,7 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   8. STRATEGIC CTA SECTIONS
+   9. STRATEGIC CTA SECTIONS
    ========================================== */
 .strategic-cta-section {
     background: var(--cream) !important;
@@ -285,7 +310,7 @@ p, li, a, span, label, input, textarea, select, button {
     color: var(--text-secondary) !important;
 }
 
-/* Trust signals within CTAs */
+/* Trust signals - Navy checkmarks */
 .cta-trust-signals,
 .cta-trust-signals span {
     color: var(--navy) !important;
@@ -298,7 +323,7 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   9. CONTACT SECTION (Dark)
+   10. CONTACT SECTION (Dark Navy)
    ========================================== */
 .contact,
 #contact {
@@ -333,9 +358,16 @@ p, li, a, span, label, input, textarea, select, button {
     color: var(--navy) !important;
 }
 
+/* Links - Sage accent ONLY here for clickable differentiation */
 .contact-methods a,
 .contact-details a {
     color: var(--sage) !important;
+    font-weight: 500 !important;
+}
+
+.contact-methods a:hover,
+.contact-details a:hover {
+    color: var(--sage-light) !important;
 }
 
 .contact-methods small,
@@ -345,8 +377,9 @@ p, li, a, span, label, input, textarea, select, button {
 
 /* Contact Form (Dark background) */
 .contact-form {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .contact-form h3 {
@@ -360,19 +393,32 @@ p, li, a, span, label, input, textarea, select, button {
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
-    background: rgba(255, 255, 255, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     color: var(--white) !important;
+    border-radius: 8px !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    outline: none !important;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* ==========================================
-   10. FAQ SECTION
+   11. FAQ SECTION
    ========================================== */
+.faq-item {
+    background: var(--white) !important;
+    border-left: 3px solid var(--navy) !important;
+}
+
 .faq-item h3 {
     color: var(--navy) !important;
 }
@@ -382,7 +428,7 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   11. FOOTER (Dark)
+   12. FOOTER (Dark Navy)
    ========================================== */
 .footer {
     background: var(--navy-dark) !important;
@@ -395,24 +441,26 @@ p, li, a, span, label, input, textarea, select, button {
 .footer p,
 .footer a,
 .footer li {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
+/* Footer links - subtle sage on hover */
 .footer a:hover {
-    color: var(--sage-light) !important;
+    color: var(--white) !important;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* ==========================================
-   12. THERAPIST SHOWCASE
+   13. THERAPIST SHOWCASE
    ========================================== */
 .therapist-showcase {
     background: var(--white) !important;
     border: 1px solid rgba(30, 58, 79, 0.08) !important;
+    box-shadow: 0 8px 32px rgba(30, 58, 79, 0.08) !important;
 }
 
 /* Remove gradient line */
@@ -426,39 +474,69 @@ p, li, a, span, label, input, textarea, select, button {
 
 .therapist-title {
     color: var(--text-muted) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
 }
 
 /* ==========================================
-   13. INVESTMENT/PRICING
+   14. INVESTMENT/PRICING - Navy, not green
    ========================================== */
 .investment-highlight {
-    background: var(--sage) !important;
+    background: var(--navy) !important;
     background-image: none !important;
     color: var(--white) !important;
+    border-radius: 12px !important;
 }
 
 /* ==========================================
-   14. BADGES & TAGS
+   15. BADGES & TAGS - Navy primary
    ========================================== */
 .specialization-badge {
-    background: var(--sage) !important;
+    background: var(--navy) !important;
     background-image: none !important;
     color: var(--white) !important;
-    border-radius: 20px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-size: 0.75rem !important;
 }
 
 /* ==========================================
-   15. UTILITY OVERRIDES
+   16. QUIZ WIDGET - Navy dominant
+   ========================================== */
+.quiz-widget-section {
+    background: var(--cream) !important;
+}
+
+.quiz-header {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.quiz-header h3,
+.quiz-header p {
+    color: var(--white) !important;
+}
+
+.quiz-progress-fill {
+    background: var(--navy) !important;
+    background-image: none !important;
+}
+
+/* Quiz buttons */
+.quiz-btn-primary {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+/* ==========================================
+   17. UTILITY OVERRIDES
    ========================================== */
 /* Kill any remaining gradients */
 [style*="linear-gradient"],
 [style*="radial-gradient"] {
     background-image: none !important;
-}
-
-/* Ensure text contrast */
-.section-subtitle {
-    color: var(--sage) !important;
 }
 
 /* Fix any gray text issues */
@@ -468,17 +546,30 @@ p, li, a, span, label, input, textarea, select, button {
 }
 
 /* ==========================================
-   16. QUIZ WIDGET (if present)
+   18. MICRO-INTERACTIONS & POLISH
    ========================================== */
-.quiz-widget-section {
-    background: var(--cream) !important;
+/* Smooth transitions on interactive elements */
+a, button, .btn, .specialization-card, .trust-item {
+    transition: all 0.2s ease !important;
 }
 
-.quiz-header {
-    background: var(--sage-soft) !important;
+/* Focus states - navy outline */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--navy) !important;
+    outline-offset: 2px !important;
 }
 
-.quiz-progress-fill {
-    background: var(--sage) !important;
-    background-image: none !important;
+/* Selection color */
+::selection {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+::-moz-selection {
+    background: var(--navy) !important;
+    color: var(--white) !important;
 }
