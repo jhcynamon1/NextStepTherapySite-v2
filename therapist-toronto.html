@@ -50,7 +50,7 @@
         }
         .related-services article {
             background: #fff;
-            border: 1px solid rgba(107, 142, 111, 0.14);
+            border: 1px solid var(--primary-green-border);
             border-radius: 14px;
             padding: 1.5rem;
             box-shadow: 0 12px 24px rgba(0,0,0,0.05);
@@ -67,7 +67,7 @@
         }
         .helpful-resources li {
             background: #fff;
-            border: 1px solid rgba(107,142,111,0.16);
+            border: 1px solid var(--primary-green-border);
             border-radius: 12px;
             padding: 0.9rem 1.1rem;
             box-shadow: 0 8px 20px rgba(0,0,0,0.04);
@@ -85,16 +85,21 @@
         }
 
         :root {
-            --primary-green: #6B8E6F;
-            --primary-green-hover: #5A7D5E;
-            --primary-green-light: rgba(107, 142, 111, 0.1);
-            --primary-green-border: rgba(107, 142, 111, 0.2);
-            --text-primary: #2C3E50;
-            --text-secondary: #5A6B7D;
+            --primary-green: #1e3a4f;
+            --primary-green-hover: #152a3a;
+            --primary-green-light: rgba(30, 58, 79, 0.08);
+            --primary-green-border: rgba(30, 58, 79, 0.15);
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
             --bg-primary: #FFFFFF;
-            --bg-alternate: #F8F9FA;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
+            --bg-alternate: #f8f6f3;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            /* V4 additions */
+            --navy: #1e3a4f;
+            --navy-dark: #152a3a;
+            --sage: #4a7c59;
+            --cream: #f8f6f3;
         }
 
         * {
@@ -187,7 +192,7 @@
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, rgba(107, 142, 111, 0.1), rgba(248, 249, 250, 0.9));
+            background: var(--bg-alternate);
             padding: 5rem 0;
             text-align: center;
         }
@@ -359,14 +364,14 @@
             font-weight: 600;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(107, 142, 111, 0.2);
+            box-shadow: 0 2px 8px rgba(30, 58, 79, 0.15);
             font-size: 1.05rem;
         }
 
         .manus-primary-cta:hover {
             background: var(--primary-green-hover);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 142, 111, 0.3);
+            box-shadow: 0 4px 12px rgba(30, 58, 79, 0.2);
             color: white !important;
         }
 
@@ -829,11 +834,11 @@
             </section>
 
             <!-- Secondary CTA (ADDED FOR CONVERSION) -->
-            <div class="cta-box" style="background: linear-gradient(135deg, #6B8E6F 0%, #5A7D5E 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+            <div class="cta-box" style="background: #1e3a4f; color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
                 <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Ready to Start Therapy This Week?</h3>
                 <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Free 15-minute consultation. Same-week appointments. Virtual sessions across Toronto.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/#contact" class="btn" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #4A6B7A; text-decoration: none; border-radius: 8px; font-weight: 700;">📅 Schedule 15-Min Consult</a>
+                    <a href="/#contact" class="btn" style="display: inline-block; padding: 1.25rem 2.5rem; background: white; color: #1e3a4f; text-decoration: none; border-radius: 8px; font-weight: 700;">Schedule 15-Min Consult</a>
                     <a href="tel:+14163062157" class="btn" style="display: inline-block; padding: 1.25rem 2.5rem; background: rgba(255,255,255,0.15); color: white; border: 2px solid white; text-decoration: none; border-radius: 8px; font-weight: 600;">📞 Call (416) 306-2157</a>
                 </div>
                 <p style="font-size: 0.95rem; margin-top: 1.5rem; color: rgba(255,255,255,0.9);"><small>✓ CRPO #10979 Licensed  |  ✓ Insurance receipts provided  |  ✓ Evening & weekend hours</small></p>
@@ -1358,7 +1363,7 @@
                 <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
                 <p><strong>CRPO #10979 | MPsy</strong></p>
                 <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                <a href="tel:+14163062157" style="color: #4a7c59; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
             </div>
 
             <!-- Column 2: Therapy Services -->
@@ -1373,7 +1378,7 @@
                     <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
                     <li><a href="/life-transitions.html">Life Transitions</a></li>
                     <li><a href="/counselling-services.html">Relationship Support</a></li>
-                    <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                    <li><a href="/#specializations" style="color: #4a7c59;">All Services →</a></li>
                 </ul>
             </div>
 
@@ -1390,7 +1395,7 @@
                     <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
                     <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
                         <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                    <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                    <li><a href="/virtual-therapy-ontario.html" style="color: #4a7c59;">All Ontario →</a></li>
                 </ul>
             </div>
 
