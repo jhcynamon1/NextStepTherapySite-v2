@@ -573,3 +573,125 @@ select:focus {
     background: var(--navy) !important;
     color: var(--white) !important;
 }
+
+/* ==========================================
+   19. DARK SECTION TEXT CONTRAST FIXES
+   Ensure white text on ALL dark backgrounds
+   ========================================== */
+
+/* Any element with navy/dark background should have white text */
+[style*="background: #1e3a4f"],
+[style*="background:#1e3a4f"],
+[style*="background: var(--navy)"],
+[style*="background: var(--primary-green)"],
+.cta-box,
+.contact,
+#contact,
+.approach,
+[class*="dark"],
+[class*="navy-bg"] {
+    color: #ffffff !important;
+}
+
+[style*="background: #1e3a4f"] h1,
+[style*="background: #1e3a4f"] h2,
+[style*="background: #1e3a4f"] h3,
+[style*="background: #1e3a4f"] h4,
+[style*="background: #1e3a4f"] p,
+[style*="background: #1e3a4f"] li,
+[style*="background: #1e3a4f"] span,
+[style*="background:#1e3a4f"] h1,
+[style*="background:#1e3a4f"] h2,
+[style*="background:#1e3a4f"] h3,
+[style*="background:#1e3a4f"] h4,
+[style*="background:#1e3a4f"] p,
+[style*="background:#1e3a4f"] li,
+[style*="background:#1e3a4f"] span,
+.cta-box h1,
+.cta-box h2,
+.cta-box h3,
+.cta-box h4,
+.cta-box p,
+.cta-box li,
+.cta-box span,
+.cta-box a {
+    color: #ffffff !important;
+}
+
+/* CTA boxes - ensure all text is white */
+.cta-box {
+    background: #1e3a4f !important;
+}
+
+.cta-box * {
+    color: #ffffff !important;
+}
+
+.cta-box a.btn,
+.cta-box a.manus-primary-cta,
+.cta-box a[class*="primary"] {
+    background: #ffffff !important;
+    color: #1e3a4f !important;
+}
+
+/* Footer - all text white */
+.footer,
+.footer * {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4 {
+    color: #ffffff !important;
+}
+
+/* Contact section on dark background */
+.contact h1,
+.contact h2,
+.contact h3,
+.contact p,
+#contact h1,
+#contact h2,
+#contact h3,
+#contact p {
+    color: #ffffff !important;
+}
+
+/* Light cards on dark backgrounds should have navy text */
+.contact .contact-info,
+.contact .contact-info *,
+#contact .contact-info,
+#contact .contact-info * {
+    color: #1e3a4f !important;
+}
+
+.contact .contact-info a,
+#contact .contact-info a {
+    color: #4a7c59 !important;
+}
+
+/* Section title fixes */
+.section-title {
+    color: #1e3a4f !important;
+}
+
+/* Body text should be readable */
+p {
+    color: #4a5a6a !important;
+}
+
+/* But headings should be navy */
+h1, h2, h3, h4 {
+    color: #1e3a4f !important;
+}
+
+/* Override for dark sections */
+.approach h1,
+.approach h2,
+.approach h3,
+.approach h4,
+.approach p {
+    color: #ffffff !important;
+}
