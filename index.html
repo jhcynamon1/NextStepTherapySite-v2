@@ -2170,91 +2170,134 @@
             opacity: 1 !important;
         }
 
-    </style>
-    <style>
         /* ========================================
-           CRO & FRONT-END POLISH - Expert Review
+           FINAL POLISH - "EXPERT MODE" OVERRIDES
            ======================================== */
 
-        /* 1. HERO HIERARCHY & READABILITY */
-        .hero h1 {
-            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Subtle lift against background */
-            font-weight: 500 !important; /* Refined weight */
-        }
-        
-        .hero .lead-text {
-            font-weight: 450 !important; /* Slightly heavier for readability */
-            max-width: 600px;
-            margin-bottom: 2rem !important;
+        /* 1. HEADER & NAV CLEANUP */
+        .header {
+            padding: 1.25rem 0 !important; /* More breathing room */
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03) !important;
         }
 
-        /* 2. PRIMARY CTA OPTIMIZATION ("Schedule 15-Min Consultation") */
-        /* Make it pop with a professional gradient and shadow */
+        /* Remove Connect link to reduce crowding (handled by JS/HTML removal below) */
+        
+        .header-cta-wrapper {
+            margin-left: 2rem !important; /* Separation from Nav */
+            gap: 1.5rem !important; /* Space between CTA and Phone */
+        }
+
+        /* 2. CRPO BADGE - NO GRADIENT, HIGH CONTRAST */
+        .header .credentials-badge {
+            display: inline-flex !important;
+            align-items: center;
+            background: #1e3a4f !important; /* Solid Navy */
+            color: #ffffff !important; /* Pure White */
+            border: none !important;
+            padding: 6px 14px !important;
+            border-radius: 4px !important; /* Slightly squarer, more professional */
+            font-size: 0.7rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.05em !important;
+            text-transform: uppercase !important;
+            margin-left: 1rem !important;
+            box-shadow: none !important; /* Flat and clean */
+        }
+
+        /* 3. BUTTONS - FLAT & PROFESSIONAL (NO GRADIENTS) */
         .header-book-btn, 
         .btn-primary {
-            background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5e 100%) !important;
-            box-shadow: 0 4px 14px rgba(30, 58, 79, 0.25) !important;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-            border: 1px solid rgba(255,255,255,0.1) !important;
+            background: #1e3a4f !important; /* Solid Navy */
+            color: white !important;
+            box-shadow: 0 4px 6px rgba(30, 58, 79, 0.1) !important; /* Subtle shadow */
+            border: none !important;
+            background-image: none !important; /* Force kill gradient */
+            font-weight: 600 !important;
+            letter-spacing: 0.02em !important;
+            padding: 0.875rem 1.75rem !important;
         }
 
         .header-book-btn:hover,
         .btn-primary:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 6px 20px rgba(30, 58, 79, 0.35) !important;
-            background: linear-gradient(135deg, #152a3a 0%, #1e3a4f 100%) !important;
+            background: #152a3a !important; /* Darker Navy on hover */
+            transform: translateY(-1px) !important;
+            box-shadow: 0 6px 12px rgba(30, 58, 79, 0.15) !important;
+        }
+        
+        /* Secondary buttons (Outlined) */
+        .btn-secondary, 
+        .header-phone {
+            background: transparent !important;
+            border: 1.5px solid #1e3a4f !important;
+            color: #1e3a4f !important;
+            font-weight: 600 !important;
         }
 
-        /* 3. FORM INPUT UX POLISH */
-        /* Clear focus states for accessibility and conversion */
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none !important;
-            border-color: #ffffff !important;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
-            background: rgba(255,255,255,0.2) !important;
+        .btn-secondary:hover, 
+        .header-phone:hover {
+            background: #f8f6f3 !important; /* Cream hover */
+            color: #1e3a4f !important;
         }
 
-        /* 4. SECTION SPACING & RHYTHM */
-        /* Ensure adequate breathing room */
+        /* 4. CONTRAST FIXES - "GET IN TOUCH" SECTION */
+        /* Force specific headers to be Navy */
+        .contact-info h3, 
+        .contact-grid h3,
+        .contact h3,
+        .strategic-cta-section h3 {
+            color: #1e3a4f !important;
+        }
+        
+        /* Fix white text on white background issues globally */
+        .contact-info, 
+        .contact-grid {
+            color: #4a5a6a !important;
+        }
+
+        /* 5. PAGE LENGTH OPTIMIZATION (TIGHTER SPACING) */
         section {
-            position: relative;
+            padding: 3.5rem 0 !important; /* Reduced from 5rem+ */
         }
         
-        .section-subtitle {
-            letter-spacing: 0.15em !important;
-            text-transform: uppercase !important;
-            font-size: 0.75rem !important;
-            font-weight: 700 !important;
-            color: #4a7c59 !important; /* Sage Green for consistency */
-            margin-bottom: 1rem !important;
-            display: inline-block;
+        .hero {
+            padding: 4rem 0 3rem !important; /* Tighter hero */
+            min-height: auto !important;
+        }
+        
+        /* 6. FOOTER ALIGNMENT - Perfect Centering */
+        .footer {
+            text-align: center !important;
         }
 
-        /* 5. NAV LINKS HOVER EFFECT */
-        .nav a {
-            position: relative;
-            text-decoration: none;
+        .footer-bottom {
+            display: flex !important;
+            justify-content: center !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+
+        .footer-bottom p {
+            text-align: center !important;
+            width: 100% !important;
+            margin: 0 auto !important;
         }
         
-        .nav a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background-color: #4a7c59;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-out;
+        /* Center the main grid content */
+        .footer-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            text-align: left !important; /* Keep columns readable */
         }
         
-        .nav a:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
+        /* On mobile/tablet, center everything */
+        @media (max-width: 768px) {
+            .footer-grid {
+                text-align: center !important;
+            }
         }
+
     </style>
 </head>
 <body>
@@ -2275,7 +2318,7 @@
                         <li><a href="#approach">Approach</a></li>
                         <li><a href="#specializations">Services</a></li>
                         <li><a href="#process">Process</a></li>
-                        <li><a href="#contact">Connect</a></li>
+                        <!-- Removed Connect link to prevent crowding -->
                     </ul>
                 </nav>
 
