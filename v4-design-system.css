@@ -732,12 +732,13 @@ footer.footer {
 .footer p,
 .footer a,
 .footer li {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-size: 0.9375rem !important;
 }
 
 .footer a:hover {
     color: var(--white) !important;
+    text-decoration: underline !important;
 }
 
 .footer ul {
@@ -752,11 +753,11 @@ footer.footer {
 
 .footer-bottom,
 .footer .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
     padding-top: var(--space-lg) !important;
     margin-top: var(--space-xl) !important;
     text-align: center !important;
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* ============================================
@@ -809,6 +810,94 @@ footer.footer {
 .contact .contact-info a,
 #contact .contact-info a {
     color: var(--sage) !important;
+}
+
+/* CTA Boxes within content - ensure text visibility */
+.cta-box,
+[class*="cta-box"],
+.section .cta-box {
+    background: var(--navy) !important;
+}
+
+.cta-box *,
+.cta-box h2,
+.cta-box h3,
+.cta-box h4,
+.cta-box p,
+.cta-box span,
+.cta-box li {
+    color: var(--white) !important;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* CTA Box buttons - inverted for contrast */
+.cta-box .btn-primary,
+.cta-box .manus-primary-cta,
+.cta-box .primary-cta {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border: 2px solid var(--white) !important;
+}
+
+.cta-box .btn-primary:hover,
+.cta-box .manus-primary-cta:hover,
+.cta-box .primary-cta:hover {
+    background: var(--cream) !important;
+    color: var(--navy) !important;
+}
+
+/* Dark section links - ensure visibility */
+.approach a:not(.btn):not(.manus-primary-cta),
+.contact a:not(.btn):not(.manus-primary-cta),
+#contact a:not(.btn):not(.manus-primary-cta),
+.cta-box a:not(.btn):not(.manus-primary-cta) {
+    color: #8cb390 !important;
+    text-decoration: underline !important;
+}
+
+.approach a:not(.btn):not(.manus-primary-cta):hover,
+.contact a:not(.btn):not(.manus-primary-cta):hover,
+#contact a:not(.btn):not(.manus-primary-cta):hover,
+.cta-box a:not(.btn):not(.manus-primary-cta):hover {
+    color: var(--white) !important;
+}
+
+/* Contact Section Form - improved contrast */
+.contact input,
+.contact textarea,
+.contact select,
+#contact input,
+#contact textarea,
+#contact select {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: var(--white) !important;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder,
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact input:focus,
+.contact textarea:focus,
+.contact select:focus,
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+    border-color: var(--sage) !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.2) !important;
+}
+
+.contact label,
+#contact label {
+    color: rgba(255, 255, 255, 0.95) !important;
 }
 
 /* ============================================
@@ -918,4 +1007,242 @@ input:focus-visible {
     body {
         padding: 0 !important;
     }
+}
+
+/* ============================================
+   21. SERVICE PAGE CONTRAST FIXES
+   Comprehensive rules to ensure text visibility
+   on all service and landing pages
+   ============================================ */
+
+/* Light section text - ensure navy/dark text on light backgrounds */
+.section:not(.approach):not(.contact):not(#contact) h2,
+.section:not(.approach):not(.contact):not(#contact) h3,
+.section:not(.approach):not(.contact):not(#contact) h4,
+main:not(.approach):not(.contact):not(#contact) h2,
+main:not(.approach):not(.contact):not(#contact) h3,
+main:not(.approach):not(.contact):not(#contact) h4 {
+    color: var(--navy) !important;
+}
+
+.section:not(.approach):not(.contact):not(#contact) p,
+.section:not(.approach):not(.contact):not(#contact) li,
+.section:not(.approach):not(.contact):not(#contact) span:not(.trust-pill),
+main:not(.approach):not(.contact):not(#contact) p,
+main:not(.approach):not(.contact):not(#contact) li {
+    color: var(--text-secondary) !important;
+}
+
+/* Content cards always have light backgrounds */
+.content-card,
+.info-card,
+.faq-item,
+.specialization-card,
+.feature-card,
+.card {
+    background: var(--white) !important;
+}
+
+.content-card h2,
+.content-card h3,
+.content-card h4,
+.info-card h3,
+.info-card h4,
+.faq-item h4,
+.specialization-card h3,
+.feature-card h3,
+.card h3 {
+    color: var(--navy) !important;
+}
+
+.content-card p,
+.info-card p,
+.faq-item p,
+.specialization-card p,
+.feature-card p,
+.card p {
+    color: var(--text-secondary) !important;
+}
+
+/* Feature lists always dark text */
+.feature-list li,
+ul.feature-list li {
+    color: var(--text-secondary) !important;
+}
+
+.feature-list li::before,
+ul.feature-list li::before {
+    color: var(--navy) !important;
+}
+
+/* Section titles and intros */
+.section-title,
+.section-header h2 {
+    color: var(--navy) !important;
+}
+
+.section-intro,
+.section-header p,
+.lead-text {
+    color: var(--text-secondary) !important;
+}
+
+/* Hero sections - ensure readable */
+.hero h1 {
+    color: var(--navy) !important;
+}
+
+.hero p,
+.hero .lead-text {
+    color: var(--text-secondary) !important;
+}
+
+/* Trust pills maintain visibility */
+.trust-pill {
+    background: rgba(30, 58, 79, 0.08) !important;
+    color: var(--navy) !important;
+    border: 1px solid rgba(30, 58, 79, 0.15) !important;
+}
+
+/* Process steps */
+.process-step,
+.step-item {
+    background: var(--cream) !important;
+}
+
+.process-step h3,
+.step-content h3 {
+    color: var(--navy) !important;
+}
+
+.process-step p,
+.step-content p {
+    color: var(--text-secondary) !important;
+}
+
+.step-number {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+/* Location cards */
+.location-card {
+    background: var(--white) !important;
+}
+
+.location-card h3 {
+    color: var(--navy) !important;
+}
+
+.location-card p,
+.location-card li {
+    color: var(--text-secondary) !important;
+}
+
+/* Comparison tables */
+.comparison-table th {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.comparison-table td {
+    color: var(--text-secondary) !important;
+}
+
+/* Snippet targets and highlighted content */
+.snippet-target,
+.highlight-box,
+[style*="background: rgba(30, 58, 79"] {
+    background: rgba(30, 58, 79, 0.06) !important;
+}
+
+.snippet-target h3,
+.highlight-box h3 {
+    color: var(--navy) !important;
+}
+
+.snippet-target p,
+.highlight-box p {
+    color: var(--text-secondary) !important;
+}
+
+/* Inline style overrides for dark backgrounds */
+[style*="background: #1e3a4f"] *,
+[style*="background:#1e3a4f"] *,
+[style*="background: var(--navy)"] *,
+[style*="background: linear-gradient(135deg, #1e3a4f"] * {
+    color: var(--white) !important;
+}
+
+[style*="background: #1e3a4f"] p,
+[style*="background:#1e3a4f"] p,
+[style*="background: var(--navy)"] p,
+[style*="background: linear-gradient(135deg, #1e3a4f"] p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Buttons in dark inline sections */
+[style*="background: #1e3a4f"] .btn-primary,
+[style*="background:#1e3a4f"] .btn-primary,
+[style*="background: #1e3a4f"] .manus-primary-cta,
+[style*="background:#1e3a4f"] .manus-primary-cta {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+}
+
+/* Quiz widget text fixes */
+.quiz-widget-container {
+    background: var(--white) !important;
+}
+
+.quiz-question-text,
+.quiz-option {
+    color: var(--navy) !important;
+}
+
+.quiz-result-title {
+    color: var(--navy) !important;
+}
+
+.quiz-result-description {
+    color: var(--text-secondary) !important;
+}
+
+/* Mobile CTA bar text */
+.mobile-cta-bar a.mobile-cta-book {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.mobile-cta-bar a.mobile-cta-phone {
+    background: var(--sage) !important;
+    color: var(--white) !important;
+}
+
+/* Contact section specific - form styling */
+.contact-section,
+section.contact-section {
+    background: var(--navy) !important;
+}
+
+.contact-section *,
+.contact-section h2,
+.contact-section h3,
+.contact-section p {
+    color: var(--white) !important;
+}
+
+.contact-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Therapist details in dark sections */
+.contact-section .therapist-details p,
+.contact .therapist-details p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact-section .therapist-details strong,
+.contact .therapist-details strong {
+    color: var(--white) !important;
 }
