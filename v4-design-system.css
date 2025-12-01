@@ -264,15 +264,27 @@ header .container {
    4. HERO SECTION
    ============================================ */
 .hero,
-section.hero {
+section.hero,
+.hero-with-bg,
+[class*="hero-"] {
     background: var(--cream) !important;
     padding: var(--space-3xl) 0 !important;
     text-align: center;
+    background-image: none !important;
 }
 
-.hero h1 {
+.hero::before,
+.hero-with-bg::before,
+[class*="hero-"]::before {
+    display: none !important;
+}
+
+.hero h1,
+.hero-with-bg h1,
+[class*="hero-"] h1 {
     color: var(--navy) !important;
     margin-bottom: var(--space-lg) !important;
+    text-shadow: none !important;
 }
 
 .hero p,

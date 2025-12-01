@@ -1,0 +1,1632 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        // Track interactions - UPDATED for booking link
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track phone clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track booking clicks (NEW)
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'booking_click', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="all" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- SEO Meta Data - Conversion-Optimized -->
+    <title>Online Therapy Ottawa | CRPO Therapist Available This Week</title>
+    <meta name="description" content="CRPO psychotherapist serving Ottawa & NCR. Virtual therapy for anxiety, stress & career challenges. Insurance accepted. Free 15-minute consultation today.">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Virtual Therapy Ottawa | CRPO-Registered Psychotherapist">
+    <meta property="og:description" content="Professional virtual therapy for Ottawa residents with evening availability, insurance-ready receipts, and secure video sessions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/online-therapy-ottawa.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/online-therapy-ottawa.html">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Virtual Therapy Ottawa | CRPO-Registered Psychotherapist",
+      "url": "https://nextsteptherapy.ca/online-therapy-ottawa.html",
+      "description": "Secure virtual therapy for Ottawa professionals, public servants, and students. CRPO-registered psychotherapist offering evening availability and insurance-ready receipts.",
+      "about": {
+        "@type": "Service",
+        "name": "Virtual Therapy Ottawa",
+        "areaServed": {
+          "@type": "City",
+          "name": "Ottawa",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ottawa",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          }
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Next Step Therapy",
+        "url": "https://nextsteptherapy.ca",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextsteptherapy.ca/images/asset104.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.janeapp.com/"
+        }
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema for Featured Snippets (12 High-Volume Ottawa Questions) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does therapy in Ottawa/Ontario actually work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, therapy is one of the most well-researched treatments in mental health, with decades of evidence supporting its effectiveness. Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT) both show strong results for anxiety disorders, including generalized anxiety, panic attacks, social anxiety, and health anxiety. Most people notice meaningful improvements within 8-12 sessions, though the timeline varies by individual. Therapy can't eliminate anxiety entirely—that's neither possible nor healthy—but it can help you change your relationship with anxiety so it doesn't control your choices or limit your life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of therapy are used in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most evidence-based approaches are Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT). CBT focuses on identifying and challenging anxious thoughts while gradually facing feared situations. ACT emphasizes accepting anxiety as part of being human while taking action based on your values rather than your fears. At Next Step Therapy, I primarily use ACT approaches, which research shows are particularly effective for chronic worry, panic attacks, and social anxiety. I'm also trained in mindfulness-based techniques and exposure therapy when appropriate. The best approach depends on your specific anxiety pattern and what resonates with you personally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does therapy cost in Ottawa/Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Individual therapy sessions are $175 per 50-minute session. Most extended health benefit plans in Ontario cover psychotherapy services with a Registered Psychotherapist (CRPO), typically covering 50-100% of the session cost depending on your specific plan. Before your first session, check your benefits to understand your coverage limits. I provide detailed receipts that make it easy to submit claims to your insurance company. If you don't have insurance coverage, we can discuss frequency of sessions to make therapy financially sustainable—some clients prefer biweekly sessions rather than weekly, for example."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is therapy confidential and private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, therapy is completely confidential. As a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979), I'm legally and ethically bound to protect your privacy. What you discuss in therapy stays between us with very limited exceptions: if there's imminent risk of harm to yourself or others, or if there's disclosure of child abuse. If you're using insurance benefits, your provider knows you're seeing a mental health professional but receives no details about what we discuss—only the date of service and fee. Virtual therapy platforms I use are encrypted and meet Canadian healthcare privacy standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens in the first therapy session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The first session focuses on understanding your specific experience. I'll ask about what brings you to therapy right now, how you're feeling (physical symptoms, thoughts, behaviors), what triggers challenges, and how they're affecting your daily life, relationships, and work. We'll also discuss your goals—what would be different if therapy helped? You'll have plenty of opportunities to ask questions about the process, my approach, and what to expect. There's no pressure to share anything you're not comfortable with, and many people find that just talking in a non-judgmental space provides some relief. The first session is as much about seeing if we're a good fit as it is about gathering information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take for therapy to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most people start noticing some shifts within the first 4-6 sessions—perhaps challenges feel slightly less overwhelming, or you're able to use a technique when stress starts to build. Meaningful, sustained change typically happens over 8-16 weeks of regular sessions (weekly or biweekly). That said, timelines vary significantly based on how long you've struggled, the severity of symptoms, and how much you're able to practice strategies between sessions. Some people feel substantially better after a few months and then check in occasionally for tune-ups, while others prefer longer-term support. We'll regularly assess your progress together and adjust the frequency of sessions based on what's working."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can therapy help with panic attacks or social anxiety specifically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, therapy is highly effective for both panic attacks and social anxiety. For panic attacks, we work on understanding your body's alarm system, developing grounding techniques to use during panic, and gradually reducing the fear of panic itself (which often makes panic worse). For social anxiety, we focus on challenging thoughts about judgment and rejection, practicing self-compassion, and gradually building tolerance for social discomfort through behavioral experiments. ACT therapy is particularly helpful for both because it teaches you to take valued action (attending the work event, speaking up in meetings) even when anxiety is present, rather than waiting for anxiety to disappear first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral for therapy in Ottawa/Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you don't need a referral from a doctor to see a Registered Psychotherapist in Ontario. You can contact me directly to book a free 15-minute consultation. Some extended health insurance plans require a referral for coverage, so check your specific plan details, but most don't. If your plan does require one, your family doctor can provide a simple referral letter. The advantage of working with a Registered Psychotherapist (versus waiting for publicly funded services) is that you can typically start within days rather than waiting months, and you have more control over scheduling and frequency of sessions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is online/virtual therapy available in Ottawa/Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, I provide all therapy sessions virtually throughout Ontario. Virtual therapy has been shown to be just as effective as in-person therapy for anxiety disorders, with the added benefits of convenience and reduced stress from commuting. Many Ottawa residents appreciate being able to have therapy sessions from their home without adding a trip to their already busy schedule. You can join sessions from anywhere you have privacy—your home office, bedroom, or even your parked car during a lunch break if needed. All you need is a computer, tablet, or smartphone with internet access and a private space where you can talk freely. Virtual sessions also remove the stress some people feel about being seen entering or leaving a therapist's office."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose the right therapist in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look for a therapist who specializes in your concerns and uses evidence-based approaches like CBT or ACT. Check their credentials—in Ontario, Registered Psychotherapist (RP) with CRPO registration ensures they meet professional standards. Beyond credentials, fit matters enormously: Do they explain things in ways that make sense to you? Do you feel comfortable being honest with them? Do they seem to understand your specific life circumstances (like the unique pressures of Ottawa government work)? The free 15-minute consultation is designed to help you assess this fit before committing. Trust your instincts—if something feels off during that initial conversation, it's completely appropriate to keep looking for someone who feels like a better match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can therapy include medication, or do I need to see a doctor separately?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a Registered Psychotherapist, I don't prescribe medication—only physicians and psychiatrists can do that. However, therapy and medication can work well together. Many of my clients take anti-anxiety or antidepressant medication while also doing therapy, and we coordinate with their prescribing doctor when helpful. If you're considering medication or already taking it, we can discuss how therapy fits with your medication plan. Some people use medication short-term while developing therapy skills, others prefer long-term medication alongside occasional therapy sessions, and many find therapy alone is sufficient. It's a personal decision best made in collaboration with both your doctor and therapist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are signs I should seek therapy in Ottawa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consider seeking therapy if stress, anxiety, or other challenges are affecting your daily functioning, relationships, work performance, or quality of life. Specific signs include: avoiding situations or activities you used to enjoy, difficulty sleeping due to worry, physical symptoms like chest tightness or racing heart that interfere with your day, canceling plans frequently, relationships suffering because you're irritable or withdrawn, work performance declining because you're distracted, or using alcohol or other substances to cope. You don't need to wait until things reach a crisis point—early intervention often prevents more significant difficulties later. If you're wondering whether your situation is bad enough for therapy, that question itself suggests it might be worth exploring professional support."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Virtual Therapy Ottawa",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Next Step Therapy",
+        "description": "CRPO-registered psychotherapist (#10979) providing virtual therapy for Ottawa, Ontario residents.",
+        "telephone": "+1-416-306-2157",
+        "areaServed": "Ottawa, Ontario",
+        "hasCredential": "CRPO #10979"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Ottawa",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ottawa",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        }
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "name": "Virtual Therapy",
+        "serviceUrl": "https://nextsteptherapy.ca/virtual-therapy-ontario.html",
+        "serviceLocation": {
+          "@type": "City",
+          "name": "Ottawa"
+        }
+      },
+      "description": "Virtual therapy services for Ottawa residents focusing on anxiety, burnout, and workplace stress with evening availability and insurance-ready receipts.",
+      "offers": {
+        "@type": "Offer",
+        "price": "175",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nextsteptherapy.ca/online-therapy-ottawa.html"
+      }
+    }
+    </script>
+
+    <style>
+        .related-services {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        .related-services .service-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-services article {
+            background: #fff;
+            border: 1px solid rgba(107, 142, 111, 0.14);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+        .helpful-resources {
+            padding: 40px 0;
+        }
+        .helpful-resources ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .helpful-resources li {
+            background: #fff;
+            border: 1px solid rgba(107,142,111,0.16);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .breadcrumb {
+            margin: 1.25rem 0;
+            font-size: 0.95rem;
+        }
+        .breadcrumb a {
+            color: #4a6b7a;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Match homepage design exactly */
+        :root {
+            --primary-soft-blue: #4A6B7A;
+            --primary-light: #6B89A0;
+            --primary-deep: #2C4A5A;
+            --accent-warm: #8FA68E;
+            --accent-gold: #B8956A;
+            --background-primary: #FEFEFE;
+            --neutral-soft: #F8F9FA;
+            --neutral-cream: #F5F6F7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4A5568;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --space-section: 80px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-primary);
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(74, 107, 122, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+        }
+
+        .credentials-badge-prominent {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-lg);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-soft-blue);
+            background-color: rgba(74, 107, 122, 0.04);
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-soft-blue);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border: 1.5px solid var(--primary-soft-blue);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .header-phone:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+        }
+
+        h3 {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            max-width: 700px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--space-section) 0;
+            background: linear-gradient(135deg, var(--background-primary) 0%, var(--neutral-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(74, 107, 122, 0.015) 0%, transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-lg);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9375rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: var(--space-section) 0;
+        }
+
+        /* Content Cards */
+        .content-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-bottom: var(--space-lg);
+        }
+
+        .content-card h3 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+        }
+
+        /* Lists */
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--neutral-soft);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Contact Section */
+        .contact-highlight {
+            background: white;
+            padding: var(--space-section) 0;
+            text-align: center;
+        }
+
+        .contact-highlight h3 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            font-weight: 600;
+        }
+
+        .contact-highlight h4 {
+            font-family: var(--font-display);
+            font-size: 1.375rem;
+            color: var(--primary-soft-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+
+        .contact-highlight p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto var(--space-lg);
+        }
+
+        /* CTA Buttons */
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .primary-cta {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .primary-cta:hover {
+            background: linear-gradient(135deg, var(--primary-deep), var(--primary-soft-blue));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        .secondary-ctas {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-xs);
+        }
+
+        .secondary-cta {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-width: 160px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-cta {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid transparent;
+        }
+
+        .phone-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .email-cta {
+            background: transparent;
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+
+        .email-cta:hover {
+            background: var(--primary-soft-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(74, 107, 122, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin: var(--space-lg) 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-lg);
+        }
+
+        .trust-indicator {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(74, 107, 122, 0.15);
+        }
+
+        /* NEW: CTA Trust Signals - Position near buttons for 36% improvement */
+        .cta-trust-wrapper {
+            text-align: center;
+            margin-top: var(--space-md);
+        }
+
+        .cta-trust-signals {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            margin-top: var(--space-sm);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .cta-trust-signals span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .cta-trust-signals span::before {
+            content: "✓";
+            color: var(--accent-warm);
+            font-weight: 600;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .quick-stat-card {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            box-shadow: 0 12px 30px rgba(74, 107, 122, 0.12);
+            border: 1px solid rgba(74, 107, 122, 0.15);
+            text-align: left;
+        }
+
+        .quick-stat-card h3 {
+            margin: 0 0 var(--space-xs) 0;
+            font-family: var(--font-heading);
+            color: var(--primary-soft-blue);
+            font-size: 1.35rem;
+        }
+
+        .quick-stat-card p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* NEW: Mobile Sticky CTA Bar - Research shows 20% conversion boost */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+            padding: 0.75rem;
+            z-index: 999;
+            display: none;
+            gap: 0.5rem;
+            border-top: 2px solid var(--primary-soft-blue);
+        }
+
+        .mobile-cta-bar a {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            transition: all 0.3s ease;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.375rem;
+        }
+
+        .mobile-cta-book {
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+        }
+
+        .mobile-cta-phone {
+            background: rgba(74, 107, 122, 0.08);
+            color: var(--primary-soft-blue);
+            border: 1.5px solid var(--primary-soft-blue);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: flex;
+            }
+
+            /* Add padding to body to prevent content from being hidden behind sticky bar */
+            body {
+                padding-bottom: 70px;
+            }
+
+            .trust-indicators {
+                gap: var(--space-sm);
+            }
+
+            .trust-indicator {
+                font-size: 0.8125rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .cta-trust-signals {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .quick-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-stat-card {
+                text-align: center;
+            }
+        }
+
+        /* Floating CTA for Desktop - IMPROVED */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            background: linear-gradient(135deg, var(--primary-soft-blue), var(--primary-light));
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            box-shadow: 0 4px 20px rgba(74, 107, 122, 0.3);
+            transition: all 0.3s ease;
+            min-height: 48px;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(74, 107, 122, 0.4);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .floating-cta {
+                display: none; /* Hide on mobile, use sticky bar instead */
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero {
+                padding: var(--space-xl) 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-card {
+                padding: var(--space-lg);
+            }
+
+            .primary-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .secondary-ctas {
+                flex-direction: column;
+                gap: var(--space-sm);
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .secondary-cta {
+                width: 100%;
+                min-width: auto;
+            }
+
+            .contact-highlight h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <!-- Ahrefs Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="index.html" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav class="nav">
+                    <a href="/" class="nav-desktop">Home</a>
+                    <a href="/virtual-therapy-ontario.html" class="nav-desktop">Virtual Therapy Ontario</a>
+                    <a href="/workplace-stress-therapy-ontario.html" class="nav-desktop">Workplace Stress</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="nav-cta">Book Consultation</a>
+                    <a href="tel:+14163062157" class="nav-mobile-phone">Call Now</a>
+                </nav>
+
+                <a href="tel:+14163062157" class="header-phone">
+                    (416) 306-2157
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Online Therapy Ottawa | Virtual Counselling for NCR Residents</h1>
+                <nav class="breadcrumb">
+                    <a href="/">Home</a> → <a href="/#specializations">Services</a> → Online Therapy Ottawa
+                </nav>
+                    <p class="lead-text">Professional online therapy for Ottawa residents dealing with anxiety, depression, workplace stress, or life transitions. CRPO-registered psychotherapist offering secure virtual sessions that fit your schedule—no commute required, just genuine support from wherever you're comfortable.</p>
+
+                    <!-- V2 Above-fold trust signals from Master Template -->
+                    <div class="trust-indicators">
+                        <span class="trust-indicator">CRPO #10979 Licensed</span>
+                        <span class="trust-indicator">Free 15-Min Consultation</span>
+                        <span class="trust-indicator">Insurance Receipts Provided</span>
+                        <span class="trust-indicator">Respond Within 1 Hour</span>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Consultation</a>
+                        <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+                    </div>
+
+                    <!-- NEW: CTA Trust Signals for 36% improvement -->
+                    <div class="cta-trust-wrapper">
+                        <div class="cta-trust-signals">
+                            <span>No pressure, just conversation</span>
+                            <span>Book online in 2 minutes</span>
+                            <span>Evening hours available</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="quick-stat-card">
+                            <h3>$175 / 50-Min Session</h3>
+                            <p>Same rate as in-person therapy with detailed receipts for federal employee benefits, PSHCP, Sun Life, Canada Life, and other Ontario insurers.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Built for Ottawa Schedules</h3>
+                            <p>Evening and lunchtime appointments that fit around public service hours, hybrid work, and family commitments.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Secure Jane Video Platform</h3>
+                            <p>PIPEDA-compliant sessions that work on phone, tablet, or laptop—no extra software, no travel, no parking stress.</p>
+                        </div>
+                        <div class="quick-stat-card">
+                            <h3>Local Insight</h3>
+                            <p>Support for Ottawa professionals in Centretown, Westboro, Kanata, and Orleans who juggle career goals, family life, and community responsibilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="container-narrow">
+                <div class="content-card" style="text-align: center;">
+                    <h2>Focused Online Therapy Services in Ottawa</h2>
+                    <p style="margin-bottom: var(--space-md); color: var(--text-secondary);">Beyond general online therapy, we offer focused support for specific challenges:</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md);">
+                        <a href="/anxiety-therapy-ottawa.html" class="btn btn-secondary" style="text-decoration: none;">Anxiety Therapy Ottawa</a>
+                        <a href="/workplace-stress-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Workplace Stress & Burnout</a>
+                        <a href="/anxiety-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Anxiety Therapy Ontario-Wide</a>
+                        <a href="/virtual-therapy-ontario.html" class="btn btn-secondary" style="text-decoration: none;">Virtual Therapy Across Ontario</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW Problem Validation Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>The Invisible Barrier to Getting Support in Ottawa</h2>
+                    <p>It's not just you. For many busy professionals and public servants in Ottawa, the idea of traditional, in-person therapy just doesn't fit the reality of a demanding career. Getting help often involves:</p>
+                    <ul class="feature-list">
+                        <li><strong>The Commute Battle:</strong> Losing an hour or more navigating Queensway gridlock, LRT delays, or suburban traffic for a 50-minute session.</li>
+                        <li><strong>Scheduling Conflicts:</strong> Trying to find a therapist whose 9-to-5 schedule doesn't conflict with your government meetings, deadlines, or shift work.</li>
+                        <li><strong>The Waiting Room Problem:</strong> Lack of privacy when you run into colleagues or neighbours in Centretown or Westboro clinics.</li>
+                        <li><strong>Life's Interruptions:</strong> A last-minute briefing, a snowstorm, or family emergency can derail your appointment and progress.</li>
+                    </ul>
+                    <p>These aren't just inconveniences; they are significant barriers that prevent people from getting the consistent support they need. Virtual therapy removes these obstacles entirely.</p>
+
+                    <!-- CTA after problem recognition -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to remove these barriers?</p>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Schedule Your Free Call</a>
+                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
+                            <span>Quick 15-minute conversation</span>
+                            <span>Available within 24-48 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Advantage Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Why Virtual Therapy is the Smart Choice for Ottawa Residents</h2>
+
+                    <p>You've been thinking about starting therapy, but the logistics feel impossible—especially with Ottawa's unique challenges of government work pressures, winter weather, and urban sprawl. Virtual therapy changes everything. It offers professional support without the barriers, perfectly suited for life in the nation's capital.</p>
+
+                    <p>Research consistently shows virtual therapy is just as effective as in-person sessions. But for many Ottawa professionals, it's actually better. The comfort of your own space, the flexibility of scheduling around parliamentary hours or shift work, the elimination of commute stress—these aren't just conveniences, they're factors that make therapy more accessible and sustainable.</p>
+
+                    <h3>The Virtual Therapy Advantage for Ottawa:</h3>
+                    <ul class="feature-list">
+                        <li><strong>No Commute Required:</strong> Save 2+ hours per session avoiding Queensway traffic or waiting for OC Transpo</li>
+                        <li><strong>Your Safe Space:</strong> Therapy from where you feel most comfortable—your home office in Kanata, apartment in the Glebe, or bedroom in Orleans</li>
+                        <li><strong>Flexible Scheduling:</strong> Early morning, lunch hour, or evening sessions that work around government hours or shift rotations</li>
+                        <li><strong>Weather-Proof:</strong> Ottawa winters and ice storms can't cancel your appointment</li>
+                        <li><strong>Privacy Protected:</strong> No chance encounters with colleagues from the Hill or RCMP at downtown clinics</li>
+                        <li><strong>Consistency Maintained:</strong> Keep your therapist even if you relocate between NCR regions</li>
+                        <li><strong>Tech-Simple:</strong> If you can video call colleagues, you can do virtual therapy</li>
+                        <li><strong>Same Relationship:</strong> Build genuine connection through the screen</li>
+                    </ul>
+
+                    <p>Virtual therapy isn't a compromise—it's a choice that respects your time, career demands, and Ottawa lifestyle.</p>
+
+                    <!-- Mid-page CTA -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Experience therapy that works around your life, not against it.</p>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Book Your Free 15-Minute Call</a>
+                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
+                            <span>Same-day booking available</span>
+                            <span>Bilingual support available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>How Virtual Therapy Sessions Work</h2>
+
+                    <p>Starting virtual therapy feels less intimidating when you know what to expect. We've made the process as simple and comfortable as possible—even simpler than booking a government meeting room.</p>
+
+                    <h3>Getting Started is Simple:</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>1. Book Your Free 15-Minute Consultation</strong></h4>
+                        <p>A brief call to discuss your needs and answer questions. No pressure, just conversation about whether we're a good fit. We'll also do a quick tech check to ensure everything works smoothly—because technology shouldn't be a barrier to support.</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>2. Find Your Private Space</strong></h4>
+                        <p>Choose a private, comfortable spot—a home office in Barrhaven, bedroom in New Edinburgh, or even your parked car during lunch in a Kanata parking lot. Anywhere you feel safe to talk openly. Headphones can increase privacy but aren't required.</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>3. Join Your Secure Session</strong></h4>
+                        <p>Click the secure link sent to your email. No downloads or complicated software—just like joining a Microsoft Teams meeting but more secure. It works on any device. If technology ever fails, we switch to the phone instantly so your session isn't interrupted.</p>
+                    </div>
+
+                    <div>
+                        <h4><strong>4. Connect Authentically</strong></h4>
+                        <p>After a few minutes, you'll forget it's virtual. The therapeutic relationship builds naturally. Many clients report feeling more open and less anxious from the comfort of their own space—especially those dealing with public service stress who appreciate the privacy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfect For Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Virtual Therapy is Perfect For:</h2>
+
+                    <h3>Ottawa Public Servants & Government Employees:</h3>
+                    <p>Fit therapy into your lunch hour without leaving your office tower. No need to explain long absences to managers or security. Evening sessions are available after parliamentary hours or committee meetings. Completely confidential—your colleagues will never know.</p>
+
+                    <h3>Tech Workers & Professionals:</h3>
+                    <p>Already working remotely from Kanata or downtown? Therapy fits seamlessly into your WFH schedule. Schedule sessions between sprints or after standups. Your hybrid work pattern becomes an advantage, not a barrier.</p>
+
+                    <h3>Healthcare & Shift Workers:</h3>
+                    <p>Flexible scheduling that accommodates rotating shifts at Ottawa hospitals, long-term care facilities, or emergency services. Early morning or late evening sessions available. Self-care that works with unpredictable schedules.</p>
+
+                    <h3>Parents With Limited Time:</h3>
+                    <p>No need to arrange for babysitters or deal with complicated school pickup logistics. Therapy can happen during naptime, school hours, or after bedtime. Self-care that doesn't require leaving home or explaining absences.</p>
+
+                    <h3>Anyone Valuing Privacy:</h3>
+                    <p>Enjoy complete confidentiality from your chosen space. No chance of running into people you know in Centretown, Westboro, or suburban clinic waiting rooms. Discrete support for sensitive career or personal issues.</p>
+
+                    <p style="margin-top: var(--space-lg);"><strong>Virtual therapy makes professional support accessible to everyone in Ottawa and the National Capital Region.</strong></p>
+
+                    <!-- CTA after benefits -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">See if virtual therapy is right for you.</p>
+                        <div style="display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap;">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Schedule 15-Min Consultation</a>
+                            <a href="tel:+14163062157" class="secondary-cta phone-cta">Call (416) 306-2157</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Concerns Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Your Virtual Therapy Questions Answered</h2>
+
+                    <p>It's natural to have questions about virtual therapy. Let's address the concerns that might be holding you back.</p>
+
+                    <h3>"Is Virtual Therapy As Effective?"</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>The Research is Clear</strong></h4>
+                        <p>Multiple studies confirm virtual therapy produces equivalent outcomes to in-person sessions for issues like anxiety, stress, and depression. The therapeutic relationship develops just as strongly online. This has been validated across populations, including high-performing professionals similar to Ottawa's public service workforce.</p>
+                    </div>
+
+                    <h3>"What About Technology Issues?"</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>We've Got Backups</strong></h4>
+                        <p>Technology shouldn't be a barrier. If video ever fails, we switch to the phone immediately—just like you'd do for an important government call. We use a simple, reliable platform that works on any device without downloads. Most Ottawa clients find it more stable than their workplace video conferencing.</p>
+                    </div>
+
+                    <h3>"How Do I Know It's Confidential?"</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Security is Priority One</strong></h4>
+                        <p>Our platform is PHIPA compliant and uses bank-level encryption—meeting the same standards as Protected B government communications. As a Registered Psychotherapist, all communication is protected by the same strict confidentiality laws as in-person therapy. Your security clearance and career are never at risk.</p>
+                    </div>
+
+                    <h3>"Can We Build a Real Connection?"</h3>
+
+                    <div>
+                        <h4><strong>Absolutely Yes</strong></h4>
+                        <p>Genuine connection transcends the medium. Many clients report feeling more authentic and open from the comfort of home—especially those dealing with high-pressure government or corporate environments who appreciate the privacy and control. After the first few minutes, the technology fades into the background.</p>
+                    </div>
+
+                    <!-- CTA after concerns -->
+                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
+                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to experience the convenience of virtual therapy?</p>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Schedule 15-Min Consultation</a>
+                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
+                            <span>Confidential consultation</span>
+                            <span>No commitment required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>What Research Tells Us About Virtual Therapy</h2>
+
+                    <p>The evidence supporting virtual therapy continues to grow stronger. Here's what studies have found:</p>
+
+                    <h3>Effectiveness Studies Show:</h3>
+                    <ul class="feature-list">
+                        <li>Equivalent outcomes for depression and anxiety compared to in-person therapy</li>
+                        <li>High client satisfaction rates (often higher than in-person for professionals with demanding schedules)</li>
+                        <li>Better attendance and fewer missed sessions—critical for maintaining therapeutic momentum</li>
+                        <li>Particularly effective for social anxiety and workplace stress</li>
+                        <li>Strong therapeutic alliance development regardless of video format</li>
+                        <li>Improved access leads to better long-term outcomes</li>
+                    </ul>
+
+                    <h3>Clients Report Preferring Virtual Because:</h3>
+                    <ul class="feature-list">
+                        <li>Comfort of familiar environment reduces anxiety</li>
+                        <li>Elimination of commute stress improves focus during sessions</li>
+                        <li>Easier to maintain regular appointments despite demanding work schedules</li>
+                        <li>Greater sense of control over the therapeutic environment</li>
+                        <li>Ability to self-soothe immediately after sessions in own space</li>
+                        <li>More convenient for processing emotions without public transit concerns</li>
+                    </ul>
+
+                    <p>Virtual therapy isn't just an alternative—for many Ottawa professionals, it's the preferred choice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Your Virtual Therapist</h2>
+
+                    <p>I'm Jesse Cynamon, Registered Psychotherapist (CRPO #10979). I focus on providing practical, evidence-based virtual therapy to busy professionals across Ontario, including Ottawa's unique public service and private sector workforce.</p>
+
+                    <h3>My Virtual Approach:</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Technology as a Tool, Not a Barrier</strong></h4>
+                        <p>I ensure technology enhances rather than hinders our work. Quick setup support, multiple backup options, and patience with technical learning curves. The focus stays on you, not the platform—because you deal with enough technology headaches at work.</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Creating Connection Through Screens</strong></h4>
+                        <p>Building therapeutic relationships virtually requires intention and skill. I've developed techniques to ensure you feel heard, seen, and supported, regardless of physical distance. Many clients say they forget we're not in the same room—which is especially valuable for those dealing with high-pressure careers.</p>
+                    </div>
+
+                    <div>
+                        <h4><strong>Flexibility That Honors Your Life</strong></h4>
+                        <p>Your life doesn't follow a 9-to-5 schedule, and neither should therapy. I offer sessions at times that work for you—early mornings before briefings, lunch breaks, or evenings after parliamentary hours. Your mental health shouldn't wait for convenient timing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ottawa-Specific Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Serving Ottawa and the National Capital Region Virtually</h2>
+
+                    <p>As a Registered Psychotherapist in Ontario, I provide the same quality care whether you're in Centretown, Kanata, Orleans, Barrhaven, or anywhere else in the NCR.</p>
+
+                    <h3>Virtual Therapy is Ideal for Ottawa Life:</h3>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Skip the Commute</strong></h4>
+                        <p>Avoid the stress of the Queensway gridlock, LRT delays, or suburban sprawl. Use the time you save for what truly matters—whether that's family time, self-care, or actually enjoying your lunch break.</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Total Privacy</strong></h4>
+                        <p>No need to worry about running into colleagues from the Hill, RCMP headquarters, or your department in a local clinic's waiting room. Your sessions are completely private. Your career and security clearance remain unaffected—confidentiality is absolute.</p>
+                    </div>
+
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4><strong>Unmatched Flexibility</strong></h4>
+                        <p>Schedule sessions around your demanding government meetings, committee hearings, shift rotations, or private sector deadlines. Therapy that adapts to your life in the nation's capital, not the other way around.</p>
+                    </div>
+
+                    <div>
+                        <h4><strong>Weather Independence</strong></h4>
+                        <p>Ottawa's harsh winters, ice storms, and summer heat waves won't disrupt your therapy. Consistency is key to progress—and virtual sessions ensure you can maintain momentum regardless of weather conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Section -->
+        <section class="section" style="background: var(--neutral-cream);">
+            <div class="container-narrow">
+                <div class="content-card">
+                    <h2>Insurance Coverage for Virtual Therapy</h2>
+
+                    <p>Good news: most insurance plans that cover in-person therapy also cover virtual sessions. Services provided by a Registered Psychotherapist are covered by most extended health benefits—including federal employee benefits (PSHCP).</p>
+
+                    <h3>Coverage Details:</h3>
+                    <ul class="feature-list">
+                        <li>Same insurance benefits apply to virtual sessions as in-person</li>
+                        <li>PSHCP (Public Service Health Care Plan) covers Registered Psychotherapists</li>
+                        <li>Receipts provided for all major insurance companies (Sun Life, Canada Life, Manulife, Great-West)</li>
+                        <li>Direct billing options being explored for major carriers</li>
+                        <li>HSA and wellness spending accounts accepted</li>
+                        <li>Student insurance plans typically cover virtual therapy</li>
+                        <li>No different coding for virtual vs in-person—same reimbursement rates</li>
+                    </ul>
+
+                    <h3>Making Therapy Affordable:</h3>
+                    <p>Beyond insurance, virtual therapy saves you money and time that would otherwise be spent on commuting, parking downtown, and taking extended time away from work. For many Ottawa professionals, these savings alone justify the virtual format.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background: white;">
+            <div class="container-narrow">
+                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Questions About Therapy in Ottawa</h2>
+
+                <div class="faq-item">
+                    <h4>Does therapy in Ottawa/Ontario actually work?</h4>
+                    <p>Yes, therapy is one of the most well-researched treatments in mental health, with decades of evidence supporting its effectiveness. Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT) both show strong results for anxiety disorders, including generalized anxiety, panic attacks, social anxiety, and health anxiety. Most people notice meaningful improvements within 8-12 sessions, though the timeline varies by individual. Therapy can't eliminate anxiety entirely—that's neither possible nor healthy—but it can help you change your relationship with anxiety so it doesn't control your choices or limit your life.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What types of therapy are used in Ottawa?</h4>
+                    <p>The most evidence-based approaches are Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT). CBT focuses on identifying and challenging anxious thoughts while gradually facing feared situations. ACT emphasizes accepting anxiety as part of being human while taking action based on your values rather than your fears. At Next Step Therapy, I primarily use ACT approaches, which research shows are particularly effective for chronic worry, panic attacks, and social anxiety. I'm also trained in mindfulness-based techniques and exposure therapy when appropriate. The best approach depends on your specific anxiety pattern and what resonates with you personally.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How much does therapy cost in Ottawa/Ontario?</h4>
+                    <p>Individual therapy sessions are $175 per 50-minute session. Most extended health benefit plans in Ontario cover psychotherapy services with a Registered Psychotherapist (CRPO), typically covering 50-100% of the session cost depending on your specific plan. Federal employees with PSHCP have excellent coverage for psychotherapy. Before your first session, check your benefits to understand your coverage limits. I provide detailed receipts that make it easy to submit claims to your insurance company. If you don't have insurance coverage, we can discuss frequency of sessions to make therapy financially sustainable—some clients prefer biweekly sessions rather than weekly, for example.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Is therapy confidential and private?</h4>
+                    <p>Yes, therapy is completely confidential. As a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979), I'm legally and ethically bound to protect your privacy. What you discuss in therapy stays between us with very limited exceptions: if there's imminent risk of harm to yourself or others, or if there's disclosure of child abuse. If you're using insurance benefits, your provider knows you're seeing a mental health professional but receives no details about what we discuss—only the date of service and fee. Virtual therapy platforms I use are encrypted and meet Canadian healthcare privacy standards. Your security clearance and government career are never at risk.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What happens in the first therapy session?</h4>
+                    <p>The first session focuses on understanding your specific experience. I'll ask about what brings you to therapy right now, how you're feeling (physical symptoms, thoughts, behaviors), what triggers challenges, and how they're affecting your daily life, relationships, and work. We'll also discuss your goals—what would be different if therapy helped? You'll have plenty of opportunities to ask questions about the process, my approach, and what to expect. There's no pressure to share anything you're not comfortable with, and many people find that just talking in a non-judgmental space provides some relief. The first session is as much about seeing if we're a good fit as it is about gathering information.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long does it take for therapy to work?</h4>
+                    <p>Most people start noticing some shifts within the first 4-6 sessions—perhaps challenges feel slightly less overwhelming, or you're able to use a technique when stress starts to build. Meaningful, sustained change typically happens over 8-16 weeks of regular sessions (weekly or biweekly). That said, timelines vary significantly based on how long you've struggled, the severity of symptoms, and how much you're able to practice strategies between sessions. Some people feel substantially better after a few months and then check in occasionally for tune-ups, while others prefer longer-term support. We'll regularly assess your progress together and adjust the frequency of sessions based on what's working.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can therapy help with panic attacks or social anxiety specifically?</h4>
+                    <p>Yes, therapy is highly effective for both panic attacks and social anxiety. For panic attacks, we work on understanding your body's alarm system, developing grounding techniques to use during panic, and gradually reducing the fear of panic itself (which often makes panic worse). For social anxiety, we focus on challenging thoughts about judgment and rejection, practicing self-compassion, and gradually building tolerance for social discomfort through behavioral experiments. ACT therapy is particularly helpful for both because it teaches you to take valued action (attending the work event, speaking up in meetings) even when anxiety is present, rather than waiting for anxiety to disappear first.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do I need a referral for therapy in Ottawa/Ontario?</h4>
+                    <p>No, you don't need a referral from a doctor to see a Registered Psychotherapist in Ontario. You can contact me directly to book a free 15-minute consultation. Some extended health insurance plans require a referral for coverage, so check your specific plan details, but most don't—including PSHCP. If your plan does require one, your family doctor can provide a simple referral letter. The advantage of working with a Registered Psychotherapist (versus waiting for publicly funded services) is that you can typically start within days rather than waiting months, and you have more control over scheduling and frequency of sessions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Is online/virtual therapy available in Ottawa/Ontario?</h4>
+                    <p>Yes, I provide all therapy sessions virtually throughout Ontario. Virtual therapy has been shown to be just as effective as in-person therapy for anxiety disorders, with the added benefits of convenience and reduced stress from commuting. Many Ottawa residents appreciate being able to have therapy sessions from their home without adding a trip to their already busy schedule. You can join sessions from anywhere you have privacy—your home office in Kanata, bedroom in the Glebe, or even your parked car during a lunch break in Barrhaven if needed. All you need is a computer, tablet, or smartphone with internet access and a private space where you can talk freely. Virtual sessions also remove the stress some people feel about being seen entering or leaving a therapist's office in downtown Ottawa.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How do I choose the right therapist in Ottawa?</h4>
+                    <p>Look for a therapist who has experience with your concerns and uses evidence-based approaches like CBT or ACT. Check their credentials—in Ontario, Registered Psychotherapist (RP) with CRPO registration ensures they meet professional standards. Beyond credentials, fit matters enormously: Do they explain things in ways that make sense to you? Do you feel comfortable being honest with them? Do they seem to understand your specific life circumstances (like the unique pressures of Ottawa government work or shift schedules)? The free 15-minute consultation is designed to help you assess this fit before committing. Trust your instincts—if something feels off during that initial conversation, it's completely appropriate to keep looking for someone who feels like a better match.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can therapy include medication, or do I need to see a doctor separately?</h4>
+                    <p>As a Registered Psychotherapist, I don't prescribe medication—only physicians and psychiatrists can do that. However, therapy and medication can work well together. Many of my clients take anti-anxiety or antidepressant medication while also doing therapy, and we coordinate with their prescribing doctor when helpful. If you're considering medication or already taking it, we can discuss how therapy fits with your medication plan. Some people use medication short-term while developing therapy skills, others prefer long-term medication alongside occasional therapy sessions, and many find therapy alone is sufficient. It's a personal decision best made in collaboration with both your doctor and therapist.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What are signs I should seek therapy in Ottawa?</h4>
+                    <p>Consider seeking therapy if stress, anxiety, or other challenges are affecting your daily functioning, relationships, work performance, or quality of life. Specific signs include: avoiding situations or activities you used to enjoy, difficulty sleeping due to worry, physical symptoms like chest tightness or racing heart that interfere with your day, canceling plans frequently, relationships suffering because you're irritable or withdrawn, work performance declining because you're distracted or overwhelmed by deadlines, or using alcohol or other substances to cope with stress. You don't need to wait until things reach a crisis point—early intervention often prevents more significant difficulties later. If you're wondering whether your situation is "bad enough" for therapy, that question itself suggests it might be worth exploring professional support.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-highlight" id="contact">
+            <div class="container">
+                <h3>Start Virtual Therapy in Ottawa Today</h3>
+                <p>Professional support that fits your life. No commute, no waiting rooms, just genuine therapeutic connection from wherever you're comfortable.</p>
+
+                <h4>Free 15-Minute Consultation</h4>
+                <p>Discover if we're a good fit. This is a no-pressure, confidential conversation to answer your questions and see if our approach feels right for you.</p>
+
+                <div class="hero-cta">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="primary-cta">Schedule Your Free 15-Minute Call</a>
+                    <div class="secondary-ctas">
+                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
+                        <a href="https://nextsteptherapy.ca/#contact" class="secondary-cta email-cta">Send Message</a>
+                    </div>
+
+                    <!-- Trust signals near final CTA -->
+                    <div class="cta-trust-signals" style="margin-top: var(--space-md);">
+                        <span>Book online in 2 minutes</span>
+                        <span>Available 7 days a week</span>
+                        <span>100% confidential</span>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h4 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Your conversation is 100% confidential and pressure-free.</h4>
+                    <strong>Jesse Cynamon, RP</strong><br>
+                    Registered Psychotherapist | CRPO #10979<br>
+                    Serving Ottawa & All of Ontario Virtually<br>
+                    Secure, Confidential Online Therapy<br>
+                    Professional support from the comfort of home
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
+                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" style="color: #6B8E6F; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Therapy Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
+                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
+                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions</a></li>
+                        <li><a href="/counselling-services.html">Relationship Support</a></li>
+                        <li><a href="/#specializations" style="color: #6B8E6F;">All Services →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ontario Service Areas</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
+                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
+                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" style="color: #6B8E6F;">All Ontario →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Focused Support</h4>
+                    <ul>
+                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
+                        <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
+                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
+                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
+                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
+                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources & Guides</h4>
+                    <ul>
+                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
+                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
+                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Professional Standards</h4>
+                    <ul>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Online therapy services throughout Ontario</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
+                <strong>Last Updated:</strong> October 28, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NEW: Mobile Sticky CTA Bar - 20% conversion boost -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+        📅 Schedule 15-Min Call
+    </a>
+
+    <!-- Smart Sticky Header JavaScript -->
+    <script>
+        // Smart sticky header functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header.smart-sticky');
+            if (!header) return;
+
+            let lastScrollY = window.scrollY;
+            let isHeaderVisible = true;
+            const headerHeight = header.offsetHeight;
+            const scrollThreshold = 10; // Minimum scroll distance to trigger
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+                // Only proceed if scroll difference is significant
+                if (scrollDifference < scrollThreshold) {
+                    return;
+                }
+
+                if (currentScrollY <= headerHeight) {
+                    // At the top of the page
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+                    // Scrolling down - hide header
+                    header.style.transform = `translateY(-${headerHeight}px)`;
+                    isHeaderVisible = false;
+                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+                    // Scrolling up - show header
+                    header.style.transform = 'translateY(0)';
+                    isHeaderVisible = true;
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            // Use requestAnimationFrame for smooth performance
+            let ticking = false;
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                requestTick();
+                ticking = false;
+            }, { passive: true });
+
+            // Set initial styles
+            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            header.style.transform = 'translateY(0)';
+        });
+    </script>
+<script src="/js/security-check.js"></script>
+</body></html>
+
