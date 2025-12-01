@@ -412,6 +412,80 @@ section.alternate-bg {
     padding: 0 1.5rem;
 }
 
+/* Content Grid - single column centered layout */
+.content-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Card Grid - multi-column layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+/* Feature Grid - for feature items */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.feature-item {
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-item h4 {
+    color: var(--navy) !important;
+    margin-bottom: var(--space-sm);
+}
+
+.feature-item p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+/* Location Grid */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+/* Info Cards Grid */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.info-card {
+    padding: var(--space-md);
+    background: var(--cream);
+    border-radius: var(--radius-md);
+}
+
+.info-card h4 {
+    color: var(--navy) !important;
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
 /* ============================================
    7. CARDS
    ============================================ */
@@ -446,6 +520,17 @@ section.alternate-bg {
     line-height: 1.7;
 }
 
+/* Quick Stats Grid */
+.quick-stats {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 1rem !important;
+    margin-top: var(--space-xl) !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 /* Quick Stat Cards */
 .quick-stat-card {
     background: var(--white);
@@ -453,19 +538,21 @@ section.alternate-bg {
     border-radius: var(--radius-md);
     border-top: 3px solid var(--navy);
     box-shadow: var(--shadow-sm);
+    text-align: left;
 }
 
 .quick-stat-card h3 {
     font-family: var(--font-display) !important;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--navy) !important;
     margin-bottom: 0.5rem;
 }
 
 .quick-stat-card p {
     color: var(--text-secondary);
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     margin: 0;
+    line-height: 1.5;
 }
 
 /* ============================================
@@ -550,10 +637,12 @@ section.alternate-bg {
 /* Hero CTA sections - proper button layout */
 .hero-cta {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
+    justify-content: center !important;
     gap: 1rem !important;
-    margin-top: var(--space-xl) !important;
+    margin-top: var(--space-lg) !important;
+    flex-wrap: wrap !important;
 }
 
 .hero-cta .secondary-ctas {
@@ -561,6 +650,15 @@ section.alternate-bg {
     gap: 1rem !important;
     justify-content: center !important;
     flex-wrap: wrap !important;
+}
+
+/* Reduce hero spacing */
+.hero {
+    padding: var(--space-2xl) 0 !important;
+}
+
+.hero .trust-pills {
+    margin: var(--space-md) 0 !important;
 }
 
 /* Hero secondary CTAs on light backgrounds */
