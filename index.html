@@ -1125,6 +1125,14 @@
             color: #1e3a4f !important;
         }
 
+        /* CRITICAL FIX: Step numbers must be WHITE on navy background */
+        .step-number,
+        .process-step .step-number,
+        .process-steps .step-number {
+            background: #1e3a4f !important;
+            color: #ffffff !important;
+        }
+
         .process-step p, .process-steps > div p {
             color: #4a5a6a !important;
         }
@@ -1991,6 +1999,29 @@
         .contact,
         #contact {
             background: #1e3a4f !important;
+        }
+
+        /* CRITICAL: Contact section header text must be WHITE */
+        .contact .section-header,
+        #contact .section-header {
+            color: #ffffff !important;
+        }
+
+        .contact .section-header .section-subtitle,
+        #contact .section-header .section-subtitle {
+            color: #8cb390 !important;
+        }
+
+        .contact .section-header h2,
+        #contact .section-header h2 {
+            color: #ffffff !important;
+        }
+
+        .contact .section-header .lead-text,
+        .contact .section-header p,
+        #contact .section-header .lead-text,
+        #contact .section-header p {
+            color: rgba(255, 255, 255, 0.95) !important;
         }
 
         /* Contact Info Cards - on dark background */

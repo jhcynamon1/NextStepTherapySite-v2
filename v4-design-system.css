@@ -1081,9 +1081,10 @@ ul.feature-list li::before {
     color: var(--navy) !important;
 }
 
-.section-intro,
-.section-header p,
-.lead-text {
+/* Light sections - intro text */
+.section:not(.approach):not(.contact):not(#contact) .section-intro,
+.section:not(.approach):not(.contact):not(#contact) .section-header p,
+.section:not(.approach):not(.contact):not(#contact) .lead-text {
     color: var(--text-secondary) !important;
 }
 
@@ -1095,6 +1096,32 @@ ul.feature-list li::before {
 .hero p,
 .hero .lead-text {
     color: var(--text-secondary) !important;
+}
+
+/* DARK SECTIONS - Lead text must be WHITE */
+.approach .lead-text,
+.approach .section-header p,
+.approach p,
+.contact .lead-text,
+.contact .section-header p,
+#contact .lead-text,
+#contact .section-header p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.approach .section-subtitle,
+.contact .section-subtitle,
+#contact .section-subtitle {
+    color: #8cb390 !important;
+}
+
+.approach h2,
+.approach h3,
+.contact h2,
+.contact h3,
+#contact h2,
+#contact h3 {
+    color: var(--white) !important;
 }
 
 /* Trust pills maintain visibility */
