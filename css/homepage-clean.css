@@ -1,0 +1,1152 @@
+/* ============================================
+   HOMEPAGE CLEAN OVERRIDES
+   NextStepTherapy.ca - Final Polish
+   ============================================ */
+
+/* ===========================================
+   1. CORE RESETS - Remove all inline chaos
+   =========================================== */
+
+/* Kill all generic white text overrides */
+body, main, section, div, article, p, span, h1, h2, h3, h4, h5, h6, li, a {
+    color: inherit;
+}
+
+/* ===========================================
+   2. HEADER - Clean Professional Look
+   =========================================== */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e0d8;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-text {
+    font-family: var(--font-display, 'Libre Baskerville', serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a4f;
+    text-decoration: none;
+}
+
+/* CRPO Badge - SOLID, NO GRADIENT */
+.credentials-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #1e3a4f !important; /* Solid Navy */
+    color: #ffffff !important; /* Pure White */
+    border: none !important;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-left: 8px;
+    box-shadow: none;
+    background-image: none !important;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: #1e3a4f;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #4a7c59;
+}
+
+/* Header CTA */
+.header-cta-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-book-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #1e3a4f !important; /* Solid Navy - NO GRADIENT */
+    background-image: none !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(30, 58, 79, 0.15);
+}
+
+.header-book-btn:hover {
+    background: #2d4a5e !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 58, 79, 0.2);
+}
+
+.header-phone {
+    color: #1e3a4f;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+.header-phone:hover {
+    color: #4a7c59;
+}
+
+/* ===========================================
+   3. HERO SECTION - Clean & Readable
+   =========================================== */
+
+.hero {
+    background: #fdfcfa; /* Flat Ivory - NO GRADIENT */
+    padding: 5rem 0;
+    position: relative;
+}
+
+.hero::before,
+.hero::after {
+    display: none !important; /* Kill all pseudo gradients */
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: var(--font-display, 'Libre Baskerville', serif);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1e3a4f;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero .lead-text {
+    font-size: 1.125rem;
+    color: #4a5a6a;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Hero CTAs */
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.primary-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #1e3a4f !important; /* Solid Navy - NO GRADIENT */
+    background-image: none !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(30, 58, 79, 0.2);
+}
+
+.primary-cta:hover {
+    background: #2d4a5e !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(30, 58, 79, 0.25);
+}
+
+.secondary-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #1e3a4f;
+    text-decoration: none;
+    border: 2px solid #1e3a4f;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.secondary-cta:hover {
+    background: #1e3a4f;
+    color: #ffffff;
+}
+
+/* Therapist Showcase */
+.therapist-showcase {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e0d8;
+}
+
+.therapist-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a7c59;
+}
+
+.therapist-name {
+    font-size: 1.5rem;
+    color: #1e3a4f;
+    margin: 1rem 0 0.25rem;
+}
+
+.therapist-title {
+    color: #4a7c59;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.therapist-credentials {
+    display: inline-block;
+    background: #f2efe9;
+    color: #1e3a4f;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.therapist-bio {
+    color: #4a5a6a;
+    line-height: 1.7;
+    font-size: 0.9375rem;
+}
+
+.therapist-bio a {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.expertise-list li {
+    background: #f8f6f3;
+    color: #1e3a4f;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+/* Hero Credentials */
+.hero-credentials {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e0d8;
+}
+
+.hero-credentials p {
+    font-size: 0.9rem;
+    color: #1e3a4f;
+    margin-bottom: 0.25rem;
+}
+
+.hero-credentials p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   4. SECTION STYLING - Consistent & Clean
+   =========================================== */
+
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-family: var(--font-display, 'Libre Baskerville', serif);
+    font-size: 2rem;
+    color: #1e3a4f;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.section-subtitle,
+.section-eyebrow {
+    color: #4a7c59;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.lead-text {
+    color: #4a5a6a;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===========================================
+   5. TRUST SECTION - Cards & Grid
+   =========================================== */
+
+.trust-section {
+    background: #ffffff;
+    padding: 5rem 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.trust-item {
+    background: #fdfcfa;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e0d8;
+    transition: all 0.2s ease;
+}
+
+.trust-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.trust-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.trust-item h4 {
+    font-size: 1.125rem;
+    color: #1e3a4f;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.trust-item p {
+    color: #4a5a6a;
+    line-height: 1.6;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.trust-item a {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+/* ===========================================
+   6. APPROACH SECTION - Dark Background
+   =========================================== */
+
+.approach {
+    background: #1e3a4f;
+    padding: 5rem 0;
+}
+
+.approach .section-subtitle {
+    color: #8cb390;
+}
+
+.approach h2 {
+    color: #ffffff;
+}
+
+.approach .lead-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.approach h3,
+.approach h4 {
+    color: #ffffff;
+}
+
+.approach p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.specialization-highlight {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.specialization-highlight h4 {
+    color: #1e3a4f;
+}
+
+.specialization-highlight p {
+    color: #4a5a6a;
+}
+
+.specialization-badge {
+    display: inline-block;
+    background: #4a7c59;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* ===========================================
+   7. STRATEGIC CTA SECTIONS - Light Background
+   =========================================== */
+
+.strategic-cta-section {
+    background: #f8f6f3 !important;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 3rem;
+    border: 1px solid #e5e0d8;
+}
+
+.strategic-cta-section * {
+    color: #1e3a4f;
+}
+
+.strategic-cta-section h3 {
+    font-size: 1.5rem;
+    color: #1e3a4f;
+    margin-bottom: 1rem;
+}
+
+.strategic-cta-section p {
+    color: #4a5a6a;
+    margin-bottom: 1.5rem;
+}
+
+.strategic-cta-section .btn-primary,
+.strategic-cta-section .primary-cta {
+    background: #1e3a4f !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+.strategic-cta-section .btn-secondary,
+.strategic-cta-section .secondary-cta {
+    background: transparent !important;
+    color: #1e3a4f !important;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 2px solid #1e3a4f;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+.cta-trust-signals {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.cta-trust-signals span {
+    color: #1e3a4f !important;
+    font-weight: 600;
+}
+
+/* ===========================================
+   8. SPECIALIZATIONS - Service Cards
+   =========================================== */
+
+.specializations {
+    background: #f8f6f3;
+    padding: 5rem 0;
+}
+
+.specializations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.specialization-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e0d8;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.specialization-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.specialization-title {
+    font-size: 1.125rem;
+    color: #1e3a4f;
+    margin: 1rem 0 0.75rem;
+    font-weight: 600;
+}
+
+.specialization-desc {
+    color: #4a5a6a;
+    line-height: 1.6;
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+}
+
+.specialization-desc a {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+.specialization-link {
+    color: #4a7c59;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+.specialization-link:hover {
+    text-decoration: underline;
+}
+
+/* Service Icons */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===========================================
+   9. PROCESS SECTION
+   =========================================== */
+
+.process {
+    background: #ffffff;
+    padding: 5rem 0;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.process-step {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #4a7c59;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.125rem;
+    color: #1e3a4f;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.step-desc {
+    color: #4a5a6a;
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+/* ===========================================
+   10. QUIZ WIDGET - Clean Styling
+   =========================================== */
+
+.quiz-widget-section {
+    background: #f8f6f3 !important;
+    background-image: none !important;
+    padding: 3rem 1.5rem;
+}
+
+.quiz-widget-container {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #e5e0d8;
+}
+
+.quiz-header {
+    background: #f2efe9 !important;
+    background-image: none !important;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+.quiz-header h2 {
+    color: #1e3a4f;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+
+.quiz-header p {
+    color: #4a5a6a;
+    margin: 0;
+}
+
+.quiz-question-text {
+    color: #1e3a4f !important;
+}
+
+.quiz-option {
+    background: #ffffff !important;
+    border: 1.5px solid #e5e0d8 !important;
+    color: #1e3a4f !important;
+}
+
+.quiz-option:hover,
+.quiz-option.selected {
+    border-color: #4a7c59 !important;
+    background: #f8f6f3 !important;
+}
+
+.quiz-btn-primary {
+    background: #1e3a4f !important;
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+.quiz-btn-secondary {
+    background: #f8f6f3 !important;
+    color: #1e3a4f !important;
+    border: 1.5px solid #e5e0d8 !important;
+}
+
+/* ===========================================
+   11. LOCATION PILLS
+   =========================================== */
+
+.popular-locations,
+.additional-services {
+    background: #f8f6f3;
+    padding: 4rem 0;
+}
+
+.location-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.location-nav a {
+    background: #ffffff;
+    color: #1e3a4f;
+    border: 1px solid #e5e0d8;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.location-nav a:hover {
+    background: #4a7c59;
+    color: #ffffff;
+    border-color: #4a7c59;
+}
+
+/* ===========================================
+   12. FAQ SECTION
+   =========================================== */
+
+.faq {
+    background: #ffffff;
+    padding: 5rem 0;
+}
+
+.faq-item {
+    background: #f8f6f3;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    color: #1e3a4f;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+    color: #4a5a6a;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.faq-item a {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+/* ===========================================
+   13. CONTACT SECTION - Dark Background
+   =========================================== */
+
+.contact {
+    background: #1e3a4f;
+    padding: 5rem 0;
+}
+
+.contact h2,
+.contact h3 {
+    color: #ffffff;
+}
+
+.contact .lead-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form button {
+    background: #4a7c59;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #5f9970;
+}
+
+/* Contact Info Cards - Light Background */
+.contact-info {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.contact-info h4 {
+    color: #1e3a4f;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info p,
+.contact-info a {
+    color: #4a5a6a;
+}
+
+.contact-info a {
+    color: #4a7c59;
+    text-decoration: underline;
+}
+
+/* Contact Methods List */
+.contact-methods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-methods li {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid #e5e0d8;
+}
+
+.contact-methods strong {
+    color: #1e3a4f;
+    font-weight: 600;
+}
+
+.contact-methods a {
+    color: #4a7c59;
+    font-weight: 500;
+}
+
+.contact-methods small {
+    color: #6b7a8a;
+    font-size: 0.875rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Investment Highlight */
+.investment-highlight {
+    background: #f8f6f3;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.investment-highlight h4 {
+    color: #1e3a4f;
+    margin-bottom: 0.75rem;
+}
+
+.investment-highlight p {
+    color: #4a5a6a;
+    margin: 0.5rem 0;
+}
+
+/* ===========================================
+   14. FOOTER - Centered & Clean
+   =========================================== */
+
+.footer {
+    background: #152a3a;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer p,
+.footer a,
+.footer li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.footer a:hover {
+    color: #8cb390;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Footer phone highlight */
+.footer-book {
+    margin-top: 1rem;
+}
+
+.footer-phone {
+    color: #8cb390 !important;
+    font-weight: 700 !important;
+    font-size: 1.15rem;
+}
+
+.footer-link-highlight {
+    color: #8cb390 !important;
+    font-weight: 700 !important;
+}
+
+/* ===========================================
+   15. BUTTONS - Global Flat Style
+   =========================================== */
+
+.btn-primary,
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #1e3a4f !important;
+    background-image: none !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn:hover {
+    background: #2d4a5e !important;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent !important;
+    color: #1e3a4f !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #1e3a4f !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #1e3a4f !important;
+    color: #ffffff !important;
+}
+
+.btn-sage {
+    background: #4a7c59 !important;
+    background-image: none !important;
+}
+
+.btn-sage:hover {
+    background: #5f9970 !important;
+}
+
+/* ===========================================
+   16. MOBILE RESPONSIVE
+   =========================================== */
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav {
+        display: none;
+    }
+    
+    .header-cta-wrapper {
+        gap: 0.75rem;
+    }
+    
+    .header-book-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8125rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ===========================================
+   17. UTILITY OVERRIDES - Nuclear Options
+   =========================================== */
+
+/* Force all h3/h4 in light sections to be Navy */
+.trust-section h3,
+.trust-section h4,
+.specializations h3,
+.specializations h4,
+.process h3,
+.faq h3 {
+    color: #1e3a4f !important;
+}
+
+/* Force all paragraphs in light sections to be readable */
+.trust-section p,
+.specializations p,
+.process p,
+.faq p {
+    color: #4a5a6a !important;
+}
+
+/* Force links in light sections to be Sage */
+.trust-section a,
+.specializations a,
+.process a,
+.faq a {
+    color: #4a7c59 !important;
+}
+
+/* Force dark section text to be white */
+.approach h2,
+.approach h3,
+.approach h4,
+.contact h2,
+.contact h3,
+.contact h4 {
+    color: #ffffff !important;
+}
+
+.approach p,
+.contact p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
