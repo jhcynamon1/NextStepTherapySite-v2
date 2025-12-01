@@ -5,228 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Step Therapy Blog | Mental Health Insights for Ontario</title>
     <meta name="description" content="Evidence-based articles from a CRPO-registered psychotherapist covering workplace stress, anxiety, student mental health, and therapy access across Ontario.">
-    <link rel="icon" type="image/png" href="../images/asset104.png">
     
-    <!-- Google Fonts -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/blog/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../shared.min.css">
-    <link rel="stylesheet" href="../v4-design-system.css?v=20251201">
-    <style>
-        :root {
-            --primary-green: #6B8E6F;
-            --text-primary: #2C3E50;
-            --text-secondary: #5A6B7D;
-            --bg-alternate: #F8F9FA;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-        }
-        body {
-            font-family: var(--font-body);
-            margin: 0;
-            color: var(--text-primary);
-            background: white;
-        }
-        .header {
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        .header-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 1.5rem 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .logo-section img {
-            height: 40px;
-            width: auto;
-        }
-        .logo-text {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            text-decoration: none;
-        }
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-left: 1.25rem;
-            font-weight: 500;
-        }
-        .hero {
-            background: linear-gradient(135deg, rgba(107, 142, 111, 0.1), rgba(248, 249, 250, 0.95));
-            padding: 4rem 1.5rem;
-        }
-        .hero-content {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-content h1 {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-        }
-        .hero-content p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        .categories {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem 4rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.75rem;
-        }
-        .category-card {
-            background: white;
-            border-radius: 16px;
-            border: 1px solid rgba(107, 142, 111, 0.15);
-            padding: 1.75rem;
-            box-shadow: 0 12px 28px rgba(107, 142, 111, 0.12);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .category-card h2 {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            margin: 0;
-        }
-        .category-card p {
-            margin: 0;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        .post-link {
-            display: block;
-            margin-top: auto;
-            text-decoration: none;
-            color: var(--primary-green);
-            font-weight: 600;
-        }
-        .cta-section {
-            background: var(--bg-alternate);
-            padding: 3rem 1.5rem;
-        }
-        .cta-content {
-            max-width: 760px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .cta-content h2 {
-            font-family: var(--font-heading);
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-        .cta-actions {
-            margin-top: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-        .btn-primary {
-            background: var(--primary-green);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .btn-secondary {
-            border: 2px solid var(--primary-green);
-            color: var(--primary-green);
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        @media (max-width: 720px) {
-            .hero-content h1 {
-                font-size: 2.1rem;
-            }
-            .category-card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/shared.min.css">
+    <link rel="stylesheet" href="/v4-design-system.css?v=20251201">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR');
+    </script>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="../images/asset104.png" alt="Next Step Therapy logo" onerror="this.style.display='none'">
-                <a class="logo-text" href="/">Next Step Therapy</a>
-            </div>
-            <div>
-                <a class="nav-link" href="/virtual-therapy-ontario.html">Virtual Therapy</a>
-                <a class="nav-link" href="/anxiety-therapy-ontario.html">Anxiety Therapy</a>
-                <a class="nav-link" href="/workplace-stress-therapy-ontario.html">Work Stress</a>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="/" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge">CRPO #10979</span>
+                </div>
+                <nav>
+                    <ul class="nav">
+                        <li><a href="/#approach">Approach</a></li>
+                        <li><a href="/#specializations">Services</a></li>
+                        <li><a href="/#process">Process</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta-wrapper">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="header-book-btn">Schedule Consultation</a>
+                    <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Mental Health Insights for Ontario Professionals, Students & Families</h1>
-            <p>Evidence-based articles written by Jesse Cynamon, RP (CRPO #10979). Explore strategies for overcoming imposter syndrome, managing anxiety, navigating burnout, and understanding therapy options across Ontario.</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Mental Health Insights</h1>
+                <nav class="breadcrumb">
+                    <a href="/">Home</a> → Blog
+                </nav>
+                <p class="lead-text">Evidence-based articles from a CRPO-registered psychotherapist covering workplace stress, anxiety, student mental health, and therapy access across Ontario.</p>
+            </div>
+        </section>
 
-    <section class="categories">
-        <article class="category-card">
-            <h2>Workplace & Professional Growth</h2>
-            <p>Tools and therapist-backed strategies for executives, leaders, and high-performing teams navigating burnout, imposter syndrome, and performance anxiety.</p>
-            <a class="post-link" href="/blog/workplace/imposter-syndrome-at-work.html">Read: Imposter Syndrome at Work</a>
-        </article>
-        <article class="category-card">
-            <h2>Anxiety & Mental Wellness</h2>
-            <p>Understand the difference between stress and anxiety, learn when it’s time to talk to a therapist, and discover techniques that actually work.</p>
-            <a class="post-link" href="/blog/anxiety/adult-adhd-vs-high-functioning-anxiety.html">🆕 Read: Adult ADHD vs. High-Functioning Anxiety</a>
-            <a class="post-link" href="/blog/anxiety/do-i-need-therapy.html">Read: Do I Need Therapy?</a>
-        </article>
-        <article class="category-card">
-            <h2>Student & University Life</h2>
-            <p>Support for Ontario university and college students balancing academic pressure, financial stress, and uncertainty about the future.</p>
-            <span class="post-link" aria-disabled="true">Coming soon: Mental Health Support for Ontario Students</span>
-        </article>
-        <article class="category-card">
-            <h2>Ontario Therapy Guide</h2>
-            <p>Practical resources on insurance coverage, OHIP eligibility, and making therapy affordable across the province.</p>
-            <a class="post-link" href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">🆕 Take the Quiz: Is Therapy Right for Me?</a>
-            <a class="post-link" href="/therapy-costs-ontario.html">🆕 Complete Guide: Is Therapy Free in Canada?</a>
-            <a class="post-link" href="/therapy-costs-ontario.html">Read: Why Therapy Costs in Ontario</a>
-            <a class="post-link" href="/blog/mental-health-guides/how-to-find-therapist-toronto.html">Read: How to Find a Therapist in Toronto</a>
-        </article>
-    </section>
+        <!-- Blog Categories -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    
+                    <!-- Anxiety Articles -->
+                    <div class="content-card">
+                        <h2>Anxiety</h2>
+                        <p>Understanding and managing anxiety in everyday life, from high-functioning anxiety to panic and worry.</p>
+                        <ul class="feature-list">
+                            <li><a href="/blog/anxiety/adult-adhd-vs-high-functioning-anxiety.html">Adult ADHD vs. High-Functioning Anxiety</a></li>
+                            <li><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy? Signs It Might Help</a></li>
+                        </ul>
+                    </div>
 
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Talk with a CRPO-Registered Therapist?</h2>
-            <p>Schedule a 15-minute consultation to discuss how therapy can help you move forward. Virtual appointments are available across Ontario, with evening and lunchtime availability.</p>
-            <div class="cta-actions">
-                <a class="btn-primary" href="https://nextsteptherapy.janeapp.com/">Schedule Consultation</a>
-                <a class="btn-secondary" href="tel:+14163062157">Call (416) 306-2157</a>
+                    <!-- Workplace Articles -->
+                    <div class="content-card">
+                        <h2>Workplace Stress</h2>
+                        <p>Navigating burnout, imposter syndrome, and professional challenges in demanding careers.</p>
+                        <ul class="feature-list">
+                            <li><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></li>
+                            <li><a href="/blog/workplace/imposter-syndrome-at-work.html">Imposter Syndrome at Work</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Mental Health Guides -->
+                    <div class="content-card">
+                        <h2>Mental Health Guides</h2>
+                        <p>Practical resources and tools for understanding your mental health needs.</p>
+                        <ul class="feature-list">
+                            <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                            <li><a href="/blog/mental-health-guides/therapy-quiz-interactive.html">Interactive Therapy Assessment</a></li>
+                            <li><a href="/blog/mental-health-guides/how-to-find-therapist-toronto.html">How to Find a Therapist in Toronto</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to Talk?</h2>
+                    <p>If any of these topics resonate with you, a 15-minute consultation can help clarify your next steps.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Schedule 15-Min Consultation</a>
+                        <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Next Step Therapy</h4>
+                    <p>Virtual psychotherapy for high-functioning professionals and students across Ontario.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/workplace-stress-burnout-therapy.html">Burnout & Work Stress</a></li>
+                        <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Practice Info</h4>
+                    <ul>
+                        <li>Jesse Cynamon, RP</li>
+                        <li>CRPO Reg. #10979</li>
+                        <li><a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Next Step Therapy. All rights reserved.</p>
             </div>
         </div>
-    </section>
-<script src="/js/security-check.js"></script>
+    </footer>
 </body>
 </html>

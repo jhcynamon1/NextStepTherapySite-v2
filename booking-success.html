@@ -8,9 +8,9 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -26,28 +26,151 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-J8H4YBGSHR');
-
-        // PRIMARY CONVERSION EVENT - Fires immediately on page load
         gtag('event', 'conversion', {
-            'send_to': 'G-J8H4YBGSHR', // GA4 Property
+            'send_to': 'G-J8H4YBGSHR',
             'event_name': 'booking_confirmed',
             'value': 175.0,
             'currency': 'CAD'
         });
     </script>
+
+    <style>
+        .confirmation-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .confirmation-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1.5rem;
+            background: var(--ivory, #fdfcfa);
+        }
+        .confirmation-card {
+            max-width: 560px;
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(30, 58, 79, 0.08);
+        }
+        .confirmation-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--sage, #4a7c59);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 2.5rem;
+        }
+        .confirmation-card h1 {
+            font-family: var(--font-display, 'Cormorant Garamond', serif);
+            color: var(--navy, #1e3a4f);
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+        .confirmation-card p {
+            color: var(--text-secondary, #4a5a6a);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .confirmation-card .cta-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--navy, #1e3a4f);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        .confirmation-card .cta-button:hover {
+            background: var(--navy-dark, #152a3a);
+        }
+        .what-next {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e0d8;
+            text-align: left;
+        }
+        .what-next h3 {
+            font-family: var(--font-display, 'Cormorant Garamond', serif);
+            color: var(--navy, #1e3a4f);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .what-next ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .what-next li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary, #4a5a6a);
+        }
+        .what-next li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--sage, #4a7c59);
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <!-- Confirmation Hero -->
-    <section class="hero" style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;">
-        <div class="container" style="max-width: 600px;">
-            <div style="width: 80px; height: 80px; background: var(--sage); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white; font-size: 2.5rem;">✓</div>
-            <h1 style="color: var(--navy); margin-bottom: 1.5rem;">Booking Confirmed!</h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1rem;">Your consultation has been successfully booked.</p>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">I've sent a confirmation email with all the details to your inbox. I look forward to speaking with you soon.</p>
-            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; background: var(--navy); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Return to Homepage</a>
+    <div class="confirmation-page">
+        <!-- Minimal Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                        <a href="/" class="logo-text">Next Step Therapy</a>
+                        <span class="credentials-badge">CRPO #10979</span>
+                    </div>
+                    <div class="header-cta-wrapper">
+                        <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Confirmation Content -->
+        <div class="confirmation-content">
+            <div class="confirmation-card">
+                <div class="confirmation-icon">✓</div>
+                <h1>Booking Confirmed!</h1>
+                <p>Your consultation has been successfully scheduled. I've sent a confirmation email with all the details.</p>
+                <p>I look forward to speaking with you soon.</p>
+                
+                <div class="what-next">
+                    <h3>What to Expect</h3>
+                    <ul>
+                        <li>Check your email for appointment details</li>
+                        <li>Add the appointment to your calendar</li>
+                        <li>Find a quiet, private space for our call</li>
+                        <li>No preparation needed—just come as you are</li>
+                    </ul>
+                </div>
+
+                <a href="/" class="cta-button">Return to Homepage</a>
+            </div>
         </div>
-    </section>
-<script src="/js/security-check.js"></script>
+
+        <!-- Minimal Footer -->
+        <footer style="background: var(--navy, #1e3a4f); color: white; padding: 1.5rem; text-align: center;">
+            <p style="margin: 0; font-size: 0.9rem;">© 2024 Next Step Therapy | Jesse Cynamon, RP | CRPO #10979</p>
+        </footer>
+    </div>
+    <script src="/js/security-check.js"></script>
 </body>
 </html>
-
