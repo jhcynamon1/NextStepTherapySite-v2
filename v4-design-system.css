@@ -515,14 +515,14 @@ section.alternate-bg {
     align-items: center !important;
     justify-content: center !important;
     background: transparent !important;
-    color: var(--white) !important;
+    color: #ffffff !important;
     padding: 0.875rem 1.75rem !important;
     border-radius: var(--radius-md) !important;
     font-family: var(--font-body) !important;
     font-size: 0.9375rem !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-    border: 2px solid rgba(255, 255, 255, 0.7) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
 }
@@ -913,14 +913,14 @@ footer.footer {
     align-items: center !important;
     justify-content: center !important;
     background: transparent !important;
-    color: var(--white) !important;
+    color: #ffffff !important;
     padding: 0.875rem 1.75rem !important;
     border-radius: var(--radius-md) !important;
     font-family: var(--font-body) !important;
     font-size: 0.9375rem !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-    border: 2px solid rgba(255, 255, 255, 0.7) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
 }
@@ -989,19 +989,19 @@ footer.footer {
     color: var(--navy) !important;
 }
 
-/* Dark section links - ensure visibility */
-.approach a:not(.btn):not(.manus-primary-cta),
-.contact a:not(.btn):not(.manus-primary-cta),
-#contact a:not(.btn):not(.manus-primary-cta),
-.cta-box a:not(.btn):not(.manus-primary-cta) {
+/* Dark section links - ensure visibility (exclude CTAs) */
+.approach a:not(.btn):not(.manus-primary-cta):not(.secondary-cta),
+.contact a:not(.btn):not(.manus-primary-cta):not(.secondary-cta),
+#contact a:not(.btn):not(.manus-primary-cta):not(.secondary-cta),
+.cta-box a:not(.btn):not(.manus-primary-cta):not(.secondary-cta) {
     color: #8cb390 !important;
     text-decoration: underline !important;
 }
 
-.approach a:not(.btn):not(.manus-primary-cta):hover,
-.contact a:not(.btn):not(.manus-primary-cta):hover,
-#contact a:not(.btn):not(.manus-primary-cta):hover,
-.cta-box a:not(.btn):not(.manus-primary-cta):hover {
+.approach a:not(.btn):not(.manus-primary-cta):not(.secondary-cta):hover,
+.contact a:not(.btn):not(.manus-primary-cta):not(.secondary-cta):hover,
+#contact a:not(.btn):not(.manus-primary-cta):not(.secondary-cta):hover,
+.cta-box a:not(.btn):not(.manus-primary-cta):not(.secondary-cta):hover {
     color: var(--white) !important;
 }
 
