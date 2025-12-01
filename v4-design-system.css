@@ -1271,21 +1271,48 @@ input:focus-visible {
    ============================================ */
 
 /* Light section text - ensure navy/dark text on light backgrounds */
-.section:not(.approach):not(.contact):not(#contact) h2,
-.section:not(.approach):not(.contact):not(#contact) h3,
-.section:not(.approach):not(.contact):not(#contact) h4,
-main:not(.approach):not(.contact):not(#contact) h2,
-main:not(.approach):not(.contact):not(#contact) h3,
-main:not(.approach):not(.contact):not(#contact) h4 {
+/* NOTE: These rules should NOT apply inside .cta-box - see overrides below */
+.section:not(.approach):not(.contact):not(#contact) > .container > h2,
+.section:not(.approach):not(.contact):not(#contact) > .container > h3,
+.section:not(.approach):not(.contact):not(#contact) > .container > h4,
+.section:not(.approach):not(.contact):not(#contact) > .container > .content-grid h2,
+.section:not(.approach):not(.contact):not(#contact) > .container > .content-grid h3,
+.section:not(.approach):not(.contact):not(#contact) > .container > .content-card h2,
+.section:not(.approach):not(.contact):not(#contact) > .container > .content-card h3,
+.section:not(.approach):not(.contact):not(#contact) .section-title,
+.section:not(.approach):not(.contact):not(#contact) .content-card h2,
+.section:not(.approach):not(.contact):not(#contact) .content-card h3 {
     color: var(--navy) !important;
 }
 
-.section:not(.approach):not(.contact):not(#contact) p,
-.section:not(.approach):not(.contact):not(#contact) li,
-.section:not(.approach):not(.contact):not(#contact) span:not(.trust-pill),
-main:not(.approach):not(.contact):not(#contact) p,
-main:not(.approach):not(.contact):not(#contact) li {
+.section:not(.approach):not(.contact):not(#contact) > .container > p,
+.section:not(.approach):not(.contact):not(#contact) > .container > .content-grid p,
+.section:not(.approach):not(.contact):not(#contact) .content-card p,
+.section:not(.approach):not(.contact):not(#contact) .content-card li {
     color: var(--text-secondary) !important;
+}
+
+/* CRITICAL OVERRIDE: CTA box text MUST be white - highest specificity */
+.section .cta-box h2,
+.section .cta-box h3,
+.section .cta-box h4,
+.section .cta-box p,
+.section .cta-box li,
+.section .cta-box span,
+.section .cta-box strong,
+.section:not(.approach):not(.contact):not(#contact) .cta-box h2,
+.section:not(.approach):not(.contact):not(#contact) .cta-box h3,
+.section:not(.approach):not(.contact):not(#contact) .cta-box h4,
+.section:not(.approach):not(.contact):not(#contact) .cta-box p,
+.section:not(.approach):not(.contact):not(#contact) .cta-box li,
+.section:not(.approach):not(.contact):not(#contact) .cta-box span,
+main .cta-box h2,
+main .cta-box h3,
+main .cta-box h4,
+main .cta-box p,
+main .cta-box li,
+main .cta-box span {
+    color: #ffffff !important;
 }
 
 /* Content cards always have light backgrounds */
