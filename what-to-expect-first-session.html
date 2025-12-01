@@ -40,7 +40,7 @@
           "name": "What happens in a first therapy session?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Your first full session (50 minutes) focuses on understanding what brought you to therapy. We'll discuss your current challenges, what you've already tried, and what you're hoping to achieve. There's no pressure to share more than you're comfortable with. By the end, we'll have a clearer picture of how therapy might help and whether we're a good fit to work together."
+            "text": "Your first full session (50 minutes) focuses on understanding what brought you to therapy. We'll discuss your current challenges, what you've already tried, and what you're hoping to achieve. There's no pressure to share more than you're comfortable with."
           }
         },
         {
@@ -64,112 +64,395 @@
     </script>
     
     <style>
-        .step-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--primary-green, #4a6b7a);
-        }
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: var(--primary-green, #4a6b7a);
-            color: white;
-            border-radius: 50%;
-            font-weight: 600;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-        .step-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .step-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #1e3a4f;
-            margin: 0;
-        }
-        .timeline {
+        /* Page-specific styles using v4 design tokens */
+        .expect-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            padding: 6rem 0 5rem;
+            text-align: center;
             position: relative;
-            padding-left: 2rem;
+            overflow: hidden;
         }
-        .timeline::before {
+        
+        .expect-hero::before {
             content: '';
             position: absolute;
-            left: 19px;
-            top: 40px;
-            bottom: 40px;
-            width: 2px;
-            background: #e0e0e0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
+        
+        .expect-hero .container {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+        }
+        
+        .expect-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+        
+        .expect-hero .lead {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .content-wrapper {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 5rem;
+        }
+        
+        /* Reassurance Box */
         .reassurance-box {
-            background: linear-gradient(135deg, #f8faf9 0%, #e8f0ed 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border: 1px solid rgba(74, 107, 122, 0.2);
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--sand);
+            position: relative;
         }
+        
+        .reassurance-box::before {
+            content: '💡';
+            position: absolute;
+            top: -18px;
+            left: 24px;
+            font-size: 1.75rem;
+            background: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+        
         .reassurance-box h3 {
-            color: var(--primary-green, #4a6b7a);
-            margin-top: 0;
+            font-family: var(--font-display);
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin: 0 0 1.5rem 0;
+            font-weight: 500;
         }
+        
         .checklist {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+        
         .checklist li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--sand);
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
+        
         .checklist li:last-child {
             border-bottom: none;
+            padding-bottom: 0;
         }
+        
         .checklist li::before {
             content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--sage);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .checklist li strong {
+            color: var(--navy);
+        }
+        
+        /* Section Title */
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--navy);
+            margin: 0 0 2.5rem 0;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
             position: absolute;
+            bottom: 0;
             left: 0;
-            color: var(--primary-green, #4a6b7a);
-            font-weight: bold;
+            width: 60px;
+            height: 3px;
+            background: var(--sage);
+            border-radius: 2px;
         }
+        
+        /* Timeline Steps */
+        .timeline {
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .step-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem 2rem 2rem 5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(30, 58, 79, 0.08);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            position: absolute;
+            left: -20px;
+            top: 2rem;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-md);
+            z-index: 2;
+        }
+        
+        .step-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--navy);
+            margin: 0 0 1rem 0;
+            font-weight: 500;
+        }
+        
+        .step-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .step-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-card ul {
+            margin: 1rem 0;
+            padding-left: 1.25rem;
+        }
+        
+        .step-card li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .step-card .highlight {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--linen) 100%);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--sage);
+            margin-top: 1rem;
+        }
+        
+        .step-card .highlight p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 4rem;
+        }
+        
+        .faq-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(30, 58, 79, 0.08);
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .faq-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin: 0 0 1rem 0;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .faq-card h3::before {
+            content: '?';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--cream);
+            color: var(--navy);
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .faq-card p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        .faq-card p + p {
+            margin-top: 1rem;
+        }
+        
+        /* CTA Section */
         .cta-section {
-            background: var(--primary-green, #4a6b7a);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 12px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem 2.5rem;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .cta-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
         .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
             color: white;
-            margin-top: 0;
+            margin: 0 0 1rem 0;
+            font-weight: 500;
         }
-        .cta-section .cta-button {
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin: 0 0 2rem 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button-primary {
             display: inline-block;
             background: white;
-            color: var(--primary-green, #4a6b7a);
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: var(--radius-full);
             text-decoration: none;
             font-weight: 600;
-            margin-top: 1rem;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
-        .cta-section .cta-button:hover {
-            background: #f0f0f0;
+        
+        .cta-button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            color: var(--navy);
         }
+        
         .response-promise {
             font-size: 0.9rem;
-            opacity: 0.9;
-            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 1.25rem !important;
+            margin-bottom: 0 !important;
+        }
+        
+        /* Timeline connector line */
+        @media (min-width: 640px) {
+            .timeline {
+                padding-left: 24px;
+            }
+            
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 3px;
+                top: 60px;
+                bottom: 100px;
+                width: 2px;
+                background: linear-gradient(to bottom, var(--navy) 0%, var(--sand) 100%);
+                border-radius: 2px;
+            }
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 639px) {
+            .step-card {
+                padding: 1.5rem;
+                padding-top: 3.5rem;
+            }
+            
+            .step-number {
+                left: 1.5rem;
+                top: -20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .reassurance-box {
+                padding: 2rem 1.5rem;
+            }
+            
+            .cta-section {
+                padding: 2.5rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -200,130 +483,124 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section" style="background: linear-gradient(135deg, #1e3a4f 0%, #2c5364 100%); color: white; padding: 5rem 0 4rem;">
-            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif;">What to Expect in Your First Session</h1>
-                <p style="font-size: 1.2rem; opacity: 0.95; line-height: 1.7;">
-                    Starting therapy can feel uncertain. Here's exactly what happens—no surprises, no pressure.
-                </p>
+        <section class="expect-hero">
+            <div class="container">
+                <h1>What to Expect in Your First Session</h1>
+                <p class="lead">Starting therapy can feel uncertain. Here's exactly what happens—no surprises, no pressure.</p>
             </div>
         </section>
 
         <!-- Main Content -->
-        <section class="section" style="padding: 4rem 0;">
-            <div class="container" style="max-width: 800px; margin: 0 auto;">
-                
-                <!-- Reassurance Box -->
-                <div class="reassurance-box">
-                    <h3>Before We Start: A Few Things to Know</h3>
-                    <ul class="checklist">
-                        <li><strong>There's no "right way" to do therapy.</strong> You don't need to prepare anything or have your thoughts perfectly organized.</li>
-                        <li><strong>You're in control.</strong> You decide what to share and when. We go at your pace.</li>
-                        <li><strong>It's okay to be nervous.</strong> Most people are. That's completely normal.</li>
-                        <li><strong>You can change your mind.</strong> If after our first session you feel it's not the right fit, that's okay.</li>
+        <div class="content-wrapper">
+            
+            <!-- Reassurance Box -->
+            <div class="reassurance-box">
+                <h3>Before We Start</h3>
+                <ul class="checklist">
+                    <li><strong>There's no "right way" to do therapy.</strong> You don't need to prepare anything or have your thoughts perfectly organized.</li>
+                    <li><strong>You're in control.</strong> You decide what to share and when. We go at your pace.</li>
+                    <li><strong>It's okay to be nervous.</strong> Most people are. That's completely normal.</li>
+                    <li><strong>You can change your mind.</strong> If after our first session you feel it's not the right fit, that's okay.</li>
+                </ul>
+            </div>
+
+            <!-- Process Steps -->
+            <h2 class="section-title">The Process: Step by Step</h2>
+
+            <div class="timeline">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3 class="step-title">15-Minute Consultation</h3>
+                    <p>A brief video call to see if we're a good fit. You can:</p>
+                    <ul>
+                        <li>Share a bit about what's going on</li>
+                        <li>Ask questions about my approach</li>
+                        <li>Get a sense of whether you'd feel comfortable working together</li>
+                    </ul>
+                    <div class="highlight">
+                        <p><strong>No obligation.</strong> If it doesn't feel right, no pressure to continue.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3 class="step-title">Book Your First Full Session</h3>
+                    <p>If we both feel it's a good fit, you'll book your first 50-minute session through our secure online booking system. Most clients can get an appointment within 3-5 days.</p>
+                    <p>Before your session, you'll receive:</p>
+                    <ul>
+                        <li>A secure video link</li>
+                        <li>Brief intake forms (takes about 5 minutes)</li>
+                        <li>Information about fees and insurance</li>
                     </ul>
                 </div>
 
-                <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Process: Step by Step</h2>
-
-                <!-- Timeline -->
-                <div class="timeline">
-                    <!-- Step 1 -->
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">1</span>
-                            <h3 class="step-title">15-Minute Consultation (Free)</h3>
-                        </div>
-                        <p>This is a brief video call to see if we're a good fit. You can:</p>
-                        <ul>
-                            <li>Share a bit about what's going on</li>
-                            <li>Ask questions about my approach</li>
-                            <li>Get a sense of whether you'd feel comfortable working together</li>
-                        </ul>
-                        <p><strong>No obligation.</strong> If it doesn't feel right, no pressure to continue.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">2</span>
-                            <h3 class="step-title">Book Your First Full Session</h3>
-                        </div>
-                        <p>If we both feel it's a good fit, you'll book your first 50-minute session through our secure online booking system. Most clients can get an appointment within 3-5 days.</p>
-                        <p>Before your session, you'll receive:</p>
-                        <ul>
-                            <li>A secure video link</li>
-                            <li>Brief intake forms (takes about 5 minutes)</li>
-                            <li>Information about fees and insurance</li>
-                        </ul>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">3</span>
-                            <h3 class="step-title">Your First Full Session (50 minutes)</h3>
-                        </div>
-                        <p>This session is about understanding what brought you here. We'll talk about:</p>
-                        <ul>
-                            <li>What's been going on and how it's affecting you</li>
-                            <li>What you've already tried</li>
-                            <li>What you're hoping to get out of therapy</li>
-                        </ul>
-                        <p>I'll share my initial thoughts on how I might be able to help, and we'll discuss whether continuing makes sense for you.</p>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3 class="step-title">Your First Full Session</h3>
+                    <p>This 50-minute session is about understanding what brought you here. We'll talk about:</p>
+                    <ul>
+                        <li>What's been going on and how it's affecting you</li>
+                        <li>What you've already tried</li>
+                        <li>What you're hoping to get out of therapy</li>
+                    </ul>
+                    <p>I'll share my initial thoughts on how I might be able to help, and we'll discuss whether continuing makes sense for you.</p>
+                    <div class="highlight">
                         <p><strong>You won't be asked to dive into anything traumatic or overwhelming.</strong> The first session is about building understanding, not pushing you into difficult territory.</p>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">4</span>
-                            <h3 class="step-title">Ongoing Sessions</h3>
-                        </div>
-                        <p>If you decide to continue, we'll typically meet weekly or bi-weekly. Each session builds on the last, and we'll regularly check in about how things are going.</p>
-                        <p>Therapy isn't meant to last forever. The goal is to give you tools and insights you can use on your own. Most clients work with me for 8-16 sessions, though this varies based on your goals.</p>
                     </div>
                 </div>
 
-                <!-- Common Questions -->
-                <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Common Questions</h2>
-
+                <!-- Step 4 -->
                 <div class="step-card">
-                    <h3 style="margin-top: 0;">Is everything confidential?</h3>
+                    <span class="step-number">4</span>
+                    <h3 class="step-title">Ongoing Sessions</h3>
+                    <p>If you decide to continue, we'll typically meet weekly or bi-weekly. Each session builds on the last, and we'll regularly check in about how things are going.</p>
+                    <p>Therapy isn't meant to last forever. The goal is to give you tools and insights you can use on your own. Most clients work with me for 8-16 sessions, though this varies based on your goals.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Common Questions</h2>
+
+                <div class="faq-card">
+                    <h3>Is everything confidential?</h3>
                     <p>Yes. Everything we discuss stays between us. I use secure, encrypted video platforms that meet Canadian healthcare privacy standards. Your employer, family, and insurance company won't know what we talk about—only that you attended a session.</p>
                     <p>The only exceptions are rare situations required by law: imminent risk of harm to yourself or others, or disclosure of child abuse.</p>
                 </div>
 
-                <div class="step-card">
-                    <h3 style="margin-top: 0;">What if I don't know what to say?</h3>
+                <div class="faq-card">
+                    <h3>What if I don't know what to say?</h3>
                     <p>That's completely fine. You don't need to have everything figured out. Part of my job is helping you explore what's going on. We can start wherever feels natural—there's no script to follow.</p>
                 </div>
 
-                <div class="step-card">
-                    <h3 style="margin-top: 0;">Will you tell me what to do?</h3>
+                <div class="faq-card">
+                    <h3>Will you tell me what to do?</h3>
                     <p>I won't give you a list of instructions to follow. Therapy is collaborative—we work together to help you understand your patterns, develop new perspectives, and build skills that fit your life. You're the expert on your own experience; I'm here to help you access that expertise.</p>
                 </div>
 
-                <div class="step-card">
-                    <h3 style="margin-top: 0;">How do I know if therapy is working?</h3>
+                <div class="faq-card">
+                    <h3>How do I know if therapy is working?</h3>
                     <p>We'll check in regularly about how things are going. Progress often looks like: feeling less stuck, having more options when you're stressed, understanding yourself better, or noticing small shifts in how you respond to difficult situations. It's usually gradual rather than dramatic.</p>
                 </div>
 
-                <div class="step-card">
-                    <h3 style="margin-top: 0;">What if it's not the right fit?</h3>
+                <div class="faq-card">
+                    <h3>What if it's not the right fit?</h3>
                     <p>Finding the right therapist matters. If after a session or two you feel it's not working, I'll respect that completely—and I'm happy to suggest other therapists who might be a better match. There's no awkwardness or pressure to continue.</p>
                 </div>
-
-                <!-- CTA Section -->
-                <div class="cta-section">
-                    <h2>Ready to Take the First Step?</h2>
-                    <p>Book a free 15-minute consultation. No commitment, no pressure—just a conversation to see if we're a good fit.</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="cta-button">Schedule 15-Min Consultation</a>
-                    <p class="response-promise">You'll receive a confirmation within 24 hours.</p>
-                </div>
-
             </div>
-        </section>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Take the First Step?</h2>
+                <p>Book a free 15-minute consultation. No commitment, no pressure—just a conversation to see if we're a good fit.</p>
+                <a href="https://nextsteptherapy.janeapp.com/" class="cta-button-primary">Schedule 15-Min Consultation</a>
+                <p class="response-promise">You'll receive a confirmation within 24 hours</p>
+            </div>
+
+        </div>
     </main>
 
     <footer class="footer">
@@ -352,6 +629,20 @@
         <a href="tel:+14163062157" class="mobile-cta-call">📞 Call</a>
         <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Book Consultation</a>
     </div>
+
+    <!-- Mobile menu script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
-
