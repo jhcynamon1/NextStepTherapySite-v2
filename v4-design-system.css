@@ -1474,18 +1474,56 @@ ul.feature-list li::before {
     color: var(--white) !important;
 }
 
-/* Location cards */
+/* Location cards - Professional card styling */
 .location-card {
     background: var(--white) !important;
+    padding: var(--space-xl) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+    border-top: 3px solid var(--sage) !important;
 }
 
 .location-card h3 {
+    font-family: var(--font-display) !important;
+    font-size: 1.375rem !important;
     color: var(--navy) !important;
+    margin-bottom: var(--space-md) !important;
+    font-weight: 600 !important;
 }
 
-.location-card p,
-.location-card li {
+.location-card > p {
     color: var(--text-secondary) !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: var(--space-md) !important;
+}
+
+.location-card ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.location-card ul li {
+    color: var(--text-secondary) !important;
+    font-size: 0.875rem !important;
+    padding: var(--space-xs) 0 !important;
+    padding-left: 1.5rem !important;
+    position: relative !important;
+    line-height: 1.5 !important;
+}
+
+.location-card ul li::before {
+    content: "✓" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--sage) !important;
+    font-weight: 600 !important;
+}
+
+.location-card ul li strong {
+    color: var(--navy) !important;
+    font-weight: 600 !important;
 }
 
 /* Comparison tables */
