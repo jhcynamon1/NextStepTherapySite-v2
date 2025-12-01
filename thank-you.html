@@ -9,6 +9,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+    <link rel="stylesheet" href="/v4-design-system.css?v=20251201">
 
     <!-- Google Analytics 4 + Conversion Event -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
@@ -26,18 +35,18 @@
             'currency': 'CAD'
         });
     </script>
-
-    <!-- Internal style block removed by Design Audit -->
 </head>
 <body>
-    <div class="container">
-        <span class="check-icon">✓</span>
-        <h1>You're All Set!</h1>
-        <p>Your consultation has been successfully booked. I've just sent a confirmation email with all the details to your inbox.</p>
-        <p>I look forward to speaking with you soon.</p>
-        <br>
-        <a href="/" class="btn">Return to Homepage</a>
-    </div>
+    <!-- Confirmation Hero -->
+    <section class="hero" style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container" style="max-width: 600px;">
+            <div style="width: 80px; height: 80px; background: var(--sage); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white; font-size: 2.5rem;">✓</div>
+            <h1 style="color: var(--navy); margin-bottom: 1.5rem;">You're All Set!</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1rem;">Your consultation has been successfully booked.</p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">I've sent a confirmation email with all the details to your inbox. I look forward to speaking with you soon.</p>
+            <a href="/" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; background: var(--navy); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Return to Homepage</a>
+        </div>
+    </section>
 <script src="/js/security-check.js"></script>
 </body>
 </html>

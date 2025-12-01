@@ -3,6 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/shared.min.css">
+    <link rel="stylesheet" href="/v4-design-system.css?v=20251201">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {'allow_enhanced_conversions': true, 'send_page_view': true});
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {'event_category': 'conversion', 'value': 175, 'currency': 'CAD'});
+                });
+            });
+        });
+    </script>
+    
     <title>Imposter Syndrome Therapy Ontario | Stop Waiting to Be "Found Out"</title>
     <meta name="description" content="Promoted but terrified they'll realize you don't belong? That voice isn't truth—it's a pattern we can change. Virtual therapy for high-achievers. CRPO registered.">
     <meta name="keywords" content="imposter syndrome therapy Toronto, therapist for imposter syndrome, professional confidence therapy, imposter syndrome counselling Ontario, career confidence therapy, perfectionism therapy Toronto">
