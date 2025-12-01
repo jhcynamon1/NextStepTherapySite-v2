@@ -677,11 +677,20 @@ section.alternate-bg {
     border: 2px solid var(--navy) !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
 }
 
 .hero .secondary-cta:hover {
     background: var(--navy) !important;
     color: var(--white) !important;
+}
+
+/* Ensure hero CTAs don't stretch */
+.hero-cta .manus-primary-cta,
+.hero-cta .secondary-cta {
+    flex: 0 0 auto !important;
+    width: auto !important;
 }
 
 /* ============================================
