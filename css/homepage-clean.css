@@ -400,20 +400,32 @@ section {
 }
 
 .approach h2 {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .approach .lead-text {
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff !important;
+    opacity: 0.95;
 }
 
 .approach h3,
 .approach h4 {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
-.approach p {
-    color: rgba(255, 255, 255, 0.85);
+/* CRITICAL: Force all approach content text to be WHITE */
+.approach-content h3,
+.approach-content h4 {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.approach-content p {
+    color: #ffffff !important;
+    opacity: 0.95;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 .approach-grid {
@@ -430,11 +442,11 @@ section {
 }
 
 .specialization-highlight h4 {
-    color: #1e3a4f;
+    color: #1e3a4f !important;
 }
 
 .specialization-highlight p {
-    color: #4a5a6a;
+    color: #4a5a6a !important;
 }
 
 .specialization-badge {
@@ -593,19 +605,45 @@ section {
 
 .process {
     background: #ffffff;
-    padding: 5rem 0;
+    padding: 4rem 0;
+}
+
+/* Remove dead space from process image */
+.process-image {
+    display: none !important;
 }
 
 .process-timeline {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
 }
 
 .process-step {
     text-align: center;
     padding: 1.5rem;
+    background: #f8f6f3;
+    border-radius: 12px;
+    border: 1px solid #e5e0d8;
+    transition: all 0.2s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 .step-number {
@@ -624,13 +662,13 @@ section {
 
 .step-title {
     font-size: 1.125rem;
-    color: #1e3a4f;
+    color: #1e3a4f !important;
     margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
 .step-desc {
-    color: #4a5a6a;
+    color: #4a5a6a !important;
     line-height: 1.6;
     font-size: 0.9375rem;
 }
@@ -779,22 +817,84 @@ section {
 
 .contact h2,
 .contact h3 {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .contact .lead-text {
-    color: rgba(255, 255, 255, 0.9);
+    color: #ffffff !important;
+    opacity: 0.95;
 }
 
 .contact-form {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-form h3 {
+    color: #ffffff !important;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Booking Buttons - HIGH CONTRAST */
+.booking-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 2rem;
+}
+
+.contact-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #4a7c59 !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.contact-btn-primary:hover {
+    background: #5f9970 !important;
+    transform: translateY(-2px);
+}
+
+.contact-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #ffffff !important;
+    transition: all 0.2s ease;
+}
+
+.contact-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-divider {
+    text-align: center;
+    color: #ffffff !important;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
 }
 
 .contact-form label {
-    color: #ffffff;
+    color: #ffffff !important;
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -1135,7 +1235,11 @@ section {
     color: #4a7c59 !important;
 }
 
-/* Force dark section text to be white */
+/* ===========================================
+   DARK SECTIONS - FORCE WHITE TEXT
+   =========================================== */
+
+/* Force dark section headings to be white */
 .approach h2,
 .approach h3,
 .approach h4,
@@ -1145,8 +1249,48 @@ section {
     color: #ffffff !important;
 }
 
+/* Force dark section paragraphs to be white */
 .approach p,
+.approach .approach-content p {
+    color: #ffffff !important;
+}
+
 .contact p {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #ffffff !important;
+}
+
+/* Approach content specifically */
+.approach-content {
+    color: #ffffff !important;
+}
+
+.approach-content h3 {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.approach-content h4 {
+    color: #ffffff !important;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.approach-content p {
+    color: #ffffff !important;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Contact section text */
+.contact .section-header h2 {
+    color: #ffffff !important;
+}
+
+.contact .section-header .lead-text {
+    color: #ffffff !important;
 }
 
