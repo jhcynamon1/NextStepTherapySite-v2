@@ -1528,3 +1528,82 @@ section.contact-section {
 .contact .therapist-details strong {
     color: var(--white) !important;
 }
+
+/* ============================================
+   NUCLEAR OVERRIDE: CTA BOX TEXT VISIBILITY
+   These rules MUST be at the very end to override everything
+   ============================================ */
+
+/* Force ALL text in CTA boxes to be white - no exceptions */
+.cta-box,
+.cta-box *,
+.cta-box h1,
+.cta-box h2,
+.cta-box h3,
+.cta-box h4,
+.cta-box h5,
+.cta-box h6,
+.cta-box p,
+.cta-box span,
+.cta-box li,
+.cta-box strong,
+.cta-box em,
+.cta-box a:not(.btn-primary):not(.manus-primary-cta),
+.cta-box label,
+.cta-box div,
+[class*="cta-box"] *,
+[class*="cta-box"] p,
+[class*="cta-box"] h2,
+[class*="cta-box"] h3,
+[class*="cta-box"] span {
+    color: #ffffff !important;
+}
+
+/* CTA box paragraph text - slightly transparent white */
+.cta-box p,
+[class*="cta-box"] p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* CTA box buttons - white background, navy text */
+.cta-box .btn-primary,
+.cta-box .manus-primary-cta,
+.cta-box .primary-cta,
+.cta-box a.manus-primary-cta,
+.cta-box a.btn-primary,
+.cta-box a.primary-cta,
+[class*="cta-box"] .btn-primary,
+[class*="cta-box"] .manus-primary-cta {
+    background: #ffffff !important;
+    color: #1a2a3a !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* CTA box secondary buttons - white outline */
+.cta-box .secondary-cta,
+.cta-box a.secondary-cta,
+.cta-box .btn-secondary,
+[class*="cta-box"] .secondary-cta,
+[class*="cta-box"] a.secondary-cta {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none !important;
+}
+
+/* Force background on all CTA boxes */
+.cta-box,
+[class*="cta-box"],
+div.cta-box,
+section .cta-box {
+    background: #1a2a3a !important;
+    background-color: #1a2a3a !important;
+}
+
+/* Inline style overrides for CTA boxes */
+.cta-box[style],
+.cta-box[style] *,
+.cta-box[style] p,
+.cta-box[style] span {
+    color: #ffffff !important;
+}
