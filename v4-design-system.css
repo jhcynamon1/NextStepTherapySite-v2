@@ -498,12 +498,92 @@ section.alternate-bg {
 .cta-box .manus-primary-cta {
     background: var(--white) !important;
     color: var(--navy) !important;
+    border: 2px solid var(--white) !important;
 }
 
 .cta-box .btn-primary:hover,
 .cta-box .manus-primary-cta:hover {
     background: var(--cream) !important;
     color: var(--navy) !important;
+}
+
+/* Secondary CTA inside CTA boxes - white outline button */
+.cta-box .btn-secondary,
+.cta-box .secondary-cta,
+.cta-box a.secondary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: var(--white) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.7) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.cta-box .btn-secondary:hover,
+.cta-box .secondary-cta:hover,
+.cta-box a.secondary-cta:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+
+/* CTA box button container - ensure proper centering */
+.cta-box > div[style*="display: flex"],
+.cta-box .cta-buttons,
+.cta-box .hero-cta,
+.cta-box .secondary-ctas {
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+
+/* Hero CTA sections - proper button layout */
+.hero-cta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-top: var(--space-xl) !important;
+}
+
+.hero-cta .secondary-ctas {
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+}
+
+/* Hero secondary CTAs on light backgrounds */
+.hero .secondary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: var(--navy) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid var(--navy) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.hero .secondary-cta:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
 }
 
 /* ============================================
@@ -822,6 +902,54 @@ footer.footer {
 .contact .contact-info a,
 #contact .contact-info a {
     color: var(--sage) !important;
+}
+
+/* Secondary CTAs in dark sections */
+.approach .secondary-cta,
+.contact .secondary-cta,
+#contact .secondary-cta,
+.contact-section .secondary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: var(--white) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.7) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.approach .secondary-cta:hover,
+.contact .secondary-cta:hover,
+#contact .secondary-cta:hover,
+.contact-section .secondary-cta:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+}
+
+/* Primary CTAs in dark sections - white button */
+.approach .manus-primary-cta,
+.contact .manus-primary-cta,
+#contact .manus-primary-cta,
+.contact-section .manus-primary-cta {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border: 2px solid var(--white) !important;
+}
+
+.approach .manus-primary-cta:hover,
+.contact .manus-primary-cta:hover,
+#contact .manus-primary-cta:hover,
+.contact-section .manus-primary-cta:hover {
+    background: var(--cream) !important;
+    color: var(--navy) !important;
 }
 
 /* CTA Boxes within content - ensure text visibility */
