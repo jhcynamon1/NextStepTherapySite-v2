@@ -688,9 +688,17 @@ section.alternate-bg {
 
 /* Ensure hero CTAs don't stretch */
 .hero-cta .manus-primary-cta,
-.hero-cta .secondary-cta {
+.hero-cta .secondary-cta,
+.hero .manus-primary-cta,
+.hero .secondary-cta {
     flex: 0 0 auto !important;
     width: auto !important;
+    min-width: 0 !important;
+}
+
+/* Override shared.min.css flex:1 on secondary-cta globally */
+.secondary-cta {
+    flex: 0 0 auto !important;
 }
 
 /* ============================================
