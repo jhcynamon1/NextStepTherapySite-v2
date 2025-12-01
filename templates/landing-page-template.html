@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ============================================
+         NEXT STEP THERAPY - LANDING PAGE TEMPLATE
+         v4 Design System | December 2025
+         
+         INSTRUCTIONS:
+         1. Replace all [PLACEHOLDER] values
+         2. Ensure CRPO compliance (no "specialist", "expert", "guarantee", "best", "cure")
+         3. Minimum 2,500 words for competitive keywords
+         4. Minimum 5 FAQs in schema
+         5. Use self-referencing canonical (non-www, include .html)
+    ============================================ -->
+    
+    <!-- SEO Meta Tags -->
+    <title>[PAGE_TITLE] | Ontario Therapy</title>
+    <meta name="description" content="[META_DESCRIPTION - 150-160 chars, include primary keyword, CRPO compliant]">
+    <link rel="canonical" href="https://nextsteptherapy.ca/[PAGE_FILENAME].html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="[PAGE_TITLE] | Ontario Therapy">
+    <meta property="og:description" content="[OG_DESCRIPTION - shorter version, ~100 chars]">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/[PAGE_FILENAME].html">
+    <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="/shared.min.css">
+    <link rel="stylesheet" href="/v4-design-system.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR');
+    </script>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
+
+    <!-- Schema Markup: MedicalWebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "[SCHEMA_PAGE_NAME]",
+      "description": "[SCHEMA_DESCRIPTION]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": {
+        "@type": "Person",
+        "name": "Jesse Cynamon, RP",
+        "identifier": "CRPO #10979",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "[PRIMARY_CONDITION]",
+        "alternateName": ["[ALTERNATE_NAME_1]", "[ALTERNATE_NAME_2]"]
+      }
+    }
+    </script>
+    
+    <!-- Schema Markup: FAQPage (minimum 5 questions) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "[FAQ_QUESTION_1]",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "[FAQ_ANSWER_1]"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "[FAQ_QUESTION_2]",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "[FAQ_ANSWER_2]"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "[FAQ_QUESTION_3]",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "[FAQ_ANSWER_3]"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "[FAQ_QUESTION_4]",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "[FAQ_ANSWER_4]"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "[FAQ_QUESTION_5]",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "[FAQ_ANSWER_5]"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Page-specific styles using v4 design tokens */
+        .page-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #1a3a4a 100%);
+            padding: 6rem 0 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-hero h1 {
+            color: #ffffff !important;
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .page-hero .page-meta {
+            color: rgba(255,255,255,0.7) !important;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-hero .lead {
+            color: rgba(255,255,255,0.9) !important;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-cta-group .btn-primary {
+            background: var(--sage-light) !important;
+            color: #ffffff !important;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-cta-group .btn-secondary {
+            background: transparent !important;
+            color: #ffffff !important;
+            border: 2px solid rgba(255,255,255,0.5) !important;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        /* Content sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section.alternate-bg {
+            background: var(--bg-alternate, #f8f9fa);
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section-intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            line-height: 1.7;
+        }
+        
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        /* Cards */
+        .card, .info-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: var(--radius-lg, 12px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .card h3, .info-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--sage-light);
+            font-weight: bold;
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: var(--sage-light);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius-lg, 12px);
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .cta-box .btn-primary {
+            background: white;
+            color: var(--sage-light);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1.5rem 0;
+        }
+        
+        .faq-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        /* Comparison Table */
+        .comparison-table-wrapper {
+            overflow-x: auto;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .comparison-table th {
+            background: var(--bg-alternate, #f8f9fa);
+            font-weight: 600;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 4rem 0 3rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .cta-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <img src="/images/asset104.png" alt="Next Step Therapy" width="50" height="50">
+                    <span class="logo-text">Next Step Therapy</span>
+                </a>
+                <div class="nav-badge">
+                    <span class="crpo-badge">CRPO Registered #10979</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                    <li><a href="/therapy-costs-ontario.html">Fees</a></li>
+                    <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="tel:+14163062157" class="nav-phone">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="btn-primary">Book Consultation</a>
+                </div>
+                <button class="hamburger-menu" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <p class="page-meta"><strong>Last Updated:</strong> December 2025 | <strong>Reviewed by:</strong> Jesse Cynamon, RP (CRPO #10979)</p>
+                <h1>[HERO_HEADLINE]</h1>
+                <p class="lead">[HERO_SUBHEADLINE - Empathetic, problem-aware, ~2 sentences]</p>
+                <div class="hero-cta-group">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="btn-primary">Schedule 15-Min Consultation</a>
+                    <a href="tel:+14163062157" class="btn-secondary">📞 (416) 306-2157</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Understanding the Problem -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">[SECTION_1_TITLE - e.g., "What Is [CONDITION]?"]</h2>
+                <p class="section-intro">[SECTION_1_INTRO - Define the problem, validate the experience]</p>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Common Signs:</h3>
+                        <ul class="checklist">
+                            <li>[SIGN_1]</li>
+                            <li>[SIGN_2]</li>
+                            <li>[SIGN_3]</li>
+                            <li>[SIGN_4]</li>
+                            <li>[SIGN_5]</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>You're Not Alone:</h3>
+                        <p>[VALIDATION_TEXT - Statistics or normalizing statement]</p>
+                        <p style="margin-top: 1rem;">[ADDITIONAL_CONTEXT]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: How Therapy Helps -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">How Therapy Can Help</h2>
+                <p class="section-intro">[THERAPY_APPROACH_INTRO - ACT/CBT focused, process-oriented, no outcome guarantees]</p>
+                
+                <div class="grid-3">
+                    <div class="info-card">
+                        <h3>1. [APPROACH_1_TITLE]</h3>
+                        <p>[APPROACH_1_DESCRIPTION]</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>2. [APPROACH_2_TITLE]</h3>
+                        <p>[APPROACH_2_DESCRIPTION]</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>3. [APPROACH_3_TITLE]</h3>
+                        <p>[APPROACH_3_DESCRIPTION]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Who This Is For -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Who This Is For</h2>
+                <p class="section-intro">[TARGET_AUDIENCE_INTRO]</p>
+                
+                <div class="grid-2">
+                    <div class="info-card">
+                        <h3>[PERSONA_1_TITLE]</h3>
+                        <p>[PERSONA_1_DESCRIPTION]</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>[PERSONA_2_TITLE]</h3>
+                        <p>[PERSONA_2_DESCRIPTION]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <h3>Ready to Take the Next Step?</h3>
+                    <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 1.5rem;">
+                        [CTA_TEXT - Empathetic, low-pressure invitation]
+                    </p>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="btn-primary">Schedule 15-Min Consultation</a>
+                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 1rem;">Free consultation • No pressure • CRPO Registered</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <h3>[FAQ_QUESTION_1]</h3>
+                        <p>[FAQ_ANSWER_1]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>[FAQ_QUESTION_2]</h3>
+                        <p>[FAQ_ANSWER_2]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>[FAQ_QUESTION_3]</h3>
+                        <p>[FAQ_ANSWER_3]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>[FAQ_QUESTION_4]</h3>
+                        <p>[FAQ_ANSWER_4]</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>[FAQ_QUESTION_5]</h3>
+                        <p>[FAQ_ANSWER_5]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crisis Resources (CRPO Compliance) -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box" style="background: var(--sage-light);">
+                    <h3 style="color: white; margin-top: 0;">In Crisis? Immediate Support is Available:</h3>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.05rem; margin-bottom: 1.5rem;">If you are in immediate danger or experiencing a mental health crisis, please reach out to these resources:</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="tel:988" class="btn-primary" style="background: white; color: var(--sage-light);">📞 Call or Text 988 (Suicide Crisis Helpline)</a>
+                        <a href="tel:911" class="btn-primary" style="background: white; color: var(--sage-light);">📞 Call 911 (Emergency Services)</a>
+                    </div>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 1rem;">These services are free, confidential, and available 24/7.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Comprehensive SEO Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About & Contact -->
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
+                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p class="footer-book"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
+                </div>
+
+                <!-- Column 2: Therapy Services -->
+                <div class="footer-section">
+                    <h4>Therapy Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
+                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
+                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions</a></li>
+                        <li><a href="/counselling-services.html">Relationship Support</a></li>
+                        <li><a href="/#specializations" class="footer-link-highlight">All Services →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Ontario Service Areas -->
+                <div class="footer-section">
+                    <h4>Ontario Service Areas</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
+                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
+                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="footer-link-highlight">All Ontario →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Specialized Support -->
+                <div class="footer-section">
+                    <h4>Specialized Support</h4>
+                    <ul>
+                        <li><a href="/high-functioning-anxiety-ontario.html" class="footer-link-highlight">High Functioning Anxiety</a></li>
+                        <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
+                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
+                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
+                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
+                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                        <li><a href="/no-motivation-to-do-anything.html">Lack of Motivation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources & Guides -->
+                <div class="footer-section">
+                    <h4>Resources & Guides</h4>
+                    <ul>
+                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
+                        <li><a href="/therapy-costs-ontario.html">Therapy Costs & Insurance</a></li>
+                        <li><a href="/what-to-expect-first-session.html">What to Expect</a></li>
+                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Professional Info -->
+                <div class="footer-section">
+                    <h4>Professional Standards</h4>
+                    <ul>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Member: CRPO, OAMHP<br>Serving Ontario since 2022</p>
+                </div>
+            </div>
+
+            <!-- Crisis Resources (CRPO Compliance) -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Ontario, Canada<br>
+                <strong>Last Updated:</strong> December 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+        📅 Schedule 15-Min Call
+    </a>
+
+    <script src="/js/security-check.js"></script>
+</body>
+</html>
+
