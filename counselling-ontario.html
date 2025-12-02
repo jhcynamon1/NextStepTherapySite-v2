@@ -200,26 +200,40 @@
 </head>
 <body>
     <!-- Header Navigation -->
-    <header>
-        <nav>
-            <a href="https://nextsteptherapy.ca/" class="logo">Next Step Therapy</a>
-            <ul class="nav-links">
-                <li><a href="https://nextsteptherapy.ca/">Home</a></li>
-                <li><a href="https://nextsteptherapy.ca/#about">About</a></li>
-                <li><a href="https://nextsteptherapy.ca/counselling-services.html">Services</a></li>
-                <li><a href="https://nextsteptherapy.ca/#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="/" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                <nav class="nav">
+                    <a href="/#approach">Approach</a>
+                    <a href="/#specializations">Services</a>
+                    <a href="/#contact">Contact</a>
+                </nav>
+                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Online Counselling Ontario | Virtual Therapy Throughout Ontario</h1>
-        <p class="hero-subtitle">Professional Online Counselling for Ontario Residents</p>
-        <div class="ontario-badge">🍁 100% Virtual • Serving All Ontario • CRPO #10979</div>
-        <div class="cta-buttons">
-            <a href="https://nextsteptherapy.ca/#contact" class="btn btn-primary">Schedule 15-Min Consultation</a>
-            <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+    <section class="hero-with-bg">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Online Counselling Ontario | Virtual Therapy Throughout Ontario</h1>
+                <p class="lead-text">Professional Online Counselling for Ontario Residents</p>
+                <div class="trust-pills">
+                    <span class="trust-pill">✓ 100% Virtual</span>
+                    <span class="trust-pill">✓ Serving All Ontario</span>
+                    <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+                </div>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
+                    <a href="/#contact" class="manus-primary-cta">Schedule 15-Min Consultation</a>
+                    <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -455,6 +469,10 @@
             <p style="margin-top: 0.5rem; opacity: 0.9;">Professional Counselling Services Across Ontario</p>
         </div>
     </footer>
+<!-- Floating Mobile CTA -->
+<a href="tel:+14163062157" class="floating-mobile-cta">📞 Schedule Call</a>
+<!-- Smart Sticky Header JavaScript -->
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 <script src="/js/security-check.js"></script>
 </body>
 </html>

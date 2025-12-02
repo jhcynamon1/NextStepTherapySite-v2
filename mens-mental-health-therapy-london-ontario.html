@@ -173,27 +173,39 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="/" class="logo">Next Step Therapy</a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-            <a href="tel:416-306-2157" class="cta-button">Call Now</a>
-        </nav>
+    <header class="header smart-sticky">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <a href="/" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+                <nav class="nav">
+                    <a href="/#approach">Approach</a>
+                    <a href="/#specializations">Services</a>
+                    <a href="/#contact">Contact</a>
+                </nav>
+                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Men's Mental Health Therapy in London, Ontario</h1>
-            <p>"I don't know why I'm here. I've never done this therapy thing before." That's how most of my male clients in London start our first session. There's something about being a man in Southwestern Ontario—whether you're working at the hospital, trying to make it in tech, or dealing with layoffs in traditional industries—that makes asking for help feel like failure. But here's what I've learned: the strongest thing you can do is recognize when you need support.</p>
-            <div class="cta-buttons">
-                <a href="tel:416-306-2157" class="btn-primary">Schedule 15-Min Consultation</a>
-                <a href="#services" class="btn-secondary">Learn More</a>
+    <section class="hero-with-bg">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Men's Mental Health Therapy in London, Ontario</h1>
+                <p class="lead-text">"I don't know why I'm here. I've never done this therapy thing before." That's how most of my male clients in London start our first session. There's something about being a man in Southwestern Ontario—whether you're working at the hospital, trying to make it in tech, or dealing with layoffs in traditional industries—that makes asking for help feel like failure. But here's what I've learned: the strongest thing you can do is recognize when you need support.</p>
+                <div class="trust-pills">
+                    <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+                    <span class="trust-pill">✓ Virtual Sessions</span>
+                    <span class="trust-pill">✓ Men's Mental Health Focus</span>
+                </div>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
+                    <a href="/#contact" class="manus-primary-cta">Schedule 15-Min Consultation</a>
+                    <a href="#services" class="manus-secondary-cta">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -454,6 +466,10 @@
             });
         });
     </script>
+<!-- Floating Mobile CTA -->
+<a href="tel:+14163062157" class="floating-mobile-cta">📞 Schedule Call</a>
+<!-- Smart Sticky Header JavaScript -->
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 <script src="/js/security-check.js"></script>
 </body>
 </html>

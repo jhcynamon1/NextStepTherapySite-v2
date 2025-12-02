@@ -582,25 +582,20 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" width="200" height="40">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="/" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
-                <nav>
-                    <ul class="nav">
-                        <li><a href="/#approach">Approach</a></li>
-                        <li><a href="/#specializations">Services</a></li>
-                        <li><a href="/#fees">Fees</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
+                <nav class="nav">
+                    <a href="/#approach">Approach</a>
+                    <a href="/#specializations">Services</a>
+                    <a href="/#contact">Contact</a>
                 </nav>
-                <div class="header-cta-wrapper">
-                    <a href="https://nextsteptherapy.janeapp.com/" class="header-book-btn">Schedule 15-Min Consultation</a>
-                </div>
+                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
             </div>
         </div>
     </header>
@@ -1023,5 +1018,7 @@
     <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
         📅 Schedule 15-Min Call
     </a>
+<!-- Smart Sticky Header JavaScript -->
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 </body>
 </html>

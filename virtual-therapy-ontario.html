@@ -270,18 +270,18 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header smart-sticky">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                     <a href="/" class="logo-text">Next Step Therapy</a>
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 <nav class="nav">
                     <a href="/#approach">Approach</a>
                     <a href="/#specializations">Services</a>
-                    <a href="https://nextsteptherapy.janeapp.com/">Contact</a>
+                    <a href="/#contact">Contact</a>
                 </nav>
                 <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
             </div>
@@ -291,8 +291,9 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero-with-bg">
             <div class="container">
+                <div class="hero-content">
                 <h1>Virtual Psychotherapy Ontario: Direct Support, No Waitlists</h1>
                 <p style="font-size: 0.9em; color: #666; margin: 0.5em auto 1em auto; text-align: center !important; max-width: 900px;">
                     <strong>Last Updated:</strong> December 2025 | <strong>Reviewed by:</strong> Jesse Cynamon, RP (CRPO #10979)
@@ -331,6 +332,7 @@
                         <h3>Secure Video Platform</h3>
                         <p>Encrypted, PIPEDA-compliant sessions via Jane—works on phone, tablet, or laptop with no software install required.</p>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -1942,6 +1944,8 @@
     <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
         📅 Schedule 15-Min Call
     </a>
+<!-- Smart Sticky Header JavaScript -->
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 <script src="/js/security-check.js"></script>
 </body>
 </html>

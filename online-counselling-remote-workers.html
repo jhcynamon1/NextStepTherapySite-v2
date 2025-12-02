@@ -385,11 +385,11 @@
 <body>
 
 <!-- Header -->
-<header class="header">
+<header class="header smart-sticky">
     <div class="container">
         <div class="header-content">
             <div class="logo-section">
-                <img src="/images/favicon-32x32.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
+                <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
                 <a href="/" class="logo-text">Next Step Therapy</a>
                 <span class="credentials-badge-prominent">CRPO #10979</span>
             </div>
@@ -404,19 +404,21 @@
 </header>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero-with-bg">
     <div class="container">
-        <h1>You Don't Have to Struggle With Remote Work Alone</h1>
-        <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 800px; margin: 1.5rem auto 2rem;">Virtual therapy for remote workers experiencing burnout, Zoom fatigue, and boundary blur. Professional support that actually understands work-from-home life.</p>
-        <div class="trust-pills">
-            <span class="trust-pill">✓ CRPO #10979 Licensed</span>
-            <span class="trust-pill">✓ Serving All of Ontario</span>
-            <span class="trust-pill">✓ Virtual Sessions Available</span>
-            <span class="trust-pill">✓ Free 15-Min Consultation</span>
-        </div>
-        <div style="margin-top: 2rem;">
-            <a href="/#contact" class="manus-primary-cta">Book Your Free Consultation</a>
-            <a href="tel:+14163062157" style="margin-left: 1rem; color: var(--primary-green); text-decoration: none; font-weight: 600;">Call (416) 306-2157</a>
+        <div class="hero-content">
+            <h1>You Don't Have to Struggle With Remote Work Alone</h1>
+            <p class="lead-text">Virtual therapy for remote workers experiencing burnout, Zoom fatigue, and boundary blur. Professional support that actually understands work-from-home life.</p>
+            <div class="trust-pills">
+                <span class="trust-pill">✓ CRPO #10979 Licensed</span>
+                <span class="trust-pill">✓ Serving All of Ontario</span>
+                <span class="trust-pill">✓ Virtual Sessions Available</span>
+                <span class="trust-pill">✓ Free 15-Min Consultation</span>
+            </div>
+            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
+                <a href="/#contact" class="manus-primary-cta">Book Your Free Consultation</a>
+                <a href="tel:+14163062157" class="manus-secondary-cta">Call (416) 306-2157</a>
+            </div>
         </div>
     </div>
 </section>
@@ -968,6 +970,11 @@
         </div>
     </footer>
 
-  <script src="/js/security-check.js"></script>
+<!-- Floating Mobile CTA -->
+<a href="tel:+14163062157" class="floating-mobile-cta">📞 Schedule Call</a>
+
+<!-- Smart Sticky Header JavaScript -->
+<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
+<script src="/js/security-check.js"></script>
 </body>
 </html>
