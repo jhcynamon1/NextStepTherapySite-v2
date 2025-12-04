@@ -30,8 +30,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Internal style block removed by Design Audit -->
-
     <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
@@ -92,38 +90,103 @@
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-      "name": "Workplace Stress & Burnout Therapy Ontario | Executive Support",
-      "description": "Professional therapy for workplace burnout symptoms, corporate stress, and executive exhaustion. Evidence-based support for Ontario professionals.",
-      "url": "https://nextsteptherapy.ca/workplace-stress-burnout-therapy.html",
-      "medicalAudience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Working Professionals",
-        "geographicArea": "Ontario"
-      },
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist",
-        "description": "Psychotherapist focusing on workplace stress and burnout recovery"
-      },
-  "areaServed": {
-    "@type": "State",
-    "name": "Ontario",
-    "addressRegion": "ON",
-    "addressCountry": "CA"
-      },
-      "about": {
-        "@type": "MedicalCondition",
-        "name": "Occupational Burnout",
-        "possibleTreatment": {
-          "@type": "MedicalTherapy",
-          "name": "Acceptance and Commitment Therapy (ACT)"
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "name": "Workplace Stress & Burnout Therapy Ontario | Executive Support",
+          "description": "Professional therapy for workplace burnout symptoms, corporate stress, and executive exhaustion. Evidence-based support for Ontario professionals.",
+          "url": "https://nextsteptherapy.ca/workplace-stress-burnout-therapy.html",
+          "medicalAudience": {
+            "@type": "MedicalAudience",
+            "audienceType": "Working Professionals",
+            "geographicArea": "Ontario"
+          },
+          "provider": {
+            "@type": "Person",
+            "name": "Jesse Cynamon, RP",
+            "identifier": "CRPO #10979",
+            "jobTitle": "Registered Psychotherapist",
+            "description": "Psychotherapist focusing on workplace stress and burnout recovery"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Ontario",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          },
+          "about": {
+            "@type": "MedicalCondition",
+            "name": "Occupational Burnout",
+            "possibleTreatment": {
+              "@type": "MedicalTherapy",
+              "name": "Acceptance and Commitment Therapy (ACT)"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I know if my work stress needs professional support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If work stress is affecting your sleep, relationships, physical health, or overall life satisfaction for several weeks, therapy can provide effective tools and perspective. You don't need to wait for a crisis—early support often prevents more serious problems."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can therapy help if my workplace is genuinely toxic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Therapy helps you develop strategies for managing your response to difficult workplace situations while also clarifying when changes might be necessary for your wellbeing. It's about increasing your options and clarity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my employer find out I'm receiving therapy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Therapy sessions are completely confidential. Many professionals use their extended health benefits without any workplace disclosure. Virtual therapy adds an additional layer of privacy, as you can attend sessions from home or a private location."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this executive burnout treatment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, I work with many executives and senior leaders. Executive burnout treatment often involves addressing the unique isolation and decision-fatigue at senior levels. My approach is confidential, practical, and respects the specific pressures of leadership roles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does burnout recovery typically take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Burnout recovery varies by individual and severity. Many clients report meaningful improvements within 6-8 sessions, though deeper recovery may take longer. We'll discuss realistic expectations during your consultation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What's the difference between stress and burnout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Stress typically involves feeling overwhelmed but still engaged. Burnout involves emotional exhaustion, cynicism, and feeling detached or ineffective. Burnout often develops gradually after prolonged stress without adequate recovery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a referral to see a psychotherapist for burnout?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, you don't need a referral to see a Registered Psychotherapist in Ontario. You can book directly. Most insurance plans cover our services without a doctor's note, but check your specific policy."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 </head>
@@ -179,34 +242,87 @@
             <!-- Section 1: Symptoms -->
             <section class="section">
                 <h2 class="section-title">Workplace Burnout Symptoms: Does This Sound Familiar?</h2>
-                <p>Working in Ontario's competitive professional environment can create chronic stress that follows you home. Many professionals describe <strong>workplace burnout symptoms</strong> that go beyond simple tiredness:</p>
+                <p>Working in Ontario's competitive professional environment can create chronic stress that follows you home. Many professionals describe <strong>workplace burnout symptoms</strong> that go beyond simple tiredness—a deep exhaustion that sleep doesn't seem to touch:</p>
                 
                 <div style="background: var(--bg-alternate); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-green);">
                     <h3 style="margin-top: 0; color: var(--text-primary);">Signs of Professional Burnout:</h3>
                     <ul class="criteria-list" style="margin-bottom: 0;">
-                        <li><strong>Executive Burnout:</strong> Making decisions feels impossible; "brain fog" replacing your usual sharpness.</li>
-                        <li><strong>Sunday Night Anxiety:</strong> Feeling dread or panic about the upcoming work week, unable to enjoy weekends fully.</li>
-                        <li><strong>Emotional Exhaustion:</strong> Feeling drained by workplace interactions, conflicts, or impossible expectations.</li>
-                        <li><strong>Cynicism & Detachment:</strong> Feeling numb or resentful toward clients, colleagues, or projects you used to care about.</li>
-                        <li><strong>"Bay Street Burnout":</strong> The relentless pressure to perform where 60+ hour weeks are normalized until your body says "no."</li>
+                        <li><strong>Executive Burnout:</strong> Making decisions feels impossible; "brain fog" replacing your usual sharpness. You second-guess choices you would have made confidently six months ago.</li>
+                        <li><strong>Sunday Night Anxiety:</strong> Feeling dread or panic about the upcoming work week, unable to enjoy weekends fully. Friday evening brings relief, but Saturday feels like borrowed time.</li>
+                        <li><strong>Emotional Exhaustion:</strong> Feeling drained by workplace interactions, conflicts, or impossible expectations. Even positive meetings leave you depleted.</li>
+                        <li><strong>Cynicism & Detachment:</strong> Feeling numb or resentful toward clients, colleagues, or projects you used to care about. "Going through the motions" has become your default.</li>
+                        <li><strong>"Bay Street Burnout":</strong> The relentless pressure to perform where 60+ hour weeks are normalized until your body says "no." High performance culture without recovery leads here.</li>
+                        <li><strong>Physical Symptoms:</strong> Headaches, muscle tension, digestive issues, or frequent illness. Your body is keeping score even when your mind tries to push through.</li>
                     </ul>
                 </div>
-                <p style="margin-top: 1.5rem;">If several of these experiences resonate, you're dealing with workplace stress that can be effectively addressed through professional support and evidence-based strategies like ACT.</p>
+                <p style="margin-top: 1.5rem;">If several of these experiences resonate, you're dealing with workplace stress that can be effectively addressed through professional support and evidence-based strategies like Acceptance and Commitment Therapy (ACT).</p>
             </section>
 
-            <!-- Section 2: Therapist Intro -->
+            <!-- Section: Understanding Burnout -->
+            <section class="section">
+                <h2 class="section-title">Understanding Workplace Burnout: More Than Just Being Tired</h2>
+                <p>Burnout isn't a character flaw or a sign of weakness—it's a recognized occupational phenomenon that the World Health Organization defines as resulting from <strong>chronic workplace stress that has not been successfully managed</strong>. Understanding what burnout actually is can be the first step toward addressing it.</p>
+                
+                <h3>The Three Dimensions of Burnout</h3>
+                <p>Research identifies three core components that distinguish burnout from ordinary stress:</p>
+                <ul class="criteria-list">
+                    <li><strong>Exhaustion:</strong> Physical and emotional depletion that doesn't resolve with rest. You wake up tired and drag through each day.</li>
+                    <li><strong>Cynicism (Depersonalization):</strong> Mental distance from your work, colleagues, or clients. The things you used to care about feel meaningless.</li>
+                    <li><strong>Reduced Professional Efficacy:</strong> Feeling incompetent or unproductive despite putting in significant effort. Nothing you do feels good enough.</li>
+                </ul>
+                
+                <h3>Why High Performers Are Especially Vulnerable</h3>
+                <p>Ironically, burnout most often affects people who care deeply about their work. The same qualities that make someone successful—dedication, high standards, willingness to go above and beyond—can become vulnerabilities when workplace demands exceed sustainable levels.</p>
+                <p>Many Ontario professionals I work with share common patterns:</p>
+                <ul class="criteria-list">
+                    <li>Difficulty saying no to additional responsibilities</li>
+                    <li>Identity closely tied to professional achievement</li>
+                    <li>Perfectionism that makes "good enough" feel impossible</li>
+                    <li>Belief that pushing through is the only option</li>
+                    <li>Guilt about taking time for self-care or rest</li>
+                </ul>
+                <p>These patterns aren't weaknesses—they're often strengths that have been over-relied upon in unsustainable workplace conditions.</p>
+            </section>
+
+            <!-- Section: Who Experiences Burnout -->
+            <section class="section">
+                <h2 class="section-title">Who Experiences Workplace Burnout in Ontario?</h2>
+                <p>Burnout affects professionals across industries and career stages. While anyone can experience workplace burnout, certain roles and situations create higher risk:</p>
+                
+                <h3>Healthcare Professionals</h3>
+                <p>Nurses, physicians, social workers, and mental health professionals face unique burnout risks. The emotional demands of caregiving, combined with systemic pressures and understaffing, create conditions where compassion fatigue and burnout intersect. The pandemic accelerated these issues dramatically.</p>
+                
+                <h3>Financial Services & Law</h3>
+                <p>Toronto's financial district and law firms create environments where long hours are expected and performance is constantly measured. The pressure to bill hours, meet targets, and advance in competitive hierarchies takes a toll that often goes unacknowledged until crisis point.</p>
+                
+                <h3>Tech & Startup Professionals</h3>
+                <p>"Hustle culture" in tech and startup environments often normalizes overwork. The blurring of boundaries between work and life—especially in remote work—combined with rapid change and uncertainty creates burnout conditions that affect even young professionals early in their careers.</p>
+                
+                <h3>Managers & Middle Leadership</h3>
+                <p>Middle managers face unique pressures: accountability without authority, competing demands from above and below, and often absorbing organizational dysfunction to protect their teams. This sandwich position creates significant burnout risk.</p>
+                
+                <h3>Educators & Academics</h3>
+                <p>Teachers, professors, and academic researchers face increasing demands with limited resources. The emotional labor of education, combined with administrative burdens and job insecurity, creates burnout patterns that affect entire institutions.</p>
+                
+                <h3>Entrepreneurs & Small Business Owners</h3>
+                <p>Running your own business means the buck always stops with you. The isolation of solo entrepreneurship, financial pressure, and inability to "clock out" creates burnout patterns that can threaten both the business and the business owner's health.</p>
+            </section>
+
+            <!-- Section: Therapist Intro -->
             <section class="section">
                 <h2 class="section-title">Meet Your Therapist</h2>
                 <p>I'm <strong>Jesse Cynamon</strong>, a Registered Psychotherapist (CRPO #10979). As a therapist focusing on <strong>corporate stress therapy in Ontario</strong>, I help professionals navigate high-pressure environments without losing themselves.</p>
-                <p>My approach is practical and evidence-based. We use <strong>Acceptance and Commitment Therapy (ACT)</strong> to help you unhook from anxious thoughts and focus on what actually matters to you in your career and life. We don't just "talk about feelings"—we build skills for psychological flexibility.</p>
+                <p>My approach is practical and evidence-based. We use <strong>Acceptance and Commitment Therapy (ACT)</strong> to help you unhook from anxious thoughts and focus on what actually matters to you in your career and life. We don't just "talk about feelings"—we build skills for psychological flexibility that you can apply immediately in your work environment.</p>
+                <p>I understand the realities of professional life in Ontario. Many of my clients are navigating similar pressures—ambitious career goals, family responsibilities, financial pressures, and the expectation to always be "on." My role isn't to tell you to "just relax" or suggest you're in the wrong career. It's to help you find a sustainable way forward.</p>
                 <ul class="criteria-list">
-                    <li><strong>Virtual Convenience:</strong> Sessions from your home office or parked car. No travel time.</li>
-                    <li><strong>Flexible Hours:</strong> Evening and lunch appointments available.</li>
-                    <li><strong>Direct Billing:</strong> Receipts provided for all major insurance plans.</li>
+                    <li><strong>Virtual Convenience:</strong> Sessions from your home office or parked car. No travel time eating into your already-packed schedule.</li>
+                    <li><strong>Flexible Hours:</strong> Evening and lunch appointments available. We'll find a time that works with your reality.</li>
+                    <li><strong>Direct Billing:</strong> Receipts provided for all major insurance plans. Most Ontario extended health plans cover registered psychotherapy.</li>
+                    <li><strong>Confidential Support:</strong> Complete privacy. Your employer never needs to know you're receiving support.</li>
                 </ul>
             </section>
 
-            <!-- Section 3: Secondary CTA -->
+            <!-- Section: Secondary CTA -->
             <div class="cta-box" style="background: linear-gradient(135deg, #1e3a4f 0%, #152a3a 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
                 <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Stop Managing Stress Alone</h3>
                 <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">Get a personalized plan to prevent burnout and restore balance. Free 15-minute consultation.</p>
@@ -216,48 +332,117 @@
                 </div>
             </div>
 
-            <!-- Section 4: How Therapy Helps -->
+            <!-- Section: How Therapy Helps -->
             <section class="section">
                 <h2 class="section-title">How Workplace Stress Therapy Helps</h2>
                 <p>Using Acceptance and Commitment Therapy (ACT), we focus on developing psychological flexibility in your work environment. This means learning to respond to work stressors based on your values rather than being controlled by anxiety, perfectionism, or workplace pressure.</p>
-                <p>This approach has extensive research support for workplace stress. Instead of trying to eliminate all stress (which is often impossible), we work on:</p>
+                <p>This approach has extensive research support for workplace stress. Instead of trying to eliminate all stress (which is often impossible), we work on building your capacity to navigate challenges while maintaining your wellbeing and effectiveness.</p>
+                
+                <h3>What We Work On Together</h3>
                 <ul class="criteria-list">
-                    <li><strong>Values Clarification:</strong> Identifying what truly matters to you in your career and personal life.</li>
-                    <li><strong>Boundary Setting:</strong> Developing sustainable limits that protect your wellbeing.</li>
-                    <li><strong>Stress Response Management:</strong> Practical tools for managing acute stress in real work situations.</li>
-                    <li><strong>Energy Management:</strong> Sustainable approaches to high-demand periods without burning out.</li>
+                    <li><strong>Values Clarification:</strong> Identifying what truly matters to you in your career and personal life. When you're clear on your values, decisions become easier and more sustainable.</li>
+                    <li><strong>Boundary Setting:</strong> Developing sustainable limits that protect your wellbeing without derailing your career. Learning to say no strategically and without guilt.</li>
+                    <li><strong>Stress Response Management:</strong> Practical tools for managing acute stress in real work situations. Skills you can use in meetings, during difficult conversations, or when facing tight deadlines.</li>
+                    <li><strong>Energy Management:</strong> Sustainable approaches to high-demand periods without burning out. Understanding your recovery needs and building them into your routine.</li>
+                    <li><strong>Cognitive Defusion:</strong> Learning to unhook from unhelpful thoughts like "I should be able to handle this" or "If I slow down, I'll fall behind." Thoughts don't have to control your actions.</li>
+                    <li><strong>Present-Moment Awareness:</strong> Reducing rumination about work when you're off the clock. Actually being present with your family, hobbies, and rest time.</li>
                 </ul>
+                
+                <h3>A Practical, Not Theoretical, Approach</h3>
+                <p>I know your time is limited and valuable. Our sessions focus on practical application—skills you can use immediately. We work with your actual work situations, not hypothetical scenarios. Many clients find they're applying insights from our sessions the same week.</p>
             </section>
 
-            <!-- Section 5: FAQ -->
+            <!-- Section: What to Expect -->
             <section class="section">
-                <h2 class="section-title">Frequently Asked Questions</h2>
+                <h2 class="section-title">What to Expect from Burnout Therapy</h2>
+                <p>Starting therapy when you're already exhausted can feel like one more thing on your plate. Here's what the process actually looks like:</p>
+                
+                <h3>Initial Consultation (15 minutes, free)</h3>
+                <p>A brief video call to discuss what's bringing you to therapy, answer your questions, and determine if we're a good fit. No pressure, no commitment—just a conversation to see if this makes sense for you.</p>
+                
+                <h3>First Full Session</h3>
+                <p>We'll explore your current situation in depth—work environment, stress patterns, what you've tried, and what your goals are. You'll leave with at least one practical tool to use immediately.</p>
+                
+                <h3>Ongoing Sessions</h3>
+                <p>Weekly or biweekly 50-minute sessions, depending on your needs and schedule. Each session builds on the previous one, developing your toolkit for managing workplace stress and preventing future burnout.</p>
+                
+                <h3>Timeline for Results</h3>
+                <p>Many clients notice meaningful shifts within 4-6 sessions. More comprehensive changes typically develop over 3-6 months. We'll regularly assess progress and adjust our approach based on what's working for you.</p>
+                
+                <h3>Flexibility Built In</h3>
+                <p>I understand professional schedules are unpredictable. Sessions can be rescheduled with 24-hour notice. Evening and lunch appointments available. Virtual format means no commute time.</p>
+            </section>
+
+            <!-- Section: FAQ -->
+            <section class="section">
+                <h2 class="section-title">Frequently Asked Questions About Burnout Therapy</h2>
 
                 <div class="faq-item">
                     <h3>How do I know if my work stress needs professional support?</h3>
-                    <p>If work stress is affecting your sleep, relationships, physical health, or overall life satisfaction for several weeks, therapy can provide effective tools and perspective. You don't need to wait for a crisis—early support, often called <strong>burnout prevention for professionals</strong>, often prevents more serious problems.</p>
+                    <p>If work stress is affecting your sleep, relationships, physical health, or overall life satisfaction for several weeks, therapy can provide effective tools and perspective. You don't need to wait for a crisis—early support, often called <strong>burnout prevention for professionals</strong>, often prevents more serious problems. Signs that therapy could help include: persistent exhaustion that doesn't improve with rest, dreading work most days, physical symptoms like headaches or digestive issues, irritability that's affecting your relationships, or feeling like you've lost yourself.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>Can therapy help if my workplace is genuinely toxic?</h3>
-                    <p>Therapy helps you develop strategies for managing your response to difficult workplace situations while also clarifying when changes might be necessary for your wellbeing. It's about increasing your options and clarity. We provide <strong>workplace anxiety therapy in Ontario</strong> to help you navigate these complex dynamics.</p>
+                    <p>Therapy helps you develop strategies for managing your response to difficult workplace situations while also clarifying when changes might be necessary for your wellbeing. It's about increasing your options and clarity. We provide <strong>workplace anxiety therapy in Ontario</strong> to help you navigate these complex dynamics. Sometimes the answer is developing better coping strategies; sometimes it's making a change. Therapy helps you figure out which is right for your situation.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>Will my employer find out I'm receiving therapy?</h3>
-                    <p>Therapy sessions are completely confidential. Many professionals use their extended health benefits without any workplace disclosure. Virtual therapy adds an additional layer of privacy, as you can attend sessions from home or a private location.</p>
+                    <p>Therapy sessions are completely confidential. Many professionals use their extended health benefits without any workplace disclosure—insurance claims typically show only that you received "psychotherapy services." Virtual therapy adds an additional layer of privacy, as you can attend sessions from home or a private location. Your employer has no right to access your health information.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>Is this executive burnout treatment?</h3>
-                    <p>Yes, I work with many executives and senior leaders. <strong>Executive burnout treatment in Ontario</strong> often involves addressing the unique isolation and decision-fatigue at senior levels. My approach is confidential, practical, and respects the specific pressures of leadership roles.</p>
+                    <p>Yes, I work with many executives and senior leaders. <strong>Executive burnout treatment in Ontario</strong> often involves addressing the unique isolation and decision-fatigue at senior levels. My approach is confidential, practical, and respects the specific pressures of leadership roles. We address challenges like strategic decision-making under pressure, managing difficult teams, and the loneliness of leadership.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Do I need a referral?</h3>
-                    <p>No, you don't need a referral to see a Registered Psychotherapist. You can book directly. Most insurance plans cover our services without a doctor's note, but check your specific policy.</p>
+                    <h3>How long does burnout recovery typically take?</h3>
+                    <p>Burnout recovery varies by individual and severity. Many clients report meaningful improvements within 6-8 sessions—better sleep, reduced anxiety, clearer thinking. More comprehensive changes—like fundamentally shifting your relationship with work—typically develop over 3-6 months. We'll discuss realistic expectations during your consultation based on your specific situation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What's the difference between stress and burnout?</h3>
+                    <p>Stress typically involves feeling overwhelmed but still engaged—you're running fast but still care about the finish line. Burnout involves emotional exhaustion, cynicism, and feeling detached or ineffective—you're running on empty and have stopped caring about the finish line. Burnout often develops gradually after prolonged stress without adequate recovery. The distinction matters because the approaches to addressing each are somewhat different.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do I need a referral to see a psychotherapist for burnout?</h3>
+                    <p>No, you don't need a referral to see a Registered Psychotherapist in Ontario. You can book directly. Most insurance plans cover our services without a doctor's note, but check your specific policy. Many plans cover 80-100% of psychotherapy fees from CRPO-registered therapists.</p>
                 </div>
             </section>
+
+            <!-- Section: When to Seek Help -->
+            <section class="section">
+                <h2 class="section-title">When to Seek Help for Workplace Burnout</h2>
+                <p>Many professionals wait too long before seeking support, often because they believe they should be able to handle everything on their own. Here are signs that it's time to reach out:</p>
+                
+                <div style="background: var(--bg-alternate); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-green);">
+                    <h3 style="margin-top: 0; color: var(--text-primary);">Consider Reaching Out If:</h3>
+                    <ul class="criteria-list" style="margin-bottom: 0;">
+                        <li>Work stress is consistently affecting your sleep (trouble falling asleep, staying asleep, or waking exhausted)</li>
+                        <li>You've lost interest in hobbies, relationships, or activities you used to enjoy</li>
+                        <li>You're using alcohol, food, or other substances to cope with work stress</li>
+                        <li>Physical symptoms like headaches, muscle tension, or digestive issues persist</li>
+                        <li>Your relationships are suffering because of work-related irritability or absence</li>
+                        <li>You're having thoughts like "What's the point?" or "I can't keep doing this"</li>
+                        <li>Weekend recovery time no longer feels like enough</li>
+                        <li>You've had feedback about changes in your performance or demeanor</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1.5rem;">You don't need to be in crisis to benefit from professional support. In fact, earlier intervention typically leads to faster recovery and prevents more serious consequences.</p>
+            </section>
+
+            <!-- Final CTA -->
+            <div class="cta-box" style="background: linear-gradient(135deg, #1e3a4f 0%, #152a3a 100%); color: white; padding: 2.5rem; border-radius: 12px; text-align: center; margin: 3rem 0;">
+                <h3 style="color: white; margin-top: 0; font-size: 1.75rem;">Take the First Step</h3>
+                <p style="color: rgba(255,255,255,0.95); font-size: 1.15rem; margin-bottom: 2rem;">You've been running on empty long enough. A brief conversation can help you see what's possible.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="background: white; color: #2e5c55 !important;">📅 Schedule Free Consultation</a>
+                    <a href="tel:+14163062157" class="secondary-cta" style="color: white !important; border-color: white;">📞 (416) 306-2157</a>
+                </div>
+            </div>
 
         </main>
 

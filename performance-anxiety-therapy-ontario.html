@@ -35,65 +35,151 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Performance Anxiety Therapy Ontario",
-      "description": "Professional performance anxiety therapy services for high-achieving professionals throughout Ontario",
-      "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-ontario",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "identifier": "CRPO #10979"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario"
-      }
-    }
-    </script>
-
-    <!-- Service Schema for Rich Results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Performance Anxiety Therapy",
-      "provider": {
-        "@type": "ProfessionalService",
-        "name": "Next Step Therapy Ontario",
-        "description": "CRPO registered psychotherapist (#10979) providing performance anxiety therapy for high-achieving professionals.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Toronto",
-          "addressRegion": "ON",
-          "addressCountry": "CA"
-        },
-        "telephone": "+14163062157",
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Ontario",
-          "containedInPlace": {
-            "@type": "Country",
-            "name": "Canada"
+      "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "name": "Performance Anxiety Therapy Ontario",
+          "description": "Professional performance anxiety therapy services for high-achieving professionals throughout Ontario",
+          "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-ontario.html",
+          "provider": {
+            "@type": "Person",
+            "name": "Jesse Cynamon",
+            "jobTitle": "Registered Psychotherapist",
+            "identifier": "CRPO #10979"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Ontario"
           }
         },
-        "hasCredential": "CRPO #10979",
-        "priceRange": "$$"
-      },
-      "description": "Specialized support for high-achieving professionals experiencing workplace stress and performance anxiety. Evidence-based virtual therapy with flexible evening scheduling. Same-week appointments available.",
-      "offers": {
-        "@type": "Offer",
-        "price": "175",
-        "priceCurrency": "CAD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-ontario.html"
-      }
+        {
+          "@type": "Service",
+          "serviceType": "Performance Anxiety Therapy",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Next Step Therapy Ontario",
+            "description": "CRPO registered psychotherapist (#10979) providing performance anxiety therapy for high-achieving professionals.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "addressCountry": "CA"
+            },
+            "telephone": "+14163062157",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Ontario",
+              "containedInPlace": {
+                "@type": "Country",
+                "name": "Canada"
+              }
+            },
+            "hasCredential": "CRPO #10979",
+            "priceRange": "$$"
+          },
+          "description": "Specialized support for high-achieving professionals experiencing workplace stress and performance anxiety. Evidence-based virtual therapy with flexible evening scheduling. Same-week appointments available.",
+          "offers": {
+            "@type": "Offer",
+            "price": "175",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-ontario.html"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is performance anxiety and how does it affect professionals?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Performance anxiety is intense fear or worry about situations where professional competence is on display—presentations, meetings, public speaking, or high-stakes decisions. It can cause physical symptoms like rapid heartbeat, sweating, and mind blanking, and often affects high-achievers who have built successful careers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is performance anxiety different from general anxiety?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Performance anxiety is triggered by specific situations where you're being evaluated or observed professionally. You might function well in other areas of life but experience significant distress before presentations, meetings, or high-visibility moments. General anxiety tends to be more pervasive across different situations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can therapy help if I need to perform at a high level tomorrow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, even a single session can provide practical grounding techniques and cognitive strategies for immediate use. Many clients find that learning to reframe their anxiety and having specific tools to use before and during performance situations makes an immediate difference."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my colleagues know I'm receiving therapy for performance anxiety?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Therapy is completely confidential. Virtual sessions can be attended from anywhere private, and insurance claims only show 'psychotherapy services.' Your employer has no right to access your health information."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does it take to overcome performance anxiety?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many clients notice meaningful improvement within 4-8 sessions. Building lasting confidence typically takes 3-6 months of regular work. The timeline depends on severity, how long you've experienced performance anxiety, and how consistently you apply techniques between sessions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is performance anxiety related to imposter syndrome?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Often, yes. Many professionals with performance anxiety also experience imposter syndrome—the persistent belief that success is due to luck rather than competence. We address both issues together, helping you reconnect with evidence of your actual capabilities."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a referral for performance anxiety therapy in Ontario?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, you don't need a referral to see a Registered Psychotherapist in Ontario. You can book directly. Most extended health plans cover psychotherapy services without a doctor's note."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
-    <!-- Internal style block removed by Design Audit -->
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -106,9 +192,11 @@
                     <span class="credentials-badge-prominent">CRPO #10979</span>
                 </div>
                 <nav class="nav">
-                    <a href="/#approach">Approach</a>
-                    <a href="/#specializations">Services</a>
-                    <a href="/#contact">Contact</a>
+                    <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
+                    <a href="/anxiety-therapy-ontario.html">Anxiety</a>
+                    <a href="/workplace-stress-therapy-ontario.html">Work Stress</a>
+                    <a href="/jesse-cynamon-psychotherapist-ontario.html">About</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Schedule 15-Min Consultation</a>
                 </nav>
                 <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
             </div>
@@ -121,6 +209,9 @@
         <section class="hero">
             <div class="container">
                 <h1>Performance Anxiety Therapy Ontario: Build Confidence Under Pressure</h1>
+                <p style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin: 0.5em auto 1em auto; text-align: center;">
+                    <strong>Last Updated:</strong> December 2025 | <strong>Reviewed by:</strong> Jesse Cynamon, RP (CRPO #10979)
+                </p>
                 <p class="lead-text">Understanding support for executives and professionals navigating the unique pressures of high-stakes performance environments</p>
 
                 <div class="trust-pills">
@@ -131,7 +222,7 @@
                 </div>
 
                 <div class="hero-cta">
-                    <a href="/#contact" class="manus-primary-cta">Book Your Free Consultation</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Book Your Free Consultation</a>
                     <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                 </div>
             </div>
@@ -170,8 +261,67 @@
             </div>
         </section>
 
-        <!-- Understanding Professional Performance Anxiety -->
+        <!-- Types of Performance Anxiety -->
         <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2 class="section-title">Types of Performance Anxiety: Where Does Yours Show Up?</h2>
+                        <p>Performance anxiety isn't one-size-fits-all. Understanding how it manifests for you is the first step toward addressing it effectively. Here are the most common forms I see in my Ontario practice:</p>
+
+                        <h3>Public Speaking and Presentation Anxiety</h3>
+                        <p>This is the most widely recognized form of performance anxiety. It affects professionals at all levels—from first presentations to C-suite executives addressing shareholders. Symptoms often include:</p>
+                        <ul class="feature-list">
+                            <li>Racing heart and shallow breathing before and during presentations</li>
+                            <li>Voice trembling or going blank mid-presentation</li>
+                            <li>Excessive preparation that never feels like enough</li>
+                            <li>Avoiding speaking opportunities that could advance your career</li>
+                            <li>Post-presentation rumination about perceived mistakes</li>
+                        </ul>
+
+                        <h3>Meeting and Contribution Anxiety</h3>
+                        <p>Some professionals experience anxiety not about formal presentations, but about contributing in meetings, especially with senior leadership or clients. This might look like:</p>
+                        <ul class="feature-list">
+                            <li>Rehearsing comments mentally but never speaking up</li>
+                            <li>Waiting for the "perfect moment" that never comes</li>
+                            <li>Second-guessing ideas before sharing them</li>
+                            <li>Physical tension during meetings even when not speaking</li>
+                            <li>Feeling invisible or overlooked despite having valuable input</li>
+                        </ul>
+
+                        <h3>Evaluation and Feedback Anxiety</h3>
+                        <p>Performance reviews, 360 feedback, and professional evaluations can trigger intense anxiety for high-achievers who tie self-worth to professional performance:</p>
+                        <ul class="feature-list">
+                            <li>Catastrophizing about feedback before receiving it</li>
+                            <li>Focusing exclusively on criticism while dismissing positive feedback</li>
+                            <li>Anxiety persisting days or weeks after evaluations</li>
+                            <li>Avoiding asking for feedback that could support growth</li>
+                        </ul>
+
+                        <h3>Sales and Client Performance Anxiety</h3>
+                        <p>For professionals in client-facing roles, every interaction can feel like a high-stakes performance:</p>
+                        <ul class="feature-list">
+                            <li>Anxiety before sales calls or client meetings</li>
+                            <li>Difficulty thinking clearly during negotiations</li>
+                            <li>Over-preparing to the point of sounding scripted</li>
+                            <li>Taking rejection personally despite knowing it's not personal</li>
+                        </ul>
+
+                        <h3>Leadership and Decision-Making Anxiety</h3>
+                        <p>Senior professionals often experience anxiety around the visibility and consequences of leadership decisions:</p>
+                        <ul class="feature-list">
+                            <li>Paralysis when facing important decisions</li>
+                            <li>Excessive consultation to avoid sole responsibility</li>
+                            <li>Difficulty delegating due to fear of negative outcomes</li>
+                            <li>Ruminating about past decisions and their consequences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Professional Performance Anxiety -->
+        <section class="section">
             <div class="container">
                 <div class="content-grid">
                     <div class="content-card">
@@ -221,7 +371,7 @@
         </section>
 
         <!-- Therapeutic Approach for Professionals -->
-        <section class="section">
+        <section class="section alternate-bg">
             <div class="container">
                 <div class="content-grid">
                     <div class="content-card">
@@ -237,6 +387,15 @@
                             <li><strong>Attention training:</strong> Maintaining focus on content rather than audience reactions</li>
                             <li><strong>Confidence anchoring:</strong> Connecting with past professional successes during challenging moments</li>
                             <li><strong>Perspective taking:</strong> Understanding audience motivations and realistic response ranges</li>
+                        </ul>
+
+                        <h3>Acceptance and Commitment Therapy (ACT) for Performance</h3>
+                        <p>ACT provides powerful tools for professionals dealing with performance anxiety:</p>
+                        <ul class="feature-list">
+                            <li><strong>Cognitive defusion:</strong> Learning to observe anxious thoughts without being controlled by them</li>
+                            <li><strong>Values clarification:</strong> Connecting performance to what truly matters in your career</li>
+                            <li><strong>Present moment focus:</strong> Staying grounded during high-pressure moments</li>
+                            <li><strong>Committed action:</strong> Taking meaningful career steps despite anxiety</li>
                         </ul>
 
                         <h3>Practical Performance Skills</h3>
@@ -266,7 +425,7 @@
         </section>
 
         <!-- Addressing Impostor Syndrome -->
-        <section class="section alternate-bg">
+        <section class="section">
             <div class="container">
                 <div class="content-grid">
                     <div class="content-card">
@@ -311,7 +470,7 @@
         </section>
 
         <!-- Virtual Therapy for Professionals -->
-        <section class="section">
+        <section class="section alternate-bg">
             <div class="container">
                 <div class="content-grid">
                     <div class="content-card">
@@ -328,17 +487,6 @@
                             <li><strong>Professional discretion:</strong> Handle sessions like any other confidential business call</li>
                         </ul>
 
-                        <h3>Executive-Level Considerations</h3>
-                        <p>Working with senior professionals requires understanding the unique pressures and responsibilities of executive roles:</p>
-
-                        <ul class="feature-list">
-                            <li><strong>Time constraints:</strong> Efficient, focused sessions that respect your schedule demands</li>
-                            <li><strong>Decision fatigue:</strong> Supporting mental clarity and decision-making capacity</li>
-                            <li><strong>Public visibility:</strong> Managing anxiety when your performance affects organizational reputation</li>
-                            <li><strong>Leadership pressure:</strong> Balancing authentic expression with professional leadership requirements</li>
-                            <li><strong>Work-life integration:</strong> Managing performance anxiety across different professional contexts</li>
-                        </ul>
-
                         <h3>Practical Application in Professional Settings</h3>
                         <p>Virtual therapy allows for immediate application of strategies in your actual work environment:</p>
 
@@ -353,7 +501,53 @@
 
                     <div class="cta-box">
                         <p>Ready to perform at your best without overwhelming anxiety?</p>
-                        <a href="/#contact" class="manus-primary-cta">Schedule Your Consultation</a>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Schedule Your Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2 class="section-title">Frequently Asked Questions About Performance Anxiety Therapy</h2>
+
+                        <div class="faq-item">
+                            <h3>What is performance anxiety and how does it affect professionals?</h3>
+                            <p>Performance anxiety is intense fear or worry about situations where professional competence is on display—presentations, meetings, public speaking, or high-stakes decisions. It can cause physical symptoms like rapid heartbeat, sweating, and mind blanking. It often affects high-achievers who have built successful careers and ties their self-worth to professional performance.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>How is performance anxiety different from general anxiety?</h3>
+                            <p>Performance anxiety is triggered by specific situations where you're being evaluated or observed professionally. You might function well in other areas of life but experience significant distress before presentations, meetings, or high-visibility moments. General anxiety tends to be more pervasive across different situations. Understanding this distinction helps us target treatment effectively.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Can therapy help if I need to perform at a high level tomorrow?</h3>
+                            <p>Yes, even a single session can provide practical grounding techniques and cognitive strategies for immediate use. Many clients find that learning to reframe their anxiety and having specific tools to use before and during performance situations makes an immediate difference. We can also schedule sessions strategically before major presentations or events.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Will my colleagues know I'm receiving therapy for performance anxiety?</h3>
+                            <p>No. Therapy is completely confidential. Virtual sessions can be attended from anywhere private—your home office, car, or even while traveling. Insurance claims only show "psychotherapy services" without any indication of the reason. Your employer has no right to access your health information.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>How long does it take to overcome performance anxiety?</h3>
+                            <p>Many clients notice meaningful improvement within 4-8 sessions—reduced physical symptoms, clearer thinking during presentations, and more confidence. Building lasting confidence typically takes 3-6 months of regular work. The timeline depends on severity, how long you've experienced performance anxiety, and how consistently you apply techniques between sessions.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Is performance anxiety related to imposter syndrome?</h3>
+                            <p>Often, yes. Many professionals with performance anxiety also experience imposter syndrome—the persistent belief that success is due to luck rather than competence. The two issues reinforce each other: imposter syndrome makes you doubt your abilities, and performance anxiety amplifies those doubts during high-pressure moments. We address both issues together, helping you reconnect with evidence of your actual capabilities.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Do I need a referral for performance anxiety therapy in Ontario?</h3>
+                            <p>No, you don't need a referral to see a Registered Psychotherapist in Ontario. You can book directly. Most extended health plans cover psychotherapy services without a doctor's note—check your specific policy for coverage details.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -378,15 +572,6 @@
                             <li><strong>Results orientation:</strong> Focusing on practical strategies with measurable impact</li>
                         </ul>
 
-                        <h3>Flexible Engagement Options</h3>
-                        <ul class="feature-list">
-                            <li><strong>Intensive sessions:</strong> Longer sessions to address complex professional challenges</li>
-                            <li><strong>Pre-event support:</strong> Targeted sessions before major presentations or high-stakes events</li>
-                            <li><strong>Ongoing consultation:</strong> Regular sessions to build sustainable confidence and performance skills</li>
-                            <li><strong>Crisis support:</strong> Available for urgent professional situations requiring immediate support</li>
-                            <li><strong>Leadership coaching integration:</strong> Collaborative approach with existing professional development resources</li>
-                        </ul>
-
                         <h3>Investment and Confidentiality</h3>
                         <p>Sessions are $175 for 50 minutes, with many executive health plans covering Registered Psychotherapist services. All interactions are completely confidential, with the same professional boundaries you'd expect in any executive consultation.</p>
 
@@ -395,7 +580,7 @@
 
                     <div class="cta-box">
                         <p>Professional performance anxiety doesn't have to limit your career potential.</p>
-                        <a href="/#contact" class="manus-primary-cta">Start With a Confidential Consultation</a>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="manus-primary-cta">Start With a Confidential Consultation</a>
                         <br><br>
                         <a href="tel:+14163062157" class="secondary-cta">Call (416) 306-2157</a>
                     </div>
@@ -422,11 +607,8 @@
                         <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
                         <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
                         <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
                         <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
                         <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #1e3a4f;">All Services →</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -435,24 +617,18 @@
                         <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
                         <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
                         <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
                         <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
                         <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
                         <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #1e3a4f;">All Ontario →</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Specialized Support</h4>
                     <ul>
                         <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
+                        <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
                         <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
                         <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
                         <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
                     </ul>
                 </div>
@@ -460,22 +636,19 @@
                     <h4>Resources & Guides</h4>
                     <ul>
                         <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
                         <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                        <li><a href="/what-to-expect-first-session.html">What to Expect</a></li>
                         <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Professional Standards</h4>
                     <ul>
                         <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
                     </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Performance anxiety support across Ontario</p>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Member: CRPO, OAMHP<br>Serving Ontario since 2022</p>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
@@ -485,12 +658,18 @@
                 </p>
             </div>
             <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
                 Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> October 28, 2025</p>
+                <strong>Last Updated:</strong> December 2025</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
 
   <script src="/js/security-check.js"></script>
 </body>
