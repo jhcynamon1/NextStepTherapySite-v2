@@ -1679,16 +1679,24 @@ section.contact-section {
 
 /* CTA box buttons - white background, navy text */
 .cta-box .btn-primary,
+.cta-box .btn.btn-primary,
 .cta-box .manus-primary-cta,
 .cta-box .primary-cta,
 .cta-box a.manus-primary-cta,
 .cta-box a.btn-primary,
+.cta-box a.btn.btn-primary,
 .cta-box a.primary-cta,
 [class*="cta-box"] .btn-primary,
+[class*="cta-box"] .btn.btn-primary,
 [class*="cta-box"] .manus-primary-cta {
+    display: inline-block !important;
     background: #ffffff !important;
-    color: #1a2a3a !important;
+    color: #1e3a4f !important;
     border: 2px solid #ffffff !important;
+    padding: 1rem 2rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
 }
 
 /* CTA box secondary buttons - white outline */
@@ -1882,4 +1890,42 @@ section .cta-box {
 .helpful-resources ul li a:hover {
     background: var(--sage) !important;
     color: var(--white) !important;
+}
+
+/* ============================================
+   FINAL NUCLEAR OVERRIDE: CTA BOX BUTTONS
+   Added December 2024 to fix invisible buttons
+   ============================================ */
+.cta-box a.btn,
+.cta-box a.btn-primary,
+.cta-box a.btn.btn-primary,
+div.cta-box a.btn,
+div.cta-box a.btn-primary,
+section .cta-box a.btn,
+section .cta-box a.btn-primary,
+main .cta-box a.btn,
+main .cta-box a.btn-primary,
+article .cta-box a.btn,
+article .cta-box a.btn-primary {
+    display: inline-block !important;
+    background: #ffffff !important;
+    color: #1e3a4f !important;
+    padding: 1rem 2rem !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+}
+
+.cta-box a.btn:hover,
+.cta-box a.btn-primary:hover,
+.cta-box a.btn.btn-primary:hover,
+div.cta-box a.btn:hover,
+div.cta-box a.btn-primary:hover {
+    background: #f8f6f3 !important;
+    color: #1e3a4f !important;
+    transform: translateY(-2px) !important;
 }
