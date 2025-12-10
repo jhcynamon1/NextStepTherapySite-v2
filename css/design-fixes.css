@@ -1,193 +1,392 @@
 /* ============================================
-   NEXTSTEP THERAPY - DESIGN SYSTEM FIX
-   Final Override - December 2024
+   NEXTSTEP THERAPY - PREMIUM DESIGN SYSTEM
+   Designer-Quality Overhaul - December 2024
 
-   AESTHETIC: Refined Clinical Warmth
-   - Navy (#1e3a4f) for trust & professionalism
-   - Sage (#4a7c59) ONLY for accents, never text
-   - Warm ivory backgrounds for approachability
-   - Clear text hierarchy with high contrast
+   AESTHETIC: Refined Clinical Luxury
+   Inspired by high-end wellness brands like
+   Headspace, Calm, and premium medical practices
+
+   Key principles:
+   - Generous whitespace that feels intentional
+   - Clear typographic hierarchy
+   - Subtle depth through shadows
+   - Refined micro-interactions
+   - Professional, trustworthy, warm
    ============================================ */
 
 /* ============================================
-   1. AUTHORITATIVE DESIGN TOKENS
+   1. DESIGN TOKENS - Premium Variables
    ============================================ */
 :root {
-    /* Brand Colors */
-    --navy: #1e3a4f;
-    --navy-dark: #152a3a;
-    --navy-light: #2d4a5e;
+    /* Primary Palette - Deep Navy */
+    --navy: #1a3344;
+    --navy-dark: #0f1f2a;
+    --navy-light: #2a4a5e;
+    --navy-muted: #3d5a6e;
 
-    /* Accent - Use sparingly */
+    /* Accent - Sage (sparingly) */
     --sage: #4a7c59;
-    --sage-light: #5f9970;
+    --sage-light: #5a9068;
+    --sage-pale: rgba(74, 124, 89, 0.08);
 
-    /* Backgrounds */
+    /* Warm Neutrals - The foundation */
     --white: #ffffff;
     --ivory: #fdfcfa;
-    --cream: #f8f6f3;
-    --linen: #f2efe9;
+    --cream: #f9f7f4;
+    --linen: #f3f0eb;
+    --sand: #e8e4dd;
+    --stone: #d4cfc6;
+
+    /* Text Hierarchy */
+    --text-primary: #1a3344;
+    --text-secondary: #4a5a6a;
+    --text-tertiary: #6b7a8a;
+    --text-muted: #8a949e;
+    --text-inverse: #ffffff;
+    --text-dark: #1a3344;
+    --text-body: #4a5a6a;
 
     /* Borders */
-    --border: #e5e0d8;
     --border-light: #ede9e3;
+    --border: #e0dbd4;
+    --border-dark: #d0cbc4;
 
-    /* Text - ALWAYS high contrast */
-    --text-dark: #1e3a4f;
-    --text-body: #3d4f5f;
-    --text-muted: #5a6a7a;
-    --text-light: #ffffff;
+    /* Typography - Refined Pairing */
+    --font-display: 'Cormorant Garamond', 'Georgia', serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    /* Typography */
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', -apple-system, sans-serif;
+    /* Type Scale - More refined */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
 
-    /* Spacing */
-    --section-pad: 5rem;
-    --container-max: 1200px;
+    /* Spacing Scale - Harmonious */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(30, 58, 79, 0.08);
-    --shadow-md: 0 4px 16px rgba(30, 58, 79, 0.1);
-    --shadow-lg: 0 8px 32px rgba(30, 58, 79, 0.12);
+    /* Shadows - Subtle depth */
+    --shadow-xs: 0 1px 2px rgba(26, 51, 68, 0.04);
+    --shadow-sm: 0 2px 4px rgba(26, 51, 68, 0.06);
+    --shadow-md: 0 4px 12px rgba(26, 51, 68, 0.08);
+    --shadow-lg: 0 8px 24px rgba(26, 51, 68, 0.10);
+    --shadow-xl: 0 16px 48px rgba(26, 51, 68, 0.12);
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 400ms;
 }
 
 /* ============================================
-   2. BASE TYPOGRAPHY - HIGH CONTRAST
+   2. BASE RESET & TYPOGRAPHY
    ============================================ */
-html, body {
-    font-family: var(--font-body) !important;
-    color: var(--text-body) !important;
-    background: var(--ivory) !important;
-    line-height: 1.7 !important;
-    -webkit-font-smoothing: antialiased !important;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--font-body) !important;
+    font-size: var(--text-base) !important;
+    line-height: 1.7 !important;
+    color: var(--text-secondary) !important;
+    background: var(--ivory) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Headings - Clear hierarchy */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display) !important;
-    color: var(--text-dark) !important;
+    color: var(--text-primary) !important;
     font-weight: 500 !important;
     line-height: 1.2 !important;
+    margin: 0 0 var(--space-4) 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+h1 {
+    font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl)) !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+}
+
+h2 {
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)) !important;
+    font-weight: 500 !important;
+}
+
+h3 {
+    font-size: var(--text-xl) !important;
+    font-weight: 500 !important;
+}
+
+h4 {
+    font-size: var(--text-lg) !important;
+    font-weight: 600 !important;
+    font-family: var(--font-body) !important;
 }
 
 p {
-    color: var(--text-body) !important;
+    color: var(--text-secondary) !important;
     line-height: 1.7 !important;
+    margin: 0 0 var(--space-4) 0 !important;
 }
 
-/* Links - Navy, NOT sage (sage is too light) */
+p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Links - Refined styling */
 a {
     color: var(--navy) !important;
-    text-decoration: underline !important;
-    text-decoration-color: var(--border) !important;
-    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    transition: color var(--duration-fast) ease !important;
 }
 
 a:hover {
     color: var(--navy-light) !important;
+}
+
+/* Inline links in content */
+p a, li a {
+    text-decoration: underline !important;
+    text-decoration-color: var(--border) !important;
+    text-underline-offset: 3px !important;
+}
+
+p a:hover, li a:hover {
     text-decoration-color: var(--navy) !important;
 }
 
 /* ============================================
-   3. HEADER - Clean & Professional
+   3. LAYOUT CONTAINERS
+   ============================================ */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 var(--space-6) !important;
+}
+
+.container-narrow {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 0 var(--space-6) !important;
+}
+
+/* Section spacing - Balanced rhythm */
+section {
+    padding: var(--space-16) 0 !important;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: var(--space-12) 0 !important;
+    }
+}
+
+/* ============================================
+   4. HEADER - Clean & Professional
    ============================================ */
 .header, header.header {
     background: var(--white) !important;
-    border-bottom: 1px solid var(--border) !important;
-    padding: 1rem 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    padding: var(--space-4) 0 !important;
     position: sticky !important;
     top: 0 !important;
     z-index: 1000 !important;
     box-shadow: none !important;
+    transition: box-shadow var(--duration-normal) ease !important;
+}
+
+.header.scrolled {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.header-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: var(--space-6) !important;
+}
+
+.logo-section {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--space-3) !important;
+}
+
+.logo {
+    height: 36px !important;
+    width: auto !important;
 }
 
 .logo-text {
     font-family: var(--font-display) !important;
-    font-size: 1.375rem !important;
-    color: var(--text-dark) !important;
-    text-decoration: none !important;
-}
-
-.nav a {
-    color: var(--text-body) !important;
-    text-decoration: none !important;
+    font-size: var(--text-xl) !important;
     font-weight: 500 !important;
-}
-
-.nav a:hover {
-    color: var(--text-dark) !important;
-}
-
-.header-phone {
-    color: var(--text-dark) !important;
-    font-weight: 600 !important;
+    color: var(--text-primary) !important;
     text-decoration: none !important;
 }
 
+.logo-text:hover {
+    color: var(--text-primary) !important;
+}
+
+/* Navigation */
+.nav, nav ul.nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--space-6) !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.nav a, nav ul.nav a, .nav li a {
+    font-size: var(--text-sm) !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    padding: var(--space-2) 0 !important;
+    position: relative !important;
+    transition: color var(--duration-fast) ease !important;
+}
+
+.nav a:hover, nav ul.nav a:hover, .nav li a:hover {
+    color: var(--text-primary) !important;
+}
+
+/* Header Phone */
+.header-phone {
+    font-size: var(--text-sm) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+/* Credentials Badge */
 .credentials-badge,
 .credentials-badge-prominent {
+    display: inline-flex !important;
+    align-items: center !important;
     background: var(--navy) !important;
     color: var(--white) !important;
-    padding: 4px 12px !important;
-    border-radius: 4px !important;
-    font-size: 0.6875rem !important;
+    padding: var(--space-1) var(--space-3) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--text-xs) !important;
     font-weight: 700 !important;
     letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
-    border: none !important;
+}
+
+/* Header Book Button */
+.header-book-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: var(--space-2) var(--space-4) !important;
+    border-radius: var(--radius-md) !important;
+    font-size: var(--text-sm) !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all var(--duration-fast) ease !important;
+}
+
+.header-book-btn:hover {
+    background: var(--navy-light) !important;
+    color: var(--white) !important;
+    transform: translateY(-1px) !important;
 }
 
 /* ============================================
-   4. HERO SECTION
+   5. HERO SECTION
    ============================================ */
 .hero, section.hero {
     background: var(--cream) !important;
-    padding: var(--section-pad) 0 !important;
+    padding: var(--space-16) 0 var(--space-20) !important;
 }
 
 .hero h1 {
-    font-size: clamp(2.25rem, 5vw, 3.25rem) !important;
-    color: var(--text-dark) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 1.5rem !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-6) !important;
+    max-width: 800px !important;
 }
 
 .hero .lead-text,
-.hero p {
-    color: var(--text-body) !important;
-    font-size: 1.125rem !important;
+.hero p.lead-text {
+    font-size: var(--text-lg) !important;
+    color: var(--text-secondary) !important;
+    max-width: 650px !important;
+    line-height: 1.8 !important;
+}
+
+.hero-credentials {
+    margin-top: var(--space-6) !important;
 }
 
 .hero-credentials p {
-    color: var(--text-dark) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--text-tertiary) !important;
 }
 
 /* ============================================
-   5. BUTTONS - Clear, High Contrast
+   6. BUTTONS - Premium Styling
    ============================================ */
 
-/* Primary Button - Navy with white text */
+/* Primary Button */
 .btn-primary,
 .primary-cta,
 .manus-primary-cta,
 a.btn-primary,
 a.primary-cta,
 button.btn-primary,
-.header-book-btn {
+.btn {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    gap: var(--space-2) !important;
     background: var(--navy) !important;
     color: var(--white) !important;
-    padding: 0.875rem 1.75rem !important;
-    border-radius: 8px !important;
+    padding: var(--space-3) var(--space-6) !important;
+    border-radius: var(--radius-md) !important;
     font-family: var(--font-body) !important;
-    font-size: 0.9375rem !important;
+    font-size: var(--text-sm) !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     border: 2px solid var(--navy) !important;
     cursor: pointer !important;
-    transition: all 0.25s ease !important;
+    transition: all var(--duration-normal) var(--ease-out) !important;
     box-shadow: var(--shadow-sm) !important;
 }
 
@@ -196,16 +395,17 @@ button.btn-primary,
 .manus-primary-cta:hover,
 a.btn-primary:hover,
 a.primary-cta:hover,
-.header-book-btn:hover {
-    background: var(--white) !important;
-    color: var(--navy) !important;
-    border-color: var(--navy) !important;
+button.btn-primary:hover,
+.btn:hover {
+    background: var(--navy-dark) !important;
+    border-color: var(--navy-dark) !important;
+    color: var(--white) !important;
     transform: translateY(-2px) !important;
     box-shadow: var(--shadow-md) !important;
     text-decoration: none !important;
 }
 
-/* Secondary Button - Outline */
+/* Secondary Button */
 .btn-secondary,
 .secondary-cta,
 a.btn-secondary,
@@ -213,17 +413,18 @@ a.secondary-cta {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    gap: var(--space-2) !important;
     background: transparent !important;
     color: var(--navy) !important;
-    padding: 0.875rem 1.75rem !important;
-    border-radius: 8px !important;
+    padding: var(--space-3) var(--space-6) !important;
+    border-radius: var(--radius-md) !important;
     font-family: var(--font-body) !important;
-    font-size: 0.9375rem !important;
+    font-size: var(--text-sm) !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     border: 2px solid var(--navy) !important;
     cursor: pointer !important;
-    transition: all 0.25s ease !important;
+    transition: all var(--duration-normal) var(--ease-out) !important;
 }
 
 .btn-secondary:hover,
@@ -233,161 +434,298 @@ a.secondary-cta:hover {
     background: var(--navy) !important;
     color: var(--white) !important;
     text-decoration: none !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Button inside dark sections */
+.cta-box .btn-primary,
+.approach .btn-primary,
+.contact .btn-primary,
+.cta-box .btn,
+.approach .btn,
+.contact .btn {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border-color: var(--white) !important;
+}
+
+.cta-box .btn-primary:hover,
+.approach .btn-primary:hover,
+.contact .btn-primary:hover,
+.cta-box .btn:hover,
+.approach .btn:hover,
+.contact .btn:hover {
+    background: var(--cream) !important;
+    color: var(--navy) !important;
+}
+
+.cta-box .btn-secondary,
+.approach .btn-secondary,
+.contact .btn-secondary {
+    background: transparent !important;
+    color: var(--white) !important;
+    border-color: rgba(255,255,255,0.5) !important;
+}
+
+.cta-box .btn-secondary:hover,
+.approach .btn-secondary:hover,
+.contact .btn-secondary:hover {
+    background: rgba(255,255,255,0.1) !important;
+    border-color: var(--white) !important;
 }
 
 /* ============================================
-   6. STRATEGIC CTA SECTIONS
-   Light background with DARK text
+   7. SECTION HEADERS
    ============================================ */
-.strategic-cta-section {
-    background: var(--cream) !important;
-    padding: 2.5rem !important;
-    border-radius: 16px !important;
+.section-header {
     text-align: center !important;
-    margin-top: 3rem !important;
-    border: 1px solid var(--border) !important;
+    margin-bottom: var(--space-12) !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
-/* Force ALL text in strategic CTA to be dark/navy */
-.strategic-cta-section h2,
-.strategic-cta-section h3,
-.strategic-cta-section h4 {
-    color: var(--text-dark) !important;
-    font-size: 1.75rem !important;
-    margin-bottom: 1rem !important;
+.section-subtitle,
+.section-eyebrow {
+    display: inline-block !important;
+    font-family: var(--font-body) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    color: var(--sage) !important;
+    margin-bottom: var(--space-3) !important;
 }
 
-.strategic-cta-section p {
-    color: var(--text-body) !important;
-    font-size: 1.0625rem !important;
-    margin-bottom: 1.5rem !important;
+.section-header h2 {
+    margin-bottom: var(--space-4) !important;
 }
 
-/* Links in strategic CTA - navy with underline */
-.strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
+.section-header .lead-text {
+    font-size: var(--text-lg) !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+}
+
+/* ============================================
+   8. CARDS - Refined Components
+   ============================================ */
+.content-card,
+.specialization-card,
+.info-card,
+.trust-item {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--space-6) !important;
+    transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+.content-card:hover,
+.specialization-card:hover,
+.info-card:hover,
+.trust-item:hover {
+    border-color: var(--border) !important;
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-2px) !important;
+}
+
+.specialization-card h3,
+.specialization-title {
+    font-size: var(--text-lg) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.specialization-card p,
+.specialization-desc {
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.specialization-link {
+    font-size: var(--text-sm) !important;
+    font-weight: 600 !important;
     color: var(--navy) !important;
-    text-decoration: underline !important;
-    font-weight: 500 !important;
+    text-decoration: none !important;
 }
 
-.strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn):hover {
+.specialization-link:hover {
     color: var(--navy-light) !important;
 }
 
-/* Buttons in strategic CTA */
-.strategic-cta-section .btn-primary,
-.strategic-cta-section .btn {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-    text-decoration: none !important;
-    margin: 0.5rem !important;
+/* Service Icon */
+.service-icon {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: var(--space-4) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
 }
 
-.strategic-cta-section .btn-secondary {
-    background: transparent !important;
-    color: var(--navy) !important;
-    border: 2px solid var(--navy) !important;
-    text-decoration: none !important;
-    margin: 0.5rem !important;
-}
-
-/* Trust signals */
-.strategic-cta-section .cta-trust-signals,
-.strategic-cta-section .cta-trust-signals span {
-    color: var(--text-body) !important;
+.service-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 /* ============================================
-   7. APPROACH SECTION (Dark Navy Background)
+   9. STRATEGIC CTA SECTIONS
    ============================================ */
-.approach,
-section.approach,
-#approach {
-    background: var(--navy) !important;
-    padding: var(--section-pad) 0 !important;
-}
-
-/* ALL text in approach section is WHITE */
-.approach h2,
-.approach h3,
-.approach h4,
-.approach p,
-.approach li,
-.approach span,
-.approach .section-header h2,
-.approach .approach-content h3,
-.approach .approach-content h4,
-.approach .approach-content p {
-    color: var(--white) !important;
-}
-
-.approach .section-subtitle {
-    color: #8cb390 !important;
-}
-
-/* Light card inside approach */
-.approach .specialization-highlight {
-    background: var(--white) !important;
-    padding: 2rem !important;
-    border-radius: 16px !important;
-}
-
-.approach .specialization-highlight h3,
-.approach .specialization-highlight h4,
-.approach .specialization-highlight p {
-    color: var(--text-dark) !important;
-}
-
-.approach .specialization-highlight p {
-    color: var(--text-body) !important;
-}
-
-/* Strategic CTA inside approach - CRITICAL FIX for text visibility */
-.approach .strategic-cta-section,
-section.approach .strategic-cta-section,
-#approach .strategic-cta-section {
+.strategic-cta-section {
     background: var(--cream) !important;
-    border: 1px solid var(--border) !important;
+    padding: var(--space-10) var(--space-8) !important;
+    border-radius: var(--radius-xl) !important;
+    text-align: center !important;
+    margin: var(--space-12) 0 !important;
+    border: 1px solid var(--border-light) !important;
+}
+
+.strategic-cta-section h2,
+.strategic-cta-section h3,
+.strategic-cta-section h4 {
+    color: var(--text-primary) !important;
+    font-size: var(--text-2xl) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.strategic-cta-section p {
+    color: var(--text-secondary) !important;
+    font-size: var(--text-base) !important;
+    margin-bottom: var(--space-6) !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.strategic-cta-section .btn-primary,
+.strategic-cta-section .btn-secondary,
+.strategic-cta-section .btn {
+    margin: var(--space-2) !important;
+}
+
+.strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
+    color: var(--navy) !important;
+    text-decoration: underline !important;
+}
+
+.cta-trust-signals {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--space-6) !important;
+    margin-top: var(--space-6) !important;
+    flex-wrap: wrap !important;
+}
+
+.cta-trust-signals span {
+    font-size: var(--text-sm) !important;
+    color: var(--text-tertiary) !important;
+}
+
+/* Strategic CTA inside dark sections - CRITICAL */
+.approach .strategic-cta-section,
+.contact .strategic-cta-section,
+#approach .strategic-cta-section,
+section.approach .strategic-cta-section {
+    background: var(--cream) !important;
 }
 
 .approach .strategic-cta-section h2,
 .approach .strategic-cta-section h3,
 .approach .strategic-cta-section h4,
-section.approach .strategic-cta-section h2,
-section.approach .strategic-cta-section h3,
-section.approach .strategic-cta-section h4,
+.contact .strategic-cta-section h2,
+.contact .strategic-cta-section h3,
+.contact .strategic-cta-section h4,
 #approach .strategic-cta-section h2,
 #approach .strategic-cta-section h3,
-#approach .strategic-cta-section h4 {
-    color: #1e3a4f !important;
+#approach .strategic-cta-section h4,
+section.approach .strategic-cta-section h2,
+section.approach .strategic-cta-section h3,
+section.approach .strategic-cta-section h4 {
+    color: #1a3344 !important;
 }
 
 .approach .strategic-cta-section p,
-section.approach .strategic-cta-section p,
-#approach .strategic-cta-section p {
-    color: #3d4f5f !important;
+.contact .strategic-cta-section p,
+#approach .strategic-cta-section p,
+section.approach .strategic-cta-section p {
+    color: #4a5a6a !important;
+}
+
+.approach .strategic-cta-section .cta-trust-signals span,
+.contact .strategic-cta-section .cta-trust-signals span,
+#approach .strategic-cta-section .cta-trust-signals span,
+section.approach .strategic-cta-section .cta-trust-signals span {
+    color: #6b7a8a !important;
 }
 
 .approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn),
-section.approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn),
-#approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
-    color: #1e3a4f !important;
-}
-
-.approach .strategic-cta-section .cta-trust-signals,
-.approach .strategic-cta-section .cta-trust-signals span,
-section.approach .strategic-cta-section .cta-trust-signals,
-section.approach .strategic-cta-section .cta-trust-signals span {
-    color: #3d4f5f !important;
+#approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn),
+section.approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
+    color: #1a3344 !important;
 }
 
 /* ============================================
-   8. CTA BOX (Navy Background)
+   10. APPROACH SECTION (Dark)
+   ============================================ */
+.approach,
+section.approach,
+#approach {
+    background: var(--navy) !important;
+    padding: var(--space-20) 0 !important;
+}
+
+.approach h2,
+.approach h3,
+.approach h4,
+.approach p,
+.approach li {
+    color: var(--white) !important;
+}
+
+.approach .section-subtitle {
+    color: rgba(140, 179, 144, 0.9) !important;
+}
+
+.approach .lead-text {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Light card inside approach */
+.approach .specialization-highlight {
+    background: var(--white) !important;
+    padding: var(--space-8) !important;
+    border-radius: var(--radius-xl) !important;
+}
+
+.approach .specialization-highlight h3,
+.approach .specialization-highlight h4 {
+    color: var(--text-primary) !important;
+}
+
+.approach .specialization-highlight p {
+    color: var(--text-secondary) !important;
+}
+
+.specialization-badge {
+    display: inline-block !important;
+    background: var(--sage) !important;
+    color: var(--white) !important;
+    padding: var(--space-2) var(--space-4) !important;
+    border-radius: var(--radius-full) !important;
+    font-size: var(--text-sm) !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+/* ============================================
+   11. CTA BOX (Dark)
    ============================================ */
 .cta-box {
     background: var(--navy) !important;
-    padding: 3rem !important;
-    border-radius: 16px !important;
+    padding: var(--space-12) var(--space-8) !important;
+    border-radius: var(--radius-xl) !important;
     text-align: center !important;
 }
 
@@ -398,111 +736,359 @@ section.approach .strategic-cta-section .cta-trust-signals span {
 }
 
 .cta-box p {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    max-width: 500px !important;
+    margin: 0 auto var(--space-6) auto !important;
 }
 
-/* Buttons in CTA box - white with navy text */
-.cta-box .btn-primary,
-.cta-box a.btn-primary {
+/* ============================================
+   12. PROCESS SECTION
+   ============================================ */
+.process {
+    background: var(--ivory) !important;
+}
+
+.process-timeline,
+.process-steps {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+.process-step {
+    display: flex !important;
+    gap: var(--space-5) !important;
+    padding: var(--space-6) 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.process-step:last-child {
+    border-bottom: none !important;
+}
+
+.step-number {
+    flex-shrink: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border-radius: var(--radius-full) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 700 !important;
+    font-size: var(--text-sm) !important;
+}
+
+.step-content h3,
+.step-title {
+    font-size: var(--text-lg) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.step-content p,
+.step-desc {
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+}
+
+/* ============================================
+   13. TRUST SECTION
+   ============================================ */
+.trust-section {
     background: var(--white) !important;
-    color: var(--navy) !important;
-    border-color: var(--white) !important;
 }
 
-.cta-box .btn-primary:hover {
+.trust-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: var(--space-6) !important;
+}
+
+.trust-item {
+    background: var(--ivory) !important;
+    text-align: center !important;
+}
+
+.trust-icon {
+    font-size: var(--text-3xl) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.trust-item h4 {
+    font-size: var(--text-lg) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.trust-item p {
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ============================================
+   14. FAQ SECTION
+   ============================================ */
+.faq {
     background: var(--cream) !important;
 }
 
-.cta-box .btn-secondary,
-.cta-box a.btn-secondary {
-    background: transparent !important;
-    color: var(--white) !important;
-    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+.faq-grid {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-4) !important;
 }
 
-.cta-box .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-color: var(--white) !important;
-}
-
-/* ============================================
-   9. CARDS & CONTENT SECTIONS
-   ============================================ */
-.content-card,
-.specialization-card,
-.info-card,
-.trust-item,
-.therapist-showcase {
-    background: var(--white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 12px !important;
-    box-shadow: var(--shadow-sm) !important;
-}
-
-.content-card h2,
-.content-card h3,
-.content-card h4,
-.specialization-card h3,
-.specialization-title,
-.info-card h4,
-.trust-item h4 {
-    color: var(--text-dark) !important;
-}
-
-.content-card p,
-.specialization-card p,
-.specialization-desc,
-.info-card p,
-.trust-item p {
-    color: var(--text-body) !important;
-}
-
-/* Card links - navy */
-.content-card a,
-.specialization-card a,
-.specialization-link {
-    color: var(--navy) !important;
-}
-
-/* ============================================
-   10. FAQ SECTION
-   ============================================ */
 .faq-item {
     background: var(--white) !important;
-    border: 1px solid var(--border) !important;
+    border: 1px solid var(--border-light) !important;
     border-left: 3px solid var(--navy) !important;
-    padding: 1.5rem !important;
-    border-radius: 8px !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--space-5) var(--space-6) !important;
 }
 
 .faq-question,
 .faq-item h3,
 .faq-item h4 {
-    color: var(--text-dark) !important;
+    font-size: var(--text-base) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+    font-family: var(--font-body) !important;
 }
 
 .faq-answer,
 .faq-answer p,
 .faq-item p {
-    color: var(--text-body) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
 }
 
 /* ============================================
-   11. FOOTER
+   15. LOCATIONS SECTION
+   ============================================ */
+.popular-locations,
+.additional-services {
+    background: var(--cream) !important;
+    padding: var(--space-10) 0 !important;
+}
+
+.location-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: var(--space-3) !important;
+}
+
+.location-nav a {
+    display: inline-block !important;
+    padding: var(--space-2) var(--space-5) !important;
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-full) !important;
+    font-size: var(--text-sm) !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    transition: all var(--duration-fast) ease !important;
+}
+
+.location-nav a:hover {
+    background: var(--navy) !important;
+    border-color: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+/* ============================================
+   16. RESOURCES SECTION
+   ============================================ */
+.featured-resources {
+    background: var(--ivory) !important;
+}
+
+.resource-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: var(--space-6) !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+.resource-grid article {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--space-6) !important;
+    transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+.resource-grid article:hover {
+    border-color: var(--border) !important;
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-2px) !important;
+}
+
+.resource-grid article h3 {
+    font-family: var(--font-body) !important;
+    font-size: var(--text-base) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.resource-grid article h3 a {
+    color: var(--navy) !important;
+    text-decoration: none !important;
+}
+
+.resource-grid article h3 a:hover {
+    color: var(--navy-light) !important;
+}
+
+.resource-grid article p {
+    font-size: var(--text-sm) !important;
+    color: var(--text-tertiary) !important;
+    margin: 0 !important;
+}
+
+/* ============================================
+   17. THERAPIST SHOWCASE
+   ============================================ */
+.therapist-showcase {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-xl) !important;
+    padding: var(--space-8) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.therapist-name {
+    font-size: var(--text-xl) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-1) !important;
+}
+
+.therapist-title {
+    font-size: var(--text-sm) !important;
+    color: var(--sage) !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.therapist-credentials {
+    display: inline-block !important;
+    background: var(--linen) !important;
+    color: var(--text-primary) !important;
+    padding: var(--space-1) var(--space-3) !important;
+    border-radius: var(--radius-sm) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: 600 !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.therapist-bio {
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.7 !important;
+}
+
+.expertise-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--space-2) !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: var(--space-4) 0 0 0 !important;
+}
+
+.expertise-list li {
+    background: var(--cream) !important;
+    color: var(--text-secondary) !important;
+    padding: var(--space-1) var(--space-3) !important;
+    border-radius: var(--radius-full) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: 500 !important;
+}
+
+/* ============================================
+   18. QUIZ WIDGET
+   ============================================ */
+.quiz-widget-container {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-2xl) !important;
+    padding: var(--space-8) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.quiz-header h2 {
+    font-size: var(--text-2xl) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.quiz-header p {
+    color: var(--text-secondary) !important;
+    margin-bottom: var(--space-6) !important;
+}
+
+.quiz-question-text {
+    font-size: var(--text-lg) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.quiz-option {
+    background: var(--white) !important;
+    border: 2px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--space-4) !important;
+    margin-bottom: var(--space-3) !important;
+    cursor: pointer !important;
+    transition: all var(--duration-fast) ease !important;
+    color: var(--text-secondary) !important;
+}
+
+.quiz-option:hover {
+    border-color: var(--navy) !important;
+    background: var(--cream) !important;
+}
+
+.quiz-option.selected {
+    border-color: var(--sage) !important;
+    background: var(--sage-pale) !important;
+}
+
+/* ============================================
+   19. FOOTER
    ============================================ */
 .footer, footer {
     background: var(--navy-dark) !important;
     color: var(--white) !important;
-    padding: 4rem 0 2rem !important;
+    padding: var(--space-16) 0 var(--space-8) !important;
 }
 
 .footer h4, footer h4 {
+    font-size: var(--text-base) !important;
+    font-weight: 600 !important;
     color: var(--white) !important;
+    margin-bottom: var(--space-4) !important;
 }
 
-.footer p, .footer a, .footer li,
-footer p, footer a, footer li {
-    color: rgba(255, 255, 255, 0.85) !important;
+.footer p, footer p,
+.footer li, footer li {
+    font-size: var(--text-sm) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer a, footer a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
 }
 
 .footer a:hover, footer a:hover {
@@ -510,113 +1096,161 @@ footer p, footer a, footer li {
 }
 
 /* ============================================
-   12. THERAPIST SHOWCASE
+   20. CONTACT SECTION
    ============================================ */
-.therapist-showcase {
+.contact, #contact {
+    background: var(--navy) !important;
+    padding: var(--space-16) 0 !important;
+}
+
+.contact h2, .contact h3, .contact h4,
+.contact p, .contact li {
+    color: var(--white) !important;
+}
+
+.contact .section-subtitle {
+    color: rgba(140, 179, 144, 0.9) !important;
+}
+
+.contact .lead-text {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.contact-methods {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.contact-methods li {
+    display: flex !important;
+    gap: var(--space-4) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.contact-icon {
+    font-size: var(--text-xl) !important;
+}
+
+.contact-details {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.contact-details a {
+    color: var(--white) !important;
+}
+
+.contact-details small {
+    font-size: var(--text-xs) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* ============================================
+   21. SPECIALIZATIONS SECTION
+   ============================================ */
+.specializations {
+    background: var(--cream) !important;
+}
+
+.specializations-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: var(--space-6) !important;
+}
+
+/* ============================================
+   22. COMPARISON TABLES
+   ============================================ */
+table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: var(--space-6) 0 !important;
     background: var(--white) !important;
-    padding: 2rem !important;
-    border-radius: 16px !important;
-    box-shadow: var(--shadow-md) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border-light) !important;
 }
 
-.therapist-name {
-    color: var(--text-dark) !important;
+th, td {
+    padding: var(--space-4) var(--space-5) !important;
+    text-align: left !important;
+    border-bottom: 1px solid var(--border-light) !important;
 }
 
-.therapist-title {
-    color: var(--sage) !important;
-    font-weight: 600 !important;
-}
-
-.therapist-credentials {
+th {
     background: var(--linen) !important;
-    color: var(--text-dark) !important;
-}
-
-.therapist-bio {
-    color: var(--text-body) !important;
-}
-
-.expertise-list li {
-    background: var(--cream) !important;
-    color: var(--text-dark) !important;
-}
-
-/* ============================================
-   13. QUIZ WIDGET
-   ============================================ */
-.quiz-widget-container {
-    background: var(--white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 20px !important;
-    box-shadow: var(--shadow-md) !important;
-}
-
-.quiz-header h2 {
-    color: var(--text-dark) !important;
-}
-
-.quiz-header p {
-    color: var(--text-body) !important;
-}
-
-.quiz-question-text {
-    color: var(--text-dark) !important;
-}
-
-.quiz-option {
-    background: var(--white) !important;
-    border: 1.5px solid var(--border) !important;
-    color: var(--text-dark) !important;
-}
-
-.quiz-option:hover {
-    background: var(--cream) !important;
-    border-color: var(--navy) !important;
-}
-
-.quiz-option.selected {
-    background: rgba(74, 124, 89, 0.1) !important;
-    border-color: var(--sage) !important;
-}
-
-/* ============================================
-   14. SECTION TITLES & SUBTITLES
-   ============================================ */
-.section-header h2,
-.section-title {
-    color: var(--text-dark) !important;
-}
-
-.section-subtitle,
-.section-eyebrow {
-    color: var(--sage) !important;
     font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
-    font-size: 0.8125rem !important;
+    color: var(--text-primary) !important;
+    font-size: var(--text-sm) !important;
 }
 
-.lead-text {
-    color: var(--text-body) !important;
+td {
+    color: var(--text-secondary) !important;
+    font-size: var(--text-sm) !important;
+}
+
+tr:last-child td {
+    border-bottom: none !important;
+}
+
+tr:hover td {
+    background: var(--ivory) !important;
 }
 
 /* ============================================
-   15. MOBILE RESPONSIVE
+   23. LISTS
+   ============================================ */
+ul, ol {
+    padding-left: var(--space-6) !important;
+    margin: var(--space-4) 0 !important;
+}
+
+li {
+    color: var(--text-secondary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+/* ============================================
+   24. ACCESSIBILITY
+   ============================================ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--navy) !important;
+    outline-offset: 2px !important;
+}
+
+.skip-link {
+    position: absolute !important;
+    left: -9999px !important;
+    z-index: 10000 !important;
+    padding: var(--space-4) !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.skip-link:focus {
+    left: 0 !important;
+    top: 0 !important;
+}
+
+/* ============================================
+   25. MOBILE RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+        font-size: var(--text-3xl) !important;
     }
 
     .btn-primary,
-    .btn-secondary {
+    .btn-secondary,
+    .btn {
         width: 100% !important;
-        margin: 0.5rem 0 !important;
+        margin: var(--space-2) 0 !important;
     }
 
     .strategic-cta-section {
-        padding: 1.5rem !important;
+        padding: var(--space-6) var(--space-4) !important;
     }
 
     .approach-grid {
@@ -626,342 +1260,21 @@ footer p, footer a, footer li {
     .credentials-badge {
         display: none !important;
     }
-}
 
-/* ============================================
-   16. SPECIALIZATIONS SECTION
-   ============================================ */
-.specializations {
-    background: var(--cream) !important;
-    padding: var(--section-pad) 0 !important;
-}
-
-.specializations .section-header h2 {
-    color: var(--text-dark) !important;
-}
-
-.specializations .section-subtitle {
-    color: var(--sage) !important;
-}
-
-.specializations .lead-text {
-    color: var(--text-body) !important;
-}
-
-.specializations .lead-text a {
-    color: var(--navy) !important;
-}
-
-/* ============================================
-   17. TRUST SECTION
-   ============================================ */
-.trust-section {
-    background: var(--white) !important;
-}
-
-.trust-grid {
-    display: grid !important;
-    gap: 2rem !important;
-}
-
-.trust-item {
-    background: var(--ivory) !important;
-}
-
-.trust-item h4 {
-    color: var(--text-dark) !important;
-}
-
-.trust-item p {
-    color: var(--text-body) !important;
-}
-
-.trust-item a {
-    color: var(--navy) !important;
-}
-
-/* ============================================
-   18. PROCESS SECTION
-   ============================================ */
-.process-steps {
-    max-width: 800px !important;
-    margin: 0 auto !important;
-}
-
-.step-number {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-}
-
-.step-content h3 {
-    color: var(--text-dark) !important;
-}
-
-.step-content p {
-    color: var(--text-body) !important;
-}
-
-/* ============================================
-   19. ACCESSIBILITY
-   ============================================ */
-a:focus,
-button:focus,
-input:focus {
-    outline: 2px solid var(--navy) !important;
-    outline-offset: 2px !important;
-}
-
-.skip-link:focus {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    background: var(--navy) !important;
-    color: var(--white) !important;
-    padding: 1rem !important;
-    z-index: 10000 !important;
-}
-
-/* ============================================
-   20. OVERRIDE SAGE TEXT GLOBALLY
-   Sage should NEVER be used for text on light
-   backgrounds - only for accents/badges
-   ============================================ */
-
-/* Kill any sage text on light backgrounds */
-body a,
-main a,
-section a,
-.container a,
-p a {
-    color: var(--navy) !important;
-}
-
-/* Exception: section subtitles can be sage */
-.section-subtitle,
-.section-eyebrow,
-.specialization-badge,
-.therapist-title {
-    color: var(--sage) !important;
-}
-
-/* Exception: Links inside CTA boxes need white */
-.cta-box a {
-    color: var(--white) !important;
-}
-
-.cta-box a.btn-primary {
-    color: var(--navy) !important;
-}
-
-/* ============================================
-   21. HOMEPAGE SPACING FIXES
-   Reduce excessive dead space
-   ============================================ */
-
-/* Reduce section padding globally */
-section {
-    padding: 3.5rem 0 !important;
-}
-
-/* Hero section - tighter */
-.hero, section.hero {
-    padding: 3rem 0 4rem !important;
-}
-
-/* Quiz widget container - remove excess space */
-.quiz-widget-container {
-    margin: 0 auto !important;
-    max-width: 700px !important;
-}
-
-.quiz-widget-section {
-    padding: 2.5rem 0 !important;
-}
-
-/* Remove excessive margins on section headers */
-.section-header {
-    margin-bottom: 2rem !important;
-}
-
-.section-header h2 {
-    margin-bottom: 0.75rem !important;
-}
-
-.section-header .lead-text {
-    margin-bottom: 0 !important;
-}
-
-/* Tighter spacing on specializations */
-.specializations-grid {
-    gap: 1.5rem !important;
-}
-
-/* Location nav - cleaner pill styling */
-.location-nav {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.75rem !important;
-    justify-content: center !important;
-    padding: 0 !important;
-}
-
-.location-nav a {
-    display: inline-block !important;
-    padding: 0.5rem 1.25rem !important;
-    background: var(--white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 50px !important;
-    color: var(--navy) !important;
-    text-decoration: none !important;
-    font-size: 0.9375rem !important;
-    font-weight: 500 !important;
-    transition: all 0.2s ease !important;
-}
-
-.location-nav a:hover {
-    background: var(--navy) !important;
-    color: var(--white) !important;
-    border-color: var(--navy) !important;
-}
-
-/* Popular locations section */
-.popular-locations,
-.additional-services {
-    padding: 2.5rem 0 !important;
-    background: var(--cream) !important;
-}
-
-/* ============================================
-   22. RESOURCES SECTION - Professional Grid
-   ============================================ */
-.featured-resources {
-    background: var(--ivory) !important;
-    padding: 3rem 0 !important;
-}
-
-.featured-resources .section-header {
-    margin-bottom: 2rem !important;
-}
-
-.resource-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-    gap: 1.5rem !important;
-    max-width: 1000px !important;
-    margin: 0 auto !important;
-}
-
-.resource-grid article {
-    background: var(--white) !important;
-    padding: 1.5rem !important;
-    border-radius: 12px !important;
-    border: 1px solid var(--border) !important;
-    transition: all 0.2s ease !important;
-}
-
-.resource-grid article:hover {
-    box-shadow: var(--shadow-md) !important;
-    transform: translateY(-2px) !important;
-}
-
-.resource-grid article h3 {
-    font-size: 1.125rem !important;
-    margin-bottom: 0.5rem !important;
-    color: var(--text-dark) !important;
-}
-
-.resource-grid article h3 a {
-    color: var(--navy) !important;
-    text-decoration: none !important;
-}
-
-.resource-grid article h3 a:hover {
-    text-decoration: underline !important;
-}
-
-.resource-grid article p {
-    font-size: 0.9375rem !important;
-    color: var(--text-body) !important;
-    margin: 0 !important;
-    line-height: 1.5 !important;
-}
-
-/* ============================================
-   23. PROCESS TIMELINE - Cleaner
-   ============================================ */
-.process-timeline {
-    max-width: 700px !important;
-    margin: 0 auto !important;
-}
-
-.process-step {
-    padding: 1.25rem 0 !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.process-step:last-child {
-    border-bottom: none !important;
-}
-
-.step-number {
-    width: 36px !important;
-    height: 36px !important;
-    font-size: 1rem !important;
-}
-
-/* ============================================
-   24. TRUST GRID - Tighter
-   ============================================ */
-.trust-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-    gap: 1.5rem !important;
-}
-
-.trust-item {
-    padding: 1.5rem !important;
-}
-
-.trust-icon {
-    font-size: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-}
-
-/* ============================================
-   25. FAQ SECTION - Cleaner
-   ============================================ */
-.faq {
-    padding: 3rem 0 !important;
-}
-
-.faq-grid {
-    gap: 1rem !important;
-}
-
-.faq-item {
-    padding: 1.25rem !important;
-}
-
-/* ============================================
-   26. CONTACT SECTION - Tighter
-   ============================================ */
-.contact {
-    padding: 3.5rem 0 !important;
-}
-
-/* ============================================
-   27. MOBILE SPACING FIXES
-   ============================================ */
-@media (max-width: 768px) {
-    section {
-        padding: 2.5rem 0 !important;
+    .nav {
+        display: none !important;
     }
 
-    .hero {
-        padding: 2rem 0 3rem !important;
+    .header-content {
+        flex-wrap: wrap !important;
     }
 
-    .section-header {
-        margin-bottom: 1.5rem !important;
+    .trust-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .specializations-grid {
+        grid-template-columns: 1fr !important;
     }
 
     .resource-grid {
@@ -969,11 +1282,816 @@ section {
     }
 
     .location-nav {
-        gap: 0.5rem !important;
+        gap: var(--space-2) !important;
     }
 
     .location-nav a {
-        padding: 0.4rem 1rem !important;
-        font-size: 0.875rem !important;
+        font-size: var(--text-xs) !important;
+        padding: var(--space-2) var(--space-3) !important;
+    }
+
+    .cta-trust-signals {
+        flex-direction: column !important;
+        gap: var(--space-2) !important;
+    }
+}
+
+/* ============================================
+   26. QUIZ WIDGET - IMPROVED CONTRAST
+   ============================================ */
+.quiz-widget-container {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-2xl) !important;
+    padding: var(--space-10) !important;
+    box-shadow: var(--shadow-lg) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.quiz-progress {
+    margin-bottom: var(--space-6) !important;
+}
+
+.quiz-progress-bar {
+    background: var(--linen) !important;
+    height: 6px !important;
+    border-radius: var(--radius-full) !important;
+    overflow: hidden !important;
+}
+
+.quiz-progress-fill {
+    background: var(--navy) !important;
+    height: 100% !important;
+    transition: width var(--duration-normal) var(--ease-out) !important;
+}
+
+.quiz-step-indicator {
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    margin-top: var(--space-2) !important;
+}
+
+/* Fix sage contrast - use navy instead */
+.quiz-option .option-indicator,
+.quiz-option-number,
+.quiz-step-number {
+    color: var(--navy) !important;
+    font-weight: 700 !important;
+}
+
+.quiz-option.selected {
+    border-color: var(--navy) !important;
+    background: rgba(26, 51, 68, 0.04) !important;
+}
+
+.quiz-option.selected .option-indicator {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.quiz-nav-btn {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border: none !important;
+    padding: var(--space-3) var(--space-6) !important;
+    border-radius: var(--radius-md) !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all var(--duration-fast) ease !important;
+}
+
+.quiz-nav-btn:hover {
+    background: var(--navy-dark) !important;
+    transform: translateY(-1px) !important;
+}
+
+.quiz-nav-btn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.quiz-nav-btn.secondary {
+    background: transparent !important;
+    color: var(--navy) !important;
+    border: 2px solid var(--navy) !important;
+}
+
+.quiz-nav-btn.secondary:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+/* ============================================
+   27. FAQ SECTION - IMPROVED RHYTHM
+   ============================================ */
+.faq {
+    background: var(--cream) !important;
+    padding: var(--space-20) 0 !important;
+}
+
+.faq-grid {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-5) !important;
+}
+
+.faq-item {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-left: 4px solid var(--navy) !important;
+    border-radius: var(--radius-md) !important;
+    padding: var(--space-6) var(--space-8) !important;
+    transition: all var(--duration-fast) ease !important;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-sm) !important;
+    border-left-color: var(--sage) !important;
+}
+
+.faq-question,
+.faq-item h3,
+.faq-item h4 {
+    font-size: var(--text-base) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-3) !important;
+    font-family: var(--font-body) !important;
+    line-height: 1.4 !important;
+}
+
+.faq-answer,
+.faq-answer p,
+.faq-item p {
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    margin: 0 !important;
+    line-height: 1.7 !important;
+}
+
+/* FAQ Expandable/Accordion */
+.faq-item summary {
+    cursor: pointer !important;
+    list-style: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none !important;
+}
+
+.faq-item summary::after {
+    content: "+" !important;
+    font-size: var(--text-xl) !important;
+    color: var(--navy) !important;
+    font-weight: 300 !important;
+    transition: transform var(--duration-fast) ease !important;
+}
+
+.faq-item[open] summary::after {
+    content: "−" !important;
+}
+
+/* ============================================
+   28. COMPARISON TABLES - PREMIUM STYLING
+   ============================================ */
+.comparison-table,
+.therapy-comparison-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    margin: var(--space-8) 0 !important;
+    background: var(--white) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.comparison-table th,
+.therapy-comparison-table th {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: var(--space-5) var(--space-6) !important;
+    font-weight: 600 !important;
+    font-size: var(--text-sm) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+.comparison-table td,
+.therapy-comparison-table td {
+    padding: var(--space-5) var(--space-6) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--text-secondary) !important;
+    vertical-align: top !important;
+}
+
+.comparison-table tr:last-child td,
+.therapy-comparison-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.comparison-table tr:nth-child(even) td,
+.therapy-comparison-table tr:nth-child(even) td {
+    background: var(--ivory) !important;
+}
+
+.comparison-table td:first-child,
+.therapy-comparison-table td:first-child {
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    border-right: 1px solid var(--border-light) !important;
+}
+
+/* Checkmark/X styling in tables */
+.comparison-table .check,
+.therapy-comparison-table .check {
+    color: var(--sage) !important;
+    font-size: var(--text-lg) !important;
+}
+
+.comparison-table .cross,
+.therapy-comparison-table .cross {
+    color: var(--text-muted) !important;
+    font-size: var(--text-lg) !important;
+}
+
+/* ============================================
+   29. CRISIS BOX - REFINED STYLING
+   ============================================ */
+.crisis-box,
+.crisis-resources,
+.crisis-warning,
+.emergency-notice {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--linen) 100%) !important;
+    border: 2px solid var(--border) !important;
+    border-left: 4px solid var(--navy) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--space-6) !important;
+    margin: var(--space-6) 0 !important;
+}
+
+.crisis-box h3,
+.crisis-box h4,
+.crisis-resources h3,
+.crisis-resources h4 {
+    color: var(--navy) !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.crisis-box p,
+.crisis-resources p {
+    color: var(--text-secondary) !important;
+    font-size: var(--text-sm) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.crisis-box a,
+.crisis-resources a {
+    color: var(--navy) !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================
+   30. FORM ELEMENTS - PREMIUM STYLING
+   ============================================ */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    font-family: var(--font-body) !important;
+    font-size: var(--text-base) !important;
+    padding: var(--space-3) var(--space-4) !important;
+    border: 2px solid var(--border) !important;
+    border-radius: var(--radius-md) !important;
+    background: var(--white) !important;
+    color: var(--text-primary) !important;
+    transition: all var(--duration-fast) ease !important;
+    width: 100% !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--navy) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(26, 51, 68, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+label {
+    display: block !important;
+    font-size: var(--text-sm) !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+/* Form Success/Error States */
+.form-success,
+.success-message,
+.alert-success {
+    background: rgba(74, 124, 89, 0.08) !important;
+    border: 1px solid var(--sage) !important;
+    border-left: 4px solid var(--sage) !important;
+    color: var(--text-primary) !important;
+    padding: var(--space-4) var(--space-5) !important;
+    border-radius: var(--radius-md) !important;
+    margin: var(--space-4) 0 !important;
+}
+
+.form-error,
+.error-message,
+.alert-error,
+.alert-danger {
+    background: rgba(220, 53, 69, 0.08) !important;
+    border: 1px solid #dc3545 !important;
+    border-left: 4px solid #dc3545 !important;
+    color: var(--text-primary) !important;
+    padding: var(--space-4) var(--space-5) !important;
+    border-radius: var(--radius-md) !important;
+    margin: var(--space-4) 0 !important;
+}
+
+/* ============================================
+   31. SERVICE PAGE SPECIFIC FIXES
+   ============================================ */
+
+/* "Is This You?" Section - Better distinction */
+.is-this-you,
+.symptoms-section,
+.recognition-section {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-xl) !important;
+    padding: var(--space-10) !important;
+    margin: var(--space-12) 0 !important;
+}
+
+.is-this-you h2,
+.symptoms-section h2,
+.recognition-section h2 {
+    font-size: var(--text-2xl) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-6) !important;
+}
+
+.is-this-you ul,
+.symptoms-section ul,
+.recognition-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.is-this-you li,
+.symptoms-section li,
+.recognition-section li {
+    padding: var(--space-3) 0 !important;
+    padding-left: var(--space-8) !important;
+    position: relative !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    font-size: var(--text-base) !important;
+}
+
+.is-this-you li:last-child,
+.symptoms-section li:last-child,
+.recognition-section li:last-child {
+    border-bottom: none !important;
+}
+
+.is-this-you li::before,
+.symptoms-section li::before,
+.recognition-section li::before {
+    content: "✓" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--sage) !important;
+    font-weight: 700 !important;
+}
+
+/* Steps Section - Refined numerals */
+.steps-section,
+.process-steps {
+    background: var(--ivory) !important;
+    padding: var(--space-16) 0 !important;
+}
+
+.step-item,
+.process-step {
+    display: flex !important;
+    gap: var(--space-6) !important;
+    padding: var(--space-6) 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    align-items: flex-start !important;
+}
+
+.step-item:last-child,
+.process-step:last-child {
+    border-bottom: none !important;
+}
+
+/* Refined step numbers - not oversized */
+.step-number,
+.step-item .number {
+    flex-shrink: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border-radius: var(--radius-full) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 700 !important;
+    font-size: var(--text-base) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ============================================
+   32. FOOTER NAVIGATION - BETTER SPACING
+   ============================================ */
+.footer-nav,
+.footer-links,
+footer nav {
+    margin-top: var(--space-8) !important;
+}
+
+.footer-nav ul,
+.footer-links ul,
+footer nav ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--space-3) var(--space-6) !important;
+}
+
+.footer-nav li,
+.footer-links li,
+footer nav li {
+    margin: 0 !important;
+}
+
+.footer-nav a,
+.footer-links a,
+footer nav a {
+    font-size: var(--text-sm) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
+    padding: var(--space-1) 0 !important;
+    display: inline-block !important;
+    transition: color var(--duration-fast) ease !important;
+}
+
+.footer-nav a:hover,
+.footer-links a:hover,
+footer nav a:hover {
+    color: var(--white) !important;
+}
+
+.footer-grid,
+.footer-content {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: var(--space-10) !important;
+    margin-bottom: var(--space-10) !important;
+}
+
+.footer-section h4,
+.footer-col h4 {
+    font-size: var(--text-sm) !important;
+    font-weight: 700 !important;
+    color: var(--white) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.footer-section ul,
+.footer-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-section li,
+.footer-col li {
+    margin-bottom: var(--space-2) !important;
+}
+
+.footer-section a,
+.footer-col a {
+    font-size: var(--text-sm) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer-bottom {
+    padding-top: var(--space-8) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    text-align: center !important;
+}
+
+.footer-bottom p {
+    font-size: var(--text-xs) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin: 0 !important;
+}
+
+/* Credentials in footer */
+.footer-credentials {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: var(--space-4) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: var(--space-3) var(--space-5) !important;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: var(--space-6) !important;
+}
+
+.footer-credentials span {
+    font-size: var(--text-sm) !important;
+    color: var(--white) !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================
+   33. CONTENT SECTIONS - BETTER RHYTHM
+   ============================================ */
+
+/* Add background alternation for better section distinction */
+section:nth-child(even) {
+    background: var(--white) !important;
+}
+
+section:nth-child(odd) {
+    background: var(--ivory) !important;
+}
+
+/* Override for specific sections that need fixed backgrounds */
+.hero, section.hero {
+    background: var(--cream) !important;
+}
+
+.approach, section.approach, #approach {
+    background: var(--navy) !important;
+}
+
+.contact, section.contact, #contact {
+    background: var(--navy) !important;
+}
+
+.faq, section.faq {
+    background: var(--cream) !important;
+}
+
+.cta-box {
+    background: var(--navy) !important;
+}
+
+.footer, footer {
+    background: var(--navy-dark) !important;
+}
+
+/* Content within sections - consistent max-width */
+.content-section,
+article.content,
+.page-content {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.content-section h2 {
+    margin-top: var(--space-12) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.content-section h3 {
+    margin-top: var(--space-8) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.content-section p + p {
+    margin-top: var(--space-4) !important;
+}
+
+/* ============================================
+   34. ADDITIONAL POLISH
+   ============================================ */
+
+/* Subtle hover effects for all clickable cards */
+.card,
+.feature-card,
+.benefit-card,
+.info-card {
+    transition: all var(--duration-normal) var(--ease-out) !important;
+}
+
+.card:hover,
+.feature-card:hover,
+.benefit-card:hover,
+.info-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--navy) !important;
+    padding: var(--space-4) var(--space-6) !important;
+    margin: var(--space-6) 0 !important;
+    background: var(--cream) !important;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0 !important;
+    font-style: italic !important;
+    color: var(--text-secondary) !important;
+}
+
+blockquote p {
+    margin: 0 !important;
+    font-size: var(--text-lg) !important;
+}
+
+/* Horizontal rules */
+hr {
+    border: none !important;
+    height: 1px !important;
+    background: var(--border-light) !important;
+    margin: var(--space-12) 0 !important;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(26, 51, 68, 0.15) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* ============================================
+   35. MOBILE RESPONSIVE - ENHANCED
+   ============================================ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: var(--text-3xl) !important;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn {
+        width: 100% !important;
+        margin: var(--space-2) 0 !important;
+    }
+
+    .strategic-cta-section {
+        padding: var(--space-6) var(--space-4) !important;
+        margin: var(--space-8) 0 !important;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .credentials-badge {
+        display: none !important;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .header-content {
+        flex-wrap: wrap !important;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .specializations-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .location-nav {
+        gap: var(--space-2) !important;
+    }
+
+    .location-nav a {
+        font-size: var(--text-xs) !important;
+        padding: var(--space-2) var(--space-3) !important;
+    }
+
+    .cta-trust-signals {
+        flex-direction: column !important;
+        gap: var(--space-2) !important;
+    }
+
+    /* Mobile FAQ */
+    .faq-item {
+        padding: var(--space-4) var(--space-5) !important;
+    }
+
+    /* Mobile tables - scroll */
+    .table-wrapper {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    table {
+        min-width: 500px !important;
+    }
+
+    /* Mobile footer */
+    .footer-grid,
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+    }
+
+    .footer-credentials {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    /* Mobile quiz */
+    .quiz-widget-container {
+        padding: var(--space-6) var(--space-4) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: var(--text-2xl) !important;
+    }
+
+    h2 {
+        font-size: var(--text-xl) !important;
+    }
+
+    section {
+        padding: var(--space-10) 0 !important;
+    }
+
+    .step-number,
+    .step-item .number {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: var(--text-sm) !important;
+    }
+}
+
+/* ============================================
+   36. PRINT STYLES
+   ============================================ */
+@media print {
+    .header, .footer, .strategic-cta-section, .cta-box {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+        page-break-after: avoid !important;
+    }
+
+    p, li {
+        color: #333 !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")" !important;
+        font-size: 0.8em !important;
+        color: #666 !important;
     }
 }
