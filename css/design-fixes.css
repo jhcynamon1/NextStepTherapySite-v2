@@ -2063,7 +2063,117 @@ html {
 }
 
 /* ============================================
-   36. PRINT STYLES
+   36. CRITICAL HOMEPAGE FIXES
+   ============================================ */
+
+/* FIX: Process timeline - force single column layout */
+.process-timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-4) !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    grid-template-columns: none !important;
+}
+
+/* FIX: Process steps - proper flex layout */
+.process-step {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: var(--space-5) !important;
+    text-align: left !important;
+    padding: var(--space-6) !important;
+    background: var(--white) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--border-light) !important;
+}
+
+.process-step:hover {
+    transform: none !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* FIX: Strategic CTA section buttons - ALWAYS visible dark text */
+.strategic-cta-section .btn,
+.strategic-cta-section .btn-primary,
+.strategic-cta-section .btn-secondary,
+.strategic-cta-section a.btn,
+.strategic-cta-section a.btn-primary,
+.strategic-cta-section a.btn-secondary {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border: 2px solid var(--navy) !important;
+    display: inline-flex !important;
+    padding: var(--space-3) var(--space-6) !important;
+}
+
+.strategic-cta-section .btn:hover,
+.strategic-cta-section .btn-primary:hover,
+.strategic-cta-section a.btn:hover,
+.strategic-cta-section a.btn-primary:hover {
+    background: var(--navy-dark) !important;
+    border-color: var(--navy-dark) !important;
+    color: var(--white) !important;
+}
+
+.strategic-cta-section .btn-secondary,
+.strategic-cta-section a.btn-secondary {
+    background: transparent !important;
+    color: var(--navy) !important;
+    border: 2px solid var(--navy) !important;
+}
+
+.strategic-cta-section .btn-secondary:hover,
+.strategic-cta-section a.btn-secondary:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+/* FIX: Strategic CTA text always dark on light background */
+.strategic-cta-section {
+    background: var(--cream) !important;
+}
+
+.strategic-cta-section h2,
+.strategic-cta-section h3,
+.strategic-cta-section h4 {
+    color: var(--navy) !important;
+}
+
+.strategic-cta-section p {
+    color: var(--text-secondary) !important;
+}
+
+.strategic-cta-section a:not(.btn):not(.btn-primary):not(.btn-secondary) {
+    color: var(--navy) !important;
+}
+
+/* FIX: Buttons inside approach/dark sections that contain light CTA boxes */
+.approach .strategic-cta-section .btn,
+.approach .strategic-cta-section .btn-primary,
+#approach .strategic-cta-section .btn,
+#approach .strategic-cta-section .btn-primary {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border-color: var(--navy) !important;
+}
+
+/* FIX: Reduce excessive whitespace between sections */
+section {
+    padding: var(--space-12) 0 !important;
+}
+
+.quiz-widget-section {
+    padding: var(--space-8) 0 !important;
+}
+
+/* FIX: CTA trust signals always visible */
+.cta-trust-signals span {
+    color: var(--text-tertiary) !important;
+}
+
+/* ============================================
+   37. PRINT STYLES
    ============================================ */
 @media print {
     .header, .footer, .strategic-cta-section, .cta-box {
