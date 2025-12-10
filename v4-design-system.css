@@ -384,6 +384,17 @@ a.cta-button:hover {
     color: var(--white) !important;
 }
 
+/* Button sizes */
+.btn-lg {
+    padding: 1rem 2rem !important;
+    font-size: 1.0625rem !important;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+}
+
 /* ============================================
    6. SECTIONS
    ============================================ */
@@ -986,27 +997,34 @@ main li {
 .footer,
 footer.footer {
     background: var(--navy-dark) !important;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #ffffff !important;
     padding: var(--space-2xl) 0 var(--space-lg) !important;
 }
 
 .footer h4 {
     font-family: var(--font-body) !important;
-    color: var(--white) !important;
-    font-size: 0.9375rem !important;
+    color: #ffffff !important;
+    font-size: 1rem !important;
     font-weight: 600 !important;
     margin-bottom: var(--space-md) !important;
+    letter-spacing: 0.02em !important;
 }
 
 .footer p,
-.footer a,
 .footer li {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
     font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+}
+
+.footer a {
+    color: #ffffff !important;
+    font-size: 0.9375rem !important;
+    text-decoration: none !important;
 }
 
 .footer a:hover {
-    color: var(--white) !important;
+    color: #ffffff !important;
     text-decoration: underline !important;
 }
 
@@ -1017,16 +1035,42 @@ footer.footer {
 }
 
 .footer li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Footer button override - white on navy background */
+.footer .btn-primary {
+    background: #ffffff !important;
+    color: var(--navy) !important;
+    border: 2px solid #ffffff !important;
+}
+
+.footer .btn-primary:hover {
+    background: var(--cream) !important;
+    color: var(--navy) !important;
 }
 
 .footer-bottom,
 .footer .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
     padding-top: var(--space-lg) !important;
     margin-top: var(--space-xl) !important;
     text-align: center !important;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--space-xl) !important;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-lg) !important;
+        text-align: center !important;
+    }
 }
 
 /* ============================================
