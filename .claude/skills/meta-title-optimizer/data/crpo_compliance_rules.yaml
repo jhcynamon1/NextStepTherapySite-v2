@@ -1,0 +1,178 @@
+# CRPO Compliance Rules for Advertising & Website Content
+# College of Registered Psychotherapists of Ontario
+# Last Updated: January 2024
+
+# Source: https://crpo.ca/practice-standards/business-practices/advertising/
+
+general_principles:
+  - rule: "All advertising must be factual and verifiable"
+    severity: "critical"
+
+  - rule: "No false or misleading statements"
+    severity: "critical"
+
+  - rule: "Cannot exaggerate conditions treated or competencies"
+    severity: "critical"
+
+  - rule: "Must not suggest outcome guarantees"
+    severity: "critical"
+
+prohibited_content:
+  # Testimonials & Reviews
+  testimonials:
+    - type: "client testimonials"
+      allowed: false
+      reason: "Professional misconduct to use testimonials from clients or former clients"
+      example: "❌ 'John says: Best therapist ever!'"
+
+    - type: "star ratings"
+      allowed: false
+      reason: "Star ratings are considered testimonials"
+      note: "Third-party sites can have reviews, but cannot link directly or request them"
+
+    - type: "endorsements"
+      allowed: false
+      reason: "Subjective endorsements are prohibited"
+
+  # Outcome Claims
+  guarantees:
+    - phrase: "guaranteed results"
+      reason: "Outcome guarantees not permitted"
+
+    - phrase: "cure"
+      reason: "Medical cure claims prohibited"
+      examples: ["cure anxiety", "cure depression", "cure trauma"]
+
+    - phrase: "guaranteed to"
+      reason: "Outcome guarantee"
+
+  # Superlatives Without Proof
+  unverifiable_claims:
+    - phrase: "best"
+      reason: "Unverifiable superlative"
+      examples: ["best therapist", "best in Ontario"]
+
+    - phrase: "top"
+      reason: "Unverifiable ranking claim"
+      examples: ["top therapist", "top-rated"]
+
+    - phrase: "most experienced"
+      reason: "Unverifiable comparative claim"
+
+    - phrase: "#1"
+      reason: "Unverifiable ranking"
+      examples: ["#1 therapist", "#1 in anxiety treatment"]
+
+    - phrase: "leading"
+      reason: "Unverifiable superlative"
+      examples: ["leading expert", "leading therapist"]
+
+  # Specialty Claims
+  specialty:
+    - rule: "Cannot suggest College recognition as specialist"
+      reason: "CRPO does not recognize specialty areas"
+      example: "❌ 'CRPO-certified anxiety specialist'"
+
+    - rule: "Can describe practice areas aligned with competence"
+      example: "✅ 'Specializing in anxiety therapy' (if competent)"
+
+required_disclosures:
+  credentials:
+    - requirement: "Must display RP (Registered Psychotherapist) prominently"
+      example: "Jesse Cynamon, RP"
+
+    - requirement: "Can include registration number"
+      example: "CRPO #10979"
+
+    - requirement: "Regulated title must be more prominent than other titles"
+
+    - requirement: "Only display education credentials related to psychotherapy practice"
+
+  business_names:
+    - requirement: "Business names must comply with advertising standards"
+
+    - requirement: "Cannot imply special recognition or superiority"
+
+    - requirement: "Must not be misleading about services offered"
+
+permitted_advertising:
+  what_you_can_include:
+    - "Psychotherapy-related education and qualifications"
+    - "Areas of practice or specialization (aligned with competence)"
+    - "Populations served"
+    - "Philosophy or approach to practice"
+    - "Registration with CRPO"
+    - "Modalities you are competent to use"
+    - "Fees and payment options"
+    - "Appointment availability (e.g., 'evening appointments')"
+    - "Location or service area (e.g., 'Serving Ontario')"
+    - "Format of therapy (e.g., 'virtual therapy', 'online counseling')"
+
+  what_you_cannot_include:
+    - "Testimonials from clients or former clients"
+    - "Star ratings or reviews you've solicited"
+    - "Links to third-party review sites"
+    - "Outcome guarantees or promises"
+    - "Unverifiable superlatives (best, top, leading)"
+    - "Specialty credentials implying CRPO recognition"
+    - "Degrees unrelated to psychotherapy practice"
+    - "CRPO logo in advertising"
+    - "Misleading or exaggerated claims"
+
+# Safe Phrases for NextStep Therapy
+approved_phrases:
+  credibility:
+    - "CRPO Registered Therapist"
+    - "Registered Psychotherapist (RP #10979)"
+    - "College-Registered Professional"
+    - "Licensed Psychotherapist in Ontario"
+
+  service_delivery:
+    - "Same-week appointments available"
+    - "Evening and weekend sessions"
+    - "Virtual therapy across Ontario"
+    - "Secure online therapy sessions"
+    - "Flexible scheduling options"
+
+  approach:
+    - "ACT therapy specialization"
+    - "Evidence-based treatment"
+    - "Acceptance and Commitment Therapy"
+    - "Person-centered approach"
+    - "Trauma-informed care"
+
+  expertise:
+    - "Specializing in anxiety treatment"
+    - "Experience with depression therapy"
+    - "Trained in ACT modalities"
+    - "Professional support for [condition]"
+
+validation_rules:
+  title_check:
+    - "Scan for prohibited phrases"
+    - "Verify credentials format (RP #10979)"
+    - "Check for outcome guarantees"
+    - "Confirm no superlatives without proof"
+    - "Ensure factual, verifiable claims only"
+
+  description_check:
+    - "No testimonial language"
+    - "No outcome promises"
+    - "Credentials properly displayed"
+    - "Services accurately described"
+    - "No misleading statements"
+
+# Automated Compliance Flags
+auto_flags:
+  high_risk:
+    keywords: ["guaranteed", "cure", "best", "top-rated", "#1", "most experienced", "leading"]
+    action: "Block and suggest compliant alternative"
+
+  medium_risk:
+    keywords: ["specialist", "award-winning"]
+    action: "Warn and request verification"
+    note: "Specialist requires competence verification; Award-winning requires citation"
+
+  low_risk:
+    keywords: ["expert", "experienced", "qualified"]
+    action: "Approve if used with factual support"

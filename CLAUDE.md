@@ -1,0 +1,596 @@
+# NextStep Therapy - Comprehensive Project Guide
+
+## About
+- **Website:** nextsteptherapy.ca
+- **Owner:** Jesse Cynamon, RP (CRPO #10979)
+- **Location:** Ontario, Canada
+- **Focus:** Virtual therapy practice, ACT specialization
+
+## Unique Differentiators (Use in All Content)
+- **CRPO #10979** - Specific license number (not just "registered")
+- **ACT therapy specialization** - Acceptance and Commitment Therapy
+- **Virtual-first practice** with same-week availability
+- **Evening and weekend appointments**
+- **Insurance receipts** provided for all Ontario insurance providers
+
+---
+
+## Project Structure
+
+### Key Folders
+- `/css/` - Stylesheets (primary: v4-design-system.css)
+- `/js/` - JavaScript files
+- `/images/` - All image assets
+- `/blog/` - Blog posts
+- `/students/` - University student-focused pages
+- `/virtual/` - Virtual therapy service pages
+- `/professionals/` - Professional/workplace stress pages
+- `/data/` - CSV/JSON data files
+- `/docs/` - Documentation and guides
+  - `/docs/seo/` - Current SEO work
+  - `/docs/guides/` - Implementation guides
+  - `/docs/checklists/` - QA checklists
+  - `/docs/archive/` - Historical docs (old audits, strategies, reports)
+- `/scripts/` - Utility scripts
+- `/templates/` - Page templates
+- `/z-archive/` - Old experiments and exports (can be deleted if needed)
+
+### Data Files
+- `/data/client_source_tracking.csv` - Client acquisition tracking
+- `/data/keyword-research-list-dec2024.md` - Current keyword research
+
+---
+
+## Data Requests (IMPORTANT)
+
+**Always request data from the user when working on SEO tasks.** The user can provide:
+
+### Ahrefs Data
+- Keyword Explorer exports (search volume, difficulty)
+- Organic keywords reports for competitors
+- Content gap analysis
+- Backlink data
+
+### Google Search Console (GSC) Data
+- Queries report (clicks, impressions, CTR, position)
+- Pages report (performance by URL)
+- Indexing status
+
+### Other Data
+- Google Analytics (traffic, conversions, bounce rate)
+- Heatmaps (Hotjar, CrazyEgg) if available
+- Historical performance reports
+
+**How to request:**
+```
+To provide the best recommendations, I need some data:
+
+1. Can you export the Ahrefs Keyword Explorer data for [keyword]?
+2. Can you share GSC data for the last 3 months showing:
+   - Queries with clicks, impressions, CTR, avg position?
+   - Pages performance?
+3. Do you have competitor URLs to analyze?
+```
+
+---
+
+## Current Workflows
+
+### SEO Optimization
+
+#### Meta Title Formula
+```
+Service + Location | Differentiator | NextStep Therapy
+```
+- Keep under 60 characters
+- Keyword first
+- Avoid "CBT" or "ACT" in titles unless keyword research explicitly supports it
+- Examples:
+  - "Anxiety Therapy Ontario | Same-Week Virtual Sessions | NextStep Therapy"
+  - "University Anxiety Support | CRPO Registered Therapist | NextStep"
+
+#### Schema Markup Requirements
+Always include on therapy pages:
+1. **MedicalWebPage** schema (required for YMYL content)
+2. **FAQPage** schema (for FAQ sections)
+3. **LocalBusiness** schema (include CRPO #10979, Ontario address)
+
+#### E-E-A-T Signals (Critical for YMYL)
+Every page must include:
+- Author byline: "Jesse Cynamon, RP (CRPO #10979)"
+- "Last Updated: [Month Year]"
+- Citations to authoritative sources (CRPO, CMHA, research)
+- Contact information
+- Privacy policy link
+
+### Front-End Development
+
+#### CSS System
+- **Primary stylesheet:** `/css/v4-design-system.css`
+- **Color palette:**
+  - Navy: `#1a2332` (primary brand color)
+  - White: `#ffffff`
+  - Accent colors defined in v4-design-system.css
+
+#### CTA Buttons
+- Use `.btn .btn-primary` classes
+- Style: White text on navy background
+- Always test on mobile after changes
+
+#### Responsive Design
+- Mobile-first approach
+- Test all changes on mobile viewports
+- Check spacing, button visibility, and readability
+
+### Creating New Pages
+
+#### Standard Page Structure
+1. **Hero section** - H1, brief intro, CTA
+2. **Main content sections** - H2/H3 hierarchy
+3. **FAQ section** - Structured with schema
+4. **CTA boxes** - Throughout page (use v4 design system)
+5. **Author byline and last updated date**
+
+#### Copy from Similar Pages
+- For city pages: Copy structure from existing city pages (e.g., anxiety-therapy-burlington.html)
+- For student pages: Use students/ folder templates
+- For service pages: Copy from virtual/ folder templates
+
+#### Post-Creation Checklist
+- [ ] Add MedicalWebPage and FAQPage schema
+- [ ] Include author byline with CRPO #10979
+- [ ] Add "Last Updated" date
+- [ ] Verify CTA buttons are visible (white on navy)
+- [ ] Test mobile layout
+- [ ] Add to sitemap.xml
+- [ ] Submit to Google Search Console
+
+### Content Guidelines
+
+#### Author Attribution
+```html
+<p class="author-byline">Jesse Cynamon, RP (CRPO #10979)</p>
+<p class="last-updated">Last Updated: December 2024</p>
+```
+
+#### Citing Authoritative Sources
+Always cite:
+- CRPO (College of Registered Psychotherapists of Ontario)
+- CMHA (Canadian Mental Health Association)
+- Peer-reviewed research (when applicable)
+- Government health resources (Ontario, Canada)
+
+#### Ontario-Specific Content
+- Mention specific Ontario cities
+- Reference OHIP coverage (or lack thereof for therapy)
+- List Ontario insurance providers that cover therapy
+- Include CRPO regulatory information
+
+---
+
+## Common Tasks & How to Execute
+
+### "Analyze Google Search Console Data"
+1. Export performance data from GSC
+2. Review clicks, impressions, CTR by page/query
+3. Identify pages on page 2-3 (positions 11-30) for optimization
+4. Look for high-impression, low-CTR queries (title optimization opportunity)
+
+### "Optimize Meta Titles"
+1. Follow meta title formula (Service + Location | Differentiator | Business Name)
+2. Keep under 60 characters
+3. Keyword-first approach
+4. Update HTML `<title>` tag
+5. Test in Google SERP simulator
+
+### "Fix CTA Buttons"
+1. Check [v4-design-system.css](css/v4-design-system.css)
+2. Verify `.btn .btn-primary` classes are applied
+3. Ensure white text on navy background (`#1a2332`)
+4. Test visibility on mobile
+
+### "Create New [City] Page"
+1. Copy template from existing city page (e.g., [anxiety-therapy-burlington.html](anxiety-therapy-burlington.html))
+2. Update all city references
+3. Customize FAQ section for local relevance
+4. Add city-specific schema (LocalBusiness with address)
+5. Follow post-creation checklist above
+
+### "Add New Blog Post"
+1. Create file in `/blog/` folder
+2. Follow SEO best practices (title, headings, schema)
+3. Include author byline and last updated
+4. Add internal links to relevant service pages
+5. Update [blog.html](blog.html) index
+
+---
+
+## SEO Strategy (Current Focus)
+
+### Priority Keywords (Dec 2024)
+Reference: `/data/keyword-research-list-dec2024.md`
+
+### Top Performing Pages
+- Virtual therapy pages (Ontario, Burlington, etc.)
+- University anxiety pages (students/ folder)
+- Depression therapy pages
+
+### Pages Needing Optimization
+- Review GSC data for pages on positions 11-30
+- Focus on high-impression, low-CTR pages first
+
+### Link Building Strategy
+Reference: `/docs/BACKLINK_ACQUISITION_STRATEGY_NOV_2025.md` (in archive)
+
+---
+
+## Tools & Data Sources
+
+### Analytics & SEO
+- **Google Search Console** - Performance tracking, indexing issues
+- **Ahrefs** - Keyword research, competitor analysis, backlink monitoring
+- **Google Analytics** - User behavior, conversion tracking
+
+### Development
+- **VSCode** - Primary code editor
+- **Git** - Version control
+- **Netlify** - Hosting and deployment
+
+---
+
+## Common Issues & Solutions
+
+### CTA Buttons Not Visible
+- Check if `.btn-primary` class is applied
+- Verify v4-design-system.css is loaded
+- Ensure no CSS conflicts overriding button styles
+
+### Schema Markup Not Showing in GSC
+- Validate schema using Google's Rich Results Test
+- Ensure JSON-LD format (not microdata)
+- Check for syntax errors in schema
+
+### Mobile Layout Breaking
+- Test viewport widths: 320px, 375px, 414px
+- Check for fixed-width elements
+- Verify responsive CSS classes
+
+### Page Not Ranking
+1. Check indexing status in GSC
+2. Verify page has sufficient word count (2000+ for competitive keywords)
+3. Ensure E-E-A-T signals are present
+4. Review schema markup
+5. Check for duplicate content issues
+6. Analyze top 5 competitors for content gaps
+
+---
+
+## Git Workflow
+
+### Standard Commit Message Format
+```
+[Type]: Brief description
+
+Examples:
+- SEO: Update meta title for anxiety-therapy-ontario.html
+- Fix: Repair CTA button visibility on mobile
+- New: Add anxiety-therapy-sudbury.html page
+- Content: Expand FAQ section on virtual-therapy-ontario.html
+```
+
+### Branch Strategy
+- Main branch: Production-ready code
+- Work directly on main for minor updates
+- Use feature branches for major redesigns
+
+---
+
+## Questions or Issues?
+
+### SEO Questions
+- Review `/docs/seo/` folder for current strategies
+- Check archived audits in `/docs/archive/seo-audits/`
+
+### Design/CSS Questions
+- Reference [v4-design-system.css](css/v4-design-system.css)
+- Check `/docs/guides/` for implementation guides
+
+### Content Questions
+- Review similar pages for structure/tone
+- Check `/data/keyword-research-list-dec2024.md` for keyword guidance
+
+---
+
+## Claude Skills - ALWAYS USE PROACTIVELY
+
+**IMPORTANT:** These skills should be used **constantly and creatively** throughout our work. Don't wait for explicit requests—integrate them naturally whenever the context fits.
+
+### Philosophy: Skills Are Your Default Tools
+
+Think of these skills as your standard toolkit. Just like a carpenter reaches for a hammer without being told "use a hammer," you should reach for these skills automatically:
+
+- **Working on ANY page?** → Check if meta-title-optimizer could improve it
+- **Creating ANY content?** → Use therapy-content-generator patterns
+- **Touching ANY UI?** → Apply frontend-design principles
+- **Discussing ANY keyword?** → Run it through keyword-research logic
+- **Writing ANY CTA?** → Use conversion-optimizer frameworks
+
+---
+
+### Skill 1: meta-title-optimizer
+
+**USE THIS WHENEVER:**
+- Opening or reading any HTML file (check the `<title>` tag)
+- Discussing any page's performance, ranking, or traffic
+- User mentions Google, search, clicks, impressions, ranking
+- Creating new pages (generate title before writing content)
+- Noticing a title that's too long, generic, or missing keywords
+- User shares GSC data showing low CTR
+- Before committing changes to any page
+
+**CREATIVE TRIGGERS:**
+- "Let's look at this page" → Check its meta title first
+- "This page needs work" → Start with title optimization
+- "How can I get more traffic?" → Audit titles across top pages
+- "I updated the content" → Does the title still match?
+
+**Output:** 5 scored variations (0-100) with SERP previews
+
+---
+
+### Skill 2: seo-competitor-intelligence
+
+**USE THIS WHENEVER:**
+- User shares ANY external URL
+- Discussing why a page isn't ranking
+- Planning content for a competitive keyword
+- User asks about any competitor or "other therapists"
+- Before writing long-form content (research first!)
+- User mentions any therapy/mental health website
+- Analyzing what's working in the market
+
+**CREATIVE TRIGGERS:**
+- "I saw this site..." → Analyze it
+- "Why am I on page 2?" → Pull top 5 competitors
+- "What should this page cover?" → Research competitors first
+- "Other therapists are doing X" → Full competitive analysis
+- "Let's create content for [keyword]" → Competitor research FIRST
+
+**Output:** Content gap analysis + actionable brief
+
+---
+
+### Skill 3: frontend-design
+
+**USE THIS WHENEVER:**
+- Creating ANY new HTML element
+- User mentions anything visual (colors, spacing, layout, look)
+- Fixing CSS or styling issues
+- Building CTAs, hero sections, cards, or forms
+- User says something "doesn't look right" or "looks weird"
+- Mobile responsiveness work
+- Any UI/UX improvement discussion
+
+**CREATIVE TRIGGERS:**
+- "Fix this section" → Apply proper design principles
+- "Make a new page" → Design-first approach
+- "The button isn't working" → Review full component design
+- "Something looks off" → Full visual audit
+- "Can you improve this?" → Redesign with intention
+
+**Output:** Production-ready, distinctive code
+
+---
+
+### Skill 4: therapy-content-generator
+
+**USE THIS WHENEVER:**
+- Creating ANY new therapy page (service, location, condition)
+- Expanding existing content
+- User mentions a city, condition, or audience
+- Building topic clusters or pillar content
+- Content is under 2000 words for competitive keywords
+- Writing about mental health topics
+- Adding new sections to existing pages
+
+**CREATIVE TRIGGERS:**
+- "Add a page for [city/condition]" → Full content generation
+- "This page is thin" → Expand with structured content
+- "Cover more about anxiety" → Generate comprehensive section
+- "We need more content" → Plan content using this skill
+- ANY mention of: anxiety, depression, stress, burnout, students, professionals
+
+**Output:** 2000+ word YMYL-compliant content with schema
+
+---
+
+### Skill 5: faq-schema-generator
+
+**USE THIS WHENEVER:**
+- Creating or editing ANY therapy page
+- Page doesn't have an FAQ section (add one!)
+- User mentions FAQs, questions, or schema
+- Wanting to improve rich snippet chances
+- After writing main content (FAQ complements it)
+- User asks "what questions do people have about X?"
+
+**CREATIVE TRIGGERS:**
+- "Finish this page" → Add FAQ if missing
+- "Help it rank better" → FAQ schema helps
+- "What else should be on this page?" → FAQ section
+- After completing ANY page → Check for FAQ
+- "People ask me about..." → Turn into FAQ section
+
+**Output:** 10-12 Q&As with valid JSON-LD schema
+
+---
+
+### Skill 6: keyword-research
+
+**USE THIS WHENEVER:**
+- Planning ANY content strategy
+- User shares Ahrefs or GSC data
+- Discussing what pages to create
+- Prioritizing work across pages
+- User mentions traffic, rankings, or keywords
+- Checking for keyword cannibalization
+- Before creating new pages (research first!)
+
+**CREATIVE TRIGGERS:**
+- "What should I focus on?" → Keyword priority analysis
+- "Is this keyword worth targeting?" → Full research
+- "These pages might compete" → Cannibalization check
+- "Where are the opportunities?" → Quick win analysis
+- "Let's plan content" → Keyword-first approach
+- User provides ANY data → Analyze with this skill
+
+**Output:** Priority-scored keyword list with recommendations
+
+---
+
+### Skill 7: conversion-optimizer
+
+**USE THIS WHENEVER:**
+- Writing ANY CTA copy (buttons, headlines, hero text)
+- User mentions bookings, conversions, or clients
+- Creating call-to-action sections
+- Page has traffic but few conversions
+- Writing persuasive copy of any kind
+- Designing booking flows or contact sections
+- User says "how do I get more bookings?"
+
+**CREATIVE TRIGGERS:**
+- "Add a CTA" → Use conversion frameworks
+- "People aren't booking" → Audit all CTAs
+- "Write the hero section" → Conversion-focused copy
+- "Make this more compelling" → Apply PAS/AIDA/BAB
+- ANY button text or headline → Optimize it
+- "Improve this section" → Check for conversion opportunities
+
+**Output:** A/B variations with conversion scores
+
+---
+
+### Multi-Skill Workflows
+
+**When creating a new page:**
+1. keyword-research → Find best keyword angle
+2. seo-competitor-intelligence → Research top 5 competitors
+3. therapy-content-generator → Write comprehensive content
+4. faq-schema-generator → Add FAQ section
+5. meta-title-optimizer → Create optimized title
+6. conversion-optimizer → Write CTAs
+7. frontend-design → Style the page
+
+**When improving existing pages:**
+1. meta-title-optimizer → Check title first
+2. keyword-research → Verify keyword targeting
+3. faq-schema-generator → Add FAQ if missing
+4. conversion-optimizer → Improve CTAs
+5. frontend-design → Fix any visual issues
+
+**When analyzing performance:**
+1. keyword-research → Process any data shared
+2. seo-competitor-intelligence → Compare to top rankers
+3. meta-title-optimizer → Check titles of underperforming pages
+4. conversion-optimizer → Audit CTAs on high-traffic pages
+
+---
+
+### Default Behaviors
+
+**ALWAYS:**
+- Read `.claude/skills/[skill]/SKILL.md` when using a skill
+- Request Ahrefs/GSC data when it would improve analysis
+- Ensure CRPO compliance (all skills have built-in checks)
+- Combine multiple skills for comprehensive work
+- Mention which skill you're using and why
+
+**NEVER:**
+- Wait to be explicitly asked to use a skill
+- Skip skills because "it's just a small change"
+- Override CRPO compliance warnings
+- Use generic approaches when a skill could help
+
+### Skill Files Location
+
+```
+.claude/skills/
+├── README.md                      # Overview of all skills
+├── meta-title-optimizer/
+│   ├── SKILL.md                   # Main workflow
+│   ├── scripts/                   # Python tools
+│   └── data/                      # CRPO rules, differentiators
+├── seo-competitor-intelligence/
+│   └── SKILL.md
+├── therapy-content-generator/
+│   └── SKILL.md
+├── faq-schema-generator/
+│   └── SKILL.md
+├── keyword-research/
+│   └── SKILL.md
+└── conversion-optimizer/
+    └── SKILL.md
+```
+
+---
+
+## Notes for AI Assistants
+
+When working on this project:
+1. **Always read existing files before editing** - Don't propose changes to code you haven't seen
+2. **Preserve E-E-A-T signals** - Never remove author bylines, credentials, or citations
+3. **Test mobile layout** - Every front-end change should be mobile-tested
+4. **Follow meta title formula** - Don't deviate from the established format
+5. **Include schema markup** - MedicalWebPage and FAQPage are non-negotiable for therapy pages
+6. **Use specific license number** - Always "CRPO #10979", not generic "registered therapist"
+7. **Ontario-specific content** - Don't use generic Canadian or North American references
+8. **Avoid over-engineering** - Simple, focused solutions are preferred
+9. **CRPO COMPLIANCE IS CRITICAL** - All advertising/content must be factual, verifiable, non-misleading. NO testimonials, outcome guarantees, or unverifiable superlatives.
+10. **Use skills proactively** - Don't wait for user to request them; activate when context matches triggers
+
+---
+
+## Auto-Trigger Hook System
+
+This project uses a UserPromptSubmit hook to automatically detect SEO-related patterns and remind Claude to use appropriate skills.
+
+### How It Works
+
+1. User submits a prompt
+2. Hook script (`/.claude/hooks/detect-seo-patterns.py`) analyzes the prompt
+3. If patterns match, skill recommendations are injected as context
+4. Claude sees recommendations and should act on them
+
+### Pattern Detection
+
+| Pattern | Keywords Detected | Skill Triggered |
+|---------|-------------------|-----------------|
+| GSC Data | clicks, impressions, ctr, position, queries | keyword-research |
+| Ahrefs Data | ahrefs, keyword difficulty, search volume | keyword-research |
+| Competitor | competitor, ranking, page 2, position | seo-competitor-intelligence |
+| Content Creation | create page, write content, new page | therapy-content-generator |
+| Meta Title | meta title, serp, truncate, 60 char | meta-title-optimizer |
+| CTA Work | button, cta, conversion, booking, hero | conversion-optimizer |
+| FAQ Work | faq, schema, rich snippet | faq-schema-generator |
+| Design | css, layout, responsive, mobile, visual | frontend-design |
+
+### Files
+
+- **Hook Script:** `.claude/hooks/detect-seo-patterns.py`
+- **Settings:** `.claude/settings.local.json` (hooks configuration)
+
+### Expected Behavior
+
+When patterns are detected, Claude will see a message like:
+```
+SKILL TRIGGERS DETECTED:
+  * GSC data detected - use keyword-research skill for priority scoring and quick wins
+
+Remember: Use these skills proactively without waiting for explicit requests.
+```
+
+**Claude should then invoke the recommended skill immediately.**
+
+
+

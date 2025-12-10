@@ -1,0 +1,82 @@
+# NextStep Therapy - Cursor Rules
+
+## Project Context
+NextStep Therapy website (nextsteptherapy.ca) - a therapy practice in Ontario, Canada.
+
+## Unique Differentiators (Use These in All SEO Work)
+- **CRPO #10979** - Specific license number (College of Registered Psychotherapists of Ontario)
+- **ACT therapy specialization** - Acceptance and Commitment Therapy
+- **Virtual-first practice** with same-week availability
+- **Evening and weekend appointments**
+- **Insurance receipts** provided for all Ontario insurance providers
+
+---
+
+# SEO Competitor Intelligence Skill
+
+## How to Invoke
+When user asks for competitor analysis or SEO content brief:
+
+```
+Use the SEO Competitor Intelligence skill to analyze:
+- Target keyword: [keyword]
+- Competitor URLs: [5 URLs]
+- My unique differentiators: CRPO #10979, ACT specialty, virtual-first, same-week availability
+```
+
+## What This Skill Does
+1. **Content Structure Analysis** - Headings, word count, readability
+2. **Topic Cluster Mapping** - Topics covered vs gaps
+3. **E-E-A-T Signal Detection** - Credentials, citations, trust signals
+4. **Schema Markup Audit** - JSON-LD schema opportunities
+5. **Local SEO Signals** - Ontario-specific content
+6. **Content Gap Identification** - What competitors miss
+7. **Actionable Brief Generation** - Outline to beat competition
+
+## When to Use
+- Before writing new blog posts or service pages
+- Optimizing pages that rank on page 2-3
+- Location page strategy
+- Understanding why competitors rank higher
+- Finding quick-win content gaps
+
+## Process Overview
+1. Scrape 5 competitor pages (use Firecrawl if available)
+2. Analyze structure (headings, word count, readability)
+3. Audit schema markup (FAQ, Review, MedicalWebPage, LocalBusiness)
+4. Detect E-E-A-T signals (author bio, credentials, citations, freshness)
+5. Map topic clusters (core, secondary, gaps)
+6. Check local SEO signals (Ontario cities, CRPO, insurance)
+7. Generate competitive brief with recommended outline
+
+## Healthcare/Therapy Content (YMYL) Rules
+- E-E-A-T signals are CRITICAL for Google rankings
+- Always recommend MedicalWebPage schema
+- Author credentials must be visible
+- Cite authoritative sources (CRPO, CMHA, research)
+
+## Ontario Local SEO Rules
+- Use LocalBusiness schema with Ontario address
+- Include specific CRPO license number
+- Detail Ontario insurance providers
+- Create city-specific content (not templates)
+
+## Analysis Scripts
+Located in `claude-skills/seo-competitor-intelligence/scripts/`:
+- `analyze_structure.py` - Content structure
+- `analyze_schema.py` - Schema detection
+- `analyze_eeat.py` - E-E-A-T signals
+- `generate_brief.py` - Brief generation
+
+## Output Format
+Generate a competitive brief with:
+- Competitor benchmarks (word count, headings, schema)
+- Your advantages to highlight
+- Recommended H1-H3 outline
+- Schema opportunities (especially gaps like Review schema)
+- Internal linking suggestions
+- Word count target
+- Expected impact
+
+
+
