@@ -1,0 +1,979 @@
+/* ============================================
+   NEXTSTEP THERAPY - DESIGN SYSTEM FIX
+   Final Override - December 2024
+
+   AESTHETIC: Refined Clinical Warmth
+   - Navy (#1e3a4f) for trust & professionalism
+   - Sage (#4a7c59) ONLY for accents, never text
+   - Warm ivory backgrounds for approachability
+   - Clear text hierarchy with high contrast
+   ============================================ */
+
+/* ============================================
+   1. AUTHORITATIVE DESIGN TOKENS
+   ============================================ */
+:root {
+    /* Brand Colors */
+    --navy: #1e3a4f;
+    --navy-dark: #152a3a;
+    --navy-light: #2d4a5e;
+
+    /* Accent - Use sparingly */
+    --sage: #4a7c59;
+    --sage-light: #5f9970;
+
+    /* Backgrounds */
+    --white: #ffffff;
+    --ivory: #fdfcfa;
+    --cream: #f8f6f3;
+    --linen: #f2efe9;
+
+    /* Borders */
+    --border: #e5e0d8;
+    --border-light: #ede9e3;
+
+    /* Text - ALWAYS high contrast */
+    --text-dark: #1e3a4f;
+    --text-body: #3d4f5f;
+    --text-muted: #5a6a7a;
+    --text-light: #ffffff;
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', -apple-system, sans-serif;
+
+    /* Spacing */
+    --section-pad: 5rem;
+    --container-max: 1200px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(30, 58, 79, 0.08);
+    --shadow-md: 0 4px 16px rgba(30, 58, 79, 0.1);
+    --shadow-lg: 0 8px 32px rgba(30, 58, 79, 0.12);
+}
+
+/* ============================================
+   2. BASE TYPOGRAPHY - HIGH CONTRAST
+   ============================================ */
+html, body {
+    font-family: var(--font-body) !important;
+    color: var(--text-body) !important;
+    background: var(--ivory) !important;
+    line-height: 1.7 !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display) !important;
+    color: var(--text-dark) !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+p {
+    color: var(--text-body) !important;
+    line-height: 1.7 !important;
+}
+
+/* Links - Navy, NOT sage (sage is too light) */
+a {
+    color: var(--navy) !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--border) !important;
+    transition: all 0.2s ease !important;
+}
+
+a:hover {
+    color: var(--navy-light) !important;
+    text-decoration-color: var(--navy) !important;
+}
+
+/* ============================================
+   3. HEADER - Clean & Professional
+   ============================================ */
+.header, header.header {
+    background: var(--white) !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 1rem 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: none !important;
+}
+
+.logo-text {
+    font-family: var(--font-display) !important;
+    font-size: 1.375rem !important;
+    color: var(--text-dark) !important;
+    text-decoration: none !important;
+}
+
+.nav a {
+    color: var(--text-body) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.nav a:hover {
+    color: var(--text-dark) !important;
+}
+
+.header-phone {
+    color: var(--text-dark) !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.credentials-badge,
+.credentials-badge-prominent {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
+    font-size: 0.6875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    border: none !important;
+}
+
+/* ============================================
+   4. HERO SECTION
+   ============================================ */
+.hero, section.hero {
+    background: var(--cream) !important;
+    padding: var(--section-pad) 0 !important;
+}
+
+.hero h1 {
+    font-size: clamp(2.25rem, 5vw, 3.25rem) !important;
+    color: var(--text-dark) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.hero .lead-text,
+.hero p {
+    color: var(--text-body) !important;
+    font-size: 1.125rem !important;
+}
+
+.hero-credentials p {
+    color: var(--text-dark) !important;
+}
+
+/* ============================================
+   5. BUTTONS - Clear, High Contrast
+   ============================================ */
+
+/* Primary Button - Navy with white text */
+.btn-primary,
+.primary-cta,
+.manus-primary-cta,
+a.btn-primary,
+a.primary-cta,
+button.btn-primary,
+.header-book-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: 8px !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid var(--navy) !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.btn-primary:hover,
+.primary-cta:hover,
+.manus-primary-cta:hover,
+a.btn-primary:hover,
+a.primary-cta:hover,
+.header-book-btn:hover {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border-color: var(--navy) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+    text-decoration: none !important;
+}
+
+/* Secondary Button - Outline */
+.btn-secondary,
+.secondary-cta,
+a.btn-secondary,
+a.secondary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    color: var(--navy) !important;
+    padding: 0.875rem 1.75rem !important;
+    border-radius: 8px !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: 2px solid var(--navy) !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+}
+
+.btn-secondary:hover,
+.secondary-cta:hover,
+a.btn-secondary:hover,
+a.secondary-cta:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    text-decoration: none !important;
+}
+
+/* ============================================
+   6. STRATEGIC CTA SECTIONS
+   Light background with DARK text
+   ============================================ */
+.strategic-cta-section {
+    background: var(--cream) !important;
+    padding: 2.5rem !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    margin-top: 3rem !important;
+    border: 1px solid var(--border) !important;
+}
+
+/* Force ALL text in strategic CTA to be dark/navy */
+.strategic-cta-section h2,
+.strategic-cta-section h3,
+.strategic-cta-section h4 {
+    color: var(--text-dark) !important;
+    font-size: 1.75rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.strategic-cta-section p {
+    color: var(--text-body) !important;
+    font-size: 1.0625rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Links in strategic CTA - navy with underline */
+.strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
+    color: var(--navy) !important;
+    text-decoration: underline !important;
+    font-weight: 500 !important;
+}
+
+.strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn):hover {
+    color: var(--navy-light) !important;
+}
+
+/* Buttons in strategic CTA */
+.strategic-cta-section .btn-primary,
+.strategic-cta-section .btn {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    text-decoration: none !important;
+    margin: 0.5rem !important;
+}
+
+.strategic-cta-section .btn-secondary {
+    background: transparent !important;
+    color: var(--navy) !important;
+    border: 2px solid var(--navy) !important;
+    text-decoration: none !important;
+    margin: 0.5rem !important;
+}
+
+/* Trust signals */
+.strategic-cta-section .cta-trust-signals,
+.strategic-cta-section .cta-trust-signals span {
+    color: var(--text-body) !important;
+}
+
+/* ============================================
+   7. APPROACH SECTION (Dark Navy Background)
+   ============================================ */
+.approach,
+section.approach,
+#approach {
+    background: var(--navy) !important;
+    padding: var(--section-pad) 0 !important;
+}
+
+/* ALL text in approach section is WHITE */
+.approach h2,
+.approach h3,
+.approach h4,
+.approach p,
+.approach li,
+.approach span,
+.approach .section-header h2,
+.approach .approach-content h3,
+.approach .approach-content h4,
+.approach .approach-content p {
+    color: var(--white) !important;
+}
+
+.approach .section-subtitle {
+    color: #8cb390 !important;
+}
+
+/* Light card inside approach */
+.approach .specialization-highlight {
+    background: var(--white) !important;
+    padding: 2rem !important;
+    border-radius: 16px !important;
+}
+
+.approach .specialization-highlight h3,
+.approach .specialization-highlight h4,
+.approach .specialization-highlight p {
+    color: var(--text-dark) !important;
+}
+
+.approach .specialization-highlight p {
+    color: var(--text-body) !important;
+}
+
+/* Strategic CTA inside approach - CRITICAL FIX for text visibility */
+.approach .strategic-cta-section,
+section.approach .strategic-cta-section,
+#approach .strategic-cta-section {
+    background: var(--cream) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.approach .strategic-cta-section h2,
+.approach .strategic-cta-section h3,
+.approach .strategic-cta-section h4,
+section.approach .strategic-cta-section h2,
+section.approach .strategic-cta-section h3,
+section.approach .strategic-cta-section h4,
+#approach .strategic-cta-section h2,
+#approach .strategic-cta-section h3,
+#approach .strategic-cta-section h4 {
+    color: #1e3a4f !important;
+}
+
+.approach .strategic-cta-section p,
+section.approach .strategic-cta-section p,
+#approach .strategic-cta-section p {
+    color: #3d4f5f !important;
+}
+
+.approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn),
+section.approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn),
+#approach .strategic-cta-section a:not(.btn-primary):not(.btn-secondary):not(.btn) {
+    color: #1e3a4f !important;
+}
+
+.approach .strategic-cta-section .cta-trust-signals,
+.approach .strategic-cta-section .cta-trust-signals span,
+section.approach .strategic-cta-section .cta-trust-signals,
+section.approach .strategic-cta-section .cta-trust-signals span {
+    color: #3d4f5f !important;
+}
+
+/* ============================================
+   8. CTA BOX (Navy Background)
+   ============================================ */
+.cta-box {
+    background: var(--navy) !important;
+    padding: 3rem !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+}
+
+.cta-box h2,
+.cta-box h3,
+.cta-box h4 {
+    color: var(--white) !important;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Buttons in CTA box - white with navy text */
+.cta-box .btn-primary,
+.cta-box a.btn-primary {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    border-color: var(--white) !important;
+}
+
+.cta-box .btn-primary:hover {
+    background: var(--cream) !important;
+}
+
+.cta-box .btn-secondary,
+.cta-box a.btn-secondary {
+    background: transparent !important;
+    color: var(--white) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.cta-box .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--white) !important;
+}
+
+/* ============================================
+   9. CARDS & CONTENT SECTIONS
+   ============================================ */
+.content-card,
+.specialization-card,
+.info-card,
+.trust-item,
+.therapist-showcase {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.content-card h2,
+.content-card h3,
+.content-card h4,
+.specialization-card h3,
+.specialization-title,
+.info-card h4,
+.trust-item h4 {
+    color: var(--text-dark) !important;
+}
+
+.content-card p,
+.specialization-card p,
+.specialization-desc,
+.info-card p,
+.trust-item p {
+    color: var(--text-body) !important;
+}
+
+/* Card links - navy */
+.content-card a,
+.specialization-card a,
+.specialization-link {
+    color: var(--navy) !important;
+}
+
+/* ============================================
+   10. FAQ SECTION
+   ============================================ */
+.faq-item {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 3px solid var(--navy) !important;
+    padding: 1.5rem !important;
+    border-radius: 8px !important;
+}
+
+.faq-question,
+.faq-item h3,
+.faq-item h4 {
+    color: var(--text-dark) !important;
+}
+
+.faq-answer,
+.faq-answer p,
+.faq-item p {
+    color: var(--text-body) !important;
+}
+
+/* ============================================
+   11. FOOTER
+   ============================================ */
+.footer, footer {
+    background: var(--navy-dark) !important;
+    color: var(--white) !important;
+    padding: 4rem 0 2rem !important;
+}
+
+.footer h4, footer h4 {
+    color: var(--white) !important;
+}
+
+.footer p, .footer a, .footer li,
+footer p, footer a, footer li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.footer a:hover, footer a:hover {
+    color: var(--white) !important;
+}
+
+/* ============================================
+   12. THERAPIST SHOWCASE
+   ============================================ */
+.therapist-showcase {
+    background: var(--white) !important;
+    padding: 2rem !important;
+    border-radius: 16px !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.therapist-name {
+    color: var(--text-dark) !important;
+}
+
+.therapist-title {
+    color: var(--sage) !important;
+    font-weight: 600 !important;
+}
+
+.therapist-credentials {
+    background: var(--linen) !important;
+    color: var(--text-dark) !important;
+}
+
+.therapist-bio {
+    color: var(--text-body) !important;
+}
+
+.expertise-list li {
+    background: var(--cream) !important;
+    color: var(--text-dark) !important;
+}
+
+/* ============================================
+   13. QUIZ WIDGET
+   ============================================ */
+.quiz-widget-container {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 20px !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.quiz-header h2 {
+    color: var(--text-dark) !important;
+}
+
+.quiz-header p {
+    color: var(--text-body) !important;
+}
+
+.quiz-question-text {
+    color: var(--text-dark) !important;
+}
+
+.quiz-option {
+    background: var(--white) !important;
+    border: 1.5px solid var(--border) !important;
+    color: var(--text-dark) !important;
+}
+
+.quiz-option:hover {
+    background: var(--cream) !important;
+    border-color: var(--navy) !important;
+}
+
+.quiz-option.selected {
+    background: rgba(74, 124, 89, 0.1) !important;
+    border-color: var(--sage) !important;
+}
+
+/* ============================================
+   14. SECTION TITLES & SUBTITLES
+   ============================================ */
+.section-header h2,
+.section-title {
+    color: var(--text-dark) !important;
+}
+
+.section-subtitle,
+.section-eyebrow {
+    color: var(--sage) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.8125rem !important;
+}
+
+.lead-text {
+    color: var(--text-body) !important;
+}
+
+/* ============================================
+   15. MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+    }
+
+    .strategic-cta-section {
+        padding: 1.5rem !important;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .credentials-badge {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   16. SPECIALIZATIONS SECTION
+   ============================================ */
+.specializations {
+    background: var(--cream) !important;
+    padding: var(--section-pad) 0 !important;
+}
+
+.specializations .section-header h2 {
+    color: var(--text-dark) !important;
+}
+
+.specializations .section-subtitle {
+    color: var(--sage) !important;
+}
+
+.specializations .lead-text {
+    color: var(--text-body) !important;
+}
+
+.specializations .lead-text a {
+    color: var(--navy) !important;
+}
+
+/* ============================================
+   17. TRUST SECTION
+   ============================================ */
+.trust-section {
+    background: var(--white) !important;
+}
+
+.trust-grid {
+    display: grid !important;
+    gap: 2rem !important;
+}
+
+.trust-item {
+    background: var(--ivory) !important;
+}
+
+.trust-item h4 {
+    color: var(--text-dark) !important;
+}
+
+.trust-item p {
+    color: var(--text-body) !important;
+}
+
+.trust-item a {
+    color: var(--navy) !important;
+}
+
+/* ============================================
+   18. PROCESS SECTION
+   ============================================ */
+.process-steps {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.step-number {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+}
+
+.step-content h3 {
+    color: var(--text-dark) !important;
+}
+
+.step-content p {
+    color: var(--text-body) !important;
+}
+
+/* ============================================
+   19. ACCESSIBILITY
+   ============================================ */
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--navy) !important;
+    outline-offset: 2px !important;
+}
+
+.skip-link:focus {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    padding: 1rem !important;
+    z-index: 10000 !important;
+}
+
+/* ============================================
+   20. OVERRIDE SAGE TEXT GLOBALLY
+   Sage should NEVER be used for text on light
+   backgrounds - only for accents/badges
+   ============================================ */
+
+/* Kill any sage text on light backgrounds */
+body a,
+main a,
+section a,
+.container a,
+p a {
+    color: var(--navy) !important;
+}
+
+/* Exception: section subtitles can be sage */
+.section-subtitle,
+.section-eyebrow,
+.specialization-badge,
+.therapist-title {
+    color: var(--sage) !important;
+}
+
+/* Exception: Links inside CTA boxes need white */
+.cta-box a {
+    color: var(--white) !important;
+}
+
+.cta-box a.btn-primary {
+    color: var(--navy) !important;
+}
+
+/* ============================================
+   21. HOMEPAGE SPACING FIXES
+   Reduce excessive dead space
+   ============================================ */
+
+/* Reduce section padding globally */
+section {
+    padding: 3.5rem 0 !important;
+}
+
+/* Hero section - tighter */
+.hero, section.hero {
+    padding: 3rem 0 4rem !important;
+}
+
+/* Quiz widget container - remove excess space */
+.quiz-widget-container {
+    margin: 0 auto !important;
+    max-width: 700px !important;
+}
+
+.quiz-widget-section {
+    padding: 2.5rem 0 !important;
+}
+
+/* Remove excessive margins on section headers */
+.section-header {
+    margin-bottom: 2rem !important;
+}
+
+.section-header h2 {
+    margin-bottom: 0.75rem !important;
+}
+
+.section-header .lead-text {
+    margin-bottom: 0 !important;
+}
+
+/* Tighter spacing on specializations */
+.specializations-grid {
+    gap: 1.5rem !important;
+}
+
+/* Location nav - cleaner pill styling */
+.location-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+.location-nav a {
+    display: inline-block !important;
+    padding: 0.5rem 1.25rem !important;
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 50px !important;
+    color: var(--navy) !important;
+    text-decoration: none !important;
+    font-size: 0.9375rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.location-nav a:hover {
+    background: var(--navy) !important;
+    color: var(--white) !important;
+    border-color: var(--navy) !important;
+}
+
+/* Popular locations section */
+.popular-locations,
+.additional-services {
+    padding: 2.5rem 0 !important;
+    background: var(--cream) !important;
+}
+
+/* ============================================
+   22. RESOURCES SECTION - Professional Grid
+   ============================================ */
+.featured-resources {
+    background: var(--ivory) !important;
+    padding: 3rem 0 !important;
+}
+
+.featured-resources .section-header {
+    margin-bottom: 2rem !important;
+}
+
+.resource-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+.resource-grid article {
+    background: var(--white) !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--border) !important;
+    transition: all 0.2s ease !important;
+}
+
+.resource-grid article:hover {
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-2px) !important;
+}
+
+.resource-grid article h3 {
+    font-size: 1.125rem !important;
+    margin-bottom: 0.5rem !important;
+    color: var(--text-dark) !important;
+}
+
+.resource-grid article h3 a {
+    color: var(--navy) !important;
+    text-decoration: none !important;
+}
+
+.resource-grid article h3 a:hover {
+    text-decoration: underline !important;
+}
+
+.resource-grid article p {
+    font-size: 0.9375rem !important;
+    color: var(--text-body) !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* ============================================
+   23. PROCESS TIMELINE - Cleaner
+   ============================================ */
+.process-timeline {
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+.process-step {
+    padding: 1.25rem 0 !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.process-step:last-child {
+    border-bottom: none !important;
+}
+
+.step-number {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+}
+
+/* ============================================
+   24. TRUST GRID - Tighter
+   ============================================ */
+.trust-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+}
+
+.trust-item {
+    padding: 1.5rem !important;
+}
+
+.trust-icon {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* ============================================
+   25. FAQ SECTION - Cleaner
+   ============================================ */
+.faq {
+    padding: 3rem 0 !important;
+}
+
+.faq-grid {
+    gap: 1rem !important;
+}
+
+.faq-item {
+    padding: 1.25rem !important;
+}
+
+/* ============================================
+   26. CONTACT SECTION - Tighter
+   ============================================ */
+.contact {
+    padding: 3.5rem 0 !important;
+}
+
+/* ============================================
+   27. MOBILE SPACING FIXES
+   ============================================ */
+@media (max-width: 768px) {
+    section {
+        padding: 2.5rem 0 !important;
+    }
+
+    .hero {
+        padding: 2rem 0 3rem !important;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .location-nav {
+        gap: 0.5rem !important;
+    }
+
+    .location-nav a {
+        padding: 0.4rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+}
