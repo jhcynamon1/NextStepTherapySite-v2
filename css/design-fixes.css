@@ -2172,6 +2172,44 @@ section {
     color: var(--text-tertiary) !important;
 }
 
+/* FIX: Floating CTA button - MUST have white text */
+.floating-cta {
+    background: var(--navy) !important;
+    color: #ffffff !important;
+    border: 2px solid var(--navy) !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(30, 58, 79, 0.3) !important;
+}
+
+.floating-cta:hover {
+    background: #ffffff !important;
+    color: var(--navy) !important;
+    border-color: var(--navy) !important;
+}
+
+/* FIX: Hero credentials - tighter spacing */
+.hero-credentials {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* FIX: Quiz section - remove top gap */
+.quiz-widget-section,
+section.quiz-widget-section {
+    padding-top: var(--space-4) !important;
+    margin-top: 0 !important;
+}
+
+/* FIX: Hero section - minimal top padding */
+.hero, section.hero {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+}
+
 /* ============================================
    37. PRINT STYLES
    ============================================ */
