@@ -129,7 +129,7 @@ body, main, section, div, article, p, span, h1, h2, h3, h4, h5, h6, li, a {
 
 .hero {
     background: #fdfcfa; /* Flat Ivory - NO GRADIENT */
-    padding: 5rem 0;
+    padding: 2.5rem 0 3rem 0; /* Reduced top padding for less dead space above fold */
     position: relative;
 }
 
@@ -299,12 +299,12 @@ body, main, section, div, article, p, span, h1, h2, h3, h4, h5, h6, li, a {
    =========================================== */
 
 section {
-    padding: 5rem 0;
+    padding: 3rem 0; /* Reduced from 5rem to minimize dead space */
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* Reduced from 3rem */
 }
 
 .section-header h2 {
@@ -473,7 +473,14 @@ section {
     border: 1px solid #e5e0d8;
 }
 
-.strategic-cta-section * {
+/* Text colors - excluding buttons */
+.strategic-cta-section h1,
+.strategic-cta-section h2,
+.strategic-cta-section h3,
+.strategic-cta-section h4,
+.strategic-cta-section p,
+.strategic-cta-section span:not(.btn):not(.btn-primary):not(.btn-secondary),
+.strategic-cta-section li {
     color: #1e3a4f !important;
 }
 
@@ -614,22 +621,13 @@ section {
 }
 
 .process-timeline {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     margin-top: 2rem;
-}
-
-@media (max-width: 992px) {
-    .process-timeline {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .process-timeline {
-        grid-template-columns: 1fr;
-    }
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .process-step {
@@ -1192,9 +1190,13 @@ section {
     }
     
     section {
-        padding: 3rem 0;
+        padding: 2rem 0; /* Tighter on mobile */
     }
-    
+
+    .hero {
+        padding: 1.5rem 0 2rem 0; /* Even tighter hero on mobile */
+    }
+
     .section-header h2 {
         font-size: 1.5rem;
     }
