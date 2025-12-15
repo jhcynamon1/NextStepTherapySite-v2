@@ -2238,7 +2238,30 @@ section.quiz-widget-section {
 }
 
 /* ============================================
-   37. PRINT STYLES
+   37. INSURANCE GRID
+   ============================================ */
+.insurance-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.insurance-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--navy);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ============================================
+   38. PRINT STYLES
    ============================================ */
 @media print {
     .header, .footer, .strategic-cta-section, .cta-box {
