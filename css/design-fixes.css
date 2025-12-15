@@ -768,6 +768,57 @@ section.approach,
     margin: 0 auto var(--space-6) auto !important;
 }
 
+.cta-box .cta-buttons {
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    margin-top: 1.5rem !important;
+}
+
+.cta-box .cta-trust-line {
+    font-size: 0.9rem !important;
+    margin-top: 1.5rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Ensure buttons in CTA boxes have proper contrast */
+.cta-box .btn-primary {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+}
+
+.cta-box .btn-primary:hover {
+    background: var(--cream) !important;
+}
+
+.cta-box .btn-secondary {
+    background: transparent !important;
+    color: var(--white) !important;
+    border: 2px solid var(--white) !important;
+}
+
+.cta-box .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dark background text visibility fix
+[style*="background: #1a"], [style*="background: #2"], [style*="background:#1a"], [style*="background:#2"],
+[style*="background: linear-gradient"], [style*="background:linear-gradient"],
+[style*="background: var(--navy)"], [style*="background:var(--navy)"] {
+    color: #ffffff !important;
+}
+
+[style*="background: #1a"] h1, [style*="background: #1a"] h2, [style*="background: #1a"] h3, [style*="background: #1a"] h4,
+[style*="background: #2"] h1, [style*="background: #2"] h2, [style*="background: #2"] h3, [style*="background: #2"] h4,
+[style*="background: linear-gradient"] h1, [style*="background: linear-gradient"] h2, [style*="background: linear-gradient"] h3, [style*="background: linear-gradient"] h4 {
+    color: #ffffff !important;
+}
+
+[style*="background: #1a"] p, [style*="background: #2"] p, [style*="background: linear-gradient"] p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
 /* ============================================
    12. PROCESS SECTION
    ============================================ */
@@ -1089,6 +1140,89 @@ section.approach,
 .quiz-option.selected {
     border-color: var(--sage) !important;
     background: var(--sage-pale) !important;
+}
+
+/* ============================================
+   18.5. SIDEBAR
+   ============================================ */
+.sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--space-6) !important;
+}
+
+.sidebar-section {
+    background: var(--white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--space-5) !important;
+}
+
+.sidebar-section h3 {
+    font-size: var(--text-base) !important;
+    color: var(--text-primary) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.sidebar-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sidebar-section li {
+    margin-bottom: var(--space-2) !important;
+}
+
+.sidebar-section a {
+    color: var(--text-secondary) !important;
+    font-size: var(--text-sm) !important;
+}
+
+.sidebar-section a:hover {
+    color: var(--navy) !important;
+}
+
+.sidebar-cta {
+    background: var(--navy) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: var(--space-6) !important;
+    text-align: center !important;
+}
+
+.sidebar-cta h3 {
+    color: var(--white) !important;
+    font-size: var(--text-lg) !important;
+    margin-bottom: var(--space-3) !important;
+}
+
+.sidebar-cta p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: var(--text-sm) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.sidebar-cta .btn-primary {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.sidebar-cta .btn-primary:hover {
+    background: var(--cream) !important;
+}
+
+.sidebar-cta .btn-secondary {
+    background: transparent !important;
+    color: var(--white) !important;
+    border: 2px solid var(--white) !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.sidebar-cta .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* ============================================
