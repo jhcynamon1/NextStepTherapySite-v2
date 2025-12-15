@@ -363,10 +363,12 @@
 
     <link rel="stylesheet" href="shared.min.css">
     <link rel="stylesheet" href="v4-design-system.css?v=20251201">
-    <link rel="stylesheet" href="css/homepage-clean.css?v=20251210c">
-
-    <!-- Design Fixes - Unified Visual System (loads last to override) -->
+    
+    <!-- Design Fixes - legacy overrides -->
     <link rel="stylesheet" href="css/design-fixes.css?v=20251210d">
+    
+    <!-- Homepage v6 redesign overrides (load last) -->
+    <link rel="stylesheet" href="css/homepage-clean.css?v=20251215-v7">
 
     <!-- Essential CSS Variables Only -->
     <style>
@@ -469,7 +471,7 @@
         }
     </style>
 </head>
-<body>
+<body class="home-v7">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
@@ -505,501 +507,114 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Optimized Hero Section -->
-        <section class="hero">
+        <!-- Hero (v7) -->
+        <section class="hero home-hero" id="top">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text fade-in-up">
-                        <h1>You're Handling Everything on the Outside. But Something Feels Off.</h1>
-                        <p class="lead-text">Maybe it's the Sunday anxiety that starts on Friday. The way your chest tightens before meetings. Lying awake replaying conversations. If you're an Ontario professional who looks successful on paper but feels like you're barely keeping it together—you're not alone, and there are approaches that actually help.</p>
+                <div class="hero-v7">
+                    <div class="hero-v7__copy">
+                        <p class="hero-v7__eyebrow">Virtual therapy in Ontario</p>
+                        <h1>When “I’m fine” doesn’t feel true.</h1>
+                        <p class="lead-text">If your mind won’t shut off, your body is always braced, or you’re tired of pushing through—therapy can help you build skills for the moments that actually matter.</p>
 
-                        <!-- Conversion-Optimized CTAs -->
-                        <div class="hero-cta">
-                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=hero&utm_campaign=homepage" class="primary-cta">
-                                📞 Schedule 15-Min Consult
-                            </a>
-                            <div class="secondary-ctas">
-                                <a href="tel:+14163062157" class="secondary-cta phone-cta">Call (416) 306-2157</a>
+                        <div class="hero-v7__cta">
+                            <a class="btn btn-primary hero-v7__cta-primary" href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=hero&utm_campaign=homepage_v7">Book a 15‑minute consult</a>
+                            <a class="btn btn-secondary hero-v7__cta-secondary" href="#specializations">Explore services</a>
+                        </div>
+
+                        <div class="hero-v7__trust" aria-label="Trust signals">
+                            <div class="hero-v7__pill">CRPO #10979</div>
+                            <div class="hero-v7__pill">ACT + CBT informed</div>
+                            <div class="hero-v7__pill">Insurance receipts</div>
+                            <div class="hero-v7__pill">Virtual across Ontario</div>
+                        </div>
+                    </div>
+
+                    <aside class="hero-v7__panel" aria-label="Quick start">
+                        <div class="hero-v7__profile">
+                            <div class="hero-v7__avatar">
+                                <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon, Registered Psychotherapist" width="220" height="220" loading="eager" fetchpriority="high" sizes="220px">
+                            </div>
+                            <div class="hero-v7__profile-meta">
+                                <div class="hero-v7__name">Jesse Cynamon, RP</div>
+                                <div class="hero-v7__cred">CRPO #10979 • MPsy • Serving Ontario since 2022</div>
                             </div>
                         </div>
 
-                        <!-- Credentials (Below CTAs for Conversion) -->
-                        <div class="hero-credentials">
-                            <p><strong>CRPO #10979</strong> | MPsy | ACT & CBT Training | Serving Ontario Since 2022</p>
-                            <p>Member: CRPO, OAMHP | Insurance Accepted | Virtual & In-Person Available</p>
+                        <div class="hero-v7__chooser">
+                            <h2 class="hero-v7__chooser-title">Start here</h2>
+                            <div class="hero-v7__chooser-grid">
+                                <a class="hero-v7__chooser-card" href="/anxiety-therapy-ontario.html">
+                                    <span class="hero-v7__chooser-kicker">Anxiety</span>
+                                    <span class="hero-v7__chooser-title2">Overthinking + panic</span>
+                                    <span class="hero-v7__chooser-link">Learn more →</span>
+                                </a>
+                                <a class="hero-v7__chooser-card" href="/workplace-stress-therapy-ontario.html">
+                                    <span class="hero-v7__chooser-kicker">Work stress</span>
+                                    <span class="hero-v7__chooser-title2">Burnout + pressure</span>
+                                    <span class="hero-v7__chooser-link">Learn more →</span>
+                                </a>
+                                <a class="hero-v7__chooser-card" href="/mens-mental-health.html">
+                                    <span class="hero-v7__chooser-kicker">Men</span>
+                                    <span class="hero-v7__chooser-title2">Anger + shutdown</span>
+                                    <span class="hero-v7__chooser-link">Learn more →</span>
+                                </a>
+                                <a class="hero-v7__chooser-card" href="/life-transitions.html">
+                                    <span class="hero-v7__chooser-kicker">Life changes</span>
+                                    <span class="hero-v7__chooser-title2">Stuck + uncertain</span>
+                                    <span class="hero-v7__chooser-link">Learn more →</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="therapist-showcase fade-in-up">
-                        <div class="therapist-photo">
-                            <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
+                        <div class="hero-v7__micro">
+                            <p><strong>Prefer to talk first?</strong> Call <a href="tel:+14163062157">(416) 306‑2157</a>.</p>
                         </div>
-                        <div class="therapist-info">
-                            <h3 class="therapist-name">Jesse Cynamon, RP</h3>
-                            <p class="therapist-title">Your Therapist</p>
-                            <div class="therapist-credentials">CRPO #10979</div>
-                            <p class="therapist-bio">I work with professionals, students, and men across Ontario using a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). We identify specific patterns driving your anxiety and build practical skills for managing high-stakes moments. This isn't endless processing—it's focused skill development. Providing <a href="/anxiety-therapy-ontario">anxiety therapy</a> and <a href="/depression-therapy-ontario">depression therapy</a> throughout Ontario.</p>
-                            <ul class="expertise-list">
-                                <li>MPsy (Master of Psychology)</li>
-                                <li>CRPO Registered (#10979)</li>
-                                <li>ACT Training</li>
-                                <li>CBT Training</li>
-                                <li>Member: CRPO, OAMHP</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Quiz Widget (Modern Redesign - Calm/Typeform Inspired) -->
-        <section class="quiz-widget-section">
-
-            <div class="container" style="max-width: 900px;">
-                <div class="quiz-widget-container">
-
-                    <!-- Quiz Header -->
-                    <div class="quiz-header">
-                        <h2>Is Therapy Right for You?</h2>
-                        <p>A thoughtful 5-minute self-assessment. Completely private—no email required.</p>
-                    </div>
-
-                    <!-- Quiz Disclaimer -->
-                    <div class="quiz-disclaimer" style="background: #FFF9E6; border-left: 3px solid #d4a853; padding: 12px 20px; font-size: 0.8125rem; color: #7a5c12;">
-                        <strong style="font-weight: 600;">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #7a5c12; font-weight: 600; text-decoration: underline;">988</a> or your local emergency services.
-                    </div>
-
-                    <!-- Progress Bar -->
-                    <div class="quiz-progress-container" style="padding: 20px 30px 16px;">
-                        <div class="quiz-progress-bar" style="height: 6px; background: #f2efe9; border-radius: 9999px; overflow: hidden;">
-                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: #4a7c59; transition: width 0.4s ease; border-radius: 9999px; width: 0%;"></div>
+        <!-- Quick Assessment (v7) -->
+        <section class="home-assessment" id="assessment">
+            <div class="container">
+                <div class="home-assessment__grid">
+                    <div class="home-assessment__copy">
+                        <p class="section-subtitle">Clarity</p>
+                        <h2>Not sure what you need yet?</h2>
+                        <p class="lead-text">Start with something small. Get clarity on what you’re experiencing, then decide your next step—no pressure.</p>
+                        <div class="home-assessment__cta">
+                            <a class="btn btn-primary" href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Take the 2‑minute quiz</a>
+                            <a class="btn btn-secondary" href="/resources/grounding-techniques-guide.html">Free: 5 grounding techniques</a>
                         </div>
-                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #8a939d; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Question 1 of 15</div>
+                        <p class="home-assessment__fineprint">If you’re in crisis, call <strong>988</strong> or <strong>911</strong>, or ConnexOntario at <a href="tel:18665312600">1‑866‑531‑2600</a>.</p>
                     </div>
-
-                    <!-- Quiz Content Area -->
-                    <div class="quiz-content-area" id="quizContentArea" style="padding: 12px 30px 30px;">
-                        <!-- Questions will be inserted here by JavaScript -->
-                    </div>
-
-                    <!-- Results Container -->
-                    <div class="quiz-results-container" id="quizResultsContainer" style="display: none; padding: 40px;">
-                        <!-- Results will be inserted here by JavaScript -->
+                    <div class="home-assessment__cards" aria-label="Popular starting points">
+                        <a class="home-assessment__card" href="/blog/anxiety/do-i-need-therapy.html">
+                            <h3>Signs it’s time</h3>
+                            <p>Common patterns that bring people to therapy (without pathologizing you).</p>
+                            <span>Read guide →</span>
+                        </a>
+                        <a class="home-assessment__card" href="/virtual-therapy-ontario.html">
+                            <h3>How virtual therapy works</h3>
+                            <p>What sessions look like, privacy, and whether it can be effective.</p>
+                            <span>Learn more →</span>
+                        </a>
+                        <a class="home-assessment__card" href="#contact">
+                            <h3>Talk it through</h3>
+                            <p>A short consult to see if we’re a fit and what next steps could look like.</p>
+                            <span>Book a consult →</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <style>
-            /* Modern Quiz Widget Styles - Calm/Typeform Inspired */
-
-            /* Smooth Fade-In Animation */
-            .quiz-question-card {
-                animation: quizSmoothFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            @keyframes quizSmoothFadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px) scale(0.98);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                }
-            }
-
-            /* Question Number Badge */
-            .quiz-question-number {
-                display: inline-block;
-                background: var(--sage-soft);
-                color: var(--sage);
-                padding: 6px 14px;
-                border-radius: var(--radius-full);
-                font-weight: 700;
-                font-size: 0.6875rem;
-                margin-bottom: 16px;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                border: 1px solid var(--sage-medium);
-            }
-
-            /* Question Text - Larger, More Readable */
-            .quiz-question-text {
-                font-family: var(--font-display);
-                font-size: 1.5rem;
-                font-weight: 500;
-                margin-bottom: 24px;
-                color: var(--navy);
-                line-height: 1.3;
-                letter-spacing: -0.01em;
-            }
-
-            /* Options Container */
-            .quiz-options {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            /* Individual Option - Clean, Minimal Design */
-            .quiz-option {
-                background: white;
-                border: 1.5px solid var(--sand);
-                border-radius: var(--radius-md);
-                padding: 18px 22px;
-                cursor: pointer;
-                transition: all var(--duration-normal) var(--ease-out);
-                font-size: 1rem;
-                font-weight: 400;
-                color: var(--text-primary);
-                position: relative;
-                box-shadow: var(--shadow-xs);
-            }
-
-            .quiz-option:hover {
-                background: var(--cream);
-                border-color: var(--sage);
-                transform: translateX(4px);
-                box-shadow: var(--shadow-md);
-            }
-
-            .quiz-option.selected {
-                background: var(--sage-soft);
-                border-color: var(--sage);
-                font-weight: 500;
-                color: var(--navy);
-                box-shadow: var(--shadow-md), var(--shadow-glow);
-            }
-
-            .quiz-option.selected::before {
-                content: "✓";
-                position: absolute;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                color: var(--sage);
-                font-weight: 700;
-                font-size: 1.25rem;
-            }
-
-            /* Navigation Buttons */
-            .quiz-navigation {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 28px;
-                gap: 14px;
-            }
-
-            .quiz-btn {
-                padding: var(--space-4) var(--space-8);
-                border: none;
-                border-radius: var(--radius-sm);
-                font-size: 0.9375rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all var(--duration-normal) var(--ease-out);
-                font-family: var(--font-body);
-                letter-spacing: 0.02em;
-            }
-
-            .quiz-btn-secondary {
-                background: var(--cream);
-                color: var(--text-secondary);
-                border: 1.5px solid var(--sand);
-            }
-
-            .quiz-btn-secondary:hover {
-                background: var(--linen);
-                border-color: var(--navy);
-                transform: translateY(-1px);
-            }
-
-            .quiz-btn-primary {
-                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-                color: white;
-                flex: 1;
-                box-shadow: var(--shadow-md);
-            }
-
-            .quiz-btn-primary:hover {
-                transform: translateY(-2px);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .quiz-btn:disabled {
-                opacity: 0.4;
-                cursor: not-allowed;
-                transform: none !important;
-            }
-
-            /* Results Styles - Elegant & Polished */
-            .quiz-score-display {
-                text-align: center;
-                padding: 60px 40px;
-                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-                color: white;
-                border-radius: var(--radius-xl);
-                margin-bottom: 40px;
-                box-shadow: var(--shadow-xl);
-            }
-
-            .quiz-score-number {
-                font-family: var(--font-display);
-                font-size: 84px;
-                font-weight: 600;
-                margin-bottom: 12px;
-                line-height: 1;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-
-            .quiz-score-label {
-                font-size: 1.1rem;
-                opacity: 0.9;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-            }
-
-            .quiz-result-section {
-                margin-bottom: 32px;
-                padding: 32px;
-                background: var(--cream);
-                border-radius: var(--radius-lg);
-                border-left: 4px solid var(--sage);
-                box-shadow: var(--shadow-sm);
-            }
-
-            .quiz-result-section h3 {
-                font-family: var(--font-display);
-                font-size: 1.625rem;
-                margin-bottom: 16px;
-                color: var(--navy);
-                font-weight: 500;
-                letter-spacing: -0.01em;
-            }
-
-            .quiz-result-section p {
-                font-size: 1rem;
-                line-height: 1.8;
-                color: var(--text-secondary);
-                margin-bottom: 16px;
-            }
-
-            .quiz-result-section ul {
-                margin: 20px 0;
-                padding-left: 28px;
-            }
-
-            .quiz-result-section li {
-                margin-bottom: 12px;
-                color: var(--text-secondary);
-                line-height: 1.8;
-            }
-
-            .quiz-cta-box {
-                background: white;
-                border: 1.5px solid var(--sage-medium);
-                border-radius: var(--radius-xl);
-                padding: 40px;
-                text-align: center;
-                margin-top: 40px;
-                box-shadow: var(--shadow-md), var(--shadow-glow);
-            }
-
-            .quiz-cta-box h3 {
-                font-family: var(--font-display);
-                font-size: 1.625rem;
-                margin-bottom: 16px;
-                color: var(--navy);
-                font-weight: 500;
-                letter-spacing: -0.01em;
-            }
-
-            .quiz-cta-box p {
-                font-size: 1rem;
-                color: var(--text-secondary);
-                margin-bottom: 28px;
-                line-height: 1.8;
-            }
-
-            .quiz-cta-buttons {
-                display: flex;
-                gap: var(--space-4);
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .quiz-crisis-box {
-                background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%);
-                border-left: 4px solid #d4a853;
-                padding: 28px;
-                border-radius: var(--radius-lg);
-                margin-top: 32px;
-                box-shadow: var(--shadow-sm);
-            }
-
-            .quiz-crisis-box h3 {
-                color: #7a5c12;
-                font-size: 1.375rem;
-                margin-bottom: 14px;
-                font-weight: 600;
-                font-family: var(--font-display);
-            }
-
-            .quiz-crisis-box p {
-                color: #7a5c12;
-                font-size: 1rem;
-                line-height: 1.8;
-                margin-bottom: 12px;
-            }
-
-            .quiz-crisis-box a {
-                color: #8B6914;
-                font-weight: 600;
-                text-decoration: underline;
-            }
-
-            /* Color Tiers */
-            .quiz-tier-green { border-left-color: #52C584; }
-            .quiz-tier-amber { border-left-color: #F5C563; }
-            .quiz-tier-red { border-left-color: #EF6F6F; }
-
-            .quiz-score-tier-green {
-                background: linear-gradient(135deg, #52C584 0%, #70D99D 100%);
-            }
-
-            .quiz-score-tier-amber {
-                background: linear-gradient(135deg, #F5C563 0%, #F9D88A 100%);
-            }
-
-            .quiz-score-tier-red {
-                background: linear-gradient(135deg, #EF6F6F 0%, #F28B8B 100%);
-            }
-
-            /* Mobile Responsive - Enhanced */
-            @media (max-width: 768px) {
-                .quiz-widget-section {
-                    padding: 24px 16px !important;
-                }
-
-                .quiz-widget-container {
-                    border-radius: 16px !important;
-                }
-
-                .quiz-header {
-                    padding: 18px 20px 14px !important;
-                }
-
-                .quiz-header h2 {
-                    font-size: 1.4rem !important;
-                    line-height: 1.3 !important;
-                }
-
-                .quiz-header p {
-                    font-size: 0.9rem !important;
-                    line-height: 1.4 !important;
-                }
-
-                .quiz-disclaimer {
-                    padding: 14px 20px !important;
-                    font-size: 12.5px !important;
-                }
-
-                .quiz-progress-container {
-                    padding: 14px 20px 10px !important;
-                }
-
-                .quiz-content-area {
-                    padding: 10px 20px 24px !important;
-                    min-height: auto !important;
-                }
-
-                .quiz-question-text {
-                    font-size: 1.25rem !important;
-                    margin-bottom: 18px !important;
-                    line-height: 1.35 !important;
-                }
-
-                .quiz-question-number {
-                    font-size: 10px !important;
-                    padding: 5px 12px !important;
-                    margin-bottom: 12px !important;
-                }
-
-                .quiz-option {
-                    padding: 14px 16px !important;
-                    font-size: 0.95rem !important;
-                    border-radius: 10px !important;
-                }
-
-                .quiz-option.selected::before {
-                    font-size: 1.2rem !important;
-                    right: 16px !important;
-                }
-
-                .quiz-score-number {
-                    font-size: 56px !important;
-                }
-
-                .quiz-score-display {
-                    padding: 40px 24px !important;
-                    margin-bottom: 28px !important;
-                }
-
-                .quiz-cta-buttons {
-                    flex-direction: column;
-                }
-
-                .quiz-btn {
-                    width: 100%;
-                    padding: 12px 20px !important;
-                    font-size: 0.95rem !important;
-                }
-
-                .quiz-navigation {
-                    flex-direction: column;
-                    margin-top: 20px !important;
-                    gap: 10px !important;
-                }
-
-                .quiz-btn-primary {
-                    order: -1;
-                }
-
-                .quiz-result-section {
-                    padding: 24px 20px !important;
-                    margin-bottom: 24px !important;
-                }
-
-                .quiz-result-section h3 {
-                    font-size: 1.4rem !important;
-                }
-
-                .quiz-result-section p,
-                .quiz-result-section li {
-                    font-size: 0.98rem !important;
-                }
-
-                .quiz-cta-box {
-                    padding: 28px 20px !important;
-                }
-
-                .quiz-cta-box h3 {
-                    font-size: 1.4rem !important;
-                }
-
-                .quiz-crisis-box {
-                    padding: 20px !important;
-                    margin-top: 24px !important;
-                }
-
-                .quiz-results-container {
-                    padding: 28px 20px !important;
-                }
-            }
-        </style>
 
         <script>
+            /* HOMEPAGE QUIZ DISABLED (v7 redesign)
+               The full interactive quiz remains in the repo at:
+               /blog/mental-health-guides/do-i-need-therapy-quiz.html
+            */
+            /*
             // Quiz Questions Data
             const quizQuestions = [
                 {
@@ -1433,6 +1048,7 @@
                 // Small delay to ensure page is fully rendered
                 setTimeout(initHomePageQuiz, 500);
             });
+            */
         </script>
 
         <!-- Problem Recognition Section (Conversion Optimization) -->
@@ -1980,17 +1596,6 @@
         </section>
     </main>
 
-    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=mobile_sticky&utm_campaign=homepage" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-    </div>
-
-    <!-- Floating CTA for Desktop (v4.0) -->
-    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=floating_cta&utm_campaign=homepage" class="floating-cta">
-        📅 Schedule 15-Min Call
-    </a>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -2298,4 +1903,5 @@
     </script>
 
 <script src="/js/security-check.js"></script>
+</body>
 </html>
