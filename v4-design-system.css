@@ -1796,7 +1796,7 @@ section.contact-section {
 .cta-box li,
 .cta-box strong,
 .cta-box em,
-.cta-box a:not(.btn-primary):not(.manus-primary-cta),
+.cta-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.manus-primary-cta):not(.secondary-cta),
 .cta-box label,
 .cta-box div,
 [class*="cta-box"] *,
@@ -1816,15 +1816,18 @@ section.contact-section {
 /* CTA box buttons - white background, navy text */
 .cta-box .btn-primary,
 .cta-box .btn.btn-primary,
+.cta-box a.btn:not([href^="tel:"]),
 .cta-box .manus-primary-cta,
 .cta-box .primary-cta,
 .cta-box a.manus-primary-cta,
 .cta-box a.btn-primary,
 .cta-box a.btn.btn-primary,
+.cta-box a.btn-primary:not([href^="tel:"]),
 .cta-box a.primary-cta,
 [class*="cta-box"] .btn-primary,
 [class*="cta-box"] .btn.btn-primary,
-[class*="cta-box"] .manus-primary-cta {
+[class*="cta-box"] .manus-primary-cta,
+[class*="cta-box"] a.btn:not([href^="tel:"]) {
     display: inline-block !important;
     background: #ffffff !important;
     color: #1e3a4f !important;
@@ -1838,9 +1841,11 @@ section.contact-section {
 /* CTA box secondary buttons - white outline */
 .cta-box .secondary-cta,
 .cta-box a.secondary-cta,
+.cta-box a.btn[href^="tel:"],
 .cta-box .btn-secondary,
 [class*="cta-box"] .secondary-cta,
-[class*="cta-box"] a.secondary-cta {
+[class*="cta-box"] a.secondary-cta,
+[class*="cta-box"] a.btn[href^="tel:"] {
     background: transparent !important;
     color: #ffffff !important;
     border: 2px solid rgba(255, 255, 255, 0.8) !important;
