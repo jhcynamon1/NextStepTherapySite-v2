@@ -3,7 +3,7 @@
 
 **Research Period:** December 20, 2025
 **Method:** Claude Chrome extension live SERP analysis
-**Keywords Analyzed:** 4 priority keywords
+**Keywords Analyzed:** 5 priority keywords
 
 ---
 
@@ -15,6 +15,7 @@
 | men's mental health therapy ontario | Low | Low | Practice-dominated | ✅ Enhanced | 12x content |
 | virtual therapy ontario | High | Medium | Mixed | ✅ Already optimized | 8.5x content |
 | anxiety therapy ontario | Medium | Medium | Gov-dominated | ✅ Already optimized | 25x content |
+| depression therapy ontario | Medium | Low | Practice-dominated | ✅ Already optimized | 16x content |
 
 **Key Finding:** All competitors have weak content (<500 words avg) with zero E-E-A-T signals. NextStep pages are 5-25x more comprehensive.
 
@@ -157,6 +158,53 @@
 
 ---
 
+# Keyword 5: Depression Therapy Ontario
+
+**Priority:** P1 | **Opportunity:** HIGHEST
+
+## SERP Overview
+- **MAJOR OPPORTUNITY** - Almost no private practice competition
+- Government sites present but weak depression-specific content
+- Private practices have generic "services" pages, not dedicated depression pages
+- Psychology Today dominates directory results
+
+## Top Organic Results
+
+| Position | Result Type | Notes |
+|----------|-------------|-------|
+| 1-2 | Government/Health | Generic mental health pages |
+| 3-4 | Psychology Today | Directory listings |
+| 5+ | Private practices | Generic services pages |
+
+## Private Practice Comparison
+
+| Metric | Competitor Avg | NextStep |
+|--------|----------------|----------|
+| Word Count | 376 | **6,111** |
+| Dedicated Depression Page | 0/3 | ✅ |
+| CRPO Number | 0/3 | ✅ #10979 |
+| ACT for Depression | 0/3 | ✅ |
+| Same-Week Availability | 0/3 | ✅ |
+| FAQPage Schema | 0/3 | ✅ |
+| MedicalWebPage Schema | 0/3 | ✅ |
+| Author Byline | 0/3 | ✅ |
+| Last Updated | 0/3 | ✅ |
+
+## Key Insight
+Most competitors are NOT targeting depression-specific keywords at all. They have generic "anxiety and depression" pages or just "services" pages. NextStep has a dedicated 6,111-word page specifically for depression therapy - this is a significant competitive advantage.
+
+## Status
+- ✅ Page already optimized (6,111 words = 16x competitor avg)
+- ✅ All E-E-A-T signals present
+- ✅ MedicalWebPage schema
+- ✅ CRPO #10979 in title and meta
+- ✅ Same-week availability messaging
+- No work needed
+
+**Ranking Timeline:** 60-90 days (BEST opportunity due to weak competition)
+
+---
+
 # NextStep Competitive Advantages (Universal)
 
 | Advantage | Status | Competitor Coverage |
@@ -177,7 +225,6 @@
 
 | Keyword | Priority | Status |
 |---------|----------|--------|
-| depression therapy ontario | P1 | Not analyzed yet |
 | online therapist ontario | P2 | Not analyzed yet |
 | cbt therapy toronto | P2 | Not analyzed yet |
 
