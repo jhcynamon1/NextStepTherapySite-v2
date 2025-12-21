@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#4A90E2">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <!-- Google Analytics 4 + Conversion Tracking - Load after page load for optimal performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <script>
+        // Load Google Analytics after page is fully loaded
+        window.addEventListener('load', function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-J8H4YBGSHR', {
+                'allow_enhanced_conversions': true,
+                'send_page_view': true
+            });
+
+            // Track phone clicks - deferred for performance
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            // Track booking clicks (v4.0 - NEW)
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'booking_click', {
+                        'event_category': 'conversion',
+                        'event_label': 'jane_app_booking',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Online Therapy Ontario | No Waitlist | Next Step Therapy</title>
+    <meta name="description" content="Professional online therapy for high-functioning professionals in Ontario. Focused support for anxiety, burnout, career stress & depression. CRPO Registered. Book a free consult.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nextsteptherapy.ca/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Next Step Therapy Ontario | ACT Therapy & Mental Health">
+    <meta property="og:description" content="Evidence-based therapy in Ontario using ACT approach. Anxiety, depression, men's mental health & workplace stress.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextsteptherapy.ca/">
+
+    <!-- Critical Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- V4 Premium Typography - Cormorant Garamond + DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Preload Only LCP Image for Mobile Performance -->
+    <link rel="preload" as="image" href="images/hero-background-mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero-background.webp" media="(min-width: 769px)">
+
+    <!-- DNS Prefetch for Third-party Domains -->
+    <link rel="dns-prefetch" href="//polyfill.io">
+
+    <!-- Enhanced Browser Caching -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+
+    <!-- Mobile Performance Hints -->
+    <meta name="theme-color" content="#1e3a4f">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Comprehensive Schema Markup for Maximum SEO Impact -->
+
+    <!-- 1. MedicalOrganization Schema (Added for Trust & Local SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Next Step Therapy",
+      "description": "Virtual psychotherapy clinic focusing on anxiety, workplace stress, and burnout recovery for professionals in Ontario.",
+      "url": "https://nextsteptherapy.ca",
+      "logo": "https://nextsteptherapy.ca/images/asset104.png",
+      "priceRange": "$$",
+      "isAcceptingNewPatients": true,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-416-306-2157",
+        "contactType": "customer service",
+        "areaServed": "Ontario"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Burlington"
+        },
+        {
+          "@type": "City",
+          "name": "Toronto"
+        },
+        {
+          "@type": "City",
+          "name": "Ottawa"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ontario"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jesse Cynamon",
+        "jobTitle": "Registered Psychotherapist"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jessecynamon/",
+        "https://www.psychologytoday.com/ca/therapists/jesse-cynamon-toronto-on/802855"
+      ]
+    }
+    </script>
+
+    <!-- 2. Person Schema - Jesse Cynamon (Builds E-E-A-T) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://nextsteptherapy.ca/#jessecynamon",
+      "name": "Jesse Cynamon",
+      "givenName": "Jesse",
+      "familyName": "Cynamon",
+      "additionalName": "RP",
+      "jobTitle": "Registered Psychotherapist",
+      "description": "Registered Psychotherapist focusing on Acceptance and Commitment Therapy (ACT) for anxiety, depression, and workplace stress in Ontario.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registered Psychotherapist",
+          "credentialCategory": "Professional License",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "College of Registered Psychotherapists of Ontario",
+            "url": "https://crpo.ca"
+          },
+          "identifier": "CRPO #10979"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "College of Registered Psychotherapists of Ontario",
+        "url": "https://crpo.ca"
+      },
+      "knowsAbout": [
+        "Acceptance and Commitment Therapy",
+        "Anxiety Disorders",
+        "Depression Treatment",
+        "Men's Mental Health",
+        "Workplace Stress Management",
+        "Virtual Therapy"
+      ],
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        }
+      },
+      "worksFor": {
+        "@type": "ProfessionalService",
+        "@id": "https://nextsteptherapy.ca/#professionalservice"
+      }
+    }
+    </script>
+
+    <!-- 2. ProfessionalService Schema - Next Step Therapy Practice (CRPO Compliant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://nextsteptherapy.ca/#professionalservice",
+      "name": "Next Step Therapy",
+      "url": "https://nextsteptherapy.ca/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nextsteptherapy.ca/images/asset104-square-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://nextsteptherapy.ca/images/asset104-square-512.png",
+      "description": "Virtual psychotherapy practice providing evidence-based counselling for anxiety, depression, workplace stress and men's mental health across Ontario.",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Ontario"
+      },
+      "telephone": "+14163062157",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Registered virtual practice (service-area business)",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      }
+    }
+    </script>
+
+    <!-- 3. WebSite Schema with Search Action -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://nextsteptherapy.ca/#website",
+      "name": "Next Step Therapy Ontario",
+      "alternateName": "Next Step Therapy",
+      "url": "https://nextsteptherapy.ca",
+      "description": "Professional therapy services in Ontario focusing on anxiety, depression, and workplace stress using evidence-based ACT approach.",
+      "publisher": {
+        "@type": "ProfessionalService",
+        "@id": "https://nextsteptherapy.ca/#professionalservice"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nextsteptherapy.ca/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-CA"
+    }
+    </script>
+
+    <!-- 4. FAQPage Schema for Featured Snippets - Aligned with HTML FAQ Section -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://nextsteptherapy.ca/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does virtual therapy Toronto work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual therapy Toronto sessions are conducted through secure, PIPEDA-compliant video platforms. You can access professional virtual therapy in Toronto and throughout Ontario with a stable internet connection. Virtual therapy sessions are just as effective as in-person therapy for most concerns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Acceptance and Commitment Therapy (ACT)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACT is an evidence-based therapy approach that helps you develop psychological flexibility. Rather than trying to eliminate difficult thoughts and feelings, ACT teaches you to accept them while taking action aligned with your values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does insurance cover therapy with a Registered Psychotherapist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most extended health plans in Ontario cover sessions with Registered Psychotherapists (CRPO). Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I start therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After your initial contact, we typically schedule a free 15-minute consultation within 2-3 days. If we're a good fit, first sessions are usually available within one week. Evening and weekend appointments available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your therapeutic approach?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I use a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), with particular understanding of modern challenges like workplace stress, relationship patterns, and men's mental health. The focus is on building practical skills for managing high-stakes moments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you accepting new clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We're currently accepting new clients across Ontario. Same-week appointments often available for urgent concerns. Evening and weekend time slots offered to accommodate busy professionals and students."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a therapy session cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Individual therapy sessions are $160 per 50-minute session. Most clients use their extended health insurance benefits (which typically cover $500-$2,000 annually for therapy). We provide detailed receipts for easy insurance reimbursement. Payment accepted via credit card, debit, or e-transfer."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 5. MedicalWebPage Schema (YMYL Content Signal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "@id": "https://nextsteptherapy.ca/#medicalwebpage",
+      "name": "Ontario Therapist | CRPO Registered | Available This Week",
+      "description": "CRPO registered psychotherapist serving Ontario. Virtual & in-person therapy available this week. Insurance accepted. Book your free 15-minute consultation today.",
+      "url": "https://nextsteptherapy.ca/",
+      "lastReviewed": "2025-11-11",
+      "about": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Acceptance and Commitment Therapy",
+          "alternateName": "ACT"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Anxiety Disorders"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Depression"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Workplace Stress"
+        }
+      ],
+      "audience": {
+        "@type": "PeopleAudience",
+        "geographicArea": {
+          "@type": "AdministrativeArea",
+          "name": "Ontario, Canada"
+        }
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://nextsteptherapy.ca/#jessecynamon"
+      },
+      "publisher": {
+        "@type": "ProfessionalService",
+        "@id": "https://nextsteptherapy.ca/#professionalservice"
+      }
+    }
+    </script>
+
+    <!-- Unified Design System - Single CSS file -->
+    <link rel="stylesheet" href="css/nextstep-unified.css?v=20251221">
+
+    <!-- Essential CSS Variables Only -->
+    <style>
+        :root {
+            /* Refined Color System - Navy + Sage */
+            --navy: #1e3a4f;
+            --navy-deep: #152a3a;
+            --navy-light: #2d4a5e;
+            --charcoal: #3d4f5f;
+
+            /* Sage - Prominent Accent */
+            --sage: #4a7c59;
+            --sage-light: #5f9970;
+            --sage-soft: rgba(74, 124, 89, 0.08);
+            --sage-medium: rgba(74, 124, 89, 0.15);
+            --sage-glow: rgba(74, 124, 89, 0.25);
+
+            /* Warm Luxe Neutrals */
+            --ivory: #fdfcfa;
+            --cream: #f8f6f3;
+            --linen: #f2efe9;
+            --sand: #e5e0d8;
+            --stone: #c9c3b8;
+            --taupe: #9a9287;
+
+            /* Text Hierarchy */
+            --text-primary: #1e3a4f;
+            --text-secondary: #4a5a6a;
+            --text-tertiary: #6b7a8a;
+            --text-muted: #8a939d;
+            --text-inverse: #fdfcfa;
+
+            /* Typography */
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* V4 Spacing Scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+            --space-section: 5rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+
+            /* Radius */
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-2xl: 32px;
+            --radius-full: 9999px;
+
+            /* Premium Shadows */
+            --shadow-xs: 0 1px 2px rgba(30, 58, 79, 0.04);
+            --shadow-sm: 0 2px 8px rgba(30, 58, 79, 0.06);
+            --shadow-md: 0 4px 16px rgba(30, 58, 79, 0.08);
+            --shadow-lg: 0 8px 32px rgba(30, 58, 79, 0.1);
+            --shadow-xl: 0 16px 48px rgba(30, 58, 79, 0.12);
+            --shadow-glow: 0 0 40px rgba(74, 124, 89, 0.15);
+
+            /* Transitions */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+            --duration-fast: 150ms;
+            --duration-normal: 300ms;
+            --duration-slow: 500ms;
+            
+            /* Backgrounds */
+            --background-primary: #ffffff;
+            --neutral-soft: #f8f6f3;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--ivory);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.15;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" loading="eager" fetchpriority="high" onerror="this.style.display='none'">
+                    <a href="#" class="logo-text">Next Step Therapy</a>
+                    <span class="credentials-badge-prominent">CRPO #10979</span>
+                </div>
+
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#approach">Approach</a></li>
+                        <li><a href="#specializations">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-cta-wrapper">
+                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=header&utm_campaign=homepage" class="header-book-btn">
+                        Schedule 15-Min Call
+                    </a>
+                    <a href="tel:+14163062157" class="header-phone">
+                        (416) 306-2157
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Optimized Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text fade-in-up">
+                        <h1>You're Handling Everything on the Outside. But Something Feels Off.</h1>
+                        <p class="lead-text">Maybe it's the Sunday anxiety that starts on Friday. The way your chest tightens before meetings. Lying awake replaying conversations. If you're an Ontario professional who looks successful on paper but feels like you're barely keeping it together—you're not alone, and there are approaches that actually help.</p>
+
+                        <p class="service-descriptor"><strong>Virtual psychotherapy for anxiety, burnout & depression across Ontario.</strong></p>
+
+                        <!-- Trust Badges - Immediately visible -->
+                        <div class="trust-pills">
+                            <span class="trust-pill">✓ CRPO #10979</span>
+                            <span class="trust-pill">✓ $175/session</span>
+                            <span class="trust-pill">✓ Same-Week Available</span>
+                            <span class="trust-pill">✓ Insurance Receipts</span>
+                        </div>
+
+                        <!-- Conversion-Optimized CTAs -->
+                        <div class="hero-cta">
+                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=hero&utm_campaign=homepage" class="primary-cta">
+                                📞 Schedule 15-Min Call
+                            </a>
+                            <div class="secondary-ctas">
+                                <a href="tel:+14163062157" class="secondary-cta phone-cta">Call (416) 306-2157</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="therapist-showcase fade-in-up">
+                        <div class="therapist-photo">
+                            <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
+                        </div>
+                        <div class="therapist-info">
+                            <h3 class="therapist-name">Jesse Cynamon, RP</h3>
+                            <p class="therapist-title">Your Therapist</p>
+                            <div class="therapist-credentials">CRPO #10979</div>
+                            <p class="therapist-bio">I work with professionals, students, and men across Ontario using a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). We identify specific patterns driving your anxiety and build practical skills for managing high-stakes moments. This isn't endless processing—it's focused skill development. Providing <a href="/anxiety-therapy-ontario">anxiety therapy</a> and <a href="/depression-therapy-ontario">depression therapy</a> throughout Ontario.</p>
+                            <ul class="expertise-list">
+                                <li>MPsy (Master of Psychology)</li>
+                                <li>CRPO Registered (#10979)</li>
+                                <li>ACT Training</li>
+                                <li>CBT Training</li>
+                                <li>Member: CRPO, OAMHP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Quiz Widget (Modern Redesign - Calm/Typeform Inspired) -->
+        <section class="quiz-widget-section">
+
+            <div class="container" style="max-width: 900px;">
+                <div class="quiz-widget-container">
+
+                    <!-- Quiz Header -->
+                    <div class="quiz-header">
+                        <h2>Is Therapy Right for You?</h2>
+                        <p>A thoughtful 5-minute self-assessment. Completely private—no email required.</p>
+                    </div>
+
+                    <!-- Quiz Disclaimer -->
+                    <div class="quiz-disclaimer" style="background: #FFF9E6; border-left: 3px solid #d4a853; padding: 12px 20px; font-size: 0.8125rem; color: #7a5c12;">
+                        <strong style="font-weight: 600;">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #7a5c12; font-weight: 600; text-decoration: underline;">988</a> or your local emergency services.
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="quiz-progress-container" style="padding: 20px 30px 16px;">
+                        <div class="quiz-progress-bar" style="height: 6px; background: #f2efe9; border-radius: 9999px; overflow: hidden;">
+                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: #4a7c59; transition: width 0.4s ease; border-radius: 9999px; width: 0%;"></div>
+                        </div>
+                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #8a939d; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Question 1 of 15</div>
+                    </div>
+
+                    <!-- Quiz Content Area -->
+                    <div class="quiz-content-area" id="quizContentArea" style="padding: 12px 30px 30px;">
+                        <!-- Questions will be inserted here by JavaScript -->
+                    </div>
+
+                    <!-- Results Container -->
+                    <div class="quiz-results-container" id="quizResultsContainer" style="display: none; padding: 40px;">
+                        <!-- Results will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Modern Quiz Widget Styles - Calm/Typeform Inspired */
+
+            /* Smooth Fade-In Animation */
+            .quiz-question-card {
+                animation: quizSmoothFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            @keyframes quizSmoothFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.98);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            /* Question Number Badge */
+            .quiz-question-number {
+                display: inline-block;
+                background: var(--sage-soft);
+                color: var(--sage);
+                padding: 6px 14px;
+                border-radius: var(--radius-full);
+                font-weight: 700;
+                font-size: 0.6875rem;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                border: 1px solid var(--sage-medium);
+            }
+
+            /* Question Text - Larger, More Readable */
+            .quiz-question-text {
+                font-family: var(--font-display);
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 24px;
+                color: var(--navy);
+                line-height: 1.3;
+                letter-spacing: -0.01em;
+            }
+
+            /* Options Container */
+            .quiz-options {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Individual Option - Clean, Minimal Design */
+            .quiz-option {
+                background: white;
+                border: 1.5px solid var(--sand);
+                border-radius: var(--radius-md);
+                padding: 18px 22px;
+                cursor: pointer;
+                transition: all var(--duration-normal) var(--ease-out);
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--text-primary);
+                position: relative;
+                box-shadow: var(--shadow-xs);
+            }
+
+            .quiz-option:hover {
+                background: var(--cream);
+                border-color: var(--sage);
+                transform: translateX(4px);
+                box-shadow: var(--shadow-md);
+            }
+
+            .quiz-option.selected {
+                background: var(--sage-soft);
+                border-color: var(--sage);
+                font-weight: 500;
+                color: var(--navy);
+                box-shadow: var(--shadow-md), var(--shadow-glow);
+            }
+
+            .quiz-option.selected::before {
+                content: "✓";
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--sage);
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+
+            /* Navigation Buttons */
+            .quiz-navigation {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 28px;
+                gap: 14px;
+            }
+
+            .quiz-btn {
+                padding: var(--space-4) var(--space-8);
+                border: none;
+                border-radius: var(--radius-sm);
+                font-size: 0.9375rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all var(--duration-normal) var(--ease-out);
+                font-family: var(--font-body);
+                letter-spacing: 0.02em;
+            }
+
+            .quiz-btn-secondary {
+                background: var(--cream);
+                color: var(--text-secondary);
+                border: 1.5px solid var(--sand);
+            }
+
+            .quiz-btn-secondary:hover {
+                background: var(--linen);
+                border-color: var(--navy);
+                transform: translateY(-1px);
+            }
+
+            .quiz-btn-primary {
+                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+                color: white;
+                flex: 1;
+                box-shadow: var(--shadow-md);
+            }
+
+            .quiz-btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .quiz-btn:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+                transform: none !important;
+            }
+
+            /* Results Styles - Elegant & Polished */
+            .quiz-score-display {
+                text-align: center;
+                padding: 60px 40px;
+                background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+                color: white;
+                border-radius: var(--radius-xl);
+                margin-bottom: 40px;
+                box-shadow: var(--shadow-xl);
+            }
+
+            .quiz-score-number {
+                font-family: var(--font-display);
+                font-size: 84px;
+                font-weight: 600;
+                margin-bottom: 12px;
+                line-height: 1;
+                text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .quiz-score-label {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            .quiz-result-section {
+                margin-bottom: 32px;
+                padding: 32px;
+                background: var(--cream);
+                border-radius: var(--radius-lg);
+                border-left: 4px solid var(--sage);
+                box-shadow: var(--shadow-sm);
+            }
+
+            .quiz-result-section h3 {
+                font-family: var(--font-display);
+                font-size: 1.625rem;
+                margin-bottom: 16px;
+                color: var(--navy);
+                font-weight: 500;
+                letter-spacing: -0.01em;
+            }
+
+            .quiz-result-section p {
+                font-size: 1rem;
+                line-height: 1.8;
+                color: var(--text-secondary);
+                margin-bottom: 16px;
+            }
+
+            .quiz-result-section ul {
+                margin: 20px 0;
+                padding-left: 28px;
+            }
+
+            .quiz-result-section li {
+                margin-bottom: 12px;
+                color: var(--text-secondary);
+                line-height: 1.8;
+            }
+
+            .quiz-cta-box {
+                background: white;
+                border: 1.5px solid var(--sage-medium);
+                border-radius: var(--radius-xl);
+                padding: 40px;
+                text-align: center;
+                margin-top: 40px;
+                box-shadow: var(--shadow-md), var(--shadow-glow);
+            }
+
+            .quiz-cta-box h3 {
+                font-family: var(--font-display);
+                font-size: 1.625rem;
+                margin-bottom: 16px;
+                color: var(--navy);
+                font-weight: 500;
+                letter-spacing: -0.01em;
+            }
+
+            .quiz-cta-box p {
+                font-size: 1rem;
+                color: var(--text-secondary);
+                margin-bottom: 28px;
+                line-height: 1.8;
+            }
+
+            .quiz-cta-buttons {
+                display: flex;
+                gap: var(--space-4);
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .quiz-crisis-box {
+                background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%);
+                border-left: 4px solid #d4a853;
+                padding: 28px;
+                border-radius: var(--radius-lg);
+                margin-top: 32px;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .quiz-crisis-box h3 {
+                color: #7a5c12;
+                font-size: 1.375rem;
+                margin-bottom: 14px;
+                font-weight: 600;
+                font-family: var(--font-display);
+            }
+
+            .quiz-crisis-box p {
+                color: #7a5c12;
+                font-size: 1rem;
+                line-height: 1.8;
+                margin-bottom: 12px;
+            }
+
+            .quiz-crisis-box a {
+                color: #8B6914;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            /* Color Tiers */
+            .quiz-tier-green { border-left-color: #52C584; }
+            .quiz-tier-amber { border-left-color: #F5C563; }
+            .quiz-tier-red { border-left-color: #EF6F6F; }
+
+            .quiz-score-tier-green {
+                background: linear-gradient(135deg, #52C584 0%, #70D99D 100%);
+            }
+
+            .quiz-score-tier-amber {
+                background: linear-gradient(135deg, #F5C563 0%, #F9D88A 100%);
+            }
+
+            .quiz-score-tier-red {
+                background: linear-gradient(135deg, #EF6F6F 0%, #F28B8B 100%);
+            }
+
+            /* Mobile Responsive - Enhanced */
+            @media (max-width: 768px) {
+                .quiz-widget-section {
+                    padding: 24px 16px !important;
+                }
+
+                .quiz-widget-container {
+                    border-radius: 16px !important;
+                }
+
+                .quiz-header {
+                    padding: 18px 20px 14px !important;
+                }
+
+                .quiz-header h2 {
+                    font-size: 1.4rem !important;
+                    line-height: 1.3 !important;
+                }
+
+                .quiz-header p {
+                    font-size: 0.9rem !important;
+                    line-height: 1.4 !important;
+                }
+
+                .quiz-disclaimer {
+                    padding: 14px 20px !important;
+                    font-size: 12.5px !important;
+                }
+
+                .quiz-progress-container {
+                    padding: 14px 20px 10px !important;
+                }
+
+                .quiz-content-area {
+                    padding: 10px 20px 24px !important;
+                    min-height: auto !important;
+                }
+
+                .quiz-question-text {
+                    font-size: 1.25rem !important;
+                    margin-bottom: 18px !important;
+                    line-height: 1.35 !important;
+                }
+
+                .quiz-question-number {
+                    font-size: 10px !important;
+                    padding: 5px 12px !important;
+                    margin-bottom: 12px !important;
+                }
+
+                .quiz-option {
+                    padding: 14px 16px !important;
+                    font-size: 0.95rem !important;
+                    border-radius: 10px !important;
+                }
+
+                .quiz-option.selected::before {
+                    font-size: 1.2rem !important;
+                    right: 16px !important;
+                }
+
+                .quiz-score-number {
+                    font-size: 56px !important;
+                }
+
+                .quiz-score-display {
+                    padding: 40px 24px !important;
+                    margin-bottom: 28px !important;
+                }
+
+                .quiz-cta-buttons {
+                    flex-direction: column;
+                }
+
+                .quiz-btn {
+                    width: 100%;
+                    padding: 12px 20px !important;
+                    font-size: 0.95rem !important;
+                }
+
+                .quiz-navigation {
+                    flex-direction: column;
+                    margin-top: 20px !important;
+                    gap: 10px !important;
+                }
+
+                .quiz-btn-primary {
+                    order: -1;
+                }
+
+                .quiz-result-section {
+                    padding: 24px 20px !important;
+                    margin-bottom: 24px !important;
+                }
+
+                .quiz-result-section h3 {
+                    font-size: 1.4rem !important;
+                }
+
+                .quiz-result-section p,
+                .quiz-result-section li {
+                    font-size: 0.98rem !important;
+                }
+
+                .quiz-cta-box {
+                    padding: 28px 20px !important;
+                }
+
+                .quiz-cta-box h3 {
+                    font-size: 1.4rem !important;
+                }
+
+                .quiz-crisis-box {
+                    padding: 20px !important;
+                    margin-top: 24px !important;
+                }
+
+                .quiz-results-container {
+                    padding: 28px 20px !important;
+                }
+            }
+        </style>
+
+        <script>
+            // Quiz Questions Data
+            const quizQuestions = [
+                {
+                    number: 1,
+                    text: "How often do you feel overwhelmed by daily tasks or responsibilities?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "Sometimes", value: 1 },
+                        { text: "Often", value: 2 },
+                        { text: "Most of the time", value: 3 }
+                    ]
+                },
+                {
+                    number: 2,
+                    text: "How much are you enjoying activities you used to love?",
+                    options: [
+                        { text: "Just as much as before", value: 0 },
+                        { text: "A little less enjoyment", value: 1 },
+                        { text: "Significantly less", value: 2 },
+                        { text: "No enjoyment at all", value: 3 }
+                    ]
+                },
+                {
+                    number: 3,
+                    text: "How often do you have trouble sleeping (falling asleep, staying asleep, or sleeping too much)?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "A few nights per week", value: 1 },
+                        { text: "Most nights", value: 2 },
+                        { text: "Every night", value: 3 }
+                    ]
+                },
+                {
+                    number: 4,
+                    text: "How frequently do you feel anxious or worried?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes, but manageable", value: 1 },
+                        { text: "Often and it interferes", value: 2 },
+                        { text: "Almost constantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 5,
+                    text: "How much do past experiences still affect your daily life?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Occasionally cross my mind", value: 1 },
+                        { text: "Frequently impact my mood", value: 2 },
+                        { text: "Significantly affect daily functioning", value: 3 }
+                    ]
+                },
+                {
+                    number: 6,
+                    text: "How connected do you feel to the people around you?",
+                    options: [
+                        { text: "Very connected", value: 0 },
+                        { text: "Somewhat connected", value: 1 },
+                        { text: "Often feel disconnected", value: 2 },
+                        { text: "Very isolated", value: 3 }
+                    ]
+                },
+                {
+                    number: 7,
+                    text: "How well are you managing your emotions (anger, sadness, frustration)?",
+                    options: [
+                        { text: "Very well", value: 0 },
+                        { text: "Usually okay, occasional struggles", value: 1 },
+                        { text: "Often struggle", value: 2 },
+                        { text: "Feel out of control", value: 3 }
+                    ]
+                },
+                {
+                    number: 8,
+                    text: "How often do you use substances (alcohol, cannabis, etc.) to cope with stress?",
+                    options: [
+                        { text: "Never or rarely", value: 0 },
+                        { text: "Occasionally", value: 1 },
+                        { text: "Frequently", value: 2 },
+                        { text: "Most days", value: 3 }
+                    ]
+                },
+                {
+                    number: 9,
+                    text: "How would you describe your work performance or productivity recently?",
+                    options: [
+                        { text: "Normal or better", value: 0 },
+                        { text: "Slightly decreased", value: 1 },
+                        { text: "Noticeably declined", value: 2 },
+                        { text: "Significantly impaired", value: 3 }
+                    ]
+                },
+                {
+                    number: 10,
+                    text: "How often do you feel stuck in patterns you can't break (relationships, habits, thinking)?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes notice patterns", value: 1 },
+                        { text: "Often feel stuck", value: 2 },
+                        { text: "Constantly trapped in cycles", value: 3 }
+                    ]
+                },
+                {
+                    number: 11,
+                    text: "How frequently do physical symptoms (headaches, stomach issues, tension) appear without clear medical cause?",
+                    options: [
+                        { text: "Rarely or never", value: 0 },
+                        { text: "Occasionally", value: 1 },
+                        { text: "Several times per week", value: 2 },
+                        { text: "Daily or almost daily", value: 3 }
+                    ]
+                },
+                {
+                    number: 12,
+                    text: "How much do you avoid situations, people, or places because of fear or discomfort?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Occasionally avoid some things", value: 1 },
+                        { text: "Frequently avoid situations", value: 2 },
+                        { text: "Avoidance limits my life significantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 13,
+                    text: "How often do racing thoughts make it hard to focus?",
+                    options: [
+                        { text: "Rarely", value: 0 },
+                        { text: "Sometimes", value: 1 },
+                        { text: "Often", value: 2 },
+                        { text: "Almost constantly", value: 3 }
+                    ]
+                },
+                {
+                    number: 14,
+                    text: "How easy is it to see a path forward or feel hopeful about the future?",
+                    options: [
+                        { text: "I feel optimistic", value: 0 },
+                        { text: "Somewhat uncertain", value: 1 },
+                        { text: "Difficult to feel hopeful", value: 2 },
+                        { text: "Can't see a way forward", value: 3 }
+                    ]
+                },
+                {
+                    number: 15,
+                    text: "How often have friends or family expressed concern about your well-being?",
+                    options: [
+                        { text: "Not at all", value: 0 },
+                        { text: "Once or twice", value: 1 },
+                        { text: "Several times recently", value: 2 },
+                        { text: "Frequently", value: 3 }
+                    ]
+                }
+            ];
+
+            // Quiz State
+            let quizCurrentQuestion = 0;
+            let quizAnswers = [];
+            let quizTotalScore = 0;
+
+            // Initialize Quiz
+            function initHomePageQuiz() {
+                renderQuizQuestion(quizCurrentQuestion);
+            }
+
+            // Render Question
+            function renderQuizQuestion(index) {
+                const question = quizQuestions[index];
+                const quizContentArea = document.getElementById('quizContentArea');
+                const selectedAnswer = quizAnswers[index];
+
+                quizContentArea.innerHTML = `
+                    <div class="quiz-question-card">
+                        <div class="quiz-question-number">Question ${question.number} of ${quizQuestions.length}</div>
+                        <div class="quiz-question-text">${question.text}</div>
+                        <div class="quiz-options">
+                            ${question.options.map((option, optIndex) => `
+                                <div class="quiz-option ${selectedAnswer === option.value ? 'selected' : ''}"
+                                     onclick="selectQuizOption(${index}, ${option.value}, this)">
+                                    ${option.text}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="quiz-navigation">
+                            ${index > 0 ? '<button class="quiz-btn quiz-btn-secondary" onclick="previousQuizQuestion()">← Previous</button>' : '<div></div>'}
+                            <button class="quiz-btn quiz-btn-primary" id="quizNextBtn" ${selectedAnswer === undefined ? 'disabled' : ''}
+                                    onclick="${index === quizQuestions.length - 1 ? 'showQuizResults()' : 'nextQuizQuestion()'}">
+                                ${index === quizQuestions.length - 1 ? 'See Your Results →' : 'Next →'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                updateQuizProgress();
+            }
+
+            // Select Option
+            function selectQuizOption(questionIndex, value, element) {
+                quizAnswers[questionIndex] = value;
+
+                // Update UI
+                document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+                element.classList.add('selected');
+
+                // Enable next button
+                document.getElementById('quizNextBtn').disabled = false;
+            }
+
+            // Next Question
+            function nextQuizQuestion() {
+                if (quizCurrentQuestion < quizQuestions.length - 1) {
+                    quizCurrentQuestion++;
+                    renderQuizQuestion(quizCurrentQuestion);
+                }
+            }
+
+            // Previous Question
+            function previousQuizQuestion() {
+                if (quizCurrentQuestion > 0) {
+                    quizCurrentQuestion--;
+                    renderQuizQuestion(quizCurrentQuestion);
+                }
+            }
+
+            // Update Progress
+            function updateQuizProgress() {
+                const progress = ((quizCurrentQuestion + 1) / quizQuestions.length) * 100;
+                document.getElementById('quizProgressFill').style.width = progress + '%';
+                document.getElementById('quizProgressText').textContent = `Question ${quizCurrentQuestion + 1} of ${quizQuestions.length}`;
+            }
+
+            // Calculate Score
+            function calculateQuizScore() {
+                quizTotalScore = quizAnswers.reduce((sum, answer) => sum + answer, 0);
+                return quizTotalScore;
+            }
+
+            // Show Results
+            function showQuizResults() {
+                calculateQuizScore();
+
+                document.getElementById('quizContentArea').style.display = 'none';
+                document.querySelector('.quiz-progress-container').style.display = 'none';
+
+                const resultsContainer = document.getElementById('quizResultsContainer');
+                resultsContainer.style.display = 'block';
+
+                // Track quiz completion in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'quiz_complete', {
+                        'event_category': 'engagement',
+                        'event_label': 'homepage_therapy_assessment',
+                        'value': quizTotalScore
+                    });
+                }
+
+                let tier, tierClass, tierColor, heading, interpretation, recommendations, ctaHeading, ctaText, ctaButtons;
+
+                if (quizTotalScore <= 10) {
+                    // Tier: Doing Okay (Green)
+                    tier = 'green';
+                    tierClass = 'quiz-tier-green';
+                    tierColor = 'quiz-score-tier-green';
+                    heading = "You're Managing Well Right Now";
+                    interpretation = `Your responses suggest you're coping with life's everyday stresses in a healthy way. That's great! You're not experiencing significant distress at this time, and your daily functioning appears to be on track.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>While therapy isn't urgent for you right now, here's what can help maintain your well-being:</p>
+                        <ul>
+                            <li><strong>Keep up your current coping strategies</strong> – whatever you're doing is working</li>
+                            <li><strong>Build your mental health toolkit now</strong> – it's easier to learn coping skills when you're not in crisis</li>
+                            <li><strong>Stay connected</strong> – maintain relationships and social support</li>
+                            <li><strong>Monitor changes</strong> – retake this quiz if you notice shifts in mood or stress levels</li>
+                        </ul>
+                        <h3>When to Revisit</h3>
+                        <p>Consider therapy if major life changes occur (job loss, relationship issues, health concerns) or if your score increases significantly when you retake this quiz.</p>
+                    `;
+                    ctaHeading = "Want to Stay Ahead?";
+                    ctaText = "You're in a great position to build mental health skills before challenges arise. Preventive therapy is like preventive medicine—it works best before you need it.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=green_tier" class="quiz-btn quiz-btn-primary">Schedule 15-Min Call</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
+                    `;
+                } else if (quizTotalScore <= 20) {
+                    // Tier: Could Benefit (Amber)
+                    tier = 'amber';
+                    tierClass = 'quiz-tier-amber';
+                    tierColor = 'quiz-score-tier-amber';
+                    heading = "Therapy Could Be Helpful (But It's Not Urgent)";
+                    interpretation = `Your responses suggest you're experiencing some manageable challenges that are affecting your quality of life. You're not in crisis, but you might benefit from professional support to work through what you're facing.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>This is actually an ideal time to start therapy—<strong>before</strong> things escalate. Many people wait until they're in crisis, but therapy is most effective as a preventive tool.</p>
+                        <ul>
+                            <li><strong>Therapy isn't just for crises</strong> – think of it like going to the gym for your mental health</li>
+                            <li><strong>Early intervention works better</strong> – it's easier to develop coping skills now than during a crisis</li>
+                            <li><strong>You deserve support</strong> – you don't need to be "bad enough" to ask for help</li>
+                            <li><strong>Try it for 4-6 sessions</strong> – that's often enough to see if it's helpful for you</li>
+                        </ul>
+                        <h3>Other Options</h3>
+                        <p>If you're not ready for therapy, consider: self-help books (like "Feeling Good" by David Burns), mental health apps (MindShift, Calm), peer support groups, or structured online programs.</p>
+                    `;
+                    ctaHeading = "Let's Talk - No Pressure, No Commitment";
+                    ctaText = "Free 15-minute consultation to discuss what you're experiencing. See if therapy feels right for you—zero sales pitch, I promise.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=amber_tier" class="quiz-btn quiz-btn-primary">Schedule 15-Min Call</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call (416) 306-2157</a>
+                    `;
+                } else if (quizTotalScore <= 30) {
+                    // Tier: Would Make a Difference (Red)
+                    tier = 'red';
+                    tierClass = 'quiz-tier-red';
+                    tierColor = 'quiz-score-tier-red';
+                    heading = "Therapy Would Likely Make a Real Difference";
+                    interpretation = `Your responses indicate you're experiencing significant distress that's impacting your daily functioning. This is a clear signal that professional support could help you feel better and develop more effective coping strategies.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>You're dealing with more than typical life stress right now. The good news? This is exactly what therapy is designed to help with, and you're likely to see meaningful improvement within 6-12 sessions.</p>
+                        <ul>
+                            <li><strong>You don't have to feel this way</strong> – therapy can help reduce the intensity of what you're experiencing</li>
+                            <li><strong>It's not weakness</strong> – reaching out is actually a sign of strength and self-awareness</li>
+                            <li><strong>The earlier, the better</strong> – symptoms tend to respond faster when addressed sooner</li>
+                            <li><strong>Treatment works</strong> – research shows therapy (especially CBT and ACT) is highly effective for anxiety, depression, and stress</li>
+                        </ul>
+                        <h3>Next Steps</h3>
+                        <p>I recommend booking a consultation with a therapist within the next 2-4 weeks. Many therapists (including me) offer free 15-minute consultations so you can get a feel for whether it's a good fit.</p>
+                    `;
+                    ctaHeading = "Let's Get You Some Relief";
+                    ctaText = "You've recognized you need support—that's the hardest part. I have immediate availability for a free consultation. Virtual sessions start as soon as this week.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=red_tier" class="quiz-btn quiz-btn-primary">Schedule 15-Min Call</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-secondary">Call Now: (416) 306-2157</a>
+                    `;
+                } else {
+                    // Tier: Reach Out Soon (Dark Red)
+                    tier = 'red';
+                    tierClass = 'quiz-tier-red';
+                    tierColor = 'quiz-score-tier-red';
+                    heading = "Please Reach Out to a Therapist Soon";
+                    interpretation = `Your responses suggest you're experiencing high levels of distress that are significantly affecting your daily life. This isn't something you should try to manage alone—professional support can make a real, meaningful difference.`;
+                    recommendations = `
+                        <h3>What This Means</h3>
+                        <p>You're going through a really difficult time right now, and that's valid. Many people feel this way at some point, and therapy is designed to help you through exactly this kind of struggle.</p>
+                        <ul>
+                            <li><strong>This isn't permanent</strong> – with the right support, you can feel significantly better</li>
+                            <li><strong>You deserve help</strong> – you don't need to white-knuckle through this alone</li>
+                            <li><strong>Therapy works</strong> – especially when you're motivated to feel better (which you clearly are, since you took this quiz)</li>
+                            <li><strong>Sooner is better</strong> – the faster you get support, the faster you'll start feeling relief</li>
+                        </ul>
+                        <h3>Important: If You're in Crisis</h3>
+                        <p>If you're having thoughts of self-harm or suicide, please reach out immediately:</p>
+                        <ul>
+                            <li><strong>Call or text 988</strong> – free, confidential crisis support 24/7</li>
+                            <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
+                            <li><strong>ConnexOntario Mental Health:</strong> 1-866-531-2600</li>
+                            <li><strong>Or go to your nearest hospital emergency department</strong></li>
+                        </ul>
+                        <h3>Next Steps</h3>
+                        <p>I recommend booking a consultation with a therapist within the next 7 days. If cost is a barrier, there are free and low-cost options in Ontario.</p>
+                    `;
+                    ctaHeading = "You Don't Have to Do This Alone";
+                    ctaText = "I have immediate availability for a free consultation. Let's talk about what you're going through and create a plan to help you feel better. Available this week.";
+                    ctaButtons = `
+                        <a href="https://nextsteptherapy.janeapp.com/?utm_source=quiz&utm_medium=results&utm_campaign=urgent_tier" class="quiz-btn quiz-btn-primary" style="background: linear-gradient(135deg, #DC3545 0%, #EF6F6F 100%);">Book Urgent Consultation</a>
+                        <a href="tel:+14163062157" class="quiz-btn quiz-btn-primary">Call Now: (416) 306-2157</a>
+                    `;
+                }
+
+                resultsContainer.innerHTML = `
+                    <div class="quiz-score-display ${tierColor}">
+                        <div class="quiz-score-number">${quizTotalScore}</div>
+                        <div class="quiz-score-label">out of 45 points</div>
+                    </div>
+
+                    <div class="quiz-result-section ${tierClass}">
+                        <h3>${heading}</h3>
+                        <p>${interpretation}</p>
+                    </div>
+
+                    <div class="quiz-result-section ${tierClass}">
+                        ${recommendations}
+                    </div>
+
+                    <div class="quiz-cta-box">
+                        <h3>${ctaHeading}</h3>
+                        <p>${ctaText}</p>
+                        <div class="quiz-cta-buttons">
+                            ${ctaButtons}
+                        </div>
+                    </div>
+
+                    ${quizTotalScore > 30 ? `
+                        <div class="quiz-crisis-box">
+                            <h3>⚠️ In Crisis? Get Immediate Help</h3>
+                            <p>If you're experiencing thoughts of self-harm or suicide, please reach out now:</p>
+                            <p><strong>Call or Text 988</strong> (Canada Suicide Prevention Service) – 24/7 support<br>
+                            <strong>Crisis Text Line:</strong> Text HOME to 686868<br>
+                            <strong>ConnexOntario Mental Health Helpline:</strong> <a href="tel:+18665312600">1-866-531-2600</a></p>
+                        </div>
+                    ` : ''}
+
+                    <div style="text-align: center; margin-top: 35px; padding: 25px; background: #f8f9fa; border-radius: 10px;">
+                        <p style="color: #6c757d; font-size: 15px; margin-bottom: 15px; font-weight: 500;">Want to retake the quiz or share with someone?</p>
+                        <div class="quiz-cta-buttons">
+                            <button class="quiz-btn quiz-btn-secondary" onclick="window.location.reload()">Retake Quiz</button>
+                            <button class="quiz-btn quiz-btn-secondary" onclick="shareHomeQuiz()">Share This Quiz</button>
+                        </div>
+                    </div>
+                `;
+
+                // Scroll to results
+                document.querySelector('.quiz-widget-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Share Quiz Function
+            function shareHomeQuiz() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Do I Need Therapy? Free Assessment',
+                        text: 'I just took this helpful mental health quiz. Check it out!',
+                        url: window.location.href
+                    });
+                } else {
+                    // Fallback: Copy to clipboard
+                    navigator.clipboard.writeText(window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            }
+
+            // Initialize quiz when page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                // Small delay to ensure page is fully rendered
+                setTimeout(initHomePageQuiz, 500);
+            });
+        </script>
+
+        <!-- Problem Recognition Section (Conversion Optimization) -->
+        <section class="trust-section" style="padding: var(--space-16) var(--space-6); background: white;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Recognition</span>
+                    <h2>Does This Sound Familiar?</h2>
+                    <p class="lead-text">You're not alone in what you're experiencing. Many clients describe similar patterns before starting therapy.</p>
+                </div>
+                <div class="trust-grid" style="text-align: left;">
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The Sunday Night Feeling</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Your chest gets tight thinking about Monday. That sense of dread that won't go away.</p>
+                    </div>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The 3am Mind Race</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Lying awake replaying conversations, worrying about things you can't control right now.</p>
+                    </div>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Nothing Feels Enjoyable</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Things you used to love don't bring joy anymore. Everything feels flat or grey.</p>
+                    </div>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Snapping at People You Love</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Small frustrations trigger big reactions. You're apologizing more than usual.</p>
+                    </div>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">The Same Patterns Repeating</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Same relationship issues with different people. Same work conflicts at every job.</p>
+                    </div>
+                    <div class="trust-item" style="border-left: 3px solid var(--sage); padding-left: 1rem;">
+                        <h4 style="margin-top: 0; color: var(--navy);">Decision Paralysis</h4>
+                        <p style="margin-bottom: 0; color: var(--text-secondary);">Even simple choices feel overwhelming. Analysis paralysis on basic decisions.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: var(--space-10); padding: var(--space-8); background: var(--sage-soft); border-radius: var(--radius-xl); border: 1px solid var(--sage-medium);">
+                    <p style="font-size: 1.0625rem; margin: 0 auto var(--space-6) auto; color: var(--navy); max-width: 700px; line-height: 1.7;">
+                        <strong>If 3 or more of these resonate, therapy can help you develop skills to manage these patterns.</strong>
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" style="background: #1e3a4f !important; color: #ffffff !important; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+                            Take the Assessment
+                        </a>
+                        <a href="/resources/grounding-techniques-guide.html" style="background: transparent !important; color: #1e3a4f !important; padding: 1rem 2rem; border-radius: 8px; border: 2px solid #1e3a4f !important; text-decoration: none; font-weight: 600; display: inline-block;">
+                            Free Guide: 5 Grounding Techniques
+                        </a>
+                    </div>
+                    <p style="font-size: 0.875rem; margin: var(--space-4) auto 0 auto; color: var(--text-tertiary); max-width: 600px; line-height: 1.6;">Evidence-based techniques you can use in 60 seconds when panic or overwhelm hits</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section class="approach" id="approach" style="background: #1e3a4f; padding: 5rem 0;">
+            <div class="container-narrow">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <p class="section-subtitle" style="color: #8cb390 !important; text-transform: uppercase; letter-spacing: 2px; font-size: 0.875rem; font-weight: 600;">Philosophy</p>
+                    <h2 style="color: #ffffff !important; margin: 1rem 0;">Why This Approach Works</h2>
+                    <p class="lead-text" style="color: #ffffff !important; font-size: 1.125rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">I work with professionals, students, and men across Ontario using a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). We identify specific patterns driving your anxiety and build practical skills for managing high-stakes moments. This isn't endless processing—it's focused skill development.</p>
+                </div>
+
+                <div class="approach-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                    <div class="approach-content">
+                        <h3 style="color: #ffffff !important; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Evidence-Based Methods</h3>
+                        <p style="color: #ffffff !important; line-height: 1.7; margin-bottom: 1.5rem;">Using Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), we work together to develop practical coping skills. These approaches focus on building psychological flexibility and managing difficult thoughts and feelings.</p>
+
+                        <h4 style="color: #ffffff !important; font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 600;">Collaborative Process</h4>
+                        <p style="color: #ffffff !important; line-height: 1.7;">Therapy is a collaborative process. We work together at a pace that feels right for you, adapting evidence-based methods to fit your life and goals.</p>
+                    </div>
+
+                    <div class="specialization-highlight" style="background: #ffffff; padding: 2rem; border-radius: 16px;">
+                        <div class="specialization-badge" style="background: #4a7c59; color: #ffffff; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">Collaborative Approach</div>
+                        <h4 style="color: #1e3a4f; font-size: 1.5rem; margin-bottom: 1rem;">We're in This Together</h4>
+                        <p style="color: #4a5a6a; line-height: 1.7;">You're the expert on your life - I'm just here with the tools and training to help you navigate it better. No judgment, no telling you what to do. Just genuine collaboration toward the changes you want to see.</p>
+                    </div>
+                </div>
+
+                <!-- Strategic CTA #2 - After Understanding Approach -->
+                <div class="strategic-cta-section">
+                    <h3>Ready to experience evidence-based therapy?</h3>
+                    <p>Schedule a 15-minute consultation to see if we're a good fit</p>
+                    <p><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Not sure if therapy is right for you? Take our 2-minute quiz →</a></p>
+                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=homepage" class="btn btn-primary">Schedule 15-Min Call</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+                    <div class="cta-trust-signals">
+                        <span>✓ No pressure conversation</span>
+                        <span>✓ Same-day response</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specializations -->
+        <section class="specializations" id="specializations">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Areas of Focus</p>
+                    <h2>Psychotherapy Services by Registered Psychotherapist in Ontario</h2>
+                    <p class="lead-text">Whether it's performance anxiety support, work stress management, or burnout support in Toronto or <a href="/anxiety-therapy-burlington.html">Burlington</a> - you deserve professional psychotherapeutic assistance that actually helps. Virtual psychotherapy throughout Ontario for professionals facing real challenges.</p>
+                </div>
+
+                <div class="specializations-grid">
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-anxiety.jpg" alt="Anxiety therapy support icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Performance Anxiety Therapy & Stress Management</h3>
+                        <p class="specialization-desc">When your mind won't stop racing at 3am or before big presentations. Performance anxiety support with practical tools for managing panic and overwhelm. Serving <a href="/anxiety-therapy-toronto.html">Toronto</a>, <a href="/anxiety-therapy-burlington.html">Burlington</a>, and all of Ontario.</p>
+                        <a href="/anxiety-therapy-ontario.html" class="specialization-link">Anxiety Therapy Services →</a>
+                    </div>
+
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-mens-health.jpg" alt="Men's mental health therapy icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Men's Mental Health</h3>
+                        <p class="specialization-desc">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies, not empty platitudes.</p>
+                        <a href="/mens-mental-health.html" class="specialization-link">Men's Mental Health Support →</a>
+                    </div>
+
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-workplace.jpg" alt="Workplace stress therapy icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Work Stress Therapy & Burnout Therapy Toronto</h3>
+                        <p class="specialization-desc">When Sunday nights fill you with dread. Professional work stress support beyond "just take a vacation" advice. <a href="/perfectionism-and-burnout-therapy-toronto.html">Burnout support in Toronto</a> and <a href="/online-counselling-remote-workers.html">therapy for remote workers</a> dealing with isolation and boundary blur.</p>
+                        <a href="/workplace-stress-therapy-ontario.html" class="specialization-link">Work Stress Therapy →</a>
+                    </div>
+
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-transitions.jpg" alt="Life transitions therapy icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Life Transitions & Change</h3>
+                        <p class="specialization-desc">When everything feels like it's shifting. Divorce, job changes, loss - the big stuff. Finding your footing when life feels unrecognizable.</p>
+                        <a href="/life-transitions.html" class="specialization-link">Life Transitions Support →</a>
+                    </div>
+
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-depression.jpg" alt="Depression therapy support icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Depression & Mood Support</h3>
+                        <p class="specialization-desc">When nothing feels quite right anymore. More than "just think positive" solutions. Reconnecting with what matters to you.</p>
+                        <a href="/depression-therapy-ontario.html" class="specialization-link">Depression Therapy Ontario →</a>
+                    </div>
+
+                    <div class="specialization-card">
+                        <!-- Service Icon -->
+                        <div class="service-icon">
+                            <img src="images/icon-relationships.jpg" alt="Relationship therapy communication icon" width="80" height="80" loading="lazy">
+                        </div>
+                        <h3 class="specialization-title">Relationship & Communication</h3>
+                        <p class="specialization-desc">When the same arguments keep happening. Understanding your patterns in relationships. Actually being heard (and hearing others).</p>
+                        <a href="/counselling-services" class="specialization-link">Relationship Therapy Help →</a>
+                    </div>
+                </div>
+
+                <!-- Strategic CTA #3 - After Seeing Services -->
+                <div class="strategic-cta-section">
+                    <h3>Found what you're looking for?</h3>
+                    <p>Schedule your free consultation to discuss your specific needs</p>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+                    <div class="cta-trust-signals">
+                        <span>✓ Same-day response</span>
+                        <span>✓ Evening appointments available</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">The Journey</p>
+                    <h2>How We'll Work Together</h2>
+                    <p class="lead-text">A straightforward process that respects your time and focuses on real progress.</p>
+
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Initial Connection</h3>
+                        <p class="step-desc">We start with a free 15-minute call - just a conversation about what's bringing you to therapy and whether we'd work well together. No pressure, no obligations.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Getting the Full Picture</h3>
+                        <p class="step-desc">Our first few sessions are about understanding your whole story - not just the problem, but what makes you you. We'll identify patterns without pathologizing your entire existence.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Building Your Toolkit</h3>
+                        <p class="step-desc">This is where we get practical. Using proven approaches, we'll develop strategies that actually work when you're in the middle of a panic attack, not just in theory.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Real Change, Real Time</h3>
+                        <p class="step-desc">Change isn't linear - some weeks are breakthroughs, others feel stuck. I'm here for all of it, adjusting our approach as life happens.</p>
+                    </div>
+                </div>
+
+                <!-- Strategic CTA #4 - After Understanding Process -->
+                <div class="strategic-cta-section">
+                    <h3>Ready to start your journey?</h3>
+                    <p>Begin with a free 15-minute consultation - completely pressure-free</p>
+                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=homepage" class="btn btn-primary">Schedule 15-Min Call</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+                    <div class="cta-trust-signals">
+                        <span>✓ Quick 15-minute conversation</span>
+                        <span>✓ Book online in 2 minutes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Clients Choose Next Step</h2>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">✅</div>
+                        <h4>Actually Accessible</h4>
+                        <p>Therapy from wherever you're comfortable. Flexible scheduling including evenings. Insurance receipts with all the right codes. Same-day responses to messages.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🎓</div>
+                        <h4>Legitimate Expertise</h4>
+                        <p><a href="https://www.crpo.ca/find-a-therapist/" target="_blank" rel="noopener">CRPO registered</a> (#10979). Advanced ACT training. Methods backed by current research. I continuously engage in professional development to offer you the best possible support.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🤝</div>
+                        <h4>A Different Kind of Space</h4>
+                        <p>Zero judgment, genuine support. Safe, confidential environment. Focus on your strengths, not just problems. We build on what's already working for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="popular-locations">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-subtitle">Across Ontario</p>
+            <h2>Virtual Therapy for Your City</h2>
+        </div>
+        <nav class="location-nav">
+            <a href="/therapist-toronto.html">Toronto</a>
+            <a href="/anxiety-therapy-burlington.html">Burlington</a>
+            <a href="/therapy-ottawa-ontario.html">Ottawa</a>
+            <a href="/therapy-london-ontario.html">London</a>
+            <a href="/therapy-hamilton-ontario.html">Hamilton</a>
+            <a href="/therapy-mississauga-ontario.html">Mississauga</a>
+            <a href="/therapy-kingston-ontario.html">Kingston</a>
+            <a href="/therapy-windsor-ontario.html">Windsor</a>
+            <a href="/therapy-sudbury-ontario.html">Sudbury</a>
+            <a href="/therapy-kitchener-waterloo.html">Kitchener-Waterloo</a>
+        </nav>
+    </div>
+</section>
+
+<section class="additional-services">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-subtitle">Specialized Support</p>
+            <h2>Additional Therapy Services in Toronto & Ontario</h2>
+        </div>
+        <nav class="location-nav">
+            <a href="/cbt-therapy-toronto.html">CBT Therapy</a>
+            <a href="/grief-counselling-toronto.html">Grief Counselling</a>
+            <a href="/anger-management-toronto.html">Anger Management</a>
+            <a href="/online-therapy-toronto.html">Online Therapy Toronto</a>
+            <a href="/depression-counselling-toronto.html">Depression Counselling</a>
+            <a href="/online-therapy-depression-ontario.html">Online Depression Therapy</a>
+            <a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a>
+            <a href="/first-job-anxiety-therapy-toronto.html">First Job Anxiety</a>
+            <a href="/university-grade-anxiety-when-b-feels-like-failure.html">Academic Perfectionism</a>
+        </nav>
+    </div>
+</section>
+
+<section class="featured-resources">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-subtitle">Resources</p>
+            <h2>Explore Mental Health Guides</h2>
+        </div>
+        <div class="resource-grid">
+            <article>
+                <h3><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy? Signs It's Time</a></h3>
+                <p>Understand when professional support is the right choice.</p>
+            </article>
+            <article>
+                <h3><a href="/blog/workplace/imposter-syndrome-at-work.html">Imposter Syndrome at Work</a></h3>
+                <p>A therapist's guide for Ontario professionals.</p>
+            </article>
+            <article>
+                <h3><a href="/online-therapy-ontario.html">Online Therapy Ontario Guide</a></h3>
+                <p>Complete guide to accessing professional therapy online across Ontario.</p>
+            </article>
+            <article>
+                <h3><a href="/blog/workplace/how-to-recover-from-burnout.html">How to Recover from Burnout</a></h3>
+                <p>Step-by-step plan for Ontario professionals to reset.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Investment & Session Options Section -->
+        <section class="trust-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Investment & Insurance</h2>
+                    <p class="lead-text">Transparent pricing for ongoing therapeutic support.</p>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">💰</div>
+                        <h4>Individual Sessions</h4>
+                        <p><strong>$175 per 50-minute session</strong></p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Consistent weekly or bi-weekly sessions to build momentum and change.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🏥</div>
+                        <h4>Insurance Coverage</h4>
+                        <p>Most extended health plans cover Registered Psychotherapists (CRPO).</p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Check your benefits booklet for "Psychotherapy" or "Registered Psychotherapist".</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🧾</div>
+                        <h4>Easy Reimbursement</h4>
+                        <p>We provide detailed receipts after every session.</p>
+                        <p style="font-size: 0.95rem; margin-top: 0.5rem;">Submit easily through your insurer's app or portal for reimbursement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for AI Optimization -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-subtitle">Common Questions</p>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: var(--space-lg);">
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">How does virtual therapy Toronto work?</h3>
+                        <p><strong>The answer is:</strong> <a href="/virtual-therapy-ontario">Virtual therapy</a> sessions are conducted through secure, PIPEDA-compliant video platforms. You can access professional virtual therapy in Toronto and throughout Ontario with a stable internet connection. <a href="/virtual-therapy-effectiveness-research.html">Research shows virtual therapy sessions are just as effective</a> as in-person therapy for most concerns.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">What is Acceptance and Commitment Therapy (ACT)?</h3>
+                        <p><strong>In summary,</strong> ACT is an evidence-based therapy approach that helps you develop psychological flexibility. Rather than trying to eliminate difficult thoughts and feelings, ACT teaches you to accept them while taking action aligned with your values.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">Does insurance cover therapy with a Registered Psychotherapist?</h3>
+                        <p><strong>The answer is:</strong> Most extended health plans in Ontario cover sessions with <a href="https://www.crpo.ca" target="_blank" rel="noopener">Registered Psychotherapists (CRPO)</a>. Coverage varies by plan, but typically ranges from $500-2000 annually. We provide detailed receipts for easy reimbursement. <a href="/therapy-costs-ontario.html">Read our complete guide to therapy costs and insurance in Ontario</a>.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">How quickly can I start therapy?</h3>
+                        <p><strong>The answer is:</strong> After your initial contact, we typically schedule a free 15-minute consultation within 2-3 days. If we're a good fit, first sessions are usually available within one week. Evening and weekend appointments available.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">What is your therapeutic approach?</h3>
+                        <p><strong>In summary,</strong> I use a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), with particular understanding of modern challenges like workplace stress, relationship patterns, and men's mental health. The focus is on building practical skills for managing high-stakes moments.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">Are you accepting new clients?</h3>
+                        <p><strong>The answer is:</strong> Yes! We're currently accepting new clients across Ontario. Same-week appointments often available for urgent concerns. Evening and weekend time slots offered to accommodate busy professionals and students.</p>
+                    </div>
+
+                    <div class="faq-item" >
+                        <h3 style="color: #1e3a4f; margin-bottom: 0.5rem;">How much does a therapy session cost?</h3>
+                        <p><strong>The answer is:</strong> Individual therapy sessions are $160 per 50-minute session. Most clients use their extended health insurance benefits (which typically cover $500-$2,000 annually for therapy). We provide detailed receipts for easy insurance reimbursement. Payment accepted via credit card, debit, or e-transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact" style="background: #1e3a4f; padding: 5rem 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                    <p class="section-subtitle" style="color: #8cb390 !important; text-transform: uppercase; letter-spacing: 2px; font-size: 0.875rem; font-weight: 600;">Connect</p>
+                    <h2 style="color: #ffffff !important; margin: 1rem 0;">Ready When You Are</h2>
+                    <p class="lead-text" style="color: #ffffff !important; font-size: 1.125rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">The hardest part is reaching out. Once you do, I make everything else simple. Your free 15-minute consultation is a focused conversation about what you're experiencing and how our structured approach could help. We'll discuss your specific concerns and whether evidence-based methods like ACT and CBT align with your goals. No pressure, no obligation.</p>
+                </div>
+
+                <!-- Strategic CTA #5 - Final Call to Action -->
+                <div class="strategic-cta-section" style="background: #f8f6f3; padding: 3rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
+                    <h3 style="color: #1e3a4f !important; font-size: 1.75rem; margin-bottom: 1.5rem;">Let's start with a conversation</h3>
+                    <a href="https://nextsteptherapy.janeapp.com/" style="background: #1e3a4f !important; color: #ffffff !important; padding: 1rem 2rem; border-radius: 8px; margin: 0.5rem; display: inline-block; text-decoration: none; font-weight: 600;">Schedule 15-Min Call</a>
+                    <a href="tel:+14163062157" style="background: transparent !important; color: #1e3a4f !important; padding: 1rem 2rem; border-radius: 8px; border: 2px solid #1e3a4f !important; margin: 0.5rem; display: inline-block; text-decoration: none; font-weight: 600;">Call (416) 306-2157</a>
+                    <div class="cta-trust-signals" style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <span style="color: #1e3a4f !important; font-weight: 600;">✓ No commitment required</span>
+                        <span style="color: #1e3a4f !important; font-weight: 600;">✓ Insurance accepted</span>
+                        <span style="color: #1e3a4f !important; font-weight: 600;">✓ Currently accepting new clients</span>
+                    </div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+
+                        <ul class="contact-methods">
+                            <li>
+                                <span class="contact-icon">📞</span>
+                                <div class="contact-details">
+                                    <strong>Direct Line:</strong><br>
+                                    <a href="tel:+14163062157">(416) 306-2157</a><br>
+                                    <small>Call or text for immediate response</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon">✉️</span>
+                                <div class="contact-details">
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:jesse@nextsteptherapy.ca">jesse@nextsteptherapy.ca</a><br>
+                                    <small>Response during business hours</small>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span class="contact-icon">💻</span>
+                                <div class="contact-details">
+                                    <strong>Session Options:</strong><br>
+                                    <a href="/virtual-therapy-ontario.html">Virtual throughout Ontario</a><br>
+                                    <small>In-person appointments available</small>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="virtual-session-image">
+                            <picture>
+                                <source srcset="images/homepage-contact-background.webp" type="image/webp">
+                                <img src="images/homepage-contact-background.jpg"
+                                     alt="Professional virtual therapy consultation setup"
+                                     width="1024"
+                                     height="768"
+                                     loading="lazy"
+                                     sizes="(max-width: 768px) 100vw, 600px">
+                            </picture>
+                        </div>
+
+                        <div class="investment-highlight">
+                            <h4>Investment & Insurance</h4>
+                            <p><strong>$175 per 50-minute session</strong></p>
+                            <p>Extended health plans accepted<br>
+                            Detailed receipts provided for insurance reimbursement</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form" style="background: rgba(255,255,255,0.08); padding: 2.5rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
+                        <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1.5rem;">Book Your Free Consultation</h3>
+
+                        <!-- Quick Booking Options -->
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=contact_form&utm_campaign=homepage" target="_blank" rel="noopener" style="background: #4a7c59; color: #ffffff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">📅 Book Online Now</a>
+                            <a href="tel:+14163062157" style="background: transparent; color: #ffffff; padding: 1rem 2rem; border-radius: 8px; border: 2px solid #ffffff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">📞 Call (416) 306-2157</a>
+                        </div>
+
+                        <p style="text-align: center; color: #ffffff !important; margin: 1.5rem 0; font-size: 0.95rem;">Or send me a message below:</p>
+
+                        <form action="https://formsubmit.co/jesse@nextsteptherapy.ca" method="POST" id="contactForm">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_next" value="https://nextsteptherapy.ca/thank-you.html">
+                            <input type="hidden" name="_subject" value="New Consultation Request - Next Step Therapy">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="box">
+
+                            <!-- Honeypot anti-spam field (bots will fill this, humans won't see it) -->
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                            <!-- Time-based validation (hidden field set by JS) -->
+                            <input type="hidden" name="form_timestamp" id="formTimestamp" value="">
+
+                            <div class="form-group">
+                                <label for="name">Your name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-contact">Preferred contact method</label>
+                                <select id="preferred-contact" name="preferred-contact">
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone call</option>
+                                    <option value="text">Text message</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiry-type">What brings you here?</label>
+                                <select id="inquiry-type" name="inquiry-type">
+                                    <option value="consultation">Free consultation</option>
+                                    <option value="mens">Men's mental health</option>
+                                    <option value="anxiety">Anxiety & panic treatment</option>
+                                    <option value="burnout">Professional burnout</option>
+                                    <option value="self-doubt">Professional self-doubt</option>
+                                    <option value="transitions">Life transitions</option>
+                                    <option value="other">Other concerns</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Share what brings you here (optional)</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Please share as much or as little as feels comfortable for you..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.25rem;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=mobile_sticky&utm_campaign=homepage" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
+
+    <!-- Floating CTA for Desktop (v4.0) -->
+    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=floating_cta&utm_campaign=homepage" class="floating-cta">
+        📅 Schedule 15-Min Call
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About & Contact -->
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
+                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p class="footer-book"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
+                </div>
+
+                <!-- Column 2: Therapy Services (Expanded) -->
+                <div class="footer-section">
+                    <h4>Therapy Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
+                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
+                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions</a></li>
+                        <li><a href="/counselling-services.html">Relationship Support</a></li>
+                        <li><a href="/#specializations" class="footer-link-highlight">All Services →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Ontario Service Areas (Expanded) -->
+                <div class="footer-section">
+                    <h4>Ontario Service Areas</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
+                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
+                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="footer-link-highlight">All Ontario →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Specialized Support (Expanded) -->
+                <div class="footer-section">
+                    <h4>Specialized Support</h4>
+                    <ul>
+                        <li><a href="/high-functioning-anxiety-ontario.html" class="footer-link-highlight">High Functioning Anxiety</a></li>
+                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
+                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
+                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
+                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
+                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
+                        <li><a href="/university-of-toronto-student-therapy.html">U of T Students</a></li>
+                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                        <li><a href="/no-motivation-to-do-anything.html">Lack of Motivation</a></li>
+                        <li><a href="/trauma-counselling-toronto.html">Trauma Counselling</a></li>
+                        <li><a href="/mens-therapy-hamilton.html">Men's Therapy Hamilton</a></li>
+                        <li><a href="/online-therapy-ottawa.html">Online Therapy Ottawa</a></li>
+                        <li><a href="/online-therapy-mississauga.html">Online Therapy Mississauga</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Resources & Guides -->
+                <div class="footer-section">
+                    <h4>Resources & Guides</h4>
+                    <ul>
+                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
+                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
+                        <li><a href="/therapy-costs-ontario.html">Therapy Costs & Insurance</a></li>
+                        <li><a href="/blog/anxiety/adult-adhd-vs-high-functioning-anxiety.html">Adult ADHD vs. Anxiety</a></li>
+                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
+                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 6: Professional Info -->
+                <div class="footer-section">
+                    <h4>Professional Standards</h4>
+                    <ul>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Member: CRPO, OAMHP<br>Serving Ontario since 2022</p>
+                </div>
+            </div>
+
+            <!-- Crisis Resources (CRPO Compliance) -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Ontario, Canada<br>
+                <strong>Last Updated:</strong> December 20, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
+    <div class="mobile-cta-bar">
+        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
+        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    </div>
+
+    <!-- Floating CTA for Desktop (v4.0) -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+        📅 Schedule 15-Min Call
+    </a>
+
+    <!-- Deferred JavaScript for Better Performance -->
+    <script>
+        // Critical mobile performance optimizations
+        (function() {
+            'use strict';
+
+            // Lazy loading polyfill with improved performance
+            if ('loading' in HTMLImageElement.prototype) {
+                // Native lazy loading supported
+                const lazyImages = document.querySelectorAll('img[loading="eager" fetchpriority="high" sizes="100vw"]');
+                lazyImages.forEach(img => {
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                });
+            } else {
+                // Intersection Observer fallback with throttling
+                let isPolyfillLoaded = false;
+                const loadPolyfill = () => {
+                    if (!isPolyfillLoaded) {
+                        const script = document.createElement('script');
+                        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+                        script.async = true;
+                        document.head.appendChild(script);
+                        isPolyfillLoaded = true;
+                    }
+                };
+
+                // Load polyfill on user interaction
+                ['touchstart', 'scroll', 'mouseover'].forEach(event => {
+                    document.addEventListener(event, loadPolyfill, { once: true, passive: true });
+                });
+            }
+        })();
+
+        // Optimized smooth scrolling with performance check
+        const initSmoothScroll = () => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, { passive: false });
+            });
+        };
+
+        // Initialize after DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSmoothScroll);
+        } else {
+            initSmoothScroll();
+        }
+
+        // INVISIBLE BOT PROTECTION - No user friction
+        (function() {
+            const formLoadTime = Date.now();
+            const disposableEmailDomains = ['tempmail.com', 'guerrillamail.com', 'mailinator.com', '10minutemail.com', 'throwaway.email', 'temp-mail.org', 'sharklasers.com', 'guerrillamail.net'];
+
+            // Set form load timestamp
+            const timestampField = document.getElementById('formTimestamp');
+            if (timestampField) {
+                timestampField.value = formLoadTime;
+            }
+
+            // Form handling with invisible bot validation
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const submitButton = e.target.querySelector('button[type="submit"]');
+                    const form = e.target;
+                    const emailField = form.querySelector('#email');
+                    const honeypotField = form.querySelector('[name="_gotcha"]');
+
+                    // BOT CHECK 1: Honeypot field filled (bot trap)
+                    if (honeypotField && honeypotField.value !== '') {
+                        console.log('Bot detected: Honeypot filled');
+                        e.preventDefault();
+                        return false;
+                    }
+
+                    // BOT CHECK 2: Form submitted too fast (less than 3 seconds = bot)
+                    const timeTaken = Date.now() - formLoadTime;
+                    if (timeTaken < 3000) {
+                        console.log('Bot detected: Form submitted too fast');
+                        e.preventDefault();
+                        alert('Please wait a moment before submitting.');
+                        return false;
+                    }
+
+                    // BOT CHECK 3: Disposable email address
+                    if (emailField) {
+                        const emailDomain = emailField.value.split('@')[1];
+                        if (emailDomain && disposableEmailDomains.includes(emailDomain.toLowerCase())) {
+                            console.log('Bot detected: Disposable email');
+                            e.preventDefault();
+                            alert('Please use a permanent email address.');
+                            return false;
+                        }
+                    }
+
+                    // All checks passed - show loading state
+                    submitButton.textContent = 'Sending Message...';
+                    submitButton.disabled = true;
+                    submitButton.style.opacity = '0.7';
+
+                    // Create success message div
+                    const successMessage = document.createElement('div');
+                    successMessage.innerHTML = `
+                        <div style="background: #d4edda; color: #155724; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; border: 1px solid #c3e6cb; text-align: center;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #155724;">✓ Message Sent Successfully!</h4>
+                            <p style="margin: 0; font-size: 0.95rem;">Thank you for reaching out. I will respond within 2 hours during business hours with care and confidentiality.</p>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; opacity: 0.8;">You can also call or text: (416) 306-2157</p>
+                        </div>
+                    `;
+
+                    // Don't prevent default - let form submit to FormSubmit
+                    setTimeout(() => {
+                        // Show success message after brief delay
+                        form.parentNode.insertBefore(successMessage, form.nextSibling);
+
+                        // Hide the form
+                        form.style.display = 'none';
+
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 500);
+                });
+            }
+        })();
+
+        // Phone click tracking
+        document.querySelectorAll('a[href^="tel:"]').forEach(phone => {
+            phone.addEventListener('click', function() {
+                console.log('Phone consultation clicked');
+            });
+        });
+
+        // Smooth scroll animations on page load and scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animation on scroll with reduced motion support
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.specialization-card, .process-step').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
+        }
+
+        // Web Vitals optimization - async non-critical JavaScript
+        window.addEventListener('load', function() {
+            // Non-critical JavaScript can be loaded here
+            console.log('Page fully loaded - Web Vitals optimized');
+        });
+
+        // Service Worker for caching (if supported)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Can register service worker here for caching
+            });
+        }
+    </script>
+
+<script src="/js/security-check.js"></script>
+</html>
