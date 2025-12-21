@@ -1,0 +1,165 @@
+# The PROOF System for Local SEO
+
+**Source:** [@bloggersarvesh on X](https://x.com/bloggersarvesh/status/2002763361147396454)
+**Author:** Sarvesh Shrivastava
+**Date:** December 21, 2025
+**Saved:** December 21, 2025
+
+---
+
+## Overview
+
+"My PROOF system works so well at Local SEO it feels ILLEGAL"
+
+Results shown: 152K total clicks, 22.5M total impressions, 0.7% average CTR, position 7 average
+
+---
+
+## First: What PROOF Actually Fixes
+
+Most local SEO fails because businesses:
+- Post randomly
+- Ask for reviews inconsistently
+- Have useless service pages
+- Upload photos in bursts
+- Rely on ads instead of trust
+
+**PROOF forces weekly execution across the 5 signals Google weighs most.**
+
+---
+
+## P = GBP Posts (2 per week)
+
+Most businesses post offers or random updates that no one searches for.
+
+**What actually works:**
+
+Each week, post only 2 things:
+
+### a) Post 1 - Service proof
+- Real job photo (phone is fine)
+- One sentence explaining what was done
+- Mention the service
+
+### b) Post 2 - (expanded content not fully captured)
+
+---
+
+## R = Review Requests (6 per week)
+
+**Goal:** review velocity + keyword relevance
+
+**Exact process:**
+- Ask the same day (text > email)
+- Send direct review link
+- Ask ONE thing only
+
+**Exact ask to copy-paste:**
+> "If you don't mind, could you mention what service we did and your city? It helps others find us."
+
+---
+
+## O = Optimized Money Pages (4 per month)
+
+**Goal:** give Google pages that deserve to rank
+
+**One page = one service + one city**
+
+**Do NOT mix services.**
+
+### Page checklist:
+- H1: Service in City
+- URL: /service-city/
+- 600-900 words (no fluff)
+
+### Sections:
+- What the service includes
+- (additional sections in expanded content)
+
+---
+
+## O = On-site Real Photos (8 per month)
+
+**Goal:** increase trust + CTR
+
+### What to upload:
+- Job in progress
+- Finished work
+- Team on site
+- Vehicle/tools
+
+### How:
+- Upload 2 photos/week
+- Add short captions using service words
+- Do NOT dump 20 photos at once
+
+### Why this matters:
+Higher trust signals, better CTR
+
+---
+
+## F = Free Traffic (Zero ads at first)
+
+**Goal:** force fundamentals
+
+If you run ads too early:
+- You ignore reviews. You ignore pages.
+- GBP stays weak.
+
+**Organic first = defensible rankings**
+
+**Ads later = scale**
+
+---
+
+## 30/60/90-Day Expectations (REALISTIC)
+
+- **30 days:** impressions increase
+- **60 days:** map visibility spreads
+- **90 days:** calls become consistent
+
+---
+
+## PROOF Recap
+
+| Letter | Action | Frequency |
+|--------|--------|-----------|
+| **P** | GBP posts | 2/week |
+| **R** | Review requests | 6/job |
+| **O** | Money pages | 4/month |
+| **O** | Real photos | 8/month |
+| **F** | $0 ads | (focus on organic first) |
+
+---
+
+## Results Promise
+
+Work with me for 90 days and I GUARANTEE you'll:
+- Rank higher on Google Business Profile
+- Drive more local traffic to the website
+- Get consistent calls and inquiries
+
+---
+
+## Key Takeaways for NextStep Therapy
+
+### Applicable Actions:
+1. **GBP Posts (2/week):** Post service proofs showing real sessions/outcomes (maintaining client confidentiality)
+2. **Review Requests:** Ask clients same-day for reviews mentioning service type and city
+3. **Money Pages:** Continue building city-specific therapy pages (one service + one city per page)
+4. **Photos:** Upload 2 professional photos/week to GBP with service keywords in captions
+5. **Organic First:** Focus on organic rankings before paid ads
+
+### Already Doing Well:
+- City-specific pages (anxiety-therapy-burlington.html, etc.)
+- Service-focused URLs
+- Consistent content structure
+
+### Opportunities:
+- Increase GBP posting frequency to 2/week
+- Systematize review requests
+- Add more real photos to GBP profile
+
+---
+
+*Note: Some tweet content was truncated due to Twitter's "Show more" feature. The key framework and actionable items have been captured.*
