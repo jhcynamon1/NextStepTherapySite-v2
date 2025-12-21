@@ -16,7 +16,7 @@
 | virtual therapy ontario | High | Medium | Mixed | ✅ Already optimized | 8.5x content |
 | anxiety therapy ontario | Medium | Medium | Gov-dominated | ✅ Already optimized | 25x content |
 | depression therapy ontario | Medium | Low | Practice-dominated | ✅ Already optimized | 16x content |
-| online therapist ontario | Medium | Low | Directory-dominated | ⚠️ Page needed | N/A |
+| online therapist ontario | Medium | Low | Directory-dominated | ✅ Optimized into virtual-therapy-ontario | 8.5x content |
 | cbt therapy toronto | Medium | Low | Practice-dominated | ✅ Enhanced | 13x content |
 
 **Key Finding:** All competitors have weak content (<500 words avg) with zero E-E-A-T signals. NextStep pages are 5-25x more comprehensive.
@@ -251,11 +251,14 @@ Most competitors are NOT targeting depression-specific keywords at all. They hav
 - How much does online therapy cost in Ontario?
 - What qualifications should an Ontario therapist have?
 
-## Status
-- ⚠️ **No dedicated page exists** - Need to create
-- Recommended: 2,000+ words with full E-E-A-T signals
+## Action Taken (Dec 21, 2025)
+- ✅ **Optimized virtual-therapy-ontario.html** to capture "online therapist" queries
+- ✅ Added "Find an online therapist in Ontario" to meta description
+- ✅ Added FAQ: "How do I find a good online therapist in Ontario?"
+- ✅ Added "online therapist" mention in About section
+- ✅ No new page needed - avoided keyword cannibalization
 
-**Ranking Timeline:** 60-90 days after page creation
+**Ranking Timeline:** 60-90 days (existing page authority + new targeting)
 
 ---
 
@@ -291,11 +294,12 @@ Most competitors are NOT targeting depression-specific keywords at all. They hav
 
 ---
 
-# Pending Keywords
+# All Keywords Complete
 
-| Keyword | Priority | Status |
-|---------|----------|--------|
-| online therapist ontario | P2 | Analyzed - page needed |
+All 7 priority keywords have been analyzed and optimized:
+- 5 pages enhanced with expanded content
+- 2 pages already optimized (no changes needed)
+- 0 new pages required (avoided cannibalization on "online therapist ontario")
 
 ---
 

@@ -314,6 +314,112 @@ Think of these skills as your standard toolkit. Just like a carpenter reaches fo
 - **Touching ANY UI?** → Apply frontend-design principles
 - **Discussing ANY keyword?** → Run it through keyword-research logic
 - **Writing ANY CTA?** → Use conversion-optimizer frameworks
+- **Positioning a service?** → Use positioning-angles-therapy
+- **Building email list?** → Use lead-magnet-therapy + email-welcome-sequence-therapy
+- **Writing persuasive copy?** → Use direct-response-copy-therapy
+- **Content doesn't sound like Jesse?** → Use brand-voice-therapy
+- **Not sure which skill to use?** → Use therapy-orchestrator
+
+---
+
+## Complete Skills Inventory (12 Skills)
+
+### SEO & Content Skills (6 skills)
+1. **meta-title-optimizer** - CTR-optimized titles + meta descriptions
+2. **keyword-research** - Priority scoring, cannibalization detection
+3. **seo-competitor-intelligence** - Content gap analysis, E-E-A-T audit
+4. **therapy-content-generator** - 2000+ word YMYL content + Humanize section
+5. **faq-schema-generator** - FAQ sections with proper schema markup
+6. **conversion-optimizer** - CTA optimization, hero sections
+
+### Marketing & Positioning Skills (4 skills)
+7. **positioning-angles-therapy** - CRPO-compliant positioning angles
+8. **direct-response-copy-therapy** - Persuasive copy (40% tone reduction)
+9. **lead-magnet-therapy** - Lead magnets (no diagnostic assessments)
+10. **email-welcome-sequence-therapy** - Welcome sequences (education-first)
+
+### Voice & Coordination Skills (2 skills)
+11. **brand-voice-therapy** - Applies Jesse's Voice DNA to all content
+12. **therapy-orchestrator** - Routes to correct skills, manages context
+
+---
+
+## When to Use Which Skill (Decision Tree)
+
+**Not sure where to start?** Use **therapy-orchestrator** to diagnose and route.
+
+### Starting a New Page?
+```
+1. keyword-research → Validate keyword
+2. positioning-angles-therapy → Find positioning angle
+3. seo-competitor-intelligence → Analyze competitors
+4. direct-response-copy-therapy → Write hero + CTAs
+5. therapy-content-generator → Write full page
+6. faq-schema-generator → Add FAQ section
+7. meta-title-optimizer → Optimize title/meta
+8. brand-voice-therapy → Verify voice match (final step)
+```
+
+### Building Email List?
+```
+1. lead-magnet-therapy → Create concept
+2. direct-response-copy-therapy → Landing page
+3. email-welcome-sequence-therapy → Nurture sequence
+4. brand-voice-therapy → Verify all copy sounds like Jesse
+```
+
+### Optimizing Existing Page?
+```
+1. meta-title-optimizer → Improve title/meta
+2. conversion-optimizer → Improve CTAs
+3. therapy-content-generator (Humanize) → Sound less AI
+4. faq-schema-generator → Add/expand FAQ
+5. brand-voice-therapy → Final voice check
+```
+
+### Competitive Research?
+```
+1. seo-competitor-intelligence → Analyze competitors
+2. keyword-research → Find keyword gaps
+3. positioning-angles-therapy → Differentiate
+4. therapy-content-generator → Create superior content
+```
+
+### Content Sounds Like AI?
+```
+1. brand-voice-therapy (Verify Mode) → Identify voice breaks
+2. therapy-content-generator (Humanize) → Rewrite flagged sections
+3. brand-voice-therapy → Final verification
+```
+
+---
+
+## The Context Paradox (CRITICAL FOR MULTI-SKILL WORK)
+
+**Why more context ≠ better output:**
+
+When passing context between skills, loading all previous research overwhelms the model and degrades output quality. Output becomes hedged, committee-sounding, and unfocused.
+
+### Context Passing Rules
+
+| To This Skill | Pass This | OMIT This |
+|---------------|-----------|-----------|
+| positioning-angles-therapy | Audience (1 sentence), keyword | Full competitor analysis |
+| direct-response-copy-therapy | Angle (1-2 sentences), 5 voice markers | Full Voice DNA |
+| therapy-content-generator | Primary keyword + outline | Competitor deep dive |
+| conversion-optimizer | Current CTA, page goal | Content drafts |
+| meta-title-optimizer | Primary keyword, 3 differentiators | Full page content |
+| brand-voice-therapy | Draft content only | Research data |
+
+### When to Run Fresh (No Context)
+
+Run a skill with minimal context when:
+- Previous skill output feels off
+- Output is getting worse through iterations
+- Copy sounds like a committee wrote it
+- You need bold, punchy content
+
+**Fresh start prompt:** "Write [content type] for [topic]. Audience: [1 sentence]. Angle: [1 sentence]. Be bold. Ignore everything else."
 
 ---
 
@@ -471,6 +577,142 @@ Think of these skills as your standard toolkit. Just like a carpenter reaches fo
 
 ---
 
+### Skill 8: positioning-angles-therapy
+
+**USE THIS WHENEVER:**
+- Starting ANY new service page
+- User asks "how should I position this?"
+- Discussing differentiation from other therapists
+- Creating landing pages
+- Writing service descriptions
+- User mentions "what's my unique value?"
+- Planning marketing strategy
+
+**CREATIVE TRIGGERS:**
+- "Create a page for [service]" → Find angle FIRST
+- "How do I stand out?" → Generate 3-5 angles
+- "What makes me different?" → Use differentiators
+- "Write copy for [service]" → Start with angle
+- ANY new service launch → Position it first
+
+**Output:** 3-5 CRPO-compliant angle options with headlines
+
+---
+
+### Skill 9: direct-response-copy-therapy
+
+**USE THIS WHENEVER:**
+- Writing ANY service page copy
+- Creating hero sections
+- Writing CTAs (buttons, headlines)
+- Landing pages
+- Email copy (with email-welcome-sequence-therapy)
+- Persuasive content of any kind
+
+**CREATIVE TRIGGERS:**
+- "Write copy for [service page]" → Use frameworks
+- "This copy feels too pushy" → Apply 40% reduction
+- "Make this convert" → Use therapy-adapted PAS
+- "Write a hero section" → Empathetic + trust signals
+- ANY persuasive writing → Filter through CRPO compliance
+
+**Output:** CRPO-compliant copy (empathetic, no pressure, trust-focused)
+
+---
+
+### Skill 10: lead-magnet-therapy
+
+**USE THIS WHENEVER:**
+- User wants to build email list
+- Discussing top-of-funnel strategy
+- User asks "how do I get more leads?"
+- Planning content upgrades
+- Creating free resources
+
+**CREATIVE TRIGGERS:**
+- "Build my email list" → Create lead magnet concept
+- "Free resource ideas" → Generate 3-5 concepts
+- "Content upgrade" → Suggest appropriate magnet
+- "How do I capture emails?" → Lead magnet + landing page
+- ANY mention of email list growth → Suggest lead magnet
+
+**Output:** CRPO-safe lead magnet concept (no assessments)
+
+---
+
+### Skill 11: email-welcome-sequence-therapy
+
+**USE THIS WHENEVER:**
+- User mentions contact form submissions
+- Discussing lead nurture
+- User says "people ghost after contacting me"
+- Planning email strategy
+- Reducing no-show rates
+
+**CREATIVE TRIGGERS:**
+- "People don't respond after inquiry" → Welcome sequence
+- "How do I nurture leads?" → 5-7 email sequence
+- "Reduce no-shows" → Educational email series
+- "Build trust with leads" → Welcome automation
+- Contact form exists but no follow-up → Suggest sequence
+
+**Output:** 5-7 email welcome sequence (education-first, no pressure)
+
+---
+
+### Skill 12: brand-voice-therapy
+
+**USE THIS WHENEVER:**
+- Writing ANY content (service pages, emails, CTAs)
+- Content "doesn't sound like Jesse"
+- Reviewing AI-generated copy
+- Before publishing any client-facing content
+- User says "sounds like AI" or "too generic"
+
+**CREATIVE TRIGGERS:**
+- "Check this copy" → Run Verify Mode
+- "Make this sound like me" → Apply Voice DNA
+- Writing any content → Use Apply Mode patterns
+- "This is too polished" → Add vulnerability and check-ins
+- ANY final draft → Voice verification before publish
+
+**Output:** Voice-matched content or verification pass/fail with fixes
+
+**Key patterns:**
+- Start with disclaimer ("I don't know if...")
+- Use check-ins ("right?", "Does that make sense?")
+- Signature phrases: "WITH the client, not ahead"
+- Process over outcomes
+- Vulnerable but not apologetic
+
+---
+
+### Skill 13: therapy-orchestrator
+
+**USE THIS WHENEVER:**
+- Starting any new content project
+- User request is ambiguous ("help me with marketing")
+- Multiple skills might apply
+- Need to track state across session
+- Not sure which skill to use first
+
+**CREATIVE TRIGGERS:**
+- "Where do I start?" → Diagnostic intake
+- "Help me with [vague request]" → Route correctly
+- Complex multi-step project → Use pre-built workflow
+- "What's next?" → Check state, recommend next skill
+- Switching tasks mid-project → Track and route
+
+**Output:** Skill routing recommendation with context handoff
+
+**Key features:**
+- 4 diagnostic questions
+- 5 pre-built workflows
+- Context Paradox awareness (selective context passing)
+- State tracking template
+
+---
+
 ### Multi-Skill Workflows
 
 **When creating a new page:**
@@ -529,7 +771,19 @@ Think of these skills as your standard toolkit. Just like a carpenter reaches fo
 │   └── SKILL.md
 ├── keyword-research/
 │   └── SKILL.md
-└── conversion-optimizer/
+├── conversion-optimizer/
+│   └── SKILL.md
+├── positioning-angles-therapy/
+│   └── SKILL.md
+├── direct-response-copy-therapy/
+│   └── SKILL.md
+├── lead-magnet-therapy/
+│   └── SKILL.md
+├── email-welcome-sequence-therapy/
+│   └── SKILL.md
+├── brand-voice-therapy/           # NEW: Voice DNA application
+│   └── SKILL.md
+└── therapy-orchestrator/          # NEW: Skill routing + Context Paradox
     └── SKILL.md
 ```
 
@@ -592,5 +846,250 @@ Remember: Use these skills proactively without waiting for explicit requests.
 
 **Claude should then invoke the recommended skill immediately.**
 
+---
 
+## Claude Chrome Extension - NEW CAPABILITIES
+
+**Reference:** [Getting Started with Claude in Chrome](https://support.claude.com/en/articles/12012173-getting-started-with-claude-in-chrome)
+
+The Claude Chrome extension unlocks capabilities we couldn't do before. This section documents how to use it with our skills for SEO automation.
+
+### What Chrome Extension Can Do (That We Couldn't Before)
+
+| Capability | What It Means for SEO |
+|------------|----------------------|
+| **See webpages visually** | Claude reads competitor pages directly, extracts structure, counts elements |
+| **Click and navigate** | Automate multi-step research across sites |
+| **Multi-tab workflows** | Analyze 5 competitors simultaneously in one session |
+| **Record workflows** | Teach Claude a research pattern once, replay forever |
+| **Schedule tasks** | Weekly competitor checks run automatically |
+| **Read console/DOM** | Check schema markup, meta tags, page structure directly |
+| **Planning mode** | Approve a research plan, Claude executes autonomously |
+
+### Installation
+
+1. **Get Claude Pro/Team/Enterprise** (required)
+2. **Install extension:** [Chrome Web Store - Claude in Chrome](https://chromewebstore.google.com/detail/claude)
+3. **Pin it:** Click puzzle icon → thumbtack next to Claude
+4. **Grant permissions:** Required for page reading and navigation
+5. **Choose model:** Opus 4.5 (complex), Sonnet 4.5 (balanced), Haiku 4.5 (fast)
+
+### Core Features for SEO Work
+
+#### 1. Multi-Tab Competitor Analysis
+```
+You: "Open these 5 competitor URLs and analyze each one"
+Claude: Opens all tabs, groups them, reads each page
+Claude: Extracts word count, H2 structure, FAQ presence, schema types
+Claude: Compiles comparison in side panel
+```
+
+#### 2. Workflow Recording (Game-Changer)
+```
+1. Click "Record Workflow" in Claude panel
+2. Manually perform your research steps once:
+   - Search keyword on Google
+   - Open top 5 results
+   - Check each for: word count, headings, FAQ, schema
+   - Log to Google Sheet
+3. Save as "Weekly Competitor Check"
+4. Claude repeats this exact workflow on schedule
+```
+
+#### 3. Scheduled Tasks
+```
+Set once → Claude runs automatically:
+- Daily: Check rankings
+- Weekly: Competitor analysis
+- Monthly: Full site audit
+- Annually: Content refresh review
+```
+
+#### 4. Planning Mode ("Ask Before Acting")
+```
+You: "Analyze top 5 competitors for 'anxiety therapy ontario'"
+Claude: Creates plan for approval:
+  1. Search Google for keyword
+  2. Open top 5 organic results
+  3. Extract data from each
+  4. Compile comparison
+  5. Generate recommendations
+You: Approve plan
+Claude: Executes entire workflow autonomously
+```
+
+#### 5. Console/DOM Reading (Technical SEO)
+```
+You: "Check the schema markup on this page"
+Claude: Reads page source, finds JSON-LD
+Claude: Reports: "Found MedicalWebPage, FAQPage, missing LocalBusiness"
+```
+
+### SEO Workflows + Skills Integration
+
+The magic: **Chrome extension collects data → Skills process it**
+
+#### Workflow 1: Weekly Competitor Intelligence
+
+**Chrome Extension Does:**
+1. Searches "anxiety therapy ontario" on Google
+2. Opens top 5 organic results in tab group
+3. For each page, extracts:
+   - URL
+   - Word count (reads full page)
+   - H2 heading structure
+   - FAQ section presence
+   - Schema markup (reads source)
+   - Author byline
+   - Last updated date
+4. Compiles data into structured format
+
+**Then Feed to Skill:** `seo-competitor-intelligence`
+```
+"Here's the competitor data Claude Chrome collected:
+[paste extracted data]
+Generate a 'beat the competition' brief for NextStep Therapy."
+```
+
+**Output:** Content gap analysis + actionable outline
+
+#### Workflow 2: Monthly Meta Title Audit
+
+**Chrome Extension Does:**
+1. Opens nextsteptherapy.ca/sitemap.xml
+2. Clicks through each therapy page URL
+3. Reads `<title>` tag from each page
+4. Records character count
+5. Logs to Google Sheet
+
+**Then Feed to Skill:** `meta-title-optimizer`
+```
+"Here are current meta titles from our site:
+[paste titles with character counts]
+Score each and generate optimized alternatives."
+```
+
+**Output:** 5 variations per title with CTR scores
+
+#### Workflow 3: Weekly GSC Position Tracking
+
+**Chrome Extension Does:**
+1. Opens Google Search Console
+2. Navigates to Performance → Search Results
+3. Exports queries report
+4. Opens tracking spreadsheet
+5. Pastes new data
+6. Highlights position changes > 3 spots
+
+**Then Feed to Skill:** `keyword-research`
+```
+"Here's this week's GSC data:
+[paste export]
+Identify quick wins and cannibalization risks."
+```
+
+**Output:** Priority-scored keyword list
+
+#### Workflow 4: Schema Validation
+
+**Chrome Extension Does:**
+1. Opens Google Rich Results Test
+2. Tests each therapy page URL
+3. Screenshots pass/fail results
+4. Logs which schema types detected
+5. Flags pages missing required schema
+
+**Then Feed to Skill:** `faq-schema-generator`
+```
+"These pages are missing FAQPage schema:
+[list URLs]
+Generate FAQ sections with valid JSON-LD for each."
+```
+
+**Output:** Ready-to-implement FAQ sections
+
+### Recording a Workflow (Step-by-Step)
+
+1. **Open Claude Chrome panel**
+2. **Click "Record Workflow"**
+3. **Perform your task manually:**
+   - Every click, scroll, and action is recorded
+   - Talk to Claude as you go: "Now I'm checking the H2 structure"
+4. **Stop recording**
+5. **Name it:** "Weekly Competitor Analysis - Anxiety Ontario"
+6. **Test replay:** Claude performs exact same steps
+7. **Schedule:** Set to run Monday 9am weekly
+
+### Slash Commands (Shortcuts)
+
+Save prompts you use repeatedly:
+
+```
+/competitor-check
+"Search Google for [keyword], open top 5 organic results,
+extract word count, H2s, FAQ presence, schema types,
+compile into comparison table"
+
+/schema-audit
+"Open Rich Results Test, test [URL], report all schema
+types found and any errors"
+
+/title-check
+"Open [URL], read the <title> tag, count characters,
+flag if over 60 chars"
+```
+
+### Best Practices
+
+1. **Start with Planning Mode** - Review Claude's plan before execution
+2. **Record repetitive workflows** - Don't repeat manual research
+3. **Use multi-tab for competitors** - Analyze 5 at once, not one at a time
+4. **Schedule recurring tasks** - Automate weekly checks
+5. **Feed outputs to skills** - Chrome collects, skills process
+6. **Choose right model:**
+   - Haiku 4.5: Quick lookups, simple navigation
+   - Sonnet 4.5: Multi-step workflows, analysis
+   - Opus 4.5: Complex research, detailed extraction
+
+### Safety Notes
+
+- Don't use on sensitive sites (banking, medical records)
+- Review plans before approving
+- High-risk actions (purchases, publishing) require explicit approval
+- Chrome only (not Edge, Firefox, or mobile)
+
+### Workflow Documentation
+
+Detailed workflow docs: `/docs/seo/chrome-workflows/`
+- [workflow-1-competitor-intel.md](docs/seo/chrome-workflows/workflow-1-competitor-intel.md) - Weekly competitor analysis
+
+### Competitor Intelligence Reports
+
+| Report | Date | Key Finding |
+|--------|------|-------------|
+| [SEO-COMPETITOR-INTELLIGENCE-DEC2025.md](docs/seo/SEO-COMPETITOR-INTELLIGENCE-DEC2025.md) | Dec 2025 | Market is thin, competitors weak, opportunity HIGH |
+
+### Priority Keywords (From Research)
+
+| Keyword | Opportunity | Action |
+|---------|-------------|--------|
+| **anxiety therapy burlington** | HIGH (2,200/mo, difficulty 6) | Create 2,500+ word page |
+| **men's mental health therapy ontario** | HIGH (practice-dominated) | Create dedicated page |
+| **virtual therapy ontario** | MEDIUM | Strengthen existing page |
+
+### De-Prioritized Keywords
+
+- "therapy near me ontario" - Directory dominated
+- "depression therapy ontario" - Government dominated
+- "anxiety therapy ontario" - Government dominated
+
+### Key Insight (Dec 2025)
+
+**Competitors made ZERO improvements in 12 months.** NextStep can dominate by implementing:
+- CRPO #10979 display (0% of competitors do this)
+- 2,000+ word content (0% of competitors have this)
+- FAQ schema (only ~20% have basic FAQ)
+- Author bylines with credentials (~10% have this)
+
+---
 
