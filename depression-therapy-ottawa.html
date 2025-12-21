@@ -72,33 +72,75 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Depression Therapy Ottawa - Professional Mental Health Support",
-      "description": "Virtual depression therapy services for Ottawa professionals dealing with emotional exhaustion and disconnection",
-      "url": "https://nextsteptherapy.ca/depression-therapy-ottawa.html",
-      "provider": {
-        "@type": "Person",
-        "additionalType": "Psychotherapist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Ottawa",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
-      "about": [
+      "@graph": [
         {
-          "@type": "MedicalCondition",
-          "name": "Major Depressive Disorder",
-          "alternateName": ["Depression", "Clinical Depression"],
-          "possibleTreatment": {
-            "@type": "MedicalTherapy",
-            "name": "Acceptance and Commitment Therapy",
-            "alternateName": "ACT"
-          }
+          "@type": "MedicalWebPage",
+          "name": "Depression Therapy Ottawa - Professional Mental Health Support",
+          "description": "Virtual depression therapy services for Ottawa professionals dealing with emotional exhaustion and disconnection",
+          "url": "https://nextsteptherapy.ca/depression-therapy-ottawa.html",
+          "dateModified": "2025-12-21",
+          "provider": {
+            "@type": "Person",
+            "additionalType": "Psychotherapist",
+            "name": "Jesse Cynamon, RP",
+            "identifier": "CRPO #10979",
+            "jobTitle": "Registered Psychotherapist"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Ottawa",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          },
+          "about": [
+            {
+              "@type": "MedicalCondition",
+              "name": "Major Depressive Disorder",
+              "alternateName": ["Depression", "Clinical Depression"],
+              "possibleTreatment": {
+                "@type": "MedicalTherapy",
+                "name": "Acceptance and Commitment Therapy",
+                "alternateName": "ACT"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "I'm still functioning at work. Is my depression 'bad enough' for therapy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "High-functioning depression is real. Many successful professionals manage to maintain their performance while struggling internally. You don't have to wait for a crisis to seek support. Therapy can help you move from just 'functioning' to truly 'thriving'."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will we just talk about my past in depression therapy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our focus is on the present and future. While your history is important, our primary focus will be on the practical skills you can learn and actions you can take right now to improve your life, aligned with the future you want to create."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is ACT different from other therapies for depression?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It's about action, not just analysis. Instead of trying to avoid negative thoughts, ACT teaches you to change your relationship with them. It helps you take meaningful, values-driven action even when feelings of depression are present, which is a powerful way to break the cycle."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is everything I say in therapy confidential?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, 100%. As a Registered Psychotherapist (CRPO #10979), all of our communication is protected by strict confidentiality laws (PHIPA). Your privacy is a top priority."
+              }
+            }
+          ]
         }
       ]
     }
