@@ -3,7 +3,7 @@
 
 **Research Period:** December 20, 2025
 **Method:** Claude Chrome extension live SERP analysis
-**Keywords Analyzed:** 5 priority keywords
+**Keywords Analyzed:** 7 priority keywords
 
 ---
 
@@ -16,6 +16,8 @@
 | virtual therapy ontario | High | Medium | Mixed | ✅ Already optimized | 8.5x content |
 | anxiety therapy ontario | Medium | Medium | Gov-dominated | ✅ Already optimized | 25x content |
 | depression therapy ontario | Medium | Low | Practice-dominated | ✅ Already optimized | 16x content |
+| online therapist ontario | Medium | Low | Directory-dominated | ⚠️ Page needed | N/A |
+| cbt therapy toronto | Medium | Low | Practice-dominated | ✅ Enhanced | 13x content |
 
 **Key Finding:** All competitors have weak content (<500 words avg) with zero E-E-A-T signals. NextStep pages are 5-25x more comprehensive.
 
@@ -221,12 +223,79 @@ Most competitors are NOT targeting depression-specific keywords at all. They hav
 
 ---
 
+# Keyword 6: Online Therapist Ontario
+
+**Priority:** P2 | **Opportunity:** MEDIUM (directory-dominated)
+
+## SERP Overview
+- **Directory-dominated** - Psychology Today, directories rank highest
+- Private practice competition very low
+- No Local Pack
+
+## Competitor Comparison
+
+| Metric | Psychotherapy Collective | Everwell | Avg | NextStep Target |
+|--------|--------------------------|----------|-----|-----------------|
+| Word Count | 198 | 231 | 215 | 2,000+ |
+| H2 Sections | 2 | 3 | 2.5 | 8-10 |
+| FAQ Section | No | No | 0% | Yes + Schema |
+| Schema Markup | None | None | None | MedicalWebPage + FAQPage |
+| CRPO Number | No | No | 0% | ✅ #10979 |
+| Author Byline | No | No | 0% | ✅ |
+| Last Updated | No | No | 0% | ✅ |
+| Wait Time | No | No | 0% | ✅ Same-week |
+
+## People Also Ask Opportunities
+- How do I find a therapist in Ontario?
+- Is online therapy as effective as in-person?
+- How much does online therapy cost in Ontario?
+- What qualifications should an Ontario therapist have?
+
+## Status
+- ⚠️ **No dedicated page exists** - Need to create
+- Recommended: 2,000+ words with full E-E-A-T signals
+
+**Ranking Timeline:** 60-90 days after page creation
+
+---
+
+# Keyword 7: CBT Therapy Toronto
+
+**Priority:** P2 | **Opportunity:** HIGHEST (practice-dominated + Local Pack)
+
+## SERP Overview
+- **Practice-dominated** - Best opportunity of all P2 keywords
+- **Local Pack present** - Additional visibility opportunity
+- Competitors have extremely thin content
+
+## Competitor Comparison
+
+| Metric | Toronto Psychology Centre | Forest Hill CBT | Avg | NextStep |
+|--------|---------------------------|-----------------|-----|----------|
+| Word Count | 174 | 44 | 109 | **1,481** |
+| H2 Sections | 0 | 1 | 0.5 | 8+ |
+| FAQ Section | No | No | 0% | ✅ 10 Q's |
+| Schema Markup | None | None | None | MedicalWebPage + FAQPage |
+| CRPO Number | No | No | 0% | ✅ #10979 |
+| Author Byline | No | No | 0% | ✅ |
+| Last Updated | No | No | 0% | ✅ Dec 2025 |
+| Wait Time | No | No | 0% | ✅ Same-week |
+
+## Action Taken
+- ✅ Page already exists: cbt-therapy-toronto.html
+- ✅ Added 10-question FAQ section with FAQPage schema
+- ✅ All E-E-A-T signals present
+- ✅ 13x content vs competitor average
+
+**Ranking Timeline:** 60-90 days (BEST opportunity - weak competition + Local Pack)
+
+---
+
 # Pending Keywords
 
 | Keyword | Priority | Status |
 |---------|----------|--------|
-| online therapist ontario | P2 | Not analyzed yet |
-| cbt therapy toronto | P2 | Not analyzed yet |
+| online therapist ontario | P2 | Analyzed - page needed |
 
 ---
 
