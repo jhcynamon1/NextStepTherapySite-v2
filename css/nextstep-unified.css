@@ -2789,8 +2789,25 @@ section {
 .contact .form-label,
 #contact label,
 #contact .form-label,
-section.contact label {
-    color: var(--white);
+section.contact label,
+.contact-form label,
+.contact-form .form-group label {
+    color: var(--white) !important;
+}
+
+/* FIX: Constrain virtual session image size */
+.virtual-session-image {
+    max-width: 500px;
+    margin: var(--space-6) auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.virtual-session-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
 }
 
 /* FIX: Hero credentials - tighter spacing */
