@@ -2425,8 +2425,8 @@ section.quiz-widget-section {
    CRITICAL: These rules enable two-column layouts on desktop
    ============================================ */
 @media (min-width: 769px) {
-    /* Hero Section - Two Column Layout */
-    .hero-content {
+    /* HOMEPAGE Hero Section - Two Column Layout (has .hero-text + .therapist-showcase) */
+    .hero .hero-content {
         display: grid;
         grid-template-columns: 1fr 380px;
         gap: var(--space-12);
@@ -2450,6 +2450,56 @@ section.quiz-widget-section {
     .hero-text .service-descriptor {
         text-align: left;
         margin-left: 0;
+    }
+
+    /* INNER PAGE Hero Section - Single column with stats sidebar */
+    .hero-with-bg .container {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: var(--space-10);
+        align-items: start;
+    }
+
+    .hero-with-bg .hero-content {
+        display: block; /* Override any grid - keep as single column */
+    }
+
+    .hero-with-bg .hero-content h1 {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .hero-with-bg .hero-content .lead-text {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-with-bg .quick-stats {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .quick-stat-card {
+        background: var(--white);
+        padding: var(--space-4);
+        border-radius: var(--radius-md);
+        border-left: 3px solid var(--navy);
+    }
+
+    .quick-stat-card h3 {
+        font-size: var(--text-base);
+        color: var(--text-primary);
+        margin-bottom: var(--space-2);
+        font-family: var(--font-body);
+        font-weight: 600;
+    }
+
+    .quick-stat-card p {
+        font-size: var(--text-sm);
+        color: var(--text-secondary);
+        margin: 0;
     }
 
     /* Trust Pills - Horizontal on Desktop */

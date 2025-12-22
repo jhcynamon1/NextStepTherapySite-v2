@@ -39,9 +39,15 @@ Each week, post only 2 things:
 ### a) Post 1 - Service proof
 - Real job photo (phone is fine)
 - One sentence explaining what was done
-- Mention the service
+- Mention the service once (no stuffing)
 
-### b) Post 2 - (expanded content not fully captured)
+### b) Post 2 - Local presence
+- Team, truck, storefront, or tools
+- Short caption that confirms you're active in the area
+
+These posts increase profile engagement and freshness.
+
+That stabilizes map rankings once you start climbing.
 
 ---
 
@@ -55,7 +61,11 @@ Each week, post only 2 things:
 - Ask ONE thing only
 
 **Exact ask to copy-paste:**
-> "If you don't mind, could you mention what service we did and your city? It helps others find us."
+> "If you don't mind, could you mention what service we did and your city? It really helps us."
+
+**Why this works:**
+Google parses reviews for service + location language.
+This feeds relevance without fake reviews.
 
 ---
 
@@ -74,7 +84,15 @@ Each week, post only 2 things:
 
 ### Sections:
 - What the service includes
-- (additional sections in expanded content)
+- Pricing factors
+- Local examples
+- FAQ (real questions)
+
+### Internal links:
+- Homepage → money page
+- Core service page → money page
+
+This is what supports your GBP rankings.
 
 ---
 
@@ -94,7 +112,7 @@ Each week, post only 2 things:
 - Do NOT dump 20 photos at once
 
 ### Why this matters:
-Higher trust signals, better CTR
+Higher CTR → stronger map pack retention.
 
 ---
 
@@ -144,22 +162,42 @@ Work with me for 90 days and I GUARANTEE you'll:
 ## Key Takeaways for NextStep Therapy
 
 ### Applicable Actions:
-1. **GBP Posts (2/week):** Post service proofs showing real sessions/outcomes (maintaining client confidentiality)
-2. **Review Requests:** Ask clients same-day for reviews mentioning service type and city
-3. **Money Pages:** Continue building city-specific therapy pages (one service + one city per page)
-4. **Photos:** Upload 2 professional photos/week to GBP with service keywords in captions
+1. **GBP Posts (2/week):**
+   - Post 1: Service proof - Share insights about therapy approaches (maintaining confidentiality)
+   - Post 2: Local presence - Office setup, professional headshot updates, Ontario-focused content
+
+2. **Review Requests:** Ask clients same-day for reviews mentioning:
+   - Service type (anxiety therapy, depression support, etc.)
+   - Location (Ontario, Toronto, Burlington, etc.)
+   - Use the script: "If you don't mind, could you mention what service we did and your city? It really helps us."
+
+3. **Money Pages:** Continue building city-specific therapy pages:
+   - One service + one city per page
+   - 600-900 words (our pages already exceed this - good!)
+   - Include: What therapy includes, pricing factors, local examples, FAQ
+   - Internal link structure: Homepage → service pages
+
+4. **Photos:** Upload 2 professional photos/week to GBP:
+   - Office environment
+   - Professional headshots
+   - Virtual therapy setup
+   - Add service keywords in captions
+
 5. **Organic First:** Focus on organic rankings before paid ads
 
 ### Already Doing Well:
 - City-specific pages (anxiety-therapy-burlington.html, etc.)
-- Service-focused URLs
+- Service-focused URLs (/service-city/ format)
 - Consistent content structure
+- FAQ sections with schema
+- Word count exceeds recommendations
 
 ### Opportunities:
 - Increase GBP posting frequency to 2/week
-- Systematize review requests
+- Systematize review requests with the exact script provided
 - Add more real photos to GBP profile
+- Ensure internal linking: Homepage → money pages
 
 ---
 
-*Note: Some tweet content was truncated due to Twitter's "Show more" feature. The key framework and actionable items have been captured.*
+*Thread captured in full from @bloggersarvesh on December 21, 2025*
