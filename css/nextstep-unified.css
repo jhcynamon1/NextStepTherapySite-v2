@@ -2716,6 +2716,83 @@ section {
     border-color: var(--navy);
 }
 
+/* Mobile CTA Bar - Fixed bottom bar for mobile */
+.mobile-cta-bar {
+    display: none; /* Hidden on desktop */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    padding: var(--space-3);
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-cta-bar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    flex: 1;
+}
+
+.mobile-cta-book {
+    background: var(--white);
+    color: var(--navy);
+    margin-right: var(--space-2);
+}
+
+.mobile-cta-phone {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+/* Show mobile CTA bar only on mobile */
+@media (max-width: 768px) {
+    .mobile-cta-bar {
+        display: flex;
+        gap: var(--space-2);
+    }
+
+    /* Hide floating CTA on mobile (use bar instead) */
+    .floating-cta {
+        display: none;
+    }
+
+    /* Add padding to body to prevent content behind fixed bar */
+    body {
+        padding-bottom: 80px;
+    }
+}
+
+/* Desktop: Position floating CTA in bottom-right corner */
+@media (min-width: 769px) {
+    .floating-cta {
+        position: fixed;
+        bottom: var(--space-6);
+        right: var(--space-6);
+        z-index: 999;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+    }
+}
+
+/* FIX: Form labels on dark backgrounds */
+.contact label,
+.contact .form-label,
+#contact label,
+#contact .form-label,
+section.contact label {
+    color: var(--white);
+}
+
 /* FIX: Hero credentials - tighter spacing */
 .hero-credentials {
     margin-top: 1rem;
