@@ -3031,3 +3031,248 @@ section.quiz-widget-section {
         max-width: 1280px;
     }
 }
+
+/* ============================================
+   41. CENTERED SECTION TITLES
+   ============================================ */
+.section-title.centered,
+h2.section-title.centered,
+h3.section-title.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+/* ============================================
+   42. AI CITATION STATS GRID
+   ============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-8) 0;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--space-8);
+    text-align: center;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+}
+
+.stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ============================================
+   43. AI-OPTIMIZED SUMMARY BOX
+   ============================================ */
+.ai-summary {
+    background: var(--cream);
+    padding: var(--space-6) var(--space-8);
+    border-left: 4px solid var(--navy);
+    margin-bottom: var(--space-8);
+    border-radius: var(--radius-md);
+}
+
+.ai-summary p {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.ai-summary strong {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   44. TRUST INDICATORS (Hero)
+   ============================================ */
+.trust-indicators {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
+    margin-top: var(--space-6);
+}
+
+.trust-indicator {
+    background: rgba(26, 51, 68, 0.08);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ============================================
+   45. CARD GRID (Generic)
+   ============================================ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-8) 0;
+}
+
+/* ============================================
+   46. FEATURE GRID
+   ============================================ */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-8) 0;
+}
+
+.feature-item {
+    padding: var(--space-4) 0;
+}
+
+.feature-item h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.feature-item p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   47. INFO CARDS GRID
+   ============================================ */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+}
+
+.info-card {
+    background: var(--cream);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+}
+
+.info-card h4 {
+    font-size: var(--text-base);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.info-card p {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   48. SOURCE CITATION
+   ============================================ */
+.source-citation {
+    text-align: center;
+    margin-top: var(--space-6);
+    font-style: italic;
+    color: var(--text-tertiary);
+    font-size: var(--text-sm);
+}
+
+/* ============================================
+   49. HIGHLIGHT TEXT
+   ============================================ */
+.highlight-text {
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: var(--space-6);
+    background: var(--cream);
+    border-radius: var(--radius-md);
+    margin: var(--space-8) 0;
+    text-align: center;
+}
+
+/* ============================================
+   50. ALTERNATE BACKGROUND SECTIONS
+   ============================================ */
+.section.alternate-bg {
+    background: var(--cream);
+}
+
+/* ============================================
+   51. CONTACT SECTION TEXT COLORS (Dark BG)
+   ============================================ */
+.contact-section {
+    background: var(--navy);
+    padding: var(--space-16) 0;
+}
+
+.contact-section h2,
+.contact-section h3,
+.contact-section h4 {
+    color: var(--white);
+}
+
+.contact-section p,
+.contact-section .contact-lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-section .therapist-details {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-section .final-message {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-section .hero-cta {
+    margin: var(--space-8) 0;
+}
+
+.contact-section .btn-primary {
+    background: var(--white);
+    color: var(--navy);
+    border-color: var(--white);
+}
+
+.contact-section .btn-primary:hover {
+    background: var(--cream);
+    color: var(--navy);
+}
+
+.contact-section .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-section .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+.contact-section .contact-info {
+    margin-top: var(--space-8);
+}
+
+.contact-section .contact-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
