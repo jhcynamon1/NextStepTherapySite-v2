@@ -18,18 +18,96 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/depression-therapy-ontario.html">
 
-    <!-- Fonts - V4 Design System -->
+    <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a4f',
+                        sage: '#4a7c59',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Page Styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility for Gemini design */
+        .section { padding: 5rem 0; }
+        .section.alternate-bg { background: #f5f1ea; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .content-grid { display: grid; gap: 2rem; }
+        .content-card { background: white; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.08); }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1e3a4f; margin-bottom: 1.5rem; }
+        .section-title.centered { text-align: center; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid #eee; }
+        .feature-list li:before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .feature-list li:last-child { border-bottom: none; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .info-card { background: #f8f9fa; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }
+        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }
+        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .quick-stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
+        .quick-stat-card h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .btn-primary { background: #1e3a4f; color: white; }
+        .btn-primary:hover { background: #152c3d; transform: translateY(-2px); }
+        .btn-secondary { background: #4a7c59; color: white; }
+        .btn-secondary:hover { background: #3d6a4a; }
+        .btn-lg { padding: 1.25rem 2.5rem; font-size: 1.1rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5f 100%); color: white; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }
+        .cta-box h3 { color: white; }
+        .faq-grid { display: grid; gap: 1.5rem; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
+        .faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-question { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-answer { color: #5a6b7d; }
+        .contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }
+        .contact-section h2, .contact-section h3, .contact-section h4 { color: white; }
+        .contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }
+        .trust-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.5rem 0; }
+        .trust-pill { background: rgba(74, 124, 89, 0.15); color: #4a7c59; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }
+        .hero-with-bg { background: linear-gradient(180deg, #f5f1ea 0%, #faf7f2 100%); padding: 6rem 0; text-align: center; }
+        .hero-with-bg h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1e3a4f; margin-bottom: 1.5rem; }
+        .lead-text { font-size: 1.25rem; color: #5a6b7d; max-width: 700px; margin: 0 auto 2rem; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .stats-section { background: #f5f1ea; }
+        .stats-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }
+        .footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }
+        .footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .footer a:hover { color: white; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-section h4 { color: white; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .hero-with-bg h1 { font-size: 2rem; }
+            .info-cards, .quick-stats { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; align-items: center; }
+        }
+    </style>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -173,23 +251,17 @@
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
-<body>
+<body class="bg-[#faf7f2]">
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="/" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge-prominent">CRPO #10979</span>
-                </div>
-                <nav class="nav">
-                    <a href="/#approach">Approach</a>
-                    <a href="/#specializations">Services</a>
-                    <a href="/#contact">Contact</a>
-                </nav>
-                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
-            </div>
+    <header class="bg-[#faf7f2] border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="font-display text-2xl text-navy font-semibold">Next Step Therapy</a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors">Approach</a>
+                <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors">Services</a>
+                <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors">Contact</a>
+            </nav>
+            <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition-all">Book Now</a>
         </div>
     </header>
 
@@ -901,115 +973,73 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Column 1: About & Contact -->
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #4a7c59; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+    <footer class="bg-navy py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Column 1: About -->
+                <div>
+                    <h4 class="font-display text-white text-lg mb-4">Jesse Cynamon, RP</h4>
+                    <p class="text-gray-300 text-sm mb-4">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p class="text-gray-300 text-sm font-semibold">CRPO #10979</p>
+                    <p class="mt-4"><a href="tel:+14163062157" class="text-sage font-semibold">(416) 306-2157</a></p>
                 </div>
 
-                <!-- Column 2: Therapy Services (Expanded) -->
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #4a7c59;">All Services →</a></li>
+                <!-- Column 2: Services -->
+                <div>
+                    <h4 class="font-display text-white text-lg mb-4">Therapy Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/anxiety-therapy-ontario.html" class="text-gray-300 hover:text-white transition-colors">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html" class="text-gray-300 hover:text-white transition-colors">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html" class="text-gray-300 hover:text-white transition-colors">Workplace Stress</a></li>
+                        <li><a href="/mens-mental-health.html" class="text-gray-300 hover:text-white transition-colors">Men's Mental Health</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-gray-300 hover:text-white transition-colors">Virtual Therapy</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Ontario Service Areas (NEW) -->
-                <div class="footer-section">
-                    <h4>Ontario Service Areas</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/depression-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #4a7c59;">All Ontario →</a></li>
+                <!-- Column 3: Locations -->
+                <div>
+                    <h4 class="font-display text-white text-lg mb-4">Ontario Service Areas</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/therapist-toronto.html" class="text-gray-300 hover:text-white transition-colors">Toronto</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html" class="text-gray-300 hover:text-white transition-colors">Ottawa</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html" class="text-gray-300 hover:text-white transition-colors">Hamilton</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html" class="text-gray-300 hover:text-white transition-colors">Mississauga</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-sage hover:text-white transition-colors">All Ontario →</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 4: Specialized Support (NEW) -->
-                <div class="footer-section">
-                    <h4>Specialized Support</h4>
-                    <ul>
-                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                <!-- Column 4: Resources -->
+                <div>
+                    <h4 class="font-display text-white text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="text-gray-300 hover:text-white transition-colors">Do I Need Therapy? Quiz</a></li>
+                        <li><a href="/therapy-costs-ontario.html" class="text-gray-300 hover:text-white transition-colors">Therapy Costs Ontario</a></li>
+                        <li><a href="/faq.html" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-gray-300 hover:text-white transition-colors">About Jesse</a></li>
                     </ul>
-                </div>
-
-                <!-- Column 5: Resources & Guides (NEW) -->
-                <div class="footer-section">
-                    <h4>Resources & Guides</h4>
-                    <ul>
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
-                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 6: Professional Info -->
-                <div class="footer-section">
-                    <h4>Professional Standards</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                    </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">All services provided in compliance with CRPO standards</p>
                 </div>
             </div>
 
-            <!-- Crisis Resources (CRPO Compliance) -->
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+            <!-- Crisis Resources -->
+            <div class="border-t border-white/10 pt-8 mt-12 text-center">
+                <p class="text-gray-300 text-sm mb-4">
+                    <strong class="text-white">In Crisis?</strong> Call <strong class="text-white">988</strong> (Suicide Crisis) | <strong class="text-white">911</strong> (Emergency) |
+                    <a href="tel:18665312600" class="text-sage underline">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> December 20, 2025</p>
+                <p class="text-gray-400 text-sm">&copy; 2024 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada</p>
             </div>
         </div>
     </footer>
-    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
+        <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold">Book Consultation</a>
+        <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
     </div>
 
-    <!-- Floating CTA for Desktop (v4.0) -->
-    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
-        📅 Schedule 15-Min Call
+    <!-- Desktop Floating CTA -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-8 right-8 bg-navy text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all items-center gap-2 font-semibold z-40">
+        <span>Book Free Consultation</span>
     </a>
 <script src="/js/security-check.js"></script>
 </body>

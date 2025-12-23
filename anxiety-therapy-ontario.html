@@ -18,18 +18,40 @@
     <meta property="og:url" content="https://nextsteptherapy.ca/anxiety-therapy-ontario.html">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
 
-    <!-- Fonts - V4 Design System -->
+    <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221d">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -206,187 +228,303 @@
     <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+
+    <!-- Page Styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility for Gemini design */
+        .section { padding: 5rem 0; }
+        .section.alternate-bg { background: #f5f1ea; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .content-grid { display: grid; gap: 2rem; }
+        .content-card { background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e8e3d9; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1.5rem; text-align: center; }
+        .section-intro { font-size: 1.125rem; color: #6b7280; text-align: center; max-width: 48rem; margin: 0 auto 2rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .feature-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .feature-list li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #4b5563; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { color: white; margin-top: 0; }
+        .cta-box p { color: rgba(255,255,255,0.9); }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid white; }
+        .btn-secondary:hover { background: transparent; color: white; text-decoration: none; }
+        .service-links-grid, .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .service-link-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e8e3d9; transition: all 0.2s; }
+        .service-link-card:hover { box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); transform: translateY(-2px); text-decoration: none; }
+        .service-link-card h3 { margin-top: 0; font-size: 1.125rem; }
+        .service-link-card p { font-size: 0.875rem; margin-bottom: 0; }
+        .resource-link { background: white; padding: 1rem 1.5rem; border-radius: 0.5rem; border: 1px solid #e8e3d9; color: #1e3a4f; font-weight: 500; }
+        .resource-link:hover { background: #4a7c59; color: white; text-decoration: none; }
+        .location-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .location-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }
+        .location-card h3 { margin-top: 0; }
+        .location-card ul { list-style: disc; padding-left: 1.25rem; margin: 1rem 0 0; }
+        .location-card li { font-size: 0.875rem; color: #6b7280; padding: 0.25rem 0; }
+        .process-steps { display: flex; flex-direction: column; gap: 1.5rem; }
+        .step-item { display: flex; gap: 1.5rem; align-items: flex-start; background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #e8e3d9; }
+        .step-number { width: 3rem; height: 3rem; background: #1e3a4f; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .step-content h3 { margin-top: 0; }
+        .comparison-table-wrapper { overflow-x: auto; }
+        .comparison-table { width: 100%; border-collapse: collapse; background: white; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .comparison-table th, .comparison-table td { padding: 1rem 1.25rem; text-align: left; border-bottom: 1px solid #e8e3d9; }
+        .comparison-table th { background: #1e3a4f; color: white; font-weight: 600; }
+        .comparison-table tr:hover { background: #faf7f2; }
+        .helpful-resources { background: #f5f1ea; }
+        .related-services { background: white; }
+        @media (max-width: 768px) {
+            .section { padding: 3rem 0; }
+            .section-title { font-size: 1.5rem; }
+            .content-card { padding: 1.5rem; }
+            .step-item { flex-direction: column; }
+        }
+    </style>
 </head>
-<body>
+<body class="font-body bg-cream">
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="/" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge-prominent">CRPO #10979</span>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
-                <nav class="nav">
-                    <a href="/#approach">Approach</a>
-                    <a href="/#specializations">Services</a>
-                    <a href="/#contact">Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <a href="tel:+14163062157" class="header-phone">Call (416) 306-2157</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="pt-20">
         <!-- Hero Section -->
-        <section class="hero-with-bg">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Anxiety Therapy in Ontario</h1>
-                    <p class="lead-text">You're not broken. Your brain just won't shut off. Racing thoughts, constant worry, panic attacks—the people who reach out to me aren't falling apart. They're tired of their brain running the show. Sound familiar?</p>
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">ANXIETY THERAPY ONTARIO</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Anxiety Therapy in Ontario</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You're not broken. Your brain just won't shut off. Racing thoughts, constant worry, panic attacks—the people who reach out to me aren't falling apart. They're tired of their brain running the show. Sound familiar?</p>
 
-                    <div class="hero-cta">
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary btn-lg">Start Managing Anxiety This Week</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary btn-lg">Call (416) 306-2157</a>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Start Managing Anxiety This Week
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i> $175/session</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="zap" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                        </div>
                     </div>
 
-                    <div class="trust-pills">
-                        <span class="trust-pill">✓ CRPO #10979</span>
-                        <span class="trust-pill">✓ $175/session</span>
-                        <span class="trust-pill">✓ Same-Week Available</span>
-                        <span class="trust-pill">✓ Insurance Receipts</span>
-                    </div>
-                </div>
-
-                <div class="quick-stats">
-                    <div class="quick-stat-card">
-                        <h3>Evidence-Based</h3>
-                        <p>ACT + CBT approaches proven effective for panic, worry, and performance anxiety—tailored to your specific needs.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>$175 / Session</h3>
-                        <p>Detailed receipts for Manulife, Sun Life, Canada Life, Greenshield, and other Ontario insurers.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Flexible Scheduling</h3>
-                        <p>Early morning, lunch, and evening appointments built around your commute, hybrid work, and family life.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Virtual Across Ontario</h3>
-                        <p>Secure video sessions accessible from Toronto to Thunder Bay—no travel, no waitlists, no parking stress.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evidence-Based</h3>
+                            <p class="text-gray-600 text-sm">ACT + CBT approaches proven effective for panic, worry, and performance anxiety.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="receipt" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">$175 / Session</h3>
+                            <p class="text-gray-600 text-sm">Detailed receipts for Manulife, Sun Life, Canada Life, Greenshield.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Scheduling</h3>
+                            <p class="text-gray-600 text-sm">Early morning, lunch, and evening appointments.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Across Ontario</h3>
+                            <p class="text-gray-600 text-sm">Secure video sessions from Toronto to Thunder Bay.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- AI-Snippable Definition Section -->
-        <section class="section">
-            <h2 class="section-title">What Is Anxiety Therapy?</h2>
-            <p><strong>Anxiety therapy in Ontario is evidence-based psychological treatment that helps individuals manage persistent worry, panic attacks, and stress-related symptoms through structured approaches like Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).</strong> Research shows 60-80% of people who complete anxiety therapy experience significant symptom reduction. Unlike medication alone, therapy provides lasting skills for managing anxiety across work, relationships, and daily life.</p>
-        </section>
-
-        <!-- Statistics Section - AI Citation Optimized -->
-        <section class="section stats-section">
-            <h2 class="section-title">Anxiety in Ontario: The Reality</h2>
-            <p class="section-intro">Anxiety is the most common mental health concern in Canada, yet most people wait years before seeking help.</p>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">5M+</div>
-                    <div class="stat-label">Canadians report anxiety symptoms annually</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1 in 4</div>
-                    <div class="stat-label">Canadians will experience clinical anxiety requiring treatment</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">60-80%</div>
-                    <div class="stat-label">Improvement rate with CBT/ACT therapy (peer-reviewed research)</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50%</div>
-                    <div class="stat-label">Of those with anxiety never seek professional help</div>
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="font-display text-3xl md:text-4xl font-medium text-navy text-center mb-8">What Is Anxiety Therapy?</h2>
+                <div class="bg-cream rounded-2xl p-8 border border-sand/30">
+                    <p class="text-gray-700 leading-relaxed"><strong class="text-navy">Anxiety therapy in Ontario is evidence-based psychological treatment that helps individuals manage persistent worry, panic attacks, and stress-related symptoms through structured approaches like Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).</strong> Research shows 60-80% of people who complete anxiety therapy experience significant symptom reduction. Unlike medication alone, therapy provides lasting skills for managing anxiety across work, relationships, and daily life.</p>
                 </div>
             </div>
-            <p class="sources">Sources: Centre for Addiction and Mental Health (CAMH), Canadian Mental Health Association (CMHA), Anxiety and Depression Association of America (ADAA)</p>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="py-20 bg-navy">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 bg-sage/30 text-sage-light text-xs font-semibold rounded-full mb-4 tracking-wider">THE REALITY</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-medium text-white mb-4">Anxiety in Ontario</h2>
+                    <p class="text-lg text-white/80 max-w-2xl mx-auto">Anxiety is the most common mental health concern in Canada, yet most people wait years before seeking help.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                        <div class="font-display text-4xl md:text-5xl font-bold text-white mb-2">5M+</div>
+                        <div class="text-white/70 text-sm">Canadians report anxiety symptoms annually</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                        <div class="font-display text-4xl md:text-5xl font-bold text-white mb-2">1 in 4</div>
+                        <div class="text-white/70 text-sm">Canadians will experience clinical anxiety</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                        <div class="font-display text-4xl md:text-5xl font-bold text-white mb-2">60-80%</div>
+                        <div class="text-white/70 text-sm">Improvement rate with CBT/ACT therapy</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                        <div class="font-display text-4xl md:text-5xl font-bold text-white mb-2">50%</div>
+                        <div class="text-white/70 text-sm">Of those with anxiety never seek help</div>
+                    </div>
+                </div>
+                <p class="text-center text-white/50 text-sm mt-8">Sources: CAMH, CMHA, ADAA</p>
+            </div>
         </section>
 
         <!-- Who Seeks Anxiety Therapy Section -->
-        <section class="section">
-            <h2 class="section-title">Who Seeks Anxiety Therapy in Ontario?</h2>
-            <p class="section-intro">Anxiety affects high-performers across industries and life stages. Here's who typically reaches out:</p>
+        <section class="py-20 bg-ivory">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-4 tracking-wider">WHO I WORK WITH</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-medium text-navy mb-4">Who Seeks Anxiety Therapy in Ontario?</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Anxiety affects high-performers across industries and life stages. Here's who typically reaches out:</p>
+                </div>
 
-            <div class="quick-stats">
-                <div class="quick-stat-card">
-                    <h3>Healthcare Professionals</h3>
-                    <p>Nurses, physicians, and hospital staff managing compassion fatigue, shift work stress, and the pressure of high-stakes decisions.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>Tech & Finance Professionals</h3>
-                    <p>Developers, analysts, and traders dealing with deadline pressure, imposter syndrome, and the "always on" culture of Bay Street and startup life.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>Legal Professionals</h3>
-                    <p>Lawyers and paralegals managing billable hour pressure, perfectionism, and the cognitive load of complex casework.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>University Students</h3>
-                    <p>Graduate and undergraduate students across Ontario universities facing academic pressure, social anxiety, and career uncertainty.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>New Parents</h3>
-                    <p>First-time parents managing postpartum anxiety, parenting pressure, and the challenge of balancing career with family.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>Mid-Career Professionals</h3>
-                    <p>Managers and senior individual contributors questioning "is this it?" while managing increased responsibility and competing demands.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="heart-pulse" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Healthcare Professionals</h3>
+                        <p class="text-gray-600 text-sm">Nurses, physicians, and hospital staff managing compassion fatigue, shift work stress, and high-stakes decisions.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="laptop" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Tech & Finance Professionals</h3>
+                        <p class="text-gray-600 text-sm">Developers, analysts, and traders dealing with deadline pressure, imposter syndrome, and "always on" culture.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="scale" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Legal Professionals</h3>
+                        <p class="text-gray-600 text-sm">Lawyers and paralegals managing billable hour pressure, perfectionism, and complex casework.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="graduation-cap" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">University Students</h3>
+                        <p class="text-gray-600 text-sm">Graduate and undergraduate students facing academic pressure, social anxiety, and career uncertainty.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="baby" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">New Parents</h3>
+                        <p class="text-gray-600 text-sm">First-time parents managing postpartum anxiety, parenting pressure, and career balance.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-sage hover:shadow-lg transition-shadow">
+                        <div class="w-10 h-10 bg-sage/10 rounded-lg flex items-center justify-center mb-4"><i data-lucide="briefcase" class="w-5 h-5 text-sage"></i></div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Mid-Career Professionals</h3>
+                        <p class="text-gray-600 text-sm">Managers questioning "is this it?" while managing increased responsibility and competing demands.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Is This You Section -->
-        <section class="section">
-            <h2 class="section-title">Is This You?</h2>
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-4 tracking-wider">RECOGNITION</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-medium text-navy mb-4">Is This You?</h2>
+                </div>
 
-            <p>That Sunday evening chest tightness as you mentally rehearse Monday's challenges. Racing thoughts that turn simple decisions into exhausting analysis of every possible outcome. Your brain treating everyday situations like emergencies, flooding you with "what if" scenarios you can't turn off.</p>
+                <div class="bg-cream rounded-2xl p-8 md:p-10 border border-sand/30 space-y-6">
+                    <p class="text-gray-700 leading-relaxed text-lg">That Sunday evening chest tightness as you mentally rehearse Monday's challenges. Racing thoughts that turn simple decisions into exhausting analysis of every possible outcome. Your brain treating everyday situations like emergencies, flooding you with "what if" scenarios you can't turn off.</p>
 
-            <p><strong>Common anxiety struggles:</strong> Constant worry, panic attacks, social anxiety, perfectionism, difficulty making decisions, physical symptoms (chest tightness, racing heart), and the exhaustion of trying to "think your way out" of anxiety.</p>
+                    <div class="bg-white rounded-xl p-6 border border-sand/30">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-3">Common anxiety struggles:</h3>
+                        <p class="text-gray-600">Constant worry, panic attacks, social anxiety, perfectionism, difficulty making decisions, physical symptoms (chest tightness, racing heart), and the exhaustion of trying to "think your way out" of anxiety.</p>
+                    </div>
 
-            <p><strong>What you'll work on in therapy:</strong> Recognizing anxiety patterns, defusion from anxious thoughts, values-based action despite worry, grounding techniques for panic, and building a different relationship with discomfort.</p>
+                    <div class="bg-white rounded-xl p-6 border border-sand/30">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-3">What you'll work on in therapy:</h3>
+                        <p class="text-gray-600">Recognizing anxiety patterns, defusion from anxious thoughts, values-based action despite worry, grounding techniques for panic, and building a different relationship with discomfort.</p>
+                    </div>
 
-            <p>Sound familiar? Most people notice meaningful improvements within 8-12 weeks of consistent therapy sessions.</p>
+                    <p class="text-sage font-semibold text-center pt-4">Most people notice meaningful improvements within 8-12 weeks of consistent therapy sessions.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Credentials & Authority -->
-        <section class="section alternate-bg">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2 class="section-title">Meet Jesse Cynamon, RP - Your Registered Psychotherapist</h2>
-                        <p>I'm Jesse Cynamon, a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I focus on helping people throughout Ontario develop a healthier relationship with anxiety using evidence-based approaches like Acceptance and Commitment Therapy (ACT).</p>
+        <section class="py-20 bg-ivory">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12 items-start">
+                    <div class="lg:col-span-2">
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-4 tracking-wider">YOUR THERAPIST</span>
+                        <h2 class="font-display text-3xl md:text-4xl font-medium text-navy mb-6">Meet Jesse Cynamon, RP</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">I'm Jesse Cynamon, a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (CRPO #10979). I focus on helping people throughout Ontario develop a healthier relationship with anxiety using evidence-based approaches like Acceptance and Commitment Therapy (ACT).</p>
 
-                        <h3>Why I Work with Anxiety</h3>
-                        <p>Anxiety often affects some of the most capable, thoughtful people—individuals who care deeply about their responsibilities and relationships. What makes this work meaningful to me is witnessing the profound relief that comes when someone learns they don't need to eliminate anxiety to live well; they just need to change their relationship with it.</p>
+                        <h3 class="font-display text-xl font-semibold text-navy mb-3">Why I Work with Anxiety</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">Anxiety often affects some of the most capable, thoughtful people—individuals who care deeply about their responsibilities and relationships. What makes this work meaningful to me is witnessing the profound relief that comes when someone learns they don't need to eliminate anxiety to live well; they just need to change their relationship with it.</p>
 
-                        <h3>My Approach to Virtual Therapy</h3>
-                        <p><a href="/virtual-therapy-ontario.html">Virtual therapy</a> isn't a compromise—for many people dealing with anxiety, it's actually ideal. You can access professional support from your own safe space, without the additional stress of travel, parking, or sitting in unfamiliar waiting rooms. Many Burlington residents find <a href="/burlington-online-therapy.html">online therapy</a> particularly convenient for avoiding commute stress. If you're exploring online options, see our comprehensive guide to <a href="/online-therapy-ontario.html">online therapy in Ontario</a> for details on how virtual sessions work. This can be especially helpful when anxiety makes leaving home feel overwhelming.</p>
+                        <h3 class="font-display text-xl font-semibold text-navy mb-3">My Approach to Virtual Therapy</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6"><a href="/virtual-therapy-ontario.html" class="text-sage hover:underline">Virtual therapy</a> isn't a compromise—for many people dealing with anxiety, it's actually ideal. You can access professional support from your own safe space, without the additional stress of travel, parking, or sitting in unfamiliar waiting rooms.</p>
+                    </div>
 
-                        <h3>Professional Background</h3>
-                        <ul class="feature-list">
-                            <li>Master's degree in counseling psychology</li>
-                            <li>Licensed as a <a href="/how-to-find-therapist-ontario.html">Registered Psychotherapist</a> with CRPO (#10979)</li>
-                            <li>Specialized training in Acceptance and Commitment Therapy (ACT)</li>
-                            <li>Experience with <a href="/cbt-therapy-toronto">Cognitive Behavioral Therapy (CBT)</a> for anxiety disorders</li>
-                            <li>Ongoing professional development in evidence-based treatments</li>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-sand/30">
+                        <div class="text-center mb-6">
+                            <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon, Registered Psychotherapist" class="w-32 h-32 rounded-full object-cover object-[center_15%] mx-auto border-4 border-sage/20 shadow-lg mb-4">
+                            <h3 class="font-display text-xl font-semibold text-navy">Jesse Cynamon, RP</h3>
+                            <p class="text-sage font-medium">CRPO #10979</p>
+                        </div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage flex-shrink-0 mt-0.5"></i> Master's in counseling psychology</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage flex-shrink-0 mt-0.5"></i> <a href="/how-to-find-therapist-ontario.html" class="text-sage hover:underline">Registered Psychotherapist</a> (CRPO #10979)</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage flex-shrink-0 mt-0.5"></i> ACT & CBT specialized training</li>
+                            <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-sage flex-shrink-0 mt-0.5"></i> Ongoing professional development</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECONDARY CTA BOX - Position #4 (After therapist intro) -->
-        <section class="section">
-            <div class="container">
-                <div class="cta-box">
-                    <h3>Ready to Address Your Anxiety?</h3>
-                    <p>Schedule a 15-minute consultation to discuss how evidence-based therapy can help you manage anxiety across Ontario.</p>
-                    <div class="btn btn-primary" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="tel:+14163062157" class="btn btn-primary">Call (416) 306-2157</a>
-                        <a href="https://nextsteptherapy.janeapp.com" class="btn btn-secondary">Book Online</a>
-                    </div>
-                    <p style="font-size: 0.875rem; color: rgba(255,255,255,0.85); margin-top: 1rem;">We respond within 24 hours</p>
+        <!-- CTA Section -->
+        <section class="py-16 bg-navy">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h3 class="font-display text-2xl md:text-3xl font-medium text-white mb-4">Ready to Address Your Anxiety?</h3>
+                <p class="text-white/90 text-lg mb-8">Schedule a 15-minute consultation to discuss how evidence-based therapy can help.</p>
+                <div class="flex flex-wrap gap-4 justify-center mb-6">
+                    <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white text-navy px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                        <i data-lucide="phone" class="w-5 h-5"></i> Call (416) 306-2157
+                    </a>
+                    <a href="https://nextsteptherapy.janeapp.com" class="inline-flex items-center gap-2 bg-white/10 border border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all">
+                        <i data-lucide="calendar" class="w-5 h-5"></i> Book Online
+                    </a>
                 </div>
+                <p class="text-white/70 text-sm">We respond within 24 hours</p>
             </div>
         </section>
 
@@ -609,141 +747,57 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="section faq-section">
-            <div class="container">
-                <h2 class="section-title">Frequently Asked Questions About Anxiety Therapy in Ontario</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3 class="faq-question">How long does anxiety therapy typically take?</h3>
-                        <div class="faq-answer">
-                            <p>Here's what I've seen: most people notice shifts within a few sessions—not because anxiety disappears, but because you're relating to it differently. Deeper changes typically happen over 8-12 weeks. The timeline matters less than whether we're actually connecting. That's where change starts.</p>
-                        </div>
+        <section class="py-20 bg-cream">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-4 tracking-wider">COMMON QUESTIONS</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-medium text-navy">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">How long does anxiety therapy typically take?</h3>
+                        <p class="text-gray-600 text-sm">Here's what I've seen: most people notice shifts within a few sessions—not because anxiety disappears, but because you're relating to it differently. Deeper changes typically happen over 8-12 weeks. The timeline matters less than whether we're actually connecting. That's where change starts.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">What happens in the first anxiety therapy session?</h3>
-                        <div class="faq-answer">
-                            <p>Just a real conversation about what's going on. We'll talk about when anxiety shows up, how it's affecting you, and what you want to change. You'll leave with at least one practical tool you can use immediately—we start working from session one.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">What happens in the first anxiety therapy session?</h3>
+                        <p class="text-gray-600 text-sm">Just a real conversation about what's going on. We'll talk about when anxiety shows up, how it's affecting you, and what you want to change. You'll leave with at least one practical tool you can use immediately—we start working from session one.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">Is virtual anxiety therapy as effective as in-person?</h3>
-                        <div class="faq-answer">
-                            <p>Research shows <a href="/virtual-therapy-ontario.html">virtual therapy</a> is equally effective for anxiety treatment. Many clients prefer the comfort and convenience of their own space, which can actually reduce anxiety about attending sessions.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Is virtual anxiety therapy as effective as in-person?</h3>
+                        <p class="text-gray-600 text-sm">Research shows <a href="/virtual-therapy-ontario.html" class="text-sage hover:underline">virtual therapy</a> is equally effective for anxiety treatment. Many clients prefer the comfort and convenience of their own space, which can actually reduce anxiety about attending sessions.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">How much does anxiety therapy cost in Ontario?</h3>
-                        <div class="faq-answer">
-                            <p>Session fees are $175 per 50-minute session. Many extended health benefits throughout Ontario cover registered psychotherapist services. I provide detailed receipts for easy reimbursement with your insurance provider.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">How much does anxiety therapy cost in Ontario?</h3>
+                        <p class="text-gray-600 text-sm">Session fees are $175 per 50-minute session. Many extended health benefits throughout Ontario cover registered psychotherapist services. I provide detailed receipts for easy reimbursement with your insurance provider.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">What's the difference between CBT and ACT for anxiety?</h3>
-                        <div class="faq-answer">
-                            <p>CBT focuses on changing thought patterns and behaviors that maintain anxiety, while ACT emphasizes accepting anxious feelings while pursuing meaningful activities. Both are evidence-based approaches that can be effective for different individuals.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">What's the difference between CBT and ACT for anxiety?</h3>
+                        <p class="text-gray-600 text-sm">CBT focuses on changing thought patterns and behaviors that maintain anxiety, while ACT emphasizes accepting anxious feelings while pursuing meaningful activities. Both are evidence-based approaches that can be effective for different individuals.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">Can anxiety therapy help with panic attacks?</h3>
-                        <div class="faq-answer">
-                            <p>Yes, anxiety therapy is highly effective for panic attacks. We'll work on understanding your panic triggers, developing immediate coping strategies, and gradually reducing the frequency and intensity of panic episodes through exposure and acceptance techniques.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Can anxiety therapy help with panic attacks?</h3>
+                        <p class="text-gray-600 text-sm">Yes, anxiety therapy is highly effective for panic attacks. We'll work on understanding your panic triggers, developing immediate coping strategies, and gradually reducing the frequency and intensity of panic episodes through exposure and acceptance techniques.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">Do I need a referral for anxiety therapy in Ontario?</h3>
-                        <div class="faq-answer">
-                            <p>No referral is needed to see a registered psychotherapist in Ontario. You can book directly for anxiety therapy. However, some insurance plans may require a referral for coverage, so check with your provider.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Do I need a referral for anxiety therapy in Ontario?</h3>
+                        <p class="text-gray-600 text-sm">No referral is needed to see a registered psychotherapist in Ontario. You can book directly for anxiety therapy. However, some insurance plans may require a referral for coverage, so check with your provider.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">What if I'm too anxious to start therapy?</h3>
-                        <div class="faq-answer">
-                            <p>This is a common concern. Starting with a free 15-minute consultation can help ease this anxiety. We can discuss your concerns at your own pace, and there's no pressure to commit to ongoing therapy until you feel ready.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Does OHIP cover anxiety therapy in Ontario?</h3>
+                        <p class="text-gray-600 text-sm">No, OHIP does not cover psychotherapy services in Ontario. However, most extended health insurance plans through employers cover Registered Psychotherapist services at $1,000-$3,000 annually. Sessions are $175, and I provide detailed receipts for insurance reimbursement.</p>
                     </div>
 
-                    <div class="faq-item">
-                        <h3 class="faq-question">How do I know if I need anxiety therapy?</h3>
-                        <div class="faq-answer">
-                            <p>If anxiety is interfering with your work, relationships, sleep, or daily activities, therapy can help. Signs include constant worry, avoidance of situations, physical symptoms like tension or rapid heartbeat, or feeling overwhelmed by everyday tasks.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">Can anxiety therapy help with social anxiety?</h3>
-                        <div class="faq-answer">
-                            <p>Yes, therapy is one of the most effective treatments for social anxiety. We'll work on gradual exposure to social situations, challenging anxious thoughts about judgment, and building confidence in social interactions at a pace that feels manageable.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">What should I expect from anxiety therapy homework?</h3>
-                        <div class="faq-answer">
-                            <p>Homework typically involves practicing skills between sessions, such as mindfulness exercises, tracking anxiety triggers, or gradually facing feared situations. These assignments take 10-20 minutes and help you apply what we discuss in therapy to real life.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">How often should I attend anxiety therapy sessions?</h3>
-                        <div class="faq-answer">
-                            <p>Most clients benefit from weekly sessions initially, especially when anxiety is significantly impacting daily life. As you develop skills and see improvement, we may reduce frequency to bi-weekly sessions.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">Can anxiety therapy help with work-related stress?</h3>
-                        <div class="faq-answer">
-                            <p>Absolutely. Many clients seek therapy specifically for <a href="/workplace-stress-therapy-ontario.html">workplace anxiety</a> and stress. We'll address both the anxiety symptoms and develop strategies for managing work pressures, setting boundaries, and improving work-life balance.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">What if my anxiety gets worse during therapy?</h3>
-                        <div class="faq-answer">
-                            <p>Sometimes anxiety temporarily increases when facing avoided situations or discussing difficult topics. This is normal and often indicates we're working on meaningful issues. We'll always move at a pace you can manage and adjust our approach if needed.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">How do I prepare for my first anxiety therapy session?</h3>
-                        <div class="faq-answer">
-                            <p>No special preparation is needed. It can be helpful to think about what you'd like to get out of therapy and what anxiety symptoms are most troubling. Arrive in a private, comfortable space for virtual sessions.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">What is the 3-3-3 rule for anxiety?</h3>
-                        <div class="faq-answer">
-                            <p>The 3-3-3 rule is a grounding technique for anxiety: name 3 things you can see, 3 sounds you can hear, and move 3 parts of your body. It redirects focus from anxious thoughts to the present moment. While helpful for mild anxiety in the moment, professional therapy addresses underlying patterns for lasting relief through evidence-based approaches like ACT and CBT.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">Does OHIP cover anxiety therapy in Ontario?</h3>
-                        <div class="faq-answer">
-                            <p>No, OHIP does not cover psychotherapy services in Ontario. However, most extended health insurance plans through employers cover Registered Psychotherapist services at $1,000-$3,000 annually. Sessions are $175, and I provide detailed receipts for insurance reimbursement. Check your benefits under "Paramedical Services" or "Mental Health."</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">Which type of therapy is best for anxiety?</h3>
-                        <div class="faq-answer">
-                            <p><strong>Cognitive Behavioural Therapy (CBT) and Acceptance and Commitment Therapy (ACT)</strong> are the most effective evidence-based therapies for anxiety. CBT helps change anxious thought patterns, while ACT teaches acceptance of anxious feelings while pursuing valued actions. A qualified therapist can recommend the best approach for your specific anxiety type.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3 class="faq-question">Is there free therapy in Ontario?</h3>
-                        <div class="faq-answer">
-                            <p><strong>Yes, free therapy options in Ontario include:</strong> the Ontario Structured Psychotherapy (OSP) program through family doctors, BounceBack Ontario for telephone CBT coaching, and community mental health centers. Most free services have waitlists of 2-6 months. Private therapy with insurance coverage offers faster access with typical $500-$3,000 annual benefits.</p>
-                        </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Which type of therapy is best for anxiety?</h3>
+                        <p class="text-gray-600 text-sm"><strong>Cognitive Behavioural Therapy (CBT) and Acceptance and Commitment Therapy (ACT)</strong> are the most effective evidence-based therapies for anxiety. CBT helps change anxious thought patterns, while ACT teaches acceptance of anxious feelings while pursuing valued actions.</p>
                     </div>
                 </div>
             </div>
@@ -950,33 +1004,33 @@
         </section>
 
         <!-- Related Challenges Section -->
-        <section class="section">
-            <div class="container">
-                <h3 class="section-title" style="text-align: center;">Related Challenges We Help With</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                    <a href="/high-functioning-anxiety-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">High-Functioning Anxiety</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Success on the outside, exhaustion on the inside</p>
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h3 class="font-display text-2xl md:text-3xl font-medium text-navy text-center mb-8">Related Challenges We Help With</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <a href="/high-functioning-anxiety-ontario.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">High-Functioning Anxiety</strong>
+                        <p class="text-gray-600 text-xs">Success outside, exhaustion inside</p>
                     </a>
-                    <a href="/imposter-syndrome-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Imposter Syndrome</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Feeling like a fraud despite evidence of success</p>
+                    <a href="/imposter-syndrome-therapy.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">Imposter Syndrome</strong>
+                        <p class="text-gray-600 text-xs">Feeling like a fraud despite success</p>
                     </a>
-                    <a href="/perfectionism-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Perfectionism</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Nothing ever feels good enough</p>
+                    <a href="/perfectionism-therapy.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">Perfectionism</strong>
+                        <p class="text-gray-600 text-xs">Nothing ever feels good enough</p>
                     </a>
-                    <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
+                    <a href="/rumination-therapy.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">Racing Thoughts</strong>
+                        <p class="text-gray-600 text-xs">Can't turn your brain off</p>
                     </a>
-                    <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant choices</p>
+                    <a href="/decision-fatigue-therapy.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">Decision Fatigue</strong>
+                        <p class="text-gray-600 text-xs">Exhausted from constant choices</p>
                     </a>
-                    <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Founder Burnout</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
+                    <a href="/founder-burnout-therapy.html" class="bg-cream p-5 rounded-xl hover:shadow-md transition-shadow border border-sand/30 text-center">
+                        <strong class="text-navy block mb-2">Founder Burnout</strong>
+                        <p class="text-gray-600 text-xs">Identity fused with company</p>
                     </a>
                 </div>
             </div>
@@ -984,118 +1038,77 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+    <footer class="bg-navy py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
                 <!-- Column 1: About & Contact -->
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #4a7c59; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                <div>
+                    <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
+                    <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p class="text-white font-semibold text-sm">CRPO #10979 | MPsy</p>
+                    <p class="mt-4"><strong class="text-white text-sm">Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
                 </div>
 
-                <!-- Column 2: Therapy Services (Expanded) -->
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #4a7c59;">All Services →</a></li>
+                <!-- Column 2: Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html" class="text-white/70 hover:text-white">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/70 hover:text-white">Workplace Stress</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-white/70 hover:text-white">Virtual Therapy</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Ontario Service Areas (Expanded) -->
-                <div class="footer-section">
-                    <h4>Ontario Service Areas</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #4a7c59;">All Ontario →</a></li>
+                <!-- Column 3: Locations -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Locations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html" class="text-white/70 hover:text-white">Ottawa</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
+                        <li><a href="/therapy-london-ontario.html" class="text-white/70 hover:text-white">London</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 4: Specialized Support (Expanded) -->
-                <div class="footer-section">
-                    <h4>Specialized Support</h4>
-                    <ul>
-                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
-                        <li><a href="/mens-therapy-hamilton.html">Men's Therapy Hamilton</a></li>
-                        <li><a href="/online-therapy-ottawa.html">Online Therapy Ottawa</a></li>
-                        <li><a href="/online-therapy-mississauga.html">Online Therapy Mississauga</a></li>
+                <!-- Column 4: Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/faq.html" class="text-white/70 hover:text-white">FAQ</a></li>
+                        <li><a href="/therapy-costs-ontario.html" class="text-white/70 hover:text-white">Costs</a></li>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/70 hover:text-white">About Jesse</a></li>
+                        <li><a href="/crisis-resources.html" class="text-white/70 hover:text-white">Crisis Resources</a></li>
                     </ul>
-                </div>
-
-                <!-- Column 5: Resources & Guides -->
-                <div class="footer-section">
-                    <h4>Resources & Guides</h4>
-                    <ul>
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
-                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 6: Professional Info -->
-                <div class="footer-section">
-                    <h4>Professional Standards</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                    </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Member: CRPO, OAMHP<br>Serving Ontario since 2022</p>
                 </div>
             </div>
 
-            <!-- Crisis Resources (CRPO Compliance) -->
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+            <!-- Crisis Resources -->
+            <div class="border-t border-white/10 pt-8 mt-12 text-center">
+                <p class="text-white/80 text-sm mb-4">
+                    <strong class="text-white">In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+                    <a href="tel:18665312600" class="text-sage-light hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
-                Ontario, Canada<br>
-                <strong>Last Updated:</strong> December 23, 2025</p>
+                <p class="text-white/60 text-xs">&copy; 2025 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada</p>
             </div>
         </div>
     </footer>
-    <!-- Mobile Sticky CTA Bar (v4.0 - 20% conversion boost) -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
+        <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
+        <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
     </div>
 
-    <!-- Floating CTA for Desktop (v4.0) -->
-    <a href="https://nextsteptherapy.janeapp.com/" class="floating-cta">
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-6 right-6 bg-navy text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-navy-light transition-colors items-center gap-2 z-40">
         📅 Schedule 15-Min Call
     </a>
 <script src="/js/security-check.js"></script>
