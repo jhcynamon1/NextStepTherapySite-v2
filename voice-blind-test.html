@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Blind Test</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        header {
+            background: #1a2332;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+
+        .instructions {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .instructions h3 { margin-bottom: 1rem; color: #1565c0; }
+        .instructions ul { margin-left: 1.5rem; }
+        .instructions li { margin-bottom: 0.5rem; }
+
+        .topic-section {
+            margin-bottom: 3rem;
+        }
+        .topic-header {
+            background: #1a2332;
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        @media (max-width: 900px) {
+            .options-grid { grid-template-columns: 1fr; }
+        }
+
+        .option-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .option-header {
+            background: #f5f5f5;
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .option-content {
+            padding: 1.5rem;
+        }
+        .option-content h4 {
+            color: #1a2332;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .option-content p { margin-bottom: 1rem; }
+        .option-content .cta {
+            display: inline-block;
+            background: #1a2332;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+        .option-content .meta {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 1.5rem;
+            color: #999;
+        }
+
+        footer {
+            background: #1a2332;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        footer p { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voice Blind Test</h1>
+        <p>Three options (A, B, C) across three topics. Tell me which feels most like you.</p>
+    </header>
+
+    <div class="container">
+
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ul>
+                <li>Read each option carefully across all 3 topics</li>
+                <li>Don't try to guess which "blend" is which - just react honestly</li>
+                <li>For each topic, note which option(s) feel most like YOU</li>
+                <li>Also note anything that feels "off" or doesn't land</li>
+                <li>Be specific: "Option B feels too salesy" or "Option A sounds like me"</li>
+            </ul>
+        </div>
+
+        <!-- TOPIC 1: HERO SECTION -->
+        <div class="topic-section">
+            <div class="topic-header">Topic 1: Hero Section (First Impression)</div>
+            <div class="options-grid">
+
+                <!-- Option A (80/20 - Most Authentic) -->
+                <div class="option-card">
+                    <div class="option-header">Option A</div>
+                    <div class="option-content">
+                        <h4>Anxiety Therapy in Ontario</h4>
+                        <p>I don't know if this will resonate, but here's what I've noticed: the people who reach out aren't broken. They're usually some of the most thoughtful, capable people around. They just can't turn off their brain.</p>
+                        <p>I work with people dealing with anxiety, burnout, feeling disconnected. I can't promise I have all the answers. But I can walk through the unknown with you. We'll figure it out together. Right?</p>
+                        <p>If any of this lands, let's talk.</p>
+                        <a class="cta" href="#">Let's talk</a>
+                    </div>
+                </div>
+
+                <!-- Option B (60/40 - Most Structured) -->
+                <div class="option-card">
+                    <div class="option-header">Option B</div>
+                    <div class="option-content">
+                        <h4>Anxiety Therapy in Ontario</h4>
+                        <p>Racing thoughts, constant worry, panic attacks - if anxiety has been running the show, you're not alone. I work with professionals across Ontario who are tired of white-knuckling through every day.</p>
+                        <p>Using approaches that research supports, we'll explore what's in your control and what's not. I can help you build a different relationship with anxiety - one that doesn't run your life.</p>
+                        <p class="meta">CRPO #10979 | $175/session | Same-week availability | Insurance receipts provided</p>
+                        <a class="cta" href="#">Book Your Free Consultation</a>
+                    </div>
+                </div>
+
+                <!-- Option C (70/30 - Balanced) -->
+                <div class="option-card">
+                    <div class="option-header">Option C</div>
+                    <div class="option-content">
+                        <h4>Anxiety Therapy in Ontario</h4>
+                        <p>Racing thoughts keeping you up at night? That Sunday evening dread that won't quit? I work with people who are tired of white-knuckling through every day.</p>
+                        <p>I can't promise to make anxiety disappear - honestly, I don't think anyone can. But I can walk through the unknown with you. We'll figure out what's in your control and what's not. That's often where it starts.</p>
+                        <p class="meta">CRPO #10979 | $175/session | Same-week available</p>
+                        <a class="cta" href="#">Ready when you are</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider">---</div>
+
+        <!-- TOPIC 2: HOW I WORK -->
+        <div class="topic-section">
+            <div class="topic-header">Topic 2: How I Work Section</div>
+            <div class="options-grid">
+
+                <!-- Option A (80/20) -->
+                <div class="option-card">
+                    <div class="option-header">Option A</div>
+                    <div class="option-content">
+                        <h4>How I Work</h4>
+                        <p>I don't have a step-by-step program. I don't give homework. What I do is try to understand where you're coming from - what anxiety means to YOU, not what the textbooks say.</p>
+                        <p>I want to be WITH you as you figure things out. Not ahead of you with all the answers. I'm not sure I have all the answers anyway.</p>
+                        <p>There's this tension people feel between who they think they should be and who they actually want to be. That "should vs. want" thing? That's often where a lot of the pain lives. We'll explore that together.</p>
+                        <p>Does any of that land?</p>
+                    </div>
+                </div>
+
+                <!-- Option B (60/40) -->
+                <div class="option-card">
+                    <div class="option-header">Option B</div>
+                    <div class="option-content">
+                        <h4>How I Work</h4>
+                        <p>I take a collaborative approach to therapy. Each session is tailored to your specific needs - no cookie-cutter programs or generic worksheets.</p>
+                        <p>We'll explore the gap between where you are and where you want to be. I use approaches that research supports, while prioritizing the therapeutic relationship - because that's what research says matters most.</p>
+                        <p>My goal is to help you develop awareness of your patterns and make sense of what's happening. From there, we figure out what's in your control.</p>
+                        <p>Most clients meet weekly or biweekly, depending on their needs and schedule.</p>
+                    </div>
+                </div>
+
+                <!-- Option C (70/30) -->
+                <div class="option-card">
+                    <div class="option-header">Option C</div>
+                    <div class="option-content">
+                        <h4>How I Work</h4>
+                        <p>I don't have a step-by-step program. What I do is start by understanding where you're coming from - what anxiety means to YOU specifically, not what the textbooks say.</p>
+                        <p>From there, we figure out what's in your control and what's not. We explore the gap between who you think you should be and who you actually want to be. That "should vs. want" tension? That's often where a lot of the pain lives.</p>
+                        <p>Research says the therapeutic relationship matters most - and that's been my experience too. Right?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider">---</div>
+
+        <!-- TOPIC 3: CTA / BOOKING SECTION -->
+        <div class="topic-section">
+            <div class="topic-header">Topic 3: CTA / Booking Section</div>
+            <div class="options-grid">
+
+                <!-- Option A (80/20) -->
+                <div class="option-card">
+                    <div class="option-header">Option A</div>
+                    <div class="option-content">
+                        <h4>If any of this lands...</h4>
+                        <p>Let's talk. No sales pitch, no pressure, just a conversation to see if we connect. That's what matters most anyway.</p>
+                        <p>I can't promise I'll be the right fit - but we'll figure that out together.</p>
+                        <a class="cta" href="#">Let's talk</a>
+                    </div>
+                </div>
+
+                <!-- Option B (60/40) -->
+                <div class="option-card">
+                    <div class="option-header">Option B</div>
+                    <div class="option-content">
+                        <h4>Ready to Address Your Anxiety?</h4>
+                        <p>Schedule a free 15-minute consultation to discuss how therapy can help. We'll talk about what you're dealing with and whether my approach might be a good fit.</p>
+                        <p>Same-week appointments available. Insurance receipts provided for all Ontario providers.</p>
+                        <a class="cta" href="#">Book Your Free Consultation</a>
+                        <a class="cta" href="#">Call (416) 306-2157</a>
+                    </div>
+                </div>
+
+                <!-- Option C (70/30) -->
+                <div class="option-card">
+                    <div class="option-header">Option C</div>
+                    <div class="option-content">
+                        <h4>Curious if this might help?</h4>
+                        <p>Book a free 15-minute call. We'll figure out if it's a good fit. No pressure - just a conversation.</p>
+                        <p class="meta">Same-week appointments | Insurance receipts provided</p>
+                        <a class="cta" href="#">Ready when you are</a>
+                        <a class="cta" href="#">(416) 306-2157</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>Give honest feedback for each topic:</strong></p>
+        <p>Which option sounds most like you? Which feels off? Be specific.</p>
+    </footer>
+</body>
+</html>

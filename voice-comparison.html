@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Blend Comparison</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        header {
+            background: #1a2332;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.8; max-width: 600px; margin: 0 auto; }
+        .research-box {
+            background: #fffde7;
+            border: 2px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        .research-box h3 { margin-bottom: 1rem; color: #1a2332; }
+        .research-box ul { margin-left: 1.5rem; }
+        .research-box li { margin-bottom: 0.5rem; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+
+        .blend-section {
+            margin-bottom: 3rem;
+            border: 2px solid #1a2332;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .blend-header {
+            background: #1a2332;
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .blend-header h2 { font-size: 1.2rem; }
+        .blend-tag {
+            background: white;
+            color: #1a2332;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .blend-tag.recommended {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .copy-block {
+            padding: 1.5rem;
+            background: white;
+        }
+        .copy-block h3 {
+            color: #1a2332;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .copy-block p { margin-bottom: 1rem; }
+        .copy-block .cta {
+            display: inline-block;
+            background: #1a2332;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            text-decoration: none;
+        }
+
+        .analysis {
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        .analysis h4 {
+            color: #1a2332;
+            margin-bottom: 0.5rem;
+        }
+        .pros { color: #2e7d32; }
+        .cons { color: #c62828; }
+        .analysis ul { margin-left: 1.5rem; margin-bottom: 0.5rem; }
+
+        .verdict {
+            background: #e8f5e9;
+            border: 2px solid #4CAF50;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .verdict h3 { color: #2e7d32; margin-bottom: 1rem; }
+
+        footer {
+            background: #1a2332;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .section-divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 1.5rem;
+            color: #1a2332;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voice Blend Comparison</h1>
+        <p>Three blend ratios for the same hero section. Research says emotional/authentic converts better, but how much is right for therapy?</p>
+    </header>
+
+    <div class="container">
+
+        <div class="research-box">
+            <h3>What Research Says</h3>
+            <ul>
+                <li><strong>Emotional copy converts 70% better</strong> than purely logical</li>
+                <li><strong>65% of consumers</strong> say tone of voice builds emotional connection</li>
+                <li><strong>Feelings are 1.5x more impactful</strong> than thinking in decisions</li>
+                <li><strong>Therapy-specific:</strong> Trust > conversion tactics. Authenticity is everything.</li>
+            </ul>
+        </div>
+
+        <!-- 60/40 BLEND -->
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>60% Voice / 40% SEO-Conversion</h2>
+                <span class="blend-tag">More Structured</span>
+            </div>
+            <div class="copy-block">
+                <h3>Anxiety Therapy in Ontario</h3>
+                <p>Racing thoughts, constant worry, panic attacks—if anxiety has been running the show, you're not alone. I work with professionals across Ontario who are tired of white-knuckling through every day.</p>
+                <p>Using evidence-based approaches like ACT, we'll explore what's in your control and what's not. I can't promise to make anxiety disappear, but I can help you build a different relationship with it.</p>
+                <p><strong>CRPO #10979 | $175/session | Same-week availability | Insurance receipts provided</strong></p>
+                <a class="cta" href="#">Book Your Free Consultation</a>
+                <a class="cta" href="#">Call (416) 306-2157</a>
+            </div>
+            <div class="analysis">
+                <h4>Analysis</h4>
+                <p class="pros"><strong>Pros:</strong> Clear value props, trust signals prominent, strong CTA</p>
+                <p class="cons"><strong>Cons:</strong> "Evidence-based approaches" feels clinical, "build a different relationship" is outcome-ish, CTA is standard marketing</p>
+                <p><strong>Best for:</strong> Long-tail SEO pages, city pages where search intent is transactional</p>
+            </div>
+        </div>
+
+        <!-- 70/30 BLEND -->
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>70% Voice / 30% SEO-Conversion</h2>
+                <span class="blend-tag recommended">Recommended</span>
+            </div>
+            <div class="copy-block">
+                <h3>Anxiety Therapy in Ontario</h3>
+                <p>Racing thoughts keeping you up at night? That Sunday evening dread that won't quit? I work with people who are tired of white-knuckling through every day.</p>
+                <p>I can't promise to make anxiety disappear—honestly, I don't think anyone can. But I can walk through the unknown with you. We'll figure out what's in your control and what's not. That's often where it starts.</p>
+                <p style="font-size: 0.9rem; color: #666;">CRPO #10979 | $175/session | Same-week available</p>
+                <a class="cta" href="#">Ready when you are</a>
+                <a class="cta" href="#">Call (416) 306-2157</a>
+            </div>
+            <div class="analysis">
+                <h4>Analysis</h4>
+                <p class="pros"><strong>Pros:</strong> Opens with relatable experience, vulnerability ("I can't promise"), signature phrase ("walk through unknown"), invitation CTA, trust signals present but softer</p>
+                <p class="cons"><strong>Cons:</strong> Less explicit about method (ACT), fewer conversion triggers</p>
+                <p><strong>Best for:</strong> Main service pages, homepage—where trust-building matters most</p>
+            </div>
+        </div>
+
+        <!-- 80/20 BLEND -->
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>80% Voice / 20% SEO-Conversion</h2>
+                <span class="blend-tag">Most Authentic</span>
+            </div>
+            <div class="copy-block">
+                <h3>Anxiety Therapy in Ontario</h3>
+                <p>I don't know if this will resonate, but here's what I've noticed: the people who reach out to me aren't broken. They're usually some of the most capable, thoughtful people around. They just can't shut off their brain.</p>
+                <p>I work with people dealing with anxiety, burnout, feeling disconnected from themselves. I can't promise I have all the answers—honestly, I don't think anyone does. But I can walk through the unknown with you. We'll figure it out together. Right?</p>
+                <p>If any of this lands, let's talk. No pressure.</p>
+                <a class="cta" href="#">Let's talk</a>
+                <a class="cta" href="#">(416) 306-2157</a>
+            </div>
+            <div class="analysis">
+                <h4>Analysis</h4>
+                <p class="pros"><strong>Pros:</strong> Most authentic Jesse voice, opens with disclaimer, check-in ("Right?"), "no pressure" CTA, feels like a real person</p>
+                <p class="cons"><strong>Cons:</strong> No trust signals (CRPO, pricing), no keywords in opening, may not rank as well, softest CTA</p>
+                <p><strong>Best for:</strong> About page, blog posts, email sequences—where they already trust you</p>
+            </div>
+        </div>
+
+        <div class="verdict">
+            <h3>My Recommendation</h3>
+            <p><strong>Use different blends for different pages:</strong></p>
+            <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                <li><strong>Homepage hero, main service pages:</strong> 70/30 (trust + conversion)</li>
+                <li><strong>About page, How I Work:</strong> 80/20 (maximum authenticity)</li>
+                <li><strong>City/location pages, long-tail:</strong> 60/40 (SEO priority)</li>
+                <li><strong>Blog, email, social:</strong> 80/20 or higher (pure voice)</li>
+            </ul>
+            <p style="margin-top: 1rem;">The 70/30 is the sweet spot for most therapy pages—authentic enough to build trust, structured enough to convert and rank.</p>
+        </div>
+
+        <div class="section-divider">— More Examples Below —</div>
+
+        <!-- ABOUT SECTION COMPARISON -->
+        <h2 style="margin-bottom: 1rem;">About Section Comparison</h2>
+
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>60/40 - About</h2>
+                <span class="blend-tag">More Structured</span>
+            </div>
+            <div class="copy-block">
+                <h3>Meet Jesse Cynamon, RP</h3>
+                <p>I'm a Registered Psychotherapist (CRPO #10979) providing virtual therapy across Ontario. I focus on helping professionals manage anxiety, burnout, and feeling disconnected using Acceptance and Commitment Therapy (ACT).</p>
+                <p>My approach combines evidence-based techniques with genuine human connection. I believe the therapeutic relationship is the foundation of meaningful change—research supports this too.</p>
+            </div>
+        </div>
+
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>70/30 - About</h2>
+                <span class="blend-tag recommended">Recommended</span>
+            </div>
+            <div class="copy-block">
+                <h3>About Working with Me</h3>
+                <p>I'm Jesse, a Registered Psychotherapist (CRPO #10979). I work with people dealing with anxiety, burnout, feeling disconnected from themselves.</p>
+                <p>I can't promise I have all the answers—honestly, I don't think anyone does. But I've been trained in approaches that research supports, and I understand what it feels like to feel stuck.</p>
+                <p>I'm not the therapist who gives you worksheets and homework. I want to be WITH you as you figure things out—not ahead of you with a map. Does that make sense?</p>
+            </div>
+        </div>
+
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>80/20 - About</h2>
+                <span class="blend-tag">Most Authentic</span>
+            </div>
+            <div class="copy-block">
+                <h3>About Me</h3>
+                <p>I'm Jesse. I work with people dealing with anxiety, burnout, feeling disconnected from themselves. I'm a Registered Psychotherapist, if that matters to you—CRPO #10979.</p>
+                <p>I don't have a step-by-step program. I don't give homework. What I do is try to understand where you're coming from—what anxiety means to YOU, not what the textbooks say.</p>
+                <p>I want to be WITH you as you figure things out. Not ahead of you with all the answers. I'm not sure I have all the answers anyway. But I can walk through the unknown with you. That's what I've got.</p>
+                <p>Does any of that land?</p>
+            </div>
+        </div>
+
+        <div class="section-divider">— CTA Comparison —</div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem;">
+            <div class="blend-section" style="margin-bottom: 0;">
+                <div class="blend-header">
+                    <h2>60/40 CTA</h2>
+                </div>
+                <div class="copy-block" style="text-align: center;">
+                    <h3>Ready to Address Your Anxiety?</h3>
+                    <p>Schedule a free 15-minute consultation to discuss how therapy can help.</p>
+                    <a class="cta" href="#">Book Your Consultation</a>
+                </div>
+            </div>
+            <div class="blend-section" style="margin-bottom: 0;">
+                <div class="blend-header">
+                    <h2>70/30 CTA</h2>
+                    <span class="blend-tag recommended" style="font-size: 0.7rem;">Rec</span>
+                </div>
+                <div class="copy-block" style="text-align: center;">
+                    <h3>Curious if this might help?</h3>
+                    <p>Book a free 15-minute call. We'll figure out if it's a good fit. No pressure.</p>
+                    <a class="cta" href="#">Ready when you are</a>
+                </div>
+            </div>
+            <div class="blend-section" style="margin-bottom: 0;">
+                <div class="blend-header">
+                    <h2>80/20 CTA</h2>
+                </div>
+                <div class="copy-block" style="text-align: center;">
+                    <h3>If any of this lands...</h3>
+                    <p>Let's talk. No sales pitch, just a conversation to see if we connect.</p>
+                    <a class="cta" href="#">Let's talk</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider">— FAQ Answer Comparison —</div>
+
+        <div class="blend-section">
+            <div class="blend-header">
+                <h2>FAQ: How long does therapy take?</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+                <div class="copy-block" style="border-right: 1px solid #ddd;">
+                    <h4 style="color: #666; margin-bottom: 0.5rem;">60/40</h4>
+                    <p>Most clients notice improvements within 8-12 weeks of consistent sessions. Duration varies based on your specific situation and goals. Some see initial relief within 3-4 sessions, while others benefit from longer-term support.</p>
+                </div>
+                <div class="copy-block" style="border-right: 1px solid #ddd;">
+                    <h4 style="color: #4CAF50; margin-bottom: 0.5rem;">70/30 (Rec)</h4>
+                    <p>Honestly, I can't give you a number that would be true for everyone. Some people start feeling different within a few weeks; others need more time. What I've noticed is that the timeline matters less than whether we're actually connecting. That awareness piece? That's often where change starts.</p>
+                </div>
+                <div class="copy-block">
+                    <h4 style="color: #666; margin-bottom: 0.5rem;">80/20</h4>
+                    <p>I don't know. That's the honest answer. Some people feel different quickly. Others need more time. I've learned not to predict it—what matters is whether we're making sense of things together. Does that make sense?</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p><strong>Tell me what resonates and what doesn't</strong></p>
+        <p>We can adjust the blend based on your feedback</p>
+    </footer>
+</body>
+</html>

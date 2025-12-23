@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Step Therapy | Virtual Psychotherapy Ontario</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Playfair Display + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2c3d',
+                        sage: '#f1f4f1',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #fcfcf9;
+            color: #1a2c3d;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img src="images/nst-logo-icon.png" alt="Next Step Therapy" class="w-10 h-10" onerror="this.outerHTML='<div class=\'w-10 h-10 rounded-full border-2 border-navy flex items-center justify-center\'><span class=\'text-sm font-bold text-navy\'>NT</span></div>'">
+                <span class="text-lg font-bold text-navy tracking-tight">Next Step Therapy</span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <span class="text-[10px] font-bold text-navy/60 px-3 py-1.5 bg-navy/5 rounded">CRPO #10979</span>
+                <a href="#approach" class="text-sm font-medium text-navy hover:text-navy/60 transition-colors uppercase tracking-widest">Approach</a>
+                <a href="#services" class="text-sm font-medium text-navy hover:text-navy/60 transition-colors uppercase tracking-widest">Services</a>
+                <a href="#contact" class="text-sm font-medium text-navy hover:text-navy/60 transition-colors uppercase tracking-widest">Contact</a>
+                <div class="flex items-center gap-4 ml-4">
+                    <a href="tel:4163062157" class="text-sm font-bold text-navy hidden lg:block">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded text-sm font-bold hover:bg-navy/90 transition-all shadow-md">
+                        Schedule 15-Min Call
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden text-navy">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl py-8 px-6 flex flex-col gap-6">
+            <a href="#approach" class="text-lg font-serif font-bold text-navy">Approach</a>
+            <a href="#services" class="text-lg font-serif font-bold text-navy">Services</a>
+            <a href="#contact" class="text-lg font-serif font-bold text-navy">Contact</a>
+            <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white py-4 rounded-lg font-bold text-center">Schedule 15-Min Call</a>
+            <a href="tel:4163062157" class="text-center font-bold text-navy py-2 flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-5 h-5"></i> (416) 306-2157
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <!-- Left Column - Hero Text -->
+                <div class="lg:col-span-7">
+                    <span class="text-[10px] font-bold text-navy/40 uppercase tracking-[0.3em] mb-4 block">Virtual Psychotherapy • Ontario</span>
+                    <h1 class="text-5xl md:text-7xl font-serif text-navy leading-[1.1] mb-8">
+                        You're Handling Everything on the <span class="italic">Outside</span>. But Something Feels Off.
+                    </h1>
+                    <p class="text-lg md:text-xl text-navy/70 mb-10 leading-relaxed max-w-xl">
+                        Maybe it's the Sunday anxiety that starts on Friday. The way your chest tightens before meetings. Lying awake replaying conversations. If you're an Ontario professional who looks successful on paper but feels like you're barely keeping it together—you're not alone.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                        <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-lg font-bold shadow-xl hover:scale-[1.02] transition-all flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5"></i> Schedule 15-Min Call
+                        </a>
+                        <div class="flex items-center gap-4 text-sm font-bold text-navy/60 px-4 py-4">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-navy/40"></i> Same-Week Availability
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Therapist Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <div class="p-8 md:p-10">
+                            <div class="flex items-center gap-6 mb-8">
+                                <img 
+                                    src="images/psychotherapist-jesse-cynamon-ontario.png" 
+                                    alt="Jesse Cynamon, Registered Psychotherapist" 
+                                    class="w-24 h-24 rounded-2xl object-cover shadow-lg border-2 border-white"
+                                    onerror="this.src='https://picsum.photos/id/64/200/200'"
+                                >
+                                <div>
+                                    <h3 class="text-2xl font-serif text-navy mb-1">Jesse Cynamon, RP</h3>
+                                    <p class="text-xs font-bold text-navy/40 uppercase tracking-widest">Your Therapist • CRPO #10979</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-navy/80 leading-relaxed mb-8">
+                                I work with professionals and students using an approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). We identify patterns driving your anxiety and build practical skills for managing high-stakes moments.
+                            </p>
+                            <div class="grid grid-cols-2 gap-3 mb-8">
+                                <div class="bg-sage text-[10px] font-bold text-navy/70 py-2.5 px-3 rounded uppercase tracking-wider text-center">ACT Training</div>
+                                <div class="bg-sage text-[10px] font-bold text-navy/70 py-2.5 px-3 rounded uppercase tracking-wider text-center">CBT Training</div>
+                                <div class="bg-sage text-[10px] font-bold text-navy/70 py-2.5 px-3 rounded uppercase tracking-wider text-center">MPsych (Master)</div>
+                                <div class="bg-sage text-[10px] font-bold text-navy/70 py-2.5 px-3 rounded uppercase tracking-wider text-center">OAMHP Member</div>
+                            </div>
+                            <a href="tel:4163062157" class="flex items-center justify-center gap-3 w-full py-4 rounded-xl border-2 border-navy/10 font-bold text-navy hover:bg-navy/5 transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5"></i> (416) 306-2157
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Tool / Quiz Section -->
+    <section class="py-24 bg-sage/30 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6">Is Therapy Right for You?</h2>
+            <p class="text-navy/60 max-w-xl mx-auto">A thoughtful 5-minute self-assessment to help you understand your current mental health landscape. Completely private—no email required.</p>
+        </div>
+        
+        <!-- Quiz Widget -->
+        <div id="quizContainer" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-2xl mx-auto border border-navy/5">
+            <!-- Quiz Header -->
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-[10px] font-bold text-navy/40 uppercase tracking-[0.2em]">Self-Assessment</span>
+                <span id="quizProgress" class="text-xs font-bold text-navy/60">Question 1 of 3</span>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="h-1 bg-gray-100 rounded-full mb-12 overflow-hidden">
+                <div id="quizProgressBar" class="h-full bg-navy transition-all duration-500" style="width: 33%"></div>
+            </div>
+
+            <!-- Question -->
+            <h3 id="quizQuestion" class="text-2xl md:text-3xl font-serif text-navy mb-10 leading-snug">
+                How often do you feel overwhelmed by daily tasks or responsibilities?
+            </h3>
+
+            <!-- Options -->
+            <div id="quizOptions" class="space-y-4 mb-10">
+                <button onclick="nextQuestion()" class="w-full text-left p-5 rounded-xl border border-gray-200 hover:border-navy hover:bg-navy/5 transition-all group flex justify-between items-center">
+                    <span class="font-medium text-navy/80 group-hover:text-navy">Rarely or never</span>
+                    <div class="w-5 h-5 rounded-full border border-gray-300 group-hover:border-navy transition-colors"></div>
+                </button>
+                <button onclick="nextQuestion()" class="w-full text-left p-5 rounded-xl border border-gray-200 hover:border-navy hover:bg-navy/5 transition-all group flex justify-between items-center">
+                    <span class="font-medium text-navy/80 group-hover:text-navy">Sometimes</span>
+                    <div class="w-5 h-5 rounded-full border border-gray-300 group-hover:border-navy transition-colors"></div>
+                </button>
+                <button onclick="nextQuestion()" class="w-full text-left p-5 rounded-xl border border-gray-200 hover:border-navy hover:bg-navy/5 transition-all group flex justify-between items-center">
+                    <span class="font-medium text-navy/80 group-hover:text-navy">Often</span>
+                    <div class="w-5 h-5 rounded-full border border-gray-300 group-hover:border-navy transition-colors"></div>
+                </button>
+                <button onclick="nextQuestion()" class="w-full text-left p-5 rounded-xl border border-gray-200 hover:border-navy hover:bg-navy/5 transition-all group flex justify-between items-center">
+                    <span class="font-medium text-navy/80 group-hover:text-navy">Most of the time</span>
+                    <div class="w-5 h-5 rounded-full border border-gray-300 group-hover:border-navy transition-colors"></div>
+                </button>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="bg-sage p-4 rounded-lg flex gap-3 items-start">
+                <i data-lucide="shield-check" class="w-5 h-5 text-navy/60 shrink-0 mt-0.5"></i>
+                <p class="text-xs text-navy/70 leading-relaxed italic">
+                    <strong>Important:</strong> This assessment is for informational purposes only. If you're experiencing a mental health crisis, please contact <strong>988</strong> or emergency services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptom Checker / "Does This Sound Familiar?" -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[10px] font-bold text-navy/40 uppercase tracking-[0.3em] mb-4 block">Recognition</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6">Does This Sound Familiar?</h2>
+                <p class="text-navy/60 max-w-xl mx-auto">You're not alone in what you're experiencing. Many clients describe similar patterns before starting therapy.</p>
+            </div>
+            
+            <!-- Symptom Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">The Sunday Night Feeling</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Your chest gets tight thinking about Monday. That sense of dread that won't go away."</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">The 3am Mind Race</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Lying awake replaying conversations, worrying about things you can't control right now."</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">Nothing Feels Enjoyable</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Things you used to love don't bring joy anymore. Everything feels flat or grey."</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">Snapping at People You Love</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Small frustrations trigger big reactions. You're apologizing more than usual."</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">The Same Patterns Repeating</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Same relationship issues with different people. Same work conflicts at every job."</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="p-10 rounded-2xl border-l-4 border-navy/10 bg-white shadow-sm hover:border-navy transition-all group">
+                    <h3 class="text-xl font-serif text-navy mb-4 group-hover:text-navy/70">Decision Paralysis</h3>
+                    <p class="text-sm text-navy/60 leading-relaxed italic">"Even simple choices feel overwhelming. Analysis paralysis on basic decisions."</p>
+                </div>
+            </div>
+            
+            <!-- CTA Banner -->
+            <div class="mt-16 bg-navy text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                <p class="text-xl font-serif max-w-lg">If 3 or more of these resonate, therapy can help you develop skills to manage these patterns.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#quiz" class="bg-white text-navy px-8 py-4 rounded-lg font-bold hover:bg-sage transition-colors text-center">Take the Assessment</a>
+                    <a href="/blog" class="border border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors text-center">Free Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="approach" class="py-24 bg-navy text-white px-6 overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em] mb-4 block">Philosophy</span>
+                <h2 class="text-5xl md:text-6xl font-serif mb-10 leading-tight">Evidence-Based Therapy for Real Life.</h2>
+                <p class="text-xl text-white/70 mb-12 leading-relaxed">
+                    I work with professionals using a structured approach grounded in <span class="text-white font-bold">ACT</span> and <span class="text-white font-bold">CBT</span>. We don't just talk—we build practical skills for managing moments that matter.
+                </p>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-serif mb-2">Evidence-Based Methods</h4>
+                            <p class="text-sm text-white/60 leading-relaxed">Proven techniques that give you tools to handle panic and overwhelm in 60 seconds.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-serif mb-2">Collaborative Process</h4>
+                            <p class="text-sm text-white/60 leading-relaxed">You're the expert on your life. I'm the guide with the roadmap. We figure this out together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="bg-white text-navy p-10 md:p-16 rounded-3xl shadow-2xl relative z-10">
+                    <h3 class="text-3xl font-serif mb-6">Ready to experience evidence-based therapy?</h3>
+                    <p class="text-navy/60 mb-10 italic">"I'm fine" is a great mask, but it's exhausting to wear. Let's build something more sustainable.</p>
+                    <div class="space-y-4">
+                        <a href="https://nextsteptherapy.janeapp.com/" class="block w-full bg-navy text-white py-5 rounded-xl font-bold text-lg hover:shadow-xl hover:scale-[1.01] transition-all text-center">Schedule 15-Min Call</a>
+                        <a href="tel:4163062157" class="flex items-center justify-center gap-2 w-full py-4 text-navy/60 font-bold hover:text-navy transition-colors uppercase tracking-widest text-xs">
+                            Or call (416) 306-2157
+                        </a>
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-sage/20 rounded-full blur-2xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-[10px] font-bold text-navy/40 uppercase tracking-[0.3em] mb-4 block">Areas of Focus</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6">Psychotherapy Services</h2>
+                <p class="text-navy/60 max-w-2xl mx-auto">Whether it's performance anxiety, work stress, or burnout—you deserve professional support that actually helps. Virtual throughout Ontario.</p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="wind" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Performance Anxiety & Stress Management</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">When your mind won't stop racing at 3am or before big presentations. Performance anxiety support with practical tools.</p>
+                    <a href="/anxiety-therapy-ontario" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="mountain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Men's Mental Health</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">A space where "I'm fine" isn't the only option. Direct conversations about stress and relationships. Practical strategies.</p>
+                    <a href="/mens-mental-health" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Work Stress & Burnout</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">Professional work stress support beyond "just take a vacation". Burnout support for remote workers.</p>
+                    <a href="/burnout-therapy-toronto" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="cloud" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Life Transitions & Change</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">When everything feels like it's shifting. Finding your footing when life feels unrecognizable.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="sun" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Depression & Mood Support</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">When nothing feels quite right anymore. More than "just think positive". Reconnecting with what matters to you.</p>
+                    <a href="/depression-therapy-ontario" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-sage rounded-xl flex items-center justify-center text-navy mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-navy mb-4">Relationship & Communication</h3>
+                    <p class="text-sm text-navy/70 leading-relaxed mb-6">When arguments keep happening. Understanding your patterns and building on what's already working.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-navy uppercase tracking-widest hover:gap-4 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section - "How We'll Work Together" -->
+    <section class="py-24 bg-sage/30 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-20">
+                <!-- Left Column -->
+                <div class="lg:col-span-5">
+                    <span class="text-[10px] font-bold text-navy/40 uppercase tracking-[0.3em] mb-4 block">The Journey</span>
+                    <h2 class="text-5xl font-serif text-navy mb-8 leading-tight">How We'll Work Together</h2>
+                    <p class="text-navy/60 mb-10 leading-relaxed">
+                        A straightforward process that respects your time and focuses on real progress. No complex onboarding—just honest, effective therapy.
+                    </p>
+                    <div class="bg-white p-8 rounded-2xl border border-navy/5 shadow-lg">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-navy"></i>
+                            </div>
+                            <h4 class="font-serif text-navy text-xl">Clinically-Proven</h4>
+                        </div>
+                        <p class="text-sm text-navy/70 italic leading-relaxed">"We don't just talk about the past. We focus on who you want to be and the tools you need to get there."</p>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Steps -->
+                <div class="lg:col-span-7">
+                    <div class="space-y-0">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center py-10 border-b border-navy/10">
+                            <div class="flex-shrink-0 w-14 h-14 rounded-full border-2 border-navy/20 flex items-center justify-center text-xl font-serif text-navy font-bold">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif text-navy mb-2">Initial Connection</h3>
+                                <p class="text-navy/70 leading-relaxed max-w-2xl">We start with a free 15-minute call – just a conversation about what's bringing you to therapy and whether we'd work well together. No pressure, no obligations.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center py-10 border-b border-navy/10">
+                            <div class="flex-shrink-0 w-14 h-14 rounded-full border-2 border-navy/20 flex items-center justify-center text-xl font-serif text-navy font-bold">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif text-navy mb-2">Getting the Full Picture</h3>
+                                <p class="text-navy/70 leading-relaxed max-w-2xl">Our first few sessions are about understanding your whole story – not just the problem, but what makes you you. We'll identify patterns without pathologizing your entire existence.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center py-10 border-b border-navy/10">
+                            <div class="flex-shrink-0 w-14 h-14 rounded-full border-2 border-navy/20 flex items-center justify-center text-xl font-serif text-navy font-bold">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif text-navy mb-2">Building Your Toolkit</h3>
+                                <p class="text-navy/70 leading-relaxed max-w-2xl">This is where we get practical. Using proven approaches, we'll develop strategies that actually work when you're in the middle of a panic attack, not just in theory.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center py-10">
+                            <div class="flex-shrink-0 w-14 h-14 rounded-full border-2 border-navy/20 flex items-center justify-center text-xl font-serif text-navy font-bold">
+                                4
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif text-navy mb-2">Real Change, Real Time</h3>
+                                <p class="text-navy/70 leading-relaxed max-w-2xl">Change isn't linear – some weeks are breakthroughs, others feel stuck. I'm here for all of it, adjusting our approach as life happens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto bg-navy rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute top-10 left-10 w-24 h-24 border border-white rounded-full"></div>
+                <div class="absolute bottom-10 right-10 w-48 h-48 border border-white rounded-full"></div>
+            </div>
+            
+            <h2 class="text-4xl md:text-6xl font-serif mb-8 leading-tight relative z-10">Ready to Start Your Journey?</h2>
+            <p class="text-white/70 text-lg mb-12 max-w-xl mx-auto relative z-10">
+                Begin with a free 15-minute consultation. No pressure, no awkward questions—just a chance to see if we're a fit.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-10">
+                <a href="https://nextsteptherapy.janeapp.com/" class="bg-white text-navy px-10 py-5 rounded-xl font-bold text-lg hover:scale-[1.05] transition-transform shadow-xl">
+                    Book Your Free Call
+                </a>
+                <a href="tel:4163062157" class="text-white font-bold flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <i data-lucide="phone" class="w-5 h-5"></i> (416) 306-2157
+                </a>
+            </div>
+            <div class="mt-12 pt-12 border-t border-white/10 flex flex-wrap justify-center gap-8 text-white/50 text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">
+                <span>✓ Same-Day Response</span>
+                <span>✓ Secure & Confidential</span>
+                <span>✓ Insurance Receipts Provided</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="images/nst-logo-icon.png" alt="Next Step Therapy" class="w-10 h-10" onerror="this.outerHTML='<div class=\'w-10 h-10 rounded-full border-2 border-navy flex items-center justify-center\'><span class=\'text-sm font-bold text-navy\'>NT</span></div>'">
+                        <span class="text-xl font-bold text-navy tracking-tight">Next Step Therapy</span>
+                    </div>
+                    <p class="text-navy/60 text-sm leading-relaxed max-w-xs mb-8">
+                        Professional, virtual psychotherapy for residents of Ontario. Specialized support for high-performers, professionals, and students.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="tel:4163062157" class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-navy cursor-pointer hover:bg-navy hover:text-white transition-all">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:hello@nextsteptherapy.ca" class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-navy cursor-pointer hover:bg-navy hover:text-white transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-navy text-xs uppercase tracking-widest mb-6">Services</h4>
+                    <ul class="space-y-4 text-sm text-navy/60">
+                        <li><a href="/anxiety-therapy-ontario" class="hover:text-navy">Anxiety Support</a></li>
+                        <li><a href="/mens-mental-health" class="hover:text-navy">Men's Mental Health</a></li>
+                        <li><a href="/burnout-therapy-toronto" class="hover:text-navy">Burnout Prevention</a></li>
+                        <li><a href="#" class="hover:text-navy">CBT Therapy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-navy text-xs uppercase tracking-widest mb-6">Regions</h4>
+                    <ul class="space-y-4 text-sm text-navy/60">
+                        <li><a href="/therapy-toronto" class="hover:text-navy">Toronto</a></li>
+                        <li><a href="/therapy-burlington" class="hover:text-navy">Burlington</a></li>
+                        <li><a href="/therapy-ottawa" class="hover:text-navy">Ottawa</a></li>
+                        <li><a href="#" class="hover:text-navy">Across Ontario</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-navy text-xs uppercase tracking-widest mb-6">Credentials</h4>
+                    <div class="space-y-4">
+                        <span class="block text-[10px] font-bold text-navy/40 uppercase">CRPO Registered #10979</span>
+                        <span class="block text-[10px] font-bold text-navy/40 uppercase">OAMHP Member</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold text-navy/40 uppercase tracking-widest">
+                <p>© 2024 Next Step Therapy. All Rights Reserved.</p>
+                <div class="flex gap-8">
+                    <a href="/privacy-policy" class="hover:text-navy">Privacy Policy</a>
+                    <a href="/terms" class="hover:text-navy">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-white', 'shadow-sm', 'py-3');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-sm', 'py-3');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Quiz functionality
+        const quizQuestions = [
+            {
+                question: "How often do you feel overwhelmed by daily tasks or responsibilities?",
+                options: ["Rarely or never", "Sometimes", "Often", "Most of the time"]
+            },
+            {
+                question: "Do you find yourself replaying conversations or worrying about future events?",
+                options: ["Never", "Occasionally", "Frequently", "Almost constantly"]
+            },
+            {
+                question: "How is your sleep quality recently?",
+                options: ["Excellent", "Average", "Restless", "Consistently poor"]
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function nextQuestion() {
+            currentQuestion++;
+            
+            if (currentQuestion >= quizQuestions.length) {
+                // Show results
+                document.getElementById('quizContainer').innerHTML = `
+                    <div class="text-center py-8">
+                        <div class="w-16 h-16 bg-navy/5 text-navy rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="sparkles" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-3xl font-serif text-navy mb-4">You're Not Alone.</h3>
+                        <p class="text-navy/70 mb-8 max-w-md mx-auto">
+                            Based on your responses, therapy could provide significant relief for the patterns you're experiencing.
+                        </p>
+                        <a href="https://nextsteptherapy.janeapp.com/" class="inline-block bg-navy text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:scale-[1.02] transition-transform">
+                            Book My 15-Min Consultation
+                        </a>
+                        <button onclick="resetQuiz()" class="block mx-auto mt-6 text-sm font-bold text-navy/40 hover:text-navy uppercase tracking-widest">
+                            Retake Assessment
+                        </button>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            // Update question
+            const q = quizQuestions[currentQuestion];
+            document.getElementById('quizProgress').textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+            document.getElementById('quizProgressBar').style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+            document.getElementById('quizQuestion').textContent = q.question;
+            
+            const optionsHTML = q.options.map(opt => `
+                <button onclick="nextQuestion()" class="w-full text-left p-5 rounded-xl border border-gray-200 hover:border-navy hover:bg-navy/5 transition-all group flex justify-between items-center">
+                    <span class="font-medium text-navy/80 group-hover:text-navy">${opt}</span>
+                    <div class="w-5 h-5 rounded-full border border-gray-300 group-hover:border-navy transition-colors"></div>
+                </button>
+            `).join('');
+            document.getElementById('quizOptions').innerHTML = optionsHTML;
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            location.reload();
+        }
+    </script>
+</body>
+</html>
+

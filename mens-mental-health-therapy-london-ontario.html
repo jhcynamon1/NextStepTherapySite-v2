@@ -77,11 +77,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
 
     <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
+    
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
 
     <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
+    
 
     <!-- SEO Meta Data - Exact Keyword Match -->
     <title>Men's Mental Health London ON | CRPO #10979</title>
@@ -163,24 +163,86 @@
     <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+    <!-- Fonts - Gemini Design System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a4f',
+                        sage: '#4a7c59',
+                        cream: '#f8f6f2',
+                        'navy-light': '#2d5066'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Compatibility Styles for Legacy Classes -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        .section { padding: 4rem 1rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .content-grid { display: grid; gap: 2rem; }
+        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
+        .cta-box p { color: rgba(255,255,255,0.9); }
+        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
+        .cta-box .btn-primary { background: #4a7c59; color: white; }
+        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
+        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
+        .alternate-bg { background: #f1f5f9; }
+        a { color: #1e3a4f; }
+        a:hover { color: #4a7c59; }
+    </style>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header smart-sticky">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="/" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge-prominent">CRPO #10979</span>
+        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="/" class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
+                            <span class="text-white font-display font-bold text-lg">NT</span>
+                        </div>
+                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
+                    </a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
-                <nav class="nav">
-                    <a href="/#approach">Approach</a>
-                    <a href="/#specializations">Services</a>
-                    <a href="/#contact">Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
+                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
                 </nav>
-                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+                <div class="flex items-center gap-3">
+                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                </div>
             </div>
         </div>
     </header>
@@ -465,5 +527,18 @@
 <!-- Smart Sticky Header JavaScript -->
 <script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 <script src="/js/security-check.js"></script>
+
+    <!-- Mobile CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
+        <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
+        <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>
