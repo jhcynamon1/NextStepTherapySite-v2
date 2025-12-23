@@ -14,7 +14,7 @@
             'send_page_view': true
         });
 
-        // Track phone clicks
+        // Track conversions
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
@@ -25,34 +25,9 @@
                     });
                 });
             });
-        });
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track form submissions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function() {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-
-            // Track phone clicks
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
                 link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
+                    gtag('event', 'booking_click', {
                         'event_category': 'conversion',
                         'value': 175,
                         'currency': 'CAD'
@@ -68,12 +43,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="all" onload="this.media='all'">
 
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
+    <!-- Import shared CSS -->
     <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
-
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
 
     <!-- SEO Meta Data - Exact Keyword Match -->
     <title>Perfectionism Therapy Ontario | Break the Burnout Cycle</title>
@@ -119,6 +91,48 @@
       },
       "addressLocality": "Toronto", "addressRegion": "ON",
       "addressLocality": "Toronto"
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is perfectionism and is it really a problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does therapy help with perfectionism?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the 'not good enough' thoughts so they stop running your decisions. You can still pursue excellence without the internal torture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I lose my drive if I stop being a perfectionist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, rumination, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does perfectionism therapy take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one."
+          }
+        }
+      ]
     }
     </script>
 
@@ -190,7 +204,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Perfectionism Therapy in Ontario</h1>
-            <p>"I'm supposed to be successful, so why do I feel like such a failure?" This is what many high-achievers tell me during our first session. Working 70-hour weeks, no real vacation in years, convinced that anything less than perfect means letting everyone down. Sound familiar? Ontario's high-pressure professional culture breeds perfectionism and burnout, but you don't have to live this way.</p>
+            <p>You're successful. That's not the problem. The problem is nothing ever feels like enough. Working 70-hour weeks, no real vacation in years, convinced that anything less than perfect means letting everyone down. Here's what I've seen: perfectionism isn't about high standards—it's about deriving your entire self-worth from achievement. That's exhausting. And it doesn't have to be this way.</p>
             <div class="trust-pills" style="margin: 1.5rem 0;">
                 <span class="trust-pill">✓ CRPO #10979</span>
                 <span class="trust-pill">✓ $175/session</span>
@@ -388,15 +402,44 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">What is perfectionism and is it really a problem?</h3>
+                    <p>Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout. It's not a personality quirk; it's a pattern that's exhausting you.</p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">How does therapy help with perfectionism?</h3>
+                    <p>The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the "not good enough" thoughts so they stop running your decisions. You can still pursue excellence without the internal torture. That's not the problem. The problem is the suffering that comes with it.</p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Will I lose my drive if I stop being a perfectionist?</h3>
+                    <p>Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, <a href="/rumination-therapy.html">rumination</a>, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less. The drive stays; the suffering doesn't have to.</p>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">How long does perfectionism therapy take?</h3>
+                    <p>Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one. No waiting weeks for "insight" before we give you tools you can use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Break Free from Perfectionism?</h2>
-                <p>Take the first step toward recovery and sustainable success. Book your free consultation to discuss how therapy can help you overcome burnout and perfectionism.</p>
-                <div class="btn btn-primary">
-                    <a href="tel:416-306-2157" class="btn-primary">Call (416) 306-2157</a>
-                    <a href="https://jesse-cynamon.janeapp.com/" class="btn-secondary" target="_blank">Book Online</a>
+                <h2>Ready to Stop the Internal Torture?</h2>
+                <p>You can pursue excellence without suffering. If any of this lands, let's talk. No pressure—just a conversation.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:416-306-2157" class="btn btn-primary">Call (416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-secondary" target="_blank">Book Online</a>
                 </div>
             </div>
         </div>
@@ -417,7 +460,19 @@
                 </a>
                 <a href="/executive-stress-management-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
                     <strong style="color: var(--primary-navy);">Executive Stress</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Leadership pressure and decision fatigue</p>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Leadership pressure and organizational demands</p>
+                </a>
+                <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+                    <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
+                </a>
+                <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+                    <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
+                </a>
+                <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+                    <strong style="color: var(--primary-navy);">Founder Burnout</strong>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
                 </a>
             </div>
         </div>
@@ -477,7 +532,7 @@
         
         <div class="container" style="max-width: 1200px; margin: 40px auto 0; padding: 20px 20px 0; border-top: 1px solid #e9ecef; text-align: center;">
             <p style="color: #8898aa; font-size: 0.85em;">
-                &copy; 2024 Next Step Therapy. All rights reserved. Services provided across Ontario.
+                &copy; 2025 Next Step Therapy. All rights reserved. Services provided across Ontario. <strong>Last Updated:</strong> December 23, 2025
             </p>
             <p style="color: #8898aa; font-size: 0.85em; margin-top: 10px;">
                 <strong>Emergency Warning:</strong> Next Step Therapy is not a crisis service. If you are in crisis, please call 911 or visit your nearest emergency room.
