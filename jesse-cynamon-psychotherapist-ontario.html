@@ -163,14 +163,23 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: {
+                            DEFAULT: '#1e3a4f',
+                            light: '#2d5066',
+                            deep: '#152a3a'
+                        },
+                        sage: {
+                            DEFAULT: '#4a7c59',
+                            light: '#8cb390',
+                            soft: '#e8f0e8'
+                        },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
@@ -182,62 +191,88 @@
     
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        /* Base */
+        body { font-family: 'Inter', sans-serif; background-color: #faf7f2; }
+        .skip-link { position: absolute; top: -100px; left: 0; background: #1e3a4f; color: white; padding: 0.5rem 1rem; z-index: 100; }
+        .skip-link:focus { top: 0; }
+
+        /* Layout */
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .content-grid { display: grid; gap: 2rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+
+        /* Cards */
         .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .info-card { background: #faf7f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+
+        /* Typography */
         .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
+        h2, h3, h4 { font-family: 'Playfair Display', serif; color: #1e3a4f; }
+
+        /* CTA Boxes */
         .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
         .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
         .cta-box p { color: rgba(255,255,255,0.9); }
         .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
         .cta-box .btn-primary { background: #4a7c59; color: white; }
         .cta-box .btn-secondary { background: white; color: #1e3a4f; }
+
+        /* Feature Lists */
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .feature-list li:last-child { border-bottom: none; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
+
+        /* Stats */
         .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
         .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
+
+        /* Alternating Sections */
         .alternate-bg { background: #f1f5f9; }
+
+        /* Links */
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+
+        /* Footer */
+        .footer { background: linear-gradient(135deg, #1e3a4f 0%, #152a3a 100%); color: white; padding: 4rem 1rem 2rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-section h4 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: white; }
+        .footer-section ul { list-style: none; padding: 0; margin: 0; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .footer-section ul li a:hover { color: white; }
+        .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
     </style>
 </head>
-<body>
+<body class="font-body bg-cream">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <!-- Header - Gemini Design -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
-                </div>
+                <a href="/" class="flex items-center gap-3">
+                    <span class="font-display text-xl font-semibold text-navy">Next Step Therapy</span>
+                    <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-sage/10 text-sage border border-sage/20">CRPO #10979</span>
+                </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
-                </div>
+                <a href="tel:+14163062157" class="hidden sm:flex items-center gap-2 text-navy font-semibold">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    (416) 306-2157
+                </a>
             </div>
         </div>
     </header>
-    
+
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" class="pt-20">
         
         <!-- Hero Section - Gemini Design -->
         <section class="relative bg-gradient-to-br from-cream via-white to-sage/5 py-16 md:py-24 overflow-hidden">
@@ -480,29 +515,67 @@
         
     </main>
     
-    <!-- Footer -->
+    <!-- Footer - Gemini Design -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="text-align: center; padding: 2rem 0;">
-                <p style="color: rgba(255,255,255,0.8);">
-                    &copy; 2025 Next Step Therapy. All rights reserved.<br>
-                    Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
-                    Serving clients in Toronto, Ottawa, and Ontario-wide.<br>
-                    Ontario, Canada
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jesse Cynamon, RP</h4>
+                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" style="color: #A8C5A9; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Therapy Services</h4>
+                    <ul>
+                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
+                        <li><a href="/life-transitions.html">Life Transitions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ontario Service Areas</h4>
+                    <ul>
+                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html">All Ontario →</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/therapy-costs-ontario.html">Therapy Costs</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
+            </div>
+            <div class="footer-bottom">
+                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
+                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada</p>
             </div>
         </div>
     </footer>
     
-    <!-- Crisis Resources -->
-    <div style="background-color: #fff3f3; border-left: 4px solid #d32f2f; padding: 24px; margin: 40px 20px 0; max-width: 1200px; margin-left: auto; margin-right: auto; border-radius: 8px;">
-        <h3 style="color: #d32f2f; margin-top: 0;">In Crisis? Get Immediate Help</h3>
-        <p style="margin-bottom: 12px;"><strong style="font-size: 1.2em; color: #d32f2f;">Call 988</strong> - Suicide Crisis Helpline (24/7)</p>
-        <p style="margin-bottom: 12px;"><strong>Call 911</strong> - Life-threatening emergencies</p>
-        <p style="margin-bottom: 0;"><strong>Ontario Mental Health Crisis Line:</strong> <a href="tel:+18665312600" style="color: #1976d2;">1-866-531-2600</a></p>
-    </div>
-    
 <script src="/js/security-check.js"></script>
+
+    <!-- Desktop Floating CTA -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-8 right-8 bg-sage text-white px-6 py-4 rounded-full font-semibold shadow-lg shadow-sage/30 hover:bg-sage-light transition-all items-center gap-2 z-40">
+        <i data-lucide="calendar" class="w-5 h-5"></i>
+        Book Free Consultation
+    </a>
 
     <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
