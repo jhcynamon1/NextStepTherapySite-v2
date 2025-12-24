@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-astro-cid-ohz3nq7j>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,13 +37,10 @@
     <meta name="publisher" content="Next Step Therapy">
     <meta name="copyright" content="Next Step Therapy">
 
-    <!-- Shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
-    <!-- Performance Optimizations -->
+    <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -156,11 +153,7 @@
 
       <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -171,6 +164,7 @@
                         navy: '#1e3a4f',
                         sage: '#4a7c59',
                         cream: '#f8f6f2',
+                        sand: '#e8dcc4',
                         'navy-light': '#2d5066'
                     },
                     fontFamily: {
@@ -181,10 +175,10 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
@@ -213,112 +207,145 @@
     </style>
 </head>
 
-  <body data-astro-cid-ohz3nq7j>
+  <body class="font-body bg-cream">
     <!-- Header -->
-    <header class="header smart-sticky" data-astro-cid-ohz3nq7j>
-      <div class="container" data-astro-cid-ohz3nq7j>
-        <div class="header-content" data-astro-cid-ohz3nq7j>
-          <div class="logo-section" data-astro-cid-ohz3nq7j>
-            <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'" data-astro-cid-ohz3nq7j>
-            <a href="/" class="logo-text" data-astro-cid-ohz3nq7j>Next Step Therapy</a>
-            <span class="credentials-badge-prominent" data-astro-cid-ohz3nq7j>CRPO #10979</span>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+      <div class="container">
+        <div class="flex items-center justify-between py-4">
+          <div class="flex items-center gap-4">
+            <a href="/" class="flex items-center gap-3">
+              <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="h-10 w-10" onerror="this.style.display='none'">
+              <span class="text-navy font-display text-xl font-semibold">Next Step Therapy</span>
+            </a>
+            <span class="bg-sage/10 text-sage px-3 py-1 rounded-full text-xs font-medium">CRPO #10979</span>
           </div>
-          <nav class="nav" data-astro-cid-ohz3nq7j>
-            <a href="/#approach" data-astro-cid-ohz3nq7j>Approach</a>
-            <a href="/#specializations" data-astro-cid-ohz3nq7j>Services</a>
-            <a href="/#contact" data-astro-cid-ohz3nq7j>Contact</a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors">Approach</a>
+            <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors">Services</a>
+            <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors">Contact</a>
           </nav>
-          <a href="tel:+14163062157" class="header-phone" data-astro-cid-ohz3nq7j>(416) 306-2157</a>
+          <a href="tel:+14163062157" class="hidden sm:flex items-center gap-2 text-navy font-medium hover:text-sage transition-colors">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            (416) 306-2157
+          </a>
         </div>
       </div>
     </header>
 
-    <main data-astro-cid-ohz3nq7j>
-      <!-- Hero Section with Background Image -->
-      <section class="hero-with-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="hero-content" data-astro-cid-ohz3nq7j>
-            <h1 data-astro-cid-ohz3nq7j>Need Someone to Talk To? Find Your Counsellor Ontario</h1>
-            <p class="lead-text" data-astro-cid-ohz3nq7j>You know that feeling when life feels overwhelming and you could really use someone to talk to who truly gets it? When work stress, relationship challenges, or persistent worry start affecting your daily life, and you're ready for professional support that actually makes a difference? If you're living in Ontario and looking for a qualified counsellor who understands your unique situation, you've found the right placeevidence-based counselling that works.</p>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="py-16 md:py-24 bg-gradient-to-br from-cream via-white to-sage/5">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h1 class="font-display text-4xl md:text-5xl font-medium text-navy leading-tight mb-6">Need Someone to Talk To? Find Your Counsellor Ontario</h1>
+              <p class="text-lg text-gray-600 leading-relaxed mb-8">You know that feeling when life feels overwhelming and you could really use someone to talk to who truly gets it? When work stress, relationship challenges, or persistent worry start affecting your daily life, and you're ready for professional support that actually makes a difference? If you're living in Ontario and looking for a qualified counsellor who understands your unique situation, you've found the right place—evidence-based counselling that works.</p>
 
-            <!-- Trust Pills -->
-            <div class="trust-pills" data-astro-cid-ohz3nq7j>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j> CRPO #10979 Licensed</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j> Virtual Sessions Available</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j> Insurance Receipts Provided</span>
-              <span class="trust-pill" data-astro-cid-ohz3nq7j> Free 15-Min Consultation</span>
+              <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="/#contact" class="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-light transition-colors">
+                  <i data-lucide="calendar" class="w-5 h-5"></i>Schedule 15-Min Call
+                </a>
+                <a href="tel:+14163062157" class="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy px-6 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-colors">
+                  <i data-lucide="phone" class="w-5 h-5"></i>Call (416) 306-2157
+                </a>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979 Licensed</span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="video" class="w-4 h-4 text-sage"></i> Virtual Sessions Available</span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts Provided</span>
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="calendar-clock" class="w-4 h-4 text-sage"></i> Free 15-Min Consultation</span>
+              </div>
             </div>
 
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-              <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Schedule 15-Min Call</a>
-              <a href="tel:+14163062157" class="btn btn-secondary" data-astro-cid-ohz3nq7j>Call (416) 306-2157</a>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="heart" class="w-6 h-6 text-sage"></i></div>
+                <h3 class="font-display text-lg font-semibold text-navy mb-2">Compassionate Care</h3>
+                <p class="text-gray-600 text-sm">Non-judgmental support for Ontario residents.</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                <h3 class="font-display text-lg font-semibold text-navy mb-2">Evidence-Based</h3>
+                <p class="text-gray-600 text-sm">ACT and CBT approaches for lasting change.</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                <h3 class="font-display text-lg font-semibold text-navy mb-2">100% Virtual</h3>
+                <p class="text-gray-600 text-sm">Secure online therapy from anywhere in Ontario.</p>
+              </div>
+              <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="file-text" class="w-6 h-6 text-sage"></i></div>
+                <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Receipts</h3>
+                <p class="text-gray-600 text-sm">Easy claims with detailed receipts provided.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Problem Recognition Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Sound Familiar? You're Not Alone</h2>
-              <p data-astro-cid-ohz3nq7j>Living in Ontario brings unique challenges that can impact your mental health and well-being. Whether it's the pressure of balancing work and family life, navigating relationships, dealing with seasonal changes, or managing the stress of modern life, these challenges are real and they matter. Many of the people I work with across Ontario describe experiences that might resonate with you:</p>
+      <section class="section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>Sound Familiar? You're Not Alone</h2>
+              <p>Living in Ontario brings unique challenges that can impact your mental health and well-being. Whether it's the pressure of balancing work and family life, navigating relationships, dealing with seasonal changes, or managing the stress of modern life, these challenges are real and they matter. Many of the people I work with across Ontario describe experiences that might resonate with you:</p>
 
-              <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h3 data-astro-cid-ohz3nq7j>"Does This Sound Like You?"</h3>
-                <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Persistent Worry:</strong> Your mind constantly cycles through worst-case scenarios about work, relationships, or the future</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Emotional Overwhelm:</strong> Feeling like you're drowning in responsibilities with no clear way forward</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Relationship Struggles:</strong> Patterns in relationships that keep causing problems, but you're not sure how to change them</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Work-Life Imbalance:</strong> Career demands affecting your health, relationships, and personal well-being</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Seasonal Mood Changes:</strong> Ontario winters significantly impact your energy, motivation, and mood</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Decision Fatigue:</strong> Even simple choices feel exhausting when you're already stretched thin</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Physical Stress Symptoms:</strong> Headaches, muscle tension, sleep problems, or stomach issues without clear medical causes</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Feeling Stuck:</strong> Knowing something needs to change but not sure what or how to make it happen</li>
+              <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                <h3>"Does This Sound Like You?"</h3>
+                <ul class="feature-list">
+                  <li><strong>Persistent Worry:</strong> Your mind constantly cycles through worst-case scenarios about work, relationships, or the future</li>
+                  <li><strong>Emotional Overwhelm:</strong> Feeling like you're drowning in responsibilities with no clear way forward</li>
+                  <li><strong>Relationship Struggles:</strong> Patterns in relationships that keep causing problems, but you're not sure how to change them</li>
+                  <li><strong>Work-Life Imbalance:</strong> Career demands affecting your health, relationships, and personal well-being</li>
+                  <li><strong>Seasonal Mood Changes:</strong> Ontario winters significantly impact your energy, motivation, and mood</li>
+                  <li><strong>Decision Fatigue:</strong> Even simple choices feel exhausting when you're already stretched thin</li>
+                  <li><strong>Physical Stress Symptoms:</strong> Headaches, muscle tension, sleep problems, or stomach issues without clear medical causes</li>
+                  <li><strong>Feeling Stuck:</strong> Knowing something needs to change but not sure what or how to make it happen</li>
                 </ul>
               </div>
 
-              <p data-astro-cid-ohz3nq7j>If several of these experiences resonate with you, you're not failingyou're human. These challenges are incredibly common, especially among thoughtful, responsible people managing the complex demands of modern life in Ontario. The good news? You don't have to figure this out alone. Professional counselling can provide the support and tools you need to navigate these challenges more effectively.</p>
+              <p>If several of these experiences resonate with you, you're not failing—you're human. These challenges are incredibly common, especially among thoughtful, responsible people managing the complex demands of modern life in Ontario. The good news? You don't have to figure this out alone. Professional counselling can provide the support and tools you need to navigate these challenges more effectively.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Understanding Professional Counselling Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>What Professional Counselling Actually Offers</h2>
-              <p data-astro-cid-ohz3nq7j>Professional counselling is more than just having someone to talk tothough that's certainly part of it. It's a structured, evidence-based process that helps you understand patterns in your thoughts, emotions, and behaviors, and develop practical skills to create positive change in your life.</p>
+      <section class="section alternate-bg">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>What Professional Counselling Actually Offers</h2>
+              <p>Professional counselling is more than just having someone to talk to—though that's certainly part of it. It's a structured, evidence-based process that helps you understand patterns in your thoughts, emotions, and behaviors, and develop practical skills to create positive change in your life.</p>
 
-              <p data-astro-cid-ohz3nq7j>As a Registered Psychotherapist in Ontario, I work with individuals dealing with a wide range of mental health concerns, from anxiety and depression to relationship issues, work stress, and major life transitions. The goal isn't to fix youbecause you're not brokenbut to help you develop tools and insights that support your overall well-being and help you live more aligned with your values.</p>
+              <p>As a Registered Psychotherapist in Ontario, I work with individuals dealing with a wide range of mental health concerns, from anxiety and depression to relationship issues, work stress, and major life transitions. The goal isn't to fix you—because you're not broken—but to help you develop tools and insights that support your overall well-being and help you live more aligned with your values.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Common Areas Where Counselling Helps Ontario Residents:</h3>
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Anxiety & Worry</h4>
-                  <p data-astro-cid-ohz3nq7j>Learning to manage persistent worry, panic attacks, social anxiety, and the physical symptoms of stress.</p>
+              <h3>Common Areas Where Counselling Helps Ontario Residents:</h3>
+              <div class="info-cards">
+                <div class="info-card">
+                  <h4>Anxiety & Worry</h4>
+                  <p>Learning to manage persistent worry, panic attacks, social anxiety, and the physical symptoms of stress.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Depression & Mood</h4>
-                  <p data-astro-cid-ohz3nq7j>Working through persistent sadness, low motivation, seasonal depression, and loss of interest in life.</p>
+                <div class="info-card">
+                  <h4>Depression & Mood</h4>
+                  <p>Working through persistent sadness, low motivation, seasonal depression, and loss of interest in life.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Work & Career Stress</h4>
-                  <p data-astro-cid-ohz3nq7j>Managing workplace pressure, burnout, career transitions, and work-life balance challenges.</p>
+                <div class="info-card">
+                  <h4>Work & Career Stress</h4>
+                  <p>Managing workplace pressure, burnout, career transitions, and work-life balance challenges.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Relationship Challenges</h4>
-                  <p data-astro-cid-ohz3nq7j>Improving communication skills, understanding relationship patterns, and building healthier connections.</p>
+                <div class="info-card">
+                  <h4>Relationship Challenges</h4>
+                  <p>Improving communication skills, understanding relationship patterns, and building healthier connections.</p>
                 </div>
               </div>
 
-              <p data-astro-cid-ohz3nq7j>The Ontario Advantage: Virtual counselling means you can access professional support from anywhere in the province, whether you're in downtown Toronto, rural Northern Ontario, or anywhere in between. No need to navigate traffic, find parking, or take time off workprofessional mental health support that fits your schedule and location.</p>
+              <p>The Ontario Advantage: Virtual counselling means you can access professional support from anywhere in the province, whether you're in downtown Toronto, rural Northern Ontario, or anywhere in between. No need to navigate traffic, find parking, or take time off work—professional mental health support that fits your schedule and location.</p>
 
-              <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Explore How Counselling Can Help</a>
+              <div style="text-align: center; margin-top: var(--space-xl);">
+                <a href="/#contact" class="btn btn-primary">Explore How Counselling Can Help</a>
               </div>
             </div>
           </div>
@@ -326,86 +353,86 @@
       </section>
 
       <!-- How Counselling Works Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>How Professional Counselling Works</h2>
-              <p data-astro-cid-ohz3nq7j>Professional counselling is both an art and a science. It combines evidence-based therapeutic approaches with the uniquely human experience of being truly heard and understood by someone trained to help. The process is collaborativeyou're the expert on your own experience, and I bring professional knowledge about mental health, human behavior, and effective change strategies.</p>
+      <section class="section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>How Professional Counselling Works</h2>
+              <p>Professional counselling is both an art and a science. It combines evidence-based therapeutic approaches with the uniquely human experience of being truly heard and understood by someone trained to help. The process is collaborative—you're the expert on your own experience, and I bring professional knowledge about mental health, human behavior, and effective change strategies.</p>
 
-              <p data-astro-cid-ohz3nq7j>I primarily use an approach called Acceptance and Commitment Therapy (ACT), which has extensive research support for anxiety, depression, and a wide range of mental health concerns. ACT focuses on developing psychological flexibilitythe ability to stay present with your experiences while making choices based on your values rather than being controlled by difficult thoughts and feelings.</p>
+              <p>I primarily use an approach called Acceptance and Commitment Therapy (ACT), which has extensive research support for anxiety, depression, and a wide range of mental health concerns. ACT focuses on developing psychological flexibility—the ability to stay present with your experiences while making choices based on your values rather than being controlled by difficult thoughts and feelings.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>What This Looks Like in Practice:</h3>
-              <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>In Our Work Together, You'll Learn To:</h4>
-                <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Understand Your Patterns:</strong> Recognize the thoughts, emotions, and behaviors that keep you stuck</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Develop Mindful Awareness:</strong> Notice what's happening inside you without getting overwhelmed by it</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Clarify Your Values:</strong> Identify what truly matters to you and use this as a guide for decision-making</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Build Distress Tolerance:</strong> Increase your capacity to handle difficult emotions and uncertain situations</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Practice Self-Compassion:</strong> Treat yourself with kindness rather than harsh criticism when things get difficult</li>
-                  <li data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Take Valued Action:</strong> Make choices that move you toward what matters, even when it's uncomfortable</li>
+              <h3>What This Looks Like in Practice:</h3>
+              <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                <h4>In Our Work Together, You'll Learn To:</h4>
+                <ul class="feature-list">
+                  <li><strong>Understand Your Patterns:</strong> Recognize the thoughts, emotions, and behaviors that keep you stuck</li>
+                  <li><strong>Develop Mindful Awareness:</strong> Notice what's happening inside you without getting overwhelmed by it</li>
+                  <li><strong>Clarify Your Values:</strong> Identify what truly matters to you and use this as a guide for decision-making</li>
+                  <li><strong>Build Distress Tolerance:</strong> Increase your capacity to handle difficult emotions and uncertain situations</li>
+                  <li><strong>Practice Self-Compassion:</strong> Treat yourself with kindness rather than harsh criticism when things get difficult</li>
+                  <li><strong>Take Valued Action:</strong> Make choices that move you toward what matters, even when it's uncomfortable</li>
                 </ul>
               </div>
 
-              <p data-astro-cid-ohz3nq7j>This isn't about positive thinking or pretending problems don't exist. It's about developing a different relationship with the inevitable challenges of life, so you can respond to them with greater wisdom, flexibility, and effectiveness.</p>
+              <p>This isn't about positive thinking or pretending problems don't exist. It's about developing a different relationship with the inevitable challenges of life, so you can respond to them with greater wisdom, flexibility, and effectiveness.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Why Virtual Counselling Works So Well for Ontario Residents</h3>
-              <p data-astro-cid-ohz3nq7j>Virtual counselling removes many of the barriers that prevent people from accessing mental health support. Whether you're in a major city dealing with traffic and parking, in a smaller community with limited local resources, or somewhere in rural Ontario where mental health services are scarce, virtual counselling makes professional support accessible.</p>
+              <h3>Why Virtual Counselling Works So Well for Ontario Residents</h3>
+              <p>Virtual counselling removes many of the barriers that prevent people from accessing mental health support. Whether you're in a major city dealing with traffic and parking, in a smaller community with limited local resources, or somewhere in rural Ontario where mental health services are scarce, virtual counselling makes professional support accessible.</p>
 
-              <p data-astro-cid-ohz3nq7j>Research consistently shows that virtual counselling is just as effective as in-person therapy for most mental health concerns, including anxiety and depression. Many clients actually prefer the convenience and privacy of having sessions in their own space, and find it easier to integrate insights from therapy into their daily life when they don't have to transition from a therapist's office back to their regular environment.</p>
+              <p>Research consistently shows that virtual counselling is just as effective as in-person therapy for most mental health concerns, including anxiety and depression. Many clients actually prefer the convenience and privacy of having sessions in their own space, and find it easier to integrate insights from therapy into their daily life when they don't have to transition from a therapist's office back to their regular environment.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- What to Expect Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>What to Expect from Professional Counselling</h2>
-              <p data-astro-cid-ohz3nq7j>If you've never worked with a counsellor before, it's natural to wonder what the process actually looks like. Here's what you can expect when we work together:</p>
+      <section class="section alternate-bg">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>What to Expect from Professional Counselling</h2>
+              <p>If you've never worked with a counsellor before, it's natural to wonder what the process actually looks like. Here's what you can expect when we work together:</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Your Free Consultation: Getting Started</h3>
-              <p data-astro-cid-ohz3nq7j>We'll begin with a free 15-minute consultation where you can share what you're experiencing and ask any questions you have about counselling. This isn't therapyit's a conversation to see if we're a good fit to work together. No pressure, no commitment beyond that initial conversation.</p>
+              <h3>Your Free Consultation: Getting Started</h3>
+              <p>We'll begin with a free 15-minute consultation where you can share what you're experiencing and ask any questions you have about counselling. This isn't therapy—it's a conversation to see if we're a good fit to work together. No pressure, no commitment beyond that initial conversation.</p>
 
-              <p data-astro-cid-ohz3nq7j>This call also gives me a chance to understand your specific situation and explain how I might be able to help. If we decide to move forward, we'll schedule your first full session.</p>
+              <p>This call also gives me a chance to understand your specific situation and explain how I might be able to help. If we decide to move forward, we'll schedule your first full session.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Your First Session: Understanding Your Story</h3>
-              <p data-astro-cid-ohz3nq7j>Your first full session (typically 50 minutes) focuses on understanding your unique situation, history, and goals. What brought you to counselling now? What patterns have you noticed in your thoughts, emotions, or relationships? What would you like to be different in your life?</p>
+              <h3>Your First Session: Understanding Your Story</h3>
+              <p>Your first full session (typically 50 minutes) focuses on understanding your unique situation, history, and goals. What brought you to counselling now? What patterns have you noticed in your thoughts, emotions, or relationships? What would you like to be different in your life?</p>
 
-              <p data-astro-cid-ohz3nq7j>This isn't an interrogationit's a collaborative conversation where I ask questions to better understand your experience, and you share what feels relevant and comfortable to discuss.</p>
+              <p>This isn't an interrogation—it's a collaborative conversation where I ask questions to better understand your experience, and you share what feels relevant and comfortable to discuss.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Building Your Toolkit: Early Sessions</h3>
-              <p data-astro-cid-ohz3nq7j>In the following sessions, we'll work together to develop practical strategies and insights that address your specific concerns. This might include:</p>
+              <h3>Building Your Toolkit: Early Sessions</h3>
+              <p>In the following sessions, we'll work together to develop practical strategies and insights that address your specific concerns. This might include:</p>
 
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Practical Coping Skills</h4>
-                  <p data-astro-cid-ohz3nq7j>Immediate strategies you can use when anxiety, depression, or stress show up in your daily life.</p>
+              <div class="info-cards">
+                <div class="info-card">
+                  <h4>Practical Coping Skills</h4>
+                  <p>Immediate strategies you can use when anxiety, depression, or stress show up in your daily life.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Pattern Recognition</h4>
-                  <p data-astro-cid-ohz3nq7j>Understanding the cycles that keep you stuck and learning how to interrupt them.</p>
+                <div class="info-card">
+                  <h4>Pattern Recognition</h4>
+                  <p>Understanding the cycles that keep you stuck and learning how to interrupt them.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Mindfulness Training</h4>
-                  <p data-astro-cid-ohz3nq7j>Practical ways to stay present and grounded, tailored to your lifestyle and preferences.</p>
+                <div class="info-card">
+                  <h4>Mindfulness Training</h4>
+                  <p>Practical ways to stay present and grounded, tailored to your lifestyle and preferences.</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Values Work</h4>
-                  <p data-astro-cid-ohz3nq7j>Clarifying what truly matters to you and using this as a guide for decision-making.</p>
+                <div class="info-card">
+                  <h4>Values Work</h4>
+                  <p>Clarifying what truly matters to you and using this as a guide for decision-making.</p>
                 </div>
               </div>
 
-              <h3 data-astro-cid-ohz3nq7j>Ongoing Growth and Integration</h3>
-              <p data-astro-cid-ohz3nq7j>As you practice new approaches and develop greater self-awareness, we'll continue to refine and adapt our work based on what's most helpful for your unique situation. Some clients prefer weekly sessions for a few months, while others prefer biweekly sessions over a longer period. We'll find a rhythm that supports your growth without adding stress to your life.</p>
+              <h3>Ongoing Growth and Integration</h3>
+              <p>As you practice new approaches and develop greater self-awareness, we'll continue to refine and adapt our work based on what's most helpful for your unique situation. Some clients prefer weekly sessions for a few months, while others prefer biweekly sessions over a longer period. We'll find a rhythm that supports your growth without adding stress to your life.</p>
 
-              <p data-astro-cid-ohz3nq7j>The goal is to help you develop skills and insights you can use independently. Many clients find that after establishing a foundation, they can manage their mental health much more effectively on their own, checking in occasionally for support during stressful periods or major life transitions.</p>
+              <p>The goal is to help you develop skills and insights you can use independently. Many clients find that after establishing a foundation, they can manage their mental health much more effectively on their own, checking in occasionally for support during stressful periods or major life transitions.</p>
 
-              <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Start Your Counselling Journey</a>
+              <div style="text-align: center; margin-top: var(--space-xl);">
+                <a href="/#contact" class="btn btn-primary">Start Your Counselling Journey</a>
               </div>
             </div>
           </div>
@@ -413,90 +440,90 @@
       </section>
 
       <!-- About Your Counsellor Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>About Your Counsellor</h2>
-              <p data-astro-cid-ohz3nq7j>I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) providing professional counselling services to individuals throughout Ontario. What drew me to this work was my own understanding of what it's like to be someone who thinks deeply, cares deeply, and sometimes struggles with the weight of that sensitivity in a complex world.</p>
+      <section class="section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>About Your Counsellor</h2>
+              <p>I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) providing professional counselling services to individuals throughout Ontario. What drew me to this work was my own understanding of what it's like to be someone who thinks deeply, cares deeply, and sometimes struggles with the weight of that sensitivity in a complex world.</p>
 
-              <p data-astro-cid-ohz3nq7j>I understand the unique challenges of living in Ontariofrom the seasonal mood changes that many experience during our long winters, to the work-life balance pressures of modern professional life, to the relationship challenges that come with trying to maintain meaningful connections while managing busy schedules and competing demands.</p>
+              <p>I understand the unique challenges of living in Ontario—from the seasonal mood changes that many experience during our long winters, to the work-life balance pressures of modern professional life, to the relationship challenges that come with trying to maintain meaningful connections while managing busy schedules and competing demands.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>My Approach to Professional Counselling:</h3>
-              <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>Human Connection First</h4>
-                <p data-astro-cid-ohz3nq7j>While I'm trained in evidence-based therapeutic approaches, what matters most is that you feel heard, understood, and supported. The relationship we build together is the foundation that makes all other techniques and strategies possible.</p>
+              <h3>My Approach to Professional Counselling:</h3>
+              <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                <h4>Human Connection First</h4>
+                <p>While I'm trained in evidence-based therapeutic approaches, what matters most is that you feel heard, understood, and supported. The relationship we build together is the foundation that makes all other techniques and strategies possible.</p>
 
-                <h4 data-astro-cid-ohz3nq7j>Practical and Sustainable</h4>
-                <p data-astro-cid-ohz3nq7j>Everything we work on together needs to be realistic for your actual life circumstances. I'm not interested in giving you strategies that sound good in theory but don't work in practice for your schedule, personality, and real-world challenges.</p>
+                <h4>Practical and Sustainable</h4>
+                <p>Everything we work on together needs to be realistic for your actual life circumstances. I'm not interested in giving you strategies that sound good in theory but don't work in practice for your schedule, personality, and real-world challenges.</p>
 
-                <h4 data-astro-cid-ohz3nq7j>Collaborative Partnership</h4>
-                <p data-astro-cid-ohz3nq7j>You're the expert on your own experience. My role is to bring professional knowledge and evidence-based tools, but you decide what feels useful, relevant, and aligned with your goals and values.</p>
+                <h4>Collaborative Partnership</h4>
+                <p>You're the expert on your own experience. My role is to bring professional knowledge and evidence-based tools, but you decide what feels useful, relevant, and aligned with your goals and values.</p>
 
-                <h4 data-astro-cid-ohz3nq7j>Strength-Based Perspective</h4>
-                <p data-astro-cid-ohz3nq7j>Many of the qualities that make you susceptible to anxiety or depressionbeing thoughtful, empathetic, conscientiousare also tremendous strengths. We'll work with these qualities, not against them.</p>
+                <h4>Strength-Based Perspective</h4>
+                <p>Many of the qualities that make you susceptible to anxiety or depression—being thoughtful, empathetic, conscientious—are also tremendous strengths. We'll work with these qualities, not against them.</p>
               </div>
 
-              <h3 data-astro-cid-ohz3nq7j>Professional Training & Credentials</h3>
-              <p data-astro-cid-ohz3nq7j>I'm registered with the College of Registered Psychotherapists of Ontario (CRPO #10979), which means I'm held to strict professional standards and ethical guidelines. I'm trained in evidence-based approaches including Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), with specialized experience in anxiety disorders, depression, and stress management.</p>
+              <h3>Professional Training & Credentials</h3>
+              <p>I'm registered with the College of Registered Psychotherapists of Ontario (CRPO #10979), which means I'm held to strict professional standards and ethical guidelines. I'm trained in evidence-based approaches including Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT), with specialized experience in anxiety disorders, depression, and stress management.</p>
 
-              <p data-astro-cid-ohz3nq7j>I provide virtual counselling services to individuals throughout Ontario, which means you can access professional support regardless of your location in the province. Whether you're in Toronto, Ottawa, Thunder Bay, or a small town in between, quality mental health care is available to you.</p>
+              <p>I provide virtual counselling services to individuals throughout Ontario, which means you can access professional support regardless of your location in the province. Whether you're in Toronto, Ottawa, Thunder Bay, or a small town in between, quality mental health care is available to you.</p>
 
-              <p data-astro-cid-ohz3nq7j>Outside of my professional work, I understand firsthand the challenge of maintaining mental health and work-life balance in modern life. This isn't just professional knowledge for meit's lived experience that informs how I approach our work together with empathy, understanding, and realistic expectations.</p>
+              <p>Outside of my professional work, I understand firsthand the challenge of maintaining mental health and work-life balance in modern life. This isn't just professional knowledge for me—it's lived experience that informs how I approach our work together with empathy, understanding, and realistic expectations.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Getting Started Section -->
-      <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <div class="content-card" data-astro-cid-ohz3nq7j>
-              <h2 data-astro-cid-ohz3nq7j>Getting Started with Professional Counselling in Ontario</h2>
-              <p data-astro-cid-ohz3nq7j>Taking the first step toward counselling can feel vulnerable, especially when you're already dealing with mental health challenges. Here's what the process looks like, designed to be as comfortable and straightforward as possible:</p>
+      <section class="section alternate-bg">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-card">
+              <h2>Getting Started with Professional Counselling in Ontario</h2>
+              <p>Taking the first step toward counselling can feel vulnerable, especially when you're already dealing with mental health challenges. Here's what the process looks like, designed to be as comfortable and straightforward as possible:</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Free 15-Minute Consultation</h3>
-              <p data-astro-cid-ohz3nq7j>We'll start with a brief phone call where you can share what you're experiencing and ask any questions about counselling. This is completely free and there's no obligation to continue. You can share as much or as little as feels comfortable about your situation.</p>
+              <h3>Free 15-Minute Consultation</h3>
+              <p>We'll start with a brief phone call where you can share what you're experiencing and ask any questions about counselling. This is completely free and there's no obligation to continue. You can share as much or as little as feels comfortable about your situation.</p>
 
-              <p data-astro-cid-ohz3nq7j>During this call, I'll also explain how virtual counselling works and address any technical concerns you might have. If you can make a video call with family or friends, you can do virtual counsellingit's that simple.</p>
+              <p>During this call, I'll also explain how virtual counselling works and address any technical concerns you might have. If you can make a video call with family or friends, you can do virtual counselling—it's that simple.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>Investment and Insurance Coverage</h3>
-              <p data-astro-cid-ohz3nq7j>Most extended health plans in Ontario cover services provided by a Registered Psychotherapist. I provide detailed receipts that make it easy to submit to your insurance company for reimbursement. Virtual sessions are covered the same way as in-person sessions by most insurance providers.</p>
+              <h3>Investment and Insurance Coverage</h3>
+              <p>Most extended health plans in Ontario cover services provided by a Registered Psychotherapist. I provide detailed receipts that make it easy to submit to your insurance company for reimbursement. Virtual sessions are covered the same way as in-person sessions by most insurance providers.</p>
 
-              <div class="info-cards" data-astro-cid-ohz3nq7j>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Session Investment</h4>
-                  <p data-astro-cid-ohz3nq7j>$175 per 50-minute session</p>
+              <div class="info-cards">
+                <div class="info-card">
+                  <h4>Session Investment</h4>
+                  <p>$175 per 50-minute session</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Insurance Coverage</h4>
-                  <p data-astro-cid-ohz3nq7j>Most plans cover 80-100% of the session fee</p>
+                <div class="info-card">
+                  <h4>Insurance Coverage</h4>
+                  <p>Most plans cover 80-100% of the session fee</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>Flexible Scheduling</h4>
-                  <p data-astro-cid-ohz3nq7j>Morning, afternoon, evening, and weekend options available</p>
+                <div class="info-card">
+                  <h4>Flexible Scheduling</h4>
+                  <p>Morning, afternoon, evening, and weekend options available</p>
                 </div>
-                <div class="info-card" data-astro-cid-ohz3nq7j>
-                  <h4 data-astro-cid-ohz3nq7j>No Long-Term Contract</h4>
-                  <p data-astro-cid-ohz3nq7j>We'll work together as long as it's helpful, whether that's a few sessions or many months</p>
+                <div class="info-card">
+                  <h4>No Long-Term Contract</h4>
+                  <p>We'll work together as long as it's helpful, whether that's a few sessions or many months</p>
                 </div>
               </div>
 
-              <h3 data-astro-cid-ohz3nq7j>The Ontario Virtual Advantage</h3>
-              <p data-astro-cid-ohz3nq7j>Virtual counselling is particularly beneficial for Ontario residents. No need to navigate winter weather, traffic, or parking. No time lost to commuting. No geographical barriers preventing access to the right counsellor for your needs. Professional mental health support that works with your schedule and location, not against it.</p>
+              <h3>The Ontario Virtual Advantage</h3>
+              <p>Virtual counselling is particularly beneficial for Ontario residents. No need to navigate winter weather, traffic, or parking. No time lost to commuting. No geographical barriers preventing access to the right counsellor for your needs. Professional mental health support that works with your schedule and location, not against it.</p>
 
-              <p data-astro-cid-ohz3nq7j>Many clients find that having sessions in their own space helps them feel more comfortable and authentic. Plus, you can immediately apply insights and strategies from our sessions to your real environment rather than having to transition from a therapist's office back to your daily life.</p>
+              <p>Many clients find that having sessions in their own space helps them feel more comfortable and authentic. Plus, you can immediately apply insights and strategies from our sessions to your real environment rather than having to transition from a therapist's office back to your daily life.</p>
 
-              <h3 data-astro-cid-ohz3nq7j>What Happens Next</h3>
-              <p data-astro-cid-ohz3nq7j>After our consultation, if we decide to work together, we'll schedule your first full session at a time that works for your schedule. Between sessions, you're welcome to email with questions or insightssupporting your growth between our meetings is part of the process.</p>
+              <h3>What Happens Next</h3>
+              <p>After our consultation, if we decide to work together, we'll schedule your first full session at a time that works for your schedule. Between sessions, you're welcome to email with questions or insights—supporting your growth between our meetings is part of the process.</p>
 
-              <p data-astro-cid-ohz3nq7j>Most people start to notice some shifts within the first few sessions, though meaningful change typically unfolds over weeks to months. We'll regularly check in about what's working, what isn't, and how to adjust our approach to best support your unique situation and goals.</p>
+              <p>Most people start to notice some shifts within the first few sessions, though meaningful change typically unfolds over weeks to months. We'll regularly check in about what's working, what isn't, and how to adjust our approach to best support your unique situation and goals.</p>
 
-              <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md);" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>Ready to Take the First Step?</h4>
-                <p style="margin-bottom: var(--space-md);" data-astro-cid-ohz3nq7j>Your free consultation is just a phone call away. No pressure, no commitmentjust a conversation about how professional counselling might support what you're experiencing right now.</p>
-                <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Book Your Free Consultation</a>
+              <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md);">
+                <h4>Ready to Take the First Step?</h4>
+                <p style="margin-bottom: var(--space-md);">Your free consultation is just a phone call away. No pressure, no commitment—just a conversation about how professional counselling might support what you're experiencing right now.</p>
+                <a href="/#contact" class="btn btn-primary">Book Your Free Consultation</a>
               </div>
             </div>
           </div>
@@ -504,34 +531,34 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="section" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="content-grid" data-astro-cid-ohz3nq7j>
-            <h2 class="section-title centered" data-astro-cid-ohz3nq7j>Frequently Asked Questions</h2>
-            <div class="faq-grid" data-astro-cid-ohz3nq7j>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"Is virtual counselling as effective as in-person?"</h4>
-                <p data-astro-cid-ohz3nq7j>Research consistently shows that virtual counselling is just as effective as in-person counselling for most mental health concerns, including anxiety and depression. Many clients actually prefer the convenience and privacy of having sessions in their own space.</p>
+      <section class="section">
+        <div class="container">
+          <div class="content-grid">
+            <h2 class="section-title centered">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h4>"Is virtual counselling as effective as in-person?"</h4>
+                <p>Research consistently shows that virtual counselling is just as effective as in-person counselling for most mental health concerns, including anxiety and depression. Many clients actually prefer the convenience and privacy of having sessions in their own space.</p>
               </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"How do I know if I need professional counselling?"</h4>
-                <p data-astro-cid-ohz3nq7j>If mental health concerns are affecting your daily life, relationships, work performance, or overall well-being, counselling can help. You don't need to wait for a crisisearly support often prevents bigger problems later and can improve your quality of life significantly.</p>
+              <div class="faq-item">
+                <h4>"How do I know if I need professional counselling?"</h4>
+                <p>If mental health concerns are affecting your daily life, relationships, work performance, or overall well-being, counselling can help. You don't need to wait for a crisis—early support often prevents bigger problems later and can improve your quality of life significantly.</p>
               </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"What's the difference between a counsellor and a psychotherapist?"</h4>
-                <p data-astro-cid-ohz3nq7j>In Ontario, these terms are often used interchangeably. As a Registered Psychotherapist (CRPO #10979), I provide professional counselling and psychotherapy services using evidence-based therapeutic approaches for mental health concerns.</p>
+              <div class="faq-item">
+                <h4>"What's the difference between a counsellor and a psychotherapist?"</h4>
+                <p>In Ontario, these terms are often used interchangeably. As a Registered Psychotherapist (CRPO #10979), I provide professional counselling and psychotherapy services using evidence-based therapeutic approaches for mental health concerns.</p>
               </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"How long does counselling typically take?"</h4>
-                <p data-astro-cid-ohz3nq7j>This varies significantly based on individual needs and goals. Some people feel substantially better after a few sessions, while others prefer longer-term support. We'll regularly discuss your progress and adjust the frequency and duration based on what's most helpful for you.</p>
+              <div class="faq-item">
+                <h4>"How long does counselling typically take?"</h4>
+                <p>This varies significantly based on individual needs and goals. Some people feel substantially better after a few sessions, while others prefer longer-term support. We'll regularly discuss your progress and adjust the frequency and duration based on what's most helpful for you.</p>
               </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"Will my information be kept confidential?"</h4>
-                <p data-astro-cid-ohz3nq7j>Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements under professional and legal standards. What we discuss stays between us, with very limited exceptions related to safety concerns as required by law.</p>
+              <div class="faq-item">
+                <h4>"Will my information be kept confidential?"</h4>
+                <p>Yes, absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements under professional and legal standards. What we discuss stays between us, with very limited exceptions related to safety concerns as required by law.</p>
               </div>
-              <div class="faq-item" data-astro-cid-ohz3nq7j>
-                <h4 data-astro-cid-ohz3nq7j>"Can I contact you between sessions if I need support?"</h4>
-                <p data-astro-cid-ohz3nq7j>Yes, you can email me between sessions with questions, insights, or clarifications about techniques we've discussed. While I can't provide counselling via email, I can offer brief support and guidance as part of your overall care.</p>
+              <div class="faq-item">
+                <h4>"Can I contact you between sessions if I need support?"</h4>
+                <p>Yes, you can email me between sessions with questions, insights, or clarifications about techniques we've discussed. While I can't provide counselling via email, I can offer brief support and guidance as part of your overall care.</p>
               </div>
             </div>
           </div>
@@ -539,98 +566,42 @@
       </section>
 
       <!-- Final CTA Section -->
-      <section class="contact-section" id="contact" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-          <div class="contact-content" data-astro-cid-ohz3nq7j>
-            <h2 data-astro-cid-ohz3nq7j>You Don't Have to Navigate Life's Challenges Alone</h2>
-            <p class="contact-lead" data-astro-cid-ohz3nq7j>If you're ready to develop practical skills for managing stress, anxiety, depression, or relationship challenges, professional counselling can provide the support and tools you need. You deserve to feel confident, peaceful, and aligned with what matters most to you.</p>
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2>You Don't Have to Navigate Life's Challenges Alone</h2>
+            <p class="contact-lead">If you're ready to develop practical skills for managing stress, anxiety, depression, or relationship challenges, professional counselling can provide the support and tools you need. You deserve to feel confident, peaceful, and aligned with what matters most to you.</p>
 
-            <h3 data-astro-cid-ohz3nq7j>Free 15-Minute Consultation</h3>
-            <p data-astro-cid-ohz3nq7j>Start with a no-pressure conversation about what you're experiencing and how counselling might help. This brief call helps us both determine if we're a good fit before making any commitment to ongoing work together.</p>
+            <h3>Free 15-Minute Consultation</h3>
+            <p>Start with a no-pressure conversation about what you're experiencing and how counselling might help. This brief call helps us both determine if we're a good fit before making any commitment to ongoing work together.</p>
 
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;" data-astro-cid-ohz3nq7j>
-              <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Schedule 15-Min Call</a>
-              <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary" data-astro-cid-ohz3nq7j>Send Message</a>
+            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;">
+              <a href="/#contact" class="btn btn-primary">Schedule 15-Min Call</a>
+              <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Send Message</a>
             </div>
 
-            <div class="contact-info" data-astro-cid-ohz3nq7j>
-              <h4 data-astro-cid-ohz3nq7j>Professional Counselling Throughout Ontario</h4>
-              <div class="therapist-details" data-astro-cid-ohz3nq7j>
-                <p data-astro-cid-ohz3nq7j>
-                  <strong data-astro-cid-ohz3nq7j>Jesse Cynamon, RP</strong><br data-astro-cid-ohz3nq7j>
-                  Registered Psychotherapist | CRPO #10979<br data-astro-cid-ohz3nq7j>
-                  Virtual Counselling | All of Ontario<br data-astro-cid-ohz3nq7j>
+            <div class="contact-info">
+              <h4>Professional Counselling Throughout Ontario</h4>
+              <div class="therapist-details">
+                <p>
+                  <strong>Jesse Cynamon, RP</strong><br>
+                  Registered Psychotherapist | CRPO #10979<br>
+                  Virtual Counselling | All of Ontario<br>
                   Insurance Receipts Provided | Flexible Scheduling
                 </p>
               </div>
 
-              <div class="professional-disclosure" style="margin-top: var(--space-lg); padding: var(--space-md); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md); font-size: 0.875rem; color: #5A6B7D;" data-astro-cid-ohz3nq7j>
-                <p data-astro-cid-ohz3nq7j><strong data-astro-cid-ohz3nq7j>Jesse Cynamon, RP</strong></p>
-                <p data-astro-cid-ohz3nq7j>Registered Psychotherapist | CRPO Registration #10979</p>
-                <p data-astro-cid-ohz3nq7j>Providing professional psychotherapy services throughout Ontario</p>
-                <p data-astro-cid-ohz3nq7j>All services provided in compliance with CRPO standards and guidelines</p>
+              <div class="professional-disclosure" style="margin-top: var(--space-lg); padding: var(--space-md); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md); font-size: 0.875rem; color: #5A6B7D;">
+                <p><strong>Jesse Cynamon, RP</strong></p>
+                <p>Registered Psychotherapist | CRPO Registration #10979</p>
+                <p>Providing professional psychotherapy services throughout Ontario</p>
+                <p>All services provided in compliance with CRPO standards and guidelines</p>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <!-- Floating Mobile CTA -->
-    <a href="tel:+14163062157" class="floating-mobile-cta" data-astro-cid-ohz3nq7j>
-      =� Schedule 15-Min Call
-    </a>
-
-    <!-- Smart Sticky Header JavaScript -->
-    <script type="module">
-      document.addEventListener("DOMContentLoaded", function() {
-        const header = document.querySelector(".header.smart-sticky");
-        if (!header) return;
-
-        let lastScrollY = window.scrollY;
-        let isVisible = true;
-        const headerHeight = header.offsetHeight;
-        const scrollThreshold = 10;
-
-        function updateHeader() {
-          const currentScrollY = window.scrollY;
-
-          if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
-            return;
-          }
-
-          if (currentScrollY <= headerHeight) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          } else if (currentScrollY > lastScrollY && isVisible) {
-            header.style.transform = `translateY(-${headerHeight}px)`;
-            isVisible = false;
-          } else if (currentScrollY < lastScrollY && !isVisible) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          }
-
-          lastScrollY = currentScrollY;
-        }
-
-        let ticking = false;
-        function requestTick() {
-          if (!ticking) {
-            requestAnimationFrame(updateHeader);
-            ticking = true;
-          }
-        }
-
-        window.addEventListener("scroll", function() {
-          requestTick();
-          ticking = false;
-        }, { passive: true });
-
-        header.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
-        header.style.transform = "translateY(0)";
-      });
-    </script>
-  <script src="/js/security-check.js"></script>
 
     <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
@@ -644,5 +615,6 @@
             lucide.createIcons();
         });
     </script>
+  <script src="/js/security-check.js"></script>
 </body>
 </html>

@@ -51,25 +51,17 @@
     <link rel="canonical" href="https://nextsteptherapy.ca/students/student-mental-health-ottawa">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Student Mental Health Ottawa | University of Ottawa & Carleton Support">
+    <meta property="og:title" content="Student Mental Health Ottawa | University of Ottawa & Carleton University Support">
     <meta property="og:description" content="Professional mental health support for University of Ottawa & Carleton University students in Ottawa. Virtual therapy for university stress, anxiety, and student life challenges.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/students/student-mental-health-ottawa">
-
-    <!-- Shared CSS --><!-- Design Fixes - Unified Visual System -->
-    <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
-
-    <!-- Performance Optimizations -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-      "name": "Student Mental Health Ottawa - University Support",
+  "name": "Student Mental Health Ottawa - University of Ottawa & Carleton University Support",
   "description": "Professional mental health support for Ottawa students, specifically University of Ottawa & Carleton University students dealing with academic stress, university anxiety, and student life challenges.",
   "url": "https://nextsteptherapy.ca/students/student-mental-health-ottawa",
   "provider": {
@@ -92,72 +84,153 @@
 }
     </script>
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
+    <!-- Fonts - Gemini Design System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
     </script>
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        .btn btn-primary { background: var(--navy, #1e3a4f) !important; color: #fff !important; font-weight: 600 !important; padding: 1.25rem 2.5rem !important; border-radius: var(--radius-lg) !important; text-decoration: none !important; transition: all .3s ease !important; display: inline-block !important; min-height: 48px !important; box-shadow: var(--shadow-soft) !important; }
-        .btn btn-primary:hover { background: #5a7d5e !important; transform: translateY(-2px) !important; box-shadow: var(--shadow-medium) !important; color: #fff !important; }
-        .btn btn-secondary { background: transparent !important; color: var(--navy, #1e3a4f) !important; border: 1.5px solid var(--navy, #1e3a4f) !important; font-weight: 600 !important; padding: 1rem 2rem !important; border-radius: var(--radius-lg) !important; text-decoration: none !important; transition: all .3s ease !important; display: inline-block !important; min-height: 48px !important; }
-        .btn btn-secondary:hover { background: var(--navy, #1e3a4f) !important; color: #fff !important; transform: translateY(-2px) !important; }
-        .hero-with-bg { position: relative; background: var(--background-primary); padding: var(--space-section) 0; overflow: hidden; }
-        .hero-with-bg:before { content: ""; position: absolute; inset: 0; background-image: url(/images/therapy-session-warm.jpg); background-size: cover; background-position: center; opacity: .3; z-index: 1; }
-        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 700px; margin: 0 auto; }
-        .hero-content h1 { text-shadow: 0 2px 4px rgba(0,0,0,.1); }
-        .hero-content .lead-text { text-shadow: 0 1px 2px rgba(0,0,0,.1); }
-        .trust-pills { display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap; margin: var(--space-lg) 0; }
-        .trust-pill { background: rgba(74, 124, 89, 0.1); color: var(--navy, #1e3a4f); padding: .5rem 1rem; border-radius: 50px; font-size: .875rem; font-weight: 500; border: 1px solid rgba(74, 124, 89, 0.2); }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: var(--space-md); max-width: 800px; margin: 0 auto; }
-        .info-card { background: #f8f9fa; padding: var(--space-lg); border-radius: var(--radius-md); text-align: center; }
-        .floating-mobile-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background: var(--navy, #1e3a4f); color: #fff; padding: 1rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.3); display: none; }
-        @media (max-width: 768px) { .floating-mobile-cta { display: block; } }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        .section { padding: 4rem 1rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        .content-grid { display: grid; gap: 2rem; }
+        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
+        .alternate-bg { background: #f1f5f9; }
+        .faq-grid { display: grid; gap: 1.5rem; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
+        .faq-item h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.125rem; }
+        .centered { text-align: center; }
+        .contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 4rem 2rem; color: white; }
+        .contact-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-content h2 { color: white; font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+        .contact-lead { font-size: 1.125rem; opacity: 0.95; margin-bottom: 2rem; }
+        .contact-content h3 { color: white; font-family: 'Playfair Display', serif; margin-top: 2rem; margin-bottom: 1rem; }
+        .contact-info h4 { color: white; margin-top: 2rem; margin-bottom: 1rem; }
+        .therapist-details p { opacity: 0.9; }
+        a { color: #1e3a4f; }
+        a:hover { color: #4a7c59; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid white; }
+        .btn-secondary:hover { background: transparent; color: white; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .section { padding: 2rem 0; }
+            .content-wrapper { padding: 1rem 0; }
+        }
     </style>
 </head>
-<body>
+<body class="font-body bg-cream">
     <!-- Header -->
-    <header class="header smart-sticky">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                    <a href="/" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge-prominent">CRPO #10979</span>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
-                <nav class="nav">
-                    <a href="/#approach">Approach</a>
-                    <a href="/#specializations">Services</a>
-                    <a href="/#contact">Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <a href="tel:+14163062157" class="header-phone">(416) 306-2157</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section with Background Image -->
-        <section class="hero-with-bg">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Student Mental Health Support in Ottawa</h1>
-                    <p class="lead-text">University life at University of Ottawa & Carleton University shouldn't feel overwhelming every single day. If you're struggling with academic pressure, feeling isolated despite being surrounded by people, or questioning whether you belong here, you're not alone. Professional mental health support designed specifically for Ottawa students can help you navigate university challenges while building resilience for your future.</p>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">STUDENT MENTAL HEALTH</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Student Mental Health Support in Ottawa</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">University life at University of Ottawa & Carleton University shouldn't feel overwhelming every single day. If you're struggling with academic pressure, feeling isolated despite being surrounded by people, or questioning whether you belong here, you're not alone. Professional mental health support designed specifically for Ottawa students can help you navigate university challenges while building resilience for your future.</p>
 
-                    <!-- Trust Pills -->
-                    <div class="trust-pills">
-                        <span class="trust-pill">✓ CRPO #10979</span>
-                        <span class="trust-pill">✓ $175/session</span>
-                        <span class="trust-pill">✓ Same-Week Available</span>
-                        <span class="trust-pill">✓ Insurance Receipts</span>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Schedule 15-Min Student Consult
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i> $175/session</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                        </div>
                     </div>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
-                        <a href="/#contact" class="btn btn-primary">Schedule 15-Min Student Consult</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Academic Stress</h3>
+                            <p class="text-gray-600 text-sm">Handle pressure without burning out</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="users" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Social Anxiety</h3>
+                            <p class="text-gray-600 text-sm">Build meaningful connections</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+                            <p class="text-gray-600 text-sm">From your dorm or apartment</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Student Insurance</h3>
+                            <p class="text-gray-600 text-sm">Coverage typically available</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,12 +244,12 @@
                         <h2>The Hidden Struggles of Ottawa Students</h2>
                         <p>Being a student in Ottawa, especially at University of Ottawa & Carleton University, comes with unique pressures that many students don't talk about openly. From the academic intensity to financial stress, social pressures, and uncertainty about the future, student life can feel overwhelming. Many Ottawa students describe experiences that might sound familiar:</p>
 
-                        <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                        <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg, 1.5rem); border-radius: var(--radius-md, 0.75rem); margin: 1.5rem 0;">
                             <h3>"Does This Sound Like Your University Experience?"</h3>
                             <ul class="feature-list">
                                 <li><strong>Constant Academic Pressure:</strong> Every assignment feels like it determines your entire future, making it hard to enjoy learning</li>
                                 <li><strong>Social Isolation on Campus:</strong> Surrounded by thousands of students but feeling completely alone and disconnected</li>
-                                <li><strong>Imposter Syndrome:</strong> Feeling like you don't belong at university, despite earning your place here</li>
+                                <li><strong>Imposter Syndrome:</strong> Feeling like you don't belong at Ottawa universities', despite earning your place here</li>
                                 <li><strong>Financial Stress:</strong> Worrying about tuition, living expenses, and student debt affecting your mental health</li>
                                 <li><strong>Family Expectations:</strong> Pressure from family to succeed while trying to figure out your own path</li>
                                 <li><strong>Career Anxiety:</strong> Uncertainty about your future and whether your degree will lead to meaningful work</li>
@@ -197,7 +270,7 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h2>Understanding Student Mental Health in Ottawa</h2>
-                        <p>Student mental health challenges often develop during university years because this is a time of intense transition, high stress, and major life decisions. In Ottawa, with the academic rigor and the pressure of post-secondary education, these challenges can feel particularly overwhelming.</p>
+                        <p>Student mental health challenges often develop during university years because this is a time of intense transition, high stress, and major life decisions. In Ottawa, with Ottawa universities''s academic rigor and the pressure of post-secondary education, these challenges can feel particularly overwhelming.</p>
                         <p>University mental health concerns aren't signs of weakness—they're common responses to significant life transitions, academic pressure, and the challenges of early adulthood. Most student mental health issues are highly treatable with appropriate support.</p>
 
                         <h3>Common Mental Health Challenges for Ottawa Students:</h3>
@@ -222,7 +295,7 @@
 
                         <p>Understanding your specific mental health pattern helps us develop targeted strategies that work with your academic schedule and student lifestyle. You don't need to struggle through university alone.</p>
 
-                        <div style="text-align: center; margin-top: var(--space-xl);">
+                        <div style="text-align: center; margin-top: 2rem;">
                             <a href="/#contact" class="btn btn-primary">Get Student Mental Health Support</a>
                         </div>
                     </div>
@@ -240,7 +313,7 @@
                         <p>Using evidence-based approaches like Acceptance and Commitment Therapy (ACT), we focus on helping you develop psychological flexibility around university stressors while staying connected to your values and goals as a student.</p>
 
                         <h3>What This Looks Like for Students:</h3>
-                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                        <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 0.75rem; margin: 1.5rem 0;">
                             <h4>Instead of Fighting Student Stress, You Learn to:</h4>
                             <ul class="feature-list">
                                 <li><strong>Manage Academic Pressure:</strong> Develop sustainable study habits and handle exam stress without burning out</li>
@@ -263,16 +336,16 @@
             </div>
         </section>
 
-        <!-- Ottawa-Specific Section -->
+        <!-- Ottawa universities'-Specific Section -->
         <section class="section alternate-bg">
             <div class="container">
                 <div class="content-grid">
                     <div class="content-card">
                         <h2>Supporting University of Ottawa & Carleton University Students</h2>
-                        <p>As a therapist who works with many students from Ottawa's universities, I understand the unique challenges of studying at rigorous institutions. From the intensity of demanding programs to the pressure of competitive graduate school applications, Ottawa students face distinct stressors.</p>
+                        <p>As a therapist who works with many University of Ottawa & Carleton University students, I understand the unique challenges of studying at one of Canada's most academically rigorous universities. From the intensity of University of Ottawa & Carleton University's demanding programs to the pressure of competitive graduate school applications, Ottawa students face distinct stressors.</p>
 
-                        <h3>Common Ottawa Student Challenges:</h3>
-                        <div style="background: rgba(107, 142, 111, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                        <h3>Common University of Ottawa & Carleton University Student Challenges:</h3>
+                        <div style="background: rgba(107, 142, 111, 0.05); padding: 1.5rem; border-radius: 0.75rem; margin: 1.5rem 0;">
                             <h4>Academic-Specific Stressors:</h4>
                             <ul class="feature-list">
                                 <li><strong>Pre-Med Competition:</strong> Intense pressure to maintain high GPAs for medical school applications</li>
@@ -291,11 +364,11 @@
                             </div>
                             <div class="info-card">
                                 <h4>Transportation Challenges</h4>
-                                <p>Navigating Ottawa's transit system (OC Transpo) and campus accessibility, especially during harsh winters.</p>
+                                <p>Navigating Ottawa's transit system and campus accessibility, especially during harsh winters.</p>
                             </div>
                             <div class="info-card">
                                 <h4>Social Integration</h4>
-                                <p>Finding your community within large student bodies and diverse academic programs.</p>
+                                <p>Finding your community within University of Ottawa & Carleton University's student body and diverse academic programs.</p>
                             </div>
                             <div class="info-card">
                                 <h4>Work-Study Balance</h4>
@@ -303,7 +376,7 @@
                             </div>
                         </div>
 
-                        <p>Understanding these specific challenges allows us to develop strategies that work within the realities of Ottawa student life, not against them.</p>
+                        <p>Understanding these specific challenges allows us to develop strategies that work within the realities of Ottawa universities' student life, not against them.</p>
                     </div>
                 </div>
             </div>
@@ -315,13 +388,13 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h2>Student Insurance Coverage for Mental Health</h2>
-                        <p>Most student insurance plans provide excellent coverage for mental health services from a Registered Psychotherapist. Students at University of Ottawa and Carleton University typically have access to mental health benefits through their student insurance plans (e.g., UOSU, CUSA).</p>
+                        <p>Most student insurance plans provide excellent coverage for mental health services from a Registered Psychotherapist. Ottawa universities' students, along with students from other institutions, typically have access to mental health benefits through their student insurance plans.</p>
 
                         <h3>Student Coverage Details:</h3>
                         <div class="info-cards">
                             <div class="info-card">
                                 <h4>Ottawa Student Insurance</h4>
-                                <p>Student Health & Dental Plans typically cover registered psychotherapist services</p>
+                                <p>Student Health & Dental Plan typically covers registered psychotherapist services</p>
                             </div>
                             <div class="info-card">
                                 <h4>Provincial Student Plans</h4>
@@ -351,11 +424,11 @@
                 <div class="content-grid">
                     <div class="content-card">
                         <h2>About Your Therapist</h2>
-                        <p>I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who has extensive experience working with university students throughout Ontario, including many students from University of Ottawa & Carleton University. What draws me to student mental health work is understanding how crucial these years are for personal development and future success.</p>
+                        <p>I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who has extensive experience working with university students throughout Ontario, including many students from University of Ottawa & Carleton University in Ottawa. What draws me to student mental health work is understanding how crucial these years are for personal development and future success.</p>
                         <p>I recognize that university mental health challenges are often about more than just academic stress—they're about identity development, future uncertainty, social pressures, and the significant life transitions that happen during university years.</p>
 
                         <h3>My Approach to Student Mental Health:</h3>
-                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                        <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 0.75rem; margin: 1.5rem 0;">
                             <h4>Student-Centered and Practical</h4>
                             <p>Everything we work on together needs to fit with your real life as a student—class schedules, academic demands, limited budget, and busy lifestyle.</p>
 
@@ -369,7 +442,7 @@
                             <p>While addressing current challenges, we also focus on developing resilience and skills that will benefit your future career and relationships.</p>
                         </div>
 
-                        <p>I provide therapy virtually throughout Ontario, which means Ottawa students can access support without commuting across the city or fitting appointments around class schedules. Virtual sessions often work particularly well for students who appreciate the convenience and privacy.</p>
+                        <p>I provide therapy virtually throughout Ontario, which means University of Ottawa & Carleton University students and other Ottawa students can access support without commuting across the city or fitting appointments around class schedules. Virtual sessions often work particularly well for students who appreciate the convenience and privacy.</p>
                         <p>Outside of clinical work, I understand the balance between academic achievement and personal well-being. This isn't just professional knowledge—it's a perspective that informs how I approach our work together.</p>
                     </div>
                 </div>
@@ -421,7 +494,7 @@
                     <h3>Free 15-Minute Student Consultation</h3>
                     <p>Start with a no-pressure conversation about what you're experiencing as a student and how therapy might help. This brief call helps us both determine if we're a good fit and answers any questions about the process.</p>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;">
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
                         <a href="tel:+14163062157" class="btn btn-primary">Schedule 15-Min Student Consult</a>
                         <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Send Message</a>
                     </div>
@@ -440,150 +513,12 @@
         </section>
     </main>
 
-    <!-- Floating Mobile CTA -->
-    <a href="tel:+14163062157" class="floating-mobile-cta">
-📞 Book Student Call
-    </a>
-
-    <!-- Smart Sticky Header JavaScript -->
-    <script type="module">
-        document.addEventListener("DOMContentLoaded", function() {
-            const header = document.querySelector(".header.smart-sticky");
-            if (!header) return;
-
-            let lastScrollY = window.scrollY;
-            let isHeaderVisible = true;
-            const headerHeight = header.offsetHeight;
-            const scrollThreshold = 10;
-
-            function updateHeader() {
-                const currentScrollY = window.scrollY;
-                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-
-                if (scrollDifference < scrollThreshold) {
-                    return;
-                }
-
-                if (currentScrollY <= headerHeight) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-                    header.style.transform = `translateY(-${headerHeight}px)`;
-                    isHeaderVisible = false;
-                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                }
-
-                lastScrollY = currentScrollY;
-            }
-
-            let ticking = false;
-            function requestTick() {
-                if (!ticking) {
-                    requestAnimationFrame(updateHeader);
-                    ticking = true;
-                }
-            }
-
-            window.addEventListener('scroll', function() {
-                requestTick();
-                ticking = false;
-            }, { passive: true });
-
-            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            header.style.transform = 'translateY(0)';
-        });
+    <script>
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     </script>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: var(--navy, #1e3a4f); font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: var(--navy, #1e3a4f);">All Services →</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Ontario Service Areas</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: var(--navy, #1e3a4f);">All Ontario →</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Focused Support</h4>
-                    <ul>
-                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources & Guides</h4>
-                    <ul>
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
-                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Professional Standards</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                    </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Ottawa therapy services and province-wide virtual support</p>
-                </div>
-            </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
-                </p>
-            </div>
-            <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> October 28, 2025</p>
-            </div>
-        </div>
-    </footer>
-
-<script src="/js/security-check.js"></script>
+    <script src="/js/security-check.js"></script>
 </body>
 </html>

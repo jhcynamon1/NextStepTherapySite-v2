@@ -475,16 +475,17 @@ The executive stress page succeeds because it:
 
 ## Integration Notes for Future Implementation
 
-### Combine with AAA Framework & Brand Voice
+### Combine with Brand Voice
+
+**Current voice reference:** `/docs/branding/voice/BRAND-VOICE.md`
 
 When implementing these changes, integrate with:
-1. **AAA Framework** (Authentic Voice Discovery)
-2. **Brand Voice Therapy** skill
-3. **Jesse's Voice DNA** patterns
+1. **Brand Voice Therapy** skill (`.claude/skills/brand-voice-therapy/SKILL.md`)
+2. Voice patterns from BRAND-VOICE.md
 
 **Key principle:** The executive stress page works because it's BOTH AI-optimizable AND authentic. Changes to other pages should:
 - Add professional identity + performance context
-- Maintain Jesse's authentic voice (check-ins, vulnerability, process over outcomes)
+- Maintain Jesse's authentic voice (confident vulnerability, not hedging)
 - Use the "WITH the client, not ahead" framing
 - Keep the practical, non-touchy-feely tone that resonates with high-achievers
 
@@ -493,6 +494,8 @@ When implementing these changes, integrate with:
 - Written TO leaders, not ABOUT them
 - Sophisticated problem framing, not acute symptom lists
 - Jesse's authentic voice with professional context layered in
+
+*See BRAND-VOICE.md for approved phrases, kill list, and voice dial settings.*
 
 ---
 
@@ -504,7 +507,7 @@ When implementing these changes, integrate with:
 4. Monitor Ahrefs AI traffic reports monthly
 5. **NEW:** Implement page-specific improvements above
 6. **NEW:** Re-test with ChatGPT queries after changes
-7. **NEW:** Integrate AAA Framework voice patterns during implementation
+7. **NEW:** Apply brand voice patterns from `/docs/branding/voice/BRAND-VOICE.md`
 8. **NEW:** Create the 6 missing pages identified below
 
 ---
@@ -1162,8 +1165,9 @@ For each new page:
 3. Add Organization + Service schema
 4. Include AI-optimized summary near top
 5. Build internal links to/from executive stress page
-6. Test with ChatGPT queries after publishing
-7. Monitor AI referral traffic in Ahrefs
+6. Verify voice with BRAND-VOICE.md patterns
+7. Test with ChatGPT queries after publishing
+8. Monitor AI referral traffic in Ahrefs
 
 ### Optional Future Research
 

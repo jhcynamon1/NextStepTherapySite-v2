@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-astro-cid-ohz3nq7j>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- Google Analytics 4 + Conversion Tracking -->
@@ -57,7 +57,7 @@
     <meta property="og:url" content="https://nextsteptherapy.ca/depression-therapy-london.html">
 
     <!-- Shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+
 
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,7 +155,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -166,6 +166,7 @@
                         navy: '#1e3a4f',
                         sage: '#4a7c59',
                         cream: '#f8f6f2',
+                        sand: '#e8d5c4',
                         'navy-light': '#2d5066'
                     },
                     fontFamily: {
@@ -176,10 +177,10 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
@@ -205,112 +206,157 @@
         .alternate-bg { background: #f1f5f9; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+        .faq-grid { display: grid; gap: 1.5rem; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
+        .faq-item h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }
+        .contact-section h2, .contact-section h3, .contact-section h4 { color: white; }
+        .contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }
+        .contact-info { margin-top: 2rem; }
+        .therapist-details { margin-top: 1rem; }
     </style>
 </head>
 
-<body data-astro-cid-ohz3nq7j>
+<body class="font-body bg-cream">
     <!-- Header -->
-    <header class="header smart-sticky" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-            <div class="header-content" data-astro-cid-ohz3nq7j>
-                <div class="logo-section" data-astro-cid-ohz3nq7j>
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'" data-astro-cid-ohz3nq7j>
-                    <a href="/" class="logo-text" data-astro-cid-ohz3nq7j>Next Step Therapy</a>
-                    <span class="credentials-badge-prominent" data-astro-cid-ohz3nq7j>CRPO #10979</span>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
-                <nav class="nav" data-astro-cid-ohz3nq7j>
-                    <a href="/#approach" data-astro-cid-ohz3nq7j>Approach</a>
-                    <a href="/#specializations" data-astro-cid-ohz3nq7j>Services</a>
-                    <a href="/#contact" data-astro-cid-ohz3nq7j>Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <a href="tel:+14163062157" class="header-phone" data-astro-cid-ohz3nq7j>(416) 306-2157</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main data-astro-cid-ohz3nq7j>
-        <!-- Hero Section -->
-        <section class="hero-with-bg" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="hero-content" data-astro-cid-ohz3nq7j>
-                    <h1 data-astro-cid-ohz3nq7j>Depression Therapy London: Find Your Way Back to Yourself</h1>
-                    <p class="lead-text" data-astro-cid-ohz3nq7j>Professional support for depression, low mood, and persistent sadness in London, Southwestern Ontario's thriving cultural and educational hub. Serving students, professionals, and families in London's diverse community who need effective, accessible mental health care.</p>
+    <main class="pt-20">
+        <!-- Hero Section - 2 Column Gemini Design -->
+        <section class="bg-gradient-to-b from-cream to-white py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Content -->
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-sage/10 text-sage text-sm font-semibold rounded-full mb-4">Depression Support</div>
+                        <h1 class="font-display text-4xl md:text-5xl font-bold text-navy mb-6">Depression Therapy London: Find Your Way Back to Yourself</h1>
+                        <p class="text-lg text-gray-600 mb-8">Professional support for depression, low mood, and persistent sadness in London, Southwestern Ontario's thriving cultural and educational hub. Serving students, professionals, and families in London's diverse community who need effective, accessible mental health care.</p>
 
-                    <!-- Trust Pills -->
-                    <div class="trust-pills" data-astro-cid-ohz3nq7j>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ CRPO #10979 Licensed</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Serving London</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Virtual Sessions Available</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Insurance Receipts Provided</span>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <a href="/#contact" class="bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-light transition-colors shadow-sm">Schedule 15-Min Call</a>
+                            <a href="tel:+14163062157" class="bg-white text-navy px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors border border-navy">Call (416) 306-2157</a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-700 border border-gray-200"><i data-lucide="check" class="w-3 h-3 text-sage"></i> CRPO #10979 Licensed</span>
+                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-700 border border-gray-200"><i data-lucide="check" class="w-3 h-3 text-sage"></i> Serving London</span>
+                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-700 border border-gray-200"><i data-lucide="check" class="w-3 h-3 text-sage"></i> Virtual Sessions</span>
+                            <span class="inline-flex items-center gap-1 px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-700 border border-gray-200"><i data-lucide="check" class="w-3 h-3 text-sage"></i> Insurance Receipts</span>
+                        </div>
                     </div>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                        <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Schedule 15-Min Call</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary" data-astro-cid-ohz3nq7j>Call (416) 306-2157</a>
+                    <!-- Right Column: Feature Cards -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="brain" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-semibold text-navy mb-2">ACT Therapy</h3>
+                            <p class="text-sm text-gray-600">Evidence-based approach for depression</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="video" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-semibold text-navy mb-2">Virtual Care</h3>
+                            <p class="text-sm text-gray-600">Accessible from anywhere in London</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-semibold text-navy mb-2">CRPO Registered</h3>
+                            <p class="text-sm text-gray-600">Licensed psychotherapist</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="calendar-check" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-semibold text-navy mb-2">Free Consultation</h3>
+                            <p class="text-sm text-gray-600">15-minute intro call available</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Problem Recognition Section -->
-        <section class="section" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="content-grid" data-astro-cid-ohz3nq7j>
-                    <div class="content-card" data-astro-cid-ohz3nq7j>
-                        <h2 data-astro-cid-ohz3nq7j>Understanding Depression Therapy in London</h2>
-                        <p data-astro-cid-ohz3nq7j">Living in London comes with unique challenges that can affect your mental health. Whether you're dealing with the demands of students, professionals, and families in London's diverse community, depression therapy can provide the support and strategies you need to feel better and function well.</p>
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>Understanding Depression Therapy in London</h2>
+                        <p>Living in London comes with unique challenges that can affect your mental health. Whether you're dealing with the demands of students, professionals, and families in London's diverse community, depression therapy can provide the support and strategies you need to feel better and function well.</p>
 
-                        <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                            <h3 data-astro-cid-ohz3nq7j>Common Depression Therapy Issues in London:</h3>
-                            <ul class="feature-list" data-astro-cid-ohz3nq7j>
-                                <li data-astro-cid-ohz3nq7j>Persistent sadness or feeling empty most days</li>
-                                <li data-astro-cid-ohz3nq7j>Loss of interest in activities you used to enjoy</li>
-                                <li data-astro-cid-ohz3nq7j>Difficulty concentrating or making decisions</li>
-                                <li data-astro-cid-ohz3nq7j>Changes in sleep patterns or appetite</li>
-                                <li data-astro-cid-ohz3nq7j>Feelings of hopelessness or worthlessness</li>
+                        <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                            <h3>Common Depression Therapy Issues in London:</h3>
+                            <ul class="feature-list">
+                                <li>Persistent sadness or feeling empty most days</li>
+                                <li>Loss of interest in activities you used to enjoy</li>
+                                <li>Difficulty concentrating or making decisions</li>
+                                <li>Changes in sleep patterns or appetite</li>
+                                <li>Feelings of hopelessness or worthlessness</li>
                             </ul>
                         </div>
 
-                        <p data-astro-cid-ohz3nq7j">If you're experiencing any of these challenges in London, you're not alone. Many people in Middlesex County face similar struggles, and professional support can make a significant difference in your quality of life.</p>
+                        <p>If you're experiencing any of these challenges in London, you're not alone. Many people in Middlesex County face similar struggles, and professional support can make a significant difference in your quality of life.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- How Therapy Helps Section -->
-        <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="content-grid" data-astro-cid-ohz3nq7j>
-                    <div class="content-card" data-astro-cid-ohz3nq7j>
-                        <h2 data-astro-cid-ohz3nq7j>How Depression Therapy Helps London Residents</h2>
-                        <p data-astro-cid-ohz3nq7j>Depression therapy focuses on understanding your unique experience and developing personalized strategies. We use evidence-based approaches to help you reconnect with meaning and purpose in your life.</p>
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>How Depression Therapy Helps London Residents</h2>
+                        <p>Depression therapy focuses on understanding your unique experience and developing personalized strategies. We use evidence-based approaches to help you reconnect with meaning and purpose in your life.</p>
 
-                        <h3 data-astro-cid-ohz3nq7j>Benefits of Depression Therapy for London Residents:</h3>
-                        <div class="info-cards" data-astro-cid-ohz3nq7j>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Understand and address underlying causes of depression</p>
+                        <h3>Benefits of Depression Therapy for London Residents:</h3>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <p>Understand and address underlying causes of depression</p>
                             </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Develop healthy coping mechanisms for low mood</p>
+                            <div class="info-card">
+                                <p>Develop healthy coping mechanisms for low mood</p>
                             </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Rebuild motivation and interest in activities</p>
+                            <div class="info-card">
+                                <p>Rebuild motivation and interest in activities</p>
                             </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Improve sleep, appetite, and energy levels</p>
+                            <div class="info-card">
+                                <p>Improve sleep, appetite, and energy levels</p>
                             </div>
-                            <div class="info-card" data-astro-cid-ohz3nq7j>
-                                <p data-astro-cid-ohz3nq7j>Create sustainable strategies for long-term mental wellness</p>
+                            <div class="info-card">
+                                <p>Create sustainable strategies for long-term mental wellness</p>
                             </div>
                         </div>
 
-                        <h3 data-astro-cid-ohz3nq7j>Virtual Therapy: Perfect for London Residents</h3>
-                        <p data-astro-cid-ohz3nq7j">Virtual therapy sessions are ideal for busy residents of London. Whether you're dealing with traffic, work commitments, or simply prefer the convenience of accessing therapy from home, virtual sessions provide the same quality care as in-person appointments.</p>
+                        <h3>Virtual Therapy: Perfect for London Residents</h3>
+                        <p>Virtual therapy sessions are ideal for busy residents of London. Whether you're dealing with traffic, work commitments, or simply prefer the convenience of accessing therapy from home, virtual sessions provide the same quality care as in-person appointments.</p>
 
-                        <p data-astro-cid-ohz3nq7j">As a registered psychotherapist serving all of Ontario, I can provide professional depression therapy to residents throughout London and surrounding areas like Kitchener, Windsor, Stratford.</p>
+                        <p>As a registered psychotherapist serving all of Ontario, I can provide professional depression therapy to residents throughout London and surrounding areas like Kitchener, Windsor, Stratford.</p>
 
-                        <div style="text-align: center; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                            <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Start Your Depression Therapy Journey</a>
+                        <div style="text-align: center; margin-top: var(--space-xl);">
+                            <a href="/#contact" class="btn btn-primary">Start Your Depression Therapy Journey</a>
                         </div>
                     </div>
                 </div>
@@ -318,60 +364,60 @@
         </section>
 
         <!-- About Your Therapist Section -->
-        <section class="section" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="content-grid" data-astro-cid-ohz3nq7j>
-                    <div class="content-card" data-astro-cid-ohz3nq7j>
-                        <h2 data-astro-cid-ohz3nq7j>About Your Therapist</h2>
-                        <p data-astro-cid-ohz3nq7j">I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who provides professional mental health services to residents throughout Ontario, including London. I understand the unique challenges facing people in London and work with clients to develop practical, effective strategies that fit their lives.</p>
+        <section class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>About Your Therapist</h2>
+                        <p>I'm Jesse Cynamon, a Registered Psychotherapist (CRPO #10979) who provides professional mental health services to residents throughout Ontario, including London. I understand the unique challenges facing people in London and work with clients to develop practical, effective strategies that fit their lives.</p>
 
-                        <h3 data-astro-cid-ohz3nq7j>My Approach to Depression Therapy:</h3>
-                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j>Evidence-Based and Practical</h4>
-                            <p data-astro-cid-ohz3nq7j">I use proven therapeutic approaches that are tailored to your specific situation and goals, ensuring that our work together translates into real improvements in your daily life.</p>
+                        <h3>My Approach to Depression Therapy:</h3>
+                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+                            <h4>Evidence-Based and Practical</h4>
+                            <p>I use proven therapeutic approaches that are tailored to your specific situation and goals, ensuring that our work together translates into real improvements in your daily life.</p>
 
-                            <h4 data-astro-cid-ohz3nq7j>Accessible and Convenient</h4>
-                            <p data-astro-cid-ohz3nq7j">Virtual therapy sessions eliminate travel time and provide flexibility for your schedule, making it easier to prioritize your mental health.</p>
+                            <h4>Accessible and Convenient</h4>
+                            <p>Virtual therapy sessions eliminate travel time and provide flexibility for your schedule, making it easier to prioritize your mental health.</p>
 
-                            <h4 data-astro-cid-ohz3nq7j>Culturally Informed</h4>
-                            <p data-astro-cid-ohz3nq7j">I understand the specific stressors and opportunities that come with living in London, and I incorporate this understanding into our therapeutic work.</p>
+                            <h4>Culturally Informed</h4>
+                            <p>I understand the specific stressors and opportunities that come with living in London, and I incorporate this understanding into our therapeutic work.</p>
                         </div>
 
-                        <p data-astro-cid-ohz3nq7j">Whether you're new to therapy or have worked with other therapists before, I'm committed to providing a supportive, non-judgmental environment where you can explore your experiences and develop lasting strategies for better mental health.</p>
+                        <p>Whether you're new to therapy or have worked with other therapists before, I'm committed to providing a supportive, non-judgmental environment where you can explore your experiences and develop lasting strategies for better mental health.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="section alternate-bg" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="content-grid" data-astro-cid-ohz3nq7j>
-                    <h2 class="section-title centered" data-astro-cid-ohz3nq7j>Frequently Asked Questions</h2>
-                    <div class="faq-grid" data-astro-cid-ohz3nq7j>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"Do you provide depression therapy to residents of London?"</h4>
-                            <p data-astro-cid-ohz3nq7j">Yes! As a registered psychotherapist in Ontario, I provide virtual depression therapy to residents throughout London and all of Ontario. Virtual sessions are just as effective as in-person therapy.</p>
+        <section class="section alternate-bg">
+            <div class="container">
+                <div class="content-grid">
+                    <h2 class="section-title centered">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>"Do you provide depression therapy to residents of London?"</h4>
+                            <p>Yes! As a registered psychotherapist in Ontario, I provide virtual depression therapy to residents throughout London and all of Ontario. Virtual sessions are just as effective as in-person therapy.</p>
                         </div>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How does virtual therapy work for London residents?"</h4>
-                            <p data-astro-cid-ohz3nq7j">Virtual therapy sessions take place over secure video calls from the comfort of your own space. This is particularly convenient for London residents who want to avoid travel time and prefer the privacy of their own environment.</p>
+                        <div class="faq-item">
+                            <h4>"How does virtual therapy work for London residents?"</h4>
+                            <p>Virtual therapy sessions take place over secure video calls from the comfort of your own space. This is particularly convenient for London residents who want to avoid travel time and prefer the privacy of their own environment.</p>
                         </div>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"Will my insurance cover depression therapy sessions?"</h4>
-                            <p data-astro-cid-ohz3nq7j">Most extended health plans in Ontario provide coverage for registered psychotherapist services. I provide detailed receipts that make it easy to submit claims to your insurance provider.</p>
+                        <div class="faq-item">
+                            <h4>"Will my insurance cover depression therapy sessions?"</h4>
+                            <p>Most extended health plans in Ontario provide coverage for registered psychotherapist services. I provide detailed receipts that make it easy to submit claims to your insurance provider.</p>
                         </div>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How do I know if depression therapy is right for me?"</h4>
-                            <p data-astro-cid-ohz3nq7j">The best way to determine if depression therapy is a good fit is through a free 15-minute consultation. We can discuss your specific situation and goals to see if this approach would be helpful for you.</p>
+                        <div class="faq-item">
+                            <h4>"How do I know if depression therapy is right for me?"</h4>
+                            <p>The best way to determine if depression therapy is a good fit is through a free 15-minute consultation. We can discuss your specific situation and goals to see if this approach would be helpful for you.</p>
                         </div>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"What makes your approach different from other therapists in London?"</h4>
-                            <p data-astro-cid-ohz3nq7j">I specialize in evidence-based approaches like Acceptance and Commitment Therapy (ACT), and I understand the specific challenges facing residents of London. My focus is on practical strategies that work in real life.</p>
+                        <div class="faq-item">
+                            <h4>"What makes your approach different from other therapists in London?"</h4>
+                            <p>I specialize in evidence-based approaches like Acceptance and Commitment Therapy (ACT), and I understand the specific challenges facing residents of London. My focus is on practical strategies that work in real life.</p>
                         </div>
-                        <div class="faq-item" data-astro-cid-ohz3nq7j>
-                            <h4 data-astro-cid-ohz3nq7j">"How long does depression therapy typically take?"</h4>
-                            <p data-astro-cid-ohz3nq7j">The length of therapy varies depending on your specific goals and situation. Some people see improvements in a few sessions, while others benefit from longer-term support. We'll work together to determine what's right for you.</p>
+                        <div class="faq-item">
+                            <h4>"How long does depression therapy typically take?"</h4>
+                            <p>The length of therapy varies depending on your specific goals and situation. Some people see improvements in a few sessions, while others benefit from longer-term support. We'll work together to determine what's right for you.</p>
                         </div>
                     </div>
                 </div>
@@ -379,27 +425,27 @@
         </section>
 
         <!-- Final CTA Section -->
-        <section class="contact-section" id="contact" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="contact-content" data-astro-cid-ohz3nq7j>
-                    <h2 data-astro-cid-ohz3nq7j>Get Depression Therapy Support in London</h2>
-                    <p class="contact-lead" data-astro-cid-ohz3nq7j">Ready to take the next step in your mental health journey? Professional depression therapy can help you feel better and function more effectively in your daily life in London.</p>
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Get Depression Therapy Support in London</h2>
+                    <p class="contact-lead">Ready to take the next step in your mental health journey? Professional depression therapy can help you feel better and function more effectively in your daily life in London.</p>
 
-                    <h3 data-astro-cid-ohz3nq7j">Free 15-Minute Consultation</h3>
-                    <p data-astro-cid-ohz3nq7j">Start with a brief, no-pressure conversation about your goals and how depression therapy might help. This consultation helps us both determine if we're a good fit to work together.</p>
+                    <h3>Free 15-Minute Consultation</h3>
+                    <p>Start with a brief, no-pressure conversation about your goals and how depression therapy might help. This consultation helps us both determine if we're a good fit to work together.</p>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;" data-astro-cid-ohz3nq7j>
-                        <a href="tel:+14163062157" class="btn btn-primary" data-astro-cid-ohz3nq7j>Schedule 15-Min Call</a>
-                        <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary" data-astro-cid-ohz3nq7j>Send Message</a>
+                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;">
+                        <a href="tel:+14163062157" class="btn btn-primary">Schedule 15-Min Call</a>
+                        <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Send Message</a>
                     </div>
 
-                    <div class="contact-info" data-astro-cid-ohz3nq7j>
-                        <h4 data-astro-cid-ohz3nq7j>Depression Therapy for London Residents</h4>
-                        <div class="therapist-details" data-astro-cid-ohz3nq7j>
-                            <p data-astro-cid-ohz3nq7j">
-                                <strong data-astro-cid-ohz3nq7j>Jesse Cynamon, RP</strong><br data-astro-cid-ohz3nq7j>
-                                Registered Psychotherapist | CRPO #10979<br data-astro-cid-ohz3nq7j>
-                                Serving London & All Ontario | Virtual Sessions Available<br data-astro-cid-ohz3nq7j>
+                    <div class="contact-info">
+                        <h4>Depression Therapy for London Residents</h4>
+                        <div class="therapist-details">
+                            <p>
+                                <strong>Jesse Cynamon, RP</strong><br>
+                                Registered Psychotherapist | CRPO #10979<br>
+                                Serving London & All Ontario | Virtual Sessions Available<br>
                                 Insurance Receipts Provided | Free 15-Minute Consultation
                             </p>
                         </div>
@@ -410,7 +456,7 @@
     </main>
 
     <!-- Floating Mobile CTA -->
-    <a href="tel:+14163062157" class="floating-mobile-cta" data-astro-cid-ohz3nq7j>
+    <a href="tel:+14163062157" class="floating-mobile-cta">
         📞 Book London Call
     </a>
 
