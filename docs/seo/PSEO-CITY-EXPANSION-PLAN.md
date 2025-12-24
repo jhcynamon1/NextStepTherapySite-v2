@@ -300,8 +300,8 @@ Run through checklist in Part 3.
 |------|-------------|-----------------|--------|
 | Markham | [x] | [x] | ✅ COMPLETE |
 | Vaughan | [x] | [x] | ✅ COMPLETE |
-| Oakville | [ ] | [ ] | 🔲 Not started |
-| Richmond Hill | [ ] | [ ] | 🔲 Not started |
+| Oakville | [x] | [x] | ✅ COMPLETE |
+| Richmond Hill | [x] | [x] | ✅ COMPLETE |
 | Whitby | [ ] | [ ] | 🔲 Not started |
 | Ajax | [ ] | [ ] | 🔲 Not started |
 | Pickering | [ ] | [ ] | 🔲 Not started |
