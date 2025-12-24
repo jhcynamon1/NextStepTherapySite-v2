@@ -11,7 +11,7 @@
 
     <!-- SEO Meta Data -->
     <title>Hamilton Stress Getting to You? Therapy That Actually Helps</title>
-    <meta name="description" content="Hamilton stress overwhelming your daily life? Professional virtual therapy from your home. Steel City-specific support. Same-week appointments."
+    <meta name="description" content="Hamilton stress overwhelming your daily life? Professional virtual therapy from your home. Steel City-specific support. Same-week appointments.">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/therapy-hamilton-ontario.html">
@@ -58,9 +58,6 @@
     <meta name="author" content="Jesse Cynamon, RP">
     <meta name="publisher" content="Next Step Therapy">
     <meta name="copyright" content="Next Step Therapy">
-
-    <!-- Shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
 
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,7 +176,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -187,26 +184,27 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        body { font-family: 'Inter', sans-serif; background-color: #faf7f2; }
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .content-grid { display: grid; gap: 2rem; }
@@ -222,7 +220,7 @@
         .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
         .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card { background: #faf7f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
         .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
         .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
         .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
@@ -232,49 +230,81 @@
     </style>
 </head>
 
-  <body data-astro-cid-hamilton1>
+  <body class="font-body bg-cream" data-astro-cid-hamilton1>
     <!-- Header -->
-    <header class="header smart-sticky" data-astro-cid-hamilton1>
-      <div class="container" data-astro-cid-hamilton1>
-        <div class="header-content" data-astro-cid-hamilton1>
-          <div class="logo-section" data-astro-cid-hamilton1>
-            <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'" data-astro-cid-hamilton1>
-            <a href="/" class="logo-text" data-astro-cid-hamilton1>Next Step Therapy</a>
-            <span class="credentials-badge-prominent" data-astro-cid-hamilton1>CRPO #10979</span>
-          </div>
-          <nav class="nav" data-astro-cid-hamilton1>
-            <a href="/#approach" data-astro-cid-hamilton1>Approach</a>
-            <a href="/#specializations" data-astro-cid-hamilton1>Services</a>
-            <a href="/#contact" data-astro-cid-hamilton1>Contact</a>
-          </nav>
-          <a href="tel:+14163062157" class="header-phone" data-astro-cid-hamilton1>(416) 306-2157</a>
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
 
-    <main data-astro-cid-hamilton1>
+    <main class="pt-20" data-astro-cid-hamilton1>
       <!-- Hero Section -->
-      <section class="hero-with-bg" data-astro-cid-hamilton1>
-        <div class="container" data-astro-cid-hamilton1>
-          <div class="hero-content" data-astro-cid-hamilton1>
-            <h1 data-astro-cid-hamilton1>Hamilton Stress Getting to You? Therapy That Actually Helps</h1>
-            <p class="lead-text" data-astro-cid-hamilton1>Hamilton's unique blend of industrial heritage and academic excellence creates both opportunities and stresses for residents. Whether you're a McMaster student, healthcare worker at Hamilton Health Sciences, or professional navigating the city's economic transformation, therapy can provide support for the challenges you're facing in the Steel City.</p>
+      <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">HAMILTON SUPPORT</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Hamilton Stress Getting to You? Therapy That Actually Helps</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Hamilton's unique blend of industrial heritage and academic excellence creates both opportunities and stresses for residents. Whether you're a McMaster student, healthcare worker at Hamilton Health Sciences, or professional navigating the city's economic transformation, therapy can provide support for the challenges you're facing in the Steel City.</p>
 
-            <!-- Trust Pills -->
-            <div class="trust-pills" data-astro-cid-hamilton1>
-              <span class="trust-pill" data-astro-cid-hamilton1>✓ CRPO #10979 Licensed</span>
-              <span class="trust-pill" data-astro-cid-hamilton1>✓ Virtual Sessions Available</span>
-              <span class="trust-pill" data-astro-cid-hamilton1>✓ Insurance Receipts Provided</span>
-              <span class="trust-pill" data-astro-cid-hamilton1>✓ Free 15-Min Consultation</span>
-            </div>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="/#contact" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Schedule 15-Min Call
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Call (416) 306-2157
+                            </a>
+                        </div>
 
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-hamilton1>
-              <a href="/#contact" class="btn btn-primary" data-astro-cid-hamilton1>Schedule 15-Min Call</a>
-              <a href="tel:+14163062157" class="btn btn-secondary" data-astro-cid-hamilton1>Call (416) 306-2157</a>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="video" class="w-4 h-4 text-sage"></i> Virtual Sessions</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Free 15-Min Consult</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="users" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Healthcare Workers</h3>
+                            <p class="text-gray-600 text-sm">Support for Hamilton Health Sciences and medical facility burnout.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="graduation-cap" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">McMaster Students</h3>
+                            <p class="text-gray-600 text-sm">Academic pressure and post-graduation uncertainty support.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="briefcase" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Economic Transitions</h3>
+                            <p class="text-gray-600 text-sm">Navigate career pivots as Hamilton's economy evolves.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="map-pin" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Community Change</h3>
+                            <p class="text-gray-600 text-sm">Finding belonging in Hamilton's cultural evolution.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
       <!-- Hamilton-Specific Challenges -->
       <section class="section" data-astro-cid-hamilton1>
@@ -420,58 +450,8 @@
 
     <!-- Floating Mobile CTA -->
     <a href="tel:+14163062157" class="floating-mobile-cta" data-astro-cid-hamilton1>
-      📞 Schedule Call
+      Schedule Call
     </a>
-
-    <!-- Smart Sticky Header JavaScript -->
-    <script type="module">
-      document.addEventListener("DOMContentLoaded", function() {
-        const header = document.querySelector(".header.smart-sticky");
-        if (!header) return;
-
-        let lastScrollY = window.scrollY;
-        let isVisible = true;
-        const headerHeight = header.offsetHeight;
-        const scrollThreshold = 10;
-
-        function updateHeader() {
-          const currentScrollY = window.scrollY;
-
-          if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
-            return;
-          }
-
-          if (currentScrollY <= headerHeight) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          } else if (currentScrollY > lastScrollY && isVisible) {
-            header.style.transform = `translateY(-${headerHeight}px)`;
-            isVisible = false;
-          } else if (currentScrollY < lastScrollY && !isVisible) {
-            header.style.transform = "translateY(0)";
-            isVisible = true;
-          }
-
-          lastScrollY = currentScrollY;
-        }
-
-        let ticking = false;
-        function requestTick() {
-          if (!ticking) {
-            requestAnimationFrame(updateHeader);
-            ticking = true;
-          }
-        }
-
-        window.addEventListener("scroll", function() {
-          requestTick();
-          ticking = false;
-        }, { passive: true });
-
-        header.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
-        header.style.transform = "translateY(0)";
-      });
-    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -549,7 +529,7 @@
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
                 <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
                     <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
             </div>

@@ -32,12 +32,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
     <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -45,51 +42,86 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility */
+        .section { padding: 2rem 0; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; display: flex; gap: 2rem; }
+        .main-content { flex: 1; }
+        .sidebar { width: 280px; flex-shrink: 0; }
+        .sidebar-section { background: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .sidebar-section h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #1e3a4f; margin-bottom: 1rem; }
+        .sidebar-section ul { list-style: none; padding: 0; }
+        .sidebar-section li { margin-bottom: 0.5rem; }
+        .sidebar-section a { color: #4a7c59; text-decoration: none; }
+        .sidebar-section a:hover { text-decoration: underline; }
+        .sidebar-cta { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 1.5rem; border-radius: 0.75rem; text-align: center; color: white; }
+        .sidebar-cta h3 { color: white; margin-bottom: 0.75rem; }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1rem; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1rem; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .criteria-list { padding-left: 1.5rem; margin: 1rem 0; }
+        .criteria-list li { color: #4b5563; padding: 0.25rem 0; }
+        .stages-list { padding-left: 1.5rem; margin: 1rem 0; }
+        .stages-list li { color: #4b5563; padding: 0.5rem 0; margin-bottom: 1rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
         .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
         .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
+        .btn-secondary:hover { background: #1e3a4f; color: white; text-decoration: none; }
+        .cta-inline { margin: 2rem 0; text-align: center; }
+        .mini-faq .faq-item { margin-bottom: 2rem; }
+        .mini-faq h3 { color: #1e3a4f; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .related-services { background: #f8f6f2; padding: 3rem 0; }
+        .service-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .service-links article { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .helpful-resources { padding: 3rem 0; }
+        .helpful-resources ul { list-style: none; padding: 0; }
+        .helpful-resources li { padding: 0.5rem 0; }
+        .footer { background: #1e3a4f; color: white; padding: 3rem 0 1rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { color: white; margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .footer-section a:hover { color: white; text-decoration: underline; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .section { padding: 1.5rem 0; }
+        }
     </style>
-
-    <!-- Internal style block removed by Design Audit -->
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -230,49 +262,81 @@
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
 </head>
-<body>
-
-<!-- Header -->
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'">
-                <a href="/" class="logo-text">Next Step Therapy</a>
-                <span class="credentials-badge-prominent">CRPO #10979</span>
-            </div>
-            <nav class="nav">
-                <a href="/#approach">Approach</a>
-                <a href="/virtual-therapy-ontario.html">Virtual Therapy</a>
-                <a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a>
-                <a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a>
-                <a href="https://nextsteptherapy.janeapp.com/">Schedule Call</a>
-            </nav>
-            <a href="tel:+14163062157" class="header-phone">Call (416) 306-2157</a>
-        </div>
-    </div>
-</header>
-
-<!-- Hero -->
-<section class="hero-with-bg">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Toronto Therapist for Anxiety & Burnout</h1>
-            <p class="lead-text">CRPO-registered psychotherapist for Bay Street professionals. Virtual sessions with evening availability.</p>
-
-            <div class="hero-cta">
-                <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary btn-lg">Book Free 15-Min Consultation</a>
-                <a href="tel:+14163062157" class="btn btn-secondary btn-lg">Call (416) 306-2157</a>
-            </div>
-
-            <div class="trust-pills">
-                <span class="trust-pill">✓ CRPO #10979</span>
-                <span class="trust-pill">✓ Same-Week Appointments</span>
-                <span class="trust-pill">✓ Evening Slots</span>
+<body class="font-body bg-cream">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">TORONTO THERAPIST</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Toronto Therapist for Anxiety & Burnout</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">CRPO-registered psychotherapist for Bay Street professionals. Virtual sessions with evening availability.</p>
+
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Book Free 15-Min Consultation
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="calendar-check" class="w-4 h-4 text-sage"></i> Same-Week Appointments</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="moon" class="w-4 h-4 text-sage"></i> Evening Slots</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="check-circle" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">CRPO Licensed</h3>
+                            <p class="text-gray-600 text-sm">Registered Psychotherapist #10979 with verified credentials.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+                            <p class="text-gray-600 text-sm">PHIPA-compliant online therapy across Toronto.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="file-text" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Receipts</h3>
+                            <p class="text-gray-600 text-sm">Detailed receipts for all major Ontario insurers.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Hours</h3>
+                            <p class="text-gray-600 text-sm">Early morning (7 AM), lunch, and evening (8 PM) slots.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <!-- Main Content -->
 <div class="container">
@@ -331,11 +395,10 @@
             <div class="cta-box" style="margin: 3rem 0;">
                 <h3>Ready to Start Therapy This Week?</h3>
                 <p>Free 15-minute consultation. Same-week appointments. Virtual sessions across Toronto.</p>
-                <div class="btn btn-primary" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="/#contact" class="btn btn-primary">Schedule 15-Min Consult</a>
-                    <a href="tel:+14163062157" class="btn btn-secondary">📞 Call (416) 306-2157</a>
+                    <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
                 </div>
-                <p style="font-size: 0.95rem; margin-top: 1.5rem; color: rgba(255,255,255,0.9);"><small>✓ CRPO #10979 Licensed  |  ✓ Insurance receipts provided  |  ✓ Evening & weekend hours</small></p>
             </div>
 
             <!-- Section 2: How to Find the Right Therapist -->
@@ -711,7 +774,7 @@
 
                 <p>I regularly work with clients from these Toronto neighborhoods:</p>
 
-                <ul class="neighborhoods-grid">
+                <ul class="criteria-list">
                     <li>Downtown (Financial District, King West)</li>
                     <li>Midtown (Yonge & Eglinton, Yorkville)</li>
                     <li>East End (Leslieville, The Beaches)</li>
@@ -731,7 +794,7 @@
 
                 <p>I believe in transparency, so here are other legitimate options for finding therapy in Toronto—along with honest pros and cons:</p>
 
-                <ul class="alternatives-list">
+                <ul class="criteria-list">
                     <li>
                         <strong>Psychology Today Directory</strong>
                         <p><strong>Good for:</strong> Browsing many therapist profiles and filtering by specialty, insurance, and approach.</p>
@@ -936,7 +999,7 @@
         <!-- Crisis Resources (CRPO Compliance) -->
         <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
             <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
                 <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
             </p>
         </div>

@@ -20,16 +20,6 @@
     <link rel="icon" type="image/png" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-    <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Internal style block removed by Design Audit -->
-
     <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
     <script>
@@ -214,6 +204,8 @@
         }
       ]
     }
+    </script>
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -222,19 +214,12 @@
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "u8v6vfikjr");
     </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
-    </script>
+
     <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -242,28 +227,33 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
         .content-grid { display: grid; gap: 2rem; }
         .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
         .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
@@ -282,64 +272,126 @@
         .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
         .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
         .alternate-bg { background: #f1f5f9; }
+        .criteria-list { padding-left: 1.5rem; margin: 1rem 0; }
+        .criteria-list li { color: #4b5563; padding: 0.25rem 0; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; margin-bottom: 1rem; }
+        .faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.25rem; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
+        .btn-secondary:hover { background: #1e3a4f; color: white; text-decoration: none; }
+
+        /* Sidebar styles */
+        .sidebar { background: white; padding: 2rem; border-radius: 1rem; margin-top: 2rem; }
+        .sidebar-section { margin-bottom: 2rem; }
+        .sidebar-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; margin-bottom: 1rem; }
+        .sidebar-section ul { list-style: none; padding: 0; }
+        .sidebar-section li { padding: 0.5rem 0; }
+        .sidebar-cta { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2rem; border-radius: 1rem; text-align: center; }
+        .sidebar-cta h3 { color: white; margin-top: 0; }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); }
+
+        /* Footer styles */
+        .footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { color: white; margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { padding: 0.25rem 0; }
+        .footer-section a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-section a:hover { color: #8cb390; }
+        .footer-phone { color: #8cb390; font-size: 1.25rem; font-weight: bold; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        @media (max-width: 768px) {
+            .section { padding: 2rem 0; }
+            .content-wrapper { padding: 1rem 0; }
+        }
     </style>
 </head>
-<body>
-
+<body class="font-body bg-cream">
     <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-<!-- Hero -->
-<section class="hero-with-bg">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Anxiety Therapy in Burlington</h1>
-            <p class="lead-text">Racing thoughts keeping you up? Virtual therapy from home—no QEW commute required. Same-week appointments available.</p>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">BURLINGTON ANXIETY THERAPY</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Anxiety Therapy in Burlington</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Racing thoughts keeping you up? Virtual therapy from home—no QEW commute required. Same-week appointments available.</p>
 
-            <div class="hero-cta">
-                <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary btn-lg">Skip the Burlington Waitlist</a>
-                <a href="tel:+14163062157" class="btn btn-secondary btn-lg">Call (416) 306-2157</a>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Skip the Burlington Waitlist
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i> $175/session</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="calendar-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Same-Week Appointments</h3>
+                            <p class="text-gray-600 text-sm">No 3-month waitlist. Start this week.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+                            <p class="text-gray-600 text-sm">From your home. No QEW traffic.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="moon" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evening Hours</h3>
+                            <p class="text-gray-600 text-sm">Sessions after 5pm available.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">CRPO Registered</h3>
+                            <p class="text-gray-600 text-sm">License #10979. Insured.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="trust-pills">
-                <span class="trust-pill">✓ CRPO #10979</span>
-                <span class="trust-pill">✓ $175/session</span>
-                <span class="trust-pill">✓ Same-Week Available</span>
-                <span class="trust-pill">✓ Insurance Receipts</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Main Content -->
-<div class="container">
-    <div class="content-wrapper">
-        <main class="main-content">
+        <!-- Content -->
+        <div class="container">
+        <div class="content-wrapper" style="display: block; max-width: 900px; margin: 4rem auto;">
 
             <!-- AI-Snippable Definition Section -->
             <section class="section">
@@ -409,7 +461,7 @@
                     <h3>Burlington Professionals: Your Insurance Likely Covers This</h3>
                     <p>Most Halton-area employers offer $1,000-$3,000 in annual mental health coverage. Start using what you've already paid for.</p>
                     <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Free 15-Min Consultation</a>
-                    <p class="cta-subtext">Same-week appointments available. CRPO #10979.</p>
+                    <p class="cta-subtext" style="font-size: 0.875rem; margin-top: 1rem;">Same-week appointments available. CRPO #10979.</p>
                     <p style="font-size: 0.875rem; color: rgba(255,255,255,0.85); margin-top: 0.5rem;">We respond within 24 hours</p>
                 </div>
             </section>
@@ -552,7 +604,7 @@
 
                 <div class="faq-item">
                     <h3>How do I choose the right therapist in Burlington?</h3>
-                    <p>Look for a therapist who has experience with your concerns and uses evidence-based approaches like CBT or ACT. Check their credentials—in Ontario, Registered Psychotherapist (RP) with CRPO registration ensures they meet professional standards. Beyond credentials, fit matters enormously: Do they explain things in ways that make sense to you? Do you feel comfortable being honest with them? Do they seem to understand your specific life circumstances (like the unique pressures of Burlington suburban life)? The free 15-minute consultation is designed to help you assess this fit before committing. Trust your instincts—if something feels off during that initial conversation, it's completely appropriate to keep looking for someone who feels like a better match.</p>
+                    <p>Look for a therapist who has a practice focus on your concerns and uses evidence-based approaches like CBT or ACT. Check their credentials—in Ontario, Registered Psychotherapist (RP) with CRPO registration ensures they meet professional standards. Beyond credentials, fit matters enormously: Do they explain things in ways that make sense to you? Do you feel comfortable being honest with them? Do they seem to understand your specific life circumstances (like the unique pressures of Burlington suburban life)? The free 15-minute consultation is designed to help you assess this fit before committing. Trust your instincts—if something feels off during that initial conversation, it's completely appropriate to keep looking for someone who feels like a better match.</p>
                 </div>
 
                 <div class="faq-item">
@@ -576,148 +628,69 @@
                 </div>
             </section>
 
-        </main>
+        </div>
+    </div>
+    </main>
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
-                    <li><a href="/burnout-therapy-toronto.html">Burnout Recovery</a></li>
-                    <li><a href="/high-functioning-anxiety-ontario.html">High-Functioning Anxiety</a></li>
-                    <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
-                    <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Free Resources</h3>
-                <ul>
-                    <li><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy Quiz?</a></li>
-                    <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
-                    <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-              </ul>
-            </div>
-
-            <div class="sidebar-cta">
-                <h3>Start Feeling Better</h3>
-                <p>Schedule a 15-minute consultation with Jesse Cynamon, RP.</p>
-                <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
-            </div>
-        </aside>
-                </div>
-              </div>
-
-<!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+    <!-- Footer -->
+    <footer class="bg-navy py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
                 <!-- Column 1: About & Contact -->
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p class="footer-book"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
+                <div>
+                    <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
+                    <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p class="text-white font-semibold text-sm">CRPO #10979 | MPsy</p>
+                    <p class="mt-4"><strong class="text-white text-sm">Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
                 </div>
 
-                <!-- Column 2: Therapy Services -->
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
+                <!-- Column 2: Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html" class="text-white/70 hover:text-white">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/70 hover:text-white">Workplace Stress</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-white/70 hover:text-white">Virtual Therapy</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Ontario Service Areas -->
-                <div class="footer-section">
-                    <h4>Ontario Service Areas</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
+                <!-- Column 3: Locations -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Locations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html" class="text-white/70 hover:text-white">Ottawa</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
+                        <li><a href="/therapy-london-ontario.html" class="text-white/70 hover:text-white">London</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 4: Specialized Support -->
-                <div class="footer-section">
-                    <h4>Specialized Support</h4>
-                    <ul>
-                        <li><a href="/high-functioning-anxiety-ontario.html">High Functioning Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy.html">Imposter Syndrome</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+                <!-- Column 4: Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/faq.html" class="text-white/70 hover:text-white">FAQ</a></li>
+                        <li><a href="/therapy-costs-ontario.html" class="text-white/70 hover:text-white">Costs</a></li>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/70 hover:text-white">About Jesse</a></li>
+                        <li><a href="/crisis-resources.html" class="text-white/70 hover:text-white">Crisis Resources</a></li>
                     </ul>
-                </div>
-
-                <!-- Column 5: Resources & Guides -->
-                <div class="footer-section">
-                    <h4>Resources & Guides</h4>
-                    <ul>
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/therapy-costs-ontario.html">Therapy Costs & Insurance</a></li>
-                        <li><a href="/what-to-expect-first-session.html">What to Expect</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 6: Professional Info -->
-                <div class="footer-section">
-                    <h4>Professional Standards</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Member: CRPO, OAMHP<br>Serving Ontario since 2022</p>
                 </div>
             </div>
 
-            <!-- Crisis Resources (CRPO Compliance) -->
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+            <!-- Crisis Resources -->
+            <div class="border-t border-white/10 pt-8 mt-12 text-center">
+                <p class="text-white/80 text-sm mb-4">
+                    <strong class="text-white">In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+                    <a href="tel:18665312600" class="text-sage-light hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
-                Ontario, Canada<br>
-                <strong>Last Updated:</strong> December 20, 2025</p>
+                <p class="text-white/60 text-xs">&copy; 2025 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada</p>
             </div>
         </div>
     </footer>
 
-<!-- Mobile Sticky CTA Bar -->
-<div class="mobile-cta-bar">
-    <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-    <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-        </div>
-
-  <script src="/js/security-check.js"></script>
-  
-    <!-- Mobile CTA Bar -->
+    <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
         <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
@@ -729,5 +702,7 @@
             lucide.createIcons();
         });
     </script>
+
+<script src="/js/security-check.js"></script>
 </body>
 </html>
