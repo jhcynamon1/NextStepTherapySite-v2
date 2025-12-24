@@ -299,7 +299,7 @@ Run through checklist in Part 3.
 | City | Anxiety Page | Depression Page | Status |
 |------|-------------|-----------------|--------|
 | Markham | [x] | [x] | ✅ COMPLETE |
-| Vaughan | [ ] | [ ] | 🔲 Not started |
+| Vaughan | [x] | [x] | ✅ COMPLETE |
 | Oakville | [ ] | [ ] | 🔲 Not started |
 | Richmond Hill | [ ] | [ ] | 🔲 Not started |
 | Whitby | [ ] | [ ] | 🔲 Not started |
