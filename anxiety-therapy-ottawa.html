@@ -205,10 +205,11 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
                         'display': ['Playfair Display', 'serif'],
@@ -252,49 +253,84 @@
 
 <body data-astro-cid-ohz3nq7j>
     <!-- Header -->
-    <header class="header smart-sticky" data-astro-cid-ohz3nq7j>
-        <div class="container" data-astro-cid-ohz3nq7j>
-            <div class="header-content" data-astro-cid-ohz3nq7j>
-                <div class="logo-section" data-astro-cid-ohz3nq7j>
-                    <img src="/images/asset104.png" alt="Next Step Therapy Logo" class="logo" onerror="this.style.display='none'" data-astro-cid-ohz3nq7j>
-                    <a href="/" class="logo-text" data-astro-cid-ohz3nq7j>Next Step Therapy</a>
-                    <span class="credentials-badge-prominent" data-astro-cid-ohz3nq7j>CRPO #10979</span>
+        <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
-                <nav class="nav" data-astro-cid-ohz3nq7j>
-                    <a href="/#approach" data-astro-cid-ohz3nq7j>Approach</a>
-                    <a href="/#specializations" data-astro-cid-ohz3nq7j>Services</a>
-                    <a href="/#contact" data-astro-cid-ohz3nq7j>Contact</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <a href="tel:+14163062157" class="header-phone" data-astro-cid-ohz3nq7j>(416) 306-2157</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <main data-astro-cid-ohz3nq7j>
+    <main data-astro-cid-ohz3nq7j>    <!-- Main Content -->
+    <main class="pt-20">
         <!-- Hero Section -->
-        <section class="hero-with-bg" data-astro-cid-ohz3nq7j>
-            <div class="container" data-astro-cid-ohz3nq7j>
-                <div class="hero-content" data-astro-cid-ohz3nq7j>
-                    <h1 data-astro-cid-ohz3nq7j>Anxiety Therapy in Ottawa - Professional Support That Gets It</h1>
-                    <p class="lead-text" data-astro-cid-ohz3nq7j>Evidence-based anxiety therapy for Ottawa professionals dealing with public sector pressure, political environment stress, and the unique demands of working in Canada's capital. CRPO-registered psychotherapist offering secure virtual sessions that fit around Question Period, committee meetings, and Ottawa's demanding work culture.</p>
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">OTTAWA ANXIETY THERAPY</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Anxiety Therapy in Ottawa - Professional Support That Gets It</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Anxiety therapy for Ottawa professionals dealing with public sector pressure, political environment stress, and bilingual workplace demands. CRPO-registered psychotherapist offering virtual sessions that understand the National Capital Region.</p>
 
-                    <!-- Trust Pills -->
-                    <div class="trust-pills" data-astro-cid-ohz3nq7j>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ CRPO #10979 Licensed</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Serving Ottawa</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Virtual Sessions Available</span>
-                        <span class="trust-pill" data-astro-cid-ohz3nq7j">✓ Insurance Receipts Provided</span>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Book in Ottawa
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i> $175/session</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                        </div>
                     </div>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);" data-astro-cid-ohz3nq7j>
-                        <a href="/#contact" class="btn btn-primary" data-astro-cid-ohz3nq7j>Schedule 15-Min Call</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary" data-astro-cid-ohz3nq7j>Call (416) 306-2157</a>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="calendar-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Same-Week Appointments</h3>
+                            <p class="text-gray-600 text-sm">No 3-month waitlist. Start this week.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+                            <p class="text-gray-600 text-sm">From your home. Secure & private.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="moon" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evening Hours</h3>
+                            <p class="text-gray-600 text-sm">Sessions after 5pm available.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">CRPO Registered</h3>
+                            <p class="text-gray-600 text-sm">License #10979. Insured.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Problem Recognition Section -->
+<!-- Problem Recognition Section -->
         <section class="section" data-astro-cid-ohz3nq7j>
             <div class="container" data-astro-cid-ohz3nq7j>
                 <div class="content-grid" data-astro-cid-ohz3nq7j>

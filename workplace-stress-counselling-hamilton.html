@@ -15,20 +15,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nextsteptherapy.ca/workplace-stress-counselling-hamilton.html">
     <meta property="og:image" content="https://nextsteptherapy.ca/images/therapy-session-warm.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    
-    <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Internal style block removed by Design Audit -->
 
     <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
@@ -147,11 +142,10 @@
       ]
     }
     </script>
+
     <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -159,97 +153,154 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        body { font-family: 'Inter', sans-serif; background-color: #faf7f2; color: #3d4f5f; line-height: 1.7; }
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; display: flex; gap: 2rem; }
+        .main-content { flex: 1; }
+        .sidebar { width: 280px; flex-shrink: 0; }
+        .sidebar-section { background: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .sidebar-section h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #1e3a4f; margin-bottom: 1rem; }
+        .sidebar-section ul { list-style: none; padding: 0; }
+        .sidebar-section li { margin-bottom: 0.5rem; }
+        .sidebar-section a { color: #4a7c59; text-decoration: none; }
+        .sidebar-section a:hover { text-decoration: underline; }
+        .sidebar-cta { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 1.5rem; border-radius: 0.75rem; text-align: center; color: white; }
+        .sidebar-cta h3 { color: white; margin-bottom: 0.75rem; }
+        .sidebar-cta p { color: rgba(255,255,255,0.9); margin-bottom: 1rem; font-size: 0.9rem; }
         .content-grid { display: grid; gap: 2rem; }
         .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
         .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
         .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
         .cta-box p { color: rgba(255,255,255,0.9); }
         .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
         .cta-box .btn-primary { background: #4a7c59; color: white; }
         .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .criteria-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .criteria-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .criteria-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .faq-item { margin-bottom: 2rem; }
+        .faq-item h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .faq-item p { color: #4b5563; }
+        .footer { background: #1e3a4f; color: white; padding: 3rem 0 1rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { color: white; margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .footer-section a:hover { color: white; text-decoration: underline; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+        h2, h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }
+        p { color: #4b5563; margin-bottom: 1rem; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+        @media (max-width: 768px) {
+            .content-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; }
+        }
     </style>
 </head>
-<body>
+<body class="font-body bg-cream">
 
     <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-<!-- Hero -->
-<section class="hero-with-bg">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Workplace Stress Counselling Hamilton: Real Support for Real Burnout</h1>
-            <p class="lead-text">Feeling the weight of the Steel City on your shoulders? Whether it's healthcare burnout, manufacturing stress, or corporate pressure, get professional support without adding another commute.</p>
-            <div class="trust-pills">
-                <span class="trust-pill">✓ CRPO #10979 Licensed</span>
-                <span class="trust-pill">✓ Virtual Therapy Clinic</span>
-                <span class="trust-pill">✓ Insurance Receipts Provided</span>
-                <span class="trust-pill">✓ Serving Hamilton Region</span>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">HAMILTON WORKPLACE STRESS</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Workplace Stress Counselling Hamilton: Real Support for Real Burnout</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Feeling the weight of the Steel City on your shoulders? Whether it's healthcare burnout, manufacturing stress, or corporate pressure, get professional support without adding another commute.</p>
+
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="/#contact" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Schedule 15-Min Call
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="video" class="w-4 h-4 text-sage"></i> Virtual Therapy</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="map-pin" class="w-4 h-4 text-sage"></i> Hamilton Region</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="heart-pulse" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Healthcare Burnout</h3>
+                            <p class="text-gray-600 text-sm">Support for HHS, St. Joe's, and McMaster staff.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="briefcase" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Corporate Stress</h3>
+                            <p class="text-gray-600 text-sm">Navigate high-pressure work environments.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Hours</h3>
+                            <p class="text-gray-600 text-sm">Evening and lunch-hour appointments.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Ready</h3>
+                            <p class="text-gray-600 text-sm">Detailed receipts for all major plans.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
-                <a href="/#contact" class="btn btn-primary">Schedule 15-Min Call</a>
-                <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 <!-- Main Content -->
 <div class="container">
@@ -260,9 +311,9 @@
             <section class="section">
                 <h2 class="section-title">Why Workplace Stress Hits Harder in Hamilton</h2>
                 <p>Hamilton's diverse economy creates unique pressures. From the high-stakes environment of our hospitals to the demands of our industrial sector, workers here face distinct challenges.</p>
-                
-                <div style="background: var(--bg-alternate); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-green);">
-                    <h3 style="margin-top: 0; color: var(--text-primary);">Common Hamilton Stressors We Treat:</h3>
+
+                <div style="background: #f8f6f2; padding: 2rem; border-radius: 12px; border-left: 4px solid #4a7c59;">
+                    <h3 style="margin-top: 0; color: #1e3a4f;">Common Hamilton Stressors We Treat:</h3>
                     <ul class="criteria-list" style="margin-bottom: 0;">
                         <li><strong>Healthcare Burnout:</strong> Systemic strain affecting staff at Hamilton Health Sciences & St. Joe's.</li>
                         <li><strong>Industrial Stress:</strong> The physical and mental toll of shift work and production demands.</li>
@@ -362,6 +413,7 @@
         </aside>
     </div>
 </div>
+    </main>
 
 <!-- Footer -->
 <footer class="footer">
@@ -371,7 +423,7 @@
                 <h4>Jesse Cynamon, RP</h4>
                 <p>Evidence-based therapy for high-performers. CRPO #10979.</p>
                 <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+                <a href="tel:+14163062157" style="color: #4a7c59; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
@@ -399,11 +451,11 @@
                 </ul>
           </div>
         </div>
-        
+
         <!-- Crisis Resources -->
         <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
             <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | 
+                <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
                 <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
             </p>
         </div>
@@ -414,14 +466,6 @@
     </div>
 </footer>
 
-<!-- Mobile Sticky CTA Bar -->
-<div class="mobile-cta-bar">
-    <a href="https://nextsteptherapy.janeapp.com/" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-    <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-</div>
-
-<!-- Smart Sticky Header JavaScript -->
-<script type="module">document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".header.smart-sticky");if(!e)return;let s=window.scrollY,t=!0;const l=e.offsetHeight,o=10;function a(){const r=window.scrollY;Math.abs(r-s)<o||(r<=l?(e.style.transform="translateY(0)",t=!0):r>s&&t?(e.style.transform=`translateY(-${l}px)`,t=!1):r<s&&!t&&(e.style.transform="translateY(0)",t=!0),s=r)}let n=!1;function i(){n||(requestAnimationFrame(a),n=!0)}window.addEventListener("scroll",function(){i(),n=!1},{passive:!0}),e.style.transition="transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",e.style.transform="translateY(0)"});</script>
 <script src="/js/security-check.js"></script>
 
     <!-- Mobile CTA Bar -->

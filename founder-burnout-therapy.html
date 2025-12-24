@@ -23,9 +23,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Import shared CSS -->
-    
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -129,7 +126,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -137,26 +134,27 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        body { font-family: 'Inter', sans-serif; background-color: #faf7f2; }
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .content-grid { display: grid; gap: 2rem; }
@@ -172,78 +170,94 @@
         .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
         .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card { background: #faf7f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
         .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
         .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
         .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
         .alternate-bg { background: #f1f5f9; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .service-card { background: white; padding: 1.5rem; border-radius: 0.75rem; }
+        .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .faq-grid { display: grid; gap: 1.5rem; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; }
+        .faq-question { font-weight: 600; color: #1e3a4f; margin-bottom: 0.75rem; }
+        .faq-answer { color: #4b5563; }
     </style>
 </head>
-<body>
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+<body class="font-body bg-cream">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="pt-20">
         <!-- Hero Section -->
-        <section class="hero-with-bg">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Founder Burnout Therapy in Ontario</h1>
-                    <p class="lead-text">The people who reach out aren't failures. They're founders who poured everything into their company—and are now wondering why it doesn't feel the way they thought it would. You can't just "take a vacation" when payroll depends on you. You can't confide in your team. And you definitely can't admit weakness to investors. So where does it go?</p>
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">FOUNDER BURNOUT</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Founder Burnout Therapy in Ontario</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">The people who reach out aren't failures. They're founders who poured everything into their company—and are now wondering why it doesn't feel the way they thought it would. You can't just "take a vacation" when payroll depends on you. You can't confide in your team. And you definitely can't admit weakness to investors. So where does it go?</p>
 
-                    <div class="hero-cta">
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary btn-lg">Start Recovery This Week</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary btn-lg">Call (416) 306-2157</a>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Start Recovery This Week
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i> $175/session</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="calendar-check" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+                        </div>
                     </div>
 
-                    <div class="trust-pills">
-                        <span class="trust-pill">✓ CRPO #10979</span>
-                        <span class="trust-pill">✓ $175/session</span>
-                        <span class="trust-pill">✓ Same-Week Available</span>
-                        <span class="trust-pill">✓ Insurance Receipts</span>
-                    </div>
-                </div>
-
-                <div class="quick-stats">
-                    <div class="quick-stat-card">
-                        <h3>Understands Startup Life</h3>
-                        <p>Runway anxiety, investor pressure, team responsibility—no explaining why "just take a vacation" doesn't help.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Complete Confidentiality</h3>
-                        <p>What happens in therapy stays in therapy. No risk to your reputation, funding, or team morale.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Identity Work</h3>
-                        <p>Separate your sense of self from your company's performance. Lead better without burning out.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Virtual & Flexible</h3>
-                        <p>Early morning, evening, weekend slots. No explaining your calendar to anyone.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="lightbulb" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Understands Startup Life</h3>
+                            <p class="text-gray-600 text-sm">Runway anxiety, investor pressure, team responsibility—no explaining why "just take a vacation" doesn't help.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="lock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Complete Confidentiality</h3>
+                            <p class="text-gray-600 text-sm">What happens in therapy stays in therapy. No risk to your reputation, funding, or team morale.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="user-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Identity Work</h3>
+                            <p class="text-gray-600 text-sm">Separate your sense of self from your company's performance. Lead better without burning out.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual & Flexible</h3>
+                            <p class="text-gray-600 text-sm">Early morning, evening, weekend slots. No explaining your calendar to anyone.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,22 +275,22 @@
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Founder Mental Health: The Reality</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">72%</div>
-                        <div class="stat-label">of founders report mental health challenges</div>
+                <div class="quick-stats">
+                    <div class="quick-stat-card">
+                        <h3>72%</h3>
+                        <p>of founders report mental health challenges</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">49%</div>
-                        <div class="stat-label">experience burnout at some point</div>
+                    <div class="quick-stat-card">
+                        <h3>49%</h3>
+                        <p>experience burnout at some point</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">30%</div>
-                        <div class="stat-label">report depression (2x general population)</div>
+                    <div class="quick-stat-card">
+                        <h3>30%</h3>
+                        <p>report depression (2x general population)</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">27%</div>
-                        <div class="stat-label">experience anxiety disorders</div>
+                    <div class="quick-stat-card">
+                        <h3>27%</h3>
+                        <p>experience anxiety disorders</p>
                     </div>
                 </div>
                 <p class="source-citation" style="text-align: center;">Sources: Michael Freeman/UC Berkeley study, Harvard Business Review, Startup Genome Report</p>
@@ -355,7 +369,7 @@
                     <p>No investors. No board. No team. Just you and a therapist who understands startup reality. 15-minute consultation to see if we're a fit.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                         <a href="tel:+14163062157" class="btn btn-primary">Call (416) 306-2157</a>
-                        <a href="https://nextsteptherapy.janeapp.com" class="secondary-cta">Book Online</a>
+                        <a href="https://nextsteptherapy.janeapp.com" class="btn btn-secondary">Book Online</a>
                     </div>
                 </div>
             </div>
@@ -460,15 +474,15 @@
                 <h3 class="section-title" style="text-align: center;">Related Challenges We Help With</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
                     <a href="/executive-stress-management-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Executive Stress</strong>
+                        <strong style="color: #1e3a4f;">Executive Stress</strong>
                         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Leadership pressure and organizational demands</p>
                     </a>
                     <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
+                        <strong style="color: #1e3a4f;">Decision Fatigue</strong>
                         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
                     </a>
                     <a href="/virtual-therapy-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Virtual Therapy</strong>
+                        <strong style="color: #1e3a4f;">Virtual Therapy</strong>
                         <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Sessions from anywhere in Ontario</p>
                     </a>
                 </div>
