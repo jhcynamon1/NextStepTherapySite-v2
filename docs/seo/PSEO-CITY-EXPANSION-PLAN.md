@@ -302,9 +302,9 @@ Run through checklist in Part 3.
 | Vaughan | [x] | [x] | ✅ COMPLETE |
 | Oakville | [x] | [x] | ✅ COMPLETE |
 | Richmond Hill | [x] | [x] | ✅ COMPLETE |
-| Whitby | [ ] | [ ] | 🔲 Not started |
-| Ajax | [ ] | [ ] | 🔲 Not started |
-| Pickering | [ ] | [ ] | 🔲 Not started |
+| Whitby | [x] | [x] | ✅ COMPLETE |
+| Ajax | [x] | [x] | ✅ COMPLETE |
+| Pickering | [x] | [x] | ✅ COMPLETE |
 | Barrie | [ ] | [ ] | 🔲 Not started |
 | Cambridge | [ ] | [ ] | 🔲 Not started |
 | Guelph | [ ] | [ ] | 🔲 Not started |
@@ -312,7 +312,7 @@ Run through checklist in Part 3.
 | Newmarket | [ ] | [ ] | 🔲 Not started |
 | Peterborough | [ ] | [ ] | 🔲 Not started |
 | Hamilton | [ ] | ✅ EXISTS | 🔲 Gap fill |
-| Oshawa | ✅ EXISTS | [ ] | 🔲 Gap fill |
+| Oshawa | ✅ EXISTS | [x] | ✅ Gap filled |
 | Kingston | [ ] | [ ] | 🔲 Gap fill |
 | Brampton | [ ] | [ ] | 🔲 Gap fill |
 
