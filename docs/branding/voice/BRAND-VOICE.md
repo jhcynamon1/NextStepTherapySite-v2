@@ -214,6 +214,22 @@ Jesse's voice is **more confident than typical "authentic" copy**. The vulnerabi
 | Process | Sort through |
 | Identify patterns | Draw connections |
 
+---
+
+## Formatting Rules
+
+### Punctuation
+
+| Don't Use | Use Instead | Reason |
+|-----------|-------------|--------|
+| Em dashes (—) | Periods or commas | Em dashes feel literary/formal, not conversational |
+| Semicolons | Periods | Break up sentences for clarity |
+| Ellipses (...) sparingly | Period or comma | Ellipses can feel passive/trailing off |
+
+**Example:**
+- ❌ "You're probably good at what you do—that's not the problem—the problem is you can't shut off."
+- ✅ "You're probably good at what you do. That's not the problem. The problem is you can't shut off."
+
 ### Words
 
 | Clinical | Jesse's Language |
