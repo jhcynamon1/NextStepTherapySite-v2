@@ -22,10 +22,7 @@
     <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- SEO Meta Data -->
     <title>Academic Anxiety in University | Why Smart Students Fail</title>
@@ -115,17 +112,12 @@
     }
     </script>
 
-    <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-        <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -144,39 +136,52 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Content styles */
+        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .author-info { display: flex; align-items: center; gap: 0.75rem; }
+        .author-badge { background: #e8f0e8; color: #4a7c59; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; }
+        .lead-text { font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-bottom: 1.5rem; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin: 2rem 0 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        h4 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.25rem 0 0.5rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .callout { background: #e8f0e8; border-left: 4px solid #4a7c59; padding: 1.5rem 2rem; border-radius: 0.5rem; margin: 1.5rem 0; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
         .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
         .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .feature-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .feature-list li { padding: 0.5rem 0 0.5rem 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; margin-bottom: 1.5rem; }
+        .faq-item h4 { margin-top: 0; }
+        .related-content { background: white; padding: 2rem; border-radius: 0.75rem; margin-top: 2rem; }
+        .related-links { list-style: none; padding: 0; }
+        .related-links li { margin: 0.75rem 0; }
+        @media (max-width: 768px) {
+            .content-section { padding: 1rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.25rem; }
+        }
     </style>
 </head>
+
 <body class="font-body bg-cream">
-        <!-- Header -->
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
@@ -198,31 +203,62 @@
         </div>
     </header>
 
-    
+    <!-- Main Content -->
+    <main class="pt-20">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="content-section">
-                    <h1>Why Smart Students Fail University: Academic Anxiety Explained</h1>
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">UNIVERSITY MENTAL HEALTH</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Why Smart Students Fail University: Academic Anxiety Explained</h1>
+                        <div class="article-meta">
+                            <div class="author-info">
+                                <span><strong>By Jesse Cynamon, RP (CRPO #10979)</strong></span>
+                                <span class="author-badge">University Mental Health Specialist</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You got 90s in high school without really trying. But now you're sitting in your dorm room staring at a textbook you've read three times without absorbing a single word, realizing you're failing the midterm tomorrow. You're not stupid—so why does university feel impossible?</p>
 
-                    <div class="article-meta">
-                        <div class="author-info">
-                            <span><strong>By Jesse Cynamon, RP (CRPO #10979)</strong></span>
-                            <span class="author-badge">University Mental Health Specialist</span>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Schedule 15-Min Call
+                            </a>
                         </div>
                     </div>
 
-                    <p class="lead-text">You got 90s in high school without really trying. Your parents told you university would be "the best years of your life." But now you're sitting in your dorm room staring at a textbook you've read three times without absorbing a single word, realizing you're failing the midterm tomorrow. You're not stupid—so why does university feel impossible?</p>
-
-                    <p class="lead-text">Academic anxiety explains why intelligent students struggle at university despite success in high school. It's not about being "smart enough." It's about what anxiety does to your brain when the stakes feel overwhelming.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Not Intelligence</h3>
+                            <p class="text-gray-600 text-sm">Academic anxiety blocks cognitive performance—you're not "not smart enough."</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="activity" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">ACT Therapy</h3>
+                            <p class="text-gray-600 text-sm">Evidence-based treatment specifically for academic anxiety and perfectionism.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+                            <p class="text-gray-600 text-sm">Therapy from your dorm or home. No stigma, no commute, flexible scheduling.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="calendar-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">8-12 Weeks</h3>
+                            <p class="text-gray-600 text-sm">Most students notice significant improvement within one semester.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Article Content -->
+        <!-- Article Content -->
         <article class="section">
             <div class="container">
                 <div class="content-section">
+                    <p class="lead-text">Academic anxiety explains why intelligent students struggle at university despite success in high school. It's not about being "smart enough." It's about what anxiety does to your brain when the stakes feel overwhelming.</p>
 
                     <h2>What Is Academic Anxiety? (And Why It Targets Smart Students)</h2>
 
@@ -289,7 +325,7 @@
 
                     <p>Academic anxiety triggers procrastination, which increases anxiety, which triggers more procrastination. Here's how:</p>
 
-                    <ol style="margin-left: 1.5rem; margin-bottom: var(--space-lg);">
+                    <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
                         <li><strong>Anxiety makes assignments feel overwhelming:</strong> A 10-page essay feels impossible when you're panicking</li>
                         <li><strong>Procrastination temporarily relieves anxiety:</strong> Avoiding the task makes you feel better short-term</li>
                         <li><strong>Anxiety returns worse than before:</strong> Now you're anxious <em>and</em> behind schedule</li>
@@ -397,7 +433,7 @@
                         <li>You're using substances to cope with academic stress</li>
                     </ul>
 
-                    <p>Academic anxiety is a legitimate mental health condition. It's not weakness, laziness, or proof you're "not cut out for university." It's treatable—and recovery is possible. Learn more about <a href="failing-university-anxiety.html" style="color: var(--primary-soft-blue); text-decoration: underline;">support for students failing due to anxiety</a>.</p>
+                    <p>Academic anxiety is a legitimate mental health condition. It's not weakness, laziness, or proof you're "not cut out for university." It's treatable—and recovery is possible. Learn more about <a href="failing-university-anxiety.html" style="color: #4a7c59; text-decoration: underline;">support for students failing due to anxiety</a>.</p>
 
                     <div class="cta-box">
                         <h3>You Don't Have to Struggle Alone</h3>
@@ -471,7 +507,7 @@
                         </ul>
                     </div>
 
-                    <div class="cta-box" style="margin-top: var(--space-xxl);">
+                    <div class="cta-box" style="margin-top: 3rem;">
                         <h3>Professional Support for Academic Anxiety in Ontario</h3>
                         <p><strong>By Jesse Cynamon, RP (CRPO #10979)</strong><br>Registered Psychotherapist specializing in university student mental health. Virtual therapy throughout Ontario—no commute, flexible scheduling, evening appointments available.</p>
                         <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
@@ -481,6 +517,7 @@
             </div>
         </article>
     </main>
+
     <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
@@ -500,9 +537,5 @@
     </a>
 
 <script src="/js/security-check.js"></script>
-
-    
-
-    
 </body>
 </html>

@@ -20,15 +20,10 @@
     <link rel="icon" type="image/png" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-    <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- Internal style block removed by Design Audit -->
 
     <!-- Google Analytics 4 + Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
@@ -120,11 +115,12 @@
       ]
     }
     </script>
+
     <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -132,115 +128,135 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility */
+        .section { padding: 2rem 0; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1rem; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .criteria-list { padding-left: 1.5rem; margin: 1rem 0; }
+        .criteria-list li { color: #4b5563; padding: 0.25rem 0; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
         .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
         .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; }
+        .faq-item { margin-bottom: 2rem; }
+        @media (max-width: 768px) {
+            .section { padding: 1.5rem 0; }
+            .content-wrapper { padding: 1rem; }
+        }
     </style>
 </head>
-<body>
-
+<body class="font-body bg-cream">
     <!-- Header -->
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Therapy for University of Toronto Students</h1>
-            <p class="hero-subtext">Navigate academic pressure, social anxiety, and life transitions. Professional support for UofT students from a CRPO Registered Psychotherapist.</p>
-            <div class="hero-cta">
-                <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=uoft_page" class="btn btn-primary">Schedule 15-Min Call</a>
-                <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-            </div>
-            <div class="trust-pills">
-                <span class="trust-pill">✓ UTSU Insurance Accepted</span>
-                <span class="trust-pill">✓ Virtual Sessions</span>
-                <span class="trust-pill">✓ No Waitlist</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Main Content -->
-    <div class="container">
-        <div class="content-wrapper">
-            <main class="main-content">
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">UOFT STUDENT SUPPORT</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Therapy for University of Toronto Students</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Navigate academic pressure, social anxiety, and life transitions. Professional support for UofT students from a CRPO Registered Psychotherapist.</p>
 
-                <!-- Stats Section -->
-                <div class="stats-grid">
-                    <div class="stat-card">
-                <span class="stat-number">90,000+</span>
-                <span class="stat-label">UofT Students</span>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=uoft_page" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Schedule 15-Min Call
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Call (416) 306-2157
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="check-circle" class="w-4 h-4 text-sage"></i> UTSU Insurance Accepted</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="video" class="w-4 h-4 text-sage"></i> Virtual Sessions</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> No Waitlist</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="graduation-cap" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">90,000+ UofT Students</h3>
+                            <p class="text-gray-600 text-sm">Large university, high academic pressure</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="trending-up" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">65% Report High Stress</h3>
+                            <p class="text-gray-600 text-sm">Academic and social challenges</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="calendar-x" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">4-6 Week Waitlist</h3>
+                            <p class="text-gray-600 text-sm">On-campus counselling services</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">CRPO #10979</h3>
+                            <p class="text-gray-600 text-sm">Registered psychotherapist</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-                    <div class="stat-card">
-                <span class="stat-number">65%</span>
-                        <span class="stat-label">Report High Stress</span>
-            </div>
-                    <div class="stat-card">
-                        <span class="stat-number">4-6 wks</span>
-                        <span class="stat-label">Waitlist on Campus</span>
-            </div>
-        </div>
+        </section>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="content-wrapper" style="display: block; max-width: 900px; margin: 4rem auto;">
 
                 <!-- Intro Section -->
                 <section class="section">
@@ -273,27 +289,27 @@
                 <section class="section">
                     <h2 class="section-title">Common Challenges We Address</h2>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">First-Year Anxiety & Adjustment</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">First-Year Anxiety & Adjustment</h3>
                     <p>The transition to UofT is brutal. You went from being top of your high school class to surrounded by thousands of equally brilliant students. Imposter syndrome hits hard—"Did I only get in by mistake?" "Everyone else seems to understand things faster than me." These thoughts are near-universal among first-years, but they feel isolating when you're the one having them.</p>
                     <p>First-year challenges often include homesickness (even for Toronto students, university life feels foreign), friend group anxiety (everyone else seems to have figured it out), academic adjustment (high school study habits don't work here), and identity questions (who am I without my high school identity?). We work on building confidence, adjusting expectations to university reality, and developing coping strategies for this major life transition.</p>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Academic Pressure & Perfectionism</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">Academic Pressure & Perfectionism</h3>
                     <p>UofT's academic rigor is no joke. You're competing for limited spots in specialist programs, POSt requirements create cutthroat competition, and grade deflation means even excellent work might earn a 75. Add grad school requirements, scholarship competition, and the awareness that one bad semester can derail your five-year plan, and you have a recipe for chronic stress.</p>
                     <p>We tackle the perfectionism trap: the all-nighters that actually hurt performance, the severe deadline anxiety that makes starting impossible, the catastrophizing that turns a B+ into "my life is ruined." Using Acceptance and Commitment Therapy (ACT), we help you maintain high standards without the toxic perfectionism that leads to burnout, anxiety, and paradoxically worse performance.</p>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Social Anxiety & Isolation</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">Social Anxiety & Isolation</h3>
                     <p>Despite having 90,000+ students, UofT can feel incredibly lonely. Large lecture halls where you sit anonymously for months, commuter campus culture where students disappear after class, and high academic pressure that makes social events feel like "wasted time" all contribute to isolation. Many students feel like everyone else has found their group except them.</p>
                     <p>Social anxiety at UofT often manifests as fear of speaking in tutorials, avoidance of office hours (what if the professor thinks I'm stupid?), inability to approach classmates, and the paradox of wanting connection but fearing rejection. We use ACT strategies to help you navigate social anxiety, build community on your terms, and overcome the fear that you're the only one who doesn't fit in.</p>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Career Uncertainty & Future Anxiety</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">Career Uncertainty & Future Anxiety</h3>
                     <p>In third and fourth year, the questions become relentless: "What are you doing after graduation?" Law school? Med school? MBA? Teaching? Everyone seems to have a plan except you. Or worse—you have a plan that feels like someone else's (your parents', your high school self's) rather than something you actually want.</p>
                     <p>Career anxiety at UofT is compounded by the high-achieving environment. When your classmates are applying to competitive graduate programs, accepting Big 4 offers, or pursuing prestigious research opportunities, it's easy to feel behind even when you're doing well. We help you navigate career uncertainty, separate your values from parental expectations, and make decisions aligned with who you actually are—not just who you've been expected to become.</p>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Graduate Student Challenges</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">Graduate Student Challenges</h3>
                     <p>Graduate school brings its own unique pressures. PhD students face dissertation anxiety, uncertain job markets, supervisor relationships that can make or break careers, and years of underpaid work with no guarantee of success. Master's students navigate condensed timelines, career pivots, and the question of whether the degree will actually help.</p>
                     <p>Imposter syndrome intensifies in graduate school—surrounded by experts, expected to contribute original knowledge, wondering if you belong. Teaching responsibilities add performance anxiety. Isolation increases as cohorts disperse and everyone's on different timelines. Therapy helps you navigate these specific pressures while maintaining the motivation and mental health needed to complete your degree.</p>
 
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Family Expectations & Cultural Pressure</h3>
+                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #4a7c59;">Family Expectations & Cultural Pressure</h3>
                     <p>Many UofT students navigate significant family expectations about academic performance, career choices, and life decisions. This is particularly intense for first-generation students, students from immigrant families, and students whose families have made sacrifices for their education. The pressure to "not waste this opportunity" adds a layer of guilt to normal student stress.</p>
                     <p>Therapy provides space to examine whose expectations you're living by, develop strategies for navigating family pressure, and find ways to honor your family relationships while also honoring your own authentic path.</p>
                 </section>
@@ -302,7 +318,7 @@
                 <div class="cta-box" style="margin: 3rem 0;">
                     <h3>Ready to Feel Better?</h3>
                     <p>Let's talk about what's going on and whether therapy is the right fit. No pressure, just a real conversation.</p>
-                    <div class="btn btn-primary" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                         <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=uoft_page" class="btn btn-primary">Schedule 15-Min Call</a>
                         <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
                     </div>
@@ -321,24 +337,6 @@
         </ul>
 
                     <p><strong>No Insurance?</strong> If you're under 25, you may be covered by a parent's workplace benefits in addition to your student coverage. International students should check their UHIP plan or supplemental coverage. Limited sliding scale spots are available for students with genuine financial hardship—reach out to discuss options.</p>
-                </section>
-
-                <!-- Therapy Approach Section -->
-                <section class="section">
-                    <h2 class="section-title">How Therapy for UofT Students Works</h2>
-                    <p>I use Acceptance and Commitment Therapy (ACT) and Cognitive Behavioural Therapy (CBT), two evidence-based approaches particularly effective for the academic and social challenges UofT students face.</p>
-
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Acceptance and Commitment Therapy (ACT)</h3>
-                    <p>ACT is particularly effective for students because it doesn't require you to eliminate stress—it helps you function effectively even when stress is present. You can't make POSt cutoffs disappear, but you can develop psychological flexibility that lets you study effectively despite anxiety, take social risks despite fear of rejection, and make career decisions despite uncertainty.</p>
-                    <p>ACT helps you clarify your values (what actually matters to you, not what you think should matter), defuse from unhelpful thoughts (the "I'm not smart enough" narrative doesn't have to control your behavior), and take committed action toward meaningful goals even when uncomfortable.</p>
-
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">Cognitive Behavioural Therapy (CBT)</h3>
-                    <p>CBT helps identify and change the thought patterns that fuel anxiety and depression. Common student thinking traps include catastrophizing (one bad grade = ruined future), all-or-nothing thinking (anything less than an A+ is failure), and mind-reading (everyone can tell I don't belong here). We examine these thoughts, test their accuracy, and develop more balanced perspectives.</p>
-                    <p>CBT also provides practical strategies for academic performance: breaking large assignments into manageable steps, managing deadline anxiety, preparing for presentations, and developing study habits that work with your brain rather than against it.</p>
-
-                    <h3 style="font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-green);">What Sessions Look Like</h3>
-                    <p>Sessions are 50 minutes via secure video platform. The first session focuses on understanding your specific situation—what brought you to therapy, what you've already tried, and what you're hoping to achieve. There's no pressure to share more than you're comfortable with.</p>
-                    <p>Ongoing sessions combine conversation, skill-building, and practical exercises. You'll leave each session with something concrete to try—a new way of approaching anxiety, a strategy for a specific situation, or insight that shifts your perspective. We check in regularly about progress and adjust our approach based on what's working.</p>
                 </section>
 
                 <!-- FAQ Section -->
@@ -378,72 +376,55 @@
                     <p style="margin-bottom: 0;"><strong>Suicide Crisis Helpline:</strong> Call or text 988</p>
                 </div>
 
-            </main>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">Student Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-        </ul>
-                </div>
-                <div class="sidebar-section">
-                    <h3>Student Resources</h3>
-                    <ul>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Do I Need Therapy Quiz?</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-        </ul>
-                </div>
-                <div class="sidebar-cta">
-                    <h3>Start Feeling Better</h3>
-                    <p>Schedule a 15-minute consultation with Jesse Cynamon, RP.</p>
-                    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sidebar&utm_campaign=uoft_page" class="btn btn-primary">Book Now</a>
-                </div>
-            </aside>
+            </div>
         </div>
-        </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy for students and professionals. CRPO #10979.</p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
+    <footer class="bg-navy py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Column 1: About & Contact -->
+                <div>
+                    <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
+                    <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p class="text-white font-semibold text-sm">CRPO #10979 | MPsy</p>
+                    <p class="mt-4"><strong class="text-white text-sm">Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
                 </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">Student Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
+
+                <!-- Column 2: Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html" class="text-white/70 hover:text-white">Depression Therapy</a></li>
+                        <li><a href="/university-anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Student Therapy</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-white/70 hover:text-white">Virtual Therapy</a></li>
         </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Locations</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton</a></li>
+
+                <!-- Column 3: Locations -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Locations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
+                        <li><a href="/therapy-mississauga-ontario.html" class="text-white/70 hover:text-white">Mississauga</a></li>
+                        <li><a href="/anxiety-therapy-burlington.html" class="text-white/70 hover:text-white">Burlington</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
         </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+
+                <!-- Column 4: Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy-policy.html" class="text-white/70 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html" class="text-white/70 hover:text-white">Terms of Service</a></li>
         </ul>
                 </div>
             </div>
+
             <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
                 <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
                     <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency)
@@ -456,14 +437,6 @@
     </footer>
 
     <!-- Mobile Sticky CTA Bar -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sticky_bar&utm_campaign=uoft_page" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-        </div>
-
-<script src="/js/security-check.js"></script>
-
-    <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
         <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
@@ -475,5 +448,11 @@
             lucide.createIcons();
         });
     </script>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-6 right-6 bg-navy text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-navy-light transition-colors items-center gap-2 z-40">
+        Schedule 15-Min Call
+    </a>
+<script src="/js/security-check.js"></script>
 </body>
 </html>

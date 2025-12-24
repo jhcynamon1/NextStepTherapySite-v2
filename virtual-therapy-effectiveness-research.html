@@ -29,10 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -165,17 +162,12 @@
       gtag('config', 'G-RTSJ4XH9W1');
     </script>
 
-    <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-        <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -194,39 +186,72 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility */
         .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #1e3a4f; margin-bottom: 2rem; text-align: center; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .stat-card { background: white; padding: 2rem; border-radius: 1rem; text-align: center; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: #4a7c59; margin-bottom: 0.5rem; }
+        .stat-label { color: #6b7280; font-size: 0.875rem; }
+        .research-grid { display: grid; gap: 2rem; margin-top: 2rem; }
+        .research-card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .research-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .research-stat h4 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: #4a7c59; margin-top: 1rem; margin-bottom: 0.25rem; }
+        .research-stat p { font-size: 0.875rem; color: #6b7280; margin: 0; }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .comparison-table th { background: #1e3a4f; color: white; padding: 1rem; text-align: left; font-weight: 600; }
+        .comparison-table td { padding: 1rem; border-bottom: 1px solid #e8e3d9; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .checkmark { color: #4a7c59; font-weight: bold; }
+        .myths-grid { display: grid; gap: 1.5rem; margin-top: 2rem; }
+        .myth-card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .myth-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .myth-icon { font-size: 1.5rem; }
+        .myth-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #ef4444; margin: 0; }
+        .fact-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #4a7c59; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .dual-section { background: #f1f5f9; padding: 4rem 1rem; }
+        .dual-container { max-width: 72rem; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .for-clients, .for-therapists { background: white; padding: 2rem; border-radius: 1rem; }
+        .for-clients h3, .for-therapists h3 { color: #4a7c59; margin-top: 0; }
+        .contact-section { text-align: center; }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .contact-item { background: white; padding: 1.5rem; border-radius: 0.75rem; }
+        .footer { background: #1e3a4f; color: white; padding: 3rem 0 1.5rem; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: rgba(255,255,255,0.7); }
+        .footer-links a:hover { color: white; }
+        .footer p { color: rgba(255,255,255,0.6); font-size: 0.875rem; margin: 0.5rem 0; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) {
+            .section { padding: 2rem 1rem; }
+            .dual-container { grid-template-columns: 1fr; }
+            .stat-number { font-size: 2rem; }
+        }
     </style>
 </head>
+
 <body class="font-body bg-cream">
-        <!-- Header -->
+    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -247,388 +272,436 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <h1>Virtual Therapy Effectiveness: The Evidence</h1>
-            <p class="hero-subtitle lead-text">Comprehensive research proving online therapy is as effective as in-person treatment for most mental health conditions.</p>
-            <a href="tel:416-306-2157" class="btn btn-primary">Start Virtual Therapy Today</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">RESEARCH & EVIDENCE</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Virtual Therapy Effectiveness: The Evidence</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Comprehensive research proving online therapy is as effective as in-person treatment for most mental health conditions.</p>
 
-    <section class="section intro-section">
-        <div class="container">
-            <h2 class="section-title fade-in">The Science Behind Virtual Therapy</h2>
-            <div class="intro-content fade-in">
-                <p>"But will it actually work through a screen?" This was the most common question I heard when I first started offering virtual therapy in Ontario. I get it—there's something that feels important about being in the same room. But after conducting hundreds of virtual sessions with Ontario clients, from Bay Street executives to students in Thunder Bay, I can tell you what the research confirms: virtual therapy works just as well as in-person for most mental health concerns.</p>
-
-                <p>The evidence has been building for over a decade, with multiple meta-analyses and randomized controlled trials showing equivalent outcomes. In Ontario specifically, virtual therapy has become essential for accessing mental health support across our vast geography, harsh winters, and busy urban schedules. Let me walk you through what the research actually shows about virtual therapy effectiveness.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section stats-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Virtual Therapy by the Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">96%</div>
-                    <div class="stat-label">Client satisfaction rate</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Equal</div>
-                    <div class="stat-label">Effectiveness vs in-person</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">50%</div>
-                    <div class="stat-label">Reduction in no-shows</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">73%</div>
-                    <div class="stat-label">Prefer virtual option</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">85%</div>
-                    <div class="stat-label">Report improved access</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">Cost savings for clients</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Key Research Findings</h2>
-            <div class="research-grid">
-                <div class="research-card fade-in">
-                    <div class="research-icon">📊</div>
-                    <h3>Meta-Analysis: 2023 Cochrane Review</h3>
-                    <p>Analysis of 57 studies with 9,764 participants found no significant difference in treatment outcomes between virtual and in-person therapy for anxiety and depression.</p>
-                    <div class="research-stat">
-                        <h4>d = 0.02</h4>
-                        <p>Effect size difference (statistically insignificant)</p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Start Virtual Therapy
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="research-card fade-in">
-                    <div class="research-icon">🔬</div>
-                    <h3>Canadian Mental Health Study 2024</h3>
-                    <p>Ontario-specific research tracking 3,200 clients found virtual therapy achieved equivalent or superior outcomes across all measured domains.</p>
-                    <div class="research-stat">
-                        <h4>92%</h4>
-                        <p>Achieved treatment goals</p>
-                    </div>
-                </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">📈</div>
-                    <h3>Treatment Retention Rates</h3>
-                    <p>Virtual therapy shows higher treatment completion rates due to reduced barriers like transportation, scheduling conflicts, and accessibility issues.</p>
-                    <div class="research-stat">
-                        <h4>78% vs 62%</h4>
-                        <p>Completion: Virtual vs In-Person</p>
-                    </div>
-                </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">🧠</div>
-                    <h3>CBT Effectiveness Online</h3>
-                    <p>Structured therapies like CBT show particularly strong outcomes in virtual format, with equivalent skill acquisition and symptom reduction.</p>
-                    <div class="research-stat">
-                        <h4>95%</h4>
-                        <p>Effectiveness retention</p>
-                    </div>
-                </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">💡</div>
-                    <h3>Therapeutic Alliance Formation</h3>
-                    <p>Studies show therapeutic alliance - the key predictor of therapy success - forms equally well in virtual and in-person settings.</p>
-                    <div class="research-stat">
-                        <h4>r = 0.73</h4>
-                        <p>Alliance strength correlation</p>
-                    </div>
-                </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">🌍</div>
-                    <h3>Accessibility Impact</h3>
-                    <p>Virtual therapy dramatically improves access for rural, disabled, and marginalized populations previously underserved by traditional therapy.</p>
-                    <div class="research-stat">
-                        <h4>3.5x</h4>
-                        <p>Increase in rural access</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="check-circle" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">96% Satisfaction</h3>
+                            <p class="text-gray-600 text-sm">Client satisfaction rate matches in-person therapy outcomes.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="trending-up" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Equal Effectiveness</h3>
+                            <p class="text-gray-600 text-sm">No significant difference versus in-person therapy (p > 0.05).</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="calendar-check" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">50% Fewer No-Shows</h3>
+                            <p class="text-gray-600 text-sm">Virtual therapy dramatically reduces missed appointments.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="map-pin" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">85% Improved Access</h3>
+                            <p class="text-gray-600 text-sm">Virtual removes geographic and scheduling barriers.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section comparison-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Virtual vs In-Person: Evidence Comparison</h2>
-            <table class="comparison-table fade-in">
-                <thead>
-                    <tr>
-                        <th>Factor</th>
-                        <th>Virtual Therapy</th>
-                        <th>In-Person Therapy</th>
-                        <th>Research Finding</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Treatment Effectiveness</strong></td>
-                        <td><span class="checkmark">✓</span> Equal</td>
-                        <td><span class="checkmark">✓</span> Equal</td>
-                        <td>No significant difference (p > 0.05)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Client Satisfaction</strong></td>
-                        <td>96%</td>
-                        <td>94%</td>
-                        <td>Slightly higher for virtual</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Attendance Rates</strong></td>
-                        <td>85%</td>
-                        <td>70%</td>
-                        <td>Fewer no-shows virtually</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cost to Client</strong></td>
-                        <td>40% lower</td>
-                        <td>Standard</td>
-                        <td>Savings on travel, time off work</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Accessibility</strong></td>
-                        <td>Excellent</td>
-                        <td>Limited</td>
-                        <td>Virtual removes geographic barriers</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Privacy/Comfort</strong></td>
-                        <td>Home environment</td>
-                        <td>Clinical setting</td>
-                        <td>Client preference varies</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Technology Requirements</strong></td>
-                        <td>Internet, device</td>
-                        <td>None</td>
-                        <td>98% have adequate tech</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+        <!-- Intro Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">The Science Behind Virtual Therapy</h2>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <p>"But will it actually work through a screen?" This was the most common question I heard when I first started offering virtual therapy in Ontario. I get it—there's something that feels important about being in the same room. But after conducting hundreds of virtual sessions with Ontario clients, from Bay Street executives to students in Thunder Bay, I can tell you what the research confirms: virtual therapy works just as well as in-person for most mental health concerns.</p>
 
-    <section class="section myths-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Myths vs Facts: Virtual Therapy Evidence</h2>
-            <div class="myths-grid">
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Virtual therapy is less effective</h4>
-                    </div>
-                    <p>The belief that physical presence is necessary for effective therapy.</p>
-                    <h4 class="fact-title">✓ FACT: Research proves equal effectiveness</h4>
-                    <p>Multiple studies show virtual therapy achieves identical clinical outcomes for most conditions.</p>
-                </div>
-
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Can't build rapport online</h4>
-                    </div>
-                    <p>Concern that therapeutic relationship suffers through a screen.</p>
-                    <h4 class="fact-title">✓ FACT: Alliance forms equally well</h4>
-                    <p>Research shows therapeutic alliance strength is identical in virtual and in-person formats.</p>
-                </div>
-
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Only works for minor issues</h4>
-                    </div>
-                    <p>Assumption that serious mental health conditions require in-person treatment.</p>
-                    <h4 class="fact-title">✓ FACT: Effective for severe conditions</h4>
-                    <p>Studies show effectiveness for PTSD, severe depression, and complex presentations.</p>
-                </div>
-
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Privacy and security risks</h4>
-                    </div>
-                    <p>Fears about confidentiality in online therapy.</p>
-                    <h4 class="fact-title">✓ FACT: Encrypted platforms ensure privacy</h4>
-                    <p>Healthcare-grade encryption exceeds in-person privacy standards.</p>
-                </div>
-
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Therapists can't read body language</h4>
-                    </div>
-                    <p>Concern about missing non-verbal cues online.</p>
-                    <h4 class="fact-title">✓ FACT: Adapted techniques compensate</h4>
-                    <p>Therapists report adequate non-verbal communication with proper setup.</p>
-                </div>
-
-                <div class="myth-card fade-in">
-                    <div class="myth-header">
-                        <span class="myth-icon">❌</span>
-                        <h4 class="myth-title">MYTH: Higher dropout rates</h4>
-                    </div>
-                    <p>Belief that clients abandon virtual therapy more often.</p>
-                    <h4 class="fact-title">✓ FACT: Better retention rates</h4>
-                    <p>Virtual therapy shows 16% higher completion rates due to convenience.</p>
+                    <p>The evidence has been building for over a decade, with multiple meta-analyses and randomized controlled trials showing equivalent outcomes. In Ontario specifically, virtual therapy has become essential for accessing mental health support across our vast geography, harsh winters, and busy urban schedules. Let me walk you through what the research actually shows about virtual therapy effectiveness.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="dual-section">
-        <div class="dual-container">
-            <div class="for-clients">
-                <h3>For Clients</h3>
-                <h4>Is Virtual Therapy Right for You?</h4>
-                <p style="margin: 1rem 0; color: #666;">Research shows virtual therapy is highly effective for:</p>
-                <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
-                    <li>Anxiety disorders (GAD, panic, social anxiety)</li>
-                    <li>Depression (mild to severe)</li>
-                    <li>PTSD and trauma</li>
-                    <li>Relationship issues</li>
-                    <li>Stress management</li>
-                    <li>Eating disorders</li>
-                    <li>Substance use disorders</li>
-                    <li>OCD and related conditions</li>
-                </ul>
-                <a href="tel:416-306-2157" class="btn btn-primary">Try Virtual Therapy</a>
+        <!-- Stats Section -->
+        <section class="section" style="background: #f8f6f2;">
+            <div class="container">
+                <h2 class="section-title fade-in">Virtual Therapy by the Numbers</h2>
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">96%</div>
+                        <div class="stat-label">Client satisfaction rate</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">Equal</div>
+                        <div class="stat-label">Effectiveness vs in-person</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">50%</div>
+                        <div class="stat-label">Reduction in no-shows</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">73%</div>
+                        <div class="stat-label">Prefer virtual option</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Report improved access</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Cost savings for clients</div>
+                    </div>
+                </div>
             </div>
-            <div class="for-therapists">
-                <h3>For Therapists</h3>
-                <h4>Virtual Practice Evidence & Opportunities</h4>
-                <p style="color: #666; margin: 1rem 0;">The shift to virtual therapy represents a permanent evolution in mental healthcare delivery with strong evidence base.</p>
-                <p style="color: #666; margin: 1rem 0;"><strong>Practice implications:</strong></p>
-                <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
-                    <li>Expanded geographic reach</li>
-                    <li>Reduced overhead costs (30-50%)</li>
-                    <li>Higher session attendance rates</li>
-                    <li>Improved work-life balance</li>
-                    <li>Access to specialized populations</li>
-                </ul>
-                <a href="mailto:jesse@nextsteptherapy.ca?subject=Virtual Therapy Partnership" class="btn btn-primary">Partner for Virtual Referrals</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Best Practices for Virtual Therapy Success</h2>
-            <div class="research-grid">
-                <div class="research-card fade-in">
-                    <div class="research-icon">💻</div>
-                    <h3>Technology Setup</h3>
-                    <p><strong>Research-backed recommendations:</strong></p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
-                        <li>Stable internet (minimum 10 Mbps)</li>
-                        <li>Private, quiet space</li>
-                        <li>Good lighting facing you</li>
-                        <li>Camera at eye level</li>
-                        <li>Headphones for privacy</li>
+        <!-- Key Research Findings -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Key Research Findings</h2>
+                <div class="research-grid">
+                    <div class="research-card fade-in">
+                        <div class="research-icon">📊</div>
+                        <h3>Meta-Analysis: 2023 Cochrane Review</h3>
+                        <p>Analysis of 57 studies with 9,764 participants found no significant difference in treatment outcomes between virtual and in-person therapy for anxiety and depression.</p>
+                        <div class="research-stat">
+                            <h4>d = 0.02</h4>
+                            <p>Effect size difference (statistically insignificant)</p>
+                        </div>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">🔬</div>
+                        <h3>Canadian Mental Health Study 2024</h3>
+                        <p>Ontario-specific research tracking 3,200 clients found virtual therapy achieved equivalent or superior outcomes across all measured domains.</p>
+                        <div class="research-stat">
+                            <h4>92%</h4>
+                            <p>Achieved treatment goals</p>
+                        </div>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">📈</div>
+                        <h3>Treatment Retention Rates</h3>
+                        <p>Virtual therapy shows higher treatment completion rates due to reduced barriers like transportation, scheduling conflicts, and accessibility issues.</p>
+                        <div class="research-stat">
+                            <h4>78% vs 62%</h4>
+                            <p>Completion: Virtual vs In-Person</p>
+                        </div>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">🧠</div>
+                        <h3>CBT Effectiveness Online</h3>
+                        <p>Structured therapies like CBT show particularly strong outcomes in virtual format, with equivalent skill acquisition and symptom reduction.</p>
+                        <div class="research-stat">
+                            <h4>95%</h4>
+                            <p>Effectiveness retention</p>
+                        </div>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">💡</div>
+                        <h3>Therapeutic Alliance Formation</h3>
+                        <p>Studies show therapeutic alliance - the key predictor of therapy success - forms equally well in virtual and in-person settings.</p>
+                        <div class="research-stat">
+                            <h4>r = 0.73</h4>
+                            <p>Alliance strength correlation</p>
+                        </div>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">🌍</div>
+                        <h3>Accessibility Impact</h3>
+                        <p>Virtual therapy dramatically improves access for rural, disabled, and marginalized populations previously underserved by traditional therapy.</p>
+                        <div class="research-stat">
+                            <h4>3.5x</h4>
+                            <p>Increase in rural access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="section" style="background: #f8f6f2;">
+            <div class="container">
+                <h2 class="section-title fade-in">Virtual vs In-Person: Evidence Comparison</h2>
+                <table class="comparison-table fade-in">
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Virtual Therapy</th>
+                            <th>In-Person Therapy</th>
+                            <th>Research Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Treatment Effectiveness</strong></td>
+                            <td><span class="checkmark">✓</span> Equal</td>
+                            <td><span class="checkmark">✓</span> Equal</td>
+                            <td>No significant difference (p > 0.05)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Client Satisfaction</strong></td>
+                            <td>96%</td>
+                            <td>94%</td>
+                            <td>Slightly higher for virtual</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attendance Rates</strong></td>
+                            <td>85%</td>
+                            <td>70%</td>
+                            <td>Fewer no-shows virtually</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cost to Client</strong></td>
+                            <td>40% lower</td>
+                            <td>Standard</td>
+                            <td>Savings on travel, time off work</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accessibility</strong></td>
+                            <td>Excellent</td>
+                            <td>Limited</td>
+                            <td>Virtual removes geographic barriers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Privacy/Comfort</strong></td>
+                            <td>Home environment</td>
+                            <td>Clinical setting</td>
+                            <td>Client preference varies</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technology Requirements</strong></td>
+                            <td>Internet, device</td>
+                            <td>None</td>
+                            <td>98% have adequate tech</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Myths vs Facts -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Myths vs Facts: Virtual Therapy Evidence</h2>
+                <div class="myths-grid">
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Virtual therapy is less effective</h4>
+                        </div>
+                        <p>The belief that physical presence is necessary for effective therapy.</p>
+                        <h4 class="fact-title">✓ FACT: Research proves equal effectiveness</h4>
+                        <p>Multiple studies show virtual therapy achieves identical clinical outcomes for most conditions.</p>
+                    </div>
+
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Can't build rapport online</h4>
+                        </div>
+                        <p>Concern that therapeutic relationship suffers through a screen.</p>
+                        <h4 class="fact-title">✓ FACT: Alliance forms equally well</h4>
+                        <p>Research shows therapeutic alliance strength is identical in virtual and in-person formats.</p>
+                    </div>
+
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Only works for minor issues</h4>
+                        </div>
+                        <p>Assumption that serious mental health conditions require in-person treatment.</p>
+                        <h4 class="fact-title">✓ FACT: Effective for severe conditions</h4>
+                        <p>Studies show effectiveness for PTSD, severe depression, and complex presentations.</p>
+                    </div>
+
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Privacy and security risks</h4>
+                        </div>
+                        <p>Fears about confidentiality in online therapy.</p>
+                        <h4 class="fact-title">✓ FACT: Encrypted platforms ensure privacy</h4>
+                        <p>Healthcare-grade encryption exceeds in-person privacy standards.</p>
+                    </div>
+
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Therapists can't read body language</h4>
+                        </div>
+                        <p>Concern about missing non-verbal cues online.</p>
+                        <h4 class="fact-title">✓ FACT: Adapted techniques compensate</h4>
+                        <p>Therapists report adequate non-verbal communication with proper setup.</p>
+                    </div>
+
+                    <div class="myth-card fade-in">
+                        <div class="myth-header">
+                            <span class="myth-icon">❌</span>
+                            <h4 class="myth-title">MYTH: Higher dropout rates</h4>
+                        </div>
+                        <p>Belief that clients abandon virtual therapy more often.</p>
+                        <h4 class="fact-title">✓ FACT: Better retention rates</h4>
+                        <p>Virtual therapy shows 16% higher completion rates due to convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dual Section -->
+        <section class="dual-section">
+            <div class="dual-container">
+                <div class="for-clients">
+                    <h3>For Clients</h3>
+                    <h4>Is Virtual Therapy Right for You?</h4>
+                    <p style="margin: 1rem 0; color: #666;">Research shows virtual therapy is highly effective for:</p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                        <li>Anxiety disorders (GAD, panic, social anxiety)</li>
+                        <li>Depression (mild to severe)</li>
+                        <li>PTSD and trauma</li>
+                        <li>Relationship issues</li>
+                        <li>Stress management</li>
+                        <li>Eating disorders</li>
+                        <li>Substance use disorders</li>
+                        <li>OCD and related conditions</li>
                     </ul>
+                    <a href="tel:+14163062157" class="btn btn-primary">Try Virtual Therapy</a>
                 </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">🔒</div>
-                    <h3>Privacy & Confidentiality</h3>
-                    <p><strong>Evidence-based security measures:</strong></p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
-                        <li>PHIPA-compliant platforms only</li>
-                        <li>End-to-end encryption</li>
-                        <li>No recording without consent</li>
-                        <li>Secure document sharing</li>
-                        <li>Private location protocols</li>
+                <div class="for-therapists">
+                    <h3>For Therapists</h3>
+                    <h4>Virtual Practice Evidence & Opportunities</h4>
+                    <p style="color: #666; margin: 1rem 0;">The shift to virtual therapy represents a permanent evolution in mental healthcare delivery with strong evidence base.</p>
+                    <p style="color: #666; margin: 1rem 0;"><strong>Practice implications:</strong></p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666;">
+                        <li>Expanded geographic reach</li>
+                        <li>Reduced overhead costs (30-50%)</li>
+                        <li>Higher session attendance rates</li>
+                        <li>Improved work-life balance</li>
+                        <li>Access to specialized populations</li>
                     </ul>
-                </div>
-
-                <div class="research-card fade-in">
-                    <div class="research-icon">📋</div>
-                    <h3>Session Preparation</h3>
-                    <p><strong>Maximize effectiveness with:</strong></p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
-                        <li>Test technology beforehand</li>
-                        <li>Minimize distractions</li>
-                        <li>Have materials ready</li>
-                        <li>Treat like in-person appointment</li>
-                        <li>Emergency contact plan</li>
-                    </ul>
+                    <a href="mailto:jesse@nextsteptherapy.ca?subject=Virtual Therapy Partnership" class="btn btn-primary">Partner for Virtual Referrals</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section" style="background: #eff6ff;">
-        <div class="container">
-            <h2 class="section-title fade-in">Conditions with Strong Virtual Therapy Evidence</h2>
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Depression</div>
-                    <div class="stat-label">Equal effectiveness, 73% remission rate</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Anxiety</div>
-                    <div class="stat-label">80% symptom reduction</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">PTSD</div>
-                    <div class="stat-label">Effective for trauma processing</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">OCD</div>
-                    <div class="stat-label">ERP equally effective online</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Eating Disorders</div>
-                    <div class="stat-label">Strong outcomes for BED, BN</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Substance Use</div>
-                    <div class="stat-label">Higher retention rates</div>
+        <!-- Best Practices -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">Best Practices for Virtual Therapy Success</h2>
+                <div class="research-grid">
+                    <div class="research-card fade-in">
+                        <div class="research-icon">💻</div>
+                        <h3>Technology Setup</h3>
+                        <p><strong>Research-backed recommendations:</strong></p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
+                            <li>Stable internet (minimum 10 Mbps)</li>
+                            <li>Private, quiet space</li>
+                            <li>Good lighting facing you</li>
+                            <li>Camera at eye level</li>
+                            <li>Headphones for privacy</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">🔒</div>
+                        <h3>Privacy & Confidentiality</h3>
+                        <p><strong>Evidence-based security measures:</strong></p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
+                            <li>PHIPA-compliant platforms only</li>
+                            <li>End-to-end encryption</li>
+                            <li>No recording without consent</li>
+                            <li>Secure document sharing</li>
+                            <li>Private location protocols</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-card fade-in">
+                        <div class="research-icon">📋</div>
+                        <h3>Session Preparation</h3>
+                        <p><strong>Maximize effectiveness with:</strong></p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: #666; font-size: 0.95rem;">
+                            <li>Test technology beforehand</li>
+                            <li>Minimize distractions</li>
+                            <li>Have materials ready</li>
+                            <li>Treat like in-person appointment</li>
+                            <li>Emergency contact plan</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">Experience Evidence-Based Virtual Therapy</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join the millions who have discovered that effective therapy doesn't require a commute. Access professional, research-backed virtual therapy throughout Ontario.</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong> (416) 306-2157
-                </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong> jesse@nextsteptherapy.ca
-                </div>
-                <div class="contact-item">
-                    <strong>🌐 Coverage:</strong> All of Ontario
-                </div>
-                <div class="contact-item">
-                    <strong>💻 Platform:</strong> Secure, PHIPA-compliant video
+        <!-- Conditions Section -->
+        <section class="section" style="background: #eff6ff;">
+            <div class="container">
+                <h2 class="section-title fade-in">Conditions with Strong Virtual Therapy Evidence</h2>
+                <div class="stats-grid">
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">Depression</div>
+                        <div class="stat-label">Equal effectiveness, 73% remission rate</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">Anxiety</div>
+                        <div class="stat-label">80% symptom reduction</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">PTSD</div>
+                        <div class="stat-label">Effective for trauma processing</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">OCD</div>
+                        <div class="stat-label">ERP equally effective online</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">Eating Disorders</div>
+                        <div class="stat-label">Strong outcomes for BED, BN</div>
+                    </div>
+                    <div class="stat-card fade-in">
+                        <div class="stat-number">Substance Use</div>
+                        <div class="stat-label">Higher retention rates</div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <a href="tel:416-306-2157" class="btn btn-primary">Start Your Virtual Therapy Journey</a>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Experience Evidence-Based Virtual Therapy</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Join the millions who have discovered that effective therapy doesn't require a commute. Access professional, research-backed virtual therapy throughout Ontario.</p>
 
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>📞 Phone:</strong> (416) 306-2157
+                    </div>
+                    <div class="contact-item">
+                        <strong>✉️ Email:</strong> jesse@nextsteptherapy.ca
+                    </div>
+                    <div class="contact-item">
+                        <strong>🌐 Coverage:</strong> All of Ontario
+                    </div>
+                    <div class="contact-item">
+                        <strong>💻 Platform:</strong> Secure, PHIPA-compliant video
+                    </div>
+                </div>
+
+                <a href="tel:+14163062157" class="btn btn-primary">Start Your Virtual Therapy Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-links">
@@ -643,53 +716,6 @@
         </div>
     </footer>
 
-    <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in class
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Google Analytics events for CTA clicks
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': 'Virtual Therapy Research',
-                        'value': 1
-                    });
-                }
-            });
-        });
-    </script>
     <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
@@ -708,10 +734,51 @@
         <i data-lucide="calendar" class="w-5 h-5"></i> Schedule 15-Min Call
     </a>
 
+    <!-- Intersection Observer -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA',
+                        'event_label': 'Virtual Therapy Research',
+                        'value': 1
+                    });
+                }
+            });
+        });
+    </script>
+
 <script src="/js/security-check.js"></script>
-
-    
-
-    
 </body>
 </html>

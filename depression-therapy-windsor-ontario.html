@@ -28,12 +28,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -189,6 +183,7 @@
       gtag('js', new Date());
       gtag('config', 'G-RTSJ4XH9W1');
     </script>
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -198,14 +193,14 @@
         })(window, document, "clarity", "script", "u8v6vfikjr");
     </script>
 
-    <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+
     <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -213,373 +208,339 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        .section { padding: 4rem 1.5rem; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+        .content-wrapper { max-width: 900px; margin: 0 auto; padding: 2rem 0; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1.5rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+
+        .services-grid, .conditions-list, .coverage-grid, .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .service-card, .condition-item, .coverage-item { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .service-card h3, .condition-item h4, .coverage-item h4 { margin-top: 0; color: #1e3a4f; }
+        .service-icon, .icon { font-size: 2rem; margin-bottom: 1rem; }
+
+        ul { padding-left: 1.5rem; margin: 1rem 0; }
+        li { color: #4b5563; padding: 0.25rem 0; }
+
+        .contact-section { background: #e8f0e8; padding: 3rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
+        .contact-info { display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0; }
+        .contact-item { font-size: 1.1rem; }
+
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; }
+
+        @media (max-width: 768px) {
+            .section { padding: 2rem 1rem; }
+            .services-grid, .service-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
-<body>
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+<body class="font-body bg-cream">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <h1>Depression Therapy Windsor Ontario: You Don't Have to Feel This Way Forever</h1>
-            <p class="hero-subtitle lead-text">Professional, compassionate support for overcoming depression. Find your way back to yourself with evidence-based therapy.</p>
-            <a href="tel:416-306-2157" class="btn btn-primary">Start Your Recovery</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">DEPRESSION THERAPY</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Depression Therapy Windsor Ontario: You Don't Have to Feel This Way Forever</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Professional, compassionate support for overcoming depression. Find your way back to yourself with evidence-based therapy.</p>
 
-    <section class="section intro-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Comprehensive Depression Treatment in Windsor, Ontario</h2>
-            <div class="intro-content fade-in">
-                <p>Depression in Windsor can feel isolating, even in a city of over 200,000 people. From the pressure of shift work at major automotive plants disrupting sleep and mood, to the economic uncertainties that have long been part of Windsor's story, there are real, systemic factors that contribute to mental health challenges here.</p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="tel:416-306-2157" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Start Your Recovery
+                            </a>
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                Book Consultation
+                            </a>
+                        </div>
 
-                <p>Many Windsor residents tell me they feel they "should be able to handle it" on their own—a common sentiment in our hardworking, industrial city. But depression isn't a matter of willpower. Whether you're a student at the University of Windsor feeling lost, a healthcare worker facing burnout, or someone dealing with the "winter blues" that hit hard in Essex County, professional therapy provides the tools you need to lift the fog and reclaim your life.</p>
-            </div>
-        </div>
-    </section>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="calendar" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Covered</span>
+                        </div>
+                    </div>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Evidence-Based Depression Treatment Approaches</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">🧩</div>
-                    <h3>Cognitive Behavioral Therapy (CBT)</h3>
-                    <p>CBT helps you identify and challenge negative thought patterns that fuel depression. We work together to build practical skills for changing how you think and feel.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🔋</div>
-                    <h3>Behavioral Activation</h3>
-                    <p>A core component of treating depression, this approach helps you gradually re-engage with meaningful activities and sources of joy, even when motivation is low.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🌱</div>
-                    <h3>Acceptance and Commitment Therapy (ACT)</h3>
-                    <p>ACT helps you clarify what truly matters to you and take action towards those values, while learning to relate differently to difficult thoughts and feelings.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🧘</div>
-                    <h3>Mindfulness-Based Therapy</h3>
-                    <p>Learn to observe your thoughts and feelings without judgment, reducing the impact of depressive rumination and staying present in your life.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="background: #f8f9ff;">
-        <div class="container">
-            <h2 class="section-title fade-in">Types of Depression We Treat in Windsor, Ontario</h2>
-            <div class="conditions-list">
-                <div class="condition-item fade-in">
-                    <h4>Major Depressive Disorder</h4>
-                    <p>Persistent sadness, loss of interest, and difficulty functioning in daily life.</p>
-                </div>
-
-                <div class="condition-item fade-in">
-                    <h4>Seasonal Affective Disorder (SAD)</h4>
-                    <p>Depression that follows a seasonal pattern, common during Windsor's grey winter months.</p>
-                </div>
-
-                <div class="condition-item fade-in">
-                    <h4>Persistent Depressive Disorder</h4>
-                    <p>Chronic, low-grade depression that lasts for two years or more (formerly Dysthymia).</p>
-                </div>
-
-                <div class="condition-item fade-in">
-                    <h4>Situational Depression</h4>
-                    <p>Depressive symptoms triggered by specific life events like job loss, divorce, or bereavement.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">CBT & ACT</h3>
+                            <p class="text-gray-600 text-sm">Evidence-based approaches proven effective for depression.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="activity" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Behavioral Activation</h3>
+                            <p class="text-gray-600 text-sm">Re-engage with meaningful activities and sources of joy.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="heart" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Compassionate Care</h3>
+                            <p class="text-gray-600 text-sm">Non-judgmental support tailored to your experience.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="map-pin" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Windsor & Area</h3>
+                            <p class="text-gray-600 text-sm">Serving Tecumseh, LaSalle, Amherstburg.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section coverage-section">
+        <!-- Content -->
         <div class="container">
-            <h2 class="section-title fade-in">Insurance Coverage & Accessibility</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Our depression therapy services are covered by most extended health insurance plans in Ontario.</p>
+            <div class="content-wrapper" style="display: block; max-width: 900px; margin: 4rem auto;">
 
-            <div class="coverage-grid">
-                <div class="coverage-item fade-in">
-                    <div class="icon">💼</div>
-                    <h4>Extended Health Benefits</h4>
-                    <p>Covered by most employer health plans (e.g., Green Shield Canada, Sun Life)</p>
-                </div>
+                <section class="section">
+                    <h2>Comprehensive Depression Treatment in Windsor, Ontario</h2>
+                    <p>Depression in Windsor can feel isolating, even in a city of over 200,000 people. From the pressure of shift work at major automotive plants disrupting sleep and mood, to the economic uncertainties that have long been part of Windsor's story, there are real, systemic factors that contribute to mental health challenges here.</p>
 
-                <div class="coverage-item fade-in">
-                    <div class="icon">🏢</div>
-                    <h4>Employee Assistance Programs</h4>
-                    <p>EAP coverage available for many Windsor employers</p>
-                </div>
+                    <p>Many Windsor residents tell me they feel they "should be able to handle it" on their own—a common sentiment in our hardworking, industrial city. But depression isn't a matter of willpower. Whether you're a student at the University of Windsor feeling lost, a healthcare worker facing burnout, or someone dealing with the "winter blues" that hit hard in Essex County, professional therapy provides the tools you need to lift the fog and reclaim your life.</p>
+                </section>
 
-                <div class="coverage-item fade-in">
-                    <div class="icon">🎓</div>
-                    <h4>Student Health Plans</h4>
-                    <p>University of Windsor & St. Clair College coverage</p>
-                </div>
+                <section class="section">
+                    <h2>Evidence-Based Depression Treatment Approaches</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🧩</div>
+                            <h3>Cognitive Behavioral Therapy (CBT)</h3>
+                            <p>CBT helps you identify and challenge negative thought patterns that fuel depression. We work together to build practical skills for changing how you think and feel.</p>
+                        </div>
 
-                <div class="coverage-item fade-in">
-                    <div class="icon">💳</div>
-                    <h4>Direct Payment Options</h4>
-                    <p>Flexible payment plans available</p>
-                </div>
+                        <div class="service-card">
+                            <div class="service-icon">🔋</div>
+                            <h3>Behavioral Activation</h3>
+                            <p>A core component of treating depression, this approach helps you gradually re-engage with meaningful activities and sources of joy, even when motivation is low.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🌱</div>
+                            <h3>Acceptance and Commitment Therapy (ACT)</h3>
+                            <p>ACT helps you clarify what truly matters to you and take action towards those values, while learning to relate differently to difficult thoughts and feelings.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🧘</div>
+                            <h3>Mindfulness-Based Therapy</h3>
+                            <p>Learn to observe your thoughts and feelings without judgment, reducing the impact of depressive rumination and staying present in your life.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" style="background: #f8f9ff; padding: 2rem; border-radius: 1rem;">
+                    <h2>Types of Depression We Treat in Windsor, Ontario</h2>
+                    <div class="conditions-list">
+                        <div class="condition-item">
+                            <h4>Major Depressive Disorder</h4>
+                            <p>Persistent sadness, loss of interest, and difficulty functioning in daily life.</p>
+                        </div>
+
+                        <div class="condition-item">
+                            <h4>Seasonal Affective Disorder (SAD)</h4>
+                            <p>Depression that follows a seasonal pattern, common during Windsor's grey winter months.</p>
+                        </div>
+
+                        <div class="condition-item">
+                            <h4>Persistent Depressive Disorder</h4>
+                            <p>Chronic, low-grade depression that lasts for two years or more (formerly Dysthymia).</p>
+                        </div>
+
+                        <div class="condition-item">
+                            <h4>Situational Depression</h4>
+                            <p>Depressive symptoms triggered by specific life events like job loss, divorce, or bereavement.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Insurance Coverage & Accessibility</h2>
+                    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Our depression therapy services are covered by most extended health insurance plans in Ontario.</p>
+
+                    <div class="coverage-grid">
+                        <div class="coverage-item">
+                            <div class="icon">💼</div>
+                            <h4>Extended Health Benefits</h4>
+                            <p>Covered by most employer health plans (e.g., Green Shield Canada, Sun Life)</p>
+                        </div>
+
+                        <div class="coverage-item">
+                            <div class="icon">🏢</div>
+                            <h4>Employee Assistance Programs</h4>
+                            <p>EAP coverage available for many Windsor employers</p>
+                        </div>
+
+                        <div class="coverage-item">
+                            <div class="icon">🎓</div>
+                            <h4>Student Health Plans</h4>
+                            <p>University of Windsor & St. Clair College coverage</p>
+                        </div>
+
+                        <div class="coverage-item">
+                            <div class="icon">💳</div>
+                            <h4>Direct Payment Options</h4>
+                            <p>Flexible payment plans available</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Why Choose Next Step Therapy for Depression Treatment in Windsor?</h2>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🎓</div>
+                            <h3>Professional Expertise</h3>
+                            <p>Registered Psychotherapist with specific experience in treating depressive disorders using proven clinical methods.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🤝</div>
+                            <h3>Non-Judgmental Support</h3>
+                            <p>A safe, confidential space where you can speak openly about your experiences without fear of stigma or judgment.</p>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🎯</div>
+                            <h3>Practical Strategies</h3>
+                            <p>We focus on tangible tools and strategies you can use in your daily life to manage symptoms and build resilience.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-section">
+                    <h2>Ready to Take the Next Step?</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">You don't have to navigate depression alone. Professional support can make a profound difference. Reach out today to start your path to recovery.</p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>📞 Phone:</strong> (416) 306-2157
+                        </div>
+                        <div class="contact-item">
+                            <strong>✉️ Email:</strong> jesse@nextsteptherapy.ca
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Serving:</strong> Windsor, Tecumseh, LaSalle, Amherstburg & surrounding areas
+                        </div>
+                        <div class="contact-item">
+                            <strong>💻 Virtual therapy available across Ontario</strong>
+                        </div>
+                    </div>
+
+                    <a href="tel:416-306-2157" class="btn btn-primary" style="margin-top: 2rem;">Schedule Your Consultation</a>
+                </section>
+
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title fade-in">Why Choose Next Step Therapy for Depression Treatment in Windsor?</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">🎓</div>
-                    <h3>Professional Expertise</h3>
-                    <p>Registered Psychotherapist with specific experience in treating depressive disorders using proven clinical methods.</p>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">🤝</div>
-                    <h3>Non-Judgmental Support</h3>
-                    <p>A safe, confidential space where you can speak openly about your experiences without fear of stigma or judgment.</p>
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
+                    <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                    <p class="text-white font-semibold text-sm">CRPO #10979 | MPsy</p>
+                    <p class="mt-4"><strong class="text-white text-sm">Book Appointment:</strong><br>
+                    <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
                 </div>
 
-                <div class="service-card fade-in">
-                    <div class="service-icon">🎯</div>
-                    <h3>Practical Strategies</h3>
-                    <p>We focus on tangible tools and strategies you can use in your daily life to manage symptoms and build resilience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section contact-section">
-        <div class="container">
-            <h2 class="section-title">Ready to Take the Next Step?</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">You don't have to navigate depression alone. Professional support can make a profound difference. Reach out today to start your path to recovery.</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📞 Phone:</strong> (416) 306-2157
-                </div>
-                <div class="contact-item">
-                    <strong>✉️ Email:</strong> jesse@nextsteptherapy.ca
-                </div>
-                <div class="contact-item">
-                    <strong>📍 Serving:</strong> Windsor, Tecumseh, LaSalle, Amherstburg & surrounding areas
-                </div>
-                <div class="contact-item">
-                    <strong>💻 Virtual therapy available across Ontario</strong>
-                </div>
-            </div>
-
-            <a href="tel:416-306-2157" class="btn btn-primary" style="margin-top: 2rem;">Schedule Your Consultation</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Jesse Cynamon, RP</h4>
-                    <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
-                    <p style="margin-top: 1rem;"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" style="color: #1e3a4f; font-weight: 700; font-size: 1.15rem;">(416) 306-2157</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Therapy Services</h4>
-                    <ul>
-                        <li><a href="/anxiety-therapy-ontario.html">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html">Men's Mental Health</a></li>
-                        <li><a href="/life-transitions.html">Life Transitions</a></li>
-                        <li><a href="/counselling-services.html">Relationship Support</a></li>
-                        <li><a href="/#specializations" style="color: #1e3a4f;">All Services →</a></li>
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Anxiety Therapy</a></li>
+                        <li><a href="/depression-therapy-ontario.html" class="text-white/70 hover:text-white">Depression Therapy</a></li>
+                        <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/70 hover:text-white">Workplace Stress</a></li>
+                        <li><a href="/virtual-therapy-ontario.html" class="text-white/70 hover:text-white">Virtual Therapy</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Ontario Service Areas</h4>
-                    <ul>
-                        <li><a href="/therapist-toronto.html">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html">London Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html">Mississauga Therapy</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html">Burlington Therapy</a></li>
-                        <li><a href="/therapy-kingston-ontario.html">Kingston Therapy</a></li>
-                        <li><a href="/therapy-windsor-ontario.html">Windsor Therapy</a></li>
-                        <li><a href="/counselling-kitchener.html">Kitchener Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" style="color: #1e3a4f;">All Ontario →</a></li>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Locations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
+                        <li><a href="/therapy-ottawa-ontario.html" class="text-white/70 hover:text-white">Ottawa</a></li>
+                        <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
+                        <li><a href="/therapy-london-ontario.html" class="text-white/70 hover:text-white">London</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Focused Support</h4>
-                    <ul>
-                        <li><a href="/performance-anxiety-therapy-ontario.html">Performance Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy-professionals-toronto.html">Imposter Syndrome</a></li>
-                        <li><a href="/executive-stress-management-therapy.html">Executive Stress</a></li>
-                        <li><a href="/online-counselling-remote-workers.html">Remote Work Stress</a></li>
-                        <li><a href="/university-anxiety-therapy-ontario.html">University Students</a></li>
-                        <li><a href="/first-year-university-anxiety.html">First Year Anxiety</a></li>
-                        <li><a href="/sunday-night-anxiety.html">Sunday Night Anxiety</a></li>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/faq.html" class="text-white/70 hover:text-white">FAQ</a></li>
+                        <li><a href="/therapy-costs-ontario.html" class="text-white/70 hover:text-white">Costs</a></li>
+                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/70 hover:text-white">About Jesse</a></li>
+                        <li><a href="/crisis-resources.html" class="text-white/70 hover:text-white">Crisis Resources</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources & Guides</h4>
-                    <ul>
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/blog/anxiety/do-i-need-therapy.html">Signs You Need Therapy</a></li>
-                        <li><a href="/therapy-costs-ontario.html">Therapy Costs Ontario</a></li>
-                        <li><a href="/virtual-therapy-effectiveness-research.html">Virtual Therapy Research</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Professional Standards</h4>
-                    <ul>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html">About Jesse</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Accessibility</a></li>
-                    </ul>
-                    <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Windsor depression therapy services</p>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; margin-top: 2rem; text-align: center;">
-                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 0.5rem;">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18665312600" style="color: #A8C5A9; text-decoration: underline;">1-866-531-2600</a> (Ontario Crisis Line)
+
+            <!-- Crisis Resources -->
+            <div class="border-t border-white/10 pt-8 mt-12 text-center">
+                <p class="text-white/80 text-sm mb-4">
+                    <strong class="text-white">In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+                    <a href="tel:18665312600" class="text-sage-light hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
-            </div>
-            <div class="footer-bottom">
-                <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada<br>
-                <strong>Last Updated:</strong> December 20, 2025</p>
+                <p class="text-white/60 text-xs">&copy; 2025 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada<br><strong>Last Updated:</strong> December 20, 2025</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all elements with fade-in class
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Google Analytics events for CTA clicks
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        'event_category': 'CTA',
-                        'event_label': 'Depression Therapy Windsor Ontario',
-                        'value': 1
-                    });
-                }
-            });
-        });
-    </script>
-<script src="/js/security-check.js"></script>
-
-    <!-- Mobile CTA Bar -->
+    <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
         <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
@@ -591,5 +552,12 @@
             lucide.createIcons();
         });
     </script>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-6 right-6 bg-navy text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-navy-light transition-colors items-center gap-2 z-40">
+        Schedule Consultation
+    </a>
+
+<script src="/js/security-check.js"></script>
 </body>
 </html>
