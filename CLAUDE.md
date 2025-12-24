@@ -15,6 +15,42 @@
 
 ---
 
+## CRITICAL: Design System Reference (READ FIRST)
+
+**BEFORE creating or editing ANY page, you MUST read the Gemini Design System document:**
+
+**[/docs/GEMINI-DESIGN-SYSTEM.md](docs/GEMINI-DESIGN-SYSTEM.md)**
+
+This document contains:
+- Complete Tailwind CSS configuration with custom colors
+- Fixed header component (exact code to copy)
+- 2-column hero layout patterns
+- Section styling patterns
+- CTA components
+- Footer component
+- Schema markup requirements
+- GA4 tracking setup
+- Internal linking strategy
+- Complete page template
+
+**Why this matters:**
+- All pages MUST use the Gemini design system for consistency
+- The old v4-design-system.css is deprecated for new pages
+- Using incorrect patterns will create visual inconsistencies
+- The design doc has copy-paste code blocks for every component
+
+**Quick Reference:**
+```
+Technology: Tailwind CSS (CDN) + custom config
+Colors: navy (#1e3a4f), sage (#4a7c59), cream (#f8f6f2), sand (#e5e0d8)
+Fonts: Playfair Display (headings), Inter (body)
+Icons: Lucide Icons (CDN)
+Header: Fixed position, white/95 backdrop blur
+Hero: 2-column layout with feature cards grid
+```
+
+---
+
 ## Project Structure
 
 ### Key Folders
