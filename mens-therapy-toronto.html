@@ -52,9 +52,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
     <!-- SEO Meta Data -->
     <title>Men's Therapy Toronto | Virtual | CRPO #10979</title>
     <meta name="description" content="You don't have to handle it all alone. Men's therapy in Toronto for Bay Street stress, relationship challenges, and burnout. Virtual sessions that fit your life. CRPO #10979. Free consultation.">
@@ -68,7 +65,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nextsteptherapy.ca/mens-therapy-toronto.html">
 
-    <!-- MedicalWebPage Schema - Required for YMYL Health Content -->
+    <!-- MedicalWebPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -265,14 +262,9 @@
     }
     </script>
 
-    <!-- Internal style block removed by Design Audit -->
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -287,46 +279,46 @@
                         sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        body: ['Inter', 'sans-serif']
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['DM Sans', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        body { font-family: 'DM Sans', sans-serif; background-color: #f8f6f2; }
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
+        .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
         .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
+        .card-grid { display: grid; gap: 1.5rem; }
+        @media (min-width: 768px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
         .feature-list { list-style: none; padding: 0; }
         .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
+        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem; border-left: 4px solid #1e3a4f; }
+        .faq-item h4 { margin-top: 0; color: #1e3a4f; }
+        .contact-highlight { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 3rem 1rem; color: white; text-align: center; }
+        .contact-highlight h3, .contact-highlight h4 { color: white; }
+        .contact-info { margin-top: 2rem; opacity: 0.9; }
+        .cta-trust-signals { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: rgba(255,255,255,0.9); margin-top: 1rem; }
+        .cta-trust-signals span { display: inline-block; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+        .secondary-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
     </style>
 </head>
 <body class="font-body bg-cream">
-        <!-- Header -->
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
@@ -348,46 +340,92 @@
         </div>
     </header>
 
-    
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Men's Therapy Toronto | Professional Mental Health Support Beyond "I'm Fine"</h1>
-                    <p class="lead-text">The TTC commute is brutal. Bay Street never sleeps. Your partner says you're "checked out." You tell everyone you're fine, but inside you're exhausted—juggling work pressure, relationship stress, and the weight of just keeping it all together. If you're a Toronto man looking for <a href="index.html" style="color: var(--primary-soft-blue); text-decoration: none;">professional therapy support</a>, you're in the right place. Men's therapy in Toronto doesn't have to mean sitting in a circle talking about feelings. As a therapist focused on men's mental health serving Toronto, I provide practical, solution-focused therapy that fits your life—whether you're dealing with workplace stress, anxiety, or relationship challenges.</p>
+    <!-- Hero Section -->
+    <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5 pt-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">MEN'S MENTAL HEALTH</span>
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">
+                        Men's Therapy Toronto
+                    </h1>
+                    <p class="text-lg md:text-xl text-navy/70 mb-8 leading-relaxed">
+                        The TTC commute is brutal. Bay Street never sleeps. Your partner says you're "checked out." You tell everyone you're fine, but inside you're exhausted—juggling work pressure, relationship stress, and the weight of just keeping it all together.
+                    </p>
 
-                    <div class="trust-indicators">
-                        <span class="trust-indicator">CRPO #10979 Licensed</span>
-                        <span class="trust-indicator">Focused on Men's Mental Health</span>
-                        <span class="trust-indicator">Virtual Sessions Throughout Toronto</span>
-                        <span class="trust-indicator">Free 15-Minute Consultation</span>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center justify-center px-8 py-4 bg-navy text-cream rounded-lg hover:bg-navy/90 transition-all shadow-lg hover:shadow-xl font-medium">
+                            <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                            Schedule 15-Min Call
+                        </a>
+                        <a href="tel:+14163062157" class="inline-flex items-center justify-center px-8 py-4 bg-sage text-white rounded-lg hover:bg-sage/90 transition-all shadow-lg hover:shadow-xl font-medium">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                            Call (416) 306-2157
+                        </a>
                     </div>
 
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-lg);">
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
-                    </div>
-
-                    <div class="cta-trust-wrapper">
-                        <div class="cta-trust-signals">
-                            <span>Free 15-minute consultation</span>
-                            <span>Available within 24-48 hours</span>
-                            <span>No commitment required</span>
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-6 text-sm text-navy/60">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-sage"></i>
+                            <span>CRPO #10979</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="video" class="w-4 h-4 text-sage"></i>
+                            <span>Virtual Sessions</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-sage"></i>
+                            <span>Evening Appointments</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
+                <!-- Feature Cards Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-sage/10 hover:border-sage/30 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="target" class="w-6 h-6 text-sage"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Solution-Focused</h3>
+                        <p class="text-sm text-navy/60">Practical approaches, not endless talking about feelings.</p>
+                    </div>
+
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-sage/10 hover:border-sage/30 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="calendar-clock" class="w-6 h-6 text-sage"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Fits Your Schedule</h3>
+                        <p class="text-sm text-navy/60">Evening and weekend appointments available.</p>
+                    </div>
+
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-sage/10 hover:border-sage/30 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="video" class="w-6 h-6 text-sage"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Platform</h3>
+                        <p class="text-sm text-navy/60">Skip the TTC—therapy from home or office.</p>
+                    </div>
+
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-sage/10 hover:border-sage/30 transition-all hover:shadow-lg">
+                        <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="file-text" class="w-6 h-6 text-sage"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Accepted</h3>
+                        <p class="text-sm text-navy/60">Receipts for all Ontario insurance providers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Continues... (rest of the existing content after hero section) -->
+    <main>
         <!-- Toronto-Specific Challenges Section -->
-        <section class="section" style="background: var(--neutral-cream);">
+        <section class="section" style="background: var(--neutral-cream, #f5f1ea);">
             <div class="container">
                 <h2 style="text-align: center;">Why Toronto Men Seek Therapy: Unique Mental Health Challenges</h2>
-
-                <!-- Image: Toronto skyline/Bay Street -->
-                <div style="text-align: center; margin-bottom: var(--space-xl);">
-                    <img src="images/hero-background.jpg" alt="Toronto Bay Street skyline - men's therapy for financial district professionals workplace stress" style="max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);" onerror="this.style.display='none'">
-                </div>
 
                 <div class="card-grid">
                     <div class="content-card">
@@ -410,16 +448,6 @@
                         <p>Toronto's cultural diversity means varying attitudes toward men seeking mental health support. <strong>Only 33% of men have ever sought professional help</strong>, despite 64% reporting moderate-to-high stress. Whether it's your family's expectations, your cultural background, or just feeling like you "should" handle it alone—men's therapy in Toronto is a confidential space where you don't have to perform or prove anything.</p>
                     </div>
                 </div>
-
-                <!-- CTA #2 - After problem expansion -->
-                <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md);">
-                    <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to address these Toronto-specific challenges?</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Your Free Consultation</a>
-                    <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
-                        <span>Evening & weekend appointments available</span>
-                        <span>100% virtual - no commute required</span>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -429,7 +457,7 @@
                 <div class="content-card">
                     <h2>How Therapy for Men in Toronto Actually Works</h2>
 
-                    <p>Men's therapy Toronto takes a practical, problem-solving approach. We identify specific challenges (workplace stress, relationship issues, anxiety) and develop actionable strategies. You don't have to be comfortable "talking about feelings" to benefit from <a href="services.html" style="color: var(--primary-soft-blue); text-decoration: underline;">therapy services</a>.</p>
+                    <p>Men's therapy Toronto takes a practical, problem-solving approach. We identify specific challenges (workplace stress, relationship issues, anxiety) and develop actionable strategies. You don't have to be comfortable "talking about feelings" to benefit from therapy services.</p>
 
                     <h3>Solution-Focused, Not Just "Talking About Feelings"</h3>
                     <p>We approach challenges the way you'd approach a work project—identify the problem, develop a strategy, implement solutions, and track progress. This isn't endless talking about your childhood; it's practical skill-building for real-world situations.</p>
@@ -455,111 +483,10 @@
             </div>
         </section>
 
-        <!-- What to Expect Section -->
-        <section class="section" style="background: var(--neutral-cream);">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>What to Expect from Your First Men's Therapy Session</h2>
-
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h3>Step 1: Free 15-Minute Consultation</h3>
-                        <p>Quick phone call to discuss your goals, answer questions about the therapy process, and determine if we're a good fit. No pressure, no commitment.</p>
-                    </div>
-
-                    <div style="margin-bottom: var(--space-xl);">
-                        <h3>Step 2: First Session (50 minutes)</h3>
-                        <p>We'll identify your primary challenges (workplace stress, relationship issues, anxiety), discuss what success looks like for you, and create a practical plan. Sessions are confidential and judgment-free.</p>
-                    </div>
-
-                    <div>
-                        <h3>Step 3: Ongoing Support (8-10 sessions average)</h3>
-                        <p>Most Toronto men work with me for 8-10 sessions, seeing improvements in stress management, work-life balance, and relationship quality. Sessions are weekly or bi-weekly based on your schedule.</p>
-                    </div>
-
-                    <!-- CTA #3 - After process explanation -->
-                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to take the first step?</p>
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Your Free Consultation</a>
-                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
-                            <span>CRPO-registered psychotherapist #10979</span>
-                            <span>Focused on men's mental health</span>
-                            <span>Serving all of Toronto & Ontario</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Virtual Therapy Benefits Section -->
-        <section class="section" style="background: white;">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>Why Choose Virtual Therapy in Toronto</h2>
-
-                    <!-- Image: Virtual therapy session -->
-                    <div style="text-align: center; margin-bottom: var(--space-lg);">
-                        <img src="images/contact-background.jpg" alt="Virtual therapy session for men in Toronto Ontario - online mental health support" style="max-width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);" onerror="this.style.display='none'">
-                    </div>
-
-                    <h3>No TTC Commute Required</h3>
-                    <p>Eliminate 60-90 minute commutes. Attend therapy from home, office, or anywhere private. Save time and reduce stress. Learn more about <a href="virtual-therapy-ontario.html" style="color: var(--primary-soft-blue); text-decoration: underline;">virtual therapy in Ontario</a>.</p>
-
-                    <h3>Flexible Scheduling for Toronto Professionals</h3>
-                    <p>Evening and weekend appointments available. Book around your work schedule. Jane App allows 24/7 instant booking.</p>
-
-                    <h3>Same Effectiveness as In-Person</h3>
-                    <p>Research shows virtual therapy is equally effective as in-person sessions for anxiety, depression, and stress management.</p>
-
-                    <h3>Greater Privacy & Comfort</h3>
-                    <p>Attend from your own space. No waiting rooms. Ideal for men concerned about confidentiality or workplace stigma.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing & Insurance Section -->
-        <section class="section" style="background: var(--neutral-cream);">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>Men's Therapy Toronto: Cost & Insurance Information</h2>
-
-                    <h3>Session Rates</h3>
-                    <p><strong>$175 per 50-minute session</strong></p>
-                    <p>Competitive with Toronto market average ($140-$195). Investment in your mental health, work performance, and relationships.</p>
-
-                    <h3>Insurance Coverage</h3>
-                    <p>Most extended health insurance plans cover therapy sessions:</p>
-                    <ul class="feature-list">
-                        <li>Green Shield Canada</li>
-                        <li>Manulife</li>
-                        <li>Sun Life</li>
-                        <li>Great-West Life</li>
-                        <li>And most other major providers</li>
-                    </ul>
-                    <p>Typical coverage: $350-$500 annually for mental health services.</p>
-
-                    <h3>OHIP Coverage</h3>
-                    <p>OHIP does not cover psychotherapy services in Ontario. However, many employers offer extended health benefits that do.</p>
-
-                    <h3>Payment Methods</h3>
-                    <p>Credit card, debit, e-transfer accepted. Receipts provided for insurance claims.</p>
-
-                    <!-- CTA #4 - After pricing transparency -->
-                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Questions about cost or insurance?</p>
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
-                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
-                            <span>Free consultation to discuss insurance coverage</span>
-                            <span>Receipts provided for all major insurers</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ Section -->
         <section class="section" style="background: white;">
             <div class="container-narrow">
-                <h2 style="text-align: center; margin-bottom: var(--space-xl);">Frequently Asked Questions About Men's Therapy in Toronto</h2>
+                <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions About Men's Therapy in Toronto</h2>
 
                 <div class="faq-item">
                     <h4>How much does men's therapy cost in Toronto?</h4>
@@ -590,98 +517,6 @@
                     <h4>What's different about therapy specifically for men?</h4>
                     <p>Men's therapy takes a solution-focused, practical approach rather than just "talking about feelings." We identify specific problems (workplace stress, relationship challenges) and develop actionable strategies. It's more like strategic problem-solving than emotional processing.</p>
                 </div>
-
-                <div class="faq-item">
-                    <h4>Do I have to talk about my feelings in therapy?</h4>
-                    <p>Not necessarily. While understanding emotions is helpful, men's therapy focuses on practical problem-solving. We work with your communication style—whether that's solution-focused, analytical, or gradual emotional awareness.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Can I do men's therapy online/virtually?</h4>
-                    <p>Yes! All sessions at Next Step Therapy are virtual via secure video platform. This eliminates TTC commute time, offers flexible scheduling, and provides privacy. Virtual therapy is research-proven to be as effective as in-person sessions.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>How do I book evening or weekend therapy appointments?</h4>
-                    <p>Use the Jane App booking link to see real-time availability and book instantly. Evening and weekend slots are available to accommodate Toronto professionals' busy schedules.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Is virtual therapy as effective as in-person?</h4>
-                    <p>Yes. Research shows virtual therapy is equally effective for anxiety, depression, stress management, and relationship issues. Many Toronto men prefer virtual sessions because they eliminate commute time and provide greater privacy.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>How confidential is online therapy?</h4>
-                    <p>Completely confidential. I'm bound by CRPO professional standards for confidentiality. Virtual sessions use encrypted video platforms meeting healthcare privacy requirements. Your participation in therapy is private.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>How can therapy help with Bay Street workplace stress?</h4>
-                    <p>Therapy for Bay Street professionals addresses high-pressure environments, long hours, performance anxiety, and work-life balance. We develop practical stress management strategies, set sustainable boundaries, and prevent burnout—critical for Toronto's competitive financial sector.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>Can therapy help with TTC commute anxiety?</h4>
-                    <p>Yes. Therapy addresses commute-related stress (sensory overload, delays, crowding) and helps establish work-life boundaries. Virtual therapy also eliminates the need for additional commuting to appointments, saving you 60-90 minutes per session.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>What neighborhoods in Toronto do you serve?</h4>
-                    <p>As a virtual practice, I serve all Toronto neighborhoods and the Greater Toronto Area: Downtown, Midtown, North York, Scarborough, Etobicoke, York, East York, and beyond. All of Ontario is accessible through virtual therapy.</p>
-                </div>
-
-                <!-- CTA #5 - After FAQ trust-building -->
-                <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(74, 107, 122, 0.05); border-radius: var(--radius-md);">
-                    <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Still have questions?</p>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Free 15-Minute Consultation</a>
-                    <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
-                        <span>All questions answered in free call</span>
-                        <span>No obligation to book sessions</span>
-                        <span>CRPO-registered professional support</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Jesse Section -->
-        <section class="section" style="background: var(--neutral-cream);">
-            <div class="container-narrow">
-                <div class="content-card">
-                    <h2>About Jesse Cynamon, RP - Toronto Therapist for Men</h2>
-
-                    <!-- Image: Jesse Cynamon professional photo -->
-                    <div style="text-align: center; margin-bottom: var(--space-lg);">
-                        <img src="images/optimized/jesse-about-600.webp" alt="Jesse Cynamon RP CRPO 10979 - Men's therapist Toronto Ontario registered psychotherapist" style="max-width: 300px; height: auto; border-radius: 50%; box-shadow: var(--shadow-medium);" onerror="this.style.display='none'">
-                    </div>
-
-                    <p><strong>Jesse Cynamon, Registered Psychotherapist (CRPO #10979)</strong></p>
-
-                    <p>I focus on men's mental health therapy throughout Toronto and Ontario, with a focus on workplace stress, <a href="anxiety-treatment-toronto.html" style="color: var(--primary-soft-blue); text-decoration: underline;">anxiety treatment</a>, relationship challenges, and life transitions. My approach is practical, solution-focused, and evidence-based using Acceptance and Commitment Therapy (ACT).</p>
-
-                    <p><strong>I understand Toronto men's unique challenges:</strong></p>
-                    <ul class="feature-list">
-                        <li>Bay Street and financial sector pressure</li>
-                        <li>Tech industry burnout</li>
-                        <li>TTC commute stress and work-life balance</li>
-                        <li>Cultural stigma around men seeking help</li>
-                        <li>Toronto's high cost of living and financial anxiety</li>
-                    </ul>
-
-                    <p>As a CRPO-registered psychotherapist, I provide confidential, professional support tailored to how men actually communicate and solve problems. <a href="contact.html" style="color: var(--primary-soft-blue); text-decoration: underline;">Contact me</a> to learn more about my approach.</p>
-
-                    <!-- CTA #6 - Final conversion point -->
-                    <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-soft);">
-                        <p style="margin-bottom: var(--space-md); font-weight: 500; color: var(--text-primary);">Ready to work together?</p>
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Your Free 15-Minute Call Now</a>
-                        <div class="cta-trust-signals" style="margin-top: var(--space-sm);">
-                            <span>CRPO #10979 Registered Psychotherapist</span>
-                            <span>Serving Toronto & Ontario virtually</span>
-                            <span>Evening & weekend availability</span>
-                            <span>Free consultation - no commitment</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -697,11 +532,10 @@
                 <div class="hero-cta">
                     <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule Your Free 15-Minute Call</a>
                     <div class="secondary-ctas">
-                        <a href="tel:+14163062157" class="secondary-cta phone-cta">(416) 306-2157</a>
-                        <a href="index.html#contact" class="secondary-cta email-cta">Send Message</a>
+                        <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
                     </div>
 
-                    <div class="cta-trust-signals" style="margin-top: var(--space-md);">
+                    <div class="cta-trust-signals">
                         <span>Book online in 2 minutes</span>
                         <span>Available 7 days a week</span>
                         <span>100% confidential</span>
@@ -709,7 +543,7 @@
                 </div>
 
                 <div class="contact-info">
-                    <h4 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Your conversation is 100% confidential and pressure-free.</h4>
+                    <h4 style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Your conversation is 100% confidential and pressure-free.</h4>
                     <strong>Jesse Cynamon, RP</strong><br>
                     Registered Psychotherapist | CRPO #10979<br>
                     Serving Toronto & All of Ontario Virtually<br>
@@ -720,60 +554,6 @@
         </section>
     </main>
 
-    
-
-    
-
-    <!-- Smart Sticky Header JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.header.smart-sticky');
-            if (!header) return;
-
-            let lastScrollY = window.scrollY;
-            let isHeaderVisible = true;
-            const headerHeight = header.offsetHeight;
-            const scrollThreshold = 10;
-
-            function updateHeader() {
-                const currentScrollY = window.scrollY;
-                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-
-                if (scrollDifference < scrollThreshold) {
-                    return;
-                }
-
-                if (currentScrollY <= headerHeight) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-                    header.style.transform = `translateY(-${headerHeight}px)`;
-                    isHeaderVisible = false;
-                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                }
-
-                lastScrollY = currentScrollY;
-            }
-
-            let ticking = false;
-            function requestTick() {
-                if (!ticking) {
-                    requestAnimationFrame(updateHeader);
-                    ticking = true;
-                }
-            }
-
-            window.addEventListener('scroll', function() {
-                requestTick();
-                ticking = false;
-            }, { passive: true });
-
-            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            header.style.transform = 'translateY(0)';
-        });
-    </script>
     <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
@@ -792,10 +572,6 @@
         <i data-lucide="calendar" class="w-5 h-5"></i> Schedule 15-Min Call
     </a>
 
-<script src="/js/security-check.js"></script>
-
-    
-
-    
+    <script src="/js/security-check.js"></script>
 </body>
 </html>

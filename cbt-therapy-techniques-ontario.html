@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -170,7 +170,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -192,10 +192,10 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
@@ -245,13 +245,64 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <h1>Master CBT Therapy Techniques</h1>
-            <p class="hero-subtitle lead-text">Evidence-based cognitive behavioral therapy methods proven effective for anxiety, depression, and stress management in Ontario.</p>
-            <a href="tel:416-306-2157" class="btn btn-primary">Start CBT Therapy Today</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-cream via-ivory to-sage-soft pt-12 pb-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-sm font-semibold rounded-full mb-6">CBT TECHNIQUES</span>
+                        <h1 class="font-display text-4xl md:text-5xl font-medium text-navy leading-tight mb-6">
+                            Master CBT Therapy Techniques
+                        </h1>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">Evidence-based cognitive behavioral therapy methods proven effective for anxiety, depression, and stress management in Ontario.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a href="tel:+14163062157" class="inline-flex items-center justify-center gap-2 bg-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-navy-light transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5"></i>Call (416) 306-2157
+                            </a>
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy px-6 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-colors">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>Book Consultation
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full text-sm text-gray-600 border border-sand"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i>CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full text-sm text-gray-600 border border-sand"><i data-lucide="dollar-sign" class="w-4 h-4 text-sage"></i>$175/session</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-sand/50">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="brain" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evidence-Based</h3>
+                            <p class="text-sm text-gray-600">Proven CBT techniques for anxiety and depression treatment</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-sand/50">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="target" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Practical Skills</h3>
+                            <p class="text-sm text-gray-600">Tools you can use immediately in real situations</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-sand/50">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="clock" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Time-Limited</h3>
+                            <p class="text-sm text-gray-600">Typical improvement within 12-20 sessions</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-sand/50">
+                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="video" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Available</h3>
+                            <p class="text-sm text-gray-600">Secure online sessions across Ontario</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <section class="section intro-section">
         <div class="container">
@@ -528,6 +579,7 @@
             <a href="tel:416-306-2157" class="btn btn-primary" style="background: white; color: #22c55e; margin-top: 2rem;">Book Your CBT Consultation</a>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -610,8 +662,8 @@
 
 <script src="/js/security-check.js"></script>
 
-    
 
-    
+
+
 </body>
 </html>

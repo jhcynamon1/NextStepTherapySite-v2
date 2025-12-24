@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Import shared CSS --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+
 
     <!-- SEO Meta Data -->
     <title>Grade Anxiety: When a B Feels Like Failure | Students</title>
@@ -106,7 +106,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -114,23 +114,32 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: {
+                            DEFAULT: '#1e3a4f',
+                            light: '#2d5066',
+                            deep: '#152a3a'
+                        },
+                        sage: {
+                            DEFAULT: '#4a7c59',
+                            light: '#8cb390',
+                            soft: '#e8f0e8'
+                        },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
@@ -158,7 +167,7 @@
         a:hover { color: #4a7c59; }
     </style>
 </head>
-<body>
+<body class="font-body bg-cream">
     <!-- Header -->
         <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4">
@@ -186,23 +195,78 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="content-section">
-                    <h1>University Grade Anxiety: When a B Feels Like Failure</h1>
+    <main class="pt-20">
+        <!-- Hero Section - Gemini Design with 2-Column Grid -->
+        <section class="relative bg-gradient-to-br from-cream via-white to-sage/5 py-16 md:py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(74, 124, 89, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(30, 58, 79, 0.1) 0%, transparent 50%);"></div>
+            <div class="max-w-7xl mx-auto px-6 relative">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Content -->
+                    <div>
+                        <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                            <a href="/" class="hover:text-navy">Home</a>
+                            <span>→</span>
+                            <span class="text-navy">Grade Anxiety</span>
+                        </nav>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">GRADE ANXIETY</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">University Grade Anxiety: When a B Feels Like Failure</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You refreshed the grade portal thirty times. When the B+ finally appeared, your stomach dropped. Your friends are celebrating their A-minuses like they won the lottery, and you're sitting here feeling like you failed—even though you studied harder than anyone.</p>
 
-                    <div class="article-meta">
-                        <div class="author-info">
-                            <span><strong>By Jesse Cynamon, RP (CRPO #10979)</strong></span>
-                            <span class="author-badge">Academic Perfectionism Specialist</span>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20 inline-flex items-center gap-2">
+                                <i data-lucide="calendar" class="w-5 h-5"></i> Book Free Consultation
+                            </a>
+                            <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all">Call (416) 306-2157</a>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-sage"></i>
+                                <span>CRPO #10979</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="video" class="w-4 h-4 text-sage"></i>
+                                <span>Virtual Across Ontario</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-sage"></i>
+                                <span>Student-Focused</span>
+                            </div>
                         </div>
                     </div>
 
-                    <p class="lead-text">You refreshed the grade portal thirty times. When the B+ finally appeared, your stomach dropped. Your friends are celebrating their A-minuses like they won the lottery, and you're sitting here feeling like you failed—even though you studied harder than anyone. Your parents always said you were "the smart one." What happens when you're not perfect?</p>
-
-                    <p class="lead-text">Grade anxiety turns every assignment into an existential crisis. It's not about wanting to do well—it's about believing anything less than perfect means you're worthless. And ironically, this perfectionism is exactly what's sabotaging your GPA.</p>
+                    <!-- Right Column: Feature Cards -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="book-open" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Exam Anxiety</h3>
+                            <p class="text-sm text-gray-600">Manage test stress & perform better</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-navy"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Social Anxiety</h3>
+                            <p class="text-sm text-gray-600">Navigate campus connections</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="clock" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Hours</h3>
+                            <p class="text-sm text-gray-600">Fits your class schedule</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="wallet" class="w-6 h-6 text-navy"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Student Insurance</h3>
+                            <p class="text-sm text-gray-600">Most health plans accepted</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -461,7 +525,8 @@
             </div>
         </article>
     </main>
-<script src="/js/security-check.js"></script>
+
+    <script src="/js/security-check.js"></script>
 
     <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
