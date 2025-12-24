@@ -18,7 +18,7 @@ Jesse's voice is **more confident than typical "authentic" copy**. The vulnerabi
 | "I don't have all the answers. But I can..." | "I can't promise..." / "I don't know if..." |
 | State what you CAN do | Define yourself by what you're NOT |
 | "Here's what I've seen..." | "Honestly..." / "At least, that's been my experience" |
-| "Sound familiar?" | "Right?" / "Does that make sense?" |
+| Check-ins only when natural | "Right?" / "Does that make sense?" |
 | "I'm with you" | "I want to be with you" |
 
 ### Voice Dial by Page Type
@@ -97,9 +97,10 @@ Jesse's voice is **more confident than typical "authentic" copy**. The vulnerabi
 
 **Pattern:** Confident admission + what you CAN do. Reframe the goal.
 
-### Check-in (Only One Works)
+### Check-in (Use Sparingly, Only When Natural)
 
-- "Sound familiar?"
+- "Sound familiar?" — ONLY use when it genuinely fits the flow. Don't force it on every page.
+- Check-ins should feel natural, not formulaic. If a section doesn't need one, don't add it.
 
 **Kill these:** "Right?" / "Does that make sense?" / "Does any of that land?" / "You know?" / "Does that resonate?"
 
