@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+
 
     <!-- Hero + Page Styles -->
     <!-- Internal style block removed by Design Audit -->
@@ -137,7 +137,7 @@
           "name": "What should I ask during a consultation call?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ask about the therapist’s experience with your concerns, their approach (e.g., CBT, ACT), availability, fees, and how they handle insurance receipts. Notice how comfortable you feel speaking with them—fit matters as much as credentials."
+            "text": "Ask about the therapist's experience with your concerns, their approach (e.g., CBT, ACT), availability, fees, and how they handle insurance receipts. Notice how comfortable you feel speaking with them—fit matters as much as credentials."
           }
         }
       ]
@@ -149,7 +149,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -160,6 +160,7 @@
                         navy: '#1e3a4f',
                         sage: '#4a7c59',
                         cream: '#f8f6f2',
+                        sand: '#e8e4dd',
                         'navy-light': '#2d5066'
                     },
                     fontFamily: {
@@ -170,10 +171,10 @@
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
@@ -202,35 +203,30 @@
     </style>
 </head>
 <body>
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="hero-guide">
+    <section class="hero-guide" style="margin-top: 72px;">
         <div class="container">
             <h1>How to Find a Therapist in Ontario</h1>
-            <p class="lead-text">Finding the right therapist shouldn’t feel overwhelming. This step-by-step guide walks you through the exact process Ontarians use to vet credentials, compare directories, confirm insurance coverage, and show up confident for a first session—whether you choose to work with us or another provider.</p>
+            <p class="lead-text">Finding the right therapist shouldn't feel overwhelming. This step-by-step guide walks you through the exact process Ontarians use to vet credentials, compare directories, confirm insurance coverage, and show up confident for a first session—whether you choose to work with us or another provider.</p>
 
             <div class="trust-highlights">
                 <span>CRPO-Registered (RP #10979)</span>
@@ -251,7 +247,7 @@
         <section class="guide-section" id="step-by-step">
             <div class="container">
                 <h2 class="section-title">Step-by-Step: From Search to First Session</h2>
-                <p class="section-lead">Use this simple sequence to avoid analysis paralysis. Each step includes questions to ask and resources tailored to Ontario’s mental-health landscape.</p>
+                <p class="section-lead">Use this simple sequence to avoid analysis paralysis. Each step includes questions to ask and resources tailored to Ontario's mental-health landscape.</p>
 
                 <div class="step-grid">
                     <div class="step-card" id="step-1">
@@ -266,7 +262,7 @@
                     <div class="step-card" id="step-2">
                         <span class="step-number">2</span>
                         <h3>Clarify Your Goals</h3>
-                        <p>Write down the concerns you want help with, how they’re affecting daily life, and any preferences (virtual vs. in-person, evening availability, modality, cultural or language considerations). This makes filtering easier and gives therapists context during consultations.</p>
+                        <p>Write down the concerns you want help with, how they're affecting daily life, and any preferences (virtual vs. in-person, evening availability, modality, cultural or language considerations). This makes filtering easier and gives therapists context during consultations.</p>
                         <p>Need inspiration? Browse our <a href="/anxiety-therapy-ontario.html">anxiety therapy</a>, <a href="/depression-therapy-ontario.html">depression support</a>, or <a href="/workplace-stress-therapy-ontario.html">workplace stress</a> pages to see how specialties translate into sessions.</p>
                     </div>
                     <div class="step-card" id="step-3">
@@ -291,7 +287,7 @@
                         <span class="step-number">6</span>
                         <h3>Prepare for Session One</h3>
                         <p>Complete intake forms, confirm technology for virtual sessions, and jot down top goals. Plan a few quiet minutes before and after to get the most from the appointment.</p>
-                        <p>Download our <a href="/virtual-therapy-ontario.html">virtual therapy checklist</a> if you’ll be meeting online.</p>
+                        <p>Download our <a href="/virtual-therapy-ontario.html">virtual therapy checklist</a> if you'll be meeting online.</p>
                     </div>
                 </div>
             </div>
@@ -306,7 +302,7 @@
                 <div class="toolkit-grid">
                     <div class="toolkit-card">
                         <h3>CRPO Public Register</h3>
-                        <p>Verify a psychotherapist’s registration status. Essential for insurance reimbursement.</p>
+                        <p>Verify a psychotherapist's registration status. Essential for insurance reimbursement.</p>
                         <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: 0.9rem;">
                             <strong>💡 How to Check Me:</strong><br>
                             1. Go to "Find a Member"<br>
@@ -343,7 +339,7 @@
                     </div>
                     <div class="toolkit-card">
                         <h3>Affordable Therapy Network</h3>
-                        <p>Reduced-fee directory featuring therapists offering sliding-scale sessions. Ideal if you’re between jobs or lack extended benefits.</p>
+                        <p>Reduced-fee directory featuring therapists offering sliding-scale sessions. Ideal if you're between jobs or lack extended benefits.</p>
                         <a href="https://www.affordabletherapynetwork.com/canada" target="_blank" rel="noopener">See Affordable Options</a>
                     </div>
                 </div>
@@ -359,9 +355,9 @@
                 <div class="insurance-grid">
                     <div class="insurance-card">
                         <h3>Extended Health Benefits</h3>
-                        <p>Most Ontario employers cover $500–$3,000 per year for psychotherapy under “paramedical services.” Confirm eligible professionals (RP, RSW, psychologist), per-session cap, coinsurance, and whether a physician referral is required.</p>
+                        <p>Most Ontario employers cover $500–$3,000 per year for psychotherapy under "paramedical services." Confirm eligible professionals (RP, RSW, psychologist), per-session cap, coinsurance, and whether a physician referral is required.</p>
                         <ul>
-                            <li>Ensure receipts list the therapist’s registration number (e.g., CRPO #10979).</li>
+                            <li>Ensure receipts list the therapist's registration number (e.g., CRPO #10979).</li>
                             <li>Submit claims through insurer portals (Manulife, Sun Life, Canada Life, Green Shield, Desjardins).</li>
                         </ul>
                     </div>
@@ -389,7 +385,7 @@
         <section class="guide-section">
             <div class="container">
                 <h2 class="section-title">Match by Specialty and Service</h2>
-                <p class="section-lead">Once you shortlist providers, confirm they regularly treat the concerns you want to address. Explore these specialty hubs if you’re still narrowing your focus.</p>
+                <p class="section-lead">Once you shortlist providers, confirm they regularly treat the concerns you want to address. Explore these specialty hubs if you're still narrowing your focus.</p>
 
                 <div class="specialty-links">
                     <a class="link-card" href="/anxiety-therapy-ontario.html">Anxiety Therapy in Ontario →</a>
@@ -426,14 +422,14 @@
                 <div class="faq-grid">
                     <div class="faq-item">
                         <h3>How long should I stay with a therapist?</h3>
-                        <p>Many people notice meaningful change after 8–12 sessions, but timelines depend on goals and frequency. Reassess fit every few months and be transparent with your therapist about progress—they’ll help you adjust cadence or plan a wrap-up when you’re ready.</p>
+                        <p>Many people notice meaningful change after 8–12 sessions, but timelines depend on goals and frequency. Reassess fit every few months and be transparent with your therapist about progress—they'll help you adjust cadence or plan a wrap-up when you're ready.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Can I switch therapists if it isn’t working?</h3>
-                        <p>Absolutely. You’re hiring a professional—in Ontario you have the right to transfer care, request your records, or ask for referrals. It’s common to try more than one therapist before finding the right fit.</p>
+                        <h3>Can I switch therapists if it isn't working?</h3>
+                        <p>Absolutely. You're hiring a professional—in Ontario you have the right to transfer care, request your records, or ask for referrals. It's common to try more than one therapist before finding the right fit.</p>
                     </div>
                     <div class="faq-item">
-                        <h3>Do I need a doctor’s referral?</h3>
+                        <h3>Do I need a doctor's referral?</h3>
                         <p>No referral is needed to see a CRPO-registered psychotherapist or social worker. Some insurance plans request physician forms—always check your benefits booklet so you can get paperwork in place before the first claim.</p>
                     </div>
                     <div class="faq-item">
@@ -449,7 +445,7 @@
             <div class="container">
                 <div class="guide-cta-box">
                     <h2>Ready to Shortlist Your Therapist?</h2>
-                    <p>If you’d like help implementing these steps—or you already know you’d like to work together—book a free 15-minute consultation. We’ll talk through your goals, insurance coverage, and next steps so you can move forward with clarity.</p>
+                    <p>If you'd like help implementing these steps—or you already know you'd like to work together—book a free 15-minute consultation. We'll talk through your goals, insurance coverage, and next steps so you can move forward with clarity.</p>
                     <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
                     <div class="trust-highlights" style="margin-top: 1.5rem;">
                         <span>Virtual Sessions Anywhere in Ontario</span>
