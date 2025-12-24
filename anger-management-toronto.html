@@ -23,13 +23,9 @@
     <meta name="geo.placename" content="Toronto">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-
-    <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
-
-    <!-- Internal style block removed by Design Audit -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -162,13 +158,15 @@
       ]
     }
     </script>
+
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+
     <!-- Fonts - Gemini Design System -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -176,107 +174,149 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Page Styles -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
+        .font-display { font-family: 'Playfair Display', serif; }
+
+        /* Legacy class compatibility for Gemini design */
+        .section { padding: 5rem 0; }
+        .section.alternate-bg { background: #f5f1ea; }
+        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
         .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .content-card { background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e8e3d9; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; color: #1e3a4f; margin-bottom: 1.5rem; text-align: center; }
+        .section-intro { font-size: 1.125rem; color: #6b7280; text-align: center; max-width: 48rem; margin: 0 auto 2rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
+        p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
+        a { color: #4a7c59; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .feature-list { list-style: none; padding: 0; margin: 1rem 0; }
+        .feature-list li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #4b5563; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { color: white; margin-top: 0; }
+        .cta-box p { color: rgba(255,255,255,0.9); }
+        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #4a7c59; color: white; }
+        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid white; }
+        .btn-secondary:hover { background: transparent; color: white; text-decoration: none; }
+        @media (max-width: 768px) {
+            .section { padding: 3rem 0; }
+            .section-title { font-size: 1.5rem; }
+            .content-card { padding: 1.5rem; }
+        }
     </style>
 </head>
-<body>
-
-<!-- Header -->
-    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+<body class="font-body bg-cream">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
                     <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
                 </div>
             </div>
         </div>
     </header>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="container">
-        <h1>Anger Management Toronto: Learn to Respond, Not React</h1>
-        <p style="font-size: 0.9em; color: rgba(255,255,255,0.8); margin: 0.5em auto 1em auto; text-align: center;">
-            <strong>Last Updated:</strong> December 20, 2025<strong>Reviewed by:</strong> Jesse Cynamon, RP (CRPO #10979)
-        </p>
-        <div class="trust-pills">
-            <span class="trust-pill">✓ CRPO #10979 Licensed</span>
-            <span class="trust-pill">✓ Serving All of Toronto & GTA</span>
-            <span class="trust-pill">✓ Virtual Sessions Available</span>
-            <span class="trust-pill">✓ Free 15-Min Consultation</span>
-        </div>
-    </div>
-</section>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">ANGER MANAGEMENT TORONTO</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Anger Management Toronto: Learn to Respond, Not React</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-4">Private, individual anger management counselling for professionals who value privacy and personalized support.</p>
+                        <p class="text-sm text-gray-500 mb-8"><strong>Last Updated:</strong> December 20, 2025 | <strong>Reviewed by:</strong> Jesse Cynamon, RP (CRPO #10979)</p>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="content-wrapper">
-        <main class="main-content">
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                Book Free Consultation
+                            </a>
+                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Call (416) 306-2157
+                            </a>
+                        </div>
 
-            <!-- Intro Section (Virtuous Circle Pattern) -->
+                        <div class="flex flex-wrap gap-3">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> CRPO #10979</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="video" class="w-4 h-4 text-sage"></i> Virtual Sessions</span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="zap" class="w-4 h-4 text-sage"></i> Same-Week Available</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="brain" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evidence-Based</h3>
+                            <p class="text-gray-600 text-sm">ACT + CBT approaches proven effective for emotion regulation.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="lock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">100% Private</h3>
+                            <p class="text-gray-600 text-sm">Individual therapy, not group classes. Complete confidentiality.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="target" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Tailored to You</h3>
+                            <p class="text-gray-600 text-sm">Focus on your specific triggers and real-life situations.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-sage"></i></div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Scheduling</h3>
+                            <p class="text-gray-600 text-sm">Evening appointments available across Toronto & GTA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Intro Section (Virtuous Circle Pattern) -->
             <section class="section">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">Anger Management in Toronto: Individual Counselling for Professionals</h2>
 
                 <p>We offer <strong>private, individual anger management counselling</strong> for professionals who value privacy and personalized support. This approach allows us to focus entirely on your specific work and relationship stressors in a confidential setting, rather than a group environment.</p>
 
                 <p>At Next Step Therapy, I provide tailored support for high-performing individuals. We focus on <em>your</em> specific triggers—whether that's workplace pressure, relationship conflict, or internal frustration.</p>
-                
+
                 <div style="background: var(--bg-alternate); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-green); margin: 2rem 0;">
                     <h3 style="margin-top: 0; color: var(--text-primary); font-size: 1.2rem;">The Benefits of Individual Support</h3>
                     <ul style="margin-bottom: 0; list-style: none; padding: 0;">
@@ -287,27 +327,38 @@
                 </div>
 
                 <p>Anger itself is not inherently problematic—it's a natural human emotion. However, when it becomes frequent, intense, or damages your reputation and relationships, professional support is essential. We help Toronto professionals move from "reacting" to "responding."</p>
+                </div>
+                </div>
+            </section>
 
             <!-- Treatment Section -->
             <section class="section">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">We Provide Anger Management Therapy That Helps You Regain Control</h2>
 
                 <p>The first thing to understand is that anger management therapy focuses on evidence-based approaches with your Toronto therapist providing you with specific strategies and feedback on progress. This may include techniques for recognizing early anger triggers, managing physiological arousal, challenging unhelpful thought patterns, and communicating needs assertively rather than aggressively. Effective anger management requires consistent practice and application in real-world situations.</p>
 
                 <p>Your therapist at <a href="/">Next Step Therapy</a> will help you understand your anger patterns through training in ACT therapy and CBT approaches. You'll become aware of the situations, thoughts, and bodily sensations that precede angry outbursts, as well as understand the patterns that maintain problematic anger responses. You can use this knowledge to interrupt the anger cycle and respond in ways aligned with your values and long-term goals.</p>
 
-                <div class="cta-inline">
+                <div class="cta-box">
+                    <h3>Ready to Start?</h3>
+                    <p>Book your free 15-minute consultation today</p>
                     <a href="/#contact" class="btn btn-primary">Talk With A Therapist</a>
+                </div>
+                </div>
                 </div>
             </section>
 
             <!-- Types Section -->
-            <section class="section">
+            <section class="section alternate-bg">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">What Are The Different Types of Anger Issues?</h2>
 
                 <p>There are many different manifestations of anger difficulties. Understanding which patterns you experience can help you better manage your responses. Common types of anger issues include:</p>
 
-                <ul class="types-list">
+                <ul class="feature-list">
                     <li><strong>Explosive Anger:</strong> Sudden, intense outbursts that seem disproportionate to the triggering situation</li>
                     <li><strong>Passive-Aggressive Anger:</strong> Indirect expression through sarcasm, silent treatment, or subtle sabotage</li>
                     <li><strong>Chronic Irritability:</strong> Persistent state of annoyance and frustration with low tolerance for minor inconveniences</li>
@@ -317,15 +368,19 @@
                 </ul>
 
                 <p>If your anger is affecting your relationships, work performance, or quality of life, learning about therapy options in Toronto and trying evidence-based techniques may be beneficial. <a href="/#contact">Contact a therapist</a> to get started on developing healthier emotional regulation skills today.</p>
+                </div>
+                </div>
             </section>
 
             <!-- Common Symptoms Section -->
             <section class="section">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">All Anger Issues Have Certain Warning Signs In Common</h2>
 
                 <p>Problematic anger is often recognizable by specific patterns that occur before, during, and after angry episodes. Understanding these warning signs is the first step toward better regulation:</p>
 
-                <ul class="symptoms-list">
+                <ul class="feature-list">
                     <li>Rapid escalation from calm to intense anger</li>
                     <li>Difficulty calming down once anger is triggered</li>
                     <li>Frequent conflicts at work or in relationships</li>
@@ -337,10 +392,14 @@
                 </ul>
 
                 <p>These patterns are often debilitating and affect our ability to function effectively in daily life. Despite its challenges, anger can be managed with the right therapeutic support and evidence-based coping strategies. Many Toronto professionals have successfully learned to regulate their anger and improve their relationships.</p>
+                </div>
+                </div>
             </section>
 
             <!-- Physical Symptoms Section -->
-            <section class="section">
+            <section class="section alternate-bg">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">Physical Symptoms of Anger Can Be Intense</h2>
 
                 <p>Anger isn't just an emotional experience—it creates powerful physical reactions that can be overwhelming. Understanding the body's anger response can help you recognize early warning signs before anger escalates to problematic levels.</p>
@@ -348,116 +407,120 @@
                 <p>The physical symptoms of anger can occur before, during, or after triggering situations. For example, you might experience muscle tension or a clenched jaw when a colleague makes a frustrating comment. Or during a conflict with a partner, you may feel your heart racing, face flushing, or hands trembling. These physical reactions are your body's fight-or-flight response activating.</p>
 
                 <p>Common physical anger symptoms include increased heart rate, rapid breathing, muscle tension, sweating, headaches, and stomach discomfort. These symptoms can be unsettling, but once you learn about why these reactions are happening—understanding the body's stress response and physiological arousal—it becomes easier to recognize anger early and implement calming strategies before reaching a point of no return.</p>
+                </div>
+                </div>
             </section>
 
             <!-- Goals Section -->
             <section class="section">
+                <div class="container">
+                <div class="content-card">
                 <h2 class="section-title">The Goals of Anger Management Therapy in Toronto</h2>
 
                 <p>Many individuals seeking anger management therapy continue to experience damaged relationships, workplace conflicts, or legal consequences due to uncontrolled anger. The goal of therapy is not to eliminate anger—which is a normal human emotion—but rather to develop healthier ways of understanding and expressing it.</p>
 
                 <p>Important goals of anger management therapy in Toronto include:</p>
 
-                <ul class="goals-list">
+                <ul class="feature-list">
                     <li><strong>Recognizing triggers early:</strong> Learning to identify situations, thoughts, and physical sensations that precede anger</li>
                     <li><strong>Developing regulation skills:</strong> Building practical techniques to calm physiological arousal and prevent escalation</li>
                     <li><strong>Understanding underlying emotions:</strong> Recognizing when anger masks other feelings like hurt, fear, or shame</li>
                     <li><strong>Improving communication:</strong> Learning to express needs and frustrations assertively rather than aggressively</li>
                     <li><strong>Workplace effectiveness:</strong> Managing professional conflicts constructively without career damage</li>
                 </ul>
-                
-                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-alternate); border-radius: 8px; text-align: center;">
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f5f1ea; border-radius: 8px; text-align: center;">
                     <p style="margin-bottom: 1rem; font-weight: 500;">Looking for broader support?</p>
                     <a href="/mens-mental-health.html" class="btn btn-secondary" style="margin: 0 0.5rem;">Men's Mental Health</a>
                     <a href="/workplace-stress-therapy-ontario.html" class="btn btn-secondary" style="margin: 0 0.5rem;">Workplace Stress</a>
                 </div>
 
                 <p>At the end of therapy, one of the primary goals is to help you develop a new relationship with anger—one where you can acknowledge and understand the emotion without allowing it to control your behavior or damage your relationships and goals.</p>
-            </section>
-
-            <!-- Mini FAQ -->
-            <section class="section">
-                <h2 class="section-title">Common Questions About Anger Management</h2>
-
-                <div class="mini-faq">
-                    <div class="faq-item">
-                        <h3>Do you offer anger management classes?</h3>
-                        <p>No, I focus exclusively on <strong>private, individual therapy</strong>. This allows us to maintain 100% confidentiality and focus entirely on your specific situation—without having to share "air time" with a group.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Does anger management therapy work?</h3>
-                        <p>Research consistently shows that evidence-based approaches like <a href="/cbt-therapy-techniques-ontario.html">CBT</a> and ACT are highly effective for emotion regulation. Success depends on practice: we don't just talk about feelings; we build specific skills to catch anger triggers early.</p>
-                    </div>
+                </div>
                 </div>
             </section>
 
-        </main>
+            <!-- Mini FAQ -->
+            <section class="section alternate-bg">
+                <div class="container">
+                <div class="content-card">
+                <h2 class="section-title">Common Questions About Anger Management</h2>
 
-        <!-- Sidebar (Virtuous Circle Pattern) -->
-        <aside class="sidebar">
-            <!-- Services Section -->
-            <div class="sidebar-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
-                    <li><a href="/student-mental-health-ontario.html">Student Support</a></li>
-                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Therapy</a></li>
-                    <li><a href="/anxiety-therapy-ontario.html">Anxiety Support</a></li>
-                    <li><a href="/depression-therapy-ontario.html">Depression Support</a></li>
-                    <li><a href="/how-to-find-therapist-ontario.html">Counselling Services</a></li>
-                </ul>
-            </div>
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Do you offer anger management classes?</h3>
+                        <p class="text-gray-600 text-sm">No, I focus exclusively on <strong>private, individual therapy</strong>. This allows us to maintain 100% confidentiality and focus entirely on your specific situation—without having to share "air time" with a group.</p>
+                    </div>
 
-            <!-- Specialties Section -->
-            <div class="sidebar-section">
-                <h3>Specialties</h3>
-                <ul>
-                    <li><a href="/anxiety-therapy-toronto.html">Anxiety Therapy</a></li>
-                    <li><a href="/depression-therapy-ontario.html">Depression Counselling</a></li>
-                    <li><a href="/workplace-stress-therapy-ontario.html">Workplace Stress</a></li>
-                    <li><a href="/university-anxiety-therapy-ontario.html">University Anxiety</a></li>
-                    <li><a href="/performance-anxiety-therapy-toronto.html">Performance Anxiety</a></li>
-                    <li><a href="/workplace-stress-burnout-therapy">Impostor Syndrome</a></li>
-                </ul>
-            </div>
-
-            <!-- Therapy Approaches Section -->
-            <div class="sidebar-section">
-                <h3>Therapy Approaches</h3>
-                <ul>
-                    <li><a href="/">ACT Therapy</a></li>
-                    <li><a href="/cbt-therapy-techniques-ontario.html">CBT Therapy</a></li>
-                    <li><a href="/virtual-therapy-ontario.html">Virtual Therapy</a></li>
-                </ul>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="sidebar-cta">
-                <h3>Book Your Appointment Online</h3>
-                <p>We're currently accepting new clients. Schedule a 15-minute consultation to see if we're a good fit.</p>
-                <a href="/#contact" class="btn btn-primary">Get Started</a>
-            </div>
-        </aside>
-    </div>
-</div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="font-display text-lg font-semibold text-navy mb-2">Does anger management therapy work?</h3>
+                        <p class="text-gray-600 text-sm">Research consistently shows that evidence-based approaches like <a href="/cbt-therapy-techniques-ontario.html">CBT</a> and ACT are highly effective for emotion regulation. Success depends on practice: we don't just talk about feelings; we build specific skills to catch anger triggers early.</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </section>
+    </main>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <p><strong>Jesse Cynamon, RP</strong></p>
-            <p>Registered Psychotherapist | CRPO Registration #10979</p>
-            <p>Providing professional psychotherapy services throughout Toronto and the GTA</p>
-            <p>All services provided in compliance with CRPO standards and guidelines</p>
-            <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Next Step Therapy. All rights reserved.</p>
+<footer class="bg-navy py-16">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <!-- Column 1: About & Contact -->
+            <div>
+                <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
+                <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+                <p class="text-white font-semibold text-sm">CRPO #10979 | MPsy</p>
+                <p class="mt-4"><strong class="text-white text-sm">Book Appointment:</strong><br>
+                <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
+            </div>
+
+            <!-- Column 2: Services -->
+            <div>
+                <h4 class="text-white font-semibold mb-4">Services</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/anxiety-therapy-ontario.html" class="text-white/70 hover:text-white">Anxiety Therapy</a></li>
+                    <li><a href="/depression-therapy-ontario.html" class="text-white/70 hover:text-white">Depression Therapy</a></li>
+                    <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/70 hover:text-white">Workplace Stress</a></li>
+                    <li><a href="/virtual-therapy-ontario.html" class="text-white/70 hover:text-white">Virtual Therapy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Locations -->
+            <div>
+                <h4 class="text-white font-semibold mb-4">Locations</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
+                    <li><a href="/therapy-ottawa-ontario.html" class="text-white/70 hover:text-white">Ottawa</a></li>
+                    <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
+                    <li><a href="/therapy-london-ontario.html" class="text-white/70 hover:text-white">London</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Resources -->
+            <div>
+                <h4 class="text-white font-semibold mb-4">Resources</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/faq.html" class="text-white/70 hover:text-white">FAQ</a></li>
+                    <li><a href="/therapy-costs-ontario.html" class="text-white/70 hover:text-white">Costs</a></li>
+                    <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/70 hover:text-white">About Jesse</a></li>
+                    <li><a href="/crisis-resources.html" class="text-white/70 hover:text-white">Crisis Resources</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Crisis Resources -->
+        <div class="border-t border-white/10 pt-8 mt-12 text-center">
+            <p class="text-white/80 text-sm mb-4">
+                <strong class="text-white">In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+                <a href="tel:18665312600" class="text-sage-light hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)
+            </p>
+            <p class="text-white/60 text-xs">&copy; 2025 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada</p>
         </div>
     </div>
 </footer>
 
-<script src="/js/security-check.js"></script>
-
-    <!-- Mobile CTA Bar -->
+    <!-- Mobile Sticky CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
         <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
         <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
@@ -469,5 +532,12 @@
             lucide.createIcons();
         });
     </script>
+
+    <!-- Floating CTA for Desktop -->
+    <a href="https://nextsteptherapy.janeapp.com/" class="hidden md:flex fixed bottom-6 right-6 bg-navy text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-navy-light transition-colors items-center gap-2 z-40">
+        <i data-lucide="calendar" class="w-5 h-5"></i> Schedule 15-Min Call
+    </a>
+
+<script src="/js/security-check.js"></script>
 </body>
 </html>

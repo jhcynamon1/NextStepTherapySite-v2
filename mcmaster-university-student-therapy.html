@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
     <!-- Shared Styles --><!-- V4 Design System --><!-- Design Fixes - Unified Visual System -->
-    
+
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,7 +124,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -132,26 +132,35 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
+                        navy: {
+                            DEFAULT: '#1e3a4f',
+                            light: '#2d5066',
+                            deep: '#152a3a'
+                        },
+                        sage: {
+                            DEFAULT: '#4a7c59',
+                            light: '#8cb390',
+                            soft: '#e8f0e8'
+                        },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
                     },
                     fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        body { font-family: 'Inter', sans-serif; background-color: #faf7f2; }
         .section { padding: 4rem 1rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .content-grid { display: grid; gap: 2rem; }
@@ -167,59 +176,122 @@
         .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
         .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
         .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card { background: #faf7f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
         .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
         .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
         .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
         .alternate-bg { background: #f1f5f9; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
+        .footer { background: linear-gradient(135deg, #1e3a4f 0%, #152a3a 100%); color: white; padding: 4rem 1rem 2rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+        .footer-section h4 { font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: white; }
+        .footer-section ul { list-style: none; padding: 0; margin: 0; }
+        .footer-section ul li { margin-bottom: 0.5rem; }
+        .footer-section ul li a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .footer-section ul li a:hover { color: white; }
+        .footer-bottom { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); }
     </style>
 </head>
-<body>
+<body class="font-body bg-cream">
 
-    <!-- Header -->
-        <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <!-- Header - Gemini Design -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-navy rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-xl font-semibold text-navy hidden sm:block">Next Step Therapy</span>
-                    </a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
-                </div>
+                <a href="/" class="flex items-center gap-3">
+                    <span class="font-display text-xl font-semibold text-navy">Next Step Therapy</span>
+                    <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-sage/10 text-sage border border-sage/20">CRPO #10979</span>
+                </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors font-medium">Approach</a>
-                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors font-medium">Services</a>
-                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors font-medium">Contact</a>
+                    <a href="/#approach" class="text-gray-600 hover:text-navy transition-colors">Approach</a>
+                    <a href="/#specializations" class="text-gray-600 hover:text-navy transition-colors">Services</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-navy transition-colors">Contact</a>
                 </nav>
-                <div class="flex items-center gap-3">
-                    <a href="tel:+14163062157" class="hidden sm:block text-navy font-semibold hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20">Book Now</a>
-                </div>
+                <a href="tel:+14163062157" class="hidden sm:flex items-center gap-2 text-navy font-semibold">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    (416) 306-2157
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Therapy for McMaster University Students</h1>
-            <p class="hero-subtext">Navigate pre-med pressure, research stress, and academic challenges. Professional support for McMaster students from a CRPO Registered Psychotherapist.</p>
-            <div class="hero-cta">
-                <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=mcmaster_page" class="btn btn-primary">Schedule 15-Min Call</a>
-                <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section - Gemini Design with 2-Column Grid -->
+        <section class="relative bg-gradient-to-br from-cream via-white to-sage/5 py-16 md:py-24 overflow-hidden">
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(74, 124, 89, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(30, 58, 79, 0.1) 0%, transparent 50%);"></div>
+            <div class="max-w-7xl mx-auto px-6 relative">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Content -->
+                    <div>
+                        <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                            <a href="/" class="hover:text-navy">Home</a>
+                            <span>→</span>
+                            <span class="text-navy">McMaster Student Therapy</span>
+                        </nav>
+                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">MCMASTER STUDENTS</span>
+                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Therapy for McMaster University Students</h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Navigate pre-med pressure, research stress, and academic challenges. Professional support for McMaster students from a CRPO Registered Psychotherapist.</p>
+
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=mcmaster_page" class="bg-navy text-white px-8 py-4 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20 inline-flex items-center gap-2">
+                                <i data-lucide="calendar" class="w-5 h-5"></i> Book Free Consultation
+                            </a>
+                            <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all">Call (416) 306-2157</a>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-sage"></i>
+                                <span>CRPO #10979</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="video" class="w-4 h-4 text-sage"></i>
+                                <span>Virtual Sessions</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-sage"></i>
+                                <span>MSU Insurance Accepted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Feature Cards -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="book-open" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Exam Anxiety</h3>
+                            <p class="text-sm text-gray-600">Manage test stress & perform better</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-navy"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Social Anxiety</h3>
+                            <p class="text-sm text-gray-600">Navigate campus connections</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="clock" class="w-6 h-6 text-sage"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Flexible Hours</h3>
+                            <p class="text-sm text-gray-600">Fits your class schedule</p>
+                        </div>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-4">
+                                <i data-lucide="wallet" class="w-6 h-6 text-navy"></i>
+                            </div>
+                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Student Insurance</h3>
+                            <p class="text-sm text-gray-600">Most health plans accepted</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="trust-pills">
-                <span class="trust-pill">✓ MSU Insurance Accepted</span>
-                <span class="trust-pill">✓ Virtual Sessions</span>
-                <span class="trust-pill">✓ No Waitlist</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Main Content -->
     <div class="container">
@@ -367,6 +439,7 @@
             </aside>
         </div>
         </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -415,13 +488,13 @@
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA Bar -->
-    <div class="mobile-cta-bar">
-        <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sticky_bar&utm_campaign=mcmaster_page" class="mobile-cta-book">📅 Schedule 15-Min Call</a>
-        <a href="tel:+14163062157" class="mobile-cta-phone">📞 Call Now</a>
-        </div>
-
 <script src="/js/security-check.js"></script>
+
+    <!-- Desktop Floating CTA -->
+    <a href="https://nextsteptherapy.janeapp.com/?utm_source=website&utm_medium=sticky_bar&utm_campaign=mcmaster_page" class="hidden md:flex fixed bottom-8 right-8 bg-sage text-white px-6 py-4 rounded-full font-semibold shadow-lg shadow-sage/30 hover:bg-sage-light transition-all items-center gap-2 z-40">
+        <i data-lucide="calendar" class="w-5 h-5"></i>
+        Book Free Consultation
+    </a>
 
     <!-- Mobile CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
