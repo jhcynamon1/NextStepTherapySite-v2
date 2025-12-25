@@ -1403,15 +1403,33 @@ If any of that sounds familiar, you don't have to keep pushing through it alone.
 - Buttons: "Let's talk" / "Book a Free Consultation" / "Skip the [City] Waitlist"
 - Supporting: "Free 15-minute consultation. No pressure."
 
-### 7. Localization ✅
+### 7. Localization ✅ - CRITICAL
+
+**MUST READ:** `/docs/CITY-LOCALIZATION-GUIDE.md` before writing ANY city page.
+
+**NO GENERIC TECH TROPES.** Each city has real industries. Write for real people.
 
 | Element | Requirement |
 |---------|-------------|
-| City name | In H1, meta title, throughout content |
-| Local landmarks | Highway references (400, 401, 404, QEW), neighborhoods |
-| Local crisis resources | City-specific crisis line, hospital, CMHA |
+| City economy research | CHECK the guide - what do people actually DO in this city? |
+| "Sound Familiar?" section | Use REAL local industries (healthcare, auto, retail - NOT generic tech) |
+| Local employers | Name actual employers (RVH, Lakeridge, Ford, etc.) |
+| Highway references | Correct highway for that city (400, 401, QEW, GO Train) |
+| Local crisis resources | City-specific crisis line, hospital, CMHA branch |
 | FAQ questions | "How much does therapy cost in [City]?" etc. |
 | Feature cards | "Virtual for [City]" with neighborhood names |
+
+**KILL LIST - Never use unless city actually has tech industry:**
+- "Quarterly targets" / "Performance reviews" (generic)
+- "Slack notifications at dinner"
+- "Colleagues in different time zones"
+- "Highly educated colleagues" / imposter syndrome (tech version)
+- "Family sacrifice" / immigrant assumption
+- "Startup pressure"
+
+**Cities where tech copy IS appropriate:** Richmond Hill, Markham, Kitchener-Waterloo, Ottawa (Kanata)
+
+**Cities where tech copy is WRONG:** Barrie, Hamilton, Windsor, London, Cambridge, Sudbury, Thunder Bay, St. Catharines, Oshawa, Ajax, Pickering, Whitby, Guelph
 
 ### 8. Technical ✅
 
