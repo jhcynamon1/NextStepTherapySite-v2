@@ -868,6 +868,16 @@
                     });
                 });
             });
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'booking_click', {
+                        'event_category': 'conversion',
+                        'event_label': 'jane_app_booking',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
         });
     </script>
     <!-- Footer -->

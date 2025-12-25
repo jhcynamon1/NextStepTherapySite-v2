@@ -6,15 +6,43 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+    <!-- Google Analytics 4 + Conversion Tracking -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
+        window.addEventListener('load', function() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J8H4YBGSHR', {
+                'allow_enhanced_conversions': true,
+                'send_page_view': true
+            });
+
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'phone_call', {
+                        'event_category': 'conversion',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
+
+            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    gtag('event', 'booking_click', {
+                        'event_category': 'conversion',
+                        'event_label': 'jane_app_booking',
+                        'value': 175,
+                        'currency': 'CAD'
+                    });
+                });
+            });
         });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

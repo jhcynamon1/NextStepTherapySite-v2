@@ -156,6 +156,65 @@ Every therapy page MUST include:
 - [ ] Internal links to related pages
 - [ ] 2000+ words for competitive keywords
 
+### 6. GA4 Conversion Tracking (REQUIRED)
+
+**Every page MUST include the GA4 + Conversion Tracking block.** This tracks which pages lead to booking clicks.
+
+Add this in the `<head>` section after favicon links:
+
+```html
+<!-- Google Analytics 4 + Conversion Tracking -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script>
+    window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR';
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8H4YBGSHR', {
+            'allow_enhanced_conversions': true,
+            'send_page_view': true
+        });
+
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'phone_call', {
+                    'event_category': 'conversion',
+                    'value': 175,
+                    'currency': 'CAD'
+                });
+            });
+        });
+
+        document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'booking_click', {
+                    'event_category': 'conversion',
+                    'event_label': 'jane_app_booking',
+                    'value': 175,
+                    'currency': 'CAD'
+                });
+            });
+        });
+    });
+</script>
+```
+
+**What this tracks:**
+- `booking_click` - When someone clicks a Jane booking link (tracks which page they clicked from)
+- `phone_call` - When someone clicks a phone number link
+- Page views with enhanced conversions enabled
+
+**How to view in GA4:**
+1. Go to **Reports → Engagement → Events**
+2. Click on `booking_click`
+3. Add secondary dimension: **Page path**
+4. See which pages drive the most booking clicks
+
 ---
 
 ## Project Structure
