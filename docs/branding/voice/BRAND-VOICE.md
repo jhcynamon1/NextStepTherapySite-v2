@@ -112,10 +112,10 @@ Jesse's voice is **more confident than typical "authentic" copy**. The vulnerabi
 
 ### Approach Language (Use These)
 
-- "No homework. No worksheets. Just real conversations about what's going on."
+- "Real conversations about what's going on. Practical, personalized, focused on what works for you."
 - "I use approaches that research supports. But what matters more is whether we actually connect."
 
-**Kill these:** "I don't have a step-by-step program..." / "There's no cookie-cutter program here..." / "I'm not going to hand you a worksheet..."
+**Kill these:** "I don't have a step-by-step program..." / "There's no cookie-cutter program here..." / "I'm not going to hand you a worksheet..." / "No homework" / "No worksheets" (CRPO compliance: cannot disparage other therapy approaches)
 
 ### WITH-You Positioning (Use These)
 
@@ -190,7 +190,7 @@ Jesse's voice is **more confident than typical "authentic" copy**. The vulnerabi
 > I don't have a step-by-step program. I'm not the therapist who gives you worksheets and homework. I want to be WITH you as you figure things out—not ahead of you with a map. Does that make sense?
 
 **Do Write:**
-> No homework. No worksheets. Just real conversations about what's going on. I use approaches that research supports. But what matters more is whether we actually connect. There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives. We explore that together.
+> Real conversations about what's going on. I use approaches that research supports. But what matters more is whether we actually connect. There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives. We explore that together.
 
 ### FAQ Answer
 
@@ -296,8 +296,13 @@ Even in confident voice, these are violations:
 | "My clients tell me..." | Testimonial | "Here's what I've seen in sessions..." |
 | "Really good at working with anxiety" | Superlative | "I work with clients who deal with anxiety" |
 | "Therapy will help you..." | Guarantee | "In therapy, we often explore..." |
+| "No homework. No worksheets." | Disparages other approaches | "Real conversations. Practical and personalized." |
+| "Not like other therapists who..." | Disparages colleagues | Focus on what you DO, not what others don't |
+| "Unlike traditional therapy..." | Disparages modalities | Describe your approach positively |
 
-**Rule:** If it sounds like a promise, reframe it as a process.
+**Rules:**
+- If it sounds like a promise, reframe it as a process.
+- **NEVER disparage other therapy approaches, modalities, or therapists.** Describe what you DO, not what you don't do or what others do wrong. "No homework" implies homework-based therapy is bad. Instead: "Real conversations focused on what matters to you."
 
 ---
 
