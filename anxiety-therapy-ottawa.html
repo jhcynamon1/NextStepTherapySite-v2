@@ -63,6 +63,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#1e3a4f', light: '#2d5066', deep: '#152a3a' },
+                        sage: { DEFAULT: '#4a7c59', light: '#8cb390', soft: '#e8f0e8' },
+                        cream: '#faf7f2',
+                        ivory: '#f5f1ea',
+                        sand: '#e8e3d9'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Compatibility Styles for Legacy Classes -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
+        .section { padding: 4rem 1rem; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .content-grid { display: grid; gap: 2rem; }
+        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
+        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
+        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
+        .cta-box p { color: rgba(255,255,255,0.9); }
+        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
+        .cta-box .btn-primary { background: #4a7c59; color: white; }
+        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
+        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
+        .alternate-bg { background: #f1f5f9; }
+        a { color: #1e3a4f; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: #1e3a4f; color: white; }
+        .btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
+        .contact-section { padding: 4rem 1rem; background: #f8f6f2; }
+        .contact-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-info { margin-top: 2rem; }
+        .floating-mobile-cta { display: none; }
+        @media (max-width: 768px) {
+            .floating-mobile-cta {
+                display: flex;
+                position: fixed;
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                background: #1e3a4f;
+                color: white;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                font-weight: 600;
+                z-index: 50;
+            }
+        }
+    </style>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
