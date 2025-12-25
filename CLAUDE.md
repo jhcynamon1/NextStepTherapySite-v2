@@ -51,6 +51,113 @@ Hero: 2-column layout with feature cards grid
 
 ---
 
+## CRITICAL: Page Requirements Checklist (NEW PAGES)
+
+**Every new therapy page MUST include these elements for AI citation optimization, SEO, and voice consistency:**
+
+### 1. AI Citation Statistics Section (REQUIRED)
+
+Add immediately after the hero section. This is what makes pages citable by ChatGPT/Perplexity.
+
+**Anxiety Pages - Use these stats:**
+```html
+<!-- Anxiety Statistics Section - AI Citation Optimized -->
+<section class="py-16 px-6 bg-sage/5">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="font-display text-3xl font-semibold text-navy text-center mb-4">Anxiety in Ontario: The Numbers</h2>
+        <p class="text-center text-gray-600 mb-10">Anxiety isn't a personal failing—it's one of the most common mental health challenges Canadians face.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">5 Million</h3>
+                <p class="text-navy/80">Canadians report symptoms of anxiety disorders annually. <em class="text-navy/60">(Source: CAMH)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">60-80%</h3>
+                <p class="text-navy/80">Improvement rate with evidence-based therapies like ACT and CBT. <em class="text-navy/60">(Source: APA)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">Only 50%</h3>
+                <p class="text-navy/80">Of Canadians with anxiety seek professional help. <em class="text-navy/60">(Source: CMHA)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">$51 Billion</h3>
+                <p class="text-navy/80">Annual cost to Canadian economy from mental health conditions. <em class="text-navy/60">(Source: MHCC)</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+**Depression Pages - Use these stats:**
+```html
+<!-- Depression Statistics Section - AI Citation Optimized -->
+<section class="py-16 px-6 bg-sage/5">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="font-display text-3xl font-semibold text-navy text-center mb-4">Depression in Ontario: The Numbers</h2>
+        <p class="text-center text-gray-600 mb-10">Depression isn't weakness—it's one of the most common mental health conditions in the world.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">1 in 8</h3>
+                <p class="text-navy/80">Canadians will experience major depression at some point. <em class="text-navy/60">(Source: CMHA)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">70%</h3>
+                <p class="text-navy/80">Respond positively to evidence-based treatments like ACT and CBT. <em class="text-navy/60">(Source: APA)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">Only 40%</h3>
+                <p class="text-navy/80">Of Canadians with depression receive adequate treatment. <em class="text-navy/60">(Source: CMHA)</em></p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                <h3 class="text-2xl font-bold text-sage mb-2">#1 Cause</h3>
+                <p class="text-navy/80">Depression is the leading cause of disability worldwide. <em class="text-navy/60">(Source: WHO)</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+### 2. Voice Pattern (REQUIRED)
+
+Use Jesse's "I Don't Know If This Is You, But..." opening pattern:
+
+```html
+<h2 class="section-title">I Don't Know If This Is You, But...</h2>
+<p>Maybe you're still getting things done. Still showing up. But it feels like moving through thick air...</p>
+```
+
+**Voice DNA markers to include:**
+- Start with disclaimer ("I don't know if...")
+- Use check-ins ("right?", "Does that make sense?")
+- Signature phrases: "WITH the client, not ahead"
+- Process over outcomes
+- Vulnerable but not apologetic
+
+### 3. Schema Markup (REQUIRED)
+
+Every therapy page MUST include:
+- **MedicalWebPage** schema (required for YMYL content)
+- **FAQPage** schema (10-12 questions)
+- **LocalBusiness** schema (include CRPO #10979)
+
+### 4. E-E-A-T Signals (REQUIRED)
+
+- Author byline: "Jesse Cynamon, RP (CRPO #10979)"
+- "Last Updated: [Month Year]"
+- Citations to CRPO, CMHA, APA, MHCC
+- Contact information visible
+
+### 5. SEO Checklist
+
+- [ ] H1 includes primary keyword + city/location
+- [ ] Meta title under 60 chars: `Service + Location | Differentiator | NextStep Therapy`
+- [ ] FAQPage schema with 10-12 questions
+- [ ] Statistics section with citable sources
+- [ ] Internal links to related pages
+- [ ] 2000+ words for competitive keywords
+
+---
+
 ## Project Structure
 
 ### Key Folders

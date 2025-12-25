@@ -6,7 +6,7 @@
 
     <!-- SEO Meta Tags -->
     <title>Depression Therapy Guelph | Same-Week Sessions | NextStep</title>
-    <meta name="description" content="Skip the waitlist. Virtual depression therapy for Guelph with same-week appointments. CRPO registered (RP #10979). Evening sessions available. Book your free 15-min call.">
+    <meta name="description" content="Skip the waitlist. Virtual depression therapy for Guelph with same-week appointments. CRPO registered (RP #10979). Evening sessions available.">
     <link rel="canonical" href="https://nextsteptherapy.ca/depression-therapy-guelph.html">
 
     <!-- Open Graph -->
@@ -32,7 +32,9 @@
             'send_page_view': true
         });
 
+        // Track interactions - UPDATED for booking link
         document.addEventListener('DOMContentLoaded', function() {
+            // Track phone clicks
             document.querySelectorAll('a[href^="tel:"]').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'phone_call', {
@@ -43,6 +45,7 @@
                 });
             });
 
+            // Track booking clicks (NEW)
             document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
                 link.addEventListener('click', function() {
                     gtag('event', 'booking_click', {
@@ -53,6 +56,7 @@
                 });
             });
 
+            // Track form submissions
             document.querySelectorAll('form').forEach(form => {
                 form.addEventListener('submit', function() {
                     gtag('event', 'generate_lead', {
@@ -71,7 +75,7 @@
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Depression Therapy Guelph Ontario | Psychotherapist Jesse Cynamon",
-      "description": "Professional depression therapy services for Guelph. CRPO registered psychotherapist offering evidence-based virtual support.",
+      "description": "Professional depression therapy services for Guelph. CRPO registered psychotherapist offering evidence-based virtual support for university staff, faculty, and professionals.",
       "provider": {
         "@type": "Person",
         "name": "Jesse Cynamon, RP",
@@ -107,47 +111,55 @@
           "name": "How much does depression therapy cost in Guelph?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Individual depression therapy sessions are $175 per 50-minute session. Most Guelph tech employers (University of Guelph, healthcare) offer extended health benefits covering 50-100% of psychotherapy costs. Typical coverage ranges from $1,000-$5,000 annually. I provide detailed receipts for insurance claims. For those without coverage, biweekly sessions are an option."
+            "text": "Individual depression therapy sessions are $175 per 50-minute session. Many Guelph employers (University of Guelph, healthcare sector, agri-food companies) offer extended health benefits covering 50-100% of psychotherapy costs. Typical coverage ranges from $1,000-$5,000 annually. I provide detailed receipts for insurance claims. For those without coverage, biweekly sessions are an option to make therapy financially sustainable."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you offer virtual therapy for depression in Guelph?",
+          "name": "Do you offer virtual therapy for Guelph residents with depression?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all therapy sessions are virtual. This is particularly helpful when depression makes it hard to leave the house. Whether you're in Downtown, South End, West End, or Grange Hill, you can attend sessions from home. Many Guelph clients find virtual therapy reduces the barrier to getting started. No need to add another commute when you're already exhausted."
+            "text": "Yes, all therapy sessions are virtual. This works particularly well for Guelph residents experiencing depression, as getting to in-person appointments can feel overwhelming when you're already struggling. Whether you're in Downtown, South End, West End, or Exhibition Park, you can attend sessions from the comfort of your home. No need to navigate Highway 6 or 7 when you're having a difficult day."
           }
         },
         {
           "@type": "Question",
-          "name": "What types of depression do you treat?",
+          "name": "What depression symptoms do you treat for Guelph professionals?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I work with various forms of depression including major depressive disorder, persistent depressive disorder (dysthymia), situational depression, and burnout-related depression common among Guelph education professionals. I also help with the particular type of depression that comes from feeling disconnected. From work that used to feel meaningful, from family, from yourself."
+            "text": "I work with many Guelph residents experiencing persistent low mood, loss of interest in work or hobbies, fatigue that doesn't improve with rest, difficulty concentrating on tasks like grant writing or research, changes in sleep or appetite, and the feeling that nothing matters anymore. Many university staff and healthcare workers struggle with burnout that evolves into depression, particularly during high-stress academic cycles or seasonal student influx."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I get same-week appointments for depression therapy?",
+          "name": "Can I get same-week appointments for depression support in Guelph?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, same-week appointments are typically available. Unlike many therapists in Wellington County with 3-6 month waitlists, I prioritize getting you started quickly. When you're dealing with depression, waiting months for help isn't realistic. If you reach out today, you can usually be in a session within 7 days."
+            "text": "Yes, same-week appointments are typically available. Unlike many therapists in Wellington County with 3-6 month waitlists, I prioritize getting you started quickly. When you're dealing with depression, waiting months for help isn't realistic. If you reach out today, you can usually be in a session within 7 days. I also offer evening appointments after 5pm and some Saturday availability."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you understand the pressures specific to Guelph professionals?",
+          "name": "Do you understand the pressures that contribute to depression in Guelph's academic environment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I work with many Guelph residents in tech and professional roles. I understand how depression can coexist with high achievement. You're still meeting deadlines, but you feel hollow. The pressure to appear successful while struggling internally. The exhaustion of the 6 commute when you're already depleted. The guilt of not being present for family when work takes everything you have."
+            "text": "I work with many Guelph residents in academic roles at the University of Guelph, healthcare workers, and professionals in specialized fields. I understand how publish-or-perish culture, grant rejection, failed experiments, and the cyclical nature of academic stress can wear you down over time. Many clients come in feeling like they've lost the passion that brought them to their field in the first place. That's what we work on addressing."
           }
         },
         {
           "@type": "Question",
-          "name": "Is therapy confidential if my employer provides insurance?",
+          "name": "Is therapy confidential if my employer provides the insurance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Your employer never sees what you discuss in therapy. When you submit insurance claims, your provider only sees that you attended a mental health appointment and the fee. No clinical details whatsoever. As a CRPO-registered psychotherapist (License #10979), I'm legally and ethically bound to protect your privacy."
+            "text": "Absolutely. Your employer never sees what you discuss in therapy. When you submit insurance claims, your provider only sees that you attended a mental health appointment and the fee. No clinical details whatsoever. As a CRPO-registered psychotherapist (License #10979), I'm legally and ethically bound to protect your privacy. Many of my Guelph clients initially worry about this, especially in a smaller city, but your therapy remains completely confidential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral to see a therapist for depression in Guelph?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No referral is needed to see a Registered Psychotherapist in Ontario. You can book directly. Some insurance plans require a doctor's referral for coverage, so check your specific plan. If needed, your family doctor can provide a simple referral letter. The advantage of working with a private practice therapist is faster access (days instead of months) and more flexible scheduling."
           }
         },
         {
@@ -155,15 +167,7 @@
           "name": "What therapy approach do you use for depression?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "I primarily use Acceptance and Commitment Therapy (ACT), which research shows is effective for depression. Rather than just challenging negative thoughts, ACT helps you reconnect with what matters to you and take small, values-aligned actions even when motivation is low. We work on building a life that feels meaningful, not just managing symptoms."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can depression therapy work alongside medication?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, therapy and medication often work well together. As a psychotherapist, I don't prescribe medication (that's your doctor's role), but many of my clients take antidepressants while also doing therapy. We can coordinate with your prescribing physician when helpful. Some people use medication to stabilize while developing therapy skills, others prefer longer-term medication alongside therapy."
+            "text": "I primarily use Acceptance and Commitment Therapy (ACT), which research shows is highly effective for depression. ACT helps you reconnect with what matters to you and take small, meaningful actions even when motivation is low. Rather than waiting to 'feel better' before living your life, we work on building a life worth living, which often improves mood as a byproduct. This is particularly useful for high-achieving Guelph professionals who've lost their sense of purpose."
           }
         }
       ]
@@ -248,6 +252,7 @@
         .btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
         .btn-secondary:hover { background: #1e3a4f; color: white; text-decoration: none; }
 
+        /* Sidebar styles */
         .sidebar { background: white; padding: 2rem; border-radius: 1rem; margin-top: 2rem; }
         .sidebar-section { margin-bottom: 2rem; }
         .sidebar-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; margin-bottom: 1rem; }
@@ -257,6 +262,7 @@
         .sidebar-cta h3 { color: white; margin-top: 0; }
         .sidebar-cta p { color: rgba(255,255,255,0.9); }
 
+        /* Footer styles */
         .footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
         .footer-section h4 { color: white; margin-bottom: 1rem; }
@@ -304,7 +310,7 @@
                     <div>
                         <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">GUELPH DEPRESSION THERAPY</span>
                         <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Depression Therapy in Guelph</h1>
-                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">When everything feels heavy and you're running on empty. Virtual therapy from home. No energy required for another commute. Same-week appointments available.</p>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">Lost the spark that brought you to your work? Virtual therapy from home. No drive to KW or Toronto required. Same-week appointments available.</p>
 
                         <div class="flex flex-wrap gap-4 mb-8">
                             <a href="https://nextsteptherapy.janeapp.com/" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
@@ -334,18 +340,44 @@
                         <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
                             <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
                             <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
-                            <p class="text-gray-600 text-sm">From home when leaving feels hard.</p>
+                            <p class="text-gray-600 text-sm">From Downtown, South End, or anywhere.</p>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
                             <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="moon" class="w-6 h-6 text-sage"></i></div>
                             <h3 class="font-display text-lg font-semibold text-navy mb-2">Evening Hours</h3>
-                            <p class="text-gray-600 text-sm">Sessions after 5pm available.</p>
+                            <p class="text-gray-600 text-sm">Sessions after 5pm for busy schedules.</p>
                         </div>
                         <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
                             <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
                             <h3 class="font-display text-lg font-semibold text-navy mb-2">CRPO Registered</h3>
                             <p class="text-gray-600 text-sm">License #10979. Insured.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depression Statistics Section - AI Citation Optimized -->
+        <section class="py-16 px-6 bg-sage/5">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-display text-3xl font-semibold text-navy text-center mb-4">Depression in Ontario: The Numbers</h2>
+                <p class="text-center text-gray-600 mb-10">Depression isn't weakness or a character flaw—it's one of the most common mental health conditions in the world. Understanding the scope helps reduce stigma and encourages action.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <h3 class="text-2xl font-bold text-sage mb-2">1 in 8</h3>
+                        <p class="text-navy/80">Canadians will experience major depression at some point in their lives. You are not alone in this. <em class="text-navy/60">(Source: CMHA)</em></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <h3 class="text-2xl font-bold text-sage mb-2">70%</h3>
+                        <p class="text-navy/80">Of people with depression respond positively to evidence-based treatments like ACT and CBT. Recovery is possible. <em class="text-navy/60">(Source: APA)</em></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <h3 class="text-2xl font-bold text-sage mb-2">Only 40%</h3>
+                        <p class="text-navy/80">Of Canadians with depression receive adequate treatment. Most people don't get the help they need and deserve. <em class="text-navy/60">(Source: CMHA)</em></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-sand/30">
+                        <h3 class="text-2xl font-bold text-sage mb-2">#1 Cause</h3>
+                        <p class="text-navy/80">Depression is the leading cause of disability worldwide, affecting over 280 million people globally. <em class="text-navy/60">(Source: WHO)</em></p>
                     </div>
                 </div>
             </div>
@@ -358,88 +390,90 @@
             <!-- Section 1: The Guelph Context -->
             <section class="section">
                 <h2 class="section-title">I Don't Know If This Is You, But...</h2>
-                <p>Maybe you're still getting things done. Still showing up. But it feels like moving through thick air. Everything takes more effort than it should. The things that used to interest you, hobbies, friends, even your work, feel distant now. Like you're watching your own life from behind glass.</p>
+                <p>Maybe you used to love your work. The research, the teaching, the problems you were solving. And now? You're going through the motions. You show up. You do the tasks. But the spark that brought you here is gone. You can't remember the last time you felt genuinely excited about anything.</p>
 
-                <p>You might not even call it depression. It's just... everything feels harder than it used to. Getting out of bed. Caring about things. Feeling present with your family when you finally get home from the 6.</p>
+                <p>Guelph attracts people who care about their work. University faculty. Researchers. Healthcare workers. People drawn to meaningful careers. But somewhere along the way, the grants you didn't get, the experiments that failed, the constant pressure to produce, it wore you down. And now everything feels heavy.</p>
 
                 <div class="content-card">
                     <h3>Sound Familiar?</h3>
                     <ul class="feature-list">
-                        <li><strong>Functioning but empty:</strong> You hit your deadlines. You look fine to everyone else. But inside, there's just... nothing. You're going through the motions without feeling any of it.</li>
-                        <li><strong>Exhaustion that sleep doesn't fix:</strong> You're tired all the time, but it's not the kind of tired that rest helps. It's deeper than that.</li>
-                        <li><strong>Disconnection from your life:</strong> Your work at AMD or IBM or Oracle used to feel meaningful. Your family dinners in Unionville or Cornell used to feel warm. Now everything feels like it's happening to someone else.</li>
-                        <li><strong>The weight of expectations:</strong> Maybe your parents worked hard to give you opportunities. Maybe you've achieved everything you were supposed to. And yet you feel worse than you did before you "made it."</li>
-                        <li><strong>Irritability instead of sadness:</strong> Depression doesn't always look sad. Sometimes it looks like snapping at your partner over nothing, or dreading conversations that used to be easy.</li>
+                        <li><strong>Lost Motivation:</strong> You used to be passionate about your field. Now you're just tired. The work that once energized you feels like a burden you're dragging through each day.</li>
+                        <li><strong>Chronic Fatigue:</strong> Sleep doesn't help anymore. You wake up exhausted. Getting through a workday feels like running a marathon.</li>
+                        <li><strong>Disconnection:</strong> You're withdrawing from colleagues, friends, family. It's easier to stay home than explain why you don't feel like yourself.</li>
+                        <li><strong>Nothing Feels Worth It:</strong> The projects, the relationships, the hobbies that used to matter. They all feel distant. Like you're watching your life through glass.</li>
+                        <li><strong>Guilt About Struggling:</strong> You have a good job, benefits, stability. You feel like you shouldn't be this unhappy. That makes it worse.</li>
                     </ul>
                 </div>
-                <p>If this resonates, you're not broken. You're dealing with something real that affects millions of people. Including high achievers who look like they have it all together.</p>
+                <p>If this resonates, you're not broken. Depression isn't a character flaw. It's a real condition that responds to treatment. The question isn't whether you're worthy of help. It's whether you're ready to take the first step.</p>
             </section>
 
-            <!-- Section: Depression Types -->
+            <!-- Section: Symptoms / Semantic Keywords -->
             <section class="section">
-                <h2 class="section-title">Types of Depression We Work With</h2>
-                <p>Depression doesn't look the same for everyone. In my work with Guelph professionals, I see several patterns:</p>
+                <h2 class="section-title">Depression Symptoms We Treat</h2>
+                <p>Depression doesn't always look like sadness. In my work with Guelph professionals, I see depression show up in different ways. We work with:</p>
                 <div class="quick-stats">
                     <div class="quick-stat-card">
-                        <h3>High-Functioning Depression</h3>
-                        <p>You're still achieving, still meeting expectations, but you're running on empty. The outside looks fine; the inside doesn't match. This is sometimes called "smiling depression" or persistent depressive disorder.</p>
+                        <h3>Persistent Low Mood</h3>
+                        <p>Feeling empty, hopeless, or numb most days. The weight that doesn't lift, even when things are objectively going okay. We work with <strong>clinical depression symptoms</strong> and help you reconnect with what matters.</p>
+                    </div>
+                    <div class="quick-stat-card">
+                        <h3>Loss of Interest</h3>
+                        <p>The research that used to excite you feels meaningless. Hobbies don't bring joy anymore. We help you rebuild connection to activities and relationships, even when motivation is low.</p>
                     </div>
                     <div class="quick-stat-card">
                         <h3>Burnout-Related Depression</h3>
-                        <p>Years of 6 commutes, semester demands, and never-ending Slack notifications have worn you down. The exhaustion has crossed into something deeper. Apathy, disconnection, loss of meaning.</p>
-                    </div>
-                    <div class="quick-stat-card">
-                        <h3>Situational Depression</h3>
-                        <p>A layoff. A relationship ending. Immigration stress. Life transitions that knocked you down and you haven't bounced back the way you expected to.</p>
+                        <p>When workplace stress evolves into something deeper. The exhaustion that doesn't improve with rest. We address <strong>burnout and depression</strong> together, focusing on sustainable change.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section: ACT Therapy Approach -->
+            <!-- Section: ACT Therapy Approach - MAJOR DIFFERENTIATOR -->
             <section class="section">
-                <h2 class="section-title">Our Approach: Finding What Still Matters</h2>
-                <p>Depression has a way of making everything feel pointless. The standard advice ("think positive," "practice gratitude," "exercise more") feels insulting when you can barely get through the day. If willpower were enough, you would have fixed this already.</p>
+                <h2 class="section-title">Our Approach: Building a Life Worth Living</h2>
+                <p>Here's the thing about depression: waiting to "feel better" before you live your life keeps you stuck. Motivation doesn't come first. Action does. And I know that sounds exhausting when you're already depleted.</p>
 
-                <p>I use <strong>Acceptance and Commitment Therapy (ACT)</strong>, which takes a different approach. Instead of fighting depression or trying to think your way out of it, we work on reconnecting you with what genuinely matters and taking small, values-aligned actions even when motivation is absent.</p>
+                <p>I use <strong>Acceptance and Commitment Therapy (ACT)</strong>, which focuses on helping you take small, meaningful actions aligned with your values, even when depression is present. We're not trying to eliminate all negative feelings. We're building a life that's worth living, which often improves mood as a byproduct.</p>
 
                 <h3>What This Actually Looks Like:</h3>
                 <ul class="feature-list">
-                    <li><strong>Accepting difficult feelings without being consumed by them:</strong> The heaviness doesn't have to go away before you can start living. We work on making room for it while still moving toward what matters.</li>
-                    <li><strong>Defusing from unhelpful thoughts:</strong> "What's the point?" is a thought. A common one when you're depressed. We work on recognizing it as a thought rather than a truth you have to obey.</li>
-                    <li><strong>Reconnecting with values:</strong> Depression disconnects you from what used to matter. We work on identifying what genuinely matters to you (not what you think should matter) and taking small steps toward it.</li>
-                    <li><strong>Building behavior activation:</strong> When you're depressed, you wait to feel motivated before acting. But motivation often follows action, not the other way around. We work on gentle, sustainable activation.</li>
+                    <li><strong>Values Clarification:</strong> What actually matters to you? Not what you think should matter. What do you want your life to stand for? We start there.</li>
+                    <li><strong>Committed Action:</strong> Taking small steps toward what matters, even when you don't feel like it. Not giant leaps. Tiny, sustainable actions that build over time.</li>
+                    <li><strong>Defusion from Thoughts:</strong> That voice that says "nothing will ever get better" is a thought. Not a fact. We work on recognizing thoughts as mental events, not truths you have to obey.</li>
+                    <li><strong>Self-Compassion:</strong> Depression lies. It tells you you're failing, that you're not good enough. We work on relating to yourself with the same kindness you'd offer a friend.</li>
                 </ul>
 
-                <p>This isn't about fake positivity or pushing through. It's about building a life that feels worth living, even when depression is still present. Research shows ACT can be effective for depression, particularly for people who've struggled with it for a long time.</p>
+                <p>Research shows ACT is effective for depression, particularly for people who've lost their sense of purpose. It's not about forced positivity. It's about reconnecting with what makes life meaningful, one small step at a time.</p>
             </section>
 
-            <!-- Mid-Page CTA -->
+            <!-- Mid-Page CTA - Insurance Check -->
             <section class="section">
                 <div class="cta-box">
                     <h3>Guelph Professionals: Your Benefits Likely Cover This</h3>
-                    <p>Most major employers in the Guelph education corridor offer $2,000-$5,000 in annual mental health coverage. University of Guelph, healthcare. Check your benefits. Start using what you've already paid for.</p>
+                    <p>University staff, healthcare workers, and many Guelph employers offer $2,000-$5,000 in annual mental health coverage. Check your benefits. Start using what you've already paid for.</p>
                     <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Free 15-Min Consultation</a>
                     <p class="cta-subtext" style="font-size: 0.875rem; margin-top: 1rem;">Same-week appointments available. CRPO #10979.</p>
                     <p style="font-size: 0.875rem; color: rgba(255,255,255,0.85); margin-top: 0.5rem;">We respond within 24 hours</p>
                 </div>
             </section>
 
-            <!-- Section: Therapist Intro -->
+            <!-- Section 2: Therapist Intro (Position #3) -->
             <section class="section">
                 <h2 class="section-title">About Your Therapist</h2>
-                <p>I'm <strong>Jesse Cynamon</strong>, a Registered Psychotherapist (CRPO #10979). I work with a lot of Guelph professionals who don't fit the stereotype of what "depressed" looks like. People who are still functioning. Still achieving. But feel hollow inside.</p>
-                <p>I'm not going to tell you to "just think positive" or give you a list of things you already know you should be doing. We're going to figure out what's actually driving this and build something that helps. Not overnight. But sustainably.</p>
+                <p>I'm <strong>Jesse Cynamon</strong>, a Registered Psychotherapist (CRPO #10979). I work with a lot of Guelph professionals. People in academia, healthcare, agri-food research. People who've lost the thread of what makes their work meaningful.</p>
+                <p>I'm not going to tell you to "think positive" or hand you a list of gratitude exercises. We're going to look at what's keeping you stuck and build practical pathways forward. Small steps. Real life. No shortcuts.</p>
                 <ul class="criteria-list">
-                    <li><strong>Virtual Convenience:</strong> Sessions from home. When depression makes leaving the house feel impossible, that matters.</li>
+                    <li><strong>Virtual Convenience:</strong> Sessions from your home office, campus office, or wherever you have privacy. No driving to KW or Toronto when you're already exhausted.</li>
                     <li><strong>Flexible Hours:</strong> Evening appointments after work. Some Saturday availability.</li>
-                    <li><strong>Insurance Coverage:</strong> Receipts provided for all major insurance providers.</li>
+                    <li><strong>Insurance Coverage:</strong> Receipts provided for all major insurance providers (Sun Life, Manulife, Canada Life, etc.).</li>
                 </ul>
             </section>
 
-            <!-- Section: Same-Week Availability -->
+            <!-- Section: Same-Week Availability - UNIQUE DIFFERENTIATOR -->
             <section class="section">
-                <h2 class="section-title">Same-Week Appointments: Skip the Wellington County Waitlist</h2>
-                <p>When you're depressed, being told to wait 3-6 months for help feels like a cruel joke. That's not how this works here.</p>
+                <h2 class="section-title">Same-Week Appointments: Skip the Wellington Waitlist</h2>
+                <p>When you're dealing with depression, waiting 6 months for therapy isn't realistic. The struggle you're experiencing right now needs support now, not next year.</p>
+
+                <p>At NextStep Therapy, same-week appointments are the norm, not the exception. Here's what that actually looks like:</p>
 
                 <div class="quick-stats">
                     <div class="quick-stat-card">
@@ -456,21 +490,21 @@
                     </div>
                 </div>
 
-                <p>If you reach out today, you can typically be in a session within the week. That matters when getting through each day feels hard.</p>
+                <p>No waitlist games. No "call back in a month." If you reach out today, you can typically be in a session within the week. That matters when you're struggling.</p>
             </section>
 
-            <!-- Section: Privacy & Virtual -->
+            <!-- Section: Privacy & Compliance -->
             <section class="section">
-                <h2 class="section-title">Virtual Therapy: When Leaving Home Feels Hard</h2>
-                <p>One of the cruelest aspects of depression is that it makes getting help harder. The thought of driving somewhere, sitting in a waiting room, making small talk. It's exhausting before you even start.</p>
-                <p>Virtual therapy removes that barrier. You can have sessions from your bedroom if that's all you have energy for. Whether you're in Downtown, South End, West End, or Grange Hill, your therapy comes to you. The video platform is encrypted and meets Canadian healthcare privacy standards.</p>
+                <h2 class="section-title">Virtual Therapy: Secure & Private</h2>
+                <p>I know privacy matters. Especially in a smaller city where you might run into colleagues anywhere. Your therapy is completely confidential. Your employer never sees what we discuss. When you submit insurance claims, they only see that you attended a mental health appointment and the fee. That's it.</p>
+                <p>Whether you're logging in from Downtown, South End, West End, or Exhibition Park, your space is protected. The video platform is encrypted and meets Canadian healthcare privacy standards.</p>
             </section>
 
-            <!-- Section: Secondary CTA -->
+            <!-- Section 3: Secondary CTA -->
             <section class="section">
                 <div class="cta-box">
-                    <h3>You Don't Have to Keep Pushing Through Alone</h3>
-                    <p>Free 15-minute consultation. No pressure. Just a conversation about what you're experiencing and whether this might help.</p>
+                    <h3>Ready to Stop Just Going Through the Motions?</h3>
+                    <p>Free 15-minute consultation. No pressure. Just a conversation about what you're dealing with and whether this might help.</p>
                     <div class="cta-buttons">
                         <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
                         <a href="tel:+14163062157" class="btn btn-secondary">(416) 306-2157</a>
@@ -478,80 +512,79 @@
                 </div>
             </section>
 
-            <!-- Section: Local Resources -->
+            <!-- Section 4: Local Resources -->
             <section class="section">
                 <h2 class="section-title">Mental Health Resources in Wellington County</h2>
-                <p>If you're in crisis, immediate support is available:</p>
+                <p>While I provide ongoing therapy, immediate crisis support is available locally:</p>
                 <ul class="criteria-list">
-                    <li><strong>Wellington County Crisis Line:</strong> 1-844-437-3247 (24/7)</li>
-                    <li><strong>Guelph Stouffville Hospital:</strong> Emergency mental health services (115 Delhi St).</li>
-                    <li><strong>Canadian Mental Health Association - Wellington County:</strong> 519-821-2060</li>
-                    <li><strong>Talk Suicide Canada:</strong> 988 (24/7 crisis line)</li>
+                    <li><strong>Here 24/7 (Wellington):</strong> 1-844-437-3247 (24/7 crisis line)</li>
+                    <li><strong>Guelph General Hospital:</strong> Emergency mental health services (115 Delhi St)</li>
+                    <li><strong>CMHA Waterloo Wellington:</strong> 519-821-2060</li>
                 </ul>
       </section>
 
-            <!-- Section: Related Services -->
+            <!-- Section: Related Services (Internal Linking) -->
             <section class="section">
-                <h2 class="section-title">Related Support</h2>
-                <p>Depression often comes with other challenges. We also offer focused support for:</p>
+                <h2 class="section-title">Related Support for Guelph Professionals</h2>
+                <p>Depression rarely happens in a vacuum. We also offer focused support for:</p>
                 <div class="quick-stats">
+                    <a href="/workplace-stress-therapy-ontario.html" class="quick-stat-card">
+                        <h3>Workplace Stress</h3>
+                        <p>For academic burnout and career pressure.</p>
+                    </a>
                     <a href="/anxiety-therapy-guelph.html" class="quick-stat-card">
                         <h3>Anxiety Therapy</h3>
-                        <p>Depression and anxiety often occur together.</p>
+                        <p>For worry and overwhelm in academia.</p>
                     </a>
-                    <a href="/workplace-stress-therapy-ontario.html" class="quick-stat-card">
-                        <h3>Burnout</h3>
-                        <p>When work has depleted you completely.</p>
-                    </a>
-                    <a href="/mens-mental-health-therapy.html" class="quick-stat-card">
-                        <h3>Men's Mental Health</h3>
-                        <p>For men who struggle to talk about this.</p>
+                    <a href="/online-counselling-remote-workers.html" class="quick-stat-card">
+                        <h3>Remote Workers</h3>
+                        <p>For WFH isolation and disconnection.</p>
                     </a>
                 </div>
             </section>
 
-            <!-- Section: FAQ -->
+            <!-- Section 5: FAQ -->
             <section class="section">
                 <h2 class="section-title">Frequently Asked Questions</h2>
 
                 <div class="faq-item">
                     <h3>How much does depression therapy cost in Guelph?</h3>
-                    <p>Individual sessions are $175 per 50-minute session. Most Guelph tech employers (University of Guelph, healthcare) offer extended health benefits covering 50-100% of psychotherapy costs. Typical coverage ranges from $1,000-$5,000 annually. I provide detailed receipts for insurance claims. For those without coverage, biweekly sessions are an option.</p>
+                    <p>Individual sessions are $175 per 50-minute session. Many Guelph employers (University of Guelph, healthcare sector, agri-food companies) offer extended health benefits covering 50-100% of psychotherapy costs. Typical coverage ranges from $1,000-$5,000 annually. I provide detailed receipts for insurance claims. For those without coverage, biweekly sessions are an option to make therapy financially sustainable.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Do you offer virtual therapy for depression?</h3>
-                    <p>Yes, all sessions are virtual. This is particularly helpful when depression makes it hard to leave the house. Whether you're in Downtown, South End, or anywhere in Guelph, you can attend sessions from home. Many clients find virtual therapy reduces the barrier to getting started. No need to add another commute when you're already exhausted.</p>
+                    <h3>Do you offer virtual therapy for Guelph residents with depression?</h3>
+                    <p>Yes, all therapy sessions are virtual. This works particularly well for Guelph residents experiencing depression, as getting to in-person appointments can feel overwhelming when you're already struggling. Whether you're in Downtown, South End, West End, or Exhibition Park, you can attend sessions from the comfort of your home.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>What types of depression do you treat?</h3>
-                    <p>I work with various forms including major depressive disorder, persistent depressive disorder (dysthymia), situational depression, and burnout-related depression common among Guelph education professionals. I also help with the particular type of depression that comes from feeling disconnected. From work that used to feel meaningful, from family, from yourself.</p>
+                    <h3>What depression symptoms do you treat for Guelph professionals?</h3>
+                    <p>I work with many Guelph residents experiencing persistent low mood, loss of interest in work or hobbies, fatigue that doesn't improve with rest, difficulty concentrating on tasks like grant writing or research, changes in sleep or appetite, and the feeling that nothing matters anymore. Many university staff and healthcare workers struggle with burnout that evolves into depression.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can I get same-week appointments?</h3>
-                    <p>Yes, same-week appointments are typically available. Unlike many therapists in Wellington County with 3-6 month waitlists, I prioritize getting you started quickly. When you're dealing with depression, waiting months for help isn't realistic. If you reach out today, you can usually be in a session within 7 days.</p>
+                    <h3>Can I get same-week appointments for depression support?</h3>
+                    <p>Yes, same-week appointments are typically available. Unlike many therapists in Wellington County with 3-6 month waitlists, I prioritize getting you started quickly. When you're dealing with depression, waiting months for help isn't realistic. If you reach out today, you can usually be in a session within 7 days. I also offer evening appointments after 5pm and some Saturday availability.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Is therapy confidential if my employer provides insurance?</h3>
-                    <p>Absolutely. Your employer never sees what you discuss in therapy. When you submit insurance claims, your provider only sees that you attended a mental health appointment and the fee. No clinical details. As a CRPO-registered psychotherapist (License #10979), I'm legally and ethically bound to protect your privacy.</p>
+                    <h3>Do you understand the pressures that contribute to depression in Guelph's academic environment?</h3>
+                    <p>I work with many Guelph residents in academic roles at the University of Guelph, healthcare workers, and professionals in specialized fields. I understand how publish-or-perish culture, grant rejection, failed experiments, and the cyclical nature of academic stress can wear you down over time. Many clients come in feeling like they've lost the passion that brought them to their field in the first place.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is therapy confidential if my employer provides the insurance?</h3>
+                    <p>Absolutely. Your employer never sees what you discuss in therapy. When you submit insurance claims, your provider only sees that you attended a mental health appointment and the fee. No clinical details whatsoever. As a CRPO-registered psychotherapist (License #10979), I'm legally and ethically bound to protect your privacy. Many of my Guelph clients initially worry about this, especially in a smaller city, but your therapy remains completely confidential.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do I need a referral to see a therapist for depression?</h3>
+                    <p>No referral is needed to see a Registered Psychotherapist in Ontario. You can book directly. Some insurance plans require a doctor's referral for coverage, so check your specific plan. If needed, your family doctor can provide a simple referral letter. The advantage of working with a private practice therapist is faster access (days instead of months) and more flexible scheduling.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>What therapy approach do you use for depression?</h3>
-                    <p>I primarily use Acceptance and Commitment Therapy (ACT), which research shows can be effective for depression. Rather than just challenging negative thoughts, ACT helps you reconnect with what matters to you and take small, values-aligned actions even when motivation is low. We work on building a life that feels meaningful, not just managing symptoms.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Can depression therapy work alongside medication?</h3>
-                    <p>Yes, therapy and medication often work well together. As a psychotherapist, I don't prescribe medication (that's your doctor's role), but many of my clients take antidepressants while also doing therapy. We can coordinate with your prescribing physician when helpful. Some people use medication to stabilize while developing therapy skills, others prefer longer-term medication alongside therapy.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How long does depression therapy take?</h3>
-                    <p>It varies. Some people notice shifts within 6-8 sessions. Others benefit from longer-term support. Depression is complex and the timeline depends on how long you've been struggling, life circumstances, and other factors. We'll regularly check in about what's working and adjust as needed. This isn't about being in therapy forever. It's about building sustainable change.</p>
+                    <p>I primarily use Acceptance and Commitment Therapy (ACT), which research shows is highly effective for depression. ACT helps you reconnect with what matters to you and take small, meaningful actions even when motivation is low. Rather than waiting to "feel better" before living your life, we work on building a life worth living, which often improves mood as a byproduct. This is particularly useful for high-achieving Guelph professionals who've lost their sense of purpose.</p>
                 </div>
       </section>
 
@@ -559,7 +592,7 @@
             <section class="section">
                 <div class="content-card">
                     <h3>About the Author</h3>
-                    <p><strong>Jesse Cynamon, RP</strong> is a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (<strong>CRPO #10979</strong>). He specializes in Acceptance and Commitment Therapy (ACT) for depression, anxiety, burnout, and high-functioning professionals across Ontario.</p>
+                    <p><strong>Jesse Cynamon, RP</strong> is a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (<strong>CRPO #10979</strong>). He specializes in Acceptance and Commitment Therapy (ACT) for depression, burnout, and high-functioning professionals across Ontario.</p>
                     <p class="last-updated"><strong>Last Updated:</strong> December 24, 2024</p>
                     <a href="/jesse-cynamon-psychotherapist-ontario.html" class="btn btn-secondary">Learn More About Jesse</a>
                 </div>
@@ -573,6 +606,7 @@
     <footer class="bg-navy py-16">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
+                <!-- Column 1: About & Contact -->
                 <div>
                     <h4 class="font-display text-white text-lg font-semibold mb-4">Jesse Cynamon, RP</h4>
                     <p class="text-white/70 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
@@ -581,6 +615,7 @@
                     <a href="tel:+14163062157" class="text-sage-light hover:text-white text-lg font-bold">(416) 306-2157</a></p>
                 </div>
 
+                <!-- Column 2: Services -->
                 <div>
                     <h4 class="text-white font-semibold mb-4">Services</h4>
                     <ul class="space-y-2 text-sm">
@@ -591,16 +626,18 @@
                     </ul>
                 </div>
 
+                <!-- Column 3: Locations -->
                 <div>
                     <h4 class="text-white font-semibold mb-4">Locations</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="/therapist-toronto.html" class="text-white/70 hover:text-white">Toronto</a></li>
-                        <li><a href="/anxiety-therapy-guelph.html" class="text-white/70 hover:text-white">Guelph</a></li>
+                        <li><a href="/depression-therapy-guelph.html" class="text-white/70 hover:text-white">Guelph</a></li>
                         <li><a href="/therapy-ottawa-ontario.html" class="text-white/70 hover:text-white">Ottawa</a></li>
                         <li><a href="/therapy-hamilton-ontario.html" class="text-white/70 hover:text-white">Hamilton</a></li>
                     </ul>
                 </div>
 
+                <!-- Column 4: Resources -->
                 <div>
                     <h4 class="text-white font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm">
@@ -612,10 +649,11 @@
                 </div>
             </div>
 
+            <!-- Crisis Resources -->
             <div class="border-t border-white/10 pt-8 mt-12 text-center">
                 <p class="text-white/80 text-sm mb-4">
                     <strong class="text-white">In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18553102673" class="text-sage-light hover:text-white underline">1-844-437-3247</a> (Wellington County Crisis)
+                    <a href="tel:18444373247" class="text-sage-light hover:text-white underline">1-844-437-3247</a> (Here 24/7 Wellington)
                 </p>
                 <p class="text-white/60 text-xs">&copy; 2024 Next Step Therapy. Jesse Cynamon, RP (CRPO #10979) | Ontario, Canada</p>
             </div>
@@ -628,6 +666,7 @@
         <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
     </div>
 
+    <!-- Initialize Lucide Icons -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
