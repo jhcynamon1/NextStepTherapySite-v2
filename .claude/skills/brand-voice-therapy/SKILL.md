@@ -106,8 +106,10 @@ Run the kill list check before publishing:
 
 ### Approach Language
 
-- "No homework. No worksheets. Just real conversations about what's going on."
+- "Real conversations about what's going on. Practical, personalized, focused on what works for you."
 - "I use approaches that research supports. But what matters more is whether we actually connect."
+
+**CRPO Note:** Never disparage other therapy approaches (e.g., "No homework", "No worksheets"). Focus on what you DO, not what you don't.
 
 ### WITH-You Positioning
 
@@ -163,7 +165,7 @@ Run the kill list check before publishing:
 | "I don't know if this will resonate..." | "Here's what I've seen..." |
 | "I want to be WITH you as you figure things out" | "We figure it out together. I'm not ahead of you—I'm with you." |
 | "Does that make sense?" | "Sound familiar?" |
-| "I don't have a step-by-step program" | "No homework. No worksheets. Just real conversations." |
+| "I don't have a step-by-step program" | "Real conversations. Practical and personalized." |
 
 ---
 
