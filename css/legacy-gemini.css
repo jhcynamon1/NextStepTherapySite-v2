@@ -1,0 +1,151 @@
+/* Legacy Gemini Styles - For pages using old Astro template with Tailwind classes */
+
+/* Base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f6f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Containers */
+.section { padding: 4rem 1rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.content-grid { display: grid; gap: 2rem; }
+.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+
+/* Typography */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #1e3a4f;
+    margin-bottom: 1.5rem;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
+.cta-box p { color: rgba(255,255,255,0.9); }
+.cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
+.cta-box .btn-primary { background: #4a7c59; color: white; }
+.cta-box .btn-secondary { background: white; color: #1e3a4f; }
+
+/* Feature List */
+.feature-list { list-style: none; padding: 0; }
+.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
+.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
+
+/* Info Cards */
+.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
+.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
+
+/* Quick Stats */
+.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
+
+/* Background */
+.alternate-bg { background: #f1f5f9; }
+
+/* Links */
+a { color: #1e3a4f; }
+
+/* Buttons */
+.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; }
+.btn-primary { background: #1e3a4f; color: white; }
+.btn-secondary { background: white; color: #1e3a4f; border: 2px solid #1e3a4f; }
+
+/* Contact Section */
+.contact-section { padding: 4rem 1rem; background: #f8f6f2; }
+.contact-content { max-width: 800px; margin: 0 auto; text-align: center; }
+.contact-info { margin-top: 2rem; }
+
+/* Footer */
+.footer {
+    background: #1e3a4f;
+    color: white;
+    padding: 4rem 1.5rem 2rem;
+    margin-top: 0;
+}
+.footer h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+.footer p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer a:hover {
+    color: white;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+}
+
+/* Floating Mobile CTA */
+.floating-mobile-cta { display: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .floating-mobile-cta {
+        display: flex;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        background: #1e3a4f;
+        color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        z-index: 50;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
