@@ -511,37 +511,36 @@
         </section>
 
         <!-- Interactive Quiz Widget (Modern Redesign - Calm/Typeform Inspired) -->
-        <section class="quiz-widget-section" style="padding: 60px 16px; background: white;">
-
-            <div class="container" style="max-width: 900px; margin: 0 auto;">
-                <div class="quiz-widget-container" style="background: #faf7f2; border-radius: 24px; box-shadow: 0 10px 40px rgba(30, 58, 79, 0.08); overflow: hidden; border: 1px solid #e8e3d9;">
+        <section class="py-16 md:py-20 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="quiz-widget-container bg-cream rounded-3xl shadow-2xl overflow-hidden border border-sand/50">
 
                     <!-- Quiz Header -->
-                    <div class="quiz-header" style="background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 28px 32px 24px; text-align: center;">
-                        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.875rem; color: white; font-weight: 500; margin: 0 0 8px 0;">Is Therapy Right for You?</h2>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 1rem; margin: 0;">A thoughtful 5-minute self-assessment. Completely private, no email required.</p>
+                    <div class="quiz-header bg-gradient-to-br from-navy to-navy-light px-6 md:px-8 py-7 text-center">
+                        <h2 class="font-display text-2xl md:text-3xl font-medium text-white mb-2">Is Therapy Right for You?</h2>
+                        <p class="text-white/85 text-base">A thoughtful 5-minute self-assessment. Completely private, no email required.</p>
                     </div>
 
                     <!-- Quiz Disclaimer -->
-                    <div class="quiz-disclaimer" style="background: #FFF9E6; border-left: 3px solid #d4a853; padding: 12px 20px; font-size: 0.8125rem; color: #7a5c12; margin: 20px;">
-                        <strong style="font-weight: 600;">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" style="color: #7a5c12; font-weight: 600; text-decoration: underline;">988</a> or your local emergency services.
+                    <div class="quiz-disclaimer bg-amber-50 border-l-[3px] border-amber-500 px-5 py-3 mx-5 mt-5 text-[0.8125rem] text-amber-800">
+                        <strong class="font-semibold">Important:</strong> This assessment is for informational purposes only and is not a diagnostic tool. Your results are private and not stored. If you're experiencing a mental health crisis, please contact <a href="tel:988" class="font-semibold underline hover:no-underline">988</a> or your local emergency services.
                     </div>
 
                     <!-- Progress Bar -->
-                    <div class="quiz-progress-container" style="padding: 20px 30px 16px;">
-                        <div class="quiz-progress-bar" style="height: 6px; background: #f2efe9; border-radius: 9999px; overflow: hidden;">
-                            <div class="quiz-progress-fill" id="quizProgressFill" style="height: 100%; background: #4a7c59; transition: width 0.4s ease; border-radius: 9999px; width: 0%;"></div>
+                    <div class="quiz-progress-container px-6 md:px-8 pt-5 pb-4">
+                        <div class="quiz-progress-bar h-1.5 bg-linen rounded-full overflow-hidden">
+                            <div class="quiz-progress-fill h-full bg-sage transition-all duration-400 rounded-full" id="quizProgressFill" style="width: 0%;"></div>
                         </div>
-                        <div class="quiz-progress-text" id="quizProgressText" style="text-align: center; margin-top: 10px; font-size: 0.75rem; color: #8a939d; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Question 1 of 15</div>
+                        <div class="quiz-progress-text text-center mt-2.5 text-xs text-gray-500 font-semibold tracking-widest uppercase" id="quizProgressText">Question 1 of 15</div>
                     </div>
 
                     <!-- Quiz Content Area -->
-                    <div class="quiz-content-area" id="quizContentArea" style="padding: 12px 30px 30px;">
+                    <div class="quiz-content-area px-6 md:px-8 pt-3 pb-8" id="quizContentArea">
                         <!-- Questions will be inserted here by JavaScript -->
                     </div>
 
                     <!-- Results Container -->
-                    <div class="quiz-results-container" id="quizResultsContainer" style="display: none; padding: 40px;">
+                    <div class="quiz-results-container hidden p-6 md:p-10" id="quizResultsContainer">
                         <!-- Results will be inserted here by JavaScript -->
                     </div>
                 </div>
@@ -898,11 +897,11 @@
 
             function showQuizResults() {
                 calculateQuizScore();
-                document.getElementById('quizContentArea').style.display = 'none';
-                document.querySelector('.quiz-progress-container').style.display = 'none';
+                document.getElementById('quizContentArea').classList.add('hidden');
+                document.querySelector('.quiz-progress-container').classList.add('hidden');
 
                 const resultsContainer = document.getElementById('quizResultsContainer');
-                resultsContainer.style.display = 'block';
+                resultsContainer.classList.remove('hidden');
 
                 // Track quiz completion in Google Analytics
                 if (typeof gtag !== 'undefined') {
