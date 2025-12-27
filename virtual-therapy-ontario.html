@@ -50,62 +50,10 @@
     <!-- Page Styles -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
-        .font-display { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }.font-display { font-family: 'Playfair Display', serif; }
 
-        /* Legacy class compatibility for Gemini design */
-        .section { padding: 5rem 0; }
-        .section.alternate-bg { background: #f5f1ea; }
-        .container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.08); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .section-title.centered { text-align: center; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid #eee; }
-        .feature-list li:before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .feature-list li:last-child { border-bottom: none; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
-        .info-card { background: #f8f9fa; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
-        .quick-stat-card h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
-        .btn-primary { background: #1e3a4f; color: white; }
-        .btn-primary:hover { background: #152c3d; transform: translateY(-2px); }
-        .btn-secondary { background: #4a7c59; color: white; }
-        .btn-secondary:hover { background: #3d6a4a; }
-        .btn-lg { padding: 1.25rem 2.5rem; font-size: 1.1rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5f 100%); color: white; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }
-        .cta-box h3 { color: white; }
-        .faq-grid { display: grid; gap: 1.5rem; }
-        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }
-        .faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }
-        .faq-question { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }
-        .faq-answer { color: #5a6b7d; }
-        .contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }
-        .contact-section h2, .contact-section h3, .contact-section h4 { color: white; }
-        .contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }
-        .trust-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.5rem 0; }
-        .trust-pill { background: rgba(74, 124, 89, 0.15); color: #4a7c59; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }
-        .hero-with-bg { background: linear-gradient(180deg, #f5f1ea 0%, #faf7f2 100%); padding: 6rem 0; text-align: center; }
-        .hero-with-bg h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .lead-text { font-size: 1.25rem; color: #5a6b7d; max-width: 700px; margin: 0 auto 2rem; }
-        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-        .stats-section { background: #f5f1ea; }
-        .stats-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }
-        .footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }
-        .footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        .footer a:hover { color: white; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
-        .footer-section h4 { color: white; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
-        .footer-section ul { list-style: none; padding: 0; }
-        .footer-section li { margin-bottom: 0.5rem; }
-        @media (max-width: 768px) {
-            .hero-with-bg h1 { font-size: 2rem; }
-            .info-cards, .quick-stats { grid-template-columns: 1fr; }
-            .hero-cta { flex-direction: column; align-items: center; }
+        /* Legacy class compatibility for Gemini design */.section { padding: 5rem 0; }.section.alternate-bg { background: #f5f1ea; }.container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.08); }.section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1e3a4f; margin-bottom: 1.5rem; }.section-title.centered { text-align: center; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid #eee; }.feature-list li:before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.feature-list li:last-child { border-bottom: none; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.info-card { background: #f8f9fa; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.quick-stat-card h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }.btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }.btn-primary { background: #1e3a4f; color: white; }.btn-primary:hover { background: #152c3d; transform: translateY(-2px); }.btn-secondary { background: #4a7c59; color: white; }.btn-secondary:hover { background: #3d6a4a; }.btn-lg { padding: 1.25rem 2.5rem; font-size: 1.1rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5f 100%); color: white; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }.cta-box h3 { color: white; }.faq-grid { display: grid; gap: 1.5rem; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-question { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-answer { color: #5a6b7d; }.contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }.contact-section h2,.contact-section h3,.contact-section h4 { color: white; }.contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }.trust-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.5rem 0; }.trust-pill { background: rgba(74, 124, 89, 0.15); color: #4a7c59; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }.hero-with-bg { background: linear-gradient(180deg, #f5f1ea 0%, #faf7f2 100%); padding: 6rem 0; text-align: center; }.hero-with-bg h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1e3a4f; margin-bottom: 1.5rem; }.lead-text { font-size: 1.25rem; color: #5a6b7d; max-width: 700px; margin: 0 auto 2rem; }.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }.stats-section { background: #f5f1ea; }.stats-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }.footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }.footer a { color: rgba(255,255,255,0.8); text-decoration: none; }.footer a:hover { color: white; }.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }.footer-section h4 { color: white; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }.footer-section ul { list-style: none; padding: 0; }.footer-section li { margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {.hero-with-bg h1 { font-size: 2rem; }.info-cards,.quick-stats { grid-template-columns: 1fr; }.hero-cta { flex-direction: column; align-items: center; }
         }
     </style>
 
@@ -161,7 +109,7 @@
           "name": "How much does online therapy cost in Ontario?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Online therapy in Ontario typically costs $150-$250 per 50-minute session with a registered psychotherapist. At Next Step Therapy, sessions are $175, the same rate as in-person therapy. Most Ontario extended health benefits cover these costs, with many plans providing $1,000-$3,000 annual coverage for psychotherapy services."
+            "text": "Online therapy in Ontario typically costs $150-$250 per 50-minute session with a registered psychotherapist. At Next Step Therapy, sessions are $175, the same rate as in-person therapy. Many extended health plans cover Registered Psychotherapist services—check your benefits to confirm coverage."
           }
         },
         {
@@ -346,7 +294,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-4">
                     <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
@@ -375,7 +323,7 @@
                 </div>
 
                 <div class="flex flex-wrap gap-3 justify-center">
-                    <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i>CRPO #10979</span>
+                    <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                     <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i>$175/session</span>
                     <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2"><i data-lucide="check" class="w-4 h-4"></i>Insurance Receipts</span>
                 </div>
@@ -521,7 +469,7 @@
                     <div class="content-card">
                         <h2 class="section-title">Jesse Cynamon, RP</h2>
 
-                        <p>I'm Jesse, a Registered Psychotherapist (CRPO #10979). I work with people dealing with anxiety, burnout, and feeling disconnected from themselves. Virtual therapy isn't a compromise—for most of the professionals I work with, it's actually better. No commute. No awkward waiting room. Just real conversations about what's going on.</p>
+                        <p>I'm Jesse, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I work with people dealing with anxiety, burnout, and feeling disconnected from themselves. Virtual therapy isn't a compromise—for most of the professionals I work with, it's actually better. No commute. No awkward waiting room. Just real conversations about what's going on.</p>
 
                         <h3>Professional Background</h3>
 
@@ -747,7 +695,7 @@
                         <a href="https://nextsteptherapy.janeapp.com" class="btn btn-primary">Book Free Consultation</a>
                         <a href="tel:+14163062157" class="btn btn-secondary">Call (416) 306-2157</a>
                     </div>
-                    <p class="cta-trust-line">CRPO #10979 | $175/session | Insurance receipts provided</p>
+                    <p class="cta-trust-line"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | $175/session | Insurance receipts provided</p>
                 </div>
             </div>
         </section>
@@ -756,7 +704,7 @@
         <section class="section" style="padding: 2rem 0;">
             <div class="container" style="text-align: center;">
                 <p class="author-byline" style="color: var(--text-secondary); font-size: 0.9rem;">
-                    <strong>Jesse Cynamon, RP (CRPO #10979)</strong><br>
+                    <strong>Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</strong><br>
                     Registered Psychotherapist | Master's in Counseling Psychology<br>
                     <span style="font-size: 0.85rem;">Last Updated: December 23, 2025</span>
                 </p>
@@ -771,7 +719,7 @@
                 <div>
                     <h4 class="font-display text-lg mb-4">Jesse Cynamon, RP</h4>
                     <p class="text-white/80 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p class="text-white/90 font-medium">CRPO #10979 | MPsy</p>
+                    <p class="text-white/90 font-medium"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</p>
                     <p class="mt-4"><strong>Book Appointment:</strong><br>
                     <a href="tel:+14163062157" class="text-sage hover:text-white transition-colors font-semibold text-lg">(416) 306-2157</a></p>
                 </div>
@@ -815,7 +763,7 @@
                     <a href="tel:18665312600" class="text-sage underline hover:text-white">1-866-531-2600</a> (Ontario Crisis Line)
                 </p>
                 <p class="text-white/70 text-sm">&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979) | Ontario, Canada</p>
+                Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) | Ontario, Canada</p>
             </div>
         </div>
     </footer>

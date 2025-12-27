@@ -52,27 +52,7 @@
     
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }.alternate-bg { background: #f1f5f9; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
     </style>
@@ -211,16 +191,13 @@
     </script>
     
     <style>
-        /* Page-specific styles using v4 design tokens */
-        .scaries-hero {
+        /* Page-specific styles using v4 design tokens */.scaries-hero {
             background: linear-gradient(135deg, var(--navy) 0%, #1a3a4a 100%);
             padding: 6rem 0 5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .scaries-hero::before {
+        }.scaries-hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -229,49 +206,37 @@
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.5;
-        }
-        
-        .scaries-hero .container {
+        }.scaries-hero.container {
             position: relative;
             z-index: 1;
             max-width: 720px;
-        }
-        
-        .scaries-hero h1 {
+        }.scaries-hero h1 {
             font-family: var(--font-display);
             font-size: clamp(2.25rem, 5vw, 3.25rem);
             color: white;
             margin-bottom: 1rem;
             font-weight: 500;
             letter-spacing: -0.02em;
-        }
-        
-        .scaries-hero .lead {
+        }.scaries-hero.lead {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
             line-height: 1.7;
             max-width: 600px;
             margin: 0 auto 2rem;
-        }
-        
-        .page-meta {
+        }.page-meta {
             font-size: 0.85rem;
             color: rgba(255,255,255,0.6) !important;
             background: transparent !important;
             margin: 0.5rem 0 1.5rem;
             font-weight: 400;
             padding: 0 !important;
-        }
-        
-        .hero-cta-group {
+        }.hero-cta-group {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 2rem;
-        }
-        
-        .hero-cta-group .btn-primary {
+        }.hero-cta-group.btn-primary {
             background: var(--sage);
             color: white;
             padding: 1rem 2rem;
@@ -280,14 +245,10 @@
             font-weight: 600;
             transition: all 0.2s ease;
             border: none;
-        }
-        
-        .hero-cta-group .btn-primary:hover {
+        }.hero-cta-group.btn-primary:hover {
             background: var(--sage-dark);
             transform: translateY(-2px);
-        }
-        
-        .hero-cta-group .btn-secondary {
+        }.hero-cta-group.btn-secondary {
             background: transparent;
             color: white;
             padding: 1rem 2rem;
@@ -296,13 +257,9 @@
             font-weight: 500;
             border: 1px solid rgba(255,255,255,0.3);
             transition: all 0.2s ease;
-        }
-        
-        .hero-cta-group .btn-secondary:hover {
+        }.hero-cta-group.btn-secondary:hover {
             background: rgba(255,255,255,0.1);
-        }
-        
-        .trust-badges {
+        }.trust-badges {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
@@ -310,153 +267,113 @@
             margin-top: 2rem;
             font-size: 0.9rem;
             color: rgba(255,255,255,0.8);
-        }
-        
-        .content-wrapper {
+        }.content-wrapper {
             max-width: 800px;
             margin: 0 auto;
             padding: 4rem 1.5rem 5rem;
         }
         
-        /* Definition Box */
-        .definition-box {
+        /* Definition Box */.definition-box {
             background: var(--cream);
             border-radius: var(--radius-lg);
             padding: 2.5rem;
             margin-bottom: 4rem;
             border-left: 4px solid var(--sage);
             position: relative;
-        }
-        
-        .definition-box h2 {
+        }.definition-box h2 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.75rem;
             margin: 0 0 1.5rem 0;
             font-weight: 500;
-        }
-        
-        .definition-box p {
+        }.definition-box p {
             font-size: 1.05rem;
             line-height: 1.7;
             color: var(--text-secondary);
             margin-bottom: 1rem;
-        }
-        
-        .definition-box ul {
+        }.definition-box ul {
             margin: 1rem 0 1.5rem 1.5rem;
             color: var(--text-secondary);
-        }
-        
-        .definition-box li {
+        }.definition-box li {
             margin-bottom: 0.5rem;
             line-height: 1.6;
         }
         
-        /* Symptoms Grid */
-        .symptoms-section {
+        /* Symptoms Grid */.symptoms-section {
             margin-bottom: 4rem;
-        }
-        
-        .symptoms-section h2 {
+        }.symptoms-section h2 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 2rem;
             text-align: center;
             margin-bottom: 0.75rem;
-        }
-        
-        .symptoms-section .subtitle {
+        }.symptoms-section.subtitle {
             text-align: center;
             color: var(--text-muted);
             margin-bottom: 2.5rem;
             font-size: 1.05rem;
-        }
-        
-        .symptom-grid {
+        }.symptom-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.5rem;
-        }
-        
-        .symptom-card {
+        }.symptom-card {
             background: white;
             border-radius: var(--radius-lg);
             padding: 2rem;
             border: 1px solid var(--sand);
             transition: all 0.2s ease;
-        }
-        
-        .symptom-card:hover {
+        }.symptom-card:hover {
             box-shadow: var(--shadow-md);
             transform: translateY(-3px);
-        }
-        
-        .symptom-card h3 {
+        }.symptom-card h3 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
-        }
-        
-        .symptom-card p {
+        }.symptom-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
             margin: 0;
         }
         
-        /* Solution Section */
-        .solution-section {
+        /* Solution Section */.solution-section {
             background: linear-gradient(135deg, #f8faf9 0%, #f0f4f2 100%);
             border-radius: var(--radius-lg);
             padding: 3rem;
             margin-bottom: 4rem;
-        }
-        
-        .solution-section h2 {
+        }.solution-section h2 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.75rem;
             margin-bottom: 1rem;
-        }
-        
-        .solution-section > p {
+        }.solution-section > p {
             color: var(--text-secondary);
             margin-bottom: 2rem;
             font-size: 1.05rem;
             line-height: 1.7;
-        }
-        
-        .solution-grid {
+        }.solution-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-        }
-        
-        .solution-item {
+        }.solution-item {
             background: white;
             padding: 1.5rem;
             border-radius: var(--radius-md);
             border: 1px solid var(--sand);
-        }
-        
-        .solution-item h4 {
+        }.solution-item h4 {
             color: var(--navy);
             font-size: 1rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
-        }
-        
-        .solution-item p {
+        }.solution-item p {
             color: var(--text-secondary);
             font-size: 0.9rem;
             line-height: 1.5;
             margin: 0;
         }
         
-        /* Therapist Section */
-        .therapist-section {
+        /* Therapist Section */.therapist-section {
             display: grid;
             grid-template-columns: 1fr 200px;
             gap: 3rem;
@@ -468,37 +385,27 @@
             border: 1px solid var(--sand);
         }
         
-        @media (max-width: 768px) {
-            .therapist-section {
+        @media (max-width: 768px) {.therapist-section {
                 grid-template-columns: 1fr;
                 text-align: center;
-            }
-            .therapist-section .therapist-photo {
+            }.therapist-section.therapist-photo {
                 order: -1;
                 margin: 0 auto;
             }
-        }
-        
-        .therapist-content h2 {
+        }.therapist-content h2 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.75rem;
             margin-bottom: 0.5rem;
-        }
-        
-        .therapist-content .credentials {
+        }.therapist-content.credentials {
             color: var(--sage);
             font-weight: 600;
             margin-bottom: 1rem;
-        }
-        
-        .therapist-content p {
+        }.therapist-content p {
             color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 1rem;
-        }
-        
-        .therapist-photo img {
+        }.therapist-photo img {
             width: 180px;
             height: 180px;
             border-radius: var(--radius-lg);
@@ -506,33 +413,26 @@
             box-shadow: var(--shadow-md);
         }
         
-        /* FAQ Section */
-        .faq-section h2 {
+        /* FAQ Section */.faq-section h2 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 2rem;
             text-align: center;
             margin-bottom: 2rem;
-        }
-        
-        .faq-item {
+        }.faq-item {
             background: white;
             border: 1px solid var(--sand);
             border-radius: var(--radius-md);
             padding: 1.5rem 2rem;
             margin-bottom: 1rem;
-        }
-        
-        .faq-item h3 {
+        }.faq-item h3 {
             color: var(--navy);
             font-size: 1.1rem;
             margin-bottom: 0.75rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-        
-        .faq-item h3::before {
+        }.faq-item h3::before {
             content: '?';
             display: inline-flex;
             align-items: center;
@@ -545,31 +445,24 @@
             font-size: 0.85rem;
             font-weight: 600;
             flex-shrink: 0;
-        }
-        
-        .faq-item p {
+        }.faq-item p {
             color: var(--text-secondary);
             line-height: 1.6;
             margin: 0;
             padding-left: 2.25rem;
-        }
-        
-        .faq-item a {
+        }.faq-item a {
             color: var(--sage);
             text-decoration: underline;
         }
         
-        /* CTA Section */
-        .cta-section {
+        /* CTA Section */.cta-section {
             background: linear-gradient(135deg, var(--navy) 0%, #1a3a4a 100%);
             border-radius: var(--radius-lg);
             padding: 3.5rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .cta-section::before {
+        }.cta-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -577,30 +470,22 @@
             right: 0;
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .cta-section * {
+        }.cta-section * {
             position: relative;
             z-index: 1;
-        }
-        
-        .cta-section h2 {
+        }.cta-section h2 {
             font-family: var(--font-display);
             color: white;
             font-size: 2rem;
             margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
+        }.cta-section p {
             color: rgba(255,255,255,0.9);
             font-size: 1.1rem;
             margin-bottom: 2rem;
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
-        }
-        
-        .cta-section .btn-cta {
+        }.cta-section.btn-cta {
             display: inline-block;
             background: white;
             color: var(--navy);
@@ -611,42 +496,31 @@
             font-size: 1.05rem;
             transition: all 0.2s ease;
             box-shadow: var(--shadow-md);
-        }
-        
-        .cta-section .btn-cta:hover {
+        }.cta-section.btn-cta:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
-        }
-        
-        .cta-section .response-note {
+        }.cta-section.response-note {
             font-size: 0.85rem;
             color: rgba(255,255,255,0.7);
             margin-top: 1rem;
         }
         
-        /* Related Links */
-        .related-section {
+        /* Related Links */.related-section {
             margin-top: 4rem;
             padding-top: 3rem;
             border-top: 1px solid var(--sand);
-        }
-        
-        .related-section h3 {
+        }.related-section h3 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.25rem;
             margin-bottom: 1.5rem;
             text-align: center;
-        }
-        
-        .related-links {
+        }.related-links {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-        }
-        
-        .related-links a {
+        }.related-links a {
             background: var(--cream);
             color: var(--navy);
             padding: 0.75rem 1.5rem;
@@ -656,9 +530,7 @@
             font-weight: 500;
             transition: all 0.2s ease;
             border: 1px solid var(--sand);
-        }
-        
-        .related-links a:hover {
+        }.related-links a:hover {
             background: var(--sage);
             color: white;
             border-color: var(--sage);
@@ -673,7 +545,7 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
             </div>
             <nav class="hidden md:flex items-center gap-8">
                 <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
@@ -693,7 +565,7 @@
         <section class="scaries-hero" style="background: linear-gradient(135deg, #1e3a4f 0%, #1a3a4a 100%) !important;">
             <div style="max-width: 720px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1;">
                 <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.25rem, 5vw, 3.25rem); color: white !important; margin-bottom: 0.5rem; font-weight: 500; letter-spacing: -0.02em;">Sunday Scaries: When Weekend Dread Takes Over</h1>
-                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6) !important; background: transparent !important; margin: 0 0 1.5rem; padding: 0 !important;">Last Updated: December 2025 | By: Jesse Cynamon, RP (CRPO #10979)</p>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6) !important; background: transparent !important; margin: 0 0 1.5rem; padding: 0 !important;">Last Updated: December 2025 | By: Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</p>
                 <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.9) !important; line-height: 1.7; max-width: 600px; margin: 0 auto 2rem; background: transparent !important; padding: 0 !important;">That pit in your stomach around 4 PM on Sunday? The racing thoughts about Monday morning? It's called anticipatory anxiety—and it's stealing your weekends. Let's fix that.</p>
                 
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; background: transparent !important; padding: 0 !important;">
@@ -928,7 +800,7 @@
             <section class="therapist-section">
                 <div class="therapist-content">
                     <h2>Meet Jesse Cynamon, RP</h2>
-                    <p class="credentials">Registered Psychotherapist (CRPO #10979)</p>
+                    <p class="credentials">Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</p>
                     <p>I focus on helping high-performing professionals who look successful on the outside but feel exhausted on the inside.</p>
                     <p>Sunday anxiety is often the canary in the coal mine—a sign that your work-life balance has tipped too far. We'll work together to rebuild that boundary, so you can enjoy your success without sacrificing your peace of mind.</p>
                     <a href="https://nextsteptherapy.janeapp.com/" class="btn-primary" style="display: inline-block; margin-top: 1rem;">Schedule 15-Min Call</a>
@@ -1009,7 +881,7 @@
                     <h4>Jesse Cynamon, RP</h4>
                     <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
                     <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p><strong><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</strong></p>
                     <p class="footer-book"><strong>Book Appointment:</strong><br>
                     <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
                 </div>
@@ -1090,7 +962,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)<br>
                 Ontario, Canada</p>
             </div>
         </div>

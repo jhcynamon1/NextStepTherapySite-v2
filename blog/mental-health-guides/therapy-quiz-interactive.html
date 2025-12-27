@@ -29,37 +29,27 @@
             padding: 20px;
             line-height: 1.6;
             color: #2c3e50;
-        }
-
-        .quiz-container {
+        }.quiz-container {
             max-width: 700px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             overflow: hidden;
-        }
-
-        .quiz-header {
+        }.quiz-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 30px;
             text-align: center;
-        }
-
-        .quiz-header h1 {
+        }.quiz-header h1 {
             font-size: 24px;
             margin-bottom: 10px;
             font-weight: 600;
-        }
-
-        .quiz-header p {
+        }.quiz-header p {
             font-size: 16px;
             opacity: 0.95;
             line-height: 1.5;
-        }
-
-        .disclaimer {
+        }.disclaimer {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 15px;
@@ -67,73 +57,51 @@
             border-radius: 4px;
             font-size: 14px;
             color: #856404;
-        }
-
-        .progress-container {
+        }.progress-container {
             padding: 20px;
             background: #f8f9fa;
-        }
-
-        .progress-bar {
+        }.progress-bar {
             height: 8px;
             background: #e9ecef;
             border-radius: 4px;
             overflow: hidden;
-        }
-
-        .progress-fill {
+        }.progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
             transition: width 0.3s ease;
             border-radius: 4px;
-        }
-
-        .progress-text {
+        }.progress-text {
             text-align: center;
             margin-top: 8px;
             font-size: 14px;
             color: #6c757d;
-        }
-
-        .quiz-content {
+        }.quiz-content {
             padding: 30px;
-        }
-
-        .question-card {
+        }.question-card {
             display: none;
             animation: fadeIn 0.3s ease;
-        }
-
-        .question-card.active {
+        }.question-card.active {
             display: block;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        .question-number {
+        }.question-number {
             color: #667eea;
             font-weight: 600;
             font-size: 14px;
             margin-bottom: 10px;
-        }
-
-        .question-text {
+        }.question-text {
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 24px;
             color: #2c3e50;
-        }
-
-        .options {
+        }.options {
             display: flex;
             flex-direction: column;
             gap: 12px;
-        }
-
-        .option {
+        }.option {
             background: #f8f9fa;
             border: 2px solid #e9ecef;
             border-radius: 8px;
@@ -141,28 +109,20 @@
             cursor: pointer;
             transition: all 0.2s ease;
             font-size: 16px;
-        }
-
-        .option:hover {
+        }.option:hover {
             background: #e9ecef;
             border-color: #667eea;
             transform: translateX(4px);
-        }
-
-        .option.selected {
+        }.option.selected {
             background: #f0f4ff;
             border-color: #667eea;
             font-weight: 500;
-        }
-
-        .quiz-navigation {
+        }.quiz-navigation {
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
             gap: 12px;
-        }
-
-        .btn {
+        }.btn {
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
@@ -170,145 +130,100 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-        }
-
-        .btn-secondary {
+        }.btn-secondary {
             background: #e9ecef;
             color: #495057;
-        }
-
-        .btn-secondary:hover {
+        }.btn-secondary:hover {
             background: #dee2e6;
-        }
-
-        .btn-primary {
+        }.btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             flex: 1;
-        }
-
-        .btn-primary:hover {
+        }.btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn:disabled {
+        }.btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
             transform: none !important;
         }
 
-        /* Results Styles */
-        .results-container {
+        /* Results Styles */.results-container {
             display: none;
             padding: 30px;
             animation: fadeIn 0.5s ease;
-        }
-
-        .results-container.active {
+        }.results-container.active {
             display: block;
-        }
-
-        .score-display {
+        }.score-display {
             text-align: center;
             padding: 40px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 12px;
             margin-bottom: 30px;
-        }
-
-        .score-number {
+        }.score-number {
             font-size: 64px;
             font-weight: 700;
             margin-bottom: 10px;
-        }
-
-        .score-label {
+        }.score-label {
             font-size: 18px;
             opacity: 0.95;
-        }
-
-        .result-section {
+        }.result-section {
             margin-bottom: 30px;
             padding: 24px;
             background: #f8f9fa;
             border-radius: 8px;
             border-left: 4px solid #667eea;
-        }
-
-        .result-section h2 {
+        }.result-section h2 {
             font-size: 22px;
             margin-bottom: 12px;
             color: #2c3e50;
-        }
-
-        .result-section p {
+        }.result-section p {
             font-size: 16px;
             line-height: 1.7;
             color: #495057;
             margin-bottom: 12px;
-        }
-
-        .result-section ul {
+        }.result-section ul {
             margin: 16px 0;
             padding-left: 20px;
-        }
-
-        .result-section li {
+        }.result-section li {
             margin-bottom: 8px;
             color: #495057;
-        }
-
-        .cta-box {
+        }.cta-box {
             background: white;
             border: 2px solid #667eea;
             border-radius: 12px;
             padding: 30px;
             text-align: center;
             margin-top: 30px;
-        }
-
-        .cta-box h3 {
+        }.cta-box h3 {
             font-size: 22px;
             margin-bottom: 12px;
             color: #2c3e50;
-        }
-
-        .cta-box p {
+        }.cta-box p {
             font-size: 16px;
             color: #6c757d;
             margin-bottom: 20px;
-        }
-
-        .cta-buttons {
+        }.cta-buttons {
             display: flex;
             gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
-        }
-
-        .crisis-box {
+        }.crisis-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 20px;
             border-radius: 8px;
             margin-top: 30px;
-        }
-
-        .crisis-box h3 {
+        }.crisis-box h3 {
             color: #856404;
             font-size: 18px;
             margin-bottom: 10px;
-        }
-
-        .crisis-box p {
+        }.crisis-box p {
             color: #856404;
             font-size: 14px;
             line-height: 1.6;
-        }
-
-        .crisis-box a {
+        }.crisis-box a {
             color: #856404;
             font-weight: 600;
             text-decoration: underline;
@@ -318,67 +233,48 @@
         @media (max-width: 600px) {
             body {
                 padding: 10px;
-            }
-
-            .quiz-header {
+            }.quiz-header {
                 padding: 20px;
-            }
-
-            .quiz-header h1 {
+            }.quiz-header h1 {
                 font-size: 20px;
-            }
-
-            .quiz-content {
+            }.quiz-content {
                 padding: 20px;
-            }
-
-            .question-text {
+            }.question-text {
                 font-size: 18px;
-            }
-
-            .option {
+            }.option {
                 padding: 14px 16px;
                 font-size: 15px;
-            }
-
-            .score-number {
+            }.score-number {
                 font-size: 48px;
-            }
-
-            .cta-buttons {
+            }.cta-buttons {
                 flex-direction: column;
-            }
-
-            .btn {
+            }.btn {
                 width: 100%;
             }
         }
 
-        /* Color variants for different score tiers */
-        .tier-green {
+        /* Color variants for different score tiers */.tier-green {
             border-left-color: #28a745;
-        }
-
-        .tier-amber {
+        }.tier-amber {
             border-left-color: #ffc107;
-        }
-
-        .tier-red {
+        }.tier-red {
             border-left-color: #dc3545;
-        }
-
-        .score-tier-green {
+        }.score-tier-green {
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-        }
-
-        .score-tier-amber {
+        }.score-tier-amber {
             background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
-        }
-
-        .score-tier-red {
+        }.score-tier-red {
             background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
         }
     </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
     <div class="quiz-container">

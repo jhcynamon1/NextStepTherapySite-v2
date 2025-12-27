@@ -92,27 +92,7 @@
 
     <!-- Compatibility Styles for Legacy Classes -->
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }
-        .section { padding: 4rem 1rem; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-        .content-grid { display: grid; gap: 2rem; }
-        .content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .cta-box .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }
-        .cta-box .btn-primary { background: #4a7c59; color: white; }
-        .cta-box .btn-secondary { background: white; color: #1e3a4f; }
-        .feature-list { list-style: none; padding: 0; }
-        .feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }
-        .info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }
-        .quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-        .quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }
-        .alternate-bg { background: #f1f5f9; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }.alternate-bg { background: #f1f5f9; }
         a { color: #1e3a4f; }
         a:hover { color: #4a7c59; }
     </style>
@@ -157,16 +137,13 @@
     </script>
 
     <style>
-        /* Page-specific styles using v4 design tokens */
-        .expect-hero {
+        /* Page-specific styles using v4 design tokens */.expect-hero {
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             padding: 6rem 0 5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .expect-hero::before {
+        }.expect-hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -175,48 +152,37 @@
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.5;
-        }
-
-        .expect-hero .container {
+        }.expect-hero.container {
             position: relative;
             z-index: 1;
             max-width: 720px;
-        }
-
-        .expect-hero h1 {
+        }.expect-hero h1 {
             font-family: var(--font-display);
             font-size: clamp(2.25rem, 5vw, 3.25rem);
             color: white;
             margin-bottom: 1.5rem;
             font-weight: 500;
             letter-spacing: -0.02em;
-        }
-
-        .expect-hero .lead {
+        }.expect-hero.lead {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9);
             line-height: 1.7;
             max-width: 600px;
             margin: 0 auto;
-        }
-
-        .content-wrapper {
+        }.content-wrapper {
             max-width: 760px;
             margin: 0 auto;
             padding: 4rem 1.5rem 5rem;
         }
 
-        /* Reassurance Box */
-        .reassurance-box {
+        /* Reassurance Box */.reassurance-box {
             background: var(--cream);
             border-radius: var(--radius-lg);
             padding: 2.5rem;
             margin-bottom: 4rem;
             border: 1px solid var(--sand);
             position: relative;
-        }
-
-        .reassurance-box::before {
+        }.reassurance-box::before {
             content: '💡';
             position: absolute;
             top: -18px;
@@ -226,23 +192,17 @@
             padding: 0.25rem 0.5rem;
             border-radius: 8px;
             box-shadow: var(--shadow-sm);
-        }
-
-        .reassurance-box h3 {
+        }.reassurance-box h3 {
             font-family: var(--font-display);
             color: var(--navy);
             font-size: 1.5rem;
             margin: 0 0 1.5rem 0;
             font-weight: 500;
-        }
-
-        .checklist {
+        }.checklist {
             list-style: none;
             padding: 0;
             margin: 0;
-        }
-
-        .checklist li {
+        }.checklist li {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
@@ -250,14 +210,10 @@
             border-bottom: 1px solid var(--sand);
             color: var(--text-secondary);
             line-height: 1.6;
-        }
-
-        .checklist li:last-child {
+        }.checklist li:last-child {
             border-bottom: none;
             padding-bottom: 0;
-        }
-
-        .checklist li::before {
+        }.checklist li::before {
             content: '✓';
             display: flex;
             align-items: center;
@@ -271,14 +227,11 @@
             font-weight: 700;
             flex-shrink: 0;
             margin-top: 2px;
-        }
-
-        .checklist li strong {
+        }.checklist li strong {
             color: var(--navy);
         }
 
-        /* Section Title */
-        .section-title {
+        /* Section Title */.section-title {
             font-family: var(--font-display);
             font-size: 2rem;
             color: var(--navy);
@@ -286,9 +239,7 @@
             font-weight: 500;
             position: relative;
             padding-bottom: 1rem;
-        }
-
-        .section-title::after {
+        }.section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -299,13 +250,10 @@
             border-radius: 2px;
         }
 
-        /* Timeline Steps */
-        .timeline {
+        /* Timeline Steps */.timeline {
             position: relative;
             padding-left: 0;
-        }
-
-        .step-card {
+        }.step-card {
             background: white;
             border-radius: var(--radius-lg);
             padding: 2rem 2rem 2rem 5rem;
@@ -314,14 +262,10 @@
             border: 1px solid rgba(30, 58, 79, 0.08);
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .step-card:hover {
+        }.step-card:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
-        }
-
-        .step-number {
+        }.step-number {
             position: absolute;
             left: -20px;
             top: 2rem;
@@ -338,56 +282,39 @@
             font-weight: 600;
             box-shadow: var(--shadow-md);
             z-index: 2;
-        }
-
-        .step-title {
+        }.step-title {
             font-family: var(--font-display);
             font-size: 1.35rem;
             color: var(--navy);
             margin: 0 0 1rem 0;
             font-weight: 500;
-        }
-
-        .step-card p {
+        }.step-card p {
             color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.7;
-        }
-
-        .step-card p:last-child {
+        }.step-card p:last-child {
             margin-bottom: 0;
-        }
-
-        .step-card ul {
+        }.step-card ul {
             margin: 1rem 0;
             padding-left: 1.25rem;
-        }
-
-        .step-card li {
+        }.step-card li {
             color: var(--text-secondary);
             margin-bottom: 0.5rem;
             line-height: 1.6;
-        }
-
-        .step-card .highlight {
+        }.step-card.highlight {
             background: linear-gradient(135deg, var(--cream) 0%, var(--linen) 100%);
             padding: 1rem 1.25rem;
             border-radius: var(--radius-md);
             border-left: 3px solid var(--sage);
             margin-top: 1rem;
-        }
-
-        .step-card .highlight p {
+        }.step-card.highlight p {
             margin: 0;
             font-size: 0.95rem;
         }
 
-        /* FAQ Section */
-        .faq-section {
+        /* FAQ Section */.faq-section {
             margin-top: 4rem;
-        }
-
-        .faq-card {
+        }.faq-card {
             background: white;
             border-radius: var(--radius-lg);
             padding: 2rem;
@@ -395,13 +322,9 @@
             box-shadow: var(--shadow-sm);
             border: 1px solid rgba(30, 58, 79, 0.08);
             transition: box-shadow 0.2s ease;
-        }
-
-        .faq-card:hover {
+        }.faq-card:hover {
             box-shadow: var(--shadow-md);
-        }
-
-        .faq-card h3 {
+        }.faq-card h3 {
             font-family: var(--font-display);
             font-size: 1.2rem;
             color: var(--navy);
@@ -410,9 +333,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-
-        .faq-card h3::before {
+        }.faq-card h3::before {
             content: '?';
             display: flex;
             align-items: center;
@@ -425,20 +346,15 @@
             font-size: 0.9rem;
             font-weight: 600;
             flex-shrink: 0;
-        }
-
-        .faq-card p {
+        }.faq-card p {
             color: var(--text-secondary);
             margin: 0;
             line-height: 1.7;
-        }
-
-        .faq-card p + p {
+        }.faq-card p + p {
             margin-top: 1rem;
         }
 
-        /* CTA Section */
-        .cta-section {
+        /* CTA Section */.cta-section {
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
             border-radius: var(--radius-lg);
             padding: 3.5rem 2.5rem;
@@ -446,9 +362,7 @@
             margin-top: 4rem;
             position: relative;
             overflow: hidden;
-        }
-
-        .cta-section::before {
+        }.cta-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -456,31 +370,23 @@
             right: 0;
             bottom: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .cta-section > * {
+        }.cta-section > * {
             position: relative;
             z-index: 1;
-        }
-
-        .cta-section h2 {
+        }.cta-section h2 {
             font-family: var(--font-display);
             font-size: 2rem;
             color: white;
             margin: 0 0 1rem 0;
             font-weight: 500;
-        }
-
-        .cta-section p {
+        }.cta-section p {
             color: rgba(255, 255, 255, 0.9);
             font-size: 1.1rem;
             margin: 0 0 2rem 0;
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .cta-button-primary {
+        }.cta-button-primary {
             display: inline-block;
             background: white;
             color: var(--navy);
@@ -491,15 +397,11 @@
             font-size: 1rem;
             transition: all 0.2s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-button-primary:hover {
+        }.cta-button-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
             color: var(--navy);
-        }
-
-        .response-promise {
+        }.response-promise {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.75);
             margin-top: 1.25rem !important;
@@ -507,12 +409,9 @@
         }
 
         /* Timeline connector line */
-        @media (min-width: 640px) {
-            .timeline {
+        @media (min-width: 640px) {.timeline {
                 padding-left: 24px;
-            }
-
-            .timeline::before {
+            }.timeline::before {
                 content: '';
                 position: absolute;
                 left: 3px;
@@ -525,30 +424,31 @@
         }
 
         /* Mobile adjustments */
-        @media (max-width: 639px) {
-            .step-card {
+        @media (max-width: 639px) {.step-card {
                 padding: 1.5rem;
                 padding-top: 3.5rem;
-            }
-
-            .step-number {
+            }.step-number {
                 left: 1.5rem;
                 top: -20px;
                 width: 40px;
                 height: 40px;
                 font-size: 1.1rem;
-            }
-
-            .reassurance-box {
+            }.reassurance-box {
                 padding: 2rem 1.5rem;
-            }
-
-            .cta-section {
+            }.cta-section {
                 padding: 2.5rem 1.5rem;
             }
         }
     </style>
     <link rel="stylesheet" href="/css/legacy-gemini.css">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
@@ -556,7 +456,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-4">
                     <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
@@ -577,7 +477,7 @@
             <div class="container">
                 <h1>What to Expect in Your First Session</h1>
                 <p style="font-size: 0.9em; color: rgba(255,255,255,0.75); margin: 0.75em auto 1.25em auto;">
-                    <strong>Last Updated:</strong> December 20, 2025<strong>By:</strong> Jesse Cynamon, RP (CRPO #10979)
+                    <strong>Last Updated:</strong> December 20, 2025<strong>By:</strong> Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)
                 </p>
                 <p class="lead">Starting therapy can feel uncertain. Here's exactly what happens—no surprises, no pressure.</p>
             </div>
@@ -703,7 +603,7 @@
                 <div class="footer-section">
                     <h4>Jesse Cynamon, RP</h4>
                     <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p><strong><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</strong></p>
                     <p class="footer-book"><strong>Book Appointment:</strong><br>
                     <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
                 </div>
@@ -778,7 +678,7 @@
 
             <div class="footer-bottom">
                 <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)<br>
                 Ontario, Canada<br>
                 <strong>Last Updated:</strong> December 20, 2025</p>
             </div>

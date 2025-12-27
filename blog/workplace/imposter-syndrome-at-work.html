@@ -14,36 +14,29 @@
     
     <!-- Core CSS --><!-- Design Fixes - Unified Visual System -->
     <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
-    <style>
-    
-        .related-cta, .related-posts {
+    <style>.related-cta,.related-posts {
             background: #f8f9fa;
             border: 1px solid rgba(107, 142, 111, 0.18);
             border-radius: 16px;
             padding: 1.75rem;
             margin-top: 2.5rem;
             box-shadow: 0 12px 24px rgba(0,0,0,0.05);
-        }
-        .related-cta .btn-primary, .related-cta .btn-secondary {
+        }.related-cta.btn-primary,.related-cta.btn-secondary {
             display: inline-block;
             margin-right: 0.75rem;
             margin-top: 0.75rem;
             text-decoration: none;
-        }
-        .related-posts ul {
+        }.related-posts ul {
             list-style: none;
             padding: 0;
             margin: 1rem 0 0;
-        }
-        .related-posts li + li {
+        }.related-posts li + li {
             margin-top: 0.5rem;
-        }
-        .related-posts a {
+        }.related-posts a {
             color: #4a6b7a;
             text-decoration: none;
             font-weight: 600;
-        }
-        .related-posts a:hover {
+        }.related-posts a:hover {
             text-decoration: underline;
         }
     
@@ -62,83 +55,68 @@
             margin: 0;
             color: var(--text-primary);
             background: white;
-        }
-        .header {
+        }.header {
             background: white;
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
             z-index: 10;
-        }
-        .header-content {
+        }.header-content {
             max-width: 1100px;
             margin: 0 auto;
             padding: 1.5rem 1.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-        .logo-section {
+        }.logo-section {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-        }
-        .logo-section img {
+        }.logo-section img {
             height: 40px;
             width: auto;
-        }
-        .logo-text {
+        }.logo-text {
             font-family: var(--font-heading);
             font-size: 1.4rem;
             font-weight: 600;
             color: var(--primary-green);
             text-decoration: none;
-        }
-        .nav-link {
+        }.nav-link {
             color: var(--text-secondary);
             text-decoration: none;
             margin-left: 1.25rem;
             font-weight: 500;
-        }
-        .hero {
+        }.hero {
             background: linear-gradient(135deg, rgba(107,142,111,0.1), rgba(248,249,250,0.95));
             padding: 4rem 1.5rem;
-        }
-        .hero-inner {
+        }.hero-inner {
             max-width: 760px;
             margin: 0 auto;
             text-align: center;
-        }
-        .hero-inner h1 {
+        }.hero-inner h1 {
             font-family: var(--font-heading);
             font-size: 2.8rem;
             margin-bottom: 1rem;
-        }
-        .hero-inner p {
+        }.hero-inner p {
             font-size: 1.1rem;
             color: var(--text-secondary);
             line-height: 1.7;
-        }
-        .content {
+        }.content {
             max-width: 850px;
             margin: 0 auto;
             padding: 3rem 1.5rem 4rem;
-        }
-        .content h2 {
+        }.content h2 {
             font-family: var(--font-heading);
             font-size: 2.1rem;
             margin-top: 3rem;
-        }
-        .content h3 {
+        }.content h3 {
             font-family: var(--font-heading);
             font-size: 1.5rem;
             margin-top: 2.2rem;
-        }
-        .content h4 {
+        }.content h4 {
             font-size: 1.25rem;
             margin-top: 1.8rem;
-        }
-        .content p, .content li {
+        }.content p,.content li {
             color: var(--text-secondary);
             line-height: 1.75;
             font-size: 1.02rem;
@@ -150,70 +128,67 @@
             border-left: 4px solid var(--primary-green);
             font-style: italic;
             color: var(--text-secondary);
-        }
-        .self-check {
+        }.self-check {
             margin: 2rem 0;
             padding: 2rem;
             background: rgba(107,142,111,0.08);
             border-radius: 16px;
             border: 1px solid rgba(107,142,111,0.2);
-        }
-        .self-check h3 {
+        }.self-check h3 {
             margin-top: 0;
-        }
-        .cta-section {
+        }.cta-section {
             background: var(--bg-alternate);
             margin-top: 4rem;
             padding: 3rem 1.5rem;
-        }
-        .cta-inner {
+        }.cta-inner {
             max-width: 720px;
             margin: 0 auto;
             text-align: center;
-        }
-        .cta-buttons {
+        }.cta-buttons {
             margin-top: 1.5rem;
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-        }
-        .btn-primary {
+        }.btn-primary {
             background: var(--primary-green);
             color: white;
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-        }
-        .btn-secondary {
+        }.btn-secondary {
             border: 2px solid var(--primary-green);
             color: var(--primary-green);
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-        }
-        .breadcrumbs {
+        }.breadcrumbs {
             margin: 1rem auto 0;
             max-width: 850px;
             padding: 0 1.5rem;
             font-size: 0.95rem;
             color: var(--text-secondary);
-        }
-        .breadcrumbs a {
+        }.breadcrumbs a {
             color: var(--primary-green);
             text-decoration: none;
         }
-        @media (max-width: 720px) {
-            .hero-inner h1 {
+        @media (max-width: 720px) {.hero-inner h1 {
                 font-size: 2.2rem;
-            }
-            .content {
+            }.content {
                 padding: 2.5rem 1.25rem 3.5rem;
             }
         }
     </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
 <header class="header">
@@ -247,7 +222,7 @@
 </section>
 
 <article class="content">
-    <p><strong>By Jesse Cynamon, RP (CRPO #10979)</strong><br>
+    <p><strong>By Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</strong><br>
     Registered Psychotherapist serving professionals across Ontario</p>
 
     <h2>What Is Imposter Syndrome? (And Why High Achievers Experience It Most)</h2>

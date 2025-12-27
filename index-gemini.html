@@ -462,26 +462,30 @@
             line-height: 1.15;
         }
         
-        /* Force hero grid layout */
-        .hero .hero-content {
+        /* Force hero grid layout */.hero.hero-content {
             display: grid !important;
             grid-template-columns: 7fr 5fr !important;
             gap: 4rem !important;
             align-items: start !important;
-        }
-        
-        .hero .hero-text {
+        }.hero.hero-text {
             text-align: left !important;
             max-width: none !important;
             margin: 0 !important;
         }
         
-        @media (max-width: 1023px) {
-            .hero .hero-content {
+        @media (max-width: 1023px) {.hero.hero-content {
                 grid-template-columns: 1fr !important;
             }
         }
     </style>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -498,7 +502,7 @@
                 </div>
 
                 <nav class="main-nav">
-                    <span class="nav-crpo-badge">CRPO #10979</span>
+                    <span class="nav-crpo-badge"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                     <ul class="nav">
                         <li><a href="#approach">Approach</a></li>
                         <li><a href="#specializations">Services</a></li>
@@ -532,7 +536,7 @@
 
                         <!-- Trust Signals - Refined -->
                         <div class="trust-pills">
-                            <span class="trust-pill">CRPO #10979</span>
+                            <span class="trust-pill"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                             <span class="trust-pill">$175/session</span>
                             <span class="trust-pill">Same-Week Available</span>
                             <span class="trust-pill">Insurance Receipts</span>
@@ -554,7 +558,7 @@
                             <img src="images/psychotherapist-jesse-cynamon-ontario.png" alt="Jesse Cynamon, Registered Psychotherapist" width="200" height="200" loading="eager" fetchpriority="high" sizes="200px" onerror="this.innerHTML='JC'">
                             <div class="therapist-info">
                                 <h3 class="therapist-name">Jesse Cynamon, RP</h3>
-                                <p class="therapist-title">Your Therapist • CRPO #10979</p>
+                                <p class="therapist-title">Your Therapist • <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a></p>
                             </div>
                         </div>
                         <p class="therapist-bio">I work with professionals, students, and men across Ontario using a structured approach grounded in Acceptance and Commitment Therapy (ACT) and Cognitive Behavioral Therapy (CBT). We identify specific patterns driving your anxiety and build practical skills for managing high-stakes moments. This isn't endless processing—it's focused skill development. Providing <a href="/anxiety-therapy-ontario">anxiety therapy</a> and <a href="/depression-therapy-ontario">depression therapy</a> throughout Ontario.</p>
@@ -611,8 +615,7 @@
         <style>
             /* Modern Quiz Widget Styles - Calm/Typeform Inspired */
 
-            /* Smooth Fade-In Animation */
-            .quiz-question-card {
+            /* Smooth Fade-In Animation */.quiz-question-card {
                 animation: quizSmoothFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
@@ -627,8 +630,7 @@
                 }
             }
 
-            /* Question Number Badge */
-            .quiz-question-number {
+            /* Question Number Badge */.quiz-question-number {
                 display: inline-block;
                 background: var(--sage-soft);
                 color: var(--sage);
@@ -642,8 +644,7 @@
                 border: 1px solid var(--sage-medium);
             }
 
-            /* Question Text - Larger, More Readable */
-            .quiz-question-text {
+            /* Question Text - Larger, More Readable */.quiz-question-text {
                 font-family: var(--font-display);
                 font-size: 1.5rem;
                 font-weight: 500;
@@ -653,15 +654,13 @@
                 letter-spacing: -0.01em;
             }
 
-            /* Options Container */
-            .quiz-options {
+            /* Options Container */.quiz-options {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
             }
 
-            /* Individual Option - Clean, Minimal Design */
-            .quiz-option {
+            /* Individual Option - Clean, Minimal Design */.quiz-option {
                 background: white;
                 border: 1.5px solid var(--sand);
                 border-radius: var(--radius-md);
@@ -673,24 +672,18 @@
                 color: var(--text-primary);
                 position: relative;
                 box-shadow: var(--shadow-xs);
-            }
-
-            .quiz-option:hover {
+            }.quiz-option:hover {
                 background: var(--cream);
                 border-color: var(--sage);
                 transform: translateX(4px);
                 box-shadow: var(--shadow-md);
-            }
-
-            .quiz-option.selected {
+            }.quiz-option.selected {
                 background: var(--sage-soft);
                 border-color: var(--sage);
                 font-weight: 500;
                 color: var(--navy);
                 box-shadow: var(--shadow-md), var(--shadow-glow);
-            }
-
-            .quiz-option.selected::before {
+            }.quiz-option.selected::before {
                 content: "✓";
                 position: absolute;
                 right: 20px;
@@ -701,15 +694,12 @@
                 font-size: 1.25rem;
             }
 
-            /* Navigation Buttons */
-            .quiz-navigation {
+            /* Navigation Buttons */.quiz-navigation {
                 display: flex;
                 justify-content: space-between;
                 margin-top: 28px;
                 gap: 14px;
-            }
-
-            .quiz-btn {
+            }.quiz-btn {
                 padding: var(--space-4) var(--space-8);
                 border: none;
                 border-radius: var(--radius-sm);
@@ -719,40 +709,29 @@
                 transition: all var(--duration-normal) var(--ease-out);
                 font-family: var(--font-body);
                 letter-spacing: 0.02em;
-            }
-
-            .quiz-btn-secondary {
+            }.quiz-btn-secondary {
                 background: var(--cream);
                 color: var(--text-secondary);
                 border: 1.5px solid var(--sand);
-            }
-
-            .quiz-btn-secondary:hover {
+            }.quiz-btn-secondary:hover {
                 background: var(--linen);
                 border-color: var(--navy);
                 transform: translateY(-1px);
-            }
-
-            .quiz-btn-primary {
+            }.quiz-btn-primary {
                 background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
                 color: white;
                 flex: 1;
                 box-shadow: var(--shadow-md);
-            }
-
-            .quiz-btn-primary:hover {
+            }.quiz-btn-primary:hover {
                 transform: translateY(-2px);
                 box-shadow: var(--shadow-lg);
-            }
-
-            .quiz-btn:disabled {
+            }.quiz-btn:disabled {
                 opacity: 0.4;
                 cursor: not-allowed;
                 transform: none !important;
             }
 
-            /* Results Styles - Elegant & Polished */
-            .quiz-score-display {
+            /* Results Styles - Elegant & Polished */.quiz-score-display {
                 text-align: center;
                 padding: 60px 40px;
                 background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
@@ -760,61 +739,45 @@
                 border-radius: var(--radius-xl);
                 margin-bottom: 40px;
                 box-shadow: var(--shadow-xl);
-            }
-
-            .quiz-score-number {
+            }.quiz-score-number {
                 font-family: var(--font-display);
                 font-size: 84px;
                 font-weight: 600;
                 margin-bottom: 12px;
                 line-height: 1;
                 text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-
-            .quiz-score-label {
+            }.quiz-score-label {
                 font-size: 1.1rem;
                 opacity: 0.9;
                 font-weight: 400;
                 letter-spacing: 0.5px;
-            }
-
-            .quiz-result-section {
+            }.quiz-result-section {
                 margin-bottom: 32px;
                 padding: 32px;
                 background: var(--cream);
                 border-radius: var(--radius-lg);
                 border-left: 4px solid var(--sage);
                 box-shadow: var(--shadow-sm);
-            }
-
-            .quiz-result-section h3 {
+            }.quiz-result-section h3 {
                 font-family: var(--font-display);
                 font-size: 1.625rem;
                 margin-bottom: 16px;
                 color: var(--navy);
                 font-weight: 500;
                 letter-spacing: -0.01em;
-            }
-
-            .quiz-result-section p {
+            }.quiz-result-section p {
                 font-size: 1rem;
                 line-height: 1.8;
                 color: var(--text-secondary);
                 margin-bottom: 16px;
-            }
-
-            .quiz-result-section ul {
+            }.quiz-result-section ul {
                 margin: 20px 0;
                 padding-left: 28px;
-            }
-
-            .quiz-result-section li {
+            }.quiz-result-section li {
                 margin-bottom: 12px;
                 color: var(--text-secondary);
                 line-height: 1.8;
-            }
-
-            .quiz-cta-box {
+            }.quiz-cta-box {
                 background: white;
                 border: 1.5px solid var(--sage-medium);
                 border-radius: var(--radius-xl);
@@ -822,196 +785,123 @@
                 text-align: center;
                 margin-top: 40px;
                 box-shadow: var(--shadow-md), var(--shadow-glow);
-            }
-
-            .quiz-cta-box h3 {
+            }.quiz-cta-box h3 {
                 font-family: var(--font-display);
                 font-size: 1.625rem;
                 margin-bottom: 16px;
                 color: var(--navy);
                 font-weight: 500;
                 letter-spacing: -0.01em;
-            }
-
-            .quiz-cta-box p {
+            }.quiz-cta-box p {
                 font-size: 1rem;
                 color: var(--text-secondary);
                 margin-bottom: 28px;
                 line-height: 1.8;
-            }
-
-            .quiz-cta-buttons {
+            }.quiz-cta-buttons {
                 display: flex;
                 gap: var(--space-4);
                 justify-content: center;
                 flex-wrap: wrap;
-            }
-
-            .quiz-crisis-box {
+            }.quiz-crisis-box {
                 background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D4 100%);
                 border-left: 4px solid #d4a853;
                 padding: 28px;
                 border-radius: var(--radius-lg);
                 margin-top: 32px;
                 box-shadow: var(--shadow-sm);
-            }
-
-            .quiz-crisis-box h3 {
+            }.quiz-crisis-box h3 {
                 color: #7a5c12;
                 font-size: 1.375rem;
                 margin-bottom: 14px;
                 font-weight: 600;
                 font-family: var(--font-display);
-            }
-
-            .quiz-crisis-box p {
+            }.quiz-crisis-box p {
                 color: #7a5c12;
                 font-size: 1rem;
                 line-height: 1.8;
                 margin-bottom: 12px;
-            }
-
-            .quiz-crisis-box a {
+            }.quiz-crisis-box a {
                 color: #8B6914;
                 font-weight: 600;
                 text-decoration: underline;
             }
 
-            /* Color Tiers */
-            .quiz-tier-green { border-left-color: #52C584; }
-            .quiz-tier-amber { border-left-color: #F5C563; }
-            .quiz-tier-red { border-left-color: #EF6F6F; }
-
-            .quiz-score-tier-green {
+            /* Color Tiers */.quiz-tier-green { border-left-color: #52C584; }.quiz-tier-amber { border-left-color: #F5C563; }.quiz-tier-red { border-left-color: #EF6F6F; }.quiz-score-tier-green {
                 background: linear-gradient(135deg, #52C584 0%, #70D99D 100%);
-            }
-
-            .quiz-score-tier-amber {
+            }.quiz-score-tier-amber {
                 background: linear-gradient(135deg, #F5C563 0%, #F9D88A 100%);
-            }
-
-            .quiz-score-tier-red {
+            }.quiz-score-tier-red {
                 background: linear-gradient(135deg, #EF6F6F 0%, #F28B8B 100%);
             }
 
             /* Mobile Responsive - Enhanced */
-            @media (max-width: 768px) {
-                .quiz-widget-section {
+            @media (max-width: 768px) {.quiz-widget-section {
                     padding: 24px 16px !important;
-                }
-
-                .quiz-widget-container {
+                }.quiz-widget-container {
                     border-radius: 16px !important;
-                }
-
-                .quiz-header {
+                }.quiz-header {
                     padding: 18px 20px 14px !important;
-                }
-
-                .quiz-header h2 {
+                }.quiz-header h2 {
                     font-size: 1.4rem !important;
                     line-height: 1.3 !important;
-                }
-
-                .quiz-header p {
+                }.quiz-header p {
                     font-size: 0.9rem !important;
                     line-height: 1.4 !important;
-                }
-
-                .quiz-disclaimer {
+                }.quiz-disclaimer {
                     padding: 14px 20px !important;
                     font-size: 12.5px !important;
-                }
-
-                .quiz-progress-container {
+                }.quiz-progress-container {
                     padding: 14px 20px 10px !important;
-                }
-
-                .quiz-content-area {
+                }.quiz-content-area {
                     padding: 10px 20px 24px !important;
                     min-height: auto !important;
-                }
-
-                .quiz-question-text {
+                }.quiz-question-text {
                     font-size: 1.25rem !important;
                     margin-bottom: 18px !important;
                     line-height: 1.35 !important;
-                }
-
-                .quiz-question-number {
+                }.quiz-question-number {
                     font-size: 10px !important;
                     padding: 5px 12px !important;
                     margin-bottom: 12px !important;
-                }
-
-                .quiz-option {
+                }.quiz-option {
                     padding: 14px 16px !important;
                     font-size: 0.95rem !important;
                     border-radius: 10px !important;
-                }
-
-                .quiz-option.selected::before {
+                }.quiz-option.selected::before {
                     font-size: 1.2rem !important;
                     right: 16px !important;
-                }
-
-                .quiz-score-number {
+                }.quiz-score-number {
                     font-size: 56px !important;
-                }
-
-                .quiz-score-display {
+                }.quiz-score-display {
                     padding: 40px 24px !important;
                     margin-bottom: 28px !important;
-                }
-
-                .quiz-cta-buttons {
+                }.quiz-cta-buttons {
                     flex-direction: column;
-                }
-
-                .quiz-btn {
+                }.quiz-btn {
                     width: 100%;
                     padding: 12px 20px !important;
                     font-size: 0.95rem !important;
-                }
-
-                .quiz-navigation {
+                }.quiz-navigation {
                     flex-direction: column;
                     margin-top: 20px !important;
                     gap: 10px !important;
-                }
-
-                .quiz-btn-primary {
+                }.quiz-btn-primary {
                     order: -1;
-                }
-
-                .quiz-result-section {
+                }.quiz-result-section {
                     padding: 24px 20px !important;
                     margin-bottom: 24px !important;
-                }
-
-                .quiz-result-section h3 {
+                }.quiz-result-section h3 {
                     font-size: 1.4rem !important;
-                }
-
-                .quiz-result-section p,
-                .quiz-result-section li {
+                }.quiz-result-section p,.quiz-result-section li {
                     font-size: 0.98rem !important;
-                }
-
-                .quiz-cta-box {
+                }.quiz-cta-box {
                     padding: 28px 20px !important;
-                }
-
-                .quiz-cta-box h3 {
+                }.quiz-cta-box h3 {
                     font-size: 1.4rem !important;
-                }
-
-                .quiz-crisis-box {
+                }.quiz-crisis-box {
                     padding: 20px !important;
                     margin-top: 24px !important;
-                }
-
-                .quiz-results-container {
+                }.quiz-results-container {
                     padding: 28px 20px !important;
                 }
             }
@@ -2017,7 +1907,7 @@
                     <h4>Jesse Cynamon, RP</h4>
                     <p>Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
                     <p>Serving clients in Toronto, Ottawa, and Ontario-wide.</p>
-                    <p><strong>CRPO #10979 | MPsy</strong></p>
+                    <p><strong><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</strong></p>
                     <p class="footer-book"><strong>Book Appointment:</strong><br>
                     <a href="tel:+14163062157" class="footer-phone">(416) 306-2157</a></p>
                 </div>
@@ -2114,7 +2004,7 @@
 
             <div class="footer-bottom">
                 <p style="color: rgba(255, 255, 255, 1) !important; font-weight: 400;">&copy; 2024 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (CRPO #10979)<br>
+                Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)<br>
                 Ontario, Canada<br>
                 <strong>Last Updated:</strong> December 20, 2025</p>
             </div>
@@ -2306,7 +2196,7 @@
 
         // Initialize animation on scroll with reduced motion support
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.specialization-card, .process-step').forEach(el => {
+            document.querySelectorAll('.specialization-card,.process-step').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';

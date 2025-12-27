@@ -171,44 +171,30 @@
     <!-- Page Styles -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }
-        .font-display { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }.font-display { font-family: 'Playfair Display', serif; }
 
-        /* Content styles */
-        .content-section { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-        .article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .author-info { display: flex; align-items: center; gap: 0.75rem; }
-        .author-badge { background: #e8f0e8; color: #4a7c59; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; }
-        .lead-text { font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-bottom: 1.5rem; }
+        /* Content styles */.content-section { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }.article-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }.author-info { display: flex; align-items: center; gap: 0.75rem; }.author-badge { background: #e8f0e8; color: #4a7c59; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; }.lead-text { font-size: 1.125rem; line-height: 1.8; color: #4b5563; margin-bottom: 1.5rem; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin: 2rem 0 1rem; }
         h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600; color: #1e3a4f; margin: 1.5rem 0 0.75rem; }
         h4 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #1e3a4f; margin: 1.25rem 0 0.5rem; }
         p { color: #4b5563; line-height: 1.8; margin-bottom: 1rem; }
         a { color: #4a7c59; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-        .btn-primary { background: #4a7c59; color: white; }
-        .btn-primary:hover { background: #3d6a4a; text-decoration: none; }
-        .callout { background: #e8f0e8; border-left: 4px solid #4a7c59; padding: 1.5rem 2rem; border-radius: 0.5rem; margin: 1.5rem 0; }
-        .cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }
-        .cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }
-        .cta-box p { color: rgba(255,255,255,0.9); }
-        .feature-list { list-style: none; padding: 0; margin: 1rem 0; }
-        .feature-list li { padding: 0.5rem 0 0.5rem 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }
-        .feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }
-        .faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; margin-bottom: 1.5rem; }
-        .faq-item h4 { margin-top: 0; }
-        .related-content { background: white; padding: 2rem; border-radius: 0.75rem; margin-top: 2rem; }
-        .related-links { list-style: none; padding: 0; }
-        .related-links li { margin: 0.75rem 0; }
-        @media (max-width: 768px) {
-            .content-section { padding: 1rem; }
+        a:hover { text-decoration: underline; }.btn { display: inline-block; padding: 0.875rem 2rem; border-radius: 0.75rem; font-weight: 600; text-decoration: none; transition: all 0.2s; }.btn-primary { background: #4a7c59; color: white; }.btn-primary:hover { background: #3d6a4a; text-decoration: none; }.callout { background: #e8f0e8; border-left: 4px solid #4a7c59; padding: 1.5rem 2rem; border-radius: 0.5rem; margin: 1.5rem 0; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin: 2rem 0; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.feature-list { list-style: none; padding: 0; margin: 1rem 0; }.feature-list li { padding: 0.5rem 0 0.5rem 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; margin-bottom: 1.5rem; }.faq-item h4 { margin-top: 0; }.related-content { background: white; padding: 2rem; border-radius: 0.75rem; margin-top: 2rem; }.related-links { list-style: none; padding: 0; }.related-links li { margin: 0.75rem 0; }
+        @media (max-width: 768px) {.content-section { padding: 1rem; }
             h2 { font-size: 1.5rem; }
             h3 { font-size: 1.25rem; }
         }
     </style>
     <!-- Legacy Gemini CSS -->
     <link rel="stylesheet" href="/css/legacy-gemini.css">
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 
 <body class="font-body bg-cream">
@@ -218,7 +204,7 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-4">
                     <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full">CRPO #10979</span>
+                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
@@ -244,7 +230,7 @@
                         <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Why Smart Students Fail University: Academic Anxiety Explained</h1>
                         <div class="article-meta">
                             <div class="author-info">
-                                <span><strong>By Jesse Cynamon, RP (CRPO #10979)</strong></span>
+                                <span><strong>By Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</strong></span>
                                 <span class="author-badge">University Mental Health Specialist</span>
                             </div>
                         </div>
@@ -539,7 +525,7 @@
 
                     <div class="cta-box" style="margin-top: 3rem;">
                         <h3>Professional Support for Academic Anxiety in Ontario</h3>
-                        <p><strong>By Jesse Cynamon, RP (CRPO #10979)</strong><br>Registered Psychotherapist specializing in university student mental health. Virtual therapy throughout Ontario—no commute, flexible scheduling, evening appointments available.</p>
+                        <p><strong>By Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</strong><br>Registered Psychotherapist specializing in university student mental health. Virtual therapy throughout Ontario—no commute, flexible scheduling, evening appointments available.</p>
                         <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Schedule 15-Min Call</a>
                     </div>
 

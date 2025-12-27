@@ -20,36 +20,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><!-- Design Fixes - Unified Visual System -->
     <link rel="stylesheet" href="/css/nextstep-unified.css?v=20251221c">
 
-    <style>
-    
-        .related-cta, .related-posts {
+    <style>.related-cta,.related-posts {
             background: #f8f9fa;
             border: 1px solid rgba(107, 142, 111, 0.18);
             border-radius: 16px;
             padding: 1.75rem;
             margin-top: 2.5rem;
             box-shadow: 0 12px 24px rgba(0,0,0,0.05);
-        }
-        .related-cta .btn-primary, .related-cta .btn-secondary {
+        }.related-cta.btn-primary,.related-cta.btn-secondary {
             display: inline-block;
             margin-right: 0.75rem;
             margin-top: 0.75rem;
             text-decoration: none;
-        }
-        .related-posts ul {
+        }.related-posts ul {
             list-style: none;
             padding: 0;
             margin: 1rem 0 0;
-        }
-        .related-posts li + li {
+        }.related-posts li + li {
             margin-top: 0.5rem;
-        }
-        .related-posts a {
+        }.related-posts a {
             color: #4a6b7a;
             text-decoration: none;
             font-weight: 600;
-        }
-        .related-posts a:hover {
+        }.related-posts a:hover {
             text-decoration: underline;
         }
     
@@ -70,9 +63,7 @@
             margin: 0;
             background: var(--bg-primary);
             color: var(--text-primary);
-        }
-
-        .container {
+        }.container {
             max-width: 820px;
             margin: 0 auto;
             padding: 0 24px;
@@ -81,107 +72,75 @@
         header.header {
             border-bottom: 1px solid rgba(0,0,0,0.05);
             background: #fff;
-        }
-
-        .header-content {
+        }.header-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 1.1rem 0;
-        }
-
-        .logo-section {
+        }.logo-section {
             display: flex;
             align-items: center;
             gap: 1rem;
-        }
-
-        .logo {
+        }.logo {
             height: 38px;
             width: auto;
-        }
-
-        .logo-text {
+        }.logo-text {
             font-family: var(--font-heading);
             font-size: 1.4rem;
             color: var(--text-primary);
             font-weight: 600;
             text-decoration: none;
-        }
-
-        .credentials-badge {
+        }.credentials-badge {
             background: var(--primary-green);
             color: #fff;
             padding: 0.45rem 0.9rem;
             border-radius: 999px;
             font-size: 0.82rem;
             font-weight: 600;
-        }
-
-        .hero-blog {
+        }.hero-blog {
             padding: 4.5rem 0 3rem;
             background: linear-gradient(135deg, rgba(107,142,111,0.12), rgba(248,249,250,0.95));
-        }
-
-        .hero-blog h1 {
+        }.hero-blog h1 {
             font-family: var(--font-heading);
             font-size: 2.8rem;
             margin-bottom: 1rem;
-        }
-
-        .hero-blog p.lead {
+        }.hero-blog p.lead {
             font-size: 1.18rem;
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
-        }
-
-        .meta-info {
+        }.meta-info {
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
             font-size: 0.9rem;
             color: var(--text-secondary);
-        }
-
-        .article-content {
+        }.article-content {
             padding: 3rem 0;
-        }
-
-        .article-content h2 {
+        }.article-content h2 {
             font-family: var(--font-heading);
             font-size: 2rem;
             margin-top: 3rem;
-        }
-
-        .article-content h3 {
+        }.article-content h3 {
             font-size: 1.35rem;
             margin-top: 2rem;
-        }
-
-        .callout {
+        }.callout {
             background: rgba(107, 142, 111, 0.1);
             border-left: 4px solid var(--primary-green);
             padding: 1.4rem 1.6rem;
             border-radius: 12px;
             margin: 2rem 0;
-        }
-
-        .step-grid {
+        }.step-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
-        }
-
-        .step-card {
+        }.step-card {
             background: #fff;
             border-radius: 14px;
             border: 1px solid rgba(0,0,0,0.08);
             box-shadow: 0 12px 28px rgba(0,0,0,0.05);
             padding: 1.7rem;
-        }
-
-        .step-number {
+        }.step-number {
             width: 38px;
             height: 38px;
             border-radius: 999px;
@@ -192,28 +151,20 @@
             justify-content: center;
             font-weight: 700;
             margin-bottom: 1rem;
-        }
-
-        .resource-list, .symptom-list {
+        }.resource-list,.symptom-list {
             list-style: none;
             padding: 0;
-        }
-
-        .resource-list li, .symptom-list li {
+        }.resource-list li,.symptom-list li {
             padding-left: 1.4rem;
             position: relative;
             margin-bottom: 0.75rem;
-        }
-
-        .resource-list li::before, .symptom-list li::before {
+        }.resource-list li::before,.symptom-list li::before {
             content: "✔";
             position: absolute;
             left: 0;
             color: var(--primary-green);
             font-weight: 700;
-        }
-
-        .cta-block {
+        }.cta-block {
             margin: 3rem 0;
             text-align: center;
             background: var(--primary-green);
@@ -221,11 +172,7 @@
             padding: 2.6rem;
             border-radius: 18px;
             box-shadow: 0 16px 34px rgba(107,142,111,0.28);
-        }
-
-        .cta-block p { max-width: 600px; margin: 0.6rem auto 1.6rem; color: rgba(255,255,255,0.92); }
-
-        .btn btn-primary {
+        }.cta-block p { max-width: 600px; margin: 0.6rem auto 1.6rem; color: rgba(255,255,255,0.92); }.btn btn-primary {
             display: inline-block;
             background: white;
             color: var(--primary-green);
@@ -234,9 +181,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.25s ease;
-        }
-
-        .btn btn-primary:hover { background: rgba(255,255,255,0.85); transform: translateY(-2px); }
+        }.btn btn-primary:hover { background: rgba(255,255,255,0.85); transform: translateY(-2px); }
 
         footer.footer {
             margin-top: 4rem;
@@ -282,6 +227,14 @@
       "articleSection": "Workplace & Professional Growth"
     }
     </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u8v6vfikjr");
+    </script>
 </head>
 <body>
     <header class="header">
@@ -290,7 +243,7 @@
                 <div class="logo-section">
                     <img src="/images/asset104.png" alt="Next Step Therapy" class="logo" onerror="this.style.display='none'">
                     <a href="/" class="logo-text">Next Step Therapy</a>
-                    <span class="credentials-badge">CRPO #10979</span>
+                    <span class="credentials-badge"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
                 </div>
                 <nav class="nav">
                     <a href="/#approach">Approach</a>
@@ -307,7 +260,7 @@
             <h1>How to Recover from Burnout: A Therapist’s Guide for Ontario Professionals</h1>
             <p class="lead">Burnout isn’t solved with a weekend off. If you’re in the GTA or anywhere across Ontario balancing demanding work, commuting, caregiving, and community commitments, your nervous system needs a structured reset. This guide shows you how to stabilize, rebuild, and create sustainable boundaries so you can perform without losing yourself.</p>
             <div class="meta-info">
-                <span>By Jesse Cynamon, RP (CRPO #10979)</span>
+                <span>By Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>)</span>
                 <span>Updated October 21, 2025</span>
                 <span>11 minute read</span>
             </div>
@@ -446,7 +399,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p><strong>Next Step Therapy</strong> · Registered Psychotherapist (CRPO #10979) · Serving clients virtually across Ontario</p>
+            <p><strong>Next Step Therapy</strong> · Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) · Serving clients virtually across Ontario</p>
             <p>Email: <a href="mailto:jesse@nextsteptherapy.ca" style="color: rgba(255,255,255,0.85);">jesse@nextsteptherapy.ca</a> · Phone: <a href="tel:+14163062157" style="color: rgba(255,255,255,0.85);">(416) 306-2157</a></p>
         </div>
     </footer>
