@@ -1,948 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Phrase Test</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background: #f5f5f5;
-            padding: 2rem;
-        }.container { max-width: 900px; margin: 0 auto; }
-        header {
-            background: #1a2332;
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        header h1 { margin-bottom: 0.5rem; }
-        header p { opacity: 0.8; }.progress-bar {
-            background: #ddd;
-            height: 8px;
-            border-radius: 4px;
-            margin-bottom: 2rem;
-            overflow: hidden;
-        }.progress-fill {
-            background: #4CAF50;
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s;
-        }.progress-text {
-            text-align: center;
-            margin-bottom: 1rem;
-            color: #666;
-        }.category {
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            overflow: hidden;
-            border: 2px solid #ddd;
-        }.category-header {
-            background: #1a2332;
-            color: white;
-            padding: 1rem 1.5rem;
-            font-weight: bold;
-        }.category-desc {
-            background: #f8f9fa;
-            padding: 1rem 1.5rem;
-            font-size: 0.9rem;
-            color: #666;
-            border-bottom: 1px solid #ddd;
-        }.phrase-group {
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }.phrase-group:last-child { border-bottom: none; }.phrase-group h4 {
-            color: #1a2332;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #1a2332;
-        }.phrase {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-            margin-bottom: 0.75rem;
-            border-radius: 8px;
-            border: 2px solid #e0e0e0;
-            background: #fafafa;
-            transition: all 0.2s;
-        }.phrase:last-child { margin-bottom: 0; }.phrase.liked {
-            border-color: #4CAF50;
-            background: #e8f5e9;
-        }.phrase.disliked {
-            border-color: #f44336;
-            background: #ffebee;
-            opacity: 0.6;
-        }.phrase-num {
-            background: #1a2332;
-            color: white;
-            min-width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: bold;
-            flex-shrink: 0;
-        }.phrase-content {
-            flex: 1;
-        }.phrase-content p {
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }.vote-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }.vote-btn {
-            width: 44px;
-            height: 44px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            cursor: pointer;
-            font-size: 1.3rem;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }.vote-btn:hover {
-            transform: scale(1.1);
-        }.vote-btn.up:hover,.vote-btn.up.active {
-            background: #e8f5e9;
-            border-color: #4CAF50;
-        }.vote-btn.down:hover,.vote-btn.down.active {
-            background: #ffebee;
-            border-color: #f44336;
-        }.vote-btn.active {
-            transform: scale(1.05);
-        }.results-box {
-            background: #1a2332;
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            position: sticky;
-            bottom: 1rem;
-        }.results-box h3 { margin-bottom: 1rem; }.results-content {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.9rem;
-            max-height: 200px;
-            overflow-y: auto;
-        }.copy-btn {
-            background: white;
-            color: #1a2332;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 1rem;
-        }.copy-btn:hover { background: #f0f0f0; }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Voice Phrase Test</title>
+ <style>
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ line-height: 1.7;
+ color: #333;
+ background: #f5f5f5;
+ padding: 2rem;
+ }.container { max-width: 900px; margin: 0 auto; }
+ header {
+ background: #1a2332;
+ color: white;
+ padding: 2rem;
+ border-radius: 8px;
+ margin-bottom: 2rem;
+ text-align: center;
+ }
+ header h1 { margin-bottom: 0.5rem; }
+ header p { opacity: 0.8; }.progress-bar {
+ background: #ddd;
+ height: 8px;
+ border-radius: 4px;
+ margin-bottom: 2rem;
+ overflow: hidden;
+ }.progress-fill {
+ background: #4CAF50;
+ height: 100%;
+ width: 0%;
+ transition: width 0.3s;
+ }.progress-text {
+ text-align: center;
+ margin-bottom: 1rem;
+ color: #666;
+ }.category {
+ background: white;
+ border-radius: 8px;
+ margin-bottom: 2rem;
+ overflow: hidden;
+ border: 2px solid #ddd;
+ }.category-header {
+ background: #1a2332;
+ color: white;
+ padding: 1rem 1.5rem;
+ font-weight: bold;
+ }.category-desc {
+ background: #f8f9fa;
+ padding: 1rem 1.5rem;
+ font-size: 0.9rem;
+ color: #666;
+ border-bottom: 1px solid #ddd;
+ }.phrase-group {
+ padding: 1.5rem;
+ border-bottom: 1px solid #eee;
+ }.phrase-group:last-child { border-bottom: none; }.phrase-group h4 {
+ color: #1a2332;
+ font-size: 1rem;
+ margin-bottom: 1rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 2px solid #1a2332;
+ }.phrase {
+ display: flex;
+ align-items: flex-start;
+ gap: 1rem;
+ padding: 1rem;
+ margin-bottom: 0.75rem;
+ border-radius: 8px;
+ border: 2px solid #e0e0e0;
+ background: #fafafa;
+ transition: all 0.2s;
+ }.phrase:last-child { margin-bottom: 0; }.phrase.liked {
+ border-color: #4CAF50;
+ background: #e8f5e9;
+ }.phrase.disliked {
+ border-color: #f44336;
+ background: #ffebee;
+ opacity: 0.6;
+ }.phrase-num {
+ background: #1a2332;
+ color: white;
+ min-width: 28px;
+ height: 28px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 0.85rem;
+ font-weight: bold;
+ flex-shrink: 0;
+ }.phrase-content {
+ flex: 1;
+ }.phrase-content p {
+ font-size: 1.05rem;
+ line-height: 1.6;
+ }.vote-buttons {
+ display: flex;
+ gap: 0.5rem;
+ flex-shrink: 0;
+ }.vote-btn {
+ width: 44px;
+ height: 44px;
+ border: 2px solid #ddd;
+ border-radius: 8px;
+ background: white;
+ cursor: pointer;
+ font-size: 1.3rem;
+ transition: all 0.2s;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }.vote-btn:hover {
+ transform: scale(1.1);
+ }.vote-btn.up:hover,.vote-btn.up.active {
+ background: #e8f5e9;
+ border-color: #4CAF50;
+ }.vote-btn.down:hover,.vote-btn.down.active {
+ background: #ffebee;
+ border-color: #f44336;
+ }.vote-btn.active {
+ transform: scale(1.05);
+ }.results-box {
+ background: #1a2332;
+ color: white;
+ padding: 2rem;
+ border-radius: 8px;
+ margin-top: 2rem;
+ position: sticky;
+ bottom: 1rem;
+ }.results-box h3 { margin-bottom: 1rem; }.results-content {
+ background: rgba(255,255,255,0.1);
+ padding: 1rem;
+ border-radius: 6px;
+ font-family: monospace;
+ font-size: 0.9rem;
+ max-height: 200px;
+ overflow-y: auto;
+ }.copy-btn {
+ background: white;
+ color: #1a2332;
+ border: none;
+ padding: 0.75rem 1.5rem;
+ border-radius: 6px;
+ cursor: pointer;
+ font-weight: bold;
+ margin-top: 1rem;
+ }.copy-btn:hover { background: #f0f0f0; }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #666;
-        }
-    </style>
+ footer {
+ text-align: center;
+ padding: 2rem;
+ color: #666;
+ }
+ </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Voice Phrase Test</h1>
-            <p>Click thumbs up/down for each phrase. Your choices will be tracked below.</p>
-        </header>
+ <div class="container">
+ <header>
+ <h1>Voice Phrase Test</h1>
+ <p>Click thumbs up/down for each phrase. Your choices will be tracked below.</p>
+ </header>
 
-        <div class="progress-text">Progress: <span id="progress-count">0</span> / <span id="total-count">0</span> rated</div>
-        <div class="progress-bar">
-            <div class="progress-fill" id="progress-fill"></div>
-        </div>
+ <div class="progress-text">Progress: <span id="progress-count">0</span> / <span id="total-count">0</span> rated</div>
+ <div class="progress-bar">
+ <div class="progress-fill" id="progress-fill"></div>
+ </div>
 
-        <!-- CATEGORY 1: OPENERS -->
-        <div class="category">
-            <div class="category-header">Category 1: Hero Openers</div>
-            <div class="category-desc">The first thing someone reads. Sets the tone.</div>
+ <!-- CATEGORY 1: OPENERS -->
+ <div class="category">
+ <div class="category-header">Category 1: Hero Openers</div>
+ <div class="category-desc">The first thing someone reads. Sets the tone.</div>
 
-            <div class="phrase-group">
-                <h4>Anxiety Hero - Opening Line</h4>
-                <div class="phrase" data-category="anxiety-opener" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I don't know if this will resonate, but here's what I've noticed: the people who reach out aren't broken."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="anxiety-opener" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"Racing thoughts keeping you up at night? That Sunday evening dread that won't quit?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="anxiety-opener" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Here's what I've noticed: the people who reach out aren't broken. They're usually some of the most capable people around."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="anxiety-opener" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"If anxiety has been running the show, you're not alone. I work with people who are tired of white-knuckling through every day."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="anxiety-opener" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"The people who reach out to me aren't broken. They're just tired of their brain running the show."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="anxiety-opener" data-id="6">
-                    <span class="phrase-num">6</span>
-                    <div class="phrase-content">
-                        <p>"You're probably good at what you do. That's not the problem. The problem is you can't shut off your brain."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>Anxiety Hero - Opening Line</h4>
+ <div class="phrase" data-category="anxiety-opener" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I don't know if this will resonate, but here's what I've noticed: the people who reach out aren't broken."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="anxiety-opener" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"Racing thoughts keeping you up at night? That Sunday evening dread that won't quit?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="anxiety-opener" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Here's what I've noticed: the people who reach out aren't broken. They're usually some of the most capable people around."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="anxiety-opener" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"If anxiety has been running the show, you're not alone. I work with people who are tired of white-knuckling through every day."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="anxiety-opener" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"The people who reach out to me aren't broken. They're just tired of their brain running the show."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="anxiety-opener" data-id="6">
+ <span class="phrase-num">6</span>
+ <div class="phrase-content">
+ <p>"You're probably good at what you do. That's not the problem. The problem is you can't shut off your brain."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>Burnout Hero - Opening Line</h4>
-                <div class="phrase" data-category="burnout-opener" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I don't know if this is you, but: you're successful on paper. And completely exhausted underneath."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="burnout-opener" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"Successful on paper. Exhausted underneath. Sound familiar?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="burnout-opener" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"You're good at what you do. That's not the problem. The problem is you can't turn it off."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="burnout-opener" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"Everyone thinks you have it together. You're not so sure anymore."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="burnout-opener" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"The promotion came. The exhaustion stayed. Now what?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>Burnout Hero - Opening Line</h4>
+ <div class="phrase" data-category="burnout-opener" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I don't know if this is you, but: you're successful on paper. And completely exhausted underneath."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="burnout-opener" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"Successful on paper. Exhausted underneath. Sound familiar?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="burnout-opener" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"You're good at what you do. That's not the problem. The problem is you can't turn it off."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="burnout-opener" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"Everyone thinks you have it together. You're not so sure anymore."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="burnout-opener" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"The promotion came. The exhaustion stayed. Now what?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CATEGORY 2: VULNERABILITY STATEMENTS -->
-        <div class="category">
-            <div class="category-header">Category 2: Vulnerability / Honesty Statements</div>
-            <div class="category-desc">Where you show you're human. Confident honesty vs. uncertain hedging.</div>
+ <!-- CATEGORY 2: VULNERABILITY STATEMENTS -->
+ <div class="category">
+ <div class="category-header">Category 2: Vulnerability / Honesty Statements</div>
+ <div class="category-desc">Where you show you're human. Confident honesty vs. uncertain hedging.</div>
 
-            <div class="phrase-group">
-                <h4>"I Don't Have All The Answers"</h4>
-                <div class="phrase" data-category="answers" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I can't promise I have all the answers—honestly, I don't think anyone does."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="answers" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"I don't have all the answers. But I can walk through the unknown with you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="answers" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"I'm not going to pretend I have a magic fix. What I can do is figure it out with you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="answers" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"I don't have a roadmap. But I'm good at figuring things out together."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="answers" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"No one has all the answers. What I have is a way of working through things together."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>"I Don't Have All The Answers"</h4>
+ <div class="phrase" data-category="answers" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I can't promise I have all the answers—honestly, I don't think anyone does."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="answers" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"I don't have all the answers. But I can walk through the unknown with you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="answers" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"I'm not going to pretend I have a magic fix. What I can do is figure it out with you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="answers" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"I don't have a roadmap. But I'm good at figuring things out together."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="answers" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"No one has all the answers. What I have is a way of working through things together."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>"I Can't Promise Outcomes"</h4>
-                <div class="phrase" data-category="outcomes" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I can't promise to make anxiety disappear—honestly, I don't think anyone can."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="outcomes" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"I'm not going to promise anxiety will disappear. But I can walk through it with you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="outcomes" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Anxiety probably won't disappear. But we can figure out what's in your control."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="outcomes" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"I can't make the anxiety go away. But I can help you change your relationship with it."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="outcomes" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"The goal isn't to eliminate anxiety. It's to stop letting it run your life."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>"I Can't Promise Outcomes"</h4>
+ <div class="phrase" data-category="outcomes" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I can't promise to make anxiety disappear—honestly, I don't think anyone can."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="outcomes" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"I'm not going to promise anxiety will disappear. But I can walk through it with you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="outcomes" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Anxiety probably won't disappear. But we can figure out what's in your control."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="outcomes" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"I can't make the anxiety go away. But I can help you change your relationship with it."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="outcomes" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"The goal isn't to eliminate anxiety. It's to stop letting it run your life."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>Hedging / Uncertainty Phrases</h4>
-                <div class="phrase" data-category="hedging" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I don't know if this will resonate, but..."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="hedging" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"If any of this lands..."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="hedging" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Does any of that resonate?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="hedging" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"Here's what I've seen..." (no hedge, just state it)</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="hedging" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"At least, that's been my experience."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="hedging" data-id="6">
-                    <span class="phrase-num">6</span>
-                    <div class="phrase-content">
-                        <p>"Honestly..." (as a sentence starter)</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>Hedging / Uncertainty Phrases</h4>
+ <div class="phrase" data-category="hedging" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I don't know if this will resonate, but..."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="hedging" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"If any of this lands..."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="hedging" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Does any of that resonate?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="hedging" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"Here's what I've seen..." (no hedge, just state it)</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="hedging" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"At least, that's been my experience."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="hedging" data-id="6">
+ <span class="phrase-num">6</span>
+ <div class="phrase-content">
+ <p>"Honestly..." (as a sentence starter)</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CATEGORY 3: CHECK-INS -->
-        <div class="category">
-            <div class="category-header">Category 3: Check-ins</div>
-            <div class="category-desc">Your conversational anchors. Which feel natural to you?</div>
+ <!-- CATEGORY 3: CHECK-INS -->
+ <div class="category">
+ <div class="category-header">Category 3: Check-ins</div>
+ <div class="category-desc">Your conversational anchors. Which feel natural to you?</div>
 
-            <div class="phrase-group">
-                <h4>End-of-paragraph check-ins</h4>
-                <div class="phrase" data-category="checkins" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"Right?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="checkins" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"Does that make sense?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="checkins" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Sound familiar?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="checkins" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"Does any of that land?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="checkins" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"You know?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="checkins" data-id="6">
-                    <span class="phrase-num">6</span>
-                    <div class="phrase-content">
-                        <p>"Does that resonate?"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>End-of-paragraph check-ins</h4>
+ <div class="phrase" data-category="checkins" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"Right?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="checkins" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"Does that make sense?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="checkins" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Sound familiar?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="checkins" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"Does any of that land?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="checkins" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"You know?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="checkins" data-id="6">
+ <span class="phrase-num">6</span>
+ <div class="phrase-content">
+ <p>"Does that resonate?"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CATEGORY 4: CTAs -->
-        <div class="category">
-            <div class="category-header">Category 4: Call-to-Action Language</div>
-            <div class="category-desc">How you invite people to reach out.</div>
+ <!-- CATEGORY 4: CTAs -->
+ <div class="category">
+ <div class="category-header">Category 4: Call-to-Action Language</div>
+ <div class="category-desc">How you invite people to reach out.</div>
 
-            <div class="phrase-group">
-                <h4>Primary CTA Button Text</h4>
-                <div class="phrase" data-category="cta-button" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"Let's talk"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-button" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"Ready when you are"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-button" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Book a consultation"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-button" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"See if it's a fit"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-button" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"Book a free call"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-button" data-id="6">
-                    <span class="phrase-num">6</span>
-                    <div class="phrase-content">
-                        <p>"Start here"</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>Primary CTA Button Text</h4>
+ <div class="phrase" data-category="cta-button" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"Let's talk"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-button" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"Ready when you are"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-button" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Book a consultation"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-button" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"See if it's a fit"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-button" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"Book a free call"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-button" data-id="6">
+ <span class="phrase-num">6</span>
+ <div class="phrase-content">
+ <p>"Start here"</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>CTA Supporting Text</h4>
-                <div class="phrase" data-category="cta-support" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"If any of this lands, let's talk. No pressure."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-support" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"Book a free 15-minute call. We'll figure out if it's a good fit."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-support" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"Curious if this might help? Let's talk—no pressure, just a conversation."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-support" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"Not sure if therapy is right for you? Let's figure it out together."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="cta-support" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"15 minutes. No commitment. Just see if we connect."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>CTA Supporting Text</h4>
+ <div class="phrase" data-category="cta-support" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"If any of this lands, let's talk. No pressure."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-support" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"Book a free 15-minute call. We'll figure out if it's a good fit."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-support" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"Curious if this might help? Let's talk—no pressure, just a conversation."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-support" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"Not sure if therapy is right for you? Let's figure it out together."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="cta-support" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"15 minutes. No commitment. Just see if we connect."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CATEGORY 5: HOW I WORK -->
-        <div class="category">
-            <div class="category-header">Category 5: How I Work Language</div>
-            <div class="category-desc">Explaining your approach without clinical jargon.</div>
+ <!-- CATEGORY 5: HOW I WORK -->
+ <div class="category">
+ <div class="category-header">Category 5: How I Work Language</div>
+ <div class="category-desc">Explaining your approach without clinical jargon.</div>
 
-            <div class="phrase-group">
-                <h4>Describing Your Approach</h4>
-                <div class="phrase" data-category="approach" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I don't have a step-by-step program. What I do is start by understanding where you're coming from."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="approach" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"There's no cookie-cutter program here. We start with what's actually going on for you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="approach" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"I'm not going to hand you a worksheet and call it therapy. We figure it out together."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="approach" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"No homework. No worksheets. Just real conversations about what's going on."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="approach" data-id="5">
-                    <span class="phrase-num">5</span>
-                    <div class="phrase-content">
-                        <p>"I use approaches that research supports. But what matters more is whether we actually connect."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>Describing Your Approach</h4>
+ <div class="phrase" data-category="approach" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I don't have a step-by-step program. What I do is start by understanding where you're coming from."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="approach" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"There's no cookie-cutter program here. We start with what's actually going on for you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="approach" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"I'm not going to hand you a worksheet and call it therapy. We figure it out together."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="approach" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"No homework. No worksheets. Just real conversations about what's going on."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="approach" data-id="5">
+ <span class="phrase-num">5</span>
+ <div class="phrase-content">
+ <p>"I use approaches that research supports. But what matters more is whether we actually connect."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>"WITH You" Positioning</h4>
-                <div class="phrase" data-category="with-you" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I want to be WITH you as you figure things out—not ahead of you with a map."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="with-you" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"I'm not the therapist with all the answers. I'm the one walking through it with you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="with-you" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"We figure it out together. I'm not ahead of you—I'm with you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="with-you" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"I'm not going to tell you what to do. I'm going to help you figure out what you want."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
+ <div class="phrase-group">
+ <h4>"WITH You" Positioning</h4>
+ <div class="phrase" data-category="with-you" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I want to be WITH you as you figure things out—not ahead of you with a map."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="with-you" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"I'm not the therapist with all the answers. I'm the one walking through it with you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="with-you" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"We figure it out together. I'm not ahead of you—I'm with you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="with-you" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"I'm not going to tell you what to do. I'm going to help you figure out what you want."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
 
-            <div class="phrase-group">
-                <h4>"Should vs Want" Concept</h4>
-                <div class="phrase" data-category="should-want" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="should-want" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"We explore the gap between who you think you should be and who you actually want to be."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="should-want" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"A lot of the struggle comes from living someone else's version of your life. We figure out what you actually want."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>"Should vs Want" Concept</h4>
+ <div class="phrase" data-category="should-want" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="should-want" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"We explore the gap between who you think you should be and who you actually want to be."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="should-want" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"A lot of the struggle comes from living someone else's version of your life. We figure out what you actually want."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CATEGORY 6: ABOUT ME -->
-        <div class="category">
-            <div class="category-header">Category 6: About Me / Bio Language</div>
-            <div class="category-desc">How you introduce yourself.</div>
+ <!-- CATEGORY 6: ABOUT ME -->
+ <div class="category">
+ <div class="category-header">Category 6: About Me / Bio Language</div>
+ <div class="category-desc">How you introduce yourself.</div>
 
-            <div class="phrase-group">
-                <h4>Opening Bio Line</h4>
-                <div class="phrase" data-category="bio" data-id="1">
-                    <span class="phrase-num">1</span>
-                    <div class="phrase-content">
-                        <p>"I'm Jesse, a Registered Psychotherapist (CRPO #10979). I work with people dealing with anxiety, burnout, feeling disconnected."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="bio" data-id="2">
-                    <span class="phrase-num">2</span>
-                    <div class="phrase-content">
-                        <p>"I'm Jesse. I work with people dealing with anxiety, burnout, feeling disconnected. I'm a Registered Psychotherapist—CRPO #10979, if that matters to you."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="bio" data-id="3">
-                    <span class="phrase-num">3</span>
-                    <div class="phrase-content">
-                        <p>"I'm Jesse Cynamon, RP. I help people make sense of anxiety, burnout, and that feeling of being disconnected from yourself."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-                <div class="phrase" data-category="bio" data-id="4">
-                    <span class="phrase-num">4</span>
-                    <div class="phrase-content">
-                        <p>"I'm Jesse. I'm a therapist who works with people dealing with anxiety, burnout, and feeling disconnected from themselves."</p>
-                    </div>
-                    <div class="vote-buttons">
-                        <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
-                        <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <div class="phrase-group">
+ <h4>Opening Bio Line</h4>
+ <div class="phrase" data-category="bio" data-id="1">
+ <span class="phrase-num">1</span>
+ <div class="phrase-content">
+ <p>"I'm Jesse, a Registered Psychotherapist (CRPO #10979). I work with people dealing with anxiety, burnout, feeling disconnected."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="bio" data-id="2">
+ <span class="phrase-num">2</span>
+ <div class="phrase-content">
+ <p>"I'm Jesse. I work with people dealing with anxiety, burnout, feeling disconnected. I'm a Registered Psychotherapist—CRPO #10979, if that matters to you."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="bio" data-id="3">
+ <span class="phrase-num">3</span>
+ <div class="phrase-content">
+ <p>"I'm Jesse Cynamon, RP. I help people make sense of anxiety, burnout, and that feeling of being disconnected from yourself."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ <div class="phrase" data-category="bio" data-id="4">
+ <span class="phrase-num">4</span>
+ <div class="phrase-content">
+ <p>"I'm Jesse. I'm a therapist who works with people dealing with anxiety, burnout, and feeling disconnected from themselves."</p>
+ </div>
+ <div class="vote-buttons">
+ <button class="vote-btn up" onclick="vote(this, 'up')">👍</button>
+ <button class="vote-btn down" onclick="vote(this, 'down')">👎</button>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- RESULTS BOX -->
-        <div class="results-box">
-            <h3>Your Choices (copy and paste to me)</h3>
-            <div class="results-content" id="results">
-                Click thumbs up/down to start rating...
-            </div>
-            <button class="copy-btn" onclick="copyResults()">Copy Results</button>
-        </div>
+ <!-- RESULTS BOX -->
+ <div class="results-box">
+ <h3>Your Choices (copy and paste to me)</h3>
+ <div class="results-content" id="results">
+ Click thumbs up/down to start rating...
+ </div>
+ <button class="copy-btn" onclick="copyResults()">Copy Results</button>
+ </div>
 
-        <footer>
-            Take your time. This will define your voice going forward.
-        </footer>
-    </div>
+ <footer>
+ Take your time. This will define your voice going forward.
+ </footer>
+ </div>
 
-    <script>
-        const votes = {};
-        let totalPhrases = 0;
+ <script>
+ const votes = {};
+ let totalPhrases = 0;
 
-        document.addEventListener('DOMContentLoaded', () => {
-            totalPhrases = document.querySelectorAll('.phrase').length;
-            document.getElementById('total-count').textContent = totalPhrases;
-        });
+ document.addEventListener('DOMContentLoaded', () => {
+ totalPhrases = document.querySelectorAll('.phrase').length;
+ document.getElementById('total-count').textContent = totalPhrases;
+ });
 
-        function vote(btn, type) {
-            const phrase = btn.closest('.phrase');
-            const category = phrase.dataset.category;
-            const id = phrase.dataset.id;
-            const key = `${category}-${id}`;
-            const text = phrase.querySelector('.phrase-content p').textContent;
+ function vote(btn, type) {
+ const phrase = btn.closest('.phrase');
+ const category = phrase.dataset.category;
+ const id = phrase.dataset.id;
+ const key = `${category}-${id}`;
+ const text = phrase.querySelector('.phrase-content p').textContent;
 
-            // Clear previous vote
-            phrase.classList.remove('liked', 'disliked');
-            phrase.querySelectorAll('.vote-btn').forEach(b => b.classList.remove('active'));
+ // Clear previous vote
+ phrase.classList.remove('liked', 'disliked');
+ phrase.querySelectorAll('.vote-btn').forEach(b => b.classList.remove('active'));
 
-            // If clicking same button, toggle off
-            if (votes[key] === type) {
-                delete votes[key];
-            } else {
-                votes[key] = type;
-                btn.classList.add('active');
-                phrase.classList.add(type === 'up' ? 'liked' : 'disliked');
-            }
+ // If clicking same button, toggle off
+ if (votes[key] === type) {
+ delete votes[key];
+ } else {
+ votes[key] = type;
+ btn.classList.add('active');
+ phrase.classList.add(type === 'up' ? 'liked' : 'disliked');
+ }
 
-            updateResults();
-            updateProgress();
-        }
+ updateResults();
+ updateProgress();
+ }
 
-        function updateProgress() {
-            const rated = Object.keys(votes).length;
-            document.getElementById('progress-count').textContent = rated;
-            const pct = (rated / totalPhrases) * 100;
-            document.getElementById('progress-fill').style.width = pct + '%';
-        }
+ function updateProgress() {
+ const rated = Object.keys(votes).length;
+ document.getElementById('progress-count').textContent = rated;
+ const pct = (rated / totalPhrases) * 100;
+ document.getElementById('progress-fill').style.width = pct + '%';
+ }
 
-        function updateResults() {
-            const results = {};
+ function updateResults() {
+ const results = {};
 
-            document.querySelectorAll('.phrase').forEach(phrase => {
-                const category = phrase.dataset.category;
-                const id = phrase.dataset.id;
-                const key = `${category}-${id}`;
+ document.querySelectorAll('.phrase').forEach(phrase => {
+ const category = phrase.dataset.category;
+ const id = phrase.dataset.id;
+ const key = `${category}-${id}`;
 
-                if (votes[key]) {
-                    if (!results[category]) {
-                        results[category] = { up: [], down: [] };
-                    }
-                    results[category][votes[key]].push(id);
-                }
-            });
+ if (votes[key]) {
+ if (!results[category]) {
+ results[category] = { up: [], down: [] };
+ }
+ results[category][votes[key]].push(id);
+ }
+ });
 
-            let output = '';
-            for (const [cat, data] of Object.entries(results)) {
-                if (data.up.length || data.down.length) {
-                    output += `${cat}:\n`;
-                    if (data.up.length) output += `  👍 ${data.up.join(', ')}\n`;
-                    if (data.down.length) output += `  👎 ${data.down.join(', ')}\n`;
-                }
-            }
+ let output = '';
+ for (const [cat, data] of Object.entries(results)) {
+ if (data.up.length || data.down.length) {
+ output += `${cat}:\n`;
+ if (data.up.length) output += ` 👍 ${data.up.join(', ')}\n`;
+ if (data.down.length) output += ` 👎 ${data.down.join(', ')}\n`;
+ }
+ }
 
-            document.getElementById('results').textContent = output || 'Click thumbs up/down to start rating...';
-        }
+ document.getElementById('results').textContent = output || 'Click thumbs up/down to start rating...';
+ }
 
-        function copyResults() {
-            const results = document.getElementById('results').textContent;
-            navigator.clipboard.writeText(results).then(() => {
-                const btn = document.querySelector('.copy-btn');
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = 'Copy Results', 2000);
-            });
-        }
-    </script>
+ function copyResults() {
+ const results = document.getElementById('results').textContent;
+ navigator.clipboard.writeText(results).then(() => {
+ const btn = document.querySelector('.copy-btn');
+ btn.textContent = 'Copied!';
+ setTimeout(() => btn.textContent = 'Copy Results', 2000);
+ });
+ }
+ </script>
 </body>
 </html>

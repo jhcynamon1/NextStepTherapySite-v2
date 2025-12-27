@@ -1,291 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Copy Review - New Voice</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background: #f5f5f5;
-            padding: 2rem;
-        }.container { max-width: 1200px; margin: 0 auto; }
-        header {
-            background: #1a2332;
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        header h1 { margin-bottom: 0.5rem; }
-        header p { opacity: 0.8; }.section-block {
-            background: white;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            overflow: hidden;
-            border: 2px solid #ddd;
-        }.section-header {
-            background: #1a2332;
-            color: white;
-            padding: 1rem 1.5rem;
-            font-weight: bold;
-        }.comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-        @media (max-width: 768px) {.comparison { grid-template-columns: 1fr; }
-        }.old-copy,.new-copy {
-            padding: 1.5rem;
-        }.old-copy {
-            background: #ffebee;
-            border-right: 2px solid #ddd;
-        }.new-copy {
-            background: #e8f5e9;
-        }.copy-label {
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            display: inline-block;
-        }.old-copy.copy-label {
-            background: #f44336;
-            color: white;
-        }.new-copy.copy-label {
-            background: #4CAF50;
-            color: white;
-        }.copy-content h2 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #1a2332;
-        }.copy-content p {
-            margin-bottom: 1rem;
-        }.copy-content.cta-btn {
-            display: inline-block;
-            background: #1a2332;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            margin: 0.5rem 0.5rem 0.5rem 0;
-        }.highlight {
-            background: yellow;
-            padding: 0 2px;
-        }.strikethrough {
-            text-decoration: line-through;
-            opacity: 0.6;
-        }.notes {
-            background: #fff3e0;
-            border: 2px solid #ff9800;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }.notes h3 { margin-bottom: 1rem; color: #e65100; }.notes ul { margin-left: 1.5rem; }.notes li { margin-bottom: 0.5rem; }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Page Copy Review - New Voice</title>
+ <style>
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ line-height: 1.7;
+ color: #333;
+ background: #f5f5f5;
+ padding: 2rem;
+ }.container { max-width: 1200px; margin: 0 auto; }
+ header {
+ background: #1a2332;
+ color: white;
+ padding: 2rem;
+ border-radius: 8px;
+ margin-bottom: 2rem;
+ text-align: center;
+ }
+ header h1 { margin-bottom: 0.5rem; }
+ header p { opacity: 0.8; }.section-block {
+ background: white;
+ border-radius: 8px;
+ margin-bottom: 2rem;
+ overflow: hidden;
+ border: 2px solid #ddd;
+ }.section-header {
+ background: #1a2332;
+ color: white;
+ padding: 1rem 1.5rem;
+ font-weight: bold;
+ }.comparison {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 0;
+ }
+ @media (max-width: 768px) {.comparison { grid-template-columns: 1fr; }
+ }.old-copy,.new-copy {
+ padding: 1.5rem;
+ }.old-copy {
+ background: #ffebee;
+ border-right: 2px solid #ddd;
+ }.new-copy {
+ background: #e8f5e9;
+ }.copy-label {
+ font-weight: bold;
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ margin-bottom: 1rem;
+ padding: 0.25rem 0.5rem;
+ border-radius: 4px;
+ display: inline-block;
+ }.old-copy.copy-label {
+ background: #f44336;
+ color: white;
+ }.new-copy.copy-label {
+ background: #4CAF50;
+ color: white;
+ }.copy-content h2 {
+ font-size: 1.3rem;
+ margin-bottom: 1rem;
+ color: #1a2332;
+ }.copy-content p {
+ margin-bottom: 1rem;
+ }.copy-content.cta-btn {
+ display: inline-block;
+ background: #1a2332;
+ color: white;
+ padding: 0.75rem 1.5rem;
+ border-radius: 4px;
+ text-decoration: none;
+ margin: 0.5rem 0.5rem 0.5rem 0;
+ }.highlight {
+ background: yellow;
+ padding: 0 2px;
+ }.strikethrough {
+ text-decoration: line-through;
+ opacity: 0.6;
+ }.notes {
+ background: #fff3e0;
+ border: 2px solid #ff9800;
+ padding: 1.5rem;
+ border-radius: 8px;
+ margin-top: 2rem;
+ }.notes h3 { margin-bottom: 1rem; color: #e65100; }.notes ul { margin-left: 1.5rem; }.notes li { margin-bottom: 0.5rem; }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #666;
-        }
-    </style>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
-    </script>
+ footer {
+ text-align: center;
+ padding: 2rem;
+ color: #666;
+ }
+ </style>
+ <!-- Microsoft Clarity -->
+ <script type="text/javascript">
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "u8v6vfikjr");
+ </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Anxiety Therapy Ontario Page - Voice Update</h1>
-            <p>Current copy vs. new confident-vulnerability voice. Review and approve.</p>
-        </header>
+ <div class="container">
+ <header>
+ <h1>Anxiety Therapy Ontario Page - Voice Update</h1>
+ <p>Current copy vs. new confident-vulnerability voice. Review and approve.</p>
+ </header>
 
-        <!-- HERO SECTION -->
-        <div class="section-block">
-            <div class="section-header">Section 1: Hero (Lead Text)</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h2>Anxiety Therapy in Ontario</h2>
-                        <p>Racing thoughts, constant worry, panic attacks. Work with a CRPO-registered psychotherapist who helps high-performers manage anxiety without losing their edge.</p>
-                        <a class="cta-btn">Start Managing Anxiety This Week</a>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h2>Anxiety Therapy in Ontario</h2>
-                        <p>You're probably good at what you do. That's not the problem. The problem is you can't shut off your brain. I work with people who are tired of their brain running the show.</p>
-                        <a class="cta-btn">Let's talk</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- HERO SECTION -->
+ <div class="section-block">
+ <div class="section-header">Section 1: Hero (Lead Text)</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h2>Anxiety Therapy in Ontario</h2>
+ <p>Racing thoughts, constant worry, panic attacks. Work with a CRPO-registered psychotherapist who helps high-performers manage anxiety without losing their edge.</p>
+ <a class="cta-btn">Start Managing Anxiety This Week</a>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h2>Anxiety Therapy in Ontario</h2>
+ <p>You're probably good at what you do. That's not the problem. The problem is you can't shut off your brain. I work with people who are tired of their brain running the show.</p>
+ <a class="cta-btn">Let's talk</a>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- IS THIS YOU SECTION -->
-        <div class="section-block">
-            <div class="section-header">Section 2: "Is This You?" Opening</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h2>Is This You?</h2>
-                        <p>That Sunday evening chest tightness as you mentally rehearse Monday's challenges. Racing thoughts that turn simple decisions into exhausting analysis of every possible outcome. Your brain treating everyday situations like emergencies, flooding you with "what if" scenarios you can't turn off.</p>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h2>Is This You?</h2>
-                        <p>The people who reach out to me aren't broken. They're just tired of their brain running the show. Sunday evening dread. Racing thoughts that won't quit. "What if" scenarios on repeat. Sound familiar?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- IS THIS YOU SECTION -->
+ <div class="section-block">
+ <div class="section-header">Section 2: "Is This You?" Opening</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h2>Is This You?</h2>
+ <p>That Sunday evening chest tightness as you mentally rehearse Monday's challenges. Racing thoughts that turn simple decisions into exhausting analysis of every possible outcome. Your brain treating everyday situations like emergencies, flooding you with "what if" scenarios you can't turn off.</p>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h2>Is This You?</h2>
+ <p>The people who reach out to me aren't broken. They're just tired of their brain running the show. Sunday evening dread. Racing thoughts that won't quit. "What if" scenarios on repeat. Sound familiar?</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- MEET JESSE SECTION -->
-        <div class="section-block">
-            <div class="section-header">Section 3: About Jesse</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h2>Meet Jesse Cynamon, RP</h2>
-                        <p>I'm Jesse Cynamon, a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I focus on helping people throughout Ontario develop a healthier relationship with anxiety using evidence-based approaches like Acceptance and Commitment Therapy (ACT).</p>
-                        <h3>Why I Work with Anxiety</h3>
-                        <p>Anxiety often affects some of the most capable, thoughtful people—individuals who care deeply about their responsibilities and relationships. What makes this work meaningful to me is witnessing the profound relief that comes when someone learns they don't need to eliminate anxiety to live well; they just need to change their relationship with it.</p>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h2>Meet Jesse Cynamon, RP</h2>
-                        <p>I'm Jesse, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I work with people dealing with anxiety, burnout, feeling disconnected from themselves.</p>
-                        <h3>Why I Work with Anxiety</h3>
-                        <p>Here's what I've seen: anxiety often shows up in the most capable people around. The goal isn't to eliminate anxiety. It's to stop letting it run your life. I don't have all the answers. But I can walk through the unknown with you.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- MEET JESSE SECTION -->
+ <div class="section-block">
+ <div class="section-header">Section 3: About Jesse</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h2>Meet Jesse Cynamon, RP</h2>
+ <p>I'm Jesse Cynamon, a Registered Psychotherapist with the College of Registered Psychotherapists of Ontario (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I focus on helping people throughout Ontario develop a healthier relationship with anxiety using evidence-based approaches like Acceptance and Commitment Therapy (ACT).</p>
+ <h3>Why I Work with Anxiety</h3>
+ <p>Anxiety often affects some of the most capable, thoughtful people—individuals who care deeply about their responsibilities and relationships. What makes this work meaningful to me is witnessing the profound relief that comes when someone learns they don't need to eliminate anxiety to live well; they just need to change their relationship with it.</p>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h2>Meet Jesse Cynamon, RP</h2>
+ <p>I'm Jesse, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I work with people dealing with anxiety, burnout, feeling disconnected from themselves.</p>
+ <h3>Why I Work with Anxiety</h3>
+ <p>Here's what I've seen: anxiety often shows up in the most capable people around. The goal isn't to eliminate anxiety. It's to stop letting it run your life. I don't have all the answers. But I can walk through the unknown with you.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- HOW WE WORK SECTION -->
-        <div class="section-block">
-            <div class="section-header">Section 4: How We Work Together</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h2>How We Work Together</h2>
-                        <p>Anxiety therapy isn't about me telling you what to do or analyzing your childhood for months. It's about building a collaborative partnership where you develop practical skills for managing anxiety while working toward the life you want to live.</p>
-                        <h3>Building Your Toolkit</h3>
-                        <p>Each session includes practical elements you can apply immediately. You're not just talking about anxiety—you're building a comprehensive set of skills for managing it in real-world situations.</p>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h2>How We Work Together</h2>
-                        <p>No homework. No worksheets. Just real conversations about what's going on. I use approaches that research supports. But what matters more is whether we actually connect.</p>
-                        <h3>What We Explore</h3>
-                        <p>There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives. We figure out what's in your control and what's not. We explore that gap together.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- HOW WE WORK SECTION -->
+ <div class="section-block">
+ <div class="section-header">Section 4: How We Work Together</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h2>How We Work Together</h2>
+ <p>Anxiety therapy isn't about me telling you what to do or analyzing your childhood for months. It's about building a collaborative partnership where you develop practical skills for managing anxiety while working toward the life you want to live.</p>
+ <h3>Building Your Toolkit</h3>
+ <p>Each session includes practical elements you can apply immediately. You're not just talking about anxiety—you're building a comprehensive set of skills for managing it in real-world situations.</p>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h2>How We Work Together</h2>
+ <p>No homework. No worksheets. Just real conversations about what's going on. I use approaches that research supports. But what matters more is whether we actually connect.</p>
+ <h3>What We Explore</h3>
+ <p>There's this tension between who you think you should be and who you actually want to be. That's often where the pain lives. We figure out what's in your control and what's not. We explore that gap together.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- CTA BOXES -->
-        <div class="section-block">
-            <div class="section-header">Section 5: CTA Boxes</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h2>Ready to Address Your Anxiety?</h2>
-                        <p>Schedule a 15-minute consultation to discuss how evidence-based therapy can help you manage anxiety across Ontario.</p>
-                        <a class="cta-btn">Book Online</a>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h2>If any of this lands...</h2>
-                        <p>Book a free 15-minute call. We'll figure out if it's a good fit. No pressure.</p>
-                        <a class="cta-btn">Let's talk</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- CTA BOXES -->
+ <div class="section-block">
+ <div class="section-header">Section 5: CTA Boxes</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h2>Ready to Address Your Anxiety?</h2>
+ <p>Schedule a 15-minute consultation to discuss how evidence-based therapy can help you manage anxiety across Ontario.</p>
+ <a class="cta-btn">Book Online</a>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h2>If any of this lands...</h2>
+ <p>Book a free 15-minute call. We'll figure out if it's a good fit. No pressure.</p>
+ <a class="cta-btn">Let's talk</a>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- FINAL CTA -->
-        <div class="section-block">
-            <div class="section-header">Section 6: Final CTA</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <p>You don't have to let anxiety control your life. Professional support is available when you're ready.</p>
-                        <a class="cta-btn">Start Your Journey Today</a>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <p>I can't make the anxiety go away. But I can help you change your relationship with it. We figure it out together.</p>
-                        <a class="cta-btn">Ready when you are</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- FINAL CTA -->
+ <div class="section-block">
+ <div class="section-header">Section 6: Final CTA</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <p>You don't have to let anxiety control your life. Professional support is available when you're ready.</p>
+ <a class="cta-btn">Start Your Journey Today</a>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <p>I can't make the anxiety go away. But I can help you change your relationship with it. We figure it out together.</p>
+ <a class="cta-btn">Ready when you are</a>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <!-- FAQ ANSWER EXAMPLES -->
-        <div class="section-block">
-            <div class="section-header">Section 7: FAQ Answer Style</div>
-            <div class="comparison">
-                <div class="old-copy">
-                    <span class="copy-label">Current</span>
-                    <div class="copy-content">
-                        <h3>How long does anxiety therapy take?</h3>
-                        <p>Most clients notice improvements within 8-12 weeks of consistent work, though this varies based on individual circumstances and anxiety severity. Some clients see initial relief within 3-4 sessions, while others may need longer-term support for complex anxiety patterns.</p>
-                    </div>
-                </div>
-                <div class="new-copy">
-                    <span class="copy-label">New Voice</span>
-                    <div class="copy-content">
-                        <h3>How long does anxiety therapy take?</h3>
-                        <p>Here's what I've seen: some people start feeling different within a few weeks. Others need more time. The timeline matters less than whether we're actually connecting. That's where change starts.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!-- FAQ ANSWER EXAMPLES -->
+ <div class="section-block">
+ <div class="section-header">Section 7: FAQ Answer Style</div>
+ <div class="comparison">
+ <div class="old-copy">
+ <span class="copy-label">Current</span>
+ <div class="copy-content">
+ <h3>How long does anxiety therapy take?</h3>
+ <p>Most clients notice improvements within 8-12 weeks of consistent work, though this varies based on individual circumstances and anxiety severity. Some clients see initial relief within 3-4 sessions, while others may need longer-term support for complex anxiety patterns.</p>
+ </div>
+ </div>
+ <div class="new-copy">
+ <span class="copy-label">New Voice</span>
+ <div class="copy-content">
+ <h3>How long does anxiety therapy take?</h3>
+ <p>Here's what I've seen: some people start feeling different within a few weeks. Others need more time. The timeline matters less than whether we're actually connecting. That's where change starts.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-        <div class="notes">
-            <h3>Key Changes Made</h3>
-            <ul>
-                <li><strong>Hero opener:</strong> Changed from question ("Racing thoughts?") to direct statement ("You're probably good at what you do. That's not the problem.")</li>
-                <li><strong>Vulnerability:</strong> Changed from "I can't promise..." to "I don't have all the answers. But I can..."</li>
-                <li><strong>Check-ins:</strong> Using "Sound familiar?" instead of "Does that make sense?"</li>
-                <li><strong>Observation opener:</strong> Using "Here's what I've seen:" instead of "Honestly..."</li>
-                <li><strong>Approach language:</strong> Positive framing ("No homework. Just real conversations.") instead of negative ("I don't have a step-by-step program...")</li>
-                <li><strong>CTAs:</strong> "Let's talk" / "Ready when you are" instead of "Start Your Journey"</li>
-                <li><strong>WITH positioning:</strong> "We figure it out together" instead of "I want to be WITH you"</li>
-            </ul>
-            <p style="margin-top: 1rem;"><strong>Note:</strong> H1, meta titles, and schema markup stay structured (for AI discovery). Body copy uses authentic voice (for conversion).</p>
-        </div>
+ <div class="notes">
+ <h3>Key Changes Made</h3>
+ <ul>
+ <li><strong>Hero opener:</strong> Changed from question ("Racing thoughts?") to direct statement ("You're probably good at what you do. That's not the problem.")</li>
+ <li><strong>Vulnerability:</strong> Changed from "I can't promise..." to "I don't have all the answers. But I can..."</li>
+ <li><strong>Check-ins:</strong> Using "Sound familiar?" instead of "Does that make sense?"</li>
+ <li><strong>Observation opener:</strong> Using "Here's what I've seen:" instead of "Honestly..."</li>
+ <li><strong>Approach language:</strong> Positive framing ("No homework. Just real conversations.") instead of negative ("I don't have a step-by-step program...")</li>
+ <li><strong>CTAs:</strong> "Let's talk" / "Ready when you are" instead of "Start Your Journey"</li>
+ <li><strong>WITH positioning:</strong> "We figure it out together" instead of "I want to be WITH you"</li>
+ </ul>
+ <p style="margin-top: 1rem;"><strong>Note:</strong> H1, meta titles, and schema markup stay structured (for AI discovery). Body copy uses authentic voice (for conversion).</p>
+ </div>
 
-        <footer>
-            <p>Review each section. Tell me which ones feel right and which need tweaking.</p>
-        </footer>
-    </div>
+ <footer>
+ <p>Review each section. Tell me which ones feel right and which need tweaking.</p>
+ </footer>
+ </div>
 </body>
 </html>

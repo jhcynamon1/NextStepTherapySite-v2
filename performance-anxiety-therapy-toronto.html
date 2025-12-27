@@ -1,499 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <!-- Google Analytics 4 + Conversion Tracking -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <script>
-        window.addEventListener('load', function() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR';
-            document.head.appendChild(script);
+ <!-- Favicon -->
+ <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+ <!-- Google Analytics 4 + Conversion Tracking -->
+ <link rel="preconnect" href="https://www.googletagmanager.com">
+ <script>
+ window.addEventListener('load', function() {
+ var script = document.createElement('script');
+ script.async = true;
+ script.src = 'https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR';
+ document.head.appendChild(script);
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-J8H4YBGSHR', {
-                'allow_enhanced_conversions': true,
-                'send_page_view': true
-            });
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-J8H4YBGSHR', {
+ 'allow_enhanced_conversions': true,
+ 'send_page_view': true
+ });
 
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
+ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'phone_call', {
+ 'event_category': 'conversion',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
 
-            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'booking_click', {
-                        'event_category': 'conversion',
-                        'event_label': 'jane_app_booking',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
+ document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'booking_click', {
+ 'event_category': 'conversion',
+ 'event_label': 'jane_app_booking',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
+ });
+ </script>
 
 
-    <!-- SEO Meta Data -->
-    <title>Performance Anxiety Support Toronto | Registered Therapist</title>
-    <meta name="description" content="High-achieving professionals deserve support that works. Virtual therapy for workplace stress & performance anxiety. Evening appointments available. Free consultation.">
+ <!-- SEO Meta Data -->
+ <title>Performance Anxiety Support Toronto | Registered Therapist</title>
+ <meta name="description" content="High-achieving professionals deserve support that works. Virtual therapy for workplace stress & performance anxiety. Evening appointments available. Free consultation.">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/performance-anxiety-therapy-toronto.html">
+ <!-- Canonical URL -->
+ <link rel="canonical" href="https://nextsteptherapy.ca/performance-anxiety-therapy-toronto.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Performance Anxiety Therapy Toronto | Next Step Therapy">
-    <meta property="og:description" content="Professional performance anxiety support in Toronto with CRPO registered psychotherapist. Virtual sessions for executives and high performers.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/performance-anxiety-therapy-toronto.html">
+ <!-- Open Graph -->
+ <meta property="og:title" content="Performance Anxiety Therapy Toronto | Next Step Therapy">
+ <meta property="og:description" content="Professional performance anxiety support in Toronto with CRPO registered psychotherapist. Virtual sessions for executives and high performers.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nextsteptherapy.ca/performance-anxiety-therapy-toronto.html">
 
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Fonts - Gemini Design System -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        sand: '#f5f1ea',
-                        'navy-light': '#2d5066'
-                    },
-                    fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ colors: {
+ navy: '#1e3a4f',
+ sage: '#4a7c59',
+ cream: '#f8f6f2',
+ sand: '#f5f1ea',
+ 'navy-light': '#2d5066'
+ },
+ fontFamily: {
+ 'display': ['Playfair Display', 'serif'],
+ 'body': ['Inter', 'sans-serif']
+ }
+ }
+ }
+ }
+ </script>
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+ <!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Compatibility Styles for Legacy Classes -->
-    <style>
-        body { font-family: 'Inter', sans-serif; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.section-title.centered { text-align: center; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.feature-list li:last-child { border-bottom: none; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.alternate-bg { background: #f1f5f9; }.contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }.contact-section h2,.contact-section h3,.contact-section h4 { color: white; }.contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }.faq-grid { display: grid; gap: 1.5rem; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.faq-item h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
-    </style>
+ <!-- Compatibility Styles for Legacy Classes -->
+ <style>
+ body { font-family: 'Inter', sans-serif; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.section-title.centered { text-align: center; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.feature-list li:last-child { border-bottom: none; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.alternate-bg { background: #f1f5f9; }.contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }.contact-section h2,.contact-section h3,.contact-section h4 { color: white; }.contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }.faq-grid { display: grid; gap: 1.5rem; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.faq-item h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; }
+ a { color: #1e3a4f; }
+ a:hover { color: #4a7c59; }
+ </style>
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Performance Anxiety Therapy Toronto",
-      "description": "Professional performance anxiety therapy services in Toronto. CRPO registered psychotherapist offering evidence-based support for workplace and professional performance anxiety.",
-      "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-toronto",
-      "provider": {
-        "@type": "Person",
-        "additionalType": "Psychotherapist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "jobTitle": "Registered Psychotherapist"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Toronto",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      }
-    }
-    </script>
+ <!-- Schema Markup -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "Performance Anxiety Therapy Toronto",
+ "description": "Professional performance anxiety therapy services in Toronto. CRPO registered psychotherapist offering evidence-based support for workplace and professional performance anxiety.",
+ "url": "https://nextsteptherapy.ca/performance-anxiety-therapy-toronto",
+ "provider": {
+ "@type": "Person",
+ "additionalType": "Psychotherapist",
+ "name": "Jesse Cynamon, RP",
+ "identifier": "CRPO #10979",
+ "jobTitle": "Registered Psychotherapist"
+ },
+ "areaServed": {
+ "@type": "City",
+ "name": "Toronto",
+ "addressRegion": "ON",
+ "addressCountry": "CA"
+ }
+ }
+ </script>
 
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Legacy Gemini CSS -->
-    <link rel="stylesheet" href="/css/legacy-gemini.css">
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
-    </script>
+ <!-- Ahrefs Analytics -->
+ <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+ <!-- Legacy Gemini CSS -->
+ <link rel="stylesheet" href="/css/legacy-gemini.css">
+ <!-- Microsoft Clarity -->
+ <script type="text/javascript">
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "u8v6vfikjr");
+ </script>
 </head>
 
 <body class="font-body bg-cream">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
-                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
-                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </header>
+ <!-- Header -->
+ <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+ <div class="max-w-7xl mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-4">
+ <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+ <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
+ </div>
+ <nav class="hidden md:flex items-center gap-8">
+ <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+ <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+ <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
+ </nav>
+ <div class="flex items-center gap-4">
+ <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+ </div>
+ </div>
+ </div>
+ </header>
 
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">PERFORMANCE ANXIETY THERAPY</span>
-                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Performance Anxiety Therapy in Toronto</h1>
-                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You know your stuff. You've earned your place at the table. But when it's time to present, speak up in meetings, or step into the spotlight, your heart races and your mind goes blank. If you're a high-achieving professional in Toronto struggling with performance anxiety, you're definitely not alone—and there are proven approaches that can help you perform at your best when it matters most.</p>
+ <main class="pt-20">
+ <!-- Hero Section -->
+ <section class="py-20 md:py-28 bg-gradient-to-br from-cream via-ivory to-sage/5">
+ <div class="max-w-7xl mx-auto px-6">
+ <div class="grid lg:grid-cols-2 gap-12 items-center">
+ <div>
+ <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">PERFORMANCE ANXIETY THERAPY</span>
+ <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Performance Anxiety Therapy in Toronto</h1>
+ <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You know your stuff. You've earned your place at the table. But when it's time to present, speak up in meetings, or step into the spotlight, your heart races and your mind goes blank. If you're a high-achieving professional in Toronto struggling with performance anxiety, you're definitely not alone—and there are proven approaches that can help you perform at your best when it matters most.</p>
 
-                        <div class="flex flex-wrap gap-4 mb-8">
-                            <a href="/#contact" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
-                                <i data-lucide="calendar" class="w-5 h-5"></i>
-                                Schedule 15-Min Call
-                            </a>
-                            <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
-                                <i data-lucide="phone" class="w-5 h-5"></i>
-                                Call (416) 306-2157
-                            </a>
-                        </div>
+ <div class="flex flex-wrap gap-4 mb-8">
+ <a href="/#contact" class="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy-light transition-all shadow-lg">
+ <i data-lucide="calendar" class="w-5 h-5"></i>
+ Schedule 15-Min Call
+ </a>
+ <a href="tel:+14163062157" class="inline-flex items-center gap-2 bg-white border-2 border-navy text-navy px-8 py-4 rounded-xl text-base font-semibold hover:bg-navy hover:text-white transition-all">
+ <i data-lucide="phone" class="w-5 h-5"></i>
+ Call (416) 306-2157
+ </a>
+ </div>
 
-                        <div class="flex flex-wrap gap-3">
-                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a></span>
-                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="briefcase" class="w-4 h-4 text-sage"></i> Executive Focus</span>
-                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
-                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Free 15-Min Consult</span>
-                        </div>
-                    </div>
+ <div class="flex flex-wrap gap-3">
+ <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="shield-check" class="w-4 h-4 text-sage"></i> <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a></span>
+ <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="briefcase" class="w-4 h-4 text-sage"></i> Executive Focus</span>
+ <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="file-text" class="w-4 h-4 text-sage"></i> Insurance Receipts</span>
+ <span class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm border border-sand/50"><i data-lucide="clock" class="w-4 h-4 text-sage"></i> Free 15-Min Consult</span>
+ </div>
+ </div>
 
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="target" class="w-6 h-6 text-sage"></i></div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">High-Stakes Performance</h3>
-                            <p class="text-gray-600 text-sm">Presentations, pitches, leadership.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
-                            <p class="text-gray-600 text-sm">Discreet, professional support.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="moon" class="w-6 h-6 text-sage"></i></div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Evening Hours</h3>
-                            <p class="text-gray-600 text-sm">Flexible executive scheduling.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Complete Privacy</h3>
-                            <p class="text-gray-600 text-sm">CRPO confidentiality standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <div class="grid grid-cols-2 gap-4">
+ <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="target" class="w-6 h-6 text-sage"></i></div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">High-Stakes Performance</h3>
+ <p class="text-gray-600 text-sm">Presentations, pitches, leadership.</p>
+ </div>
+ <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="video" class="w-6 h-6 text-sage"></i></div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+ <p class="text-gray-600 text-sm">Discreet, professional support.</p>
+ </div>
+ <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="moon" class="w-6 h-6 text-sage"></i></div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Evening Hours</h3>
+ <p class="text-gray-600 text-sm">Flexible executive scheduling.</p>
+ </div>
+ <div class="bg-white p-6 rounded-2xl shadow-md border border-sand/30 hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center mb-4"><i data-lucide="shield" class="w-6 h-6 text-sage"></i></div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Complete Privacy</h3>
+ <p class="text-gray-600 text-sm">CRPO confidentiality standards.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- Problem Recognition Section -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>The High-Performer's Paradox</h2>
-                        <p>Performance anxiety in Toronto's competitive professional environment can feel especially frustrating. You've proven your competence countless times, yet when it's time to showcase your abilities, your body betrays you. Many of the executives, professionals, and high achievers I work with describe experiences that might sound familiar:</p>
-                        <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
-                            <h3>"Does This Sound Like You?"</h3>
-                            <ul class="feature-list">
-                                <li><strong>Pre-Presentation Panic:</strong> Sleepless nights before big presentations, even when you know the material inside out</li>
-                                <li><strong>Meeting Freeze-Up:</strong> Your brilliant ideas evaporate the moment all eyes turn to you in the boardroom</li>
-                                <li><strong>Interview Anxiety:</strong> Despite your qualifications, you stumble through job interviews or performance reviews</li>
-                                <li><strong>Public Speaking Dread:</strong> You avoid conferences, speaking opportunities, or leadership roles because of the spotlight</li>
-                                <li><strong>Imposter Syndrome Amplified:</strong> High-stakes moments trigger intense feelings of being a fraud about to be exposed</li>
-                                <li><strong>Physical Symptoms:</strong> Racing heart, sweating, trembling, or nausea when performing under pressure</li>
-                                <li><strong>Avoidance Patterns:</strong> You turn down promotions, speaking opportunities, or leadership roles to avoid performance situations</li>
-                                <li><strong>Post-Performance Rumination:</strong> Replaying every word and gesture from important presentations or meetings</li>
-                            </ul>
-                        </div>
-                        <p>If several of these resonate, you're experiencing something incredibly common among high-achieving professionals. Performance anxiety often affects the most competent people—those who care deeply about excellence and have high standards for themselves. The irony is that your dedication to quality is both your greatest strength and the source of your performance anxiety.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- Problem Recognition Section -->
+ <section class="section">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>The High-Performer's Paradox</h2>
+ <p>Performance anxiety in Toronto's competitive professional environment can feel especially frustrating. You've proven your competence countless times, yet when it's time to showcase your abilities, your body betrays you. Many of the executives, professionals, and high achievers I work with describe experiences that might sound familiar:</p>
+ <div style="background: rgba(30, 58, 79, 0.05); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+ <h3>"Does This Sound Like You?"</h3>
+ <ul class="feature-list">
+ <li><strong>Pre-Presentation Panic:</strong> Sleepless nights before big presentations, even when you know the material inside out</li>
+ <li><strong>Meeting Freeze-Up:</strong> Your brilliant ideas evaporate the moment all eyes turn to you in the boardroom</li>
+ <li><strong>Interview Anxiety:</strong> Despite your qualifications, you stumble through job interviews or performance reviews</li>
+ <li><strong>Public Speaking Dread:</strong> You avoid conferences, speaking opportunities, or leadership roles because of the spotlight</li>
+ <li><strong>Imposter Syndrome Amplified:</strong> High-stakes moments trigger intense feelings of being a fraud about to be exposed</li>
+ <li><strong>Physical Symptoms:</strong> Racing heart, sweating, trembling, or nausea when performing under pressure</li>
+ <li><strong>Avoidance Patterns:</strong> You turn down promotions, speaking opportunities, or leadership roles to avoid performance situations</li>
+ <li><strong>Post-Performance Rumination:</strong> Replaying every word and gesture from important presentations or meetings</li>
+ </ul>
+ </div>
+ <p>If several of these resonate, you're experiencing something incredibly common among high-achieving professionals. Performance anxiety often affects the most competent people—those who care deeply about excellence and have high standards for themselves. The irony is that your dedication to quality is both your greatest strength and the source of your performance anxiety.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- Understanding Performance Anxiety Section -->
-        <section class="section alternate-bg">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>Understanding Performance Anxiety in Toronto's Professional Scene</h2>
-                        <p>Performance anxiety isn't about lacking confidence or competence—it's about your nervous system responding to perceived high stakes. In Toronto's competitive business environment, where careers can pivot on a single presentation or meeting, your brain's alarm system can become hypervigilant about performance situations.</p>
-                        <p>Your performance anxiety likely developed because you care deeply about doing well and because the stakes often are genuinely high. When you combine natural conscientiousness with the pressure of Toronto's professional culture, performance anxiety becomes almost inevitable for many high achievers.</p>
-                        <h3>Common Performance Anxiety Triggers in Toronto Professionals:</h3>
-                        <div class="info-cards">
-                            <div class="info-card">
-                                <h4>High-Stakes Presentations</h4>
-                                <p>Board meetings, client pitches, investor presentations, or conference speaking where career advancement depends on performance.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Authority Figures</h4>
-                                <p>Senior leadership, important clients, or industry experts whose opinions carry significant weight for your career trajectory.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Visibility Moments</h4>
-                                <p>Leading meetings, representing your company publicly, or being put on the spot in front of peers or competitors.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Evaluation Situations</h4>
-                                <p>Performance reviews, interview processes, or any scenario where your competence is being directly assessed.</p>
-                            </div>
-                        </div>
-                        <p>Understanding your specific performance anxiety pattern is crucial. Some people experience anticipatory anxiety days or weeks before a performance, while others feel fine until the moment they step into the spotlight. Some have physical symptoms, others mental blank-outs, and many experience both.</p>
-                        <p>The goal isn't to eliminate all performance nerves—some activation actually enhances performance. Instead, it's about finding that optimal zone where you're energized and focused rather than overwhelmed and frozen.</p>
-                        <div style="text-align: center; margin-top: var(--space-xl);">
-                            <a href="/#contact" class="btn btn-primary">Understand Your Performance Pattern</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- Understanding Performance Anxiety Section -->
+ <section class="section alternate-bg">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>Understanding Performance Anxiety in Toronto's Professional Scene</h2>
+ <p>Performance anxiety isn't about lacking confidence or competence—it's about your nervous system responding to perceived high stakes. In Toronto's competitive business environment, where careers can pivot on a single presentation or meeting, your brain's alarm system can become hypervigilant about performance situations.</p>
+ <p>Your performance anxiety likely developed because you care deeply about doing well and because the stakes often are genuinely high. When you combine natural conscientiousness with the pressure of Toronto's professional culture, performance anxiety becomes almost inevitable for many high achievers.</p>
+ <h3>Common Performance Anxiety Triggers in Toronto Professionals:</h3>
+ <div class="info-cards">
+ <div class="info-card">
+ <h4>High-Stakes Presentations</h4>
+ <p>Board meetings, client pitches, investor presentations, or conference speaking where career advancement depends on performance.</p>
+ </div>
+ <div class="info-card">
+ <h4>Authority Figures</h4>
+ <p>Senior leadership, important clients, or industry experts whose opinions carry significant weight for your career trajectory.</p>
+ </div>
+ <div class="info-card">
+ <h4>Visibility Moments</h4>
+ <p>Leading meetings, representing your company publicly, or being put on the spot in front of peers or competitors.</p>
+ </div>
+ <div class="info-card">
+ <h4>Evaluation Situations</h4>
+ <p>Performance reviews, interview processes, or any scenario where your competence is being directly assessed.</p>
+ </div>
+ </div>
+ <p>Understanding your specific performance anxiety pattern is crucial. Some people experience anticipatory anxiety days or weeks before a performance, while others feel fine until the moment they step into the spotlight. Some have physical symptoms, others mental blank-outs, and many experience both.</p>
+ <p>The goal isn't to eliminate all performance nerves—some activation actually enhances performance. Instead, it's about finding that optimal zone where you're energized and focused rather than overwhelmed and frozen.</p>
+ <div style="text-align: center; margin-top: var(--space-xl);">
+ <a href="/#contact" class="btn btn-primary">Understand Your Performance Pattern</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- How Therapy Helps Section -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>How Therapy Helps with Performance Anxiety</h2>
-                        <p>Therapy for performance anxiety isn't about convincing you that your career isn't important—it obviously is. Instead, it's about developing the psychological skills to perform at your best when the stakes are high, rather than being derailed by anxiety when you most need to excel.</p>
-                        <p>I use an approach called Acceptance and Commitment Therapy (ACT), which has strong research support for performance anxiety. Rather than trying to eliminate nervous energy entirely, ACT helps you channel that energy toward peak performance while staying grounded in your competence and values.</p>
-                        <h3>What This Looks Like in Practice:</h3>
-                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
-                            <h4>Instead of Fighting Performance Nerves, You Learn to:</h4>
-                            <ul class="feature-list">
-                                <li><strong>Reframe Activation:</strong> Recognize nervous energy as readiness rather than danger</li>
-                                <li><strong>Stay Present:</strong> Anchor your attention in the current moment rather than catastrophic future scenarios</li>
-                                <li><strong>Access Your Competence:</strong> Connect with your actual knowledge and skills when anxiety creates self-doubt</li>
-                                <li><strong>Tolerate Uncertainty:</strong> Perform effectively even when you can't control all outcomes</li>
-                                <li><strong>Values-Based Action:</strong> Make choices based on your professional values rather than avoiding discomfort</li>
-                                <li><strong>Flexible Attention:</strong> Direct your focus where it's most helpful during high-pressure moments</li>
-                            </ul>
-                        </div>
-                        <p>This approach acknowledges that performance situations will always involve some level of stress—that's natural and often beneficial. The difference is learning to work with that activation rather than being overwhelmed by it.</p>
-                        <p>Many clients find that as they develop these skills, their relationship with performance situations fundamentally changes. Instead of dreading upcoming presentations or meetings, they begin to approach them as opportunities to showcase their actual capabilities. The anxiety may still show up, but it no longer controls their performance.</p>
-                        <h3>The Toronto Professional's Advantage: Virtual Therapy</h3>
-                        <p>Working with performance anxiety virtually offers unique benefits for Toronto professionals. You can practice new skills in your actual work environment, we can work together immediately before or after important performance situations, and you don't need to add commute time to your already busy schedule.</p>
-                        <p>Virtual sessions also allow for more flexible scheduling around your professional commitments—early morning sessions before your day starts, lunch-hour appointments, or evening sessions after the markets close.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- How Therapy Helps Section -->
+ <section class="section">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>How Therapy Helps with Performance Anxiety</h2>
+ <p>Therapy for performance anxiety isn't about convincing you that your career isn't important—it obviously is. Instead, it's about developing the psychological skills to perform at your best when the stakes are high, rather than being derailed by anxiety when you most need to excel.</p>
+ <p>I use an approach called Acceptance and Commitment Therapy (ACT), which has strong research support for performance anxiety. Rather than trying to eliminate nervous energy entirely, ACT helps you channel that energy toward peak performance while staying grounded in your competence and values.</p>
+ <h3>What This Looks Like in Practice:</h3>
+ <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+ <h4>Instead of Fighting Performance Nerves, You Learn to:</h4>
+ <ul class="feature-list">
+ <li><strong>Reframe Activation:</strong> Recognize nervous energy as readiness rather than danger</li>
+ <li><strong>Stay Present:</strong> Anchor your attention in the current moment rather than catastrophic future scenarios</li>
+ <li><strong>Access Your Competence:</strong> Connect with your actual knowledge and skills when anxiety creates self-doubt</li>
+ <li><strong>Tolerate Uncertainty:</strong> Perform effectively even when you can't control all outcomes</li>
+ <li><strong>Values-Based Action:</strong> Make choices based on your professional values rather than avoiding discomfort</li>
+ <li><strong>Flexible Attention:</strong> Direct your focus where it's most helpful during high-pressure moments</li>
+ </ul>
+ </div>
+ <p>This approach acknowledges that performance situations will always involve some level of stress—that's natural and often beneficial. The difference is learning to work with that activation rather than being overwhelmed by it.</p>
+ <p>Many clients find that as they develop these skills, their relationship with performance situations fundamentally changes. Instead of dreading upcoming presentations or meetings, they begin to approach them as opportunities to showcase their actual capabilities. The anxiety may still show up, but it no longer controls their performance.</p>
+ <h3>The Toronto Professional's Advantage: Virtual Therapy</h3>
+ <p>Working with performance anxiety virtually offers unique benefits for Toronto professionals. You can practice new skills in your actual work environment, we can work together immediately before or after important performance situations, and you don't need to add commute time to your already busy schedule.</p>
+ <p>Virtual sessions also allow for more flexible scheduling around your professional commitments—early morning sessions before your day starts, lunch-hour appointments, or evening sessions after the markets close.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- What to Expect Section -->
-        <section class="section alternate-bg">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>What to Expect from Performance Anxiety Therapy</h2>
-                        <p>Working with performance anxiety requires a strategic, skills-based approach that respects both your professional commitments and your need for effective results. Here's how we typically structure the process:</p>
-                        <h3>Assessment and Strategy: Sessions 1-2</h3>
-                        <p>We start with a free 15-minute consultation to ensure we're a good fit. If we decide to work together, the first sessions focus on understanding your specific performance anxiety pattern: when it shows up, how it manifests, what situations trigger it most intensely, and what you've already tried.</p>
-                        <p>This isn't just clinical assessment—it's strategic planning. We need to understand your actual work environment, upcoming performance challenges, and career goals to develop an approach that works within your real life.</p>
-                        <h3>Skills Development: Sessions 3-8</h3>
-                        <p>This is where we build your performance anxiety toolkit. These aren't generic relaxation techniques—they're evidence-based psychological skills specifically designed for high-pressure professional situations.</p>
-                        <div class="info-cards">
-                            <div class="info-card">
-                                <h4>Cognitive Flexibility</h4>
-                                <p>Developing more helpful thinking patterns before and during performance situations, without toxic positivity.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Somatic Regulation</h4>
-                                <p>Practical techniques for managing physical anxiety symptoms in real professional settings.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Attention Training</h4>
-                                <p>Learning to direct your focus toward your competence and the task at hand rather than potential threats.</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Behavioral Experiments</h4>
-                                <p>Gradual exposure to performance situations in a controlled way that builds confidence systematically.</p>
-                            </div>
-                        </div>
-                        <h3>Real-World Application: Sessions 6+</h3>
-                        <p>As you practice these skills, we refine them based on your actual performance experiences. Many clients appreciate being able to debrief important presentations or meetings, celebrate successes, and adjust strategies based on what worked and what didn't.</p>
-                        <p>The timeline varies based on your specific situation and goals. Some professionals see significant improvement after a few focused sessions, while others prefer ongoing support during particularly demanding career phases. We'll adapt the approach to fit your schedule and professional demands.</p>
-                        <div style="text-align: center; margin-top: var(--space-xl);">
-                            <a href="/#contact" class="btn btn-primary">Start Building Your Performance Skills</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- What to Expect Section -->
+ <section class="section alternate-bg">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>What to Expect from Performance Anxiety Therapy</h2>
+ <p>Working with performance anxiety requires a strategic, skills-based approach that respects both your professional commitments and your need for effective results. Here's how we typically structure the process:</p>
+ <h3>Assessment and Strategy: Sessions 1-2</h3>
+ <p>We start with a free 15-minute consultation to ensure we're a good fit. If we decide to work together, the first sessions focus on understanding your specific performance anxiety pattern: when it shows up, how it manifests, what situations trigger it most intensely, and what you've already tried.</p>
+ <p>This isn't just clinical assessment—it's strategic planning. We need to understand your actual work environment, upcoming performance challenges, and career goals to develop an approach that works within your real life.</p>
+ <h3>Skills Development: Sessions 3-8</h3>
+ <p>This is where we build your performance anxiety toolkit. These aren't generic relaxation techniques—they're evidence-based psychological skills specifically designed for high-pressure professional situations.</p>
+ <div class="info-cards">
+ <div class="info-card">
+ <h4>Cognitive Flexibility</h4>
+ <p>Developing more helpful thinking patterns before and during performance situations, without toxic positivity.</p>
+ </div>
+ <div class="info-card">
+ <h4>Somatic Regulation</h4>
+ <p>Practical techniques for managing physical anxiety symptoms in real professional settings.</p>
+ </div>
+ <div class="info-card">
+ <h4>Attention Training</h4>
+ <p>Learning to direct your focus toward your competence and the task at hand rather than potential threats.</p>
+ </div>
+ <div class="info-card">
+ <h4>Behavioral Experiments</h4>
+ <p>Gradual exposure to performance situations in a controlled way that builds confidence systematically.</p>
+ </div>
+ </div>
+ <h3>Real-World Application: Sessions 6+</h3>
+ <p>As you practice these skills, we refine them based on your actual performance experiences. Many clients appreciate being able to debrief important presentations or meetings, celebrate successes, and adjust strategies based on what worked and what didn't.</p>
+ <p>The timeline varies based on your specific situation and goals. Some professionals see significant improvement after a few focused sessions, while others prefer ongoing support during particularly demanding career phases. We'll adapt the approach to fit your schedule and professional demands.</p>
+ <div style="text-align: center; margin-top: var(--space-xl);">
+ <a href="/#contact" class="btn btn-primary">Start Building Your Performance Skills</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- About Your Therapist Section -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>About Your Therapist</h2>
-                        <p>I'm Jesse Cynamon, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) who understands the unique pressures facing high-achieving professionals in Toronto's competitive environment. What drew me to specializing in performance anxiety was recognizing how many capable, accomplished people were being held back not by lack of skill, but by their nervous system's response to high-stakes situations.</p>
-                        <p>I work extensively with executives, professionals, entrepreneurs, and other high performers who need practical, effective strategies that fit within demanding schedules and professional contexts. My clients often describe themselves as successful in most areas but frustrated by their performance in high-visibility situations.</p>
-                        <h3>My Approach to Performance Anxiety:</h3>
-                        <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
-                            <h4>Performance-Focused, Not Therapy-Focused</h4>
-                            <p>Our goal is improving your professional performance, not exploring childhood experiences. Everything we work on has direct application to your career and performance situations.</p>
-                            <h4>Evidence-Based and Strategic</h4>
-                            <p>I use techniques with strong research support, adapted for the specific demands of professional performance in competitive environments.</p>
-                            <h4>Respectful of Your Schedule</h4>
-                            <p>I understand that your time is valuable and that therapy needs to fit around significant professional responsibilities, not the other way around.</p>
-                            <h4>Confidential and Professional</h4>
-                            <p>What we discuss stays completely confidential. Many of my clients hold senior positions or work in industries where privacy is particularly important.</p>
-                        </div>
-                        <p>I provide therapy virtually throughout Ontario, which allows for maximum flexibility in scheduling and eliminates the stress of commuting across Toronto for appointments. Many clients find that virtual sessions actually work better for performance anxiety work—you can practice skills in your actual work environment and access support immediately before or after important professional situations.</p>
-                        <p>Outside of clinical work, I understand the challenge of balancing professional excellence with personal well-being. This isn't just professional knowledge for me—it's lived experience that informs how I approach our work together.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- About Your Therapist Section -->
+ <section class="section">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>About Your Therapist</h2>
+ <p>I'm Jesse Cynamon, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) who understands the unique pressures facing high-achieving professionals in Toronto's competitive environment. What drew me to specializing in performance anxiety was recognizing how many capable, accomplished people were being held back not by lack of skill, but by their nervous system's response to high-stakes situations.</p>
+ <p>I work extensively with executives, professionals, entrepreneurs, and other high performers who need practical, effective strategies that fit within demanding schedules and professional contexts. My clients often describe themselves as successful in most areas but frustrated by their performance in high-visibility situations.</p>
+ <h3>My Approach to Performance Anxiety:</h3>
+ <div style="background: #F8F9FA; padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0;">
+ <h4>Performance-Focused, Not Therapy-Focused</h4>
+ <p>Our goal is improving your professional performance, not exploring childhood experiences. Everything we work on has direct application to your career and performance situations.</p>
+ <h4>Evidence-Based and Strategic</h4>
+ <p>I use techniques with strong research support, adapted for the specific demands of professional performance in competitive environments.</p>
+ <h4>Respectful of Your Schedule</h4>
+ <p>I understand that your time is valuable and that therapy needs to fit around significant professional responsibilities, not the other way around.</p>
+ <h4>Confidential and Professional</h4>
+ <p>What we discuss stays completely confidential. Many of my clients hold senior positions or work in industries where privacy is particularly important.</p>
+ </div>
+ <p>I provide therapy virtually throughout Ontario, which allows for maximum flexibility in scheduling and eliminates the stress of commuting across Toronto for appointments. Many clients find that virtual sessions actually work better for performance anxiety work—you can practice skills in your actual work environment and access support immediately before or after important professional situations.</p>
+ <p>Outside of clinical work, I understand the challenge of balancing professional excellence with personal well-being. This isn't just professional knowledge for me—it's lived experience that informs how I approach our work together.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- Getting Started Section -->
-        <section class="section alternate-bg">
-            <div class="container">
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h2>Getting Started with Performance Anxiety Therapy</h2>
-                        <p>Starting therapy for performance anxiety as a busy professional requires an approach that's straightforward, efficient, and respectful of your time constraints. Here's how the process works:</p>
-                        <h3>Free 15-Minute Professional Consultation</h3>
-                        <p>We begin with a brief, focused conversation about your specific performance challenges and professional goals. This isn't a therapy session—it's a strategic consultation to determine if we're a good fit and whether this approach can help with your particular situation.</p>
-                        <p>You can share as much or as little as feels comfortable about your current performance challenges, upcoming high-stakes situations, and what you hope to achieve through this work.</p>
-                        <h3>Investment and Insurance</h3>
-                        <p>Most extended health plans in Ontario provide excellent coverage for services from a Registered Psychotherapist. I provide detailed receipts that make insurance submission straightforward. Many executives and professionals find that even without insurance, the investment pays for itself quickly through improved performance and expanded career opportunities.</p>
-                        <div class="info-cards">
-                            <div class="info-card">
-                                <h4>Session Investment</h4>
-                                <p>$175 per 50-minute session</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Insurance Coverage</h4>
-                                <p>Most plans cover 80-100% of the session fee</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Executive Scheduling</h4>
-                                <p>Early morning, lunch hour, evening, and weekend appointments available</p>
-                            </div>
-                            <div class="info-card">
-                                <h4>Results-Focused</h4>
-                                <p>Work together as long as it's adding value to your professional performance</p>
-                            </div>
-                        </div>
-                        <h3>Scheduling for Toronto Professionals</h3>
-                        <p>Virtual therapy means you can access performance anxiety support without disrupting your professional schedule. Sessions can happen from your office, home office, or any private space with internet access. Many clients appreciate being able to have a session and immediately apply new skills in their actual work environment.</p>
-                        <p>I offer sessions during hours that work for demanding professional schedules: early morning (before markets open), lunch hours, early evening, and weekend slots. We can also schedule additional brief check-ins before major presentations or performance situations.</p>
-                        <h3>What Happens Next</h3>
-                        <p>After our consultation, if we decide to work together, we'll schedule your first strategic session. This focuses on understanding your specific performance anxiety pattern and developing an initial action plan. Between sessions, you're welcome to email with questions about techniques or upcoming performance challenges.</p>
-                        <p>Most professionals start to notice shifts in their performance confidence within the first few sessions, with more significant changes typically developing over a period of weeks to months. We'll regularly assess progress and adjust our approach based on your actual performance outcomes and professional feedback.</p>
-                        <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md);">
-                            <h4>Ready to Perform at Your Best?</h4>
-                            <p style="margin-bottom: var(--space-md);">Your free consultation is just a phone call away. No pressure, no lengthy intake process—just a focused conversation about how to enhance your professional performance when it matters most.</p>
-                            <a href="/#contact" class="btn btn-primary">Schedule Your Strategic Consultation</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- Getting Started Section -->
+ <section class="section alternate-bg">
+ <div class="container">
+ <div class="content-grid">
+ <div class="content-card">
+ <h2>Getting Started with Performance Anxiety Therapy</h2>
+ <p>Starting therapy for performance anxiety as a busy professional requires an approach that's straightforward, efficient, and respectful of your time constraints. Here's how the process works:</p>
+ <h3>Free 15-Minute Professional Consultation</h3>
+ <p>We begin with a brief, focused conversation about your specific performance challenges and professional goals. This isn't a therapy session—it's a strategic consultation to determine if we're a good fit and whether this approach can help with your particular situation.</p>
+ <p>You can share as much or as little as feels comfortable about your current performance challenges, upcoming high-stakes situations, and what you hope to achieve through this work.</p>
+ <h3>Investment and Insurance</h3>
+ <p>Most extended health plans in Ontario provide excellent coverage for services from a Registered Psychotherapist. I provide detailed receipts that make insurance submission straightforward. Many executives and professionals find that even without insurance, the investment pays for itself quickly through improved performance and expanded career opportunities.</p>
+ <div class="info-cards">
+ <div class="info-card">
+ <h4>Session Investment</h4>
+ <p>$175 per 50-minute session</p>
+ </div>
+ <div class="info-card">
+ <h4>Insurance Coverage</h4>
+ <p>Most plans cover 80-100% of the session fee</p>
+ </div>
+ <div class="info-card">
+ <h4>Executive Scheduling</h4>
+ <p>Early morning, lunch hour, evening, and weekend appointments available</p>
+ </div>
+ <div class="info-card">
+ <h4>Results-Focused</h4>
+ <p>Work together as long as it's adding value to your professional performance</p>
+ </div>
+ </div>
+ <h3>Scheduling for Toronto Professionals</h3>
+ <p>Virtual therapy means you can access performance anxiety support without disrupting your professional schedule. Sessions can happen from your office, home office, or any private space with internet access. Many clients appreciate being able to have a session and immediately apply new skills in their actual work environment.</p>
+ <p>I offer sessions during hours that work for demanding professional schedules: early morning (before markets open), lunch hours, early evening, and weekend slots. We can also schedule additional brief check-ins before major presentations or performance situations.</p>
+ <h3>What Happens Next</h3>
+ <p>After our consultation, if we decide to work together, we'll schedule your first strategic session. This focuses on understanding your specific performance anxiety pattern and developing an initial action plan. Between sessions, you're welcome to email with questions about techniques or upcoming performance challenges.</p>
+ <p>Most professionals start to notice shifts in their performance confidence within the first few sessions, with more significant changes typically developing over a period of weeks to months. We'll regularly assess progress and adjust our approach based on your actual performance outcomes and professional feedback.</p>
+ <div style="text-align: center; margin-top: var(--space-xl); padding: var(--space-lg); background: rgba(30, 58, 79, 0.05); border-radius: var(--radius-md);">
+ <h4>Ready to Perform at Your Best?</h4>
+ <p style="margin-bottom: var(--space-md);">Your free consultation is just a phone call away. No pressure, no lengthy intake process—just a focused conversation about how to enhance your professional performance when it matters most.</p>
+ <a href="/#contact" class="btn btn-primary">Schedule Your Strategic Consultation</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container">
-                <div class="content-grid">
-                    <h2 class="section-title centered">Frequently Asked Questions</h2>
-                    <div class="faq-grid">
-                        <div class="faq-item">
-                            <h4>"How is performance anxiety therapy different from general anxiety treatment?"</h4>
-                            <p>Performance anxiety therapy is specifically focused on enhancing your performance in high-stakes professional situations. Rather than general stress management, we work on skills that directly improve your effectiveness when presenting, leading, or performing under pressure.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>"Will this approach work for someone at the executive level?"</h4>
-                            <p>Absolutely. Many of my clients are senior executives, partners, and C-suite professionals. The approach is designed specifically for high-achieving individuals who need practical strategies that work in demanding professional environments.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>"How quickly can I expect to see improvement in my performance?"</h4>
-                            <p>Many clients notice some improvement within the first few sessions, particularly in their confidence approaching performance situations. Significant, lasting change typically develops over 6-12 sessions, depending on your specific situation and goals.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>"Can we work around my travel schedule and client demands?"</h4>
-                            <p>Yes. Virtual sessions provide maximum flexibility, and I understand that professional demands sometimes require schedule adjustments. We can also arrange brief check-ins before major presentations or performance situations as needed.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>"Is my information completely confidential?"</h4>
-                            <p>Absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. Nothing we discuss will be shared with anyone, including your employer, colleagues, or professional contacts. Privacy is paramount, especially for executives and senior professionals.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h4>"What if I have an important presentation coming up soon?"</h4>
-                            <p>We can work together on immediate strategies for upcoming performance situations while also building longer-term skills. Many clients find it helpful to have support both before and after important professional events.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- FAQ Section -->
+ <section class="section">
+ <div class="container">
+ <div class="content-grid">
+ <h2 class="section-title centered">Frequently Asked Questions</h2>
+ <div class="faq-grid">
+ <div class="faq-item">
+ <h4>"How is performance anxiety therapy different from general anxiety treatment?"</h4>
+ <p>Performance anxiety therapy is specifically focused on enhancing your performance in high-stakes professional situations. Rather than general stress management, we work on skills that directly improve your effectiveness when presenting, leading, or performing under pressure.</p>
+ </div>
+ <div class="faq-item">
+ <h4>"Will this approach work for someone at the executive level?"</h4>
+ <p>Absolutely. Many of my clients are senior executives, partners, and C-suite professionals. The approach is designed specifically for high-achieving individuals who need practical strategies that work in demanding professional environments.</p>
+ </div>
+ <div class="faq-item">
+ <h4>"How quickly can I expect to see improvement in my performance?"</h4>
+ <p>Many clients notice some improvement within the first few sessions, particularly in their confidence approaching performance situations. Significant, lasting change typically develops over 6-12 sessions, depending on your specific situation and goals.</p>
+ </div>
+ <div class="faq-item">
+ <h4>"Can we work around my travel schedule and client demands?"</h4>
+ <p>Yes. Virtual sessions provide maximum flexibility, and I understand that professional demands sometimes require schedule adjustments. We can also arrange brief check-ins before major presentations or performance situations as needed.</p>
+ </div>
+ <div class="faq-item">
+ <h4>"Is my information completely confidential?"</h4>
+ <p>Absolutely. As a Registered Psychotherapist, I'm bound by strict confidentiality requirements. Nothing we discuss will be shared with anyone, including your employer, colleagues, or professional contacts. Privacy is paramount, especially for executives and senior professionals.</p>
+ </div>
+ <div class="faq-item">
+ <h4>"What if I have an important presentation coming up soon?"</h4>
+ <p>We can work together on immediate strategies for upcoming performance situations while also building longer-term skills. Many clients find it helpful to have support both before and after important professional events.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <!-- Final CTA Section -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <h2>Perform at Your Best When It Matters Most</h2>
-                    <p class="contact-lead">You've already proven your competence. Now let's help your performance reflect your actual capabilities, especially in those high-stakes moments that matter most for your career.</p>
-                    <h3>Free 15-Minute Strategic Consultation</h3>
-                    <p>Start with a focused conversation about your specific performance challenges and professional goals. This brief consultation helps us both determine if this approach is right for your situation and career objectives.</p>
-                    <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;">
-                        <a href="tel:+14163062157" class="btn btn-primary">Book Strategic Consultation</a>
-                        <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Send Message</a>
-                    </div>
-                    <div class="contact-info">
-                        <h4>Performance Anxiety Therapy for Toronto Professionals</h4>
-                        <div class="therapist-details">
-                            <p><strong>Jesse Cynamon, RP</strong><br>
-                                Registered Psychotherapist | <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a><br>
-                                Performance Anxiety Specialist | Toronto & All Ontario<br>
-                                Insurance Receipts Provided | Executive Scheduling Available</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+ <!-- Final CTA Section -->
+ <section class="contact-section" id="contact">
+ <div class="container">
+ <div class="contact-content">
+ <h2>Perform at Your Best When It Matters Most</h2>
+ <p class="contact-lead">You've already proven your competence. Now let's help your performance reflect your actual capabilities, especially in those high-stakes moments that matter most for your career.</p>
+ <h3>Free 15-Minute Strategic Consultation</h3>
+ <p>Start with a focused conversation about your specific performance challenges and professional goals. This brief consultation helps us both determine if this approach is right for your situation and career objectives.</p>
+ <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin: var(--space-xl) 0;">
+ <a href="tel:+14163062157" class="btn btn-primary">Book Strategic Consultation</a>
+ <a href="mailto:jesse@nextsteptherapy.ca" class="btn btn-secondary">Send Message</a>
+ </div>
+ <div class="contact-info">
+ <h4>Performance Anxiety Therapy for Toronto Professionals</h4>
+ <div class="therapist-details">
+ <p><strong>Jesse Cynamon, RP</strong><br>
+ Registered Psychotherapist | <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a><br>
+ Performance Anxiety Specialist | Toronto & All Ontario<br>
+ Insurance Receipts Provided | Executive Scheduling Available</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
 
-    <!-- Mobile CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
-        <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
-        <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
-    </div>
+ <!-- Mobile CTA Bar -->
+ <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
+ <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
+ </div>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            lucide.createIcons();
-        });
-    </script>
+ <!-- Initialize Lucide Icons -->
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+ lucide.createIcons();
+ });
+ </script>
 
-    <script src="/js/security-check.js"></script>
+ <script src="/js/security-check.js"></script>
 </body>
 </html>

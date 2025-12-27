@@ -1,656 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Google Analytics 4 + Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+ <meta charset="UTF-8">
+ <!-- Google Analytics 4 + Conversion Tracking -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
 
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
+ gtag('config', 'G-J8H4YBGSHR', {
+ 'allow_enhanced_conversions': true,
+ 'send_page_view': true
+ });
 
-        // Track conversions
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'booking_click', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ // Track conversions
+ document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'phone_call', {
+ 'event_category': 'conversion',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
+ document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'booking_click', {
+ 'event_category': 'conversion',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
+ });
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1e3a4f',
-                        sage: '#4a7c59',
-                        cream: '#f8f6f2',
-                        'navy-light': '#2d5066'
-                    },
-                    fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'body': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Compatibility Styles for Legacy Classes -->
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }.alternate-bg { background: #f1f5f9; }
-        a { color: #1e3a4f; }
-        a:hover { color: #4a7c59; }
-    </style>
+ <!-- Fonts - Gemini Design System -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ colors: {
+ navy: '#1e3a4f',
+ sage: '#4a7c59',
+ cream: '#f8f6f2',
+ 'navy-light': '#2d5066'
+ },
+ fontFamily: {
+ 'display': ['Playfair Display', 'serif'],
+ 'body': ['Inter', 'sans-serif']
+ }
+ }
+ }
+ }
+ </script>
+ 
+ <!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest"></script>
+ 
+ <!-- Compatibility Styles for Legacy Classes -->
+ <style>
+ body { font-family: 'Inter', sans-serif; background-color: #f8f6f2; }.section { padding: 4rem 1rem; }.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }.section-title { font-family: 'Playfair Display', serif; font-size: 1.875rem; font-weight: 600; color: #1e3a4f; margin-bottom: 1.5rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d5066 100%); padding: 2.5rem; border-radius: 1rem; text-align: center; margin-top: 2rem; }.cta-box h3 { color: white; margin-top: 0; font-family: 'Playfair Display', serif; }.cta-box p { color: rgba(255,255,255,0.9); }.cta-box.btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; margin: 0.5rem; }.cta-box.btn-primary { background: #4a7c59; color: white; }.cta-box.btn-secondary { background: white; color: #1e3a4f; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid #e5e7eb; }.feature-list li::before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }.info-card { background: #f8f6f2; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #1e3a4f; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-top: 0; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.25rem; border-radius: 0.75rem; text-align: center; border: 1px solid #e5e7eb; }.alternate-bg { background: #f1f5f9; }
+ a { color: #1e3a4f; }
+ a:hover { color: #4a7c59; }
+ </style>
 
-    <!-- SEO Meta Data - Exact Keyword Match -->
-    <title>Perfectionism Therapy Ontario | Break the Burnout Cycle</title>
-    <meta name="description" content="Exhausted from impossible standards? Virtual therapy for perfectionism and burnout across Ontario. Evening appointments. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a> registered. Free consultation.">
+ <!-- SEO Meta Data - Exact Keyword Match -->
+ <title>Perfectionism Therapy Ontario | Break the Burnout Cycle</title>
+ <meta name="description" content="Exhausted from impossible standards? Virtual therapy for perfectionism and burnout across Ontario. Evening appointments. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a> registered. Free consultation.">
 
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
-    </script>
+ <!-- Microsoft Clarity -->
+ <script type="text/javascript">
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "u8v6vfikjr");
+ </script>
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Perfectionism and Burnout Therapy Toronto | Next Step Therapy">
-    <meta property="og:description" content="Evidence-based therapy for perfectionism and burnout. Help Toronto professionals overcome exhaustion, anxiety, and high-pressure workplace stress.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/perfectionism-therapy.html">
+ <!-- Open Graph Tags -->
+ <meta property="og:title" content="Perfectionism and Burnout Therapy Toronto | Next Step Therapy">
+ <meta property="og:description" content="Evidence-based therapy for perfectionism and burnout. Help Toronto professionals overcome exhaustion, anxiety, and high-pressure workplace stress.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nextsteptherapy.ca/perfectionism-therapy.html">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/perfectionism-therapy.html">
+ <!-- Canonical URL -->
+ <link rel="canonical" href="https://nextsteptherapy.ca/perfectionism-therapy.html">
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Perfectionism Therapy in Ontario",
-      "description": "Therapy services for perfectionism and burnout, helping Ontario professionals overcome exhaustion, anxiety, and workplace stress.",
-      "provider": {
-        "@type": "Person",
-        "additionalType": "Psychotherapist",
-        "name": "Jesse Cynamon, RP",
-        "identifier": "CRPO #10979",
-        "areaServed": "Ontario, Canada"
-      },
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Perfectionism and Burnout Therapy",
-        "description": "Therapy for high achievers and burnout recovery",
-        "serviceType": "Psychotherapy"
-      },
-      "addressLocality": "Toronto", "addressRegion": "ON",
-      "addressLocality": "Toronto"
-    }
-    </script>
+ <!-- Schema Markup -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "Perfectionism Therapy in Ontario",
+ "description": "Therapy services for perfectionism and burnout, helping Ontario professionals overcome exhaustion, anxiety, and workplace stress.",
+ "provider": {
+ "@type": "Person",
+ "additionalType": "Psychotherapist",
+ "name": "Jesse Cynamon, RP",
+ "identifier": "CRPO #10979",
+ "areaServed": "Ontario, Canada"
+ },
+ "availableService": {
+ "@type": "MedicalTherapy",
+ "name": "Perfectionism and Burnout Therapy",
+ "description": "Therapy for high achievers and burnout recovery",
+ "serviceType": "Psychotherapy"
+ },
+ "addressLocality": "Toronto", "addressRegion": "ON",
+ "addressLocality": "Toronto"
+ }
+ </script>
 
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is perfectionism and is it really a problem?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does therapy help with perfectionism?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the 'not good enough' thoughts so they stop running your decisions. You can still pursue excellence without the internal torture."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will I lose my drive if I stop being a perfectionist?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, rumination, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does perfectionism therapy take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one."
-          }
-        }
-      ]
-    }
-    </script>
+ <!-- FAQPage Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "What is perfectionism and is it really a problem?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How does therapy help with perfectionism?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the 'not good enough' thoughts so they stop running your decisions. You can still pursue excellence without the internal torture."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Will I lose my drive if I stop being a perfectionist?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, rumination, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does perfectionism therapy take?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one."
+ }
+ }
+ ]
+ }
+ </script>
 
-    <!-- Structured Data for Local Business -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://nextsteptherapy.ca/#organization",
-      "name": "Next Step Therapy",
-      "image": "https://nextsteptherapy.ca/images/next-step-therapy-logo.webp",
-      "telephone": "+14163062157",
-      "url": "https://nextsteptherapy.ca",
-      "areaServed": [
-        {"@type": "City", "name": "Toronto", "addressLocality": "Toronto", "addressRegion": "ON"},
-        {"@type": "Province", "name": "Ontario"}
-      ],
-      "serviceArea": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 43.6532,
-          "longitude": -79.3832
-        },
-        "geoRadius": "100000"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Mental Health Services",
-        "itemListElement": [{
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Perfectionism and Burnout Therapy",
-            "description": "Specialized therapy for high achievers dealing with perfectionism and burnout"
-          }
-        }]
-      }
-    }
-    </script>
+ <!-- Structured Data for Local Business -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "@id": "https://nextsteptherapy.ca/#organization",
+ "name": "Next Step Therapy",
+ "image": "https://nextsteptherapy.ca/images/next-step-therapy-logo.webp",
+ "telephone": "+14163062157",
+ "url": "https://nextsteptherapy.ca",
+ "areaServed": [
+ {"@type": "City", "name": "Toronto", "addressLocality": "Toronto", "addressRegion": "ON"},
+ {"@type": "Province", "name": "Ontario"}
+ ],
+ "serviceArea": {
+ "@type": "GeoCircle",
+ "geoMidpoint": {
+ "@type": "GeoCoordinates",
+ "latitude": 43.6532,
+ "longitude": -79.3832
+ },
+ "geoRadius": "100000"
+ },
+ "hasOfferCatalog": {
+ "@type": "OfferCatalog",
+ "name": "Mental Health Services",
+ "itemListElement": [{
+ "@type": "Offer",
+ "itemOffered": {
+ "@type": "Service",
+ "name": "Perfectionism and Burnout Therapy",
+ "description": "Specialized therapy for high achievers dealing with perfectionism and burnout"
+ }
+ }]
+ }
+ }
+ </script>
 
-    <!-- Critical CSS Inline -->
-    <!-- Internal style block removed by Design Audit -->
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Legacy Gemini CSS -->
-    <link rel="stylesheet" href="/css/legacy-gemini.css">
+ <!-- Critical CSS Inline -->
+ <!-- Internal style block removed by Design Audit -->
+ <!-- Ahrefs Analytics -->
+ <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+ <!-- Legacy Gemini CSS -->
+ <link rel="stylesheet" href="/css/legacy-gemini.css">
 </head>
 
 <body>
-    <!-- Header -->
+ <!-- Header -->
 <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
-            </div>
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
-                <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
-                <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
-                <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
-            </div>
-        </div>
-    </div>
+ <div class="max-w-7xl mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-4">
+ <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+ <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
+ </div>
+ <nav class="hidden md:flex items-center gap-8">
+ <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+ <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+ <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
+ </nav>
+ <div class="flex items-center gap-4">
+ <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+ </div>
+ </div>
+ </div>
 </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-cream via-white to-sage/5 py-16 md:py-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(74, 124, 89, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(30, 58, 79, 0.1) 0%, transparent 50%);"></div>
-        <div class="max-w-7xl mx-auto px-6 relative">
-            <div class="max-w-3xl">
-                <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">PERFECTIONISM THERAPY</span>
-                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Perfectionism Therapy in Ontario</h1>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You're successful. That's not the problem. The problem is nothing ever feels like enough. Working 70-hour weeks, no real vacation in years, convinced that anything less than perfect means letting everyone down. Here's what I've seen: perfectionism isn't about high standards—it's about deriving your entire self-worth from achievement. That's exhausting.</p>
-                
-                <div class="flex flex-wrap gap-4 mb-8">
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20 inline-flex items-center gap-2">
-                        <i data-lucide="calendar" class="w-5 h-5"></i> Stop the Internal Torture
-                    </a>
-                    <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all">Call (416) 306-2157</a>
-                </div>
-                
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a></span>
-                    <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ $175/session</span>
-                    <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ Same-Week Available</span>
-                    <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ Insurance Receipts</span>
-                </div>
-            </div>
-        </div>
+ <!-- Hero Section -->
+ <section class="relative bg-gradient-to-br from-cream via-white to-sage/5 py-16 md:py-24 overflow-hidden">
+ <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(74, 124, 89, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(30, 58, 79, 0.1) 0%, transparent 50%);"></div>
+ <div class="max-w-7xl mx-auto px-6 relative">
+ <div class="max-w-3xl">
+ <span class="inline-block px-4 py-1.5 bg-sage/10 text-sage text-xs font-semibold rounded-full mb-6 tracking-wider">PERFECTIONISM THERAPY</span>
+ <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-navy leading-tight mb-6">Perfectionism Therapy in Ontario</h1>
+ <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">You're successful. That's not the problem. The problem is nothing ever feels like enough. Working 70-hour weeks, no real vacation in years, convinced that anything less than perfect means letting everyone down. Here's what I've seen: perfectionism isn't about high standards—it's about deriving your entire self-worth from achievement. That's exhausting.</p>
+ 
+ <div class="flex flex-wrap gap-4 mb-8">
+ <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-xl font-semibold hover:bg-navy-light transition-all shadow-lg shadow-navy/20 inline-flex items-center gap-2">
+ <i data-lucide="calendar" class="w-5 h-5"></i> Stop the Internal Torture
+ </a>
+ <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all">Call (416) 306-2157</a>
+ </div>
+ 
+ <div class="flex flex-wrap gap-3">
+ <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a></span>
+ <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ $175/session</span>
+ <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ Same-Week Available</span>
+ <span class="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm text-gray-700 border border-gray-200">✓ Insurance Receipts</span>
+ </div>
+ </div>
+ </div>
 
-            <div class="quick-stats">
-                <div class="quick-stat-card">
-                    <h3>Worth ≠ Productivity</h3>
-                    <p>Learn to separate your value as a person from your output at work—without losing your drive.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>ACT-Based Approach</h3>
-                    <p>Change your relationship with "not good enough" thoughts so they stop running your decisions.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>For High Achievers</h3>
-                    <p>Designed for professionals who excel—but are exhausted by their own impossible standards.</p>
-                </div>
-                <div class="quick-stat-card">
-                    <h3>Virtual Across Ontario</h3>
-                    <p>Secure video sessions—no commute, no explaining your calendar to colleagues.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Worth ≠ Productivity</h3>
+ <p>Learn to separate your value as a person from your output at work—without losing your drive.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>ACT-Based Approach</h3>
+ <p>Change your relationship with "not good enough" thoughts so they stop running your decisions.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>For High Achievers</h3>
+ <p>Designed for professionals who excel—but are exhausted by their own impossible standards.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Virtual Across Ontario</h3>
+ <p>Secure video sessions—no commute, no explaining your calendar to colleagues.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- AI-Snippable Definition Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">What Is Perfectionism?</h2>
-            <p><strong>Perfectionism is a psychological pattern characterized by setting unrealistically high standards, harsh self-criticism when those standards aren't met, and deriving self-worth primarily from achievement and external validation.</strong> Research shows perfectionism has increased 33% since 1989, particularly among young professionals in competitive fields. Unlike healthy striving, maladaptive perfectionism drives burnout, anxiety, and paradoxically decreases performance over time. Evidence-based therapy using ACT (Acceptance and Commitment Therapy) helps individuals set realistic standards while maintaining motivation and achievement.</p>
-        </div>
-    </section>
+ <!-- AI-Snippable Definition Section -->
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">What Is Perfectionism?</h2>
+ <p><strong>Perfectionism is a psychological pattern characterized by setting unrealistically high standards, harsh self-criticism when those standards aren't met, and deriving self-worth primarily from achievement and external validation.</strong> Research shows perfectionism has increased 33% since 1989, particularly among young professionals in competitive fields. Unlike healthy striving, maladaptive perfectionism drives burnout, anxiety, and paradoxically decreases performance over time. Evidence-based therapy using ACT (Acceptance and Commitment Therapy) helps individuals set realistic standards while maintaining motivation and achievement.</p>
+ </div>
+ </section>
 
-    <!-- Statistics Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <h2 class="section-title">The Reality of Perfectionism & Burnout</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>76%</h3>
-                    <p>of professionals report experiencing burnout in their current role</p>
-                </div>
-                <div class="stat-item">
-                    <h3>3x</h3>
-                    <p>higher risk of anxiety and depression among perfectionists</p>
-                </div>
-                <div class="stat-item">
-                    <h3>42%</h3>
-                    <p>of Toronto professionals work over 50 hours per week</p>
-                </div>
-                <div class="stat-item">
-                    <h3>CRPO</h3>
-                    <p>Registered Psychotherapist #10979</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- Statistics Section -->
+ <section class="section stats-section">
+ <div class="container">
+ <h2 class="section-title">The Reality of Perfectionism & Burnout</h2>
+ <div class="stats-grid">
+ <div class="stat-item">
+ <h3>76%</h3>
+ <p>of professionals report experiencing burnout in their current role</p>
+ </div>
+ <div class="stat-item">
+ <h3>3x</h3>
+ <p>higher risk of anxiety and depression among perfectionists</p>
+ </div>
+ <div class="stat-item">
+ <h3>42%</h3>
+ <p>of Toronto professionals work over 50 hours per week</p>
+ </div>
+ <div class="stat-item">
+ <h3>CRPO</h3>
+ <p>Registered Psychotherapist #10979</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Warning Signs Section -->
-    <section class="section" id="signs">
-        <div class="container">
-            <h2 class="section-title">Warning Signs You Need Support</h2>
-            <p class="section-subtitle">Recognizing the signs of perfectionism and burnout is the first step toward recovery.</p>
+ <!-- Warning Signs Section -->
+ <section class="section" id="signs">
+ <div class="container">
+ <h2 class="section-title">Warning Signs You Need Support</h2>
+ <p class="section-subtitle">Recognizing the signs of perfectionism and burnout is the first step toward recovery.</p>
 
-            <div class="warning-section">
-                <h3>Are You Experiencing These Signs?</h3>
-                <ul>
-                    <li>Chronic exhaustion that doesn't improve with rest</li>
-                    <li>Feeling like nothing you do is ever "good enough"</li>
-                    <li>Procrastination due to fear of not meeting impossibly high standards</li>
-                    <li>Constant worry about making mistakes or being judged</li>
-                    <li>Physical symptoms like headaches, insomnia, or digestive issues</li>
-                    <li>Difficulty enjoying achievements or celebrating successes</li>
-                    <li>Imposter syndrome and fear of being "found out"</li>
-                    <li>All-or-nothing thinking patterns</li>
-                    <li>Difficulty delegating or asking for help</li>
-                    <li>Neglecting relationships and self-care</li>
-                </ul>
-            </div>
+ <div class="warning-section">
+ <h3>Are You Experiencing These Signs?</h3>
+ <ul>
+ <li>Chronic exhaustion that doesn't improve with rest</li>
+ <li>Feeling like nothing you do is ever "good enough"</li>
+ <li>Procrastination due to fear of not meeting impossibly high standards</li>
+ <li>Constant worry about making mistakes or being judged</li>
+ <li>Physical symptoms like headaches, insomnia, or digestive issues</li>
+ <li>Difficulty enjoying achievements or celebrating successes</li>
+ <li>Imposter syndrome and fear of being "found out"</li>
+ <li>All-or-nothing thinking patterns</li>
+ <li>Difficulty delegating or asking for help</li>
+ <li>Neglecting relationships and self-care</li>
+ </ul>
+ </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Perfectionism Trap</h3>
-                    <p>The relentless pursuit of flawlessness creates anxiety, procrastination, and self-criticism that ultimately decreases performance and satisfaction.</p>
-                </div>
+ <div class="features-grid">
+ <div class="feature-card">
+ <h3>Perfectionism Trap</h3>
+ <p>The relentless pursuit of flawlessness creates anxiety, procrastination, and self-criticism that ultimately decreases performance and satisfaction.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Burnout Cycle</h3>
-                    <p>Chronic workplace stress leads to physical and emotional exhaustion, cynicism, and reduced sense of personal accomplishment.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Burnout Cycle</h3>
+ <p>Chronic workplace stress leads to physical and emotional exhaustion, cynicism, and reduced sense of personal accomplishment.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Imposter Syndrome</h3>
-                    <p>Persistent doubt about your accomplishments and fear of being exposed as a "fraud" despite evidence of competence and success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="feature-card">
+ <h3>Imposter Syndrome</h3>
+ <p>Persistent doubt about your accomplishments and fear of being exposed as a "fraud" despite evidence of competence and success.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Treatment Approach Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <h2 class="section-title">Evidence-Based Treatment Approaches</h2>
-            <p class="section-subtitle">Therapeutic interventions designed to address perfectionism and burnout recovery.</p>
+ <!-- Treatment Approach Section -->
+ <section class="section stats-section">
+ <div class="container">
+ <h2 class="section-title">Evidence-Based Treatment Approaches</h2>
+ <p class="section-subtitle">Therapeutic interventions designed to address perfectionism and burnout recovery.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Acceptance & Commitment Therapy</h3>
-                    <p>Learn to accept imperfection while committing to values-based action. Break free from the perfectionism trap through mindfulness and flexibility.</p>
-                </div>
+ <div class="features-grid">
+ <div class="feature-card">
+ <h3>Acceptance & Commitment Therapy</h3>
+ <p>Learn to accept imperfection while committing to values-based action. Break free from the perfectionism trap through mindfulness and flexibility.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Cognitive Behavioral Therapy</h3>
-                    <p>Identify and challenge perfectionist thinking patterns. Develop realistic standards and healthier coping strategies for workplace stress.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Cognitive Behavioral Therapy</h3>
+ <p>Identify and challenge perfectionist thinking patterns. Develop realistic standards and healthier coping strategies for workplace stress.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Mindfulness-Based Interventions</h3>
-                    <p>Cultivate present-moment awareness and self-compassion. Reduce stress reactivity and improve emotional regulation.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Mindfulness-Based Interventions</h3>
+ <p>Cultivate present-moment awareness and self-compassion. Reduce stress reactivity and improve emotional regulation.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Burnout Recovery Planning</h3>
-                    <p>Systematic approach to recovery including boundary setting, stress management, and sustainable work-life integration strategies.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Burnout Recovery Planning</h3>
+ <p>Systematic approach to recovery including boundary setting, stress management, and sustainable work-life integration strategies.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Values Clarification</h3>
-                    <p>Reconnect with what truly matters to you beyond external achievements. Create meaningful goals aligned with your core values.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Values Clarification</h3>
+ <p>Reconnect with what truly matters to you beyond external achievements. Create meaningful goals aligned with your core values.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Self-Compassion Training</h3>
-                    <p>Develop a kinder, more supportive relationship with yourself. Learn to treat yourself with the same kindness you'd show a good friend.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="feature-card">
+ <h3>Self-Compassion Training</h3>
+ <p>Develop a kinder, more supportive relationship with yourself. Learn to treat yourself with the same kindness you'd show a good friend.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Recovery Journey Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Your Recovery Journey</h2>
-            <p class="section-subtitle">A structured approach to overcoming perfectionism and recovering from burnout.</p>
+ <!-- Recovery Journey Section -->
+ <section class="section">
+ <div class="container">
+ <h2 class="section-title">Your Recovery Journey</h2>
+ <p class="section-subtitle">A structured approach to overcoming perfectionism and recovering from burnout.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Phase 1: Assessment & Awareness</h3>
-                    <p>Comprehensive evaluation of perfectionist patterns, burnout symptoms, and personal triggers. Build self-awareness and motivation for change.</p>
-                </div>
+ <div class="features-grid">
+ <div class="feature-card">
+ <h3>Phase 1: Assessment & Awareness</h3>
+ <p>Comprehensive evaluation of perfectionist patterns, burnout symptoms, and personal triggers. Build self-awareness and motivation for change.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Phase 2: Skill Building</h3>
-                    <p>Learn practical tools for managing perfectionist thinking, setting realistic standards, and developing healthy coping strategies.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Phase 2: Skill Building</h3>
+ <p>Learn practical tools for managing perfectionist thinking, setting realistic standards, and developing healthy coping strategies.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Phase 3: Implementation</h3>
-                    <p>Apply new skills in real-world situations. Practice flexible thinking, self-compassion, and sustainable work practices.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Phase 3: Implementation</h3>
+ <p>Apply new skills in real-world situations. Practice flexible thinking, self-compassion, and sustainable work practices.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Phase 4: Maintenance</h3>
-                    <p>Develop long-term strategies for preventing relapse. Build resilience and maintain healthy boundaries in high-pressure environments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="feature-card">
+ <h3>Phase 4: Maintenance</h3>
+ <p>Develop long-term strategies for preventing relapse. Build resilience and maintain healthy boundaries in high-pressure environments.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Toronto Professionals Section -->
-    <section class="section stats-section">
-        <div class="container">
-            <h2 class="section-title">Supporting Ontario's High Achievers</h2>
-            <p class="section-subtitle">Whether you're grinding on Bay Street, pushing through startup culture in Toronto's tech corridors, managing a team in Ottawa, or burning out in healthcare across the province—I understand the unique pressures Ontario professionals face. Our competitive culture often rewards overwork and perfectionism, but it's killing your mental health.</p>
+ <!-- Toronto Professionals Section -->
+ <section class="section stats-section">
+ <div class="container">
+ <h2 class="section-title">Supporting Ontario's High Achievers</h2>
+ <p class="section-subtitle">Whether you're grinding on Bay Street, pushing through startup culture in Toronto's tech corridors, managing a team in Ottawa, or burning out in healthcare across the province—I understand the unique pressures Ontario professionals face. Our competitive culture often rewards overwork and perfectionism, but it's killing your mental health.</p>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Financial District Professionals</h3>
-                    <p>Support for banking, finance, and corporate professionals dealing with high-pressure deadlines and performance expectations.</p>
-                </div>
+ <div class="features-grid">
+ <div class="feature-card">
+ <h3>Financial District Professionals</h3>
+ <p>Support for banking, finance, and corporate professionals dealing with high-pressure deadlines and performance expectations.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Healthcare Workers</h3>
-                    <p>Support for doctors, nurses, and healthcare professionals experiencing compassion fatigue and burnout.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Healthcare Workers</h3>
+ <p>Support for doctors, nurses, and healthcare professionals experiencing compassion fatigue and burnout.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Tech Industry</h3>
-                    <p>Help for software developers, product managers, and tech professionals navigating startup culture and rapid change.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Tech Industry</h3>
+ <p>Help for software developers, product managers, and tech professionals navigating startup culture and rapid change.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Legal Professionals</h3>
-                    <p>Support for lawyers, paralegals, and legal professionals managing billable hour pressure and client demands.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Legal Professionals</h3>
+ <p>Support for lawyers, paralegals, and legal professionals managing billable hour pressure and client demands.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Creative Industries</h3>
-                    <p>Help for artists, writers, designers, and creative professionals dealing with perfectionism and creative blocks.</p>
-                </div>
+ <div class="feature-card">
+ <h3>Creative Industries</h3>
+ <p>Help for artists, writers, designers, and creative professionals dealing with perfectionism and creative blocks.</p>
+ </div>
 
-                <div class="feature-card">
-                    <h3>Entrepreneurs & Executives</h3>
-                    <p>Support for business leaders managing multiple responsibilities and high-stakes decision-making.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="feature-card">
+ <h3>Entrepreneurs & Executives</h3>
+ <p>Support for business leaders managing multiple responsibilities and high-stakes decision-making.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- FAQ Section -->
-    <section class="section faq">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3 class="faq-question">What is perfectionism and is it really a problem?</h3>
-                    <p class="faq-answer">Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout. It's not a personality quirk; it's a pattern that's exhausting you.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How does therapy help with perfectionism?</h3>
-                    <p class="faq-answer">The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the "not good enough" thoughts so they stop running your decisions. You can still pursue excellence without the internal torture. That's not the problem. The problem is the suffering that comes with it.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">Will I lose my drive if I stop being a perfectionist?</h3>
-                    <p class="faq-answer">Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, <a href="/rumination-therapy.html">rumination</a>, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less. The drive stays; the suffering doesn't have to.</p>
-                </div>
-                <div class="faq-item">
-                    <h3 class="faq-question">How long does perfectionism therapy take?</h3>
-                    <p class="faq-answer">Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- FAQ Section -->
+ <section class="section faq">
+ <div class="container">
+ <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+ <div class="faq-grid">
+ <div class="faq-item">
+ <h3 class="faq-question">What is perfectionism and is it really a problem?</h3>
+ <p class="faq-answer">Here's what I've seen: perfectionism isn't about having high standards. It's about deriving your entire self-worth from achievement. The goal keeps moving—each success just raises the bar. Research shows perfectionism has increased 33% since 1989, and it correlates with anxiety, depression, and burnout. It's not a personality quirk; it's a pattern that's exhausting you.</p>
+ </div>
+ <div class="faq-item">
+ <h3 class="faq-question">How does therapy help with perfectionism?</h3>
+ <p class="faq-answer">The goal isn't to lower your standards—it's to separate your worth from your productivity. ACT therapy helps you change your relationship with the "not good enough" thoughts so they stop running your decisions. You can still pursue excellence without the internal torture. That's not the problem. The problem is the suffering that comes with it.</p>
+ </div>
+ <div class="faq-item">
+ <h3 class="faq-question">Will I lose my drive if I stop being a perfectionist?</h3>
+ <p class="faq-answer">Here's what I've seen: the opposite happens. Perfectionism is actually inefficient—you're spending energy on catastrophic thinking, <a href="/rumination-therapy.html">rumination</a>, and self-criticism instead of actual work. When that noise quiets down, most people become more productive, not less. The drive stays; the suffering doesn't have to.</p>
+ </div>
+ <div class="faq-item">
+ <h3 class="faq-question">How long does perfectionism therapy take?</h3>
+ <p class="faq-answer">Most professionals notice shifts within a few sessions—not because perfectionism disappears, but because you're relating to it differently. Deeper changes usually happen over 12-16 sessions. We start practical from session one.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Stop the Internal Torture?</h2>
-                <p>You can pursue excellence without suffering. If any of this lands, let's talk. No pressure—just a conversation.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:416-306-2157" class="btn btn-primary">Call (416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-secondary" target="_blank">Book Online</a>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- Call to Action -->
+ <section class="cta-section">
+ <div class="container">
+ <div class="cta-content">
+ <h2>Ready to Stop the Internal Torture?</h2>
+ <p>You can pursue excellence without suffering. If any of this lands, let's talk. No pressure—just a conversation.</p>
+ <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+ <a href="tel:416-306-2157" class="btn btn-primary">Call (416) 306-2157</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-secondary" target="_blank">Book Online</a>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- Related Challenges Section -->
-    <section class="section">
-        <div class="container">
-            <h3 class="section-title" style="text-align: center;">Related Challenges We Help With</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                <a href="/high-functioning-anxiety-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">High-Functioning Anxiety</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Success on the outside, exhaustion on the inside</p>
-                </a>
-                <a href="/imposter-syndrome-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">Imposter Syndrome</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Feeling like a fraud despite evidence of success</p>
-                </a>
-                <a href="/executive-stress-management-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">Executive Stress</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Leadership pressure and organizational demands</p>
-                </a>
-                <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
-                </a>
-                <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
-                </a>
-                <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                    <strong style="color: var(--primary-navy);">Founder Burnout</strong>
-                    <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
-                </a>
-            </div>
-        </div>
-    </section>
+ <!-- Related Challenges Section -->
+ <section class="section">
+ <div class="container">
+ <h3 class="section-title" style="text-align: center;">Related Challenges We Help With</h3>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+ <a href="/high-functioning-anxiety-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">High-Functioning Anxiety</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Success on the outside, exhaustion on the inside</p>
+ </a>
+ <a href="/imposter-syndrome-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Imposter Syndrome</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Feeling like a fraud despite evidence of success</p>
+ </a>
+ <a href="/executive-stress-management-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Executive Stress</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Leadership pressure and organizational demands</p>
+ </a>
+ <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
+ </a>
+ <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
+ </a>
+ <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Founder Burnout</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
+ </a>
+ </div>
+ </div>
+ </section>
 
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
-                <div class="col-span-2 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="text-white font-display font-bold text-lg">NT</span>
-                        </div>
-                        <span class="font-display text-lg font-semibold">Next Step</span>
-                    </div>
-                    <p class="text-white/70 text-sm mb-4">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p class="text-white/90 font-semibold"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</p>
-                    <a href="tel:+14163062157" class="text-sage text-lg font-bold mt-2 block hover:text-white transition-colors">(416) 306-2157</a>
-                </div>
-                <div>
-                    <h4 class="font-display font-semibold mb-4">Therapy Services</h4>
-                    <ul class="space-y-2 text-sm text-white/70">
-                        <li><a href="/anxiety-therapy-ontario.html" class="hover:text-white transition-colors">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html" class="hover:text-white transition-colors">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html" class="hover:text-white transition-colors">Workplace Stress</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" class="hover:text-white transition-colors">Virtual Therapy</a></li>
-                        <li><a href="/mens-mental-health.html" class="hover:text-white transition-colors">Men's Mental Health</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display font-semibold mb-4">Ontario Areas</h4>
-                    <ul class="space-y-2 text-sm text-white/70">
-                        <li><a href="/therapist-toronto.html" class="hover:text-white transition-colors">Toronto</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html" class="hover:text-white transition-colors">Ottawa</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html" class="hover:text-white transition-colors">Hamilton</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html" class="hover:text-white transition-colors">Mississauga</a></li>
-                        <li><a href="/anxiety-therapy-burlington.html" class="hover:text-white transition-colors">Burlington</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display font-semibold mb-4">Specialized</h4>
-                    <ul class="space-y-2 text-sm text-white/70">
-                        <li><a href="/high-functioning-anxiety-ontario.html" class="hover:text-white transition-colors">High Functioning Anxiety</a></li>
-                        <li><a href="/imposter-syndrome-therapy.html" class="hover:text-white transition-colors">Imposter Syndrome</a></li>
-                        <li><a href="/perfectionism-therapy.html" class="hover:text-white transition-colors">Perfectionism</a></li>
-                        <li><a href="/online-counselling-remote-workers.html" class="hover:text-white transition-colors">Remote Work Stress</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-white/70">
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="hover:text-white transition-colors">Do I Need Therapy?</a></li>
-                        <li><a href="/therapy-costs-ontario.html" class="hover:text-white transition-colors">Costs & Insurance</a></li>
-                        <li><a href="/what-to-expect-first-session.html" class="hover:text-white transition-colors">What to Expect</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display font-semibold mb-4">Professional</h4>
-                    <ul class="space-y-2 text-sm text-white/70">
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="hover:text-white transition-colors">About Jesse</a></li>
-                        <li><a href="/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-                    </ul>
-                    <p class="text-white/50 text-xs mt-4">Member: CRPO, OAMHP</p>
-                </div>
-            </div>
-            <div class="border-t border-white/10 pt-8">
-                <div class="bg-white/5 rounded-xl p-4 mb-6 text-center">
-                    <p class="text-white/90 text-sm"><strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | <a href="tel:18665312600" class="text-sage hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)</p>
-                </div>
-                <p class="text-center text-white/50 text-sm">&copy; 2025 Next Step Therapy. All rights reserved. | Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) | Ontario, Canada</p>
-            </div>
-        </div>
-    </footer>
+ <!-- Footer -->
+ <footer class="bg-navy text-white py-16">
+ <div class="max-w-7xl mx-auto px-6">
+ <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
+ <div class="col-span-2 md:col-span-1">
+ <div class="flex items-center gap-3 mb-4">
+ <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+ <span class="text-white font-display font-bold text-lg">NT</span>
+ </div>
+ <span class="font-display text-lg font-semibold">Next Step</span>
+ </div>
+ <p class="text-white/70 text-sm mb-4">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+ <p class="text-white/90 font-semibold"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</p>
+ <a href="tel:+14163062157" class="text-sage text-lg font-bold mt-2 block hover:text-white transition-colors">(416) 306-2157</a>
+ </div>
+ <div>
+ <h4 class="font-display font-semibold mb-4">Therapy Services</h4>
+ <ul class="space-y-2 text-sm text-white/70">
+ <li><a href="/anxiety-therapy-ontario.html" class="hover:text-white transition-colors">Anxiety Therapy</a></li>
+ <li><a href="/depression-therapy-ontario.html" class="hover:text-white transition-colors">Depression Therapy</a></li>
+ <li><a href="/workplace-stress-therapy-ontario.html" class="hover:text-white transition-colors">Workplace Stress</a></li>
+ <li><a href="/virtual-therapy-ontario.html" class="hover:text-white transition-colors">Virtual Therapy</a></li>
+ <li><a href="/mens-mental-health.html" class="hover:text-white transition-colors">Men's Mental Health</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display font-semibold mb-4">Ontario Areas</h4>
+ <ul class="space-y-2 text-sm text-white/70">
+ <li><a href="/therapist-toronto.html" class="hover:text-white transition-colors">Toronto</a></li>
+ <li><a href="/therapy-ottawa-ontario.html" class="hover:text-white transition-colors">Ottawa</a></li>
+ <li><a href="/therapy-hamilton-ontario.html" class="hover:text-white transition-colors">Hamilton</a></li>
+ <li><a href="/therapy-mississauga-ontario.html" class="hover:text-white transition-colors">Mississauga</a></li>
+ <li><a href="/anxiety-therapy-burlington.html" class="hover:text-white transition-colors">Burlington</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display font-semibold mb-4">Specialized</h4>
+ <ul class="space-y-2 text-sm text-white/70">
+ <li><a href="/high-functioning-anxiety-ontario.html" class="hover:text-white transition-colors">High Functioning Anxiety</a></li>
+ <li><a href="/imposter-syndrome-therapy.html" class="hover:text-white transition-colors">Imposter Syndrome</a></li>
+ <li><a href="/perfectionism-therapy.html" class="hover:text-white transition-colors">Perfectionism</a></li>
+ <li><a href="/online-counselling-remote-workers.html" class="hover:text-white transition-colors">Remote Work Stress</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display font-semibold mb-4">Resources</h4>
+ <ul class="space-y-2 text-sm text-white/70">
+ <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="hover:text-white transition-colors">Do I Need Therapy?</a></li>
+ <li><a href="/therapy-costs-ontario.html" class="hover:text-white transition-colors">Costs & Insurance</a></li>
+ <li><a href="/what-to-expect-first-session.html" class="hover:text-white transition-colors">What to Expect</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display font-semibold mb-4">Professional</h4>
+ <ul class="space-y-2 text-sm text-white/70">
+ <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="hover:text-white transition-colors">About Jesse</a></li>
+ <li><a href="/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+ <li><a href="/terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+ </ul>
+ <p class="text-white/50 text-xs mt-4">Member: CRPO, OAMHP</p>
+ </div>
+ </div>
+ <div class="border-t border-white/10 pt-8">
+ <div class="bg-white/5 rounded-xl p-4 mb-6 text-center">
+ <p class="text-white/90 text-sm"><strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) | <a href="tel:18665312600" class="text-sage hover:text-white underline">1-866-531-2600</a> (Ontario Crisis Line)</p>
+ </div>
+ <p class="text-center text-white/50 text-sm">&copy; 2025 Next Step Therapy. All rights reserved. | Jesse Cynamon, RP (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) | Ontario, Canada</p>
+ </div>
+ </div>
+ </footer>
 
-    <!-- Mobile CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
-        <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
-        <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
-    </div>
+ <!-- Mobile CTA Bar -->
+ <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex gap-3 md:hidden z-50 shadow-lg">
+ <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> Call Now</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 px-4 rounded-lg text-center text-sm font-semibold flex items-center justify-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> Book</a>
+ </div>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            lucide.createIcons();
-        });
-    </script>
-    
-    <!-- Additional Performance Optimizations -->
-    <script>
-        // Lazy load images when they enter viewport
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
+ <!-- Initialize Lucide Icons -->
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+ lucide.createIcons();
+ });
+ </script>
+ 
+ <!-- Additional Performance Optimizations -->
+ <script>
+ // Lazy load images when they enter viewport
+ if ('IntersectionObserver' in window) {
+ const imageObserver = new IntersectionObserver((entries, observer) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ const img = entry.target;
+ img.src = img.dataset.src;
+ img.classList.remove('lazy');
+ imageObserver.unobserve(img);
+ }
+ });
+ });
 
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
+ document.querySelectorAll('img[data-src]').forEach(img => {
+ imageObserver.observe(img);
+ });
+ }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+ // Smooth scrolling for anchor links
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function (e) {
+ e.preventDefault();
+ const target = document.querySelector(this.getAttribute('href'));
+ if (target) {
+ target.scrollIntoView({
+ behavior: 'smooth',
+ block: 'start'
+ });
+ }
+ });
+ });
+ </script>
 <script src="/js/security-check.js"></script>
 </body>
 </html>

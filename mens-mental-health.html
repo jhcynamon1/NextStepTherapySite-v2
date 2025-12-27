@@ -1,916 +1,916 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+ <meta charset="UTF-8">
+ <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <!-- Google Analytics 4 + Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
-    <script type="module">
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('.header.smart-sticky');
-            if (!header) return;
+ <!-- Google Analytics 4 + Conversion Tracking -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8H4YBGSHR"></script>
+ <script type="module">
+ document.addEventListener('DOMContentLoaded', function() {
+ const header = document.querySelector('.header.smart-sticky');
+ if (!header) return;
 
-            let lastScrollY = window.scrollY;
-            let isHeaderVisible = true;
-            const headerHeight = header.offsetHeight;
-            const scrollThreshold = 10;
+ let lastScrollY = window.scrollY;
+ let isHeaderVisible = true;
+ const headerHeight = header.offsetHeight;
+ const scrollThreshold = 10;
 
-            function updateHeader() {
-                const currentScrollY = window.scrollY;
-                const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+ function updateHeader() {
+ const currentScrollY = window.scrollY;
+ const scrollDifference = Math.abs(currentScrollY - lastScrollY);
 
-                if (scrollDifference < scrollThreshold) {
-                    return;
-                }
+ if (scrollDifference < scrollThreshold) {
+ return;
+ }
 
-                if (currentScrollY <= headerHeight) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                } else if (currentScrollY > lastScrollY && isHeaderVisible) {
-                    header.style.transform = `translateY(-${headerHeight}px)`;
-                    isHeaderVisible = false;
-                } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
-                    header.style.transform = 'translateY(0)';
-                    isHeaderVisible = true;
-                }
+ if (currentScrollY <= headerHeight) {
+ header.style.transform = 'translateY(0)';
+ isHeaderVisible = true;
+ } else if (currentScrollY > lastScrollY && isHeaderVisible) {
+ header.style.transform = `translateY(-${headerHeight}px)`;
+ isHeaderVisible = false;
+ } else if (currentScrollY < lastScrollY && !isHeaderVisible) {
+ header.style.transform = 'translateY(0)';
+ isHeaderVisible = true;
+ }
 
-                lastScrollY = currentScrollY;
-            }
+ lastScrollY = currentScrollY;
+ }
 
-            let ticking = false;
-            function requestTick() {
-                if (!ticking) {
-                    requestAnimationFrame(updateHeader);
-                    ticking = true;
-                }
-            }
+ let ticking = false;
+ function requestTick() {
+ if (!ticking) {
+ requestAnimationFrame(updateHeader);
+ ticking = true;
+ }
+ }
 
-            window.addEventListener('scroll', function() {
-                requestTick();
-                ticking = false;
-            }, { passive: true });
+ window.addEventListener('scroll', function() {
+ requestTick();
+ ticking = false;
+ }, { passive: true });
 
-            header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-            header.style.transform = 'translateY(0)';
-        });
-    </script>
+ header.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+ header.style.transform = 'translateY(0)';
+ });
+ </script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts - Gemini Design System -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <!-- Fonts - Gemini Design System -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- SEO Meta Data -->
-    <title>Men's Mental Health Therapy Ontario | Same-Week</title>
-    <meta name="description" content="Same-week virtual therapy for men across Ontario. A male therapist who gets work pressure, relationship stress, and burnout. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>. Evening appointments.">
+ <!-- SEO Meta Data -->
+ <title>Men's Mental Health Therapy Ontario | Same-Week</title>
+ <meta name="description" content="Same-week virtual therapy for men across Ontario. A male therapist who gets work pressure, relationship stress, and burnout. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>. Evening appointments.">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Men's Mental Health Therapy Ontario | Same-Week">
-    <meta property="og:description" content="Same-week virtual therapy for men across Ontario. A male therapist who gets work pressure, relationship stress, and burnout. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>. Evening appointments.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nextsteptherapy.ca/mens-mental-health.html">
+ <!-- Open Graph Tags -->
+ <meta property="og:title" content="Men's Mental Health Therapy Ontario | Same-Week">
+ <meta property="og:description" content="Same-week virtual therapy for men across Ontario. A male therapist who gets work pressure, relationship stress, and burnout. <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>. Evening appointments.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nextsteptherapy.ca/mens-mental-health.html">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://nextsteptherapy.ca/mens-mental-health.html">
+ <!-- Canonical URL -->
+ <link rel="canonical" href="https://nextsteptherapy.ca/mens-mental-health.html">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1a2332',
-                        sage: '#4a7c59',
-                        sand: '#f5f1ea',
-                        cream: '#faf7f2'
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ colors: {
+ navy: '#1a2332',
+ sage: '#4a7c59',
+ sand: '#f5f1ea',
+ cream: '#faf7f2'
+ },
+ fontFamily: {
+ display: ['Playfair Display', 'serif'],
+ sans: ['Inter', 'sans-serif'],
+ }
+ }
+ }
+ }
+ </script>
 
-    <!-- Page Styles -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }.font-display { font-family: 'Playfair Display', serif; }
+ <!-- Page Styles -->
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: 'Inter', sans-serif; color: #3d4f5f; line-height: 1.7; background: #faf7f2; }.font-display { font-family: 'Playfair Display', serif; }
 
-        /* Legacy class compatibility for Gemini design */.section { padding: 5rem 0; }.section.alternate-bg { background: #f5f1ea; }.container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.08); }.section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1e3a4f; margin-bottom: 1.5rem; }.section-title.centered { text-align: center; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid #eee; }.feature-list li:before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.feature-list li:last-child { border-bottom: none; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.info-card { background: #f8f9fa; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.quick-stat-card h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }.btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }.btn-primary { background: #1e3a4f; color: white; }.btn-primary:hover { background: #152c3d; transform: translateY(-2px); }.btn-secondary { background: #4a7c59; color: white; }.btn-secondary:hover { background: #3d6a4a; }.btn-lg { padding: 1.25rem 2.5rem; font-size: 1.1rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5f 100%); color: white; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }.cta-box h3 { color: white; }.faq-grid { display: grid; gap: 1.5rem; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-question { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-answer { color: #5a6b7d; }.contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }.contact-section h2,.contact-section h3,.contact-section h4 { color: white; }.contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }.trust-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.5rem 0; }.trust-pill { background: rgba(74, 124, 89, 0.15); color: #4a7c59; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }.stats-section { background: #f5f1ea; }.stats-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }.footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }.footer a { color: rgba(255,255,255,0.8); text-decoration: none; }.footer a:hover { color: white; }.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }.footer-section h4 { color: white; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }.footer-section ul { list-style: none; padding: 0; }.footer-section li { margin-bottom: 0.5rem; }
-        @media (max-width: 768px) {.info-cards,.quick-stats { grid-template-columns: 1fr; }.hero-cta { flex-direction: column; align-items: center; }
-        }
-    </style>
+ /* Legacy class compatibility for Gemini design */.section { padding: 5rem 0; }.section.alternate-bg { background: #f5f1ea; }.container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }.content-grid { display: grid; gap: 2rem; }.content-card { background: white; border-radius: 1rem; padding: 2.5rem; box-shadow: 0 4px 20px rgba(30, 58, 79, 0.08); }.section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #1e3a4f; margin-bottom: 1.5rem; }.section-title.centered { text-align: center; }.feature-list { list-style: none; padding: 0; }.feature-list li { padding: 0.75rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid #eee; }.feature-list li:before { content: "✓"; position: absolute; left: 0; color: #4a7c59; font-weight: bold; }.feature-list li:last-child { border-bottom: none; }.info-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.info-card { background: #f8f9fa; padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #4a7c59; }.info-card h4 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }.quick-stat-card { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.quick-stat-card h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }.btn { display: inline-block; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }.btn-primary { background: #1e3a4f; color: white; }.btn-primary:hover { background: #152c3d; transform: translateY(-2px); }.btn-secondary { background: #4a7c59; color: white; }.btn-secondary:hover { background: #3d6a4a; }.btn-lg { padding: 1.25rem 2.5rem; font-size: 1.1rem; }.cta-box { background: linear-gradient(135deg, #1e3a4f 0%, #2d4a5f 100%); color: white; padding: 2rem; border-radius: 1rem; margin: 2rem 0; }.cta-box h3 { color: white; }.faq-grid { display: grid; gap: 1.5rem; }.faq-item { background: white; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #eee; }.faq-item h3 { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-question { color: #1e3a4f; font-family: 'Playfair Display', serif; margin-bottom: 0.75rem; font-size: 1.1rem; }.faq-answer { color: #5a6b7d; }.contact-section { background: linear-gradient(135deg, #1e3a4f 0%, #2d5a6f 100%); color: white; padding: 5rem 0; text-align: center; }.contact-section h2,.contact-section h3,.contact-section h4 { color: white; }.contact-lead { font-size: 1.25rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }.trust-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1.5rem 0; }.trust-pill { background: rgba(74, 124, 89, 0.15); color: #4a7c59; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 500; }.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }.stats-section { background: #f5f1ea; }.stats-section h3 { font-family: 'Playfair Display', serif; color: #1e3a4f; }.footer { background: #1e3a4f; color: white; padding: 4rem 0 2rem; }.footer a { color: rgba(255,255,255,0.8); text-decoration: none; }.footer a:hover { color: white; }.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }.footer-section h4 { color: white; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }.footer-section ul { list-style: none; padding: 0; }.footer-section li { margin-bottom: 0.5rem; }
+ @media (max-width: 768px) {.info-cards,.quick-stats { grid-template-columns: 1fr; }.hero-cta { flex-direction: column; align-items: center; }
+ }
+ </style>
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "Men's Mental Health Therapy Ontario",
-      "description": "Professional mental health therapy services for men across Ontario",
-      "url": "https://nextsteptherapy.ca/mens-mental-health",
-      "provider": {
-        "@type": "Person",
-        "name": "Jesse Cynamon",
-        "jobTitle": "Registered Psychotherapist",
-        "identifier": "CRPO #10979"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Ontario"
-      }
-    }
-    </script>
+ <!-- Schema Markup -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "Men's Mental Health Therapy Ontario",
+ "description": "Professional mental health therapy services for men across Ontario",
+ "url": "https://nextsteptherapy.ca/mens-mental-health",
+ "provider": {
+ "@type": "Person",
+ "name": "Jesse Cynamon",
+ "jobTitle": "Registered Psychotherapist",
+ "identifier": "CRPO #10979"
+ },
+ "areaServed": {
+ "@type": "State",
+ "name": "Ontario"
+ }
+ }
+ </script>
 
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Isn't therapy just talking about feelings for an hour?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not the way I work. While understanding emotions is important, our focus is on practical problem-solving and skill-building. You'll leave each session with specific strategies you can apply immediately to improve your situation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will you try to make me cry or get in touch with my emotions?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "I'm not here to make you do anything. Some men find emotional expression helpful; others prefer focusing on behavior and practical changes. We work with your natural style and preferences, not against them."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if someone finds out I'm in therapy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Your therapy is completely confidential. Virtual sessions add an extra layer of privacy—no waiting rooms, no parking lots where you might be seen. As a Registered Psychotherapist, I'm bound by strict privacy laws (PHIPA) that protect your confidentiality."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is this different from talking to friends or having a beer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Friends are great for support, but therapy provides specialized skills and an objective perspective. You'll learn evidence-based strategies for managing stress, improving relationships, and making decisions—not just venting about problems."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does therapy take for men?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "This varies by individual and goals, but many men notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use my employee benefits for virtual therapy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is ACT therapy and how does it help men?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ACT (Acceptance and Commitment Therapy) is a practical, action-oriented approach that helps you develop psychological flexibility. Instead of trying to eliminate difficult thoughts or feelings, you learn to handle them more effectively while taking action toward what matters. It's particularly effective for men because it's skills-based and focused on behavior change, not endless analysis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is therapy covered by OHIP in Ontario?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Private psychotherapy is not covered by OHIP in Ontario. However, most extended health insurance plans cover Registered Psychotherapist services. I provide detailed receipts for reimbursement through your insurance provider. If you don't have coverage, we can discuss session frequency to work within your budget."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a referral to see a therapist?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No referral is needed to see a Registered Psychotherapist in Ontario. You can contact me directly to book a consultation. This is different from seeing a psychiatrist or psychologist through the public system, which typically requires a doctor's referral and involves long wait times."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I do therapy during my lunch break?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. I offer 50-minute sessions that can fit into a lunch hour. Many clients log in from their car, a private office, or even take a walk while we talk. Virtual therapy gives you flexibility that in-person sessions can't match."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I've tried therapy before and it didn't work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Previous therapy that didn't work is common—often it's about fit, not therapy itself. Maybe the approach was too passive (just listening) or the therapist didn't understand men's issues. I focus on practical, action-oriented work with measurable progress. If it's not working, we'll talk about it directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know if I actually need therapy or just a vacation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If the same problems keep coming back after vacations—the stress, the relationship friction, the low-grade frustration—that's a sign something deeper needs attention. Therapy helps you develop skills to handle stress better so you're not just counting days until your next break. A vacation treats symptoms; therapy addresses patterns."
-          }
-        }
-      ]
-    }
-    </script>
+ <!-- FAQPage Schema -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Isn't therapy just talking about feelings for an hour?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Not the way I work. While understanding emotions is important, our focus is on practical problem-solving and skill-building. You'll leave each session with specific strategies you can apply immediately to improve your situation."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Will you try to make me cry or get in touch with my emotions?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "I'm not here to make you do anything. Some men find emotional expression helpful; others prefer focusing on behavior and practical changes. We work with your natural style and preferences, not against them."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What if someone finds out I'm in therapy?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Your therapy is completely confidential. Virtual sessions add an extra layer of privacy—no waiting rooms, no parking lots where you might be seen. As a Registered Psychotherapist, I'm bound by strict privacy laws (PHIPA) that protect your confidentiality."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How is this different from talking to friends or having a beer?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Friends are great for support, but therapy provides specialized skills and an objective perspective. You'll learn evidence-based strategies for managing stress, improving relationships, and making decisions—not just venting about problems."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does therapy take for men?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "This varies by individual and goals, but many men notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use my employee benefits for virtual therapy?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What is ACT therapy and how does it help men?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "ACT (Acceptance and Commitment Therapy) is a practical, action-oriented approach that helps you develop psychological flexibility. Instead of trying to eliminate difficult thoughts or feelings, you learn to handle them more effectively while taking action toward what matters. It's particularly effective for men because it's skills-based and focused on behavior change, not endless analysis."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is therapy covered by OHIP in Ontario?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Private psychotherapy is not covered by OHIP in Ontario. However, most extended health insurance plans cover Registered Psychotherapist services. I provide detailed receipts for reimbursement through your insurance provider. If you don't have coverage, we can discuss session frequency to work within your budget."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Do I need a referral to see a therapist?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No referral is needed to see a Registered Psychotherapist in Ontario. You can contact me directly to book a consultation. This is different from seeing a psychiatrist or psychologist through the public system, which typically requires a doctor's referral and involves long wait times."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I do therapy during my lunch break?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. I offer 50-minute sessions that can fit into a lunch hour. Many clients log in from their car, a private office, or even take a walk while we talk. Virtual therapy gives you flexibility that in-person sessions can't match."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "What if I've tried therapy before and it didn't work?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Previous therapy that didn't work is common—often it's about fit, not therapy itself. Maybe the approach was too passive (just listening) or the therapist didn't understand men's issues. I focus on practical, action-oriented work with measurable progress. If it's not working, we'll talk about it directly."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How do I know if I actually need therapy or just a vacation?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "If the same problems keep coming back after vacations—the stress, the relationship friction, the low-grade frustration—that's a sign something deeper needs attention. Therapy helps you develop skills to handle stress better so you're not just counting days until your next break. A vacation treats symptoms; therapy addresses patterns."
+ }
+ }
+ ]
+ }
+ </script>
 
-    <!-- Manus CTA Styling Override -->
-    <!-- Internal style block removed by Design Audit -->
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
-    <!-- Legacy Gemini CSS -->
-    <link rel="stylesheet" href="/css/legacy-gemini.css">
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "u8v6vfikjr");
-    </script>
+ <!-- Manus CTA Styling Override -->
+ <!-- Internal style block removed by Design Audit -->
+ <!-- Ahrefs Analytics -->
+ <script src="https://analytics.ahrefs.com/analytics.js" data-key="O1gjE3UGMPbfTSmzGXA8Nw" async></script>
+ <!-- Legacy Gemini CSS -->
+ <link rel="stylesheet" href="/css/legacy-gemini.css">
+ <!-- Microsoft Clarity -->
+ <script type="text/javascript">
+ (function(c,l,a,r,i,t,y){
+ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+ })(window, document, "clarity", "script", "u8v6vfikjr");
+ </script>
 </head>
 <body class="font-body bg-cream">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4">
-                    <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
-                    <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
-                    <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
-                    <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
-                    <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Hero Section - 2 Column Gemini Pattern -->
-        <section class="bg-gradient-to-br from-sand to-cream py-20 md:py-28">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Left Column: Content -->
-                    <div>
-                        <div class="inline-block px-4 py-2 bg-sage/10 text-sage rounded-full text-sm font-medium mb-6">
-                            Men's Mental Health Therapy
-                        </div>
-                        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-navy mb-6 leading-tight">Men's Mental Health Therapy Ontario</h1>
-                        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">You're good at what you do. That's not the problem. The problem is you can't turn it off: the stress, the anger, the pressure to have it all together. When "man up" stops working, you need more than advice. You need someone who gets it.</p>
-
-                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-navy/90 transition-all text-center shadow-md hover:shadow-lg">Book Free Consultation</a>
-                            <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-lg font-semibold hover:bg-navy hover:text-white transition-all text-center">Call (416) 306-2157</a>
-                        </div>
-
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
-                            <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">$175/session</span>
-                            <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">Same-Week Available</span>
-                            <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">Insurance Receipts</span>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Feature Cards -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Male-Friendly Approach</h3>
-                            <p class="text-gray-600 text-sm">Practical problem-solving, not endless "how does that make you feel"</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Same-Week Available</h3>
-                            <p class="text-gray-600 text-sm">Get help when you need it, not months from now</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
-                            <p class="text-gray-600 text-sm">Complete privacy, no waiting rooms or parking lots</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                            <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
-                                <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3.895-3 2s1.343 2 3 2 3.895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Covered</h3>
-                            <p class="text-gray-600 text-sm">Most plans cover CRPO psychotherapists fully</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <div class="container">
-            <main class="main-content">
-
-                <!-- AI-Snippable Definition Section -->
-                <section class="section">
-                    <h2 class="section-title">What Is Men's Mental Health Therapy?</h2>
-                    <p><strong>Men's mental health therapy in Ontario is professional support designed for the unique ways men experience stress, anxiety, depression, and emotional challenges.</strong> Unlike traditional talk therapy, evidence-based approaches like ACT (Acceptance and Commitment Therapy) focus on practical skill-building and values-based action—not sitting around analyzing feelings. Research shows men often express mental health struggles differently: through anger, withdrawal, overwork, or physical symptoms rather than typical sadness or worry. A therapist who understands this provides practical tools, not endless "how does that make you feel?" conversations.</p>
-                </section>
-
-                <!-- Men's Mental Health: The Numbers (AI-Citation Optimized) -->
-                <section class="section">
-                    <h2 class="section-title">Men's Mental Health: The Numbers</h2>
-                    <p>The statistics tell a clear story: men in Canada face unique barriers to mental health support.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <strong>75%</strong>
-                            <span>of suicide deaths in Canada are men</span>
-                        </div>
-                        <div class="quick-stat-card">
-                            <strong>30%</strong>
-                            <span>of men with mental health concerns seek help</span>
-                        </div>
-                        <div class="quick-stat-card">
-                            <strong>1 in 8</strong>
-                            <span>men experience depression at some point</span>
-                        </div>
-                        <div class="quick-stat-card">
-                            <strong>8-12 wks</strong>
-                            <span>typical timeframe for significant progress in therapy</span>
-                        </div>
-                    </div>
-
-                    <p class="source-citation">Sources: Centre for Addiction and Mental Health (CAMH), Canadian Mental Health Association (CMHA), Statistics Canada</p>
-                </section>
-
-                <!-- Problem Recognition Section -->
-                <section class="section">
-                    <h2 class="section-title">Why Men Seek Therapy</h2>
-                    <p>Men in Ontario are often taught to handle things on their own. But whether you call it "counselling," "coaching," or just "talking to someone," professional support is a tool high-performers use to get back on track.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>The Performance Trap</h3>
-                            <p>You're successful at work, maybe even leading others, but inside you feel like you're barely keeping it together. The pressure to always have the answers is exhausting.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Relationship Struggles</h3>
-                            <p>Your partner says you don't communicate. Dating feels like a game with rules nobody taught you. <a href="/mens-therapy-toronto.html">Men's therapy in Toronto →</a></p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Anger Under the Surface</h3>
-                            <p>Small things set you off. We help you understand the root and give you tools to regulate it. <a href="/anger-management-toronto.html">Anger management →</a></p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Men in Leadership Section -->
-                <section class="section">
-                    <h2 class="section-title">Men in Leadership & High-Pressure Roles</h2>
-                    <p>For men in leadership positions, the pressure multiplies. You're expected to have the answers, project confidence, and handle the weight of decisions that affect others—while quietly managing your own stress.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>Executive & Senior Leadership</h3>
-                            <p>Decision fatigue, stakeholder pressure, and the isolation of leadership create a unique form of burnout. <a href="/executive-stress-management-therapy.html">Executive stress management →</a></p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Tech & Finance Professionals</h3>
-                            <p>Bay Street pressure, startup intensity, and the always-on culture create a particular brand of male burnout.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Founders & Entrepreneurs</h3>
-                            <p>When your identity is fused with your business, every setback feels personal. The isolation and uncertainty create unique stress patterns.</p>
-                        </div>
-                    </div>
-
-                    <div class="cta-box">
-                        <h3>High-Performing Men Need High-Impact Support</h3>
-                        <p>If your role requires you to perform under pressure, you deserve therapy that understands the territory.</p>
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Free Consultation</a>
-                    </div>
-                </section>
-
-                <!-- How Therapy Helps Men Section -->
-                <section class="section">
-                    <h2 class="section-title">How Therapy Can Help Men</h2>
-                    <p>Therapy focused on developing practical skills for managing stress, improving relationships, and building a life that actually works for you. Think of it as strategic consultation for your personal life.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>Problem-Solving Focus</h3>
-                            <p>We approach challenges the way you'd approach a work project—identify the problem, develop a strategy, implement solutions, and track progress.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Communication Skills</h3>
-                            <p>Learn to communicate effectively without feeling like you're walking on eggshells. Develop skills for handling conflict and expressing needs clearly.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Stress & Anger Management</h3>
-                            <p>Build practical tools for managing work pressure, frustration, and overwhelm. Learn techniques that work in real-time.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Values-Based Decisions</h3>
-                            <p>Clarify what actually matters to you beyond external expectations. Make decisions based on your values rather than what you "should" do.</p>
-                        </div>
-                    </div>
-
-                    <p>This approach, based on Acceptance and Commitment Therapy (ACT), focuses on building skills and taking action. It's designed for men who want results, not just insight.</p>
-                </section>
-
-                <!-- ACT Therapy for Men Section -->
-                <section class="section">
-                    <h2 class="section-title">ACT Therapy for Men: Why It Works</h2>
-                    <p>Acceptance and Commitment Therapy (ACT) isn't about sitting around analyzing your childhood. It's about developing practical skills to handle what life throws at you while moving toward what actually matters.</p>
-
-                    <div class="content-card">
-                        <h3>What Makes ACT Different</h3>
-                        <p>Most men I work with have already tried "just think positive" and "stop worrying about it." If that worked, you wouldn't be reading this. ACT takes a different approach: instead of fighting your thoughts and feelings, you learn to handle them more effectively.</p>
-
-                        <h4>ACT focuses on three core skills:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Psychological flexibility:</strong> The ability to be present, open up to difficult experiences, and do what matters—even when it's uncomfortable</li>
-                            <li><strong>Values clarification:</strong> Getting clear on what actually matters to you (not what you think should matter) and using that as a compass for decisions</li>
-                            <li><strong>Committed action:</strong> Taking concrete steps toward your goals, even when your mind tells you to avoid or procrastinate</li>
-                        </ul>
-                    </div>
-
-                    <h3>Why ACT Works for Men's Issues</h3>
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>Work Stress & Burnout</h3>
-                            <p>Learn to manage the constant pressure without numbing out or exploding. ACT helps you show up effectively at work while protecting your energy.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Anger & Irritability</h3>
-                            <p>Understand what's driving the frustration and develop skills to respond rather than react. Not suppressing anger—handling it effectively.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Relationship Issues</h3>
-                            <p>Build communication skills that actually work. Learn to be present with your partner instead of defensive or shut down.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Anxiety & Overthinking</h3>
-                            <p>Stop fighting your anxious thoughts and start living your life anyway. ACT teaches you to take action even when your mind is racing.</p>
-                        </div>
-                    </div>
-
-                    <p>ACT has strong research support for anxiety, depression, stress, and chronic pain. The skills you develop are practical and portable—you use them in real situations, not just in the therapy room.</p>
-                </section>
-
-                <!-- What to Expect Section -->
-                <section class="section">
-                    <h2 class="section-title">What to Expect from Men's Mental Health Therapy</h2>
-                    <p>Therapy for men should be straightforward, practical, and results-oriented. Here's what our work together actually looks like.</p>
-
-                    <div class="content-card">
-                        <h3>Your First Sessions</h3>
-                        <p>We start by understanding what's actually bothering you and what you want to change. No deep dives into your entire life history—just a clear assessment of current challenges and realistic goals.</p>
-
-                        <h4>We'll explore:</h4>
-                        <ul class="feature-list">
-                            <li>Specific situations causing stress or frustration</li>
-                            <li>Relationship patterns that aren't working</li>
-                            <li>Work or life pressures affecting your well-being</li>
-                            <li>What you've already tried and what's been effective</li>
-                            <li>Clear, measurable goals for therapy</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-card">
-                        <h3>Building Practical Skills</h3>
-                        <p>Each session includes concrete strategies you can use immediately. You'll leave with specific tools for managing stress, improving communication, and handling challenging situations.</p>
-
-                        <h4>You'll learn to:</h4>
-                        <ul class="feature-list">
-                            <li>Manage stress and frustration in real-time without losing your cool</li>
-                            <li>Communicate needs and concerns without starting arguments</li>
-                            <li>Set boundaries at work and home that stick</li>
-                            <li>Handle criticism and conflict more effectively</li>
-                            <li>Make decisions that align with what you actually want</li>
-                        </ul>
-                    </div>
-
-                    <div class="cta-box">
-                        <p>Ready to move beyond "I'm fine" and build real solutions?</p>
-                        <a href="tel:+14163062157" class="btn btn-primary">Schedule 15-Min Call</a>
-                        <p class="cta-subtext">We respond within 24 hours</p>
-                    </div>
-                </section>
-
-                <!-- About Your Therapist Section -->
-                <section class="section">
-                    <h2 class="section-title">About Your Therapist</h2>
-                    <p>I'm Jesse Cynamon, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) who focuses on working with men across Ontario. I understand the unique challenges men face and the cultural barriers that make seeking help difficult.</p>
-
-                    <div class="content-card">
-                        <h3>Why I Work with Men's Mental Health</h3>
-                        <p>Too many capable men are struggling in silence because they've been taught that asking for help is weakness. I work with men because I believe everyone deserves support that actually helps—not judgment, not empty platitudes, just practical tools for building a better life.</p>
-
-                        <h3>My Approach with Male Clients</h3>
-                        <p>I don't do therapy clichés. No "how does that make you feel" every five minutes. We focus on what's not working, develop practical strategies, and measure progress. Think of it as strategic consultation for your personal life.</p>
-
-                        <h4>What men appreciate about our work together:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Direct Communication:</strong> Clear, straightforward conversations without therapeutic jargon</li>
-                            <li><strong>Problem-Solving Focus:</strong> Practical strategies for real-world challenges</li>
-                            <li><strong>No Judgment Zone:</strong> Understanding that men express struggles differently</li>
-                            <li><strong>Results-Oriented:</strong> Measurable progress toward specific goals</li>
-                            <li><strong>Flexible Approach:</strong> Therapy that adapts to how you actually think and work</li>
-                        </ul>
-
-                        <h3>Professional Background</h3>
-                        <p>I hold a Master's degree in counseling psychology and am licensed with the College of Registered Psychotherapists of Ontario (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I practice Acceptance and Commitment Therapy (ACT) and practical approaches to men's mental health.</p>
-                    </div>
-                </section>
-
-                <!-- Virtual Therapy Benefits Section -->
-                <section class="section">
-                    <h2 class="section-title">Why Virtual Therapy Works Well for Men</h2>
-                    <p>Many men prefer virtual therapy because it removes barriers that make traditional therapy feel uncomfortable. Access professional support from your own space, on your own terms.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>Privacy & Comfort</h3>
-                            <p>No waiting rooms where you might run into colleagues. Access support from your own space where you feel in control.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Fits Your Schedule</h3>
-                            <p>Early morning, lunch hour, or evening sessions. Therapy that works around your life, not the other way around.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Reduced Stigma</h3>
-                            <p>Virtual sessions reduce barriers, making it easier to access support without feeling like you're making a big production out of it.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Immediate Application</h3>
-                            <p>Practice skills with your partner right after sessions. Apply stress management techniques in your actual work environment.</p>
-                        </div>
-                    </div>
-
-                    <p>Virtual therapy isn't a compromise—for many men, it's the preferred way to access support while maintaining privacy and fitting therapy into demanding schedules.</p>
-                </section>
-
-                <!-- Same-Week Availability Section -->
-                <section class="section">
-                    <h2 class="section-title">Same-Week Appointments Available</h2>
-                    <p>When you're ready to get help, waiting 3-6 months for an appointment isn't acceptable. Most men I work with contact me when things have reached a breaking point.</p>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <strong>Same-Week</strong>
-                            <span>Initial appointments available within days, not months</span>
-                        </div>
-                        <div class="quick-stat-card">
-                            <strong>Evening Hours</strong>
-                            <span>Sessions after work so you don't have to explain time off</span>
-                        </div>
-                        <div class="quick-stat-card">
-                            <strong>Weekend Options</strong>
-                            <span>Saturday appointments for busy professionals</span>
-                        </div>
-                    </div>
-
-                    <div class="content-card">
-                        <h3>How to Get Started This Week</h3>
-                        <ul class="feature-list">
-                            <li><strong>Call or message today:</strong> Brief 15-minute consultation to make sure we're a good fit</li>
-                            <li><strong>Book your first session:</strong> Usually available within the same week</li>
-                            <li><strong>Start working on real solutions:</strong> No intake paperwork that takes 3 sessions</li>
-                        </ul>
-                    </div>
-
-                    <div class="cta-box">
-                        <p><strong>Ready to start this week?</strong></p>
-                        <a href="tel:+14163062157" class="btn btn-primary">Call for Same-Week Appointment</a>
-                    </div>
-                </section>
-
-                <!-- Getting Started Section -->
-                <section class="section">
-                    <h2 class="section-title">Getting Started with Men's Mental Health Therapy</h2>
-                    <p>Taking the first step can feel difficult, especially when you're used to handling things on your own. The process is straightforward and low-pressure.</p>
-
-                    <div class="content-card">
-                        <h3>Your Free 15-Minute Consultation</h3>
-                        <p>Before committing to therapy, you deserve to know if we're a good fit. This brief conversation allows you to:</p>
-                        <ul class="feature-list">
-                            <li>Share what's bringing you to therapy</li>
-                            <li>Ask questions about the process and approach</li>
-                            <li>Understand what to expect from men's mental health therapy</li>
-                            <li>Learn about scheduling, fees, and insurance coverage</li>
-                        </ul>
-                    </div>
-
-                    <div class="quick-stats">
-                        <div class="quick-stat-card">
-                            <h3>Session Length</h3>
-                            <p>50-minute sessions, typically weekly or bi-weekly based on your needs</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Insurance Coverage</h3>
-                            <p>Most extended health plans cover Registered Psychotherapist services. Receipts provided.</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Scheduling</h3>
-                            <p>Early morning, lunch hour, and evening appointments available</p>
-                        </div>
-                        <div class="quick-stat-card">
-                            <h3>Technology</h3>
-                            <p>Any device with internet and camera. Simple, secure platform.</p>
-                        </div>
-                    </div>
-
-                    <p><strong>Investment:</strong> Individual therapy sessions are $175. Many clients notice improvements within the first few sessions.</p>
-
-                    <div class="cta-box">
-                        <p>Ready to move beyond "I'm fine" and build real solutions?</p>
-                        <a href="tel:+14163062157" class="btn btn-primary">Call for Free Consultation</a>
-                    </div>
-                </section>
-
-        <!-- FAQs Section -->
-        <section class="section faq-section">
-            <h2 class="section-title">Common Questions About Men's Mental Health Therapy</h2>
-            <p class="section-intro">It's normal to have questions about therapy—especially when you've never done it before or had negative experiences in the past. Here are honest answers to common concerns from men across Ontario.</p>
-
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>"Isn't therapy just talking about feelings for an hour?"</h4>
-                    <p>Not the way I work. While understanding emotions is important, our focus is on practical problem-solving and skill-building. You'll leave each session with specific strategies you can apply immediately to improve your situation.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"Will you try to make me cry or get in touch with my emotions?"</h4>
-                    <p>I'm not here to make you do anything. Some men find emotional expression helpful; others prefer focusing on behavior and practical changes. We work with your natural style and preferences, not against them.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"What if someone finds out I'm in therapy?"</h4>
-                    <p>Your therapy is completely confidential. Virtual sessions add an extra layer of privacy—no waiting rooms, no parking lots where you might be seen. As a Registered Psychotherapist, I'm bound by strict privacy laws (PHIPA) that protect your confidentiality.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"How is this different from talking to friends or having a beer?"</h4>
-                    <p>Friends are great for support, but therapy provides specialized skills and an objective perspective. You'll learn evidence-based strategies for managing stress, improving relationships, and making decisions—not just venting about problems.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"How long does therapy take for men?"</h4>
-                    <p>This varies by individual and goals, but many men notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"Can I use my employee benefits for virtual therapy?"</h4>
-                    <p>Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"What is ACT therapy and how does it help men?"</h4>
-                    <p>ACT (Acceptance and Commitment Therapy) is a practical, action-oriented approach that helps you develop psychological flexibility. Instead of trying to eliminate difficult thoughts or feelings, you learn to handle them more effectively while taking action toward what matters. It's particularly effective for men because it's skills-based and focused on behavior change, not endless analysis.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"Is therapy covered by OHIP in Ontario?"</h4>
-                    <p>Private psychotherapy is not covered by OHIP in Ontario. However, most extended health insurance plans cover Registered Psychotherapist services. I provide detailed receipts for reimbursement through your insurance provider. If you don't have coverage, we can discuss session frequency to work within your budget.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"Do I need a referral to see a therapist?"</h4>
-                    <p>No referral is needed to see a Registered Psychotherapist in Ontario. You can contact me directly to book a consultation. This is different from seeing a psychiatrist or psychologist through the public system, which typically requires a doctor's referral and involves long wait times.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"Can I do therapy during my lunch break?"</h4>
-                    <p>Yes. I offer 50-minute sessions that can fit into a lunch hour. Many clients log in from their car, a private office, or even take a walk while we talk. Virtual therapy gives you flexibility that in-person sessions can't match.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"What if I've tried therapy before and it didn't work?"</h4>
-                    <p>Previous therapy that didn't work is common—often it's about fit, not therapy itself. Maybe the approach was too passive (just listening) or the therapist didn't understand men's issues. I focus on practical, action-oriented work with measurable progress. If it's not working, we'll talk about it directly.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h4>"How do I know if I actually need therapy or just a vacation?"</h4>
-                    <p>If the same problems keep coming back after vacations—the stress, the relationship friction, the low-grade frustration—that's a sign something deeper needs attention. Therapy helps you develop skills to handle stress better so you're not just counting days until your next break. A vacation treats symptoms; therapy addresses patterns.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Challenges Section -->
-        <section class="section">
-            <div class="container">
-                <h3 class="section-title" style="text-align: center;">Common Challenges Men Face</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                    <a href="/high-functioning-anxiety-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">High-Functioning Anxiety</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Success on the outside, exhaustion on the inside</p>
-                    </a>
-                    <a href="/imposter-syndrome-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Imposter Syndrome</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Feeling like a fraud despite evidence of success</p>
-                    </a>
-                    <a href="/perfectionism-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Perfectionism</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Nothing ever feels good enough</p>
-                    </a>
-                    <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
-                    </a>
-                    <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
-                    </a>
-                    <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
-                        <strong style="color: var(--primary-navy);">Founder Burnout</strong>
-                        <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA Section -->
-        <section class="contact-section" id="contact">
-            <div class="container">
-                <div class="contact-content">
-                    <h2>Ready to Move Beyond "I'm Fine"?</h2>
-                    <p class="contact-lead">You don't have to handle everything on your own. Professional support can help you develop practical skills for managing stress, improving relationships, and building a life that actually works for you.</p>
-
-                    <h3>Start with a Free 15-Minute Consultation</h3>
-                    <p>This brief, no-pressure conversation helps us both determine if we're a good fit. You'll get clear answers about the process, timeline, and what to expect.</p>
-
-                    <div class="hero-cta">
-                        <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Your Free Consultation</a>
-                        <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
-                    </div>
-
-                    <div class="contact-info">
-                        <h4>Professional Mental Health Support for Men Across Ontario</h4>
-                        <div class="therapist-details">
-                            <strong>Jesse Cynamon, RP</strong><br>
-                            Registered Psychotherapist | <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a><br>
-                            Virtual sessions throughout Ontario<br>
-                            Insurance receipts provided
-                        </div>
-                    </div>
-
-                    <p class="final-message">You've spent your whole life being strong for everyone else. It's time to build the skills and support system that help you thrive, not just survive.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Floating CTA for Mobile -->
-    <a href="tel:+14163062157" class="floating-cta">
-        📞 Get Support Today
-    </a>
-
-    <!-- Analytics Tracking -->
-    <script type="module">
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-J8H4YBGSHR', {
-            'allow_enhanced_conversions': true,
-            'send_page_view': true
-        });
-
-        // Track phone clicks
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'phone_call', {
-                        'event_category': 'conversion',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-            document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    gtag('event', 'booking_click', {
-                        'event_category': 'conversion',
-                        'event_label': 'jane_app_booking',
-                        'value': 175,
-                        'currency': 'CAD'
-                    });
-                });
-            });
-        });
-    </script>
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <h4 class="font-display text-lg mb-4">Jesse Cynamon, RP</h4>
-                    <p class="text-white/80 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
-                    <p class="text-white/90 font-medium"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</p>
-                    <p class="mt-4"><strong>Book Appointment:</strong><br>
-                    <a href="tel:+14163062157" class="text-sage hover:text-white transition-colors font-semibold text-lg">(416) 306-2157</a></p>
-                </div>
-                <div>
-                    <h4 class="font-display text-lg mb-4">Therapy Services</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/anxiety-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Anxiety Therapy</a></li>
-                        <li><a href="/depression-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Depression Therapy</a></li>
-                        <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Workplace Stress & Burnout</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Virtual Therapy Ontario</a></li>
-                        <li><a href="/cbt-therapy-toronto.html" class="text-white/80 hover:text-white transition-colors">CBT Therapy</a></li>
-                        <li><a href="/mens-mental-health.html" class="text-white/80 hover:text-white transition-colors">Men's Mental Health</a></li>
-                        <li><a href="/#specializations" class="text-sage hover:text-white transition-colors font-medium">All Services →</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display text-lg mb-4">Ontario Service Areas</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/therapist-toronto.html" class="text-white/80 hover:text-white transition-colors">Toronto Therapist</a></li>
-                        <li><a href="/therapy-ottawa-ontario.html" class="text-white/80 hover:text-white transition-colors">Ottawa Therapy</a></li>
-                        <li><a href="/therapy-hamilton-ontario.html" class="text-white/80 hover:text-white transition-colors">Hamilton Therapy</a></li>
-                        <li><a href="/therapy-mississauga-ontario.html" class="text-white/80 hover:text-white transition-colors">Mississauga Therapy</a></li>
-                        <li><a href="/therapy-london-ontario.html" class="text-white/80 hover:text-white transition-colors">London Therapy</a></li>
-                        <li><a href="/virtual-therapy-ontario.html" class="text-sage hover:text-white transition-colors font-medium">All Ontario →</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-display text-lg mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="text-white/80 hover:text-white transition-colors">Do I Need Therapy? Quiz</a></li>
-                        <li><a href="/therapy-costs-ontario.html" class="text-white/80 hover:text-white transition-colors">Therapy Costs Ontario</a></li>
-                        <li><a href="/how-to-find-therapist-ontario.html" class="text-white/80 hover:text-white transition-colors">Find a Therapist Guide</a></li>
-                        <li><a href="/faq.html" class="text-white/80 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/80 hover:text-white transition-colors">About Jesse</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/15 pt-6 text-center">
-                <p class="text-white/85 text-sm mb-4">
-                    <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
-                    <a href="tel:18665312600" class="text-sage underline hover:text-white">1-866-531-2600</a> (Ontario Crisis Line)
-                </p>
-                <p class="text-white/70 text-sm">&copy; 2025 Next Step Therapy. All rights reserved.<br>
-                Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) | Ontario, Canada</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 md:hidden z-40">
-        <div class="flex gap-2">
-            <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 rounded-lg text-center font-medium flex items-center justify-center gap-2">
-                <i data-lucide="phone" class="w-4 h-4"></i> Call Now
-            </a>
-            <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 rounded-lg text-center font-medium flex items-center justify-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4"></i> Book
-            </a>
-        </div>
-    </div>
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script>lucide.createIcons();</script>
-    <script src="/js/security-check.js"></script>
+ <!-- Header -->
+ <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-sand/50">
+ <div class="max-w-7xl mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <div class="flex items-center gap-4">
+ <a href="/" class="font-display text-xl font-semibold text-navy">Next Step Therapy</a>
+ <span class="hidden sm:inline-block px-3 py-1 bg-sage/10 text-sage text-xs font-semibold rounded-full"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
+ </div>
+ <nav class="hidden md:flex items-center gap-8">
+ <a href="/#approach" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Approach</a>
+ <a href="/#specializations" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Services</a>
+ <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-navy transition-colors">Contact</a>
+ </nav>
+ <div class="flex items-center gap-4">
+ <a href="tel:+14163062157" class="hidden sm:block text-sm font-medium text-navy hover:text-sage transition-colors">(416) 306-2157</a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-navy-light transition-colors shadow-sm">Book Now</a>
+ </div>
+ </div>
+ </div>
+ </header>
+
+ <!-- Main Content -->
+ <main class="pt-20">
+ <!-- Hero Section - 2 Column Gemini Pattern -->
+ <section class="bg-gradient-to-br from-sand to-cream py-20 md:py-28">
+ <div class="max-w-7xl mx-auto px-6">
+ <div class="grid md:grid-cols-2 gap-12 items-center">
+ <!-- Left Column: Content -->
+ <div>
+ <div class="inline-block px-4 py-2 bg-sage/10 text-sage rounded-full text-sm font-medium mb-6">
+ Men's Mental Health Therapy
+ </div>
+ <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-navy mb-6 leading-tight">Men's Mental Health Therapy Ontario</h1>
+ <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">You're good at what you do. That's not the problem. The problem is you can't turn it off: the stress, the anger, the pressure to have it all together. When "man up" stops working, you need more than advice. You need someone who gets it.</p>
+
+ <div class="flex flex-col sm:flex-row gap-4 mb-8">
+ <a href="https://nextsteptherapy.janeapp.com/" class="bg-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-navy/90 transition-all text-center shadow-md hover:shadow-lg">Book Free Consultation</a>
+ <a href="tel:+14163062157" class="bg-white text-navy border-2 border-navy px-8 py-4 rounded-lg font-semibold hover:bg-navy hover:text-white transition-all text-center">Call (416) 306-2157</a>
+ </div>
+
+ <div class="flex flex-wrap gap-3">
+ <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a></span>
+ <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">$175/session</span>
+ <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">Same-Week Available</span>
+ <span class="bg-sage/10 text-sage px-4 py-2 rounded-full text-sm font-medium">Insurance Receipts</span>
+ </div>
+ </div>
+
+ <!-- Right Column: Feature Cards -->
+ <div class="grid grid-cols-2 gap-4">
+ <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+ </svg>
+ </div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Male-Friendly Approach</h3>
+ <p class="text-gray-600 text-sm">Practical problem-solving, not endless "how does that make you feel"</p>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+ </svg>
+ </div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Same-Week Available</h3>
+ <p class="text-gray-600 text-sm">Get help when you need it, not months from now</p>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+ </svg>
+ </div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Virtual Sessions</h3>
+ <p class="text-gray-600 text-sm">Complete privacy, no waiting rooms or parking lots</p>
+ </div>
+
+ <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+ <div class="w-12 h-12 bg-sage/10 rounded-lg flex items-center justify-center mb-4">
+ <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3.895-3 2s1.343 2 3 2 3.895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+ </svg>
+ </div>
+ <h3 class="font-display text-lg font-semibold text-navy mb-2">Insurance Covered</h3>
+ <p class="text-gray-600 text-sm">Most plans cover CRPO psychotherapists fully</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Main Content -->
+ <div class="container">
+ <main class="main-content">
+
+ <!-- AI-Snippable Definition Section -->
+ <section class="section">
+ <h2 class="section-title">What Is Men's Mental Health Therapy?</h2>
+ <p><strong>Men's mental health therapy in Ontario is professional support designed for the unique ways men experience stress, anxiety, depression, and emotional challenges.</strong> Unlike traditional talk therapy, evidence-based approaches like ACT (Acceptance and Commitment Therapy) focus on practical skill-building and values-based action—not sitting around analyzing feelings. Research shows men often express mental health struggles differently: through anger, withdrawal, overwork, or physical symptoms rather than typical sadness or worry. A therapist who understands this provides practical tools, not endless "how does that make you feel?" conversations.</p>
+ </section>
+
+ <!-- Men's Mental Health: The Numbers (AI-Citation Optimized) -->
+ <section class="section">
+ <h2 class="section-title">Men's Mental Health: The Numbers</h2>
+ <p>The statistics tell a clear story: men in Canada face unique barriers to mental health support.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <strong>75%</strong>
+ <span>of suicide deaths in Canada are men</span>
+ </div>
+ <div class="quick-stat-card">
+ <strong>30%</strong>
+ <span>of men with mental health concerns seek help</span>
+ </div>
+ <div class="quick-stat-card">
+ <strong>1 in 8</strong>
+ <span>men experience depression at some point</span>
+ </div>
+ <div class="quick-stat-card">
+ <strong>8-12 wks</strong>
+ <span>typical timeframe for significant progress in therapy</span>
+ </div>
+ </div>
+
+ <p class="source-citation">Sources: Centre for Addiction and Mental Health (CAMH), Canadian Mental Health Association (CMHA), Statistics Canada</p>
+ </section>
+
+ <!-- Problem Recognition Section -->
+ <section class="section">
+ <h2 class="section-title">Why Men Seek Therapy</h2>
+ <p>Men in Ontario are often taught to handle things on their own. But whether you call it "counselling," "coaching," or just "talking to someone," professional support is a tool high-performers use to get back on track.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>The Performance Trap</h3>
+ <p>You're successful at work, maybe even leading others, but inside you feel like you're barely keeping it together. The pressure to always have the answers is exhausting.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Relationship Struggles</h3>
+ <p>Your partner says you don't communicate. Dating feels like a game with rules nobody taught you. <a href="/mens-therapy-toronto.html">Men's therapy in Toronto →</a></p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Anger Under the Surface</h3>
+ <p>Small things set you off. We help you understand the root and give you tools to regulate it. <a href="/anger-management-toronto.html">Anger management →</a></p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Men in Leadership Section -->
+ <section class="section">
+ <h2 class="section-title">Men in Leadership & High-Pressure Roles</h2>
+ <p>For men in leadership positions, the pressure multiplies. You're expected to have the answers, project confidence, and handle the weight of decisions that affect others—while quietly managing your own stress.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Executive & Senior Leadership</h3>
+ <p>Decision fatigue, stakeholder pressure, and the isolation of leadership create a unique form of burnout. <a href="/executive-stress-management-therapy.html">Executive stress management →</a></p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Tech & Finance Professionals</h3>
+ <p>Bay Street pressure, startup intensity, and the always-on culture create a particular brand of male burnout.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Founders & Entrepreneurs</h3>
+ <p>When your identity is fused with your business, every setback feels personal. The isolation and uncertainty create unique stress patterns.</p>
+ </div>
+ </div>
+
+ <div class="cta-box">
+ <h3>High-Performing Men Need High-Impact Support</h3>
+ <p>If your role requires you to perform under pressure, you deserve therapy that understands the territory.</p>
+ <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Free Consultation</a>
+ </div>
+ </section>
+
+ <!-- How Therapy Helps Men Section -->
+ <section class="section">
+ <h2 class="section-title">How Therapy Can Help Men</h2>
+ <p>Therapy focused on developing practical skills for managing stress, improving relationships, and building a life that actually works for you. Think of it as strategic consultation for your personal life.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Problem-Solving Focus</h3>
+ <p>We approach challenges the way you'd approach a work project—identify the problem, develop a strategy, implement solutions, and track progress.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Communication Skills</h3>
+ <p>Learn to communicate effectively without feeling like you're walking on eggshells. Develop skills for handling conflict and expressing needs clearly.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Stress & Anger Management</h3>
+ <p>Build practical tools for managing work pressure, frustration, and overwhelm. Learn techniques that work in real-time.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Values-Based Decisions</h3>
+ <p>Clarify what actually matters to you beyond external expectations. Make decisions based on your values rather than what you "should" do.</p>
+ </div>
+ </div>
+
+ <p>This approach, based on Acceptance and Commitment Therapy (ACT), focuses on building skills and taking action. It's designed for men who want results, not just insight.</p>
+ </section>
+
+ <!-- ACT Therapy for Men Section -->
+ <section class="section">
+ <h2 class="section-title">ACT Therapy for Men: Why It Works</h2>
+ <p>Acceptance and Commitment Therapy (ACT) isn't about sitting around analyzing your childhood. It's about developing practical skills to handle what life throws at you while moving toward what actually matters.</p>
+
+ <div class="content-card">
+ <h3>What Makes ACT Different</h3>
+ <p>Most men I work with have already tried "just think positive" and "stop worrying about it." If that worked, you wouldn't be reading this. ACT takes a different approach: instead of fighting your thoughts and feelings, you learn to handle them more effectively.</p>
+
+ <h4>ACT focuses on three core skills:</h4>
+ <ul class="feature-list">
+ <li><strong>Psychological flexibility:</strong> The ability to be present, open up to difficult experiences, and do what matters—even when it's uncomfortable</li>
+ <li><strong>Values clarification:</strong> Getting clear on what actually matters to you (not what you think should matter) and using that as a compass for decisions</li>
+ <li><strong>Committed action:</strong> Taking concrete steps toward your goals, even when your mind tells you to avoid or procrastinate</li>
+ </ul>
+ </div>
+
+ <h3>Why ACT Works for Men's Issues</h3>
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Work Stress & Burnout</h3>
+ <p>Learn to manage the constant pressure without numbing out or exploding. ACT helps you show up effectively at work while protecting your energy.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Anger & Irritability</h3>
+ <p>Understand what's driving the frustration and develop skills to respond rather than react. Not suppressing anger—handling it effectively.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Relationship Issues</h3>
+ <p>Build communication skills that actually work. Learn to be present with your partner instead of defensive or shut down.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Anxiety & Overthinking</h3>
+ <p>Stop fighting your anxious thoughts and start living your life anyway. ACT teaches you to take action even when your mind is racing.</p>
+ </div>
+ </div>
+
+ <p>ACT has strong research support for anxiety, depression, stress, and chronic pain. The skills you develop are practical and portable—you use them in real situations, not just in the therapy room.</p>
+ </section>
+
+ <!-- What to Expect Section -->
+ <section class="section">
+ <h2 class="section-title">What to Expect from Men's Mental Health Therapy</h2>
+ <p>Therapy for men should be straightforward, practical, and results-oriented. Here's what our work together actually looks like.</p>
+
+ <div class="content-card">
+ <h3>Your First Sessions</h3>
+ <p>We start by understanding what's actually bothering you and what you want to change. No deep dives into your entire life history—just a clear assessment of current challenges and realistic goals.</p>
+
+ <h4>We'll explore:</h4>
+ <ul class="feature-list">
+ <li>Specific situations causing stress or frustration</li>
+ <li>Relationship patterns that aren't working</li>
+ <li>Work or life pressures affecting your well-being</li>
+ <li>What you've already tried and what's been effective</li>
+ <li>Clear, measurable goals for therapy</li>
+ </ul>
+ </div>
+
+ <div class="content-card">
+ <h3>Building Practical Skills</h3>
+ <p>Each session includes concrete strategies you can use immediately. You'll leave with specific tools for managing stress, improving communication, and handling challenging situations.</p>
+
+ <h4>You'll learn to:</h4>
+ <ul class="feature-list">
+ <li>Manage stress and frustration in real-time without losing your cool</li>
+ <li>Communicate needs and concerns without starting arguments</li>
+ <li>Set boundaries at work and home that stick</li>
+ <li>Handle criticism and conflict more effectively</li>
+ <li>Make decisions that align with what you actually want</li>
+ </ul>
+ </div>
+
+ <div class="cta-box">
+ <p>Ready to move beyond "I'm fine" and build real solutions?</p>
+ <a href="tel:+14163062157" class="btn btn-primary">Schedule 15-Min Call</a>
+ <p class="cta-subtext">We respond within 24 hours</p>
+ </div>
+ </section>
+
+ <!-- About Your Therapist Section -->
+ <section class="section">
+ <h2 class="section-title">About Your Therapist</h2>
+ <p>I'm Jesse Cynamon, a Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) who focuses on working with men across Ontario. I understand the unique challenges men face and the cultural barriers that make seeking help difficult.</p>
+
+ <div class="content-card">
+ <h3>Why I Work with Men's Mental Health</h3>
+ <p>Too many capable men are struggling in silence because they've been taught that asking for help is weakness. I work with men because I believe everyone deserves support that actually helps—not judgment, not empty platitudes, just practical tools for building a better life.</p>
+
+ <h3>My Approach with Male Clients</h3>
+ <p>I don't do therapy clichés. No "how does that make you feel" every five minutes. We focus on what's not working, develop practical strategies, and measure progress. Think of it as strategic consultation for your personal life.</p>
+
+ <h4>What men appreciate about our work together:</h4>
+ <ul class="feature-list">
+ <li><strong>Direct Communication:</strong> Clear, straightforward conversations without therapeutic jargon</li>
+ <li><strong>Problem-Solving Focus:</strong> Practical strategies for real-world challenges</li>
+ <li><strong>No Judgment Zone:</strong> Understanding that men express struggles differently</li>
+ <li><strong>Results-Oriented:</strong> Measurable progress toward specific goals</li>
+ <li><strong>Flexible Approach:</strong> Therapy that adapts to how you actually think and work</li>
+ </ul>
+
+ <h3>Professional Background</h3>
+ <p>I hold a Master's degree in counseling psychology and am licensed with the College of Registered Psychotherapists of Ontario (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>). I practice Acceptance and Commitment Therapy (ACT) and practical approaches to men's mental health.</p>
+ </div>
+ </section>
+
+ <!-- Virtual Therapy Benefits Section -->
+ <section class="section">
+ <h2 class="section-title">Why Virtual Therapy Works Well for Men</h2>
+ <p>Many men prefer virtual therapy because it removes barriers that make traditional therapy feel uncomfortable. Access professional support from your own space, on your own terms.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Privacy & Comfort</h3>
+ <p>No waiting rooms where you might run into colleagues. Access support from your own space where you feel in control.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Fits Your Schedule</h3>
+ <p>Early morning, lunch hour, or evening sessions. Therapy that works around your life, not the other way around.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Reduced Stigma</h3>
+ <p>Virtual sessions reduce barriers, making it easier to access support without feeling like you're making a big production out of it.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Immediate Application</h3>
+ <p>Practice skills with your partner right after sessions. Apply stress management techniques in your actual work environment.</p>
+ </div>
+ </div>
+
+ <p>Virtual therapy isn't a compromise—for many men, it's the preferred way to access support while maintaining privacy and fitting therapy into demanding schedules.</p>
+ </section>
+
+ <!-- Same-Week Availability Section -->
+ <section class="section">
+ <h2 class="section-title">Same-Week Appointments Available</h2>
+ <p>When you're ready to get help, waiting 3-6 months for an appointment isn't acceptable. Most men I work with contact me when things have reached a breaking point.</p>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <strong>Same-Week</strong>
+ <span>Initial appointments available within days, not months</span>
+ </div>
+ <div class="quick-stat-card">
+ <strong>Evening Hours</strong>
+ <span>Sessions after work so you don't have to explain time off</span>
+ </div>
+ <div class="quick-stat-card">
+ <strong>Weekend Options</strong>
+ <span>Saturday appointments for busy professionals</span>
+ </div>
+ </div>
+
+ <div class="content-card">
+ <h3>How to Get Started This Week</h3>
+ <ul class="feature-list">
+ <li><strong>Call or message today:</strong> Brief 15-minute consultation to make sure we're a good fit</li>
+ <li><strong>Book your first session:</strong> Usually available within the same week</li>
+ <li><strong>Start working on real solutions:</strong> No intake paperwork that takes 3 sessions</li>
+ </ul>
+ </div>
+
+ <div class="cta-box">
+ <p><strong>Ready to start this week?</strong></p>
+ <a href="tel:+14163062157" class="btn btn-primary">Call for Same-Week Appointment</a>
+ </div>
+ </section>
+
+ <!-- Getting Started Section -->
+ <section class="section">
+ <h2 class="section-title">Getting Started with Men's Mental Health Therapy</h2>
+ <p>Taking the first step can feel difficult, especially when you're used to handling things on your own. The process is straightforward and low-pressure.</p>
+
+ <div class="content-card">
+ <h3>Your Free 15-Minute Consultation</h3>
+ <p>Before committing to therapy, you deserve to know if we're a good fit. This brief conversation allows you to:</p>
+ <ul class="feature-list">
+ <li>Share what's bringing you to therapy</li>
+ <li>Ask questions about the process and approach</li>
+ <li>Understand what to expect from men's mental health therapy</li>
+ <li>Learn about scheduling, fees, and insurance coverage</li>
+ </ul>
+ </div>
+
+ <div class="quick-stats">
+ <div class="quick-stat-card">
+ <h3>Session Length</h3>
+ <p>50-minute sessions, typically weekly or bi-weekly based on your needs</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Insurance Coverage</h3>
+ <p>Most extended health plans cover Registered Psychotherapist services. Receipts provided.</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Scheduling</h3>
+ <p>Early morning, lunch hour, and evening appointments available</p>
+ </div>
+ <div class="quick-stat-card">
+ <h3>Technology</h3>
+ <p>Any device with internet and camera. Simple, secure platform.</p>
+ </div>
+ </div>
+
+ <p><strong>Investment:</strong> Individual therapy sessions are $175. Many clients notice improvements within the first few sessions.</p>
+
+ <div class="cta-box">
+ <p>Ready to move beyond "I'm fine" and build real solutions?</p>
+ <a href="tel:+14163062157" class="btn btn-primary">Call for Free Consultation</a>
+ </div>
+ </section>
+
+ <!-- FAQs Section -->
+ <section class="section faq-section">
+ <h2 class="section-title">Common Questions About Men's Mental Health Therapy</h2>
+ <p class="section-intro">It's normal to have questions about therapy—especially when you've never done it before or had negative experiences in the past. Here are honest answers to common concerns from men across Ontario.</p>
+
+ <div class="faq-grid">
+ <div class="faq-item">
+ <h4>"Isn't therapy just talking about feelings for an hour?"</h4>
+ <p>Not the way I work. While understanding emotions is important, our focus is on practical problem-solving and skill-building. You'll leave each session with specific strategies you can apply immediately to improve your situation.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"Will you try to make me cry or get in touch with my emotions?"</h4>
+ <p>I'm not here to make you do anything. Some men find emotional expression helpful; others prefer focusing on behavior and practical changes. We work with your natural style and preferences, not against them.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"What if someone finds out I'm in therapy?"</h4>
+ <p>Your therapy is completely confidential. Virtual sessions add an extra layer of privacy—no waiting rooms, no parking lots where you might be seen. As a Registered Psychotherapist, I'm bound by strict privacy laws (PHIPA) that protect your confidentiality.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"How is this different from talking to friends or having a beer?"</h4>
+ <p>Friends are great for support, but therapy provides specialized skills and an objective perspective. You'll learn evidence-based strategies for managing stress, improving relationships, and making decisions—not just venting about problems.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"How long does therapy take for men?"</h4>
+ <p>This varies by individual and goals, but many men notice improvements within the first few sessions. Significant progress typically occurs within 8-12 weeks of regular sessions. We'll regularly check in about your progress and adjust our approach as needed.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"Can I use my employee benefits for virtual therapy?"</h4>
+ <p>Most extended health plans in Ontario cover Registered Psychotherapist services, including virtual sessions. I provide detailed receipts for easy reimbursement. You can check with your benefits provider to confirm your specific coverage.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"What is ACT therapy and how does it help men?"</h4>
+ <p>ACT (Acceptance and Commitment Therapy) is a practical, action-oriented approach that helps you develop psychological flexibility. Instead of trying to eliminate difficult thoughts or feelings, you learn to handle them more effectively while taking action toward what matters. It's particularly effective for men because it's skills-based and focused on behavior change, not endless analysis.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"Is therapy covered by OHIP in Ontario?"</h4>
+ <p>Private psychotherapy is not covered by OHIP in Ontario. However, most extended health insurance plans cover Registered Psychotherapist services. I provide detailed receipts for reimbursement through your insurance provider. If you don't have coverage, we can discuss session frequency to work within your budget.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"Do I need a referral to see a therapist?"</h4>
+ <p>No referral is needed to see a Registered Psychotherapist in Ontario. You can contact me directly to book a consultation. This is different from seeing a psychiatrist or psychologist through the public system, which typically requires a doctor's referral and involves long wait times.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"Can I do therapy during my lunch break?"</h4>
+ <p>Yes. I offer 50-minute sessions that can fit into a lunch hour. Many clients log in from their car, a private office, or even take a walk while we talk. Virtual therapy gives you flexibility that in-person sessions can't match.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"What if I've tried therapy before and it didn't work?"</h4>
+ <p>Previous therapy that didn't work is common—often it's about fit, not therapy itself. Maybe the approach was too passive (just listening) or the therapist didn't understand men's issues. I focus on practical, action-oriented work with measurable progress. If it's not working, we'll talk about it directly.</p>
+ </div>
+
+ <div class="faq-item">
+ <h4>"How do I know if I actually need therapy or just a vacation?"</h4>
+ <p>If the same problems keep coming back after vacations—the stress, the relationship friction, the low-grade frustration—that's a sign something deeper needs attention. Therapy helps you develop skills to handle stress better so you're not just counting days until your next break. A vacation treats symptoms; therapy addresses patterns.</p>
+ </div>
+ </div>
+ </section>
+
+ <!-- Related Challenges Section -->
+ <section class="section">
+ <div class="container">
+ <h3 class="section-title" style="text-align: center;">Common Challenges Men Face</h3>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+ <a href="/high-functioning-anxiety-ontario.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">High-Functioning Anxiety</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Success on the outside, exhaustion on the inside</p>
+ </a>
+ <a href="/imposter-syndrome-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Imposter Syndrome</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Feeling like a fraud despite evidence of success</p>
+ </a>
+ <a href="/perfectionism-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Perfectionism</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Nothing ever feels good enough</p>
+ </a>
+ <a href="/rumination-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Racing Thoughts</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Can't turn your brain off at night</p>
+ </a>
+ <a href="/decision-fatigue-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Decision Fatigue</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">Exhausted from constant high-stakes choices</p>
+ </a>
+ <a href="/founder-burnout-therapy.html" style="padding: 1rem; background: white; border-radius: 8px; text-decoration: none; color: inherit; border: 1px solid #eee;">
+ <strong style="color: var(--primary-navy);">Founder Burnout</strong>
+ <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #666;">When your identity is fused with your company</p>
+ </a>
+ </div>
+ </div>
+ </section>
+
+ <!-- Final CTA Section -->
+ <section class="contact-section" id="contact">
+ <div class="container">
+ <div class="contact-content">
+ <h2>Ready to Move Beyond "I'm Fine"?</h2>
+ <p class="contact-lead">You don't have to handle everything on your own. Professional support can help you develop practical skills for managing stress, improving relationships, and building a life that actually works for you.</p>
+
+ <h3>Start with a Free 15-Minute Consultation</h3>
+ <p>This brief, no-pressure conversation helps us both determine if we're a good fit. You'll get clear answers about the process, timeline, and what to expect.</p>
+
+ <div class="hero-cta">
+ <a href="https://nextsteptherapy.janeapp.com/" class="btn btn-primary">Book Your Free Consultation</a>
+ <a href="tel:+14163062157" class="btn btn-secondary">Call 416-306-2157</a>
+ </div>
+
+ <div class="contact-info">
+ <h4>Professional Mental Health Support for Men Across Ontario</h4>
+ <div class="therapist-details">
+ <strong>Jesse Cynamon, RP</strong><br>
+ Registered Psychotherapist | <a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a><br>
+ Virtual sessions throughout Ontario<br>
+ Insurance receipts provided
+ </div>
+ </div>
+
+ <p class="final-message">You've spent your whole life being strong for everyone else. It's time to build the skills and support system that help you thrive, not just survive.</p>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <!-- Floating CTA for Mobile -->
+ <a href="tel:+14163062157" class="floating-cta">
+ 📞 Get Support Today
+ </a>
+
+ <!-- Analytics Tracking -->
+ <script type="module">
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-J8H4YBGSHR', {
+ 'allow_enhanced_conversions': true,
+ 'send_page_view': true
+ });
+
+ // Track phone clicks
+ document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'phone_call', {
+ 'event_category': 'conversion',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
+ document.querySelectorAll('a[href*="janeapp.com"]').forEach(link => {
+ link.addEventListener('click', function() {
+ gtag('event', 'booking_click', {
+ 'event_category': 'conversion',
+ 'event_label': 'jane_app_booking',
+ 'value': 175,
+ 'currency': 'CAD'
+ });
+ });
+ });
+ });
+ </script>
+ <!-- Footer -->
+ <footer class="bg-navy text-white py-16">
+ <div class="max-w-7xl mx-auto px-6">
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+ <div>
+ <h4 class="font-display text-lg mb-4">Jesse Cynamon, RP</h4>
+ <p class="text-white/80 text-sm mb-3">Evidence-based therapy using ACT and CBT approaches. Serving Ontario since 2022.</p>
+ <p class="text-white/90 font-medium"><a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener" class="hover:underline">CRPO #10979</a> | MPsy</p>
+ <p class="mt-4"><strong>Book Appointment:</strong><br>
+ <a href="tel:+14163062157" class="text-sage hover:text-white transition-colors font-semibold text-lg">(416) 306-2157</a></p>
+ </div>
+ <div>
+ <h4 class="font-display text-lg mb-4">Therapy Services</h4>
+ <ul class="space-y-2 text-sm">
+ <li><a href="/anxiety-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Anxiety Therapy</a></li>
+ <li><a href="/depression-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Depression Therapy</a></li>
+ <li><a href="/workplace-stress-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Workplace Stress & Burnout</a></li>
+ <li><a href="/virtual-therapy-ontario.html" class="text-white/80 hover:text-white transition-colors">Virtual Therapy Ontario</a></li>
+ <li><a href="/cbt-therapy-toronto.html" class="text-white/80 hover:text-white transition-colors">CBT Therapy</a></li>
+ <li><a href="/mens-mental-health.html" class="text-white/80 hover:text-white transition-colors">Men's Mental Health</a></li>
+ <li><a href="/#specializations" class="text-sage hover:text-white transition-colors font-medium">All Services →</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display text-lg mb-4">Ontario Service Areas</h4>
+ <ul class="space-y-2 text-sm">
+ <li><a href="/therapist-toronto.html" class="text-white/80 hover:text-white transition-colors">Toronto Therapist</a></li>
+ <li><a href="/therapy-ottawa-ontario.html" class="text-white/80 hover:text-white transition-colors">Ottawa Therapy</a></li>
+ <li><a href="/therapy-hamilton-ontario.html" class="text-white/80 hover:text-white transition-colors">Hamilton Therapy</a></li>
+ <li><a href="/therapy-mississauga-ontario.html" class="text-white/80 hover:text-white transition-colors">Mississauga Therapy</a></li>
+ <li><a href="/therapy-london-ontario.html" class="text-white/80 hover:text-white transition-colors">London Therapy</a></li>
+ <li><a href="/virtual-therapy-ontario.html" class="text-sage hover:text-white transition-colors font-medium">All Ontario →</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-display text-lg mb-4">Resources</h4>
+ <ul class="space-y-2 text-sm">
+ <li><a href="/blog/mental-health-guides/do-i-need-therapy-quiz.html" class="text-white/80 hover:text-white transition-colors">Do I Need Therapy? Quiz</a></li>
+ <li><a href="/therapy-costs-ontario.html" class="text-white/80 hover:text-white transition-colors">Therapy Costs Ontario</a></li>
+ <li><a href="/how-to-find-therapist-ontario.html" class="text-white/80 hover:text-white transition-colors">Find a Therapist Guide</a></li>
+ <li><a href="/faq.html" class="text-white/80 hover:text-white transition-colors">FAQ</a></li>
+ <li><a href="/jesse-cynamon-psychotherapist-ontario.html" class="text-white/80 hover:text-white transition-colors">About Jesse</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="border-t border-white/15 pt-6 text-center">
+ <p class="text-white/85 text-sm mb-4">
+ <strong>In Crisis?</strong> Call <strong>988</strong> (Suicide Crisis) | <strong>911</strong> (Emergency) |
+ <a href="tel:18665312600" class="text-sage underline hover:text-white">1-866-531-2600</a> (Ontario Crisis Line)
+ </p>
+ <p class="text-white/70 text-sm">&copy; 2025 Next Step Therapy. All rights reserved.<br>
+ Jesse Cynamon, Registered Psychotherapist (<a href="https://my.crpo.ca/Portal/Content/Public-Register/Public-Register-Profile.aspx?ID=21403&ck=CA559D8F-6580-4B33-843F-B93695B435D3" target="_blank" rel="noopener">CRPO #10979</a>) | Ontario, Canada</p>
+ </div>
+ </div>
+ </footer>
+
+ <!-- Mobile CTA Bar -->
+ <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 md:hidden z-40">
+ <div class="flex gap-2">
+ <a href="tel:+14163062157" class="flex-1 bg-navy text-white py-3 rounded-lg text-center font-medium flex items-center justify-center gap-2">
+ <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+ </a>
+ <a href="https://nextsteptherapy.janeapp.com/" class="flex-1 bg-navy/80 text-white py-3 rounded-lg text-center font-medium flex items-center justify-center gap-2">
+ <i data-lucide="calendar" class="w-4 h-4"></i> Book
+ </a>
+ </div>
+ </div>
+
+ <!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+ <script>lucide.createIcons();</script>
+ <script src="/js/security-check.js"></script>
 </body>
 </html>
