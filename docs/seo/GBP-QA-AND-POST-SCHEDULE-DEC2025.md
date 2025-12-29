@@ -99,6 +99,52 @@ Looking to start 2025 with better mental health support? Book a free 15-minute c
 
 ---
 
+### Week of December 30, 2025 - January 5, 2026
+
+#### POST 1: Service Proof (Monday Dec 30)
+**Type:** What's New / Update
+
+**Body:**
+```
+Starting 2026 with a commitment to your mental health?
+
+Many Ontario professionals use the new year to finally address the anxiety or burnout they've been managing alone. No waitlist here - same-week virtual appointments available.
+
+Evidence-based therapy (ACT & CBT) from home. Evening sessions for busy schedules.
+
+Free 15-minute consultation - no obligation.
+```
+
+**CTA Button:** Book now
+**Link:** https://nextsteptherapy.janeapp.com/
+
+**Keywords:** Ontario, anxiety, burnout, virtual, evidence-based, ACT, CBT
+**Photo:** Office workspace or headshot
+
+---
+
+#### POST 2: Local Presence (Friday Jan 3)
+**Type:** What's New / Update
+
+**Body:**
+```
+New year, same-week appointments.
+
+Serving professionals across Ontario - Toronto, Burlington, Hamilton, Ottawa, Barrie, and beyond. Virtual therapy means no commute, no waiting rooms.
+
+If 2026 is the year you invest in your mental health, I'm here when you're ready.
+
+Jesse Cynamon, RP (CRPO #10979) | Insurance receipts provided
+```
+
+**CTA Button:** Learn more
+**Link:** https://nextsteptherapy.ca/
+
+**Keywords:** Ontario, Toronto, Burlington, Hamilton, Ottawa, Barrie, virtual therapy, CRPO
+**Photo:** Headshot or workspace
+
+---
+
 ### Future Post Ideas (Rotating Themes)
 
 **Service Proof Posts:**

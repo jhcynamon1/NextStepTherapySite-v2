@@ -151,48 +151,39 @@
 
 ---
 
-### PART B: AI-Generated Photos (Nano Banana Pro)
+### PART B: Why Real Photos Only (Updated Dec 27, 2025)
 
-**Use for:** Branded graphics, conceptual images, seasonal content
+**AI-generated photos are NOT recommended for GBP.** Research shows:
 
-#### AI Photo Prompts for Nano Banana Pro
+| Risk | Source |
+|------|--------|
+| Algorithm distrust | Google now scans visual content for authenticity signals |
+| Suspension risk | Reported cases of listings suspended after AI images |
+| User trust erosion | Users can often tell, feels inauthentic |
+| Guidelines violation | Google wants images that "represent reality" |
 
-| # | Purpose | Prompt | Notes |
-|---|---------|--------|-------|
-| 1 | **Calm office aesthetic** | "Minimalist home office with laptop, warm lighting, green plant, neutral tones, professional therapy workspace, no people, soft natural light from window" | Use as alternate workspace shot |
-| 2 | **Ontario/nature calm** | "Serene Ontario landscape, morning mist over lake, calming blues and greens, mental wellness aesthetic, no text" | Evokes Ontario + calm |
-| 3 | **Professional warmth** | "Cozy home office corner with comfortable armchair, soft throw blanket, warm lamp light, therapy session atmosphere, inviting and professional" | Shows warmth without people |
-| 4 | **Men's mental health** | "Abstract representation of mental clarity, blue and navy tones, professional masculine aesthetic, calm geometric shapes, wellness concept" | For men's mental health service |
-| 5 | **Burnout recovery** | "Person silhouette looking at sunrise over Ontario cityscape, hopeful mood, recovery and renewal theme, warm golden light" | Abstract/silhouette OK |
-| 6 | **Virtual connection** | "Two comfortable chairs facing each other with soft lighting, virtual therapy concept, warm professional atmosphere, no screens" | Represents connection |
-| 7 | **Seasonal - Winter** | "Cozy winter home office, warm lighting against snowy window, therapy workspace, hygge aesthetic, mental health support" | For holiday/winter posts |
-| 8 | **Seasonal - New Year** | "Fresh start aesthetic, clean desk, morning light, new year new beginning, professional wellness space" | For January content |
-
-**Nano Banana Pro Settings:**
-- Aspect ratio: 4:3 (landscape) for GBP
-- Style: Photorealistic or "professional photography"
-- Avoid: Text in images, faces (unless clearly AI), anything that could be mistaken for real clients
+**Sources:** [Local Search Forum](https://localsearchforum.com/threads/do-you-use-ai-generated-images-for-your-gmb.61421/), [PinMeTo GBP Guidelines 2025](https://www.pinmeto.com/blog/google-business-profile-guidelines-2025), [BrightLocal](https://www.brightlocal.com/learn/ai-google-business-profile-homepage/)
 
 ---
 
-### PART C: Photo Upload Schedule
+### PART C: Photo Upload Schedule (Real Photos Only)
 
 **Week 1 (Dec 23-29):**
-- Mon: Laptop workspace wide (real photo)
-- Fri: Ontario calm landscape (AI generated)
+- Mon: Laptop workspace wide
+- Fri: Desk detail shot OR headshot variation
 
 **Week 2 (Dec 30 - Jan 5):**
-- Mon: Desk detail shot (real photo)
-- Fri: New Year fresh start (AI generated)
+- Mon: Bookshelf with therapy books
+- Fri: CRPO certificate/credentials
 
 **Week 3 (Jan 6-12):**
-- Mon: Bookshelf/credentials (real photo)
-- Wed: Virtual connection concept (AI generated)
-- Fri: Chair/seating area (real photo)
+- Mon: Chair/seating area
+- Wed: Window light shot
+- Fri: Different angle of workspace
 
 **Week 4 (Jan 13-19):**
-- Mon: Window light shot (real photo)
-- Fri: Professional warmth (AI generated)
+- Mon: Video call setup (ring light, camera)
+- Fri: Coffee mug + notepad detail shot
 
 ---
 
@@ -229,6 +220,160 @@ Examples:
 - [ ] CRPO compliant (no outcome promises)
 
 ---
+
+## PART E: Office Photo Setup Guide (Added Dec 27, 2025)
+
+**Purpose:** Set up your home office for professional GBP photos that build trust.
+
+### The Goal
+Photos that say: "This is a real professional who takes their work seriously and creates a calm, trustworthy environment."
+
+### What Google & Users Want
+| Do | Don't |
+|----|-------|
+| Real, authentic photos | Stock photos or AI-generated |
+| Well-lit, clear shots | Dark, blurry, or shadowy |
+| Clean, professional background | Cluttered or distracting |
+| Consistent, intentional staging | Random snapshots |
+
+**Source:** [BrightLocal](https://www.brightlocal.com/learn/google-business-profile-photos/), [Local Falcon](https://www.localfalcon.com/blog/everything-you-need-to-know-about-photos-in-local-seo)
+
+---
+
+### Step 1: Lighting (Most Important)
+
+| Scenario | Solution |
+|----------|----------|
+| **Best:** Natural window light | Face the window, camera between you and window |
+| **Good:** Ring light | Position at eye level, in front of you |
+| **Avoid:** Overhead lighting only | Creates harsh shadows |
+| **Avoid:** Window behind you | Silhouettes your face |
+
+**Bulb temperature:** Use warm white (3000K or lower) - labeled "soft white." Avoid "daylight" or "cool white" (4000K+).
+
+**Source:** [Blueprint.ai](https://www.blueprint.ai/blog/home-office-essentials-for-therapists-setting-up-a-professional-remote-practice), [TheraSuite](https://thera-suite.com/5-tips-for-designing-your-home-office-for-online-therapy/)
+
+---
+
+### Step 2: Background & Staging
+
+**Key principle:** Something in background (not blank wall), but not entire room visible.
+
+**Elements that work well for therapy office:**
+
+| Element | Why It Works | Where to Get |
+|---------|--------------|--------------|
+| **Plants** | Calming, alive, professional | IKEA, local nursery (pothos, snake plant, peace lily) |
+| **Books** | Credibility signal | Your existing therapy books |
+| **Soft lamp** | Warm lighting, cozy feel | IKEA, Amazon |
+| **Neutral art** | Visual interest without distraction | Abstract, nature prints |
+| **CRPO certificate** | Trust signal | Frame and hang |
+| **Comfortable chair** | Shows intentionality | Your existing chair |
+
+**What to AVOID in frame:**
+- Personal photos (privacy)
+- Religious symbols (unless intentional part of practice)
+- Clutter, stacks of paper
+- Bright/distracting colors
+- TVs, gaming equipment
+- Dirty dishes, laundry
+
+**Source:** [Practice of the Practice](https://practiceofthepractice.com/how-to-decorate-an-online-office/), [Brighter Vision](https://www.brightervision.com/blog/therapy-office-design-tips/)
+
+---
+
+### Step 3: Camera Position & Framing
+
+| For Video Calls | For GBP Photos |
+|-----------------|----------------|
+| Camera at eye level | Camera at desk/tripod level |
+| Face fills ~60% of frame | Show more of the space |
+| Direct eye contact with lens | Can be empty chair/desk shot |
+
+**GBP-specific framing tips:**
+- **Landscape orientation** (4:3 ratio) - Google crops portrait photos awkwardly
+- **Leave space at top** - Google crops from bottom up
+- **Multiple angles** - Wide shot, medium shot, detail shot
+- **Show depth** - Don't shoot flat against wall
+
+---
+
+### Step 4: Recommended Props/Setup
+
+**Minimum viable setup:**
+- [ ] Clean desk surface
+- [ ] Laptop or monitor
+- [ ] One plant
+- [ ] One lamp (warm light)
+- [ ] Notepad + pen
+- [ ] Coffee mug (branded or neutral)
+
+**Level-up additions:**
+- [ ] Bookshelf with therapy books
+- [ ] Framed CRPO certificate
+- [ ] Comfortable chair visible
+- [ ] Soft throw blanket on chair
+- [ ] Small art piece or print
+
+**Color palette to aim for:**
+- Neutrals: cream, beige, soft gray, white
+- Accents: sage green, navy, warm wood tones
+- Avoid: bright red, neon, busy patterns
+
+---
+
+### Step 5: AI Touch-Up (Acceptable)
+
+**AI enhancement of REAL photos is OK.** AI-generated fake photos are NOT.
+
+**Acceptable touch-ups:**
+- Brightness/contrast adjustment
+- Color correction (warmer tones)
+- Removing small blemishes or dust
+- Sharpening slightly blurry photos
+- Cropping for better composition
+
+**Tools:**
+- Google Photos (free) - Magic Eraser, lighting adjustment
+- Snapseed (free app) - Professional editing
+- Lightroom Mobile (free tier) - Color correction
+
+**NOT acceptable:**
+- Adding fake elements (furniture, plants that aren't there)
+- Generating entire fake backgrounds
+- Making space look significantly different from reality
+
+**Source:** [Local Search Forum](https://localsearchforum.com/threads/do-you-use-ai-generated-images-for-your-gmb.61421/)
+
+---
+
+### Step 6: Photo Shot List (When Ready)
+
+Take all these in ONE session:
+
+| # | Shot | Framing | Caption Focus |
+|---|------|---------|---------------|
+| 1 | Wide workspace | Desk + chair + background | "Virtual therapy workspace" |
+| 2 | Laptop/screen | Medium shot, angled | "Secure video sessions" |
+| 3 | Desk detail | Notepad, pen, mug closeup | "Preparing for session" |
+| 4 | Bookshelf | Books visible | "Evidence-based approaches" |
+| 5 | CRPO certificate | Clear, readable | "CRPO #10979 registered" |
+| 6 | Chair/seating | Comfortable setup | "Professional therapy environment" |
+| 7 | Window light | Natural lighting visible | "Calm, welcoming space" |
+| 8 | Tech setup | Ring light, camera | "Quality virtual sessions" |
+
+**Batch these:** Take all 8 in 20 minutes, then you have 4 weeks of photos ready.
+
+---
+
+### When You Send Your Current Photo
+
+Send me a photo of your current setup and I'll help you:
+1. Identify what's working
+2. Suggest specific improvements
+3. Recommend what to add/remove
+4. Advise on camera angles
+5. Suggest AI touch-ups if needed
 
 ---
 

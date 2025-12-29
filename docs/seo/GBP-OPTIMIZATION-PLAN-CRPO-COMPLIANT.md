@@ -644,6 +644,16 @@ Think of people who:
 **Outreach Template:**
 > "Hi [Name], I'm working on growing my therapy practice's online presence. Would you be willing to leave a Google review based on your professional impression of my work? You could mention my approach, professionalism, or anything you've observed. Here's the link: [Google review link]"
 
+**SEO Tip (from @bloggersarvesh 2-4-6-8-0 Rule):**
+When friends/family agree to review, suggest they naturally mention:
+- **Location:** "Ontario", "Burlington", "Toronto", etc.
+- **Service type:** "anxiety therapy", "virtual therapy", "stress support"
+- **Your credentials:** "registered psychotherapist"
+
+Example guidance: "If you could mention that you know me as a virtual therapist in Ontario who works with anxiety, that would help people find my practice!"
+
+*Note: This guidance is ONLY appropriate for friends/family (non-clients). Never coach actual clients on review content per CRPO 6.2.2.*
+
 **Target:** 5-10 people over 3 months
 
 ### Organic Review Optimization
@@ -823,6 +833,7 @@ You MUST win on:
 | Dec 21, 2025 | Added complete GBP content (descriptions, Q&As, products) |
 | Dec 21, 2025 | Added 8-week post templates |
 | Dec 21, 2025 | Added implementation checklists and success metrics |
+| Dec 27, 2025 | Added 2-4-6-8-0 Rule tip: guide friends/family to mention city + service in reviews |
 
 ---
 
